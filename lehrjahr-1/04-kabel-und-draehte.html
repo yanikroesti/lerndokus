@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 04 — Kabel und Drähte" data-en="Learning Documentation 04 — Cables and Wires">Lerndokumentation 04 — Kabel und Drähte</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span>
+    <span lang="de">Thema 04</span><span lang="en">Topic 04</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">04</div>
+    <h1><span lang="de">Kabel und Drähte</span><span lang="en">Cables<br>and Wires</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Farben · Kennzeichnung · Querschnitte · Aufbau · Strombelastbarkeit</span>
+    <span lang="en">Colours · marking · cross-sections · construction · current capacity</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">04 von 12</span><span lang="en">04 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Kabelrolle">
+        <g fill="none" stroke="#171614" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="84" cy="76" rx="42" ry="46" fill="#EFEAE0"/>
+          <ellipse cx="84" cy="76" rx="15" ry="17" fill="#DFD9CB"/>
+          <path d="M126 52 v48"/>
+          <path d="M42 122 h84" stroke-width="2"/>
+        </g>
+        <path d="M126 92 C 156 92 152 60 172 60 C 190 60 192 88 176 96" fill="none" stroke="#B8402A" stroke-width="5" stroke-linecap="round"/>
+        <path d="M126 84 C 150 84 148 46 170 46" fill="none" stroke="#1D5872" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="72" cy="68" r="3.4" fill="#171614"/>
+        <circle cx="96" cy="68" r="3.4" fill="#171614"/>
+        <path d="M74 88 q 10 9 20 0" fill="none" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Draht, Litze, Kabel — die Begriffe</span><span lang="en">Wire, strand, cable — the terms</span></h2>
+
+    <p class="lead" lang="de">Im Alltag sagt man «Kabel» zu allem, was Strom führt. Fachlich sind die Begriffe klar getrennt — und die Unterscheidung entscheidet darüber, welches Material wo eingesetzt werden darf.</p>
+    <p class="lead" lang="en">In everyday speech everything that carries current is a “cable”. Technically the terms are clearly separated — and the distinction decides which material may be used where.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Begriff</span><span lang="en">Term</span></th>
+            <th><span lang="de">Bedeutung</span><span lang="en">Meaning</span></th>
+            <th><span lang="de">Typisch</span><span lang="en">Typical</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Draht (eindrähtig)</span><span lang="en">Solid wire</span></strong></td>
+            <td><span lang="de">ein einziger massiver Leiter</span><span lang="en">one single solid conductor</span></td>
+            <td><span lang="de">feste Verlegung im Rohr</span><span lang="en">fixed installation in conduit</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Mehrdrähtig</span><span lang="en">Stranded</span></strong></td>
+            <td><span lang="de">wenige dickere Einzeldrähte verseilt</span><span lang="en">a few thicker wires laid up together</span></td>
+            <td><span lang="de">grössere Querschnitte, Zuleitungen</span><span lang="en">larger cross-sections, feeders</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Feindrähtig (Litze)</span><span lang="en">Fine-stranded</span></strong></td>
+            <td><span lang="de">viele dünne Einzeldrähte, sehr biegsam</span><span lang="en">many thin wires, very flexible</span></td>
+            <td><span lang="de">bewegte Anwendung, Schaltschrank, Gerätezuleitung</span><span lang="en">moving applications, panels, appliance leads</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Ader</span><span lang="en">Core</span></strong></td>
+            <td><span lang="de">Leiter <em>mit</em> seiner Isolation</span><span lang="en">conductor <em>with</em> its insulation</span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Kabel / Leitung</span><span lang="en">Cable</span></strong></td>
+            <td><span lang="de">mehrere Adern mit gemeinsamem Mantel</span><span lang="en">several cores with a common sheath</span></td>
+            <td><span lang="de">direkte Verlegung ohne Rohr möglich</span><span lang="en">can be laid directly without conduit</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Wichtige Regel</span><span lang="en">Important rule</span></b>
+      <p lang="de">Feindrähtige Leiter dürfen <strong>nicht ohne Weiteres direkt unter eine Schraubklemme</strong>. Die feinen Drähtchen fliessen unter dem Druck weg, die Klemmstelle wird lose und erwärmt sich. Lösung: <strong>Aderendhülse</strong> aufcrimpen — oder eine Klemme verwenden, die für feindrähtige Leiter zugelassen ist.</p>
+      <p lang="en">Fine-stranded conductors must <strong>not simply go under a screw terminal</strong>. The fine strands creep away under pressure, the joint loosens and heats up. The fix: crimp on a <strong>ferrule</strong> — or use a terminal approved for fine-stranded conductors.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Aufbau eines Kabels</span><span lang="en">How a cable is built up</span></h2>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Querschnitt und Längsschnitt durch ein fünfadriges Kabel">
+        <defs>
+          <style>
+            .sh{fill:#DFD9CB;stroke:#171614;stroke-width:2.4}
+            .fil{fill:#EFEAE0;stroke:none}
+            .ins{stroke:#171614;stroke-width:1.6}
+            .cu{fill:#C08A3E;stroke:#8A5F22;stroke-width:1.4}
+            .scr{fill:none;stroke:#7D7669;stroke-width:2.4;stroke-dasharray:4 3}
+            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
+            .ldr{fill:none;stroke:#7D7669;stroke-width:1.2}
+            .cn{fill:#171614}
+            .cnt{fill:#F4F1EA;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-anchor:middle}
+          </style>
+        </defs>
+
+        <!-- Querschnitt -->
+        <g transform="translate(190,190)">
+          <circle class="sh" r="122"/>
+          <circle class="fil" r="108"/>
+          <circle class="scr" r="112"/>
+
+          <!-- 5 Adern -->
+          <g>
+            <!-- L1 braun -->
+            <g transform="translate(0,-62)">
+              <circle class="ins" r="34" fill="#7A4A22"/>
+              <circle class="cu" r="17"/>
+            </g>
+            <!-- L2 schwarz -->
+            <g transform="translate(59,-19)">
+              <circle class="ins" r="34" fill="#26241F"/>
+              <circle class="cu" r="17"/>
+            </g>
+            <!-- L3 grau -->
+            <g transform="translate(36,50)">
+              <circle class="ins" r="34" fill="#9A958A"/>
+              <circle class="cu" r="17"/>
+            </g>
+            <!-- N blau -->
+            <g transform="translate(-36,50)">
+              <circle class="ins" r="34" fill="#1D5872"/>
+              <circle class="cu" r="17"/>
+            </g>
+            <!-- PE grüngelb -->
+            <g transform="translate(-59,-19)">
+              <circle class="ins" r="34" fill="#3F6B43"/>
+              <path d="M-24 14 l38 -38 M-14 24 l38 -38 M-4 32 l30 -30" stroke="#D8C93A" stroke-width="7"/>
+              <circle class="ins" r="34" fill="none"/>
+              <circle class="cu" r="17"/>
+            </g>
+          </g>
+        </g>
+
+        <!-- Callouts -->
+        <circle class="cn" cx="190" cy="52" r="13"/><text class="cnt" x="190" y="57">1</text>
+        <circle class="cn" cx="288" cy="86" r="13"/><text class="cnt" x="288" y="91">2</text>
+        <circle class="cn" cx="190" cy="128" r="13"/><text class="cnt" x="190" y="133">3</text>
+        <circle class="cn" cx="154" cy="240" r="13"/><text class="cnt" x="154" y="245">4</text>
+        <circle class="cn" cx="298" cy="272" r="13"/><text class="cnt" x="298" y="277">5</text>
+
+        <path class="ldr" d="M203 52 H460"/>
+        <text class="lg" x="468" y="48"><tspan lang="de">Aussenmantel</tspan><tspan lang="en">Outer sheath</tspan></text>
+        <text class="lgs" x="468" y="64"><tspan lang="de">MECHANISCHER SCHUTZ · UV · FEUCHTE</tspan><tspan lang="en">MECHANICAL · UV · MOISTURE</tspan></text>
+
+        <path class="ldr" d="M301 86 H460 V104"/>
+        <text class="lg" x="468" y="108"><tspan lang="de">Schirm (optional)</tspan><tspan lang="en">Screen (optional)</tspan></text>
+        <text class="lgs" x="468" y="124"><tspan lang="de">GEFLECHT ODER FOLIE · EMV</tspan><tspan lang="en">BRAID OR FOIL · EMC</tspan></text>
+
+        <path class="ldr" d="M203 128 H440 V168 H460"/>
+        <text class="lg" x="468" y="172"><tspan lang="de">Aderisolation</tspan><tspan lang="en">Core insulation</tspan></text>
+        <text class="lgs" x="468" y="188"><tspan lang="de">FARBIG NACH FUNKTION</tspan><tspan lang="en">COLOUR-CODED BY FUNCTION</tspan></text>
+
+        <path class="ldr" d="M167 240 H120 V330 H460 V236"/>
+        <text class="lg" x="468" y="232"><tspan lang="de">Leiter</tspan><tspan lang="en">Conductor</tspan></text>
+        <text class="lgs" x="468" y="248"><tspan lang="de">KUPFER, SELTEN ALUMINIUM</tspan><tspan lang="en">COPPER, RARELY ALUMINIUM</tspan></text>
+
+        <path class="ldr" d="M311 272 H460 V296"/>
+        <text class="lg" x="468" y="300"><tspan lang="de">Füllmaterial</tspan><tspan lang="en">Filler</tspan></text>
+        <text class="lgs" x="468" y="316"><tspan lang="de">MACHT DAS KABEL RUND</tspan><tspan lang="en">KEEPS THE CABLE ROUND</tspan></text>
+
+        <text class="lgs" x="468" y="356"><tspan lang="de">FARBEN: L1 BRAUN · L2 SCHWARZ · L3 GRAU</tspan><tspan lang="en">COLOURS: L1 BROWN · L2 BLACK · L3 GREY</tspan></text>
+        <text class="lgs" x="468" y="372"><tspan lang="de">N BLAU · PE GRÜN-GELB</tspan><tspan lang="en">N BLUE · PE GREEN-YELLOW</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Querschnitt durch ein fünfadriges Kabel. Der Schirm kommt nur bei EMV-Anforderungen zum Einsatz.</span>
+        <span lang="en"> — Cross-section of a five-core cable. The screen is used only where EMC requirements apply.</span>
+      </figcaption>
+    </figure>
+
+    <ul class="legend">
+      <li><span class="n">1</span><span lang="de">Aussenmantel — mechanischer Schutz, UV- und Feuchtigkeitsschutz</span><span lang="en">Outer sheath — mechanical, UV and moisture protection</span></li>
+      <li><span class="n">2</span><span lang="de">Schirm — Geflecht oder Folie gegen elektromagnetische Störungen</span><span lang="en">Screen — braid or foil against electromagnetic interference</span></li>
+      <li><span class="n">3</span><span lang="de">Aderisolation — farbig nach Funktion des Leiters</span><span lang="en">Core insulation — colour-coded by conductor function</span></li>
+      <li><span class="n">4</span><span lang="de">Leiter — Kupfer, in Sonderfällen Aluminium</span><span lang="en">Conductor — copper, aluminium in special cases</span></li>
+      <li><span class="n">5</span><span lang="de">Füllmaterial — hält das Kabel rund und die Adern an ihrem Platz</span><span lang="en">Filler — keeps the cable round and the cores in place</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Aderfarben</span><span lang="en">Core colours</span></h2>
+
+    <p lang="de">Die Farbgebung ist genormt und nicht verhandelbar. Sie ist die schnellste Information, die eine Anlage über sich preisgibt — und im Fehlerfall die erste Orientierung.</p>
+    <p lang="en">Colour coding is standardised and not negotiable. It is the fastest information an installation gives about itself — and the first orientation when something goes wrong.</p>
+
+    <ul class="swatches">
+      <li><span class="sw" style="background:#7A4A22"></span><span><strong>L1</strong> — <span lang="de">braun</span><span lang="en">brown</span></span></li>
+      <li><span class="sw" style="background:#26241F"></span><span><strong>L2</strong> — <span lang="de">schwarz</span><span lang="en">black</span></span></li>
+      <li><span class="sw" style="background:#9A958A"></span><span><strong>L3</strong> — <span lang="de">grau</span><span lang="en">grey</span></span></li>
+      <li><span class="sw" style="background:#1D5872"></span><span><strong>N</strong> — <span lang="de">blau</span><span lang="en">blue</span></span></li>
+      <li><span class="sw" style="background:linear-gradient(120deg,#3F6B43 45%,#D8C93A 45%)"></span><span><strong>PE</strong> — <span lang="de">grün-gelb</span><span lang="en">green-yellow</span></span></li>
+    </ul>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Grün-gelb ist reserviert</span><span lang="en">Green-yellow is reserved</span></b>
+      <p lang="de">Die Kombination <strong>grün-gelb</strong> ist ausschliesslich dem Schutzleiter vorbehalten. Sie darf <strong>nie</strong> für einen anderen Zweck verwendet werden — auch nicht «ausnahmsweise» als Aussenleiter, wenn die Ader gerade übrig ist. Umgekehrt darf der Schutzleiter keine andere Farbe tragen.</p>
+      <p lang="en">The <strong>green-yellow</strong> combination is reserved exclusively for the protective conductor. It must <strong>never</strong> be used for anything else — not even “just this once” as a line conductor because that core happens to be spare. Conversely, the protective conductor must not carry any other colour.</p>
+    </div>
+
+    <h3><span lang="de">Altanlagen</span><span lang="en">Older installations</span></h3>
+    <p lang="de">In älteren Schweizer Anlagen trifft man abweichende Farben an — der Neutralleiter kann grau oder schwarz sein, Aussenleiter rot, weiss oder schwarz. Deshalb gilt ausnahmslos:</p>
+    <p lang="en">In older Swiss installations you meet different colours — the neutral may be grey or black, line conductors red, white or black. Therefore, without exception:</p>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Grundsatz</span><span lang="en">Principle</span></b>
+      <p lang="de">Farben sind eine <strong>Information</strong>, kein <strong>Beweis</strong>. Vor dem Berühren wird immer gemessen. Wer sich auf die Farbe verlässt, arbeitet an einer Anlage, die er nicht kennt.</p>
+      <p lang="en">Colours are <strong>information</strong>, not <strong>proof</strong>. Always measure before touching. Anyone relying on colour is working on an installation they do not know.</p>
+    </div>
+
+    <h3><span lang="de">Umkennzeichnen</span><span lang="en">Re-identification</span></h3>
+    <p lang="de">Wird eine Ader zweckentfremdet — etwa eine blaue Ader als Schaltdraht in einer Wechselschaltung — muss sie an beiden Enden dauerhaft umgekennzeichnet werden, üblicherweise mit farbiger Markierhülse oder Band. Nur der Schutzleiter ist davon ausgenommen: seine Farbe ist unantastbar.</p>
+    <p lang="en">If a core is used for another purpose — for example a blue core as a switch wire in a two-way circuit — it must be permanently re-identified at both ends, usually with a coloured sleeve or tape. Only the protective conductor is exempt: its colour is untouchable.</p>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Kennzeichnung und Typenbezeichnung</span><span lang="en">Marking and type designation</span></h2>
+
+    <p lang="de">Auf jedem Kabel steht sein Typ aufgedruckt. Die harmonisierte Bezeichnung nach europäischem System lässt sich Stelle für Stelle entschlüsseln.</p>
+    <p lang="en">Every cable has its type printed on it. The harmonised European designation can be decoded position by position.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aufschlüsselung der Kabelbezeichnung H07V-U">
+        <defs>
+          <style>
+            .chr{font-family:'Archivo',sans-serif;font-size:44px;font-weight:800;fill:#171614;text-anchor:middle}
+            .acc{fill:#B8402A}
+            .bx{fill:none;stroke:#D2CABB;stroke-width:1.4}
+            .ldr{fill:none;stroke:#7D7669;stroke-width:1.2}
+            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.06em}
+          </style>
+        </defs>
+
+        <rect class="bx" x="180" y="24" width="400" height="66" rx="3"/>
+        <text class="chr acc" x="222" y="72">H</text>
+        <text class="chr" x="292" y="72">07</text>
+        <text class="chr acc" x="366" y="72">V</text>
+        <text class="chr" x="418" y="72">-</text>
+        <text class="chr acc" x="470" y="72">U</text>
+
+        <path class="ldr" d="M222 96 V126 H96"/>
+        <text class="lg" x="30" y="146">H</text>
+        <text class="lgs" x="30" y="162"><tspan lang="de">HARMONISIERT</tspan><tspan lang="en">HARMONISED</tspan></text>
+
+        <path class="ldr" d="M292 96 V150 H120"/>
+        <text class="lg" x="30" y="192">07</text>
+        <text class="lgs" x="30" y="208">450 / 750 V</text>
+
+        <path class="ldr" d="M366 96 V126 H640"/>
+        <text class="lg" x="592" y="146">V</text>
+        <text class="lgs" x="592" y="162"><tspan lang="de">PVC-ISOLATION</tspan><tspan lang="en">PVC INSULATION</tspan></text>
+
+        <path class="ldr" d="M470 96 V150 H640"/>
+        <text class="lg" x="592" y="192">U</text>
+        <text class="lgs" x="592" y="208"><tspan lang="de">EINDRÄHTIG</tspan><tspan lang="en">SOLID CONDUCTOR</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 2</span><span lang="en">Fig. 2</span></b>
+        <span lang="de"> — <code>H07V-U</code>: der klassische Einzeldraht für die Rohrinstallation.</span>
+        <span lang="en"> — <code>H07V-U</code>: the classic single wire for conduit installation.</span>
+      </figcaption>
+    </figure>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Stelle</span><span lang="en">Position</span></th>
+            <th><span lang="de">Zeichen</span><span lang="en">Symbol</span></th>
+            <th><span lang="de">Bedeutung</span><span lang="en">Meaning</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td rowspan="2"><span lang="de">Norm</span><span lang="en">Standard</span></td><td class="num">H</td><td><span lang="de">harmonisierter Typ</span><span lang="en">harmonised type</span></td></tr>
+          <tr><td class="num">A</td><td><span lang="de">national anerkannter Typ</span><span lang="en">nationally recognised type</span></td></tr>
+          <tr><td rowspan="3"><span lang="de">Nennspannung</span><span lang="en">Rated voltage</span></td><td class="num">03</td><td>300 / 300 V</td></tr>
+          <tr><td class="num">05</td><td>300 / 500 V</td></tr>
+          <tr><td class="num">07</td><td>450 / 750 V</td></tr>
+          <tr><td rowspan="2"><span lang="de">Werkstoff</span><span lang="en">Material</span></td><td class="num">V</td><td>PVC</td></tr>
+          <tr><td class="num">R</td><td><span lang="de">Gummi</span><span lang="en">rubber</span></td></tr>
+          <tr><td rowspan="4"><span lang="de">Leiterform</span><span lang="en">Conductor form</span></td><td class="num">-U</td><td><span lang="de">eindrähtig (massiv)</span><span lang="en">solid</span></td></tr>
+          <tr><td class="num">-R</td><td><span lang="de">mehrdrähtig, rund</span><span lang="en">stranded, circular</span></td></tr>
+          <tr><td class="num">-K</td><td><span lang="de">feindrähtig, für feste Verlegung</span><span lang="en">fine-stranded, for fixed installation</span></td></tr>
+          <tr><td class="num">-F</td><td><span lang="de">feindrähtig, flexibel (Schlauchleitung)</span><span lang="en">fine-stranded, flexible (flexible cord)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Zwei Beispiele</span><span lang="en">Two examples</span></b>
+      <p lang="de"><code>H07V-U 1,5</code> — Einzeldraht, 450/750 V, PVC, eindrähtig, 1,5 mm². Der Standarddraht, der ins Rohr eingezogen wird.<br>
+      <code>H05VV-F 3G1,5</code> — Schlauchleitung, 300/500 V, PVC-Isolation <em>und</em> PVC-Mantel, feindrähtig flexibel, 3 Adern à 1,5 mm² mit Schutzleiter. Die typische Gerätezuleitung.</p>
+      <p lang="en"><code>H07V-U 1.5</code> — single wire, 450/750 V, PVC, solid, 1.5 mm². The standard wire drawn into conduit.<br>
+      <code>H05VV-F 3G1.5</code> — flexible cord, 300/500 V, PVC insulation <em>and</em> PVC sheath, fine-stranded flexible, 3 cores of 1.5 mm² including protective conductor. The typical appliance lead.</p>
+    </div>
+
+    <p lang="de">Das <strong>G</strong> in <code>3G1,5</code> bedeutet: <em>mit</em> grün-gelbem Schutzleiter. Ein <strong>X</strong> an derselben Stelle (<code>3X1,5</code>) heisst: <em>ohne</em> Schutzleiter. Ein einziger Buchstabe — und ein grosser sicherheitstechnischer Unterschied.</p>
+    <p lang="en">The <strong>G</strong> in <code>3G1.5</code> means: <em>with</em> a green-yellow protective conductor. An <strong>X</strong> in the same position (<code>3X1.5</code>) means: <em>without</em> a protective conductor. One single letter — and a major difference in safety.</p>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Schweizer Kurzbezeichnungen</span><span lang="en">Swiss short designations</span></b>
+      <p lang="de">Neben dem harmonisierten System sind in der Schweiz betriebsinterne Kurznamen gebräuchlich (zum Beispiel «T-Draht» für den Einzeldraht im Rohr). <strong>Für die Abgabe die im Betrieb und im Lieferantenkatalog verwendeten Bezeichnungen übernehmen</strong> und der harmonisierten Bezeichnung gegenüberstellen.</p>
+      <p lang="en">Alongside the harmonised system, Swiss practice uses in-house short names (for example “T-Draht” for the single wire in conduit). <strong>For your submission, take the designations used in your company and supplier catalogue</strong> and set them against the harmonised designation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Querschnitte</span><span lang="en">Cross-sections</span></h2>
+
+    <p lang="de">Der Querschnitt wird in <strong>mm²</strong> angegeben und folgt einer festen Normreihe. Er bestimmt, wie viel Strom die Leitung dauernd führen darf und wie gross der Spannungsfall wird.</p>
+    <p lang="en">Cross-section is given in <strong>mm²</strong> and follows a fixed standard series. It determines how much current the cable may carry continuously and how large the voltage drop becomes.</p>
+
+    <div class="formula">1,5 · 2,5 · 4 · 6 · 10 · 16 · 25 · 35 · 50 · 70 · 95 · 120 · 150 · 185 · 240 mm²</div>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Querschnitt</span><span lang="en">Cross-section</span></th>
+            <th><span lang="de">Richtwert Strombelastbarkeit</span><span lang="en">Guide current capacity</span></th>
+            <th><span lang="de">Typische Absicherung</span><span lang="en">Typical protection</span></th>
+            <th><span lang="de">Typische Anwendung</span><span lang="en">Typical application</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">1,5 mm²</td><td class="num">≈ 16 … 20 A</td><td class="num">10 A</td><td><span lang="de">Beleuchtungsstromkreise</span><span lang="en">Lighting circuits</span></td></tr>
+          <tr><td class="num">2,5 mm²</td><td class="num">≈ 21 … 27 A</td><td class="num">13 / 16 A</td><td><span lang="de">Steckdosenstromkreise</span><span lang="en">Socket circuits</span></td></tr>
+          <tr><td class="num">4 mm²</td><td class="num">≈ 28 … 36 A</td><td class="num">20 A</td><td><span lang="de">Boiler, längere Leitungen</span><span lang="en">Water heaters, longer runs</span></td></tr>
+          <tr><td class="num">6 mm²</td><td class="num">≈ 36 … 46 A</td><td class="num">25 / 32 A</td><td><span lang="de">Kochherd, Wärmepumpe</span><span lang="en">Cookers, heat pumps</span></td></tr>
+          <tr><td class="num">10 mm²</td><td class="num">≈ 50 … 63 A</td><td class="num">40 A</td><td><span lang="de">Unterverteiler</span><span lang="en">Sub-distribution boards</span></td></tr>
+          <tr><td class="num">16 mm²</td><td class="num">≈ 66 … 85 A</td><td class="num">50 / 63 A</td><td><span lang="de">Hauptleitungen</span><span lang="en">Main runs</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Achtung — Richtwerte</span><span lang="en">Careful — guide values only</span></b>
+      <p lang="de">Die Zahlen in der Spalte «Strombelastbarkeit» sind <strong>Orientierungswerte</strong>. Der zulässige Strom hängt ab von Verlegeart, Umgebungstemperatur, Häufung, Isolierstoff und Anzahl belasteter Adern. <strong>Massgebend sind ausschliesslich die Tabellen der NIN</strong> — für die Abgabe dort die Werte für die tatsächliche Verlegeart nachschlagen und die Quelle zitieren.</p>
+      <p lang="en">The figures in the “current capacity” column are <strong>orientation values</strong>. The permissible current depends on the installation method, ambient temperature, grouping, insulation material and number of loaded cores. <strong>Only the NIN tables are authoritative</strong> — look up the values for the actual installation method and cite the source.</p>
+    </div>
+
+    <h3><span lang="de">Grundbedingung des Überlastschutzes</span><span lang="en">Basic condition for overload protection</span></h3>
+    <div class="formula">I<sub>B</sub> ≤ I<sub>n</sub> ≤ I<sub>Z</sub> &nbsp;&nbsp;<span lang="de">und</span><span lang="en">and</span>&nbsp;&nbsp; I<sub>2</sub> ≤ 1,45 × I<sub>Z</sub></div>
+    <ul>
+      <li><span class="mono">I<sub>B</sub></span> — <span lang="de">Betriebsstrom des Stromkreises</span><span lang="en">design current of the circuit</span></li>
+      <li><span class="mono">I<sub>n</sub></span> — <span lang="de">Bemessungsstrom der Schutzeinrichtung</span><span lang="en">rated current of the protective device</span></li>
+      <li><span class="mono">I<sub>Z</sub></span> — <span lang="de">Strombelastbarkeit der Leitung</span><span lang="en">current-carrying capacity of the cable</span></li>
+      <li><span class="mono">I<sub>2</sub></span> — <span lang="de">grosser Prüfstrom der Schutzeinrichtung</span><span lang="en">operating current of the protective device</span></li>
+    </ul>
+    <p lang="de">In Worten: Die Sicherung muss grösser sein als der Betriebsstrom, darf aber die Leitung nicht überfordern. Die Leitung wird also <strong>nach dem Strom bemessen und durch die Sicherung geschützt</strong> — nie umgekehrt.</p>
+    <p lang="en">In words: the protective device must be larger than the design current but must not overtax the cable. The cable is therefore <strong>sized to the current and protected by the device</strong> — never the other way round.</p>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Spannungsfall</span><span lang="en">Voltage drop</span></h2>
+
+    <p lang="de">Jeder Leiter hat einen Widerstand. Über eine lange Leitung «verliert» sich damit Spannung, die beim Verbraucher fehlt: Lampen leuchten schwächer, Motoren laufen mit weniger Drehmoment an, Elektronik reagiert empfindlich.</p>
+    <p lang="en">Every conductor has resistance. Over a long run, voltage is “lost” and missing at the load: lamps burn dimmer, motors start with less torque, electronics react sensitively.</p>
+
+    <div class="formula"><span lang="de">Wechselstrom</span><span lang="en">Single-phase</span>: &nbsp; ΔU = (2 × L × I × cos φ) / (κ × A)</div>
+    <div class="formula"><span lang="de">Drehstrom</span><span lang="en">Three-phase</span>: &nbsp; ΔU = (√3 × L × I × cos φ) / (κ × A)</div>
+
+    <ul>
+      <li><span class="mono">L</span> — <span lang="de">einfache Leitungslänge in m</span><span lang="en">one-way cable length in m</span></li>
+      <li><span class="mono">I</span> — <span lang="de">Strom in A</span><span lang="en">current in A</span></li>
+      <li><span class="mono">A</span> — <span lang="de">Querschnitt in mm²</span><span lang="en">cross-section in mm²</span></li>
+      <li><span class="mono">κ</span> — <span lang="de">Leitfähigkeit: Kupfer ≈ 56, Aluminium ≈ 35 m/(Ω·mm²)</span><span lang="en">conductivity: copper ≈ 56, aluminium ≈ 35 m/(Ω·mm²)</span></li>
+      <li><span class="mono">cos φ</span> — <span lang="de">Leistungsfaktor</span><span lang="en">power factor</span></li>
+    </ul>
+
+    <p lang="de">Der Faktor <strong>2</strong> beim Wechselstrom kommt daher, dass der Strom hin <em>und</em> zurück fliesst — die Leitung ist also doppelt so lang wie die Distanz.</p>
+    <p lang="en">The factor <strong>2</strong> for single-phase circuits comes from the current flowing out <em>and</em> back — the conductor length is twice the distance.</p>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Zulässiger Spannungsfall</span><span lang="en">Permissible voltage drop</span></b>
+      <p lang="de">Übliche Planungswerte sind <strong>3 % für Beleuchtung</strong> und <strong>5 % für übrige Verbrauchsmittel</strong>. Der verbindliche Grenzwert und der Bezugspunkt der Messung sind in der NIN festgelegt — <strong>vor der Abgabe dort nachschlagen</strong>.</p>
+      <p lang="en">Common planning figures are <strong>3 % for lighting</strong> and <strong>5 % for other loads</strong>. The binding limit and the reference point for the measurement are defined in the NIN — <strong>look them up before submitting</strong>.</p>
+    </div>
+
+    <p lang="de">Bei langen Leitungen ist deshalb oft nicht die Strombelastbarkeit, sondern der <strong>Spannungsfall das massgebende Kriterium</strong>: Der Querschnitt wird grösser gewählt, als der Strom allein verlangen würde.</p>
+    <p lang="en">On long runs it is therefore often not the current capacity but the <strong>voltage drop that governs</strong>: the cross-section is chosen larger than the current alone would require.</p>
+  </div>
+</section>
+
+<!-- ================= 7 ================= -->
+<section id="s7">
+  <div class="snum">07</div>
+  <div class="sbody">
+    <h2><span lang="de">Verarbeiten in der Praxis</span><span lang="en">Working with cable in practice</span></h2>
+
+    <ul lang="de">
+      <li><strong>Abisolieren</strong> mit dem Abisolierwerkzeug, nicht mit dem Messer — ein Kerb im Kupfer ist eine Sollbruchstelle</li>
+      <li><strong>Abisolierlänge</strong> nach Klemme; kein blankes Kupfer darf aus der Klemme herausschauen</li>
+      <li><strong>Aderendhülsen</strong> bei feindrähtigen Leitern, mit der passenden Crimpzange verpresst</li>
+      <li><strong>Anzugsdrehmoment</strong> der Klemmen einhalten — zu lose erwärmt sich, zu fest quetscht den Leiter</li>
+      <li><strong>Biegeradius</strong> einhalten: zu enges Biegen schädigt Isolation und Leiter dauerhaft</li>
+      <li><strong>Zugentlastung</strong> montieren, damit Zug nie an der Klemmstelle hängt</li>
+      <li><strong>Beschriften</strong> — jede Ader und jedes Kabel an beiden Enden</li>
+      <li><strong>Reserve lassen</strong> — ein paar Zentimeter Draht in der Dose ermöglichen eine spätere Korrektur</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Strip</strong> with a stripping tool, not a knife — a nick in the copper is a predetermined breaking point</li>
+      <li><strong>Strip length</strong> to suit the terminal; no bare copper may protrude from the terminal</li>
+      <li><strong>Ferrules</strong> on fine-stranded conductors, crimped with the matching tool</li>
+      <li><strong>Tightening torque</strong> as specified — too loose overheats, too tight crushes the conductor</li>
+      <li><strong>Bending radius</strong> respected: bending too tightly damages insulation and conductor permanently</li>
+      <li><strong>Strain relief</strong> fitted so that tension never acts on the terminal</li>
+      <li><strong>Label</strong> — every core and every cable at both ends</li>
+      <li><strong>Leave slack</strong> — a few centimetres of wire in the box allow a later correction</li>
+    </ul>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Der teuerste Fehler</span><span lang="en">The costliest mistake</span></b>
+      <p lang="de">Eine schlecht angezogene Klemme. Der Übergangswiderstand steigt, die Stelle erwärmt sich, die Isolation verkohlt — und am Ende steht ein Kabelbrand. Solche Fehler zeigen sich oft erst Monate später und sind dann schwer zu finden.</p>
+      <p lang="en">A poorly tightened terminal. The contact resistance rises, the joint heats up, the insulation chars — and eventually there is a cable fire. Such faults often only show up months later and are then hard to find.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8 ================= -->
+<section id="s8">
+  <div class="snum">08</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Welche Farbe hat welcher Leiter?</span><span lang="en">Which colour belongs to which conductor?</span></summary>
+      <div class="ans">
+        <p lang="de">L1 braun, L2 schwarz, L3 grau, N blau, PE grün-gelb. Grün-gelb ist ausschliesslich dem Schutzleiter vorbehalten.</p>
+        <p lang="en">L1 brown, L2 black, L3 grey, N blue, PE green-yellow. Green-yellow is reserved exclusively for the protective conductor.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was bedeutet H07V-U 1,5?</span><span lang="en">What does H07V-U 1.5 mean?</span></summary>
+      <div class="ans">
+        <p lang="de">Harmonisierter Typ, Nennspannung 450/750 V, PVC-Isolation, eindrähtiger Leiter, Querschnitt 1,5 mm². Es ist der Standarddraht für die Rohrinstallation.</p>
+        <p lang="en">Harmonised type, rated voltage 450/750 V, PVC insulation, solid conductor, cross-section 1.5 mm². It is the standard wire for conduit installation.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Worin unterscheiden sich 3G1,5 und 3X1,5?</span><span lang="en">What is the difference between 3G1.5 and 3X1.5?</span></summary>
+      <div class="ans">
+        <p lang="de">Das <strong>G</strong> bedeutet: mit grün-gelbem Schutzleiter. Das <strong>X</strong> bedeutet: ohne Schutzleiter. Beide haben drei Adern à 1,5 mm², aber nur die G-Variante hat einen PE — sicherheitstechnisch ein grosser Unterschied.</p>
+        <p lang="en">The <strong>G</strong> means: with a green-yellow protective conductor. The <strong>X</strong> means: without one. Both have three cores of 1.5 mm², but only the G version has a PE — a major difference in terms of safety.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum braucht ein feindrähtiger Leiter eine Aderendhülse?</span><span lang="en">Why does a fine-stranded conductor need a ferrule?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil die feinen Einzeldrähte unter dem Druck der Schraubklemme wegfliessen. Die Klemmstelle wird lose, der Übergangswiderstand steigt, die Stelle erwärmt sich. Die Aderendhülse fasst die Drähtchen zu einem festen Körper zusammen.</p>
+        <p lang="en">Because the fine strands creep away under the pressure of the screw terminal. The joint loosens, contact resistance rises and the point heats up. The ferrule binds the strands into one solid body.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wovon hängt die zulässige Strombelastbarkeit einer Leitung ab?</span><span lang="en">What does the permissible current capacity depend on?</span></summary>
+      <div class="ans">
+        <p lang="de">Von Querschnitt, Leitermaterial, Isolierstoff, Verlegeart, Umgebungstemperatur, Häufung mehrerer Leitungen und der Anzahl belasteter Adern. Massgebend sind die Tabellen der NIN, nicht der Querschnitt allein.</p>
+        <p lang="en">On cross-section, conductor material, insulation, installation method, ambient temperature, grouping of several cables and the number of loaded cores. The NIN tables are authoritative, not the cross-section alone.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Nenne die Grundbedingung des Überlastschutzes.</span><span lang="en">State the basic condition for overload protection.</span></summary>
+      <div class="ans">
+        <p lang="de">I<sub>B</sub> ≤ I<sub>n</sub> ≤ I<sub>Z</sub> sowie I<sub>2</sub> ≤ 1,45 × I<sub>Z</sub>. Die Schutzeinrichtung muss grösser sein als der Betriebsstrom und darf gleichzeitig die Leitung nicht überlasten.</p>
+        <p lang="en">I<sub>B</sub> ≤ I<sub>n</sub> ≤ I<sub>Z</sub> and I<sub>2</sub> ≤ 1.45 × I<sub>Z</sub>. The protective device must exceed the design current while not overloading the cable.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum steht beim einphasigen Spannungsfall der Faktor 2 in der Formel?</span><span lang="en">Why does the single-phase voltage-drop formula contain a factor of 2?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil der Strom hin und zurück fliesst. Der Leiterweg ist doppelt so lang wie die Distanz zum Verbraucher — Hin- und Rückleiter erzeugen beide einen Spannungsfall.</p>
+        <p lang="en">Because the current flows out and back. The conductor path is twice the distance to the load — both the outgoing and the return conductor produce a voltage drop.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Du findest in einer Altanlage einen grauen Leiter. Ist das der Neutralleiter?</span><span lang="en">You find a grey conductor in an old installation. Is that the neutral?</span></summary>
+      <div class="ans">
+        <p lang="de">Nicht zwingend. Nach heutiger Norm ist grau der Aussenleiter L3, in älteren Schweizer Anlagen wurde Grau jedoch teilweise als Neutralleiter verwendet. Farben sind eine Information, kein Beweis — vor dem Berühren wird gemessen.</p>
+        <p lang="en">Not necessarily. Under today's standard grey is line conductor L3, but in older Swiss installations grey was sometimes used as the neutral. Colours are information, not proof — measure before touching.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wann darf eine blaue Ader als Schaltdraht verwendet werden?</span><span lang="en">When may a blue core be used as a switch wire?</span></summary>
+      <div class="ans">
+        <p lang="de">Nur wenn sie an <strong>beiden Enden dauerhaft umgekennzeichnet</strong> wird, üblicherweise mit farbiger Markierhülse oder Band. Beim Schutzleiter ist das nie zulässig: Grün-gelb bleibt dem PE vorbehalten, und der PE trägt keine andere Farbe.</p>
+        <p lang="en">Only if it is <strong>permanently re-identified at both ends</strong>, usually with a coloured sleeve or tape. This is never permitted for the protective conductor: green-yellow stays reserved for the PE, and the PE carries no other colour.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="03-kanaele.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>03 · <span lang="de">Kanäle</span><span lang="en">Trunking &amp; Ducts</span></b>
+  </a>
+  <a class="next" href="05-symbole.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>05 · <span lang="de">Symbole</span><span lang="en">Symbols</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 04 · Kabel und Drähte</span><span lang="en">Learning Documentation 04 · Cables and Wires</span></span>
+  <span>Yanik · Etavis · <span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span></span>
+  <span><span lang="de">Normen: NIN 2020 · EN 50525 · IEC 60446</span><span lang="en">Standards: NIN 2020 · EN 50525 · IEC 60446</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

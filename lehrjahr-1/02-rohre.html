@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 02 — Rohre" data-en="Learning Documentation 02 — Conduits">Lerndokumentation 02 — Rohre</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span>
+    <span lang="de">Thema 02</span><span lang="en">Topic 02</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">02</div>
+    <h1><span lang="de">Rohre</span><span lang="en">Conduits</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Arten · Aufbau · Dimensionen · Einsatzort · Verlegeregeln</span>
+    <span lang="en">Types · construction · sizes · where used · installation rules</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">02 von 12</span><span lang="en">02 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: gebogenes Installationsrohr">
+        <path d="M40 118 h56 a34 34 0 0 0 34 -34 v-34" fill="none" stroke="#B8402A" stroke-width="22" stroke-linecap="round"/>
+        <path d="M40 118 h56 a34 34 0 0 0 34 -34 v-34" fill="none" stroke="#EFEAE0" stroke-width="12" stroke-linecap="round"/>
+        <path d="M40 118 h56 a34 34 0 0 0 34 -34 v-34" fill="none" stroke="#171614" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 9"/>
+        <g fill="none" stroke="#171614" stroke-width="2.4" stroke-linecap="round">
+          <path d="M29 107 v22 M29 129 h22"/>
+          <path d="M119 39 h22 M141 39 v22"/>
+        </g>
+        <circle cx="176" cy="98" r="26" fill="#D6E3E9" stroke="#1D5872" stroke-width="2.4"/>
+        <circle cx="168" cy="93" r="3" fill="#171614"/>
+        <circle cx="185" cy="93" r="3" fill="#171614"/>
+        <path d="M167 107 q 9 7 18 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Zweck und Einsatzgebiet</span><span lang="en">Purpose and field of use</span></h2>
+
+    <p class="lead" lang="de">Das Installationsrohr führt und schützt die Leiter. Es übernimmt drei Aufgaben gleichzeitig: <strong>mechanischer Schutz</strong>, <strong>Führung des Leiterweges</strong> und — der oft unterschätzte Punkt — die <strong>Auswechselbarkeit</strong> der Leiter, ohne die Bausubstanz aufzureissen.</p>
+    <p class="lead" lang="en">An installation conduit routes and protects the conductors. It performs three jobs at once: <strong>mechanical protection</strong>, <strong>defining the cable route</strong> and — the point most often underrated — keeping the conductors <strong>replaceable</strong> without breaking open the building fabric.</p>
+
+    <p lang="de">In der Schweiz wird im Wohnungsbau überwiegend in Rohr installiert: Einzeldrähte werden in ein einbetoniertes oder unter Putz verlegtes Rohr eingezogen. Das ist mehr Aufwand als ein direkt verlegtes Kabel, macht die Anlage aber über Jahrzehnte änderbar — eine zusätzliche Ader oder ein Ersatz nach einem Defekt ist jederzeit möglich.</p>
+    <p lang="en">In Swiss residential construction, conduit installation dominates: individual wires are drawn into a conduit cast into concrete or laid under plaster. It takes more effort than a directly laid cable, but it keeps the installation alterable for decades — an extra core or a replacement after a fault is always possible.</p>
+
+    <h3><span lang="de">Aufgaben im Einzelnen</span><span lang="en">The individual tasks</span></h3>
+    <ul lang="de">
+      <li><strong>Schutz vor mechanischer Beschädigung</strong> — Nagel, Bohrer, Setzung, Vibration</li>
+      <li><strong>Schutz vor Feuchtigkeit und Chemikalien</strong> — je nach Bauart und Dichtung</li>
+      <li><strong>Zusätzliche Isolation</strong> — Kunststoffrohre sind selber Isolierstoff</li>
+      <li><strong>Definierter Leiterweg</strong> — dokumentierbar, wiederauffindbar, planbar</li>
+      <li><strong>Auswechselbarkeit</strong> — Drähte lassen sich nachziehen oder ersetzen</li>
+      <li><strong>Brandverhalten</strong> — flammwidrige Rohre tragen das Feuer nicht weiter</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Protection from mechanical damage</strong> — nails, drills, settlement, vibration</li>
+      <li><strong>Protection from moisture and chemicals</strong> — depending on type and sealing</li>
+      <li><strong>Additional insulation</strong> — plastic conduits are themselves insulating material</li>
+      <li><strong>A defined cable route</strong> — documentable, traceable, plannable</li>
+      <li><strong>Replaceability</strong> — wires can be drawn in again or replaced</li>
+      <li><strong>Fire behaviour</strong> — flame-retardant conduits do not propagate fire</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Bezeichnungssystem</span><span lang="en">Designation system</span></h2>
+
+    <p lang="de">Die Schweizer Kurzbezeichnungen sind aus Anfangsbuchstaben zusammengesetzt. Wer das System kennt, liest jede Rohrbezeichnung ohne Tabelle.</p>
+    <p lang="en">The Swiss short designations are built from initial letters. Once you know the system you can read any conduit designation without a table.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Buchstabe</span><span lang="en">Letter</span></th>
+            <th><span lang="de">Bedeutung</span><span lang="en">Meaning</span></th>
+            <th><span lang="de">Erklärung</span><span lang="en">Explanation</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">K</td><td>Kunststoff</td><td><span lang="de">Werkstoff Kunststoff (PVC, PE, PP)</span><span lang="en">Plastic material (PVC, PE, PP)</span></td></tr>
+          <tr><td class="num">R</td><td>Rohr</td><td><span lang="de">Rohr</span><span lang="en">Conduit / pipe</span></td></tr>
+          <tr><td class="num">F</td><td><span lang="de">flexibel / elastisch</span><span lang="en">flexible / elastic</span></td><td><span lang="de">von Hand biegbar, federt zurück</span><span lang="en">bendable by hand, springs back</span></td></tr>
+          <tr><td class="num">H</td><td>hart</td><td><span lang="de">starr, nur mit Biegefeder oder warm biegbar</span><span lang="en">rigid, bent only with a spring or with heat</span></td></tr>
+          <tr><td class="num">W</td><td><span lang="de">schwerbrennbar / flammwidrig</span><span lang="en">flame-retardant</span></td><td><span lang="de">selbstverlöschend</span><span lang="en">self-extinguishing</span></td></tr>
+          <tr><td class="num">G</td><td><span lang="de">gewellt / gerillt</span><span lang="en">corrugated</span></td><td><span lang="de">Wellenprofil, dadurch sehr biegsam</span><span lang="en">corrugated profile, therefore very flexible</span></td></tr>
+          <tr><td class="num">I</td><td><span lang="de">Isolierrohr</span><span lang="en">insulating conduit</span></td><td><span lang="de">dünnwandig</span><span lang="en">thin-walled</span></td></tr>
+          <tr><td class="num">E</td><td>Eisen</td><td><span lang="de">Werkstoff Stahl (ER = Eisenrohr)</span><span lang="en">Steel (ER = steel conduit)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Beispiel lesen</span><span lang="en">Reading an example</span></b>
+      <p lang="de"><code>KRFWG M25</code> = <strong>K</strong>unststoff&shy;<strong>r</strong>ohr, <strong>f</strong>lexibel, flamm<strong>w</strong>idrig, <strong>g</strong>ewellt, Aussendurchmesser <strong>25 mm</strong>. Das ist das klassische orange Wellrohr für die Unterputz- und Betoninstallation.</p>
+      <p lang="en"><code>KRFWG M25</code> = plastic conduit (<strong>K</strong>unststoff&shy;<strong>r</strong>ohr), <strong>f</strong>lexible, flame-retardant (<strong>w</strong>), corrugated (<strong>g</strong>), outside diameter <strong>25 mm</strong>. This is the classic orange corrugated conduit for concrete and under-plaster work.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Rohrarten und Aufbau</span><span lang="en">Conduit types and construction</span></h2>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Querschnitte verschiedener Installationsrohre">
+        <defs>
+          <style>
+            .wall{fill:#EFEAE0;stroke:#171614;stroke-width:2}
+            .wallm{fill:#C9C2B4;stroke:#171614;stroke-width:2}
+            .cav{fill:#FBF9F5}
+            .cond{fill:#F0DBD4;stroke:#B8402A;stroke-width:1.6}
+            .cond2{fill:#D6E3E9;stroke:#1D5872;stroke-width:1.6}
+            .condn{fill:#EAE5DA;stroke:#48433B;stroke-width:1.6}
+            .dim{fill:none;stroke:#7D7669;stroke-width:1.2}
+            .ttl{font-family:'Archivo',sans-serif;font-size:15px;font-weight:700;fill:#171614;text-anchor:middle}
+            .sub{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;text-anchor:middle;letter-spacing:.07em}
+            .dl{font-family:'IBM Plex Mono',monospace;font-size:11px;fill:#48433B;text-anchor:middle}
+          </style>
+        </defs>
+
+        <!-- === 1 KRFWG gewellt === -->
+        <g transform="translate(130,150)">
+          <!-- Wellprofil aussen -->
+          <circle class="wall" r="74" fill="#EFEAE0"/>
+          <circle class="cav" r="60"/>
+          <g stroke="#171614" stroke-width="1.4" fill="none">
+            <circle r="67" stroke-dasharray="5 6"/>
+          </g>
+          <!-- Leiter -->
+          <circle class="cond" cx="-22" cy="-16" r="15"/>
+          <circle class="cond2" cx="20" cy="-18" r="15"/>
+          <circle class="condn" cx="-2" cy="22" r="15"/>
+          <!-- Durchmesserlinie -->
+          <path class="dim" d="M-74 96 H74"/>
+          <path class="dim" d="M-74 90 v12 M74 90 v12"/>
+          <text class="dl" y="118">M25</text>
+        </g>
+        <text class="ttl" x="130" y="266">KRFWG</text>
+        <text class="sub" x="130" y="284"><tspan lang="de">FLEXIBEL · GEWELLT</tspan><tspan lang="en">FLEXIBLE · CORRUGATED</tspan></text>
+        <text class="sub" x="130" y="300"><tspan lang="de">BETON · UNTERPUTZ</tspan><tspan lang="en">CONCRETE · UNDER PLASTER</tspan></text>
+
+        <!-- === 2 KRH hart === -->
+        <g transform="translate(380,150)">
+          <circle class="wall" r="70"/>
+          <circle class="cav" r="60"/>
+          <circle class="cond" cx="-22" cy="-16" r="15"/>
+          <circle class="cond2" cx="20" cy="-18" r="15"/>
+          <circle class="condn" cx="-2" cy="22" r="15"/>
+          <path class="dim" d="M-70 96 H70"/>
+          <path class="dim" d="M-70 90 v12 M70 90 v12"/>
+          <text class="dl" y="118">M25</text>
+        </g>
+        <text class="ttl" x="380" y="266">KRH</text>
+        <text class="sub" x="380" y="284"><tspan lang="de">HART · GLATT</tspan><tspan lang="en">RIGID · SMOOTH</tspan></text>
+        <text class="sub" x="380" y="300"><tspan lang="de">AUFPUTZ · SICHTBAR</tspan><tspan lang="en">SURFACE · VISIBLE</tspan></text>
+
+        <!-- === 3 ER Stahl === -->
+        <g transform="translate(630,150)">
+          <circle class="wallm" r="70"/>
+          <circle class="cav" r="58"/>
+          <circle class="cond" cx="-22" cy="-16" r="15"/>
+          <circle class="cond2" cx="20" cy="-18" r="15"/>
+          <circle class="condn" cx="-2" cy="22" r="15"/>
+          <path class="dim" d="M-70 96 H70"/>
+          <path class="dim" d="M-70 90 v12 M70 90 v12"/>
+          <text class="dl" y="118">M25</text>
+        </g>
+        <text class="ttl" x="630" y="266">ER</text>
+        <text class="sub" x="630" y="284"><tspan lang="de">STAHL · PANZERROHR</tspan><tspan lang="en">STEEL · ARMOURED</tspan></text>
+        <text class="sub" x="630" y="300"><tspan lang="de">INDUSTRIE · SCHLAGSCHUTZ</tspan><tspan lang="en">INDUSTRY · IMPACT PROTECTION</tspan></text>
+
+        <!-- Legende Leiter -->
+        <g transform="translate(0,342)">
+          <circle class="cond" cx="248" cy="12" r="9"/>
+          <text x="264" y="17" font-family="'IBM Plex Mono',monospace" font-size="12" fill="#48433B"><tspan lang="de">Aussenleiter</tspan><tspan lang="en">Line</tspan></text>
+          <circle class="cond2" cx="368" cy="12" r="9"/>
+          <text x="384" y="17" font-family="'IBM Plex Mono',monospace" font-size="12" fill="#48433B"><tspan lang="de">Neutralleiter</tspan><tspan lang="en">Neutral</tspan></text>
+          <circle class="condn" cx="492" cy="12" r="9"/>
+          <text x="508" y="17" font-family="'IBM Plex Mono',monospace" font-size="12" fill="#48433B"><tspan lang="de">Schutzleiter</tspan><tspan lang="en">Protective earth</tspan></text>
+        </g>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Querschnitt durch die drei wichtigsten Rohrarten, je mit drei eingezogenen Drähten. Der Aussendurchmesser M ist bei allen gleich, der nutzbare Innenquerschnitt unterscheidet sich durch die Wandstärke.</span>
+        <span lang="en"> — Cross-section of the three main conduit types, each with three wires drawn in. The outside diameter M is the same for all; the usable inner cross-section differs with wall thickness.</span>
+      </figcaption>
+    </figure>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Kurzzeichen</span><span lang="en">Designation</span></th>
+            <th><span lang="de">Bezeichnung</span><span lang="en">Name</span></th>
+            <th><span lang="de">Eigenschaften</span><span lang="en">Properties</span></th>
+            <th><span lang="de">Typischer Einsatzort</span><span lang="en">Typical use</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num"><strong>KRFWG</strong></td>
+            <td><span lang="de">Kunststoffrohr flexibel, flammwidrig, gewellt</span><span lang="en">Plastic conduit, flexible, flame-retardant, corrugated</span></td>
+            <td><span lang="de">sehr biegsam, leicht, selbstverlöschend, meist orange</span><span lang="en">very flexible, light, self-extinguishing, usually orange</span></td>
+            <td><span lang="de">Beton, Unterputz, Hohlwand, Estrich</span><span lang="en">Concrete, under plaster, cavity walls, screed</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>KRFW</strong></td>
+            <td><span lang="de">Kunststoffrohr flexibel, flammwidrig, glatt</span><span lang="en">Plastic conduit, flexible, flame-retardant, smooth</span></td>
+            <td><span lang="de">biegsam, glatte Innenwand — Draht gleitet besser</span><span lang="en">flexible, smooth bore — easier drawing-in</span></td>
+            <td><span lang="de">Unterputz, kurze Strecken mit vielen Drähten</span><span lang="en">Under plaster, short runs with many wires</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>KRH</strong></td>
+            <td><span lang="de">Kunststoffrohr hart</span><span lang="en">Rigid plastic conduit</span></td>
+            <td><span lang="de">formstabil, gerade Verlegung, mit Biegefeder biegbar</span><span lang="en">dimensionally stable, straight runs, bendable with a spring</span></td>
+            <td><span lang="de">Aufputz, sichtbare Installation, Keller, Garage</span><span lang="en">Surface mounting, visible work, cellars, garages</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>KIR</strong></td>
+            <td><span lang="de">Kunststoff-Isolierrohr (dünnwandig)</span><span lang="en">Thin-walled plastic insulating conduit</span></td>
+            <td><span lang="de">geringe Wandstärke, günstig, wenig mechanischer Schutz</span><span lang="en">thin wall, economical, limited mechanical protection</span></td>
+            <td><span lang="de">geschützte Lagen, Hohlräume</span><span lang="en">Protected locations, cavities</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>ER</strong></td>
+            <td><span lang="de">Eisenrohr / Stahlpanzerrohr</span><span lang="en">Steel conduit</span></td>
+            <td><span lang="de">sehr hohe Schlag- und Druckfestigkeit, leitfähig — muss in den Potentialausgleich</span><span lang="en">very high impact and crush resistance, conductive — must be bonded</span></td>
+            <td><span lang="de">Industrie, Werkstatt, mechanisch beanspruchte Zonen</span><span lang="en">Industry, workshops, mechanically exposed areas</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong><span lang="de">Kabelschutzrohr</span><span lang="en">Cable duct</span></strong></td>
+            <td><span lang="de">Erdverlegung, meist rot oder orange</span><span lang="en">Underground, usually red or orange</span></td>
+            <td><span lang="de">hohe Druckfestigkeit, UV- und frostbeständig, mit Zugdraht</span><span lang="en">high crush resistance, UV- and frost-resistant, with draw wire</span></td>
+            <td><span lang="de">Erdreich, Zuleitungen, Aussenanlagen</span><span lang="en">Ground, service feeds, outdoor installations</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Gewellt oder glatt?</span><span lang="en">Corrugated or smooth?</span></b>
+      <p lang="de">Das Wellprofil macht das Rohr biegsam und druckfest bei geringem Gewicht — dafür bremst die geriffelte Innenwand beim Einziehen. Glatte Rohre ziehen leichter, brauchen aber Formstücke für jede Richtungsänderung. Auf langen Strecken mit vielen Bögen lohnt sich das glatte Rohr, im Beton fast immer das gewellte.</p>
+      <p lang="en">The corrugated profile makes the conduit flexible and crush-resistant at low weight — but the ribbed bore adds friction when drawing wires in. Smooth conduits pull more easily but need a fitting at every change of direction. On long runs with many bends the smooth conduit pays off; in concrete the corrugated type almost always wins.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Dimensionen</span><span lang="en">Sizes</span></h2>
+
+    <p lang="de">Die Nennweite <code>M</code> bezeichnet den <strong>Aussendurchmesser in Millimetern</strong>. <code>M20</code> heisst also: 20 mm aussen. Der Innendurchmesser ist je nach Wandstärke und Bauart kleiner und für die Belegung massgebend.</p>
+    <p lang="en">The nominal size <code>M</code> states the <strong>outside diameter in millimetres</strong>. So <code>M20</code> means 20 mm outside. The inner diameter is smaller depending on wall thickness and type, and it is the inner diameter that governs how much can be drawn in.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Nennweite</span><span lang="en">Nominal size</span></th>
+            <th><span lang="de">Aussen-Ø</span><span lang="en">Outside Ø</span></th>
+            <th><span lang="de">Typische Verwendung</span><span lang="en">Typical use</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">M16</td><td class="num">16 mm</td><td><span lang="de">Einzelne Schalter- und Lampendrähte, kurze Stichleitungen</span><span lang="en">Single switch and lamp wires, short spurs</span></td></tr>
+          <tr><td class="num">M20</td><td class="num">20 mm</td><td><span lang="de"><strong>Standard</strong> für Beleuchtungs- und Steckdosenstromkreise in der Wohnung</span><span lang="en"><strong>Standard</strong> for lighting and socket circuits in dwellings</span></td></tr>
+          <tr><td class="num">M25</td><td class="num">25 mm</td><td><span lang="de">Mehrere Stromkreise im gleichen Rohr, Zuleitungen zu Unterverteilern</span><span lang="en">Several circuits in one conduit, feeds to sub-distribution boards</span></td></tr>
+          <tr><td class="num">M32</td><td class="num">32 mm</td><td><span lang="de">Hauptleitungen, Herd- und Kochfeldzuleitungen, Steigzonen</span><span lang="en">Main runs, cooker feeds, riser zones</span></td></tr>
+          <tr><td class="num">M40</td><td class="num">40 mm</td><td><span lang="de">Verteilerzuleitungen, grössere Querschnitte</span><span lang="en">Distribution board feeds, larger cross-sections</span></td></tr>
+          <tr><td class="num">M50</td><td class="num">50 mm</td><td><span lang="de">Hausanschluss, Steigleitungen, Erdverlegung</span><span lang="en">Service entrance, rising mains, underground</span></td></tr>
+          <tr><td class="num">M63</td><td class="num">63 mm</td><td><span lang="de">Hausanschluss und Trassen mit mehreren Kabeln</span><span lang="en">Service entrance and routes carrying several cables</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Belegung — wie viel darf hinein?</span><span lang="en">Fill — how much may go in?</span></h3>
+    <p lang="de">Ein Rohr darf nicht bis zum letzten Millimeter gefüllt werden. Sonst lassen sich die Drähte nicht mehr einziehen, die Isolation wird beim Ziehen beschädigt, und die entstehende Wärme kann nicht abgeführt werden.</p>
+    <p lang="en">A conduit must not be filled to the last millimetre. Otherwise the wires cannot be drawn in, the insulation is damaged during pulling, and the heat produced cannot escape.</p>
+
+    <div class="formula">A<sub><span lang="de">Leiter</span><span lang="en">conductors</span></sub> ≈ 0,4 × A<sub><span lang="de">Rohr innen</span><span lang="en">conduit inner</span></sub></div>
+
+    <p lang="de">Als <strong>Faustregel</strong> soll die Summe der Leiterquerschnitte (inkl. Isolation) rund 40 % des freien Rohrquerschnitts nicht überschreiten. Massgebend sind die Belegungstabellen der NIN und die Herstellerangaben — insbesondere bei Bögen und langen Strecken ist weniger mehr.</p>
+    <p lang="en">As a <strong>rule of thumb</strong>, the total conductor cross-section (including insulation) should not exceed about 40 % of the free conduit area. The authoritative figures are the NIN fill tables and the manufacturer's data — especially with bends and long runs, less is more.</p>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Praxistipp</span><span lang="en">In practice</span></b>
+      <p lang="de">Lieber eine Nummer grösser wählen. Der Materialmehrpreis von M20 auf M25 ist gering — der Aufwand, ein zu knappes Rohr nachträglich zu ersetzen, ist es nicht. Und in ein grösseres Rohr passt später die zusätzliche Ader, die heute noch niemand geplant hat.</p>
+      <p lang="en">Choose one size up. The extra material cost from M20 to M25 is small — the cost of replacing an undersized conduit afterwards is not. And a larger conduit will still take the extra core that nobody has planned for today.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Kennwerte und Klassierung</span><span lang="en">Ratings and classification</span></h2>
+
+    <p lang="de">Rohre werden nach <strong>EN/IEC 61386</strong> klassiert. Auf dem Rohr aufgedruckt findet man Hersteller, Nennweite, Norm, Zulassungszeichen und eine Kennzahlenfolge.</p>
+    <p lang="en">Conduits are classified to <strong>EN/IEC 61386</strong>. Printed on the conduit you find the manufacturer, nominal size, standard, approval marks and a sequence of classification digits.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Kennwert</span><span lang="en">Property</span></th>
+            <th><span lang="de">Bedeutung</span><span lang="en">Meaning</span></th>
+            <th><span lang="de">Typische Werte</span><span lang="en">Typical values</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span lang="de">Druckfestigkeit</span><span lang="en">Compression</span></td>
+            <td><span lang="de">Kraft, die das Rohr ohne bleibende Verformung aushält</span><span lang="en">Force the conduit withstands without permanent deformation</span></td>
+            <td class="num">320 · 750 · 1250 · 4000 N</td>
+          </tr>
+          <tr>
+            <td><span lang="de">Schlagfestigkeit</span><span lang="en">Impact</span></td>
+            <td><span lang="de">Widerstand gegen Schlag, auch bei Kälte geprüft</span><span lang="en">Resistance to impact, also tested cold</span></td>
+            <td class="num">1 · 2 · 5 · 6 · 20 J</td>
+          </tr>
+          <tr>
+            <td><span lang="de">Temperaturbereich</span><span lang="en">Temperature range</span></td>
+            <td><span lang="de">zulässig bei Verlegung und im Betrieb</span><span lang="en">permissible during installation and in service</span></td>
+            <td class="num">−25 °C … +60 °C</td>
+          </tr>
+          <tr>
+            <td><span lang="de">Brandverhalten</span><span lang="en">Fire behaviour</span></td>
+            <td><span lang="de">flammwidrig / selbstverlöschend, Brandkennziffer nach CH-Praxis</span><span lang="en">flame-retardant / self-extinguishing, Swiss fire rating</span></td>
+            <td class="num">5.2</td>
+          </tr>
+          <tr>
+            <td><span lang="de">Schutzart</span><span lang="en">Degree of protection</span></td>
+            <td><span lang="de">nur mit passenden Formstücken und Dichtungen erreichbar</span><span lang="en">only achieved with matching fittings and seals</span></td>
+            <td class="num">IP40 … IP67</td>
+          </tr>
+          <tr>
+            <td><span lang="de">Zulassung</span><span lang="en">Approval</span></td>
+            <td><span lang="de">Schweizer Zulassungszeichen auf dem Rohr</span><span lang="en">Swiss approval mark on the conduit</span></td>
+            <td class="num">SEV / Electrosuisse</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Zur Kennzahlenfolge</span><span lang="en">On the classification code</span></b>
+      <p lang="de">Die aufgedruckte Ziffernfolge nach EN 61386 codiert unter anderem Druckfestigkeit, Schlagfestigkeit sowie die minimale und maximale Temperatur. Die genaue Stellenbedeutung ist in der Norm und im Herstellerkatalog dokumentiert — <strong>für die Abgabe dort nachschlagen und die Werte des tatsächlich verwendeten Rohres eintragen</strong>.</p>
+      <p lang="en">The printed digit sequence to EN 61386 encodes, among other things, compression strength, impact strength and the minimum and maximum temperature. The exact meaning of each position is documented in the standard and the manufacturer's catalogue — <strong>look it up there and enter the values of the conduit you actually used</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Verlegearten und Einsatzort</span><span lang="en">Installation methods and where used</span></h2>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Verlegearten von Installationsrohren im Wandaufbau">
+        <defs>
+          <style>
+            .conc{fill:#DFD9CB;stroke:#171614;stroke-width:2}
+            .plas{fill:#EFEAE0;stroke:#171614;stroke-width:1.6}
+            .tube{fill:#F0DBD4;stroke:#B8402A;stroke-width:2.2}
+            .tubeb{fill:#D6E3E9;stroke:#1D5872;stroke-width:2.2}
+            .box{fill:#FBF9F5;stroke:#171614;stroke-width:2}
+            .hatch{stroke:#7D7669;stroke-width:.9}
+            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
+            .ldr{fill:none;stroke:#7D7669;stroke-width:1.2}
+            .cn{fill:#171614}
+            .cnt{fill:#F4F1EA;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-anchor:middle}
+          </style>
+        </defs>
+
+        <!-- Wand -->
+        <rect class="conc" x="150" y="40" width="150" height="320"/>
+        <g class="hatch">
+          <path d="M150 60 l150 -20 M150 100 l150 -20 M150 140 l150 -20 M150 180 l150 -20 M150 220 l150 -20 M150 260 l150 -20 M150 300 l150 -20 M150 340 l150 -20 M150 380 l150 -20"/>
+        </g>
+        <rect class="plas" x="300" y="40" width="18" height="320"/>
+        <text class="lgs" x="158" y="34"><tspan lang="de">BETON / MAUERWERK</tspan><tspan lang="en">CONCRETE / MASONRY</tspan></text>
+
+        <!-- UP-Rohr im Beton -->
+        <path class="tube" d="M196 40 V180 q 0 22 22 22 h30" fill="none" stroke-width="11"/>
+        <!-- UP-Dose -->
+        <rect class="box" x="248" y="182" width="52" height="42" rx="2"/>
+        <circle cx="274" cy="203" r="8" fill="none" stroke="#171614" stroke-width="1.6"/>
+
+        <!-- AP-Rohr auf der Wand -->
+        <path class="tubeb" d="M330 92 H470 q 16 0 16 16 V250" fill="none" stroke-width="11"/>
+        <!-- Schellen -->
+        <g fill="none" stroke="#1D5872" stroke-width="2">
+          <path d="M356 84 v16 M400 84 v16 M444 84 v16 M478 160 h16 M478 210 h16"/>
+        </g>
+        <!-- AP-Dose -->
+        <rect class="box" x="462" y="250" width="48" height="44" rx="3"/>
+
+        <!-- Erdverlegung -->
+        <path d="M40 320 H150" stroke="#48433B" stroke-width="2" fill="none"/>
+        <g class="hatch"><path d="M40 340 l30 -14 M70 348 l30 -14 M100 356 l30 -14"/></g>
+        <path class="tube" d="M46 348 H150" fill="none" stroke-width="11"/>
+        <text class="lgs" x="40" y="314"><tspan lang="de">ERDREICH</tspan><tspan lang="en">GROUND</tspan></text>
+
+        <!-- Callouts -->
+        <circle class="cn" cx="196" cy="70" r="12"/><text class="cnt" x="196" y="74">1</text>
+        <circle class="cn" cx="398" cy="92" r="12"/><text class="cnt" x="398" y="96">2</text>
+        <circle class="cn" cx="98" cy="348" r="12"/><text class="cnt" x="98" y="352">3</text>
+        <circle class="cn" cx="274" cy="240" r="12"/><text class="cnt" x="274" y="244">4</text>
+
+        <!-- Beschriftungen -->
+        <path class="ldr" d="M210 70 H540"/>
+        <text class="lg" x="548" y="66"><tspan lang="de">Unterputz / im Beton</tspan><tspan lang="en">Under plaster / in concrete</tspan></text>
+        <text class="lgs" x="548" y="82">KRFWG</text>
+
+        <path class="ldr" d="M398 106 V130 H540"/>
+        <text class="lg" x="548" y="126"><tspan lang="de">Aufputz auf Schellen</tspan><tspan lang="en">Surface on clips</tspan></text>
+        <text class="lgs" x="548" y="142">KRH · ER</text>
+
+        <path class="ldr" d="M110 348 H130 V300 H540"/>
+        <text class="lg" x="548" y="296"><tspan lang="de">Erdverlegung</tspan><tspan lang="en">Underground</tspan></text>
+        <text class="lgs" x="548" y="312"><tspan lang="de">KABELSCHUTZROHR + WARNBAND</tspan><tspan lang="en">CABLE DUCT + WARNING TAPE</tspan></text>
+
+        <path class="ldr" d="M288 240 H540 V206"/>
+        <text class="lg" x="548" y="196"><tspan lang="de">Dose als Zugpunkt</tspan><tspan lang="en">Box as pulling point</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 2</span><span lang="en">Fig. 2</span></b>
+        <span lang="de"> — Die drei Grundverlegearten am Wandaufbau. Dosen dienen nicht nur der Verbindung, sondern auch als Zugpunkt beim Einziehen.</span>
+        <span lang="en"> — The three basic installation methods shown on a wall build-up. Boxes serve not only for connections but also as pulling points when drawing wires in.</span>
+      </figcaption>
+    </figure>
+
+    <ul class="legend">
+      <li><span class="n">1</span><span lang="de">Unterputz / einbetoniert — vor dem Betonieren auf der Armierung befestigt</span><span lang="en">Under plaster / cast in — fixed to the reinforcement before pouring</span></li>
+      <li><span class="n">2</span><span lang="de">Aufputz — sichtbar auf Schellen, gerade und parallel zu Bauteilkanten</span><span lang="en">Surface — visible on clips, straight and parallel to building edges</span></li>
+      <li><span class="n">3</span><span lang="de">Erdverlegung — im Sandbett, mit Warnband darüber</span><span lang="en">Underground — bedded in sand, with warning tape above</span></li>
+      <li><span class="n">4</span><span lang="de">Dose — Abzweigung, Verbindung und Zugpunkt</span><span lang="en">Box — branching, connection and pulling point</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 7 ================= -->
+<section id="s7">
+  <div class="snum">07</div>
+  <div class="sbody">
+    <h2><span lang="de">Verlegeregeln in der Praxis</span><span lang="en">Installation rules in practice</span></h2>
+
+    <h3><span lang="de">Führung</span><span lang="en">Routing</span></h3>
+    <ul lang="de">
+      <li>Rohre <strong>senkrecht oder waagrecht</strong> führen, nicht diagonal — spätere Bohrungen sollen berechenbar sein</li>
+      <li><strong>Installationszonen</strong> einhalten (Bereiche entlang Decken, Böden, Türen und Fenstern)</li>
+      <li>Rohre nicht durch Bauteile führen, deren Statik oder Brandabschnitt sie verletzen</li>
+      <li>Bei Brandabschnitten die Durchführung fachgerecht abschotten</li>
+    </ul>
+    <ul lang="en">
+      <li>Run conduits <strong>vertically or horizontally</strong>, never diagonally — later drilling must remain predictable</li>
+      <li>Keep to the <strong>installation zones</strong> (bands along ceilings, floors, doors and windows)</li>
+      <li>Do not route conduits through elements whose structure or fire compartment they would compromise</li>
+      <li>Where a fire compartment is penetrated, seal the penetration properly</li>
+    </ul>
+
+    <h3><span lang="de">Biegen</span><span lang="en">Bending</span></h3>
+    <ul lang="de">
+      <li>Harte Rohre mit <strong>Biegefeder</strong> oder Biegezange biegen — nie über dem Knie: das Rohr knickt und verengt sich</li>
+      <li>Biegeradius mindestens nach Herstellerangabe; grosszügige Radien erleichtern das Einziehen erheblich</li>
+      <li>Faustregel: <strong>höchstens zwei bis drei 90°-Bögen</strong> zwischen zwei Zugpunkten</li>
+      <li>Ein geknicktes Rohr wird ersetzt, nicht «geradegebogen»</li>
+    </ul>
+    <ul lang="en">
+      <li>Bend rigid conduit with a <strong>bending spring</strong> or bender — never over your knee: the conduit kinks and narrows</li>
+      <li>Keep to the manufacturer's minimum bending radius; generous radii make drawing-in far easier</li>
+      <li>Rule of thumb: <strong>no more than two to three 90° bends</strong> between two pulling points</li>
+      <li>A kinked conduit is replaced, not “straightened out”</li>
+    </ul>
+
+    <h3><span lang="de">Befestigen und Einziehen</span><span lang="en">Fixing and drawing in</span></h3>
+    <ul lang="de">
+      <li>Aufputzrohre in regelmässigen Abständen schellen, zusätzlich beidseits jedes Bogens und jeder Dose</li>
+      <li>Rohrenden während der Bauphase <strong>verschliessen</strong> — Mörtel und Wasser im Rohr sind kaum mehr zu entfernen</li>
+      <li>Zugdraht oder Einziehband gleich mit einlegen</li>
+      <li>Beim Einziehen Gleitmittel verwenden und nie ruckartig ziehen — die Isolation nimmt sonst Schaden</li>
+      <li>Rohrverlauf <strong>vor dem Zudecken fotografieren</strong> oder im Plan eintragen</li>
+    </ul>
+    <ul lang="en">
+      <li>Clip surface conduits at regular intervals, plus on both sides of every bend and box</li>
+      <li><strong>Seal conduit ends</strong> during construction — mortar and water inside are almost impossible to remove</li>
+      <li>Lay in a draw wire or tape at the same time</li>
+      <li>Use lubricant when pulling and never jerk — the insulation suffers otherwise</li>
+      <li><strong>Photograph the route before it is covered</strong> or record it on the drawing</li>
+    </ul>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Häufiger Fehler</span><span lang="en">Common mistake</span></b>
+      <p lang="de">Zu viele Bögen zwischen zwei Dosen. Jeder Bogen erhöht die Reibung überproportional; nach dem dritten 90°-Bogen lässt sich ein voll belegtes Rohr praktisch nicht mehr einziehen. Dann hilft nur noch: aufspitzen und eine Zwischendose setzen.</p>
+      <p lang="en">Too many bends between two boxes. Each bend increases friction disproportionately; after the third 90° bend a fully loaded conduit is practically impossible to pull. The only remedy left is to break it open and fit an intermediate box.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8 ================= -->
+<section id="s8">
+  <div class="snum">08</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Was bedeutet die Bezeichnung KRFWG M20?</span><span lang="en">What does the designation KRFWG M20 mean?</span></summary>
+      <div class="ans">
+        <p lang="de">Kunststoffrohr, flexibel, flammwidrig, gewellt, mit einem Aussendurchmesser von 20 mm. Es ist das Standardrohr für die Unterputz- und Betoninstallation im Wohnungsbau.</p>
+        <p lang="en">Plastic conduit, flexible, flame-retardant, corrugated, with an outside diameter of 20 mm. It is the standard conduit for under-plaster and concrete work in housing.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum wird überhaupt in Rohr installiert statt direkt Kabel zu verlegen?</span><span lang="en">Why install in conduit rather than laying cable directly?</span></summary>
+      <div class="ans">
+        <p lang="de">Wegen der Auswechselbarkeit: Drähte lassen sich nachziehen, ergänzen oder ersetzen, ohne die Wand aufzuspitzen. Dazu kommen mechanischer Schutz, zusätzliche Isolation und ein definierter, dokumentierbarer Leiterweg.</p>
+        <p lang="en">Because of replaceability: wires can be drawn in again, added to or replaced without breaking open the wall. On top of that come mechanical protection, additional insulation and a defined, documentable cable route.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie viel Prozent des Rohrquerschnitts darf als Faustregel belegt werden?</span><span lang="en">As a rule of thumb, what proportion of the conduit area may be filled?</span></summary>
+      <div class="ans">
+        <p lang="de">Rund 40 % des freien Innenquerschnitts. Massgebend sind die Belegungstabellen der NIN und die Herstellerangaben. Der Rest wird für das Einziehen und die Wärmeabfuhr gebraucht.</p>
+        <p lang="en">About 40 % of the free inner cross-section. The NIN fill tables and manufacturer data are authoritative. The remainder is needed for drawing in and for heat dissipation.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welches Rohr verwendest du für eine sichtbare Installation im Keller — und warum?</span><span lang="en">Which conduit do you use for a visible installation in a cellar — and why?</span></summary>
+      <div class="ans">
+        <p lang="de">Ein hartes Rohr (KRH), weil es formstabil ist und gerade, sauber verlegt werden kann. Ein flexibles Wellrohr würde auf Schellen wellig aussehen und wirkt unsauber. Bei starker mechanischer Beanspruchung — Werkstatt, Garage, Industrie — kommt Stahlrohr (ER) in Frage.</p>
+        <p lang="en">A rigid conduit (KRH), because it is dimensionally stable and can be run straight and neatly. A flexible corrugated conduit would look wavy on clips and appear untidy. Where mechanical stress is high — workshop, garage, industry — steel conduit (ER) is the choice.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was ist beim Einsatz von Stahlrohr elektrotechnisch zusätzlich zu beachten?</span><span lang="en">What additional electrical point applies to steel conduit?</span></summary>
+      <div class="ans">
+        <p lang="de">Stahlrohr ist leitfähig und damit ein fremdes leitfähiges Teil. Es muss in den Schutzpotentialausgleich einbezogen werden, damit im Fehlerfall keine gefährliche Berührungsspannung entstehen kann.</p>
+        <p lang="en">Steel conduit is conductive and therefore an extraneous conductive part. It must be included in the protective equipotential bonding so that no dangerous touch voltage can arise under fault conditions.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum sollen Rohrenden während der Bauphase verschlossen werden?</span><span lang="en">Why should conduit ends be sealed during construction?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil Mörtel, Beton, Bohrstaub und Wasser hineinlaufen. Ausgehärteter Mörtel im Rohr lässt sich praktisch nicht entfernen — das Rohr ist verloren und muss aufgespitzt und ersetzt werden.</p>
+        <p lang="en">Because mortar, concrete, dust and water run in. Once mortar has set inside, it is practically impossible to remove — the conduit is lost and has to be broken open and replaced.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie viele 90°-Bögen sind zwischen zwei Zugpunkten sinnvoll?</span><span lang="en">How many 90° bends are sensible between two pulling points?</span></summary>
+      <div class="ans">
+        <p lang="de">Als Faustregel höchstens zwei bis drei. Jeder Bogen erhöht die Reibung stark; darüber hinaus wird das Einziehen unzumutbar und die Isolation beim Ziehen beschädigt. Lösung: eine Zwischendose als zusätzlichen Zugpunkt setzen.</p>
+        <p lang="en">As a rule of thumb, two to three at most. Each bend increases friction sharply; beyond that, drawing in becomes unreasonable and the insulation gets damaged. The solution is an intermediate box as an extra pulling point.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welches Rohr wählst du für eine Zuleitung im Erdreich?</span><span lang="en">Which conduit do you choose for a feed laid in the ground?</span></summary>
+      <div class="ans">
+        <p lang="de">Ein Kabelschutzrohr für Erdverlegung mit hoher Druckfestigkeit, UV- und frostbeständig, üblicherweise rot oder orange und mit eingezogenem Zugdraht. Verlegt wird im Sandbett, darüber kommt ein Warnband.</p>
+        <p lang="en">A cable duct designed for burial: high crush resistance, UV- and frost-resistant, usually red or orange and supplied with a draw wire. It is bedded in sand with warning tape laid above it.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="01-sicherheit-am-arbeitsplatz.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>01 · <span lang="de">Sicherheit am Arbeitsplatz</span><span lang="en">Safety at Work</span></b>
+  </a>
+  <a class="next" href="03-kanaele.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>03 · <span lang="de">Kanäle</span><span lang="en">Trunking &amp; Ducts</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 02 · Rohre</span><span lang="en">Learning Documentation 02 · Conduits</span></span>
+  <span>Yanik · Etavis · <span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span></span>
+  <span><span lang="de">Normen: EN/IEC 61386 · NIN 2020</span><span lang="en">Standards: EN/IEC 61386 · NIN 2020</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

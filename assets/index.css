@@ -1,0 +1,217 @@
+/* =========================================================
+   Übersichtsseite — Lehrjahre als Wegstrecke
+   ergänzt doku.css
+   ========================================================= */
+
+.wrap.nav{max-width:1180px}
+
+/* ---------- Kennzahlen unter dem Kopf ---------- */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  border-bottom:1px solid var(--rule);
+  margin-bottom:74px;
+}
+.stats div{padding:12px 16px 12px 0;border-right:1px solid var(--rule)}
+.stats div:last-child{border-right:none}
+.stats b{
+  display:block;font-family:var(--mono);font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-3);font-weight:500;margin-bottom:5px;
+}
+.stats i{
+  font-style:normal;font-family:var(--sans);font-weight:700;font-size:26px;
+  letter-spacing:-.02em;line-height:1;
+}
+.stats i small{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--ink-3);letter-spacing:.04em}
+
+/* ---------- Wegstrecke ---------- */
+.road{position:relative}
+
+/* section.year darf das zweispaltige Doku-Grid aus doku.css nicht erben */
+.road section.year{
+  display:block;
+  grid-template-columns:none;
+  gap:0;
+  border-top:none;
+  padding-top:0;
+  position:relative;
+  margin-bottom:26px;
+  scroll-margin-top:80px;
+}
+
+/* handgezeichnete Blase mit dem Lehrjahr-Titel */
+.blob{
+  position:relative;
+  padding:36px 40px 34px 52px;
+  min-height:132px;
+  display:flex;
+  align-items:center;
+  gap:26px;
+  flex-wrap:wrap;
+}
+.blob svg.outline{
+  position:absolute;inset:0;width:100%;height:100%;
+  overflow:visible;pointer-events:none;
+}
+.blob svg.outline path{
+  fill:none;
+  stroke:var(--ink);
+  stroke-width:2.2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.year.locked .blob svg.outline path{stroke:var(--ink-3);stroke-dasharray:9 7;stroke-width:1.8}
+
+.blob .yn{
+  font-family:var(--sans);font-weight:800;
+  font-size:clamp(40px,6.4vw,64px);line-height:.8;letter-spacing:-.05em;
+  color:var(--therm);
+  position:relative;
+}
+.year.locked .blob .yn{color:var(--ink-3)}
+
+.blob .yt{position:relative;min-width:0}
+.blob .yt h2{
+  font-family:var(--sans);font-weight:700;
+  font-size:clamp(21px,3.2vw,30px);letter-spacing:-.025em;line-height:1.06;
+  margin-bottom:7px;
+}
+.blob .yt p{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink-3);margin:0;max-width:none;
+}
+.year.locked .blob .yt h2{color:var(--ink-2)}
+
+.blob .ystate{
+  margin-left:auto;position:relative;
+  font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  font-weight:600;color:var(--paper);background:var(--therm);
+  padding:5px 10px;border-radius:2px;white-space:nowrap;
+}
+.year.locked .blob .ystate{background:none;color:var(--ink-3);border:1px solid var(--rule);font-weight:500}
+
+/* Verbindungsstriche zwischen den Blasen */
+.link{
+  width:210px;
+  height:118px;
+  display:block;
+  margin:0 0 0 42px;
+  overflow:visible;
+}
+.link path{
+  fill:none;stroke:var(--ink-3);stroke-width:2.2;stroke-linecap:round;
+}
+@media (prefers-reduced-motion:no-preference){
+  .link path{
+    stroke-dasharray:var(--len,60);
+    stroke-dashoffset:var(--len,60);
+    animation:draw .7s cubic-bezier(.3,.7,.3,1) forwards;
+  }
+  .link path:nth-child(1){animation-delay:.05s}
+  .link path:nth-child(2){animation-delay:.16s}
+  .link path:nth-child(3){animation-delay:.27s}
+}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* ---------- Themenliste eines Lehrjahres ---------- */
+.topics{
+  list-style:none;padding:0;
+  margin:20px 0 0 42px;
+  max-width:none;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
+  gap:0 34px;
+  border-top:2px solid var(--ink);
+}
+.year.locked .topics{border-top:1.5px solid var(--rule)}
+.topics li{margin:0}
+
+.topics a,.topics span.soon{
+  display:grid;
+  grid-template-columns:34px 1fr;
+  gap:0 14px;
+  align-items:baseline;
+  padding:13px 4px 12px 0;
+  border-bottom:1px solid var(--rule);
+  text-decoration:none;color:inherit;
+  transition:background .18s, padding-left .18s;
+}
+.topics a:hover{background:rgba(184,64,42,.05);padding-left:8px}
+.topics a:focus-visible{outline:2px solid var(--therm);outline-offset:-2px}
+
+.topics .tn{
+  font-family:var(--mono);font-size:11.5px;font-weight:600;
+  letter-spacing:.08em;color:var(--therm);
+}
+.topics a:hover .tn{color:var(--ink)}
+.year.locked .topics .tn{color:var(--ink-3);font-weight:500}
+
+.topics .tt{
+  font-family:var(--sans);font-weight:600;font-size:15.5px;
+  letter-spacing:-.008em;line-height:1.25;min-width:0;
+}
+.topics .td{
+  grid-column:2;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;
+  color:var(--ink-3);margin-top:4px;line-height:1.45;
+}
+
+.topics span.soon{color:var(--ink-3);cursor:default;border-bottom-style:dotted}
+.topics span.soon .tt{font-weight:500;color:var(--ink-3)}
+
+/* Fortschrittsband */
+.progress{
+  margin:24px 0 0 42px;
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-3);
+}
+.bar{
+  flex:1;min-width:160px;height:6px;
+  background:var(--paper-3);border:1px solid var(--rule);
+  position:relative;overflow:hidden;
+}
+.bar i{position:absolute;inset:0 auto 0 0;background:var(--therm);display:block}
+.year.locked .bar i{background:var(--ink-3)}
+
+/* ---------- Hinweiskasten am Fuss ---------- */
+.note{
+  border-top:2px solid var(--ink);
+  margin-top:70px;padding-top:20px;
+  display:grid;grid-template-columns:76px 1fr;gap:0 28px;
+}
+.note .snum{border-top:none;padding-top:2px}
+.note .sbody{border-top:none;padding-top:0}
+
+/* ---------- Animation ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .stats,.year{
+    opacity:0;transform:translateY(14px);
+    animation:rise .62s cubic-bezier(.2,.7,.3,1) forwards;
+  }
+  .stats{animation-delay:.08s}
+  .year:nth-of-type(1){animation-delay:.14s}
+  .year:nth-of-type(2){animation-delay:.2s}
+  .year:nth-of-type(3){animation-delay:.26s}
+  .year:nth-of-type(n+4){animation-delay:.32s}
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:720px){
+  .road section.year{border-top:none;padding-top:0}
+  .blob{padding:26px 22px 26px 30px;gap:16px;min-height:0}
+  .blob .ystate{margin-left:0}
+  .topics,.progress,.link{margin-left:18px}
+  .topics{grid-template-columns:1fr}
+  .note{grid-template-columns:1fr}
+  .note .snum{margin-bottom:4px}
+}
+
+/* ---------- Druck ---------- */
+@media print{
+  .stats,.year{opacity:1!important;transform:none!important;animation:none!important}
+  .link path{animation:none!important;stroke-dashoffset:0!important}
+  .year{break-inside:avoid}
+  .link{height:44px}
+  .topics a:hover{background:none}
+}

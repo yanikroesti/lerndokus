@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 09 — Lampenschaltung Schema 6" data-en="Learning Documentation 09 — Lighting Circuit Schema 6">Lerndokumentation 09 — Lampenschaltung Schema 6</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span>
+    <span lang="de">Thema 09</span><span lang="en">Topic 09</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">09</div>
+    <h1><span lang="de">Lampenschaltung<br>Schema 6</span><span lang="en">Lighting Circuit<br>Schema 6</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Kreuzschaltung · Aufbau · Zeichnung · Beschrieb · drei und mehr Schaltstellen</span>
+    <span lang="en">Intermediate switching · design · drawing · description · three or more positions</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">09 von 12</span><span lang="en">09 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Lampe mit drei Schaltstellen und gekreuzten Wegen">
+        <circle cx="110" cy="52" r="26" fill="#F0DBD4" stroke="#171614" stroke-width="2.4"/>
+        <path d="M100 74 h20 v9 h-20 z" fill="#DFD9CB" stroke="#171614" stroke-width="2.2" stroke-linejoin="round"/>
+        <circle cx="102" cy="49" r="2.8" fill="#171614"/>
+        <circle cx="119" cy="49" r="2.8" fill="#171614"/>
+        <path d="M102 61 q 9 7 18 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+        <g fill="#EFEAE0" stroke="#171614" stroke-width="2.4" stroke-linejoin="round">
+          <rect x="14" y="104" width="38" height="32" rx="4"/>
+          <rect x="90" y="104" width="40" height="32" rx="4"/>
+          <rect x="168" y="104" width="38" height="32" rx="4"/>
+        </g>
+        <path d="M25 128 L41 115 M179 128 L195 115" stroke="#1D5872" stroke-width="3" stroke-linecap="round"/>
+        <path d="M99 114 L121 128 M121 114 L99 128" stroke="#B8402A" stroke-width="3" stroke-linecap="round"/>
+        <path d="M52 120 h38 M130 120 h38" stroke="#7D7669" stroke-width="2" stroke-dasharray="5 4" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Zweck und Einsatzgebiet</span><span lang="en">Purpose and field of use</span></h2>
+
+    <p class="lead" lang="de">Die <strong>Kreuzschaltung</strong> — in der Schweiz <strong>Schema 6</strong> — kommt zum Zug, wenn eine Lampe von <strong>drei oder mehr Stellen</strong> geschaltet werden soll. Sie ist keine eigenständige Schaltung, sondern die <strong>Erweiterung der Wechselschaltung</strong>: Zwischen die beiden Wechselschalter (Schema 3) wird ein Kreuzschalter eingefügt — oder mehrere.</p>
+    <p class="lead" lang="en">The <strong>intermediate circuit</strong> — in Switzerland <strong>Schema 6</strong> — is used when a lamp is to be switched from <strong>three or more positions</strong>. It is not a circuit in its own right but an <strong>extension of the two-way circuit</strong>: an intermediate switch is inserted between the two two-way switches (Schema 3) — or several of them.</p>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Die wichtigste Regel</span><span lang="en">The most important rule</span></b>
+      <p lang="de">Ein Schema-6-Schalter steht <strong>immer zwischen zwei Schema-3-Schaltern</strong>. Die beiden äusseren Schaltstellen sind ausnahmslos Wechselschalter — nur dazwischen sitzen die Kreuzschalter. Ein Kreuzschalter am Anfang oder am Ende der Kette funktioniert nicht.</p>
+      <p lang="en">A Schema 6 switch always sits <strong>between two Schema 3 switches</strong>. The two outer positions are always changeover switches — the intermediate switches sit only in between. An intermediate switch at the start or end of the chain does not work.</p>
+    </div>
+
+    <h3><span lang="de">Wie viele Schalter für wie viele Stellen?</span><span lang="en">How many switches for how many positions?</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Schaltstellen</span><span lang="en">Positions</span></th>
+            <th><span lang="de">Schema 3</span><span lang="en">Schema 3</span></th>
+            <th><span lang="de">Schema 6</span><span lang="en">Schema 6</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">2</td><td class="num">2</td><td class="num">0</td></tr>
+          <tr><td class="num">3</td><td class="num">2</td><td class="num">1</td></tr>
+          <tr><td class="num">4</td><td class="num">2</td><td class="num">2</td></tr>
+          <tr><td class="num">5</td><td class="num">2</td><td class="num">3</td></tr>
+          <tr><td class="num"><strong>n</strong></td><td class="num"><strong>2</strong></td><td class="num"><strong>n − 2</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Typische Einsatzorte</span><span lang="en">Typical locations</span></h3>
+    <ul lang="de">
+      <li><strong>Langer Korridor</strong> mit mehreren Türen</li>
+      <li><strong>Treppenhaus über mehrere Geschosse</strong> — pro Podest eine Schaltstelle</li>
+      <li><strong>Grosser Raum</strong> mit drei oder mehr Zugängen</li>
+      <li><strong>Durchgangszimmer</strong> in einer Zimmerflucht</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Long corridor</strong> with several doors</li>
+      <li><strong>Staircase over several floors</strong> — one position per landing</li>
+      <li><strong>Large room</strong> with three or more entrances</li>
+      <li><strong>Connecting rooms</strong> in an enfilade</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Der Kreuzschalter</span><span lang="en">The intermediate switch</span></h2>
+
+    <p lang="de">Der Kreuzschalter hat <strong>vier Klemmen</strong>: zwei für die ankommenden und zwei für die weiterführenden Korrespondierenden. Im Innern vertauscht er die beiden Wege — daher der Name.</p>
+    <p lang="en">The intermediate switch has <strong>four terminals</strong>: two for the incoming and two for the outgoing strappers. Internally it swaps the two paths — hence the name.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Die zwei Stellungen des Kreuzschalters: durchgehend und gekreuzt">
+        <defs>
+          <style>
+            .bx{fill:#EFEAE0;stroke:#171614;stroke-width:2.4}
+            .p1{fill:none;stroke:#B8402A;stroke-width:3.4;stroke-linecap:round}
+            .p2{fill:none;stroke:#1D5872;stroke-width:3.4;stroke-linecap:round}
+            .dot{fill:#171614}
+            .ttl{font-family:'Archivo',sans-serif;font-size:15px;font-weight:700;fill:#171614;text-anchor:middle}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;text-anchor:middle;letter-spacing:.07em}
+            .tm{font-family:'IBM Plex Mono',monospace;font-size:11px;fill:#48433B}
+          </style>
+        </defs>
+
+        <!-- Stellung A: durchgehend -->
+        <g transform="translate(60,40)">
+          <rect class="bx" x="60" y="20" width="180" height="120" rx="4"/>
+          <path class="p1" d="M78 56 H222"/>
+          <path class="p2" d="M78 104 H222"/>
+          <circle class="dot" cx="78" cy="56" r="5"/>
+          <circle class="dot" cx="78" cy="104" r="5"/>
+          <circle class="dot" cx="222" cy="56" r="5"/>
+          <circle class="dot" cx="222" cy="104" r="5"/>
+          <path class="p1" d="M20 56 H78"/>
+          <path class="p2" d="M20 104 H78"/>
+          <path class="p1" d="M222 56 H280"/>
+          <path class="p2" d="M222 104 H280"/>
+          <text class="tm" x="12" y="48" text-anchor="end">1</text>
+          <text class="tm" x="12" y="112" text-anchor="end">2</text>
+          <text class="tm" x="288" y="48">3</text>
+          <text class="tm" x="288" y="112">4</text>
+        </g>
+        <text class="ttl" x="210" y="222"><tspan lang="de">Stellung A — durchgehend</tspan><tspan lang="en">Position A — straight through</tspan></text>
+        <text class="lgs" x="210" y="242">1 → 3 &nbsp;·&nbsp; 2 → 4</text>
+
+        <!-- Stellung B: gekreuzt -->
+        <g transform="translate(420,40)">
+          <rect class="bx" x="60" y="20" width="180" height="120" rx="4"/>
+          <path class="p1" d="M78 56 L222 104"/>
+          <path class="p2" d="M78 104 L222 56"/>
+          <circle class="dot" cx="78" cy="56" r="5"/>
+          <circle class="dot" cx="78" cy="104" r="5"/>
+          <circle class="dot" cx="222" cy="56" r="5"/>
+          <circle class="dot" cx="222" cy="104" r="5"/>
+          <path class="p1" d="M20 56 H78"/>
+          <path class="p2" d="M20 104 H78"/>
+          <path class="p2" d="M222 56 H280"/>
+          <path class="p1" d="M222 104 H280"/>
+          <text class="tm" x="12" y="48" text-anchor="end">1</text>
+          <text class="tm" x="12" y="112" text-anchor="end">2</text>
+          <text class="tm" x="288" y="48">3</text>
+          <text class="tm" x="288" y="112">4</text>
+        </g>
+        <text class="ttl" x="570" y="222"><tspan lang="de">Stellung B — gekreuzt</tspan><tspan lang="en">Position B — crossed</tspan></text>
+        <text class="lgs" x="570" y="242">1 → 4 &nbsp;·&nbsp; 2 → 3</text>
+
+        <text class="lgs" x="380" y="284"><tspan lang="de">DER KREUZSCHALTER SCHALTET NICHT EIN ODER AUS — ER TAUSCHT DIE BEIDEN WEGE</tspan><tspan lang="en">THE INTERMEDIATE SWITCH DOES NOT SWITCH ON OR OFF — IT SWAPS THE TWO PATHS</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Die beiden Stellungen des Kreuzschalters. Er unterbricht den Stromkreis nie, sondern leitet ihn nur um.</span>
+        <span lang="en"> — The two positions of the intermediate switch. It never interrupts the circuit, it only redirects it.</span>
+      </figcaption>
+    </figure>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Das ist der Trick</span><span lang="en">That is the trick</span></b>
+      <p lang="de">Der Kreuzschalter <strong>unterbricht nie</strong>. Er vertauscht nur, welche der beiden Korrespondierenden weitergeführt wird. Genau dadurch kehrt er den Zustand der ganzen Schaltung um — wie es ein Wechselschalter auch tut, aber mitten in der Kette statt am Ende.</p>
+      <p lang="en">The intermediate switch <strong>never interrupts</strong>. It merely swaps which of the two strappers is carried onwards. That alone inverts the state of the whole circuit — just as a two-way switch does, but in the middle of the chain rather than at its end.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Schaltschema</span><span lang="en">Circuit diagram</span></h2>
+
+    <figure>
+      <svg viewBox="0 0 760 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schaltschema der Kreuzschaltung Schema 6 mit zwei Wechselschaltern und einem Kreuzschalter">
+        <defs>
+          <style>
+            .w{fill:none;stroke:#171614;stroke-width:2.6;stroke-linecap:round}
+            .wl{fill:none;stroke:#B8402A;stroke-width:2.6;stroke-linecap:round}
+            .wk{fill:none;stroke:#1D5872;stroke-width:2.6;stroke-linecap:round}
+            .wn{fill:none;stroke:#48433B;stroke-width:2.6;stroke-linecap:round}
+            .wpe{fill:none;stroke:#3F6B43;stroke-width:2.6;stroke-linecap:round;stroke-dasharray:9 5}
+            .bx{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .dot{fill:#171614}
+            .lgb{font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;fill:#171614}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
+            .id{font-family:'Archivo',sans-serif;font-size:15px;font-weight:700;fill:#171614}
+          </style>
+        </defs>
+
+        <!-- L -->
+        <path class="wl" d="M46 60 H120 V196"/>
+        <text class="lgb" x="46" y="48" fill="#B8402A">L</text>
+        <text class="lgs" x="66" y="48" fill="#B8402A"><tspan lang="de">POLLEITER</tspan><tspan lang="en">LINE</tspan></text>
+
+        <!-- N -->
+        <path class="wn" d="M46 400 H660"/>
+        <text class="lgb" x="46" y="424">N</text>
+
+        <!-- PE -->
+        <path class="wpe" d="M46 438 H660 V330"/>
+        <text class="lgb" x="70" y="454" fill="#3F6B43">PE</text>
+
+        <!-- S1 Wechselschalter -->
+        <g>
+          <circle class="dot" cx="120" cy="200" r="5"/>
+          <path class="w" d="M120 200 L180 158"/>
+          <circle class="dot" cx="186" cy="154" r="5"/>
+          <circle class="dot" cx="186" cy="248" r="5"/>
+          <text class="id" x="92" y="178">S1</text>
+          <text class="lgs" x="76" y="272"><tspan lang="de">SCHEMA 3</tspan><tspan lang="en">SCHEMA 3</tspan></text>
+        </g>
+
+        <!-- Korrespondierende 1 -> Kreuzschalter -->
+        <path class="wk" d="M186 154 H316"/>
+        <path class="wk" d="M186 248 H316"/>
+
+        <!-- Kreuzschalter S2 -->
+        <g>
+          <rect class="bx" x="316" y="128" width="128" height="146" rx="4"/>
+          <circle class="dot" cx="316" cy="154" r="5"/>
+          <circle class="dot" cx="316" cy="248" r="5"/>
+          <circle class="dot" cx="444" cy="154" r="5"/>
+          <circle class="dot" cx="444" cy="248" r="5"/>
+          <path class="wk" d="M316 154 H444"/>
+          <path class="wk" d="M316 248 H444"/>
+          <text class="id" x="380" y="116" text-anchor="middle">S2</text>
+          <text class="lgs" x="380" y="296" text-anchor="middle"><tspan lang="de">SCHEMA 6 — KREUZSCHALTER</tspan><tspan lang="en">SCHEMA 6 — INTERMEDIATE</tspan></text>
+          <text class="lgs" x="380" y="206" text-anchor="middle"><tspan lang="de">STELLUNG: DURCHGEHEND</tspan><tspan lang="en">POSITION: STRAIGHT</tspan></text>
+        </g>
+
+        <!-- Korrespondierende 2 -> S3 -->
+        <path class="wk" d="M444 154 H562"/>
+        <path class="wk" d="M444 248 H562"/>
+
+        <!-- S3 Wechselschalter -->
+        <g>
+          <circle class="dot" cx="562" cy="154" r="5"/>
+          <circle class="dot" cx="562" cy="248" r="5"/>
+          <path class="w" d="M568 158 L628 200"/>
+          <circle class="dot" cx="628" cy="200" r="5"/>
+          <text class="id" x="636" y="178">S3</text>
+          <text class="lgs" x="580" y="296"><tspan lang="de">SCHEMA 3</tspan><tspan lang="en">SCHEMA 3</tspan></text>
+        </g>
+
+        <!-- Lampendraht -->
+        <path class="wl" d="M628 200 H660 V306"/>
+        <text class="lgs" x="600" y="192" fill="#B8402A"><tspan lang="de">LAMPENDRAHT</tspan><tspan lang="en">LAMP WIRE</tspan></text>
+
+        <!-- Lampe -->
+        <g transform="translate(660,330)">
+          <circle r="24" fill="none" stroke="#171614" stroke-width="2.6"/>
+          <path d="M-17 -17 L17 17 M17 -17 L-17 17" stroke="#171614" stroke-width="2.6" stroke-linecap="round"/>
+          <text class="id" x="-34" y="6" text-anchor="end">E1</text>
+        </g>
+        <path class="wn" d="M660 354 V400"/>
+
+        <text class="lgs" x="230" y="348"><tspan lang="de">GEZEICHNETE STELLUNG → LAMPE BRENNT</tspan><tspan lang="en">POSITION SHOWN → LAMP IS ON</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 2</span><span lang="en">Fig. 2</span></b>
+        <span lang="de"> — Kreuzschaltung mit drei Schaltstellen. <span style="color:var(--therm)">Rot = Polleiter und Lampendraht</span>, <span style="color:var(--mag)">blau = Korrespondierende</span>. Aussen immer Schema 3, in der Mitte Schema 6.</span>
+        <span lang="en"> — Intermediate circuit with three switching positions. <span style="color:var(--therm)">Red = line and lamp wire</span>, <span style="color:var(--mag)">blue = strappers</span>. Schema 3 at both ends, Schema 6 in the middle.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Der Stromweg in Worten</span><span lang="en">The current path in words</span></h3>
+    <ol lang="de">
+      <li>Der <strong>Polleiter</strong> führt zum gemeinsamen Kontakt von <code>S1</code> (Schema 3).</li>
+      <li><code>S1</code> legt ihn auf eine der beiden <strong>Korrespondierenden</strong>.</li>
+      <li>Diese laufen zum <strong>Kreuzschalter</strong> <code>S2</code> (Schema 6). Je nach Stellung führt er sie <em>durchgehend</em> oder <em>gekreuzt</em> weiter.</li>
+      <li>Die weiterführenden Korrespondierenden erreichen <code>S3</code> (Schema 3).</li>
+      <li>Liegt der Hebel von <code>S3</code> auf der spannungsführenden Korrespondierenden, ist der Kreis geschlossen: Der <strong>Lampendraht</strong> führt zur Leuchte.</li>
+      <li>Der <strong>Neutralleiter</strong> geht direkt zur Leuchte und wird nie geschaltet.</li>
+    </ol>
+    <ol lang="en">
+      <li>The <strong>line conductor</strong> runs to the common contact of <code>S1</code> (Schema 3).</li>
+      <li><code>S1</code> connects it to one of the two <strong>strappers</strong>.</li>
+      <li>These run to the <strong>intermediate switch</strong> <code>S2</code> (Schema 6), which passes them on either <em>straight</em> or <em>crossed</em>.</li>
+      <li>The onward strappers reach <code>S3</code> (Schema 3).</li>
+      <li>If the lever of <code>S3</code> rests on the live strapper, the circuit is closed: the <strong>lamp wire</strong> runs to the luminaire.</li>
+      <li>The <strong>neutral</strong> goes directly to the luminaire and is never switched.</li>
+    </ol>
+
+    <h3><span lang="de">Schaltzustände bei drei Stellen</span><span lang="en">Switching states with three positions</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th>S1</th><th>S2 <span lang="de">(Kreuz)</span><span lang="en">(interm.)</span></th><th>S3</th>
+            <th><span lang="de">Lampe</span><span lang="en">Lamp</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num"><span lang="de">oben</span><span lang="en">up</span></td><td class="num"><span lang="de">durch</span><span lang="en">straight</span></td><td class="num"><span lang="de">oben</span><span lang="en">up</span></td><td><strong class="therm-t">EIN</strong></td></tr>
+          <tr><td class="num"><span lang="de">oben</span><span lang="en">up</span></td><td class="num"><span lang="de">durch</span><span lang="en">straight</span></td><td class="num"><span lang="de">unten</span><span lang="en">down</span></td><td>AUS / OFF</td></tr>
+          <tr><td class="num"><span lang="de">oben</span><span lang="en">up</span></td><td class="num"><span lang="de">gekreuzt</span><span lang="en">crossed</span></td><td class="num"><span lang="de">oben</span><span lang="en">up</span></td><td>AUS / OFF</td></tr>
+          <tr><td class="num"><span lang="de">oben</span><span lang="en">up</span></td><td class="num"><span lang="de">gekreuzt</span><span lang="en">crossed</span></td><td class="num"><span lang="de">unten</span><span lang="en">down</span></td><td><strong class="therm-t">EIN</strong></td></tr>
+          <tr><td class="num"><span lang="de">unten</span><span lang="en">down</span></td><td class="num"><span lang="de">durch</span><span lang="en">straight</span></td><td class="num"><span lang="de">oben</span><span lang="en">up</span></td><td>AUS / OFF</td></tr>
+          <tr><td class="num"><span lang="de">unten</span><span lang="en">down</span></td><td class="num"><span lang="de">durch</span><span lang="en">straight</span></td><td class="num"><span lang="de">unten</span><span lang="en">down</span></td><td><strong class="therm-t">EIN</strong></td></tr>
+          <tr><td class="num"><span lang="de">unten</span><span lang="en">down</span></td><td class="num"><span lang="de">gekreuzt</span><span lang="en">crossed</span></td><td class="num"><span lang="de">oben</span><span lang="en">up</span></td><td><strong class="therm-t">EIN</strong></td></tr>
+          <tr><td class="num"><span lang="de">unten</span><span lang="en">down</span></td><td class="num"><span lang="de">gekreuzt</span><span lang="en">crossed</span></td><td class="num"><span lang="de">unten</span><span lang="en">down</span></td><td>AUS / OFF</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p lang="de">Acht Kombinationen, davon vier «ein» und vier «aus». Jede einzelne Betätigung — egal an welchem der drei Schalter — kehrt den Zustand um. Genau das ist die geforderte Funktion.</p>
+    <p lang="en">Eight combinations, four “on” and four “off”. Every single operation — at whichever of the three switches — inverts the state. That is precisely the required function.</p>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Aderzahlen und Montage</span><span lang="en">Core counts and installation</span></h2>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Teilstück</span><span lang="en">Section</span></th>
+            <th><span lang="de">Adern</span><span lang="en">Cores</span></th>
+            <th><span lang="de">Welche</span><span lang="en">Which</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span lang="de">Speisung → Deckendose</span><span lang="en">Supply → ceiling box</span></td><td class="num">3</td><td>L · N · PE</td></tr>
+          <tr><td><span lang="de">→ S1 (Schema 3)</span><span lang="en">→ S1 (Schema 3)</span></td><td class="num">3</td><td><span lang="de">Polleiter + 2 Korrespondierende</span><span lang="en">line + 2 strappers</span></td></tr>
+          <tr><td><span lang="de">S1 → S2 (Kreuzschalter)</span><span lang="en">S1 → S2 (intermediate)</span></td><td class="num">2</td><td><span lang="de">2 Korrespondierende</span><span lang="en">2 strappers</span></td></tr>
+          <tr><td><span lang="de">S2 → S3 (Schema 3)</span><span lang="en">S2 → S3 (Schema 3)</span></td><td class="num">2</td><td><span lang="de">2 Korrespondierende</span><span lang="en">2 strappers</span></td></tr>
+          <tr><td><span lang="de">S3 → Leuchte</span><span lang="en">S3 → luminaire</span></td><td class="num">1</td><td><span lang="de">Lampendraht (N und PE separat)</span><span lang="en">lamp wire (N and PE separately)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p lang="de">Am <strong>Kreuzschalter liegen immer vier Adern</strong> an: zwei ankommende und zwei weiterführende Korrespondierende. Weder Polleiter noch Lampendraht noch Neutralleiter gehören an einen Kreuzschalter.</p>
+    <p lang="en">An <strong>intermediate switch always has four cores</strong>: two incoming and two outgoing strappers. Neither the line conductor nor the lamp wire nor the neutral belongs at an intermediate switch.</p>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Wirtschaftlichkeit</span><span lang="en">Cost consideration</span></b>
+      <p lang="de">Ab etwa vier bis fünf Schaltstellen wird die Kreuzschaltung aufwendig: viele Adern, lange Rohrstrecken, jede Stelle braucht mindestens zwei durchgehende Korrespondierende. Dann ist die <strong>Schrittschaltung mit Stromstossschalter</strong> (Thema 10) meist die günstigere und übersichtlichere Lösung — dort genügt eine einzige Steuerader zu allen Tastern.</p>
+      <p lang="en">From about four or five switching positions the intermediate circuit becomes expensive: many cores, long conduit runs, every position needs at least two strappers passing through. The <strong>impulse relay circuit</strong> (topic 10) is then usually the cheaper and clearer solution — there, a single control wire to all push buttons is enough.</p>
+    </div>
+
+    <h3><span lang="de">Typische Fehler</span><span lang="en">Typical faults</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Beobachtung</span><span lang="en">Observation</span></th>
+            <th><span lang="de">Wahrscheinliche Ursache</span><span lang="en">Likely cause</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span lang="de">Der mittlere Schalter wirkt nicht</span><span lang="en">The middle switch has no effect</span></td>
+            <td><span lang="de">Kreuzschalter falsch verdrahtet: beide ankommenden Adern auf derselben Seite statt über Kreuz zugeordnet</span><span lang="en">Intermediate switch wired wrongly: both incoming cores on the same side instead of assigned across</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Ein äusserer Schalter wirkt nicht</span><span lang="en">One outer switch has no effect</span></td>
+            <td><span lang="de">Polleiter oder Lampendraht nicht am gemeinsamen Kontakt des Wechselschalters</span><span lang="en">Line or lamp wire not on the common contact of the two-way switch</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Kurzschluss beim Betätigen des mittleren Schalters</span><span lang="en">Short circuit when operating the middle switch</span></td>
+            <td><span lang="de">Polleiter und Neutralleiter an den Kreuzschalter geführt statt der Korrespondierenden</span><span lang="en">Line and neutral taken to the intermediate switch instead of the strappers</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Ein Kreuzschalter sitzt am Ende der Kette</span><span lang="en">An intermediate switch sits at the end of the chain</span></td>
+            <td><span lang="de">Planungsfehler — aussen gehören immer Schema-3-Schalter hin</span><span lang="en">Design error — the outer positions must always be Schema 3 switches</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Wann verwendest du eine Schaltung nach Schema 6?</span><span lang="en">When do you use a Schema 6 circuit?</span></summary>
+      <div class="ans">
+        <p lang="de">Wenn eine Lampe oder Lampengruppe von drei oder mehr Stellen geschaltet werden soll. Für zwei Stellen genügt die Wechselschaltung nach Schema 3.</p>
+        <p lang="en">When a lamp or group of lamps is to be switched from three or more positions. For two positions the Schema 3 two-way circuit is sufficient.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie viele Klemmen hat ein Kreuzschalter?</span><span lang="en">How many terminals does an intermediate switch have?</span></summary>
+      <div class="ans">
+        <p lang="de">Vier: zwei für die ankommenden und zwei für die weiterführenden Korrespondierenden.</p>
+        <p lang="en">Four: two for the incoming and two for the outgoing strappers.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wo im Stromkreis muss ein Kreuzschalter sitzen?</span><span lang="en">Where in the circuit must an intermediate switch sit?</span></summary>
+      <div class="ans">
+        <p lang="de">Immer <strong>zwischen zwei Wechselschaltern</strong> (Schema 3). Die beiden äusseren Schaltstellen sind ausnahmslos Schema-3-Schalter; alle Kreuzschalter liegen dazwischen.</p>
+        <p lang="en">Always <strong>between two two-way switches</strong> (Schema 3). The two outer positions are always Schema 3 switches; all intermediate switches lie in between.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was macht der Kreuzschalter im Innern?</span><span lang="en">What does the intermediate switch do internally?</span></summary>
+      <div class="ans">
+        <p lang="de">Er vertauscht die beiden Korrespondierenden. In der einen Stellung führt er sie durchgehend weiter (1→3, 2→4), in der anderen über Kreuz (1→4, 2→3). Unterbrochen wird der Stromkreis dabei nie.</p>
+        <p lang="en">It swaps the two strappers. In one position it passes them straight through (1→3, 2→4), in the other it crosses them (1→4, 2→3). The circuit is never interrupted.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie viele Schalter brauchst du für fünf Schaltstellen?</span><span lang="en">How many switches do you need for five switching positions?</span></summary>
+      <div class="ans">
+        <p lang="de">Zwei Wechselschalter (Schema 3) und drei Kreuzschalter (Schema 6). Allgemein: 2 × Schema 3 und (n − 2) × Schema 6.</p>
+        <p lang="en">Two two-way switches (Schema 3) and three intermediate switches (Schema 6). In general: 2 × Schema 3 and (n − 2) × Schema 6.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welche Leiter gehören <em>nicht</em> an einen Kreuzschalter?</span><span lang="en">Which conductors do <em>not</em> belong at an intermediate switch?</span></summary>
+      <div class="ans">
+        <p lang="de">Polleiter, Lampendraht und Neutralleiter. An den Kreuzschalter kommen ausschliesslich die vier Korrespondierenden — zwei ankommend, zwei weiterführend.</p>
+        <p lang="en">The line conductor, the lamp wire and the neutral. Only the four strappers go to an intermediate switch — two incoming, two outgoing.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Der mittlere Schalter wirkt nicht, die beiden äusseren schon. Was prüfst du?</span><span lang="en">The middle switch has no effect, the outer two do. What do you check?</span></summary>
+      <div class="ans">
+        <p lang="de">Die Verdrahtung des Kreuzschalters. Vermutlich sind die ankommenden und weiterführenden Adern falsch zugeordnet — etwa beide ankommenden auf derselben Klemmenseite. Dann verhält sich der Kreuzschalter wie eine durchgehende Verbindung.</p>
+        <p lang="en">The wiring of the intermediate switch. Most likely the incoming and outgoing cores are assigned wrongly — for example both incoming ones on the same side. The intermediate switch then behaves like a plain through connection.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Ab wann lohnt sich statt der Kreuzschaltung eine Schrittschaltung?</span><span lang="en">From when is an impulse relay circuit worth more than an intermediate circuit?</span></summary>
+      <div class="ans">
+        <p lang="de">Etwa ab vier bis fünf Schaltstellen. Bei der Kreuzschaltung müssen zu jeder Stelle mindestens zwei Korrespondierende geführt werden, was Rohr und Draht kostet. Beim Stromstossschalter genügt eine Steuerader zu allen Tastern, die zudem parallel geschaltet werden können.</p>
+        <p lang="en">From roughly four or five positions. In an intermediate circuit at least two strappers must be run to every position, which costs conduit and wire. With an impulse relay a single control wire to all push buttons is enough, and they can simply be wired in parallel.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="08-lampenschaltung-schema-3.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>08 · <span lang="de">Lampenschaltung Schema 3</span><span lang="en">Lighting Circuit Schema 3</span></b>
+  </a>
+  <a class="next" href="10-schrittschaltung.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>10 · <span lang="de">Schrittschaltung</span><span lang="en">Impulse Relay Circuit</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 09 · Kreuzschaltung Schema 6</span><span lang="en">Learning Documentation 09 · Intermediate Circuit Schema 6</span></span>
+  <span>Yanik · Etavis · <span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span></span>
+  <span><span lang="de">Grundlagen: NIN 2020 · SN EN 60617</span><span lang="en">Basis: NIN 2020 · SN EN 60617</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

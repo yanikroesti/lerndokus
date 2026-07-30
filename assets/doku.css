@@ -1,0 +1,460 @@
+/* =========================================================
+   Lerndokumentationen — gemeinsames Stylesheet
+   Elektroinstallateur EFZ · Etavis
+   ========================================================= */
+
+:root{
+  --paper:#F4F1EA;
+  --paper-2:#EAE5DA;
+  --paper-3:#DFD9CB;
+  --ink:#171614;
+  --ink-2:#48433B;
+  --ink-3:#7D7669;
+  --rule:#D2CABB;
+  --therm:#B8402A;
+  --therm-soft:#F0DBD4;
+  --mag:#1D5872;
+  --mag-soft:#D6E3E9;
+  --gold:#9A7B1F;
+  --green:#3F6B43;
+  --sans:'Archivo','Helvetica Neue',sans-serif;
+  --serif:'Source Serif 4',Georgia,serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(184,64,42,.045), transparent 42%),
+    radial-gradient(circle at 88% 92%, rgba(29,88,114,.05), transparent 45%);
+  background-attachment:fixed;
+}
+
+/* feine Karopapier-Textur */
+body::before{
+  content:"";
+  position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    linear-gradient(to right, rgba(23,22,20,.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23,22,20,.035) 1px, transparent 1px);
+  background-size:26px 26px;
+  mask-image:linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.10));
+  -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.10));
+}
+
+.wrap{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 32px 120px}
+
+/* =========================================================
+   Sprachumschaltung
+   Die jeweils inaktive Sprache wird ausgeblendet.
+   ========================================================= */
+html[data-l="de"] [lang="en"]{display:none !important}
+html[data-l="en"] [lang="de"]{display:none !important}
+
+/* =========================================================
+   Werkzeugleiste (Sprache · Übersicht · Drucken)
+   ========================================================= */
+.toolbar{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  display:flex;justify-content:flex-end;align-items:center;gap:8px;
+  padding:12px 20px;
+  pointer-events:none;
+}
+.toolbar > *{pointer-events:auto}
+
+.tbtn{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:var(--ink-2);
+  background:rgba(244,241,234,.92);
+  border:1px solid var(--rule);
+  border-radius:2px;
+  padding:7px 11px;
+  cursor:pointer;
+  text-decoration:none;
+  display:inline-flex;align-items:center;gap:7px;
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  transition:border-color .18s, color .18s, background .18s;
+}
+.tbtn:hover{border-color:var(--ink);color:var(--ink)}
+
+.langswitch{
+  display:inline-flex;
+  background:rgba(244,241,234,.92);
+  border:1px solid var(--rule);
+  border-radius:2px;
+  overflow:hidden;
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+}
+.langswitch button{
+  font-family:var(--mono);
+  font-size:11px;letter-spacing:.13em;font-weight:600;
+  padding:7px 12px;
+  border:none;background:none;cursor:pointer;
+  color:var(--ink-3);
+  transition:background .18s,color .18s;
+}
+.langswitch button + button{border-left:1px solid var(--rule)}
+.langswitch button:hover{color:var(--ink)}
+.langswitch button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+
+/* =========================================================
+   Kopf
+   ========================================================= */
+.masthead{
+  border-bottom:2px solid var(--ink);
+  padding:52px 0 20px;
+  margin-bottom:8px;
+}
+.eyebrow{
+  font-family:var(--mono);
+  font-size:11.5px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-bottom:26px;
+}
+.eyebrow span:not(:last-child)::after{content:" ·";margin-left:18px;color:var(--rule)}
+
+.title-row{display:flex;align-items:flex-end;gap:26px;flex-wrap:wrap}
+.chapno{
+  font-family:var(--sans);
+  font-weight:800;
+  font-size:clamp(72px,13vw,132px);
+  line-height:.78;
+  letter-spacing:-.05em;
+  color:var(--therm);
+}
+h1{
+  font-family:var(--sans);
+  font-weight:700;
+  font-size:clamp(30px,5.2vw,54px);
+  line-height:1.0;
+  letter-spacing:-.032em;
+  padding-bottom:6px;
+}
+.subtitle{
+  font-family:var(--mono);
+  font-size:13px;
+  letter-spacing:.06em;
+  color:var(--ink-2);
+  margin-top:16px;
+}
+
+/* Kopfzeile Formularfelder */
+.formbar{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:0;
+  border-bottom:1px solid var(--rule);
+  margin-bottom:56px;
+}
+.formbar div{
+  padding:12px 16px 12px 0;
+  border-right:1px solid var(--rule);
+}
+.formbar div:last-child{border-right:none}
+.formbar b{
+  display:block;
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  font-weight:500;
+  margin-bottom:5px;
+}
+.formbar i{font-style:normal;font-family:var(--sans);font-weight:600;font-size:15px}
+.blank{display:inline-block;min-width:110px;border-bottom:1px dotted var(--ink-3);height:1.1em}
+
+/* =========================================================
+   Abschnitte
+   ========================================================= */
+section{
+  display:grid;
+  grid-template-columns:76px 1fr;
+  gap:0 28px;
+  padding-top:16px;
+  margin-bottom:60px;
+  scroll-margin-top:24px;
+}
+.snum{
+  font-family:var(--mono);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.1em;
+  color:var(--therm);
+  padding-top:11px;
+  border-top:2px solid var(--ink);
+}
+.sbody{border-top:2px solid var(--ink);padding-top:10px;min-width:0}
+
+h2{
+  font-family:var(--sans);
+  font-weight:700;
+  font-size:26px;
+  letter-spacing:-.02em;
+  line-height:1.15;
+  margin-bottom:14px;
+}
+h3{
+  font-family:var(--sans);
+  font-weight:600;
+  font-size:16px;
+  letter-spacing:.01em;
+  margin:26px 0 8px;
+}
+h3::before{content:"▸ ";color:var(--therm)}
+p{margin-bottom:13px;max-width:66ch}
+p.lead{font-size:18.5px;line-height:1.55;color:var(--ink-2)}
+
+ul,ol{margin:0 0 14px 0;padding-left:20px;max-width:70ch}
+li{margin-bottom:6px}
+li::marker{color:var(--ink-3)}
+
+strong{font-weight:700}
+em{font-style:italic;color:var(--ink-2)}
+code,.mono{font-family:var(--mono);font-size:.87em;background:var(--paper-2);padding:1px 5px;border-radius:2px}
+
+.therm-t{color:var(--therm);font-weight:600}
+.mag-t{color:var(--mag);font-weight:600}
+.gold-t{color:var(--gold);font-weight:600}
+
+/* =========================================================
+   Boxen
+   ========================================================= */
+.callout{
+  border-left:3px solid var(--therm);
+  background:linear-gradient(90deg, rgba(184,64,42,.055), transparent 70%);
+  padding:14px 18px;
+  margin:20px 0;
+  max-width:72ch;
+}
+.callout.blue{border-left-color:var(--mag);background:linear-gradient(90deg, rgba(29,88,114,.06), transparent 70%)}
+.callout.neutral{border-left-color:var(--ink-3);background:linear-gradient(90deg, rgba(23,22,20,.045), transparent 70%)}
+.callout.gold{border-left-color:var(--gold);background:linear-gradient(90deg, rgba(154,123,31,.07), transparent 70%)}
+.callout b.tag{
+  display:block;font-family:var(--mono);font-size:10px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;font-weight:600;
+}
+.callout p:last-child,.callout ul:last-child,.callout ol:last-child{margin-bottom:0}
+
+.formula{
+  font-family:var(--mono);
+  font-size:16px;
+  background:var(--paper-2);
+  border:1px solid var(--rule);
+  padding:14px 18px;
+  margin:16px 0;
+  display:inline-block;
+  letter-spacing:.02em;
+}
+
+/* =========================================================
+   Figuren
+   ========================================================= */
+figure{
+  margin:26px 0 22px;
+  border:1px solid var(--rule);
+  background:#FBF9F5;
+  break-inside:avoid;
+}
+figure svg{display:block;width:100%;height:auto}
+figcaption{
+  font-family:var(--mono);
+  font-size:11.5px;
+  letter-spacing:.05em;
+  color:var(--ink-2);
+  padding:10px 16px;
+  border-top:1px solid var(--rule);
+  background:var(--paper-2);
+}
+figcaption b{color:var(--ink);font-weight:600}
+
+.legend{
+  list-style:none;
+  padding:0;
+  margin:18px 0 0;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(255px,1fr));
+  gap:2px 22px;
+  max-width:none;
+}
+.legend li{
+  display:flex;gap:10px;align-items:baseline;
+  font-size:14.5px;margin:0;padding:4px 0;
+  border-bottom:1px dotted var(--rule);
+}
+.legend .n{
+  font-family:var(--mono);font-size:11px;font-weight:600;
+  background:var(--ink);color:var(--paper);
+  min-width:19px;height:19px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+
+/* Kleine Cartoon-Vignette im Kopf eines Abschnitts */
+.spot{
+  float:right;
+  width:212px;
+  margin:2px 0 16px 28px;
+  border:1px solid var(--rule);
+  background:#FBF9F5;
+}
+.spot svg{display:block;width:100%;height:auto}
+.spot figcaption{
+  font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+  padding:7px 12px;
+}
+
+/* Farbfeld-Liste (Aderfarben, Sicherungs-Kennfarben …) */
+.swatches{
+  list-style:none;padding:0;margin:18px 0;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:2px 22px;max-width:none;
+}
+.swatches li{
+  display:flex;gap:11px;align-items:center;
+  font-size:14.5px;margin:0;padding:6px 0;
+  border-bottom:1px dotted var(--rule);
+}
+.sw{
+  width:26px;height:16px;flex-shrink:0;
+  border:1px solid rgba(23,22,20,.45);border-radius:2px;
+}
+
+/* =========================================================
+   Tabellen
+   ========================================================= */
+.tablewrap{overflow-x:auto;margin:18px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:520px}
+th,td{text-align:left;padding:9px 14px 9px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-3);font-weight:600;
+  border-bottom:1.5px solid var(--ink);padding-bottom:7px;
+}
+tbody tr:hover{background:rgba(23,22,20,.028)}
+td.num{font-family:var(--mono);white-space:nowrap}
+
+/* =========================================================
+   Kontrollfragen
+   ========================================================= */
+details{
+  border-bottom:1px solid var(--rule);
+  padding:11px 0;
+}
+details summary{
+  cursor:pointer;list-style:none;
+  font-family:var(--sans);font-weight:600;font-size:15.5px;
+  display:flex;gap:12px;align-items:flex-start;
+}
+details summary::-webkit-details-marker{display:none}
+details summary::before{
+  content:"+";
+  font-family:var(--mono);color:var(--therm);
+  font-weight:600;flex-shrink:0;width:14px;
+}
+details[open] summary::before{content:"−"}
+details .ans{
+  padding:9px 0 3px 26px;
+  font-size:15px;color:var(--ink-2);
+}
+details .ans p{margin-bottom:6px}
+details .ans ul,details .ans ol{margin-bottom:6px}
+
+/* =========================================================
+   Fuss
+   ========================================================= */
+footer{
+  border-top:2px solid var(--ink);
+  margin-top:70px;padding-top:18px;
+  font-family:var(--mono);font-size:11.5px;
+  color:var(--ink-3);letter-spacing:.04em;
+  display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
+}
+
+/* Blätterleiste vor/zurück */
+.pager{
+  display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  border-top:2px solid var(--ink);
+  margin-top:56px;padding-top:16px;
+}
+.pager a{
+  font-family:var(--mono);font-size:12px;letter-spacing:.06em;
+  color:var(--ink-2);text-decoration:none;
+  display:flex;flex-direction:column;gap:3px;max-width:44%;
+}
+.pager a:hover{color:var(--therm)}
+.pager a b{font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:0;color:var(--ink)}
+.pager a:hover b{color:var(--therm)}
+.pager .next{text-align:right;align-items:flex-end}
+.pager span.void{flex:1}
+
+/* =========================================================
+   Animation
+   ========================================================= */
+@media (prefers-reduced-motion:no-preference){
+  .masthead,.formbar,section{
+    opacity:0;transform:translateY(14px);
+    animation:rise .62s cubic-bezier(.2,.7,.3,1) forwards;
+  }
+  .masthead{animation-delay:.02s}
+  .formbar{animation-delay:.1s}
+  section:nth-of-type(1){animation-delay:.16s}
+  section:nth-of-type(2){animation-delay:.2s}
+  section:nth-of-type(n+3){animation-delay:.24s}
+}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width:720px){
+  .wrap{padding:0 20px 80px}
+  section{grid-template-columns:1fr;gap:0}
+  .snum{border-top:none;padding-top:0;margin-bottom:2px}
+  .sbody{border-top:none}
+  section{border-top:2px solid var(--ink);padding-top:14px}
+  .masthead{padding-top:74px}
+  .toolbar{padding:10px 14px}
+  .spot{float:none;width:100%;margin:0 0 20px}
+}
+
+/* =========================================================
+   Druck
+   ========================================================= */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  body{background:#fff;font-size:10.5pt;line-height:1.45}
+  body::before{display:none}
+  .wrap{max-width:none;padding:0}
+  .toolbar,.pager{display:none !important}
+  .masthead,.formbar,section{opacity:1!important;transform:none!important;animation:none!important}
+  section{break-inside:auto;margin-bottom:22px}
+  h2,h3{break-after:avoid}
+  figure,table,.callout{break-inside:avoid}
+  details{break-inside:avoid}
+  details[open] .ans, details .ans{display:block}
+  details summary::before{content:"›"}
+  .chapno{font-size:64pt}
+  a{color:inherit;text-decoration:none}
+  footer{margin-top:24px}
+}

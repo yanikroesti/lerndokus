@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 03 — Kanäle" data-en="Learning Documentation 03 — Trunking and Ducts">Lerndokumentation 03 — Kanäle</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span>
+    <span lang="de">Thema 03</span><span lang="en">Topic 03</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">03</div>
+    <h1><span lang="de">Kanäle</span><span lang="en">Trunking<br>and Ducts</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Arten · Aufbau · Dimensionen · Einsatzort · Belegung und Trennung</span>
+    <span lang="en">Types · construction · sizes · where used · fill and segregation</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">03 von 12</span><span lang="en">03 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Kabelkanal mit offenem Deckel">
+        <path d="M34 74 h140 v52 h-140 z" fill="#EFEAE0" stroke="#171614" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M34 74 h140 l-16 -20 h-108 z" fill="#DFD9CB" stroke="#171614" stroke-width="2.4" stroke-linejoin="round" transform="rotate(-16 34 74)"/>
+        <path d="M52 100 h104" stroke="#B8402A" stroke-width="7" stroke-linecap="round"/>
+        <path d="M52 114 h104" stroke="#1D5872" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="76" cy="88" r="3" fill="#171614"/>
+        <circle cx="106" cy="88" r="3" fill="#171614"/>
+        <path d="M80 128 q 15 9 30 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Zweck und Abgrenzung zum Rohr</span><span lang="en">Purpose, and how it differs from conduit</span></h2>
+
+    <p class="lead" lang="de">Der Kanal ist die <strong>öffenbare</strong> Alternative zum Rohr. Statt Drähte durch ein geschlossenes Rohr zu ziehen, werden sie in ein offenes Profil eingelegt und mit einem Deckel verschlossen. Damit ist jede Leitung über ihre ganze Länge jederzeit zugänglich.</p>
+    <p class="lead" lang="en">Trunking is the <strong>openable</strong> alternative to conduit. Instead of pulling wires through a closed tube, they are laid into an open profile and closed with a lid. Every cable therefore stays accessible along its entire length.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Merkmal</span><span lang="en">Feature</span></th>
+            <th><span lang="de">Rohr</span><span lang="en">Conduit</span></th>
+            <th><span lang="de">Kanal</span><span lang="en">Trunking</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span lang="de">Zugänglichkeit</span><span lang="en">Access</span></td><td><span lang="de">nur an den Dosen</span><span lang="en">only at the boxes</span></td><td><span lang="de">über die ganze Länge</span><span lang="en">along the whole length</span></td></tr>
+          <tr><td><span lang="de">Nachrüsten</span><span lang="en">Adding cables</span></td><td><span lang="de">einziehen, begrenzt</span><span lang="en">draw in, limited</span></td><td><span lang="de">Deckel auf, einlegen</span><span lang="en">open the lid and lay in</span></td></tr>
+          <tr><td><span lang="de">Optik</span><span lang="en">Appearance</span></td><td><span lang="de">unsichtbar (UP) oder rund (AP)</span><span lang="en">invisible (flush) or round (surface)</span></td><td><span lang="de">sichtbares Profil, sauber gestaltbar</span><span lang="en">visible profile, can be styled neatly</span></td></tr>
+          <tr><td><span lang="de">Trennung Strom / Daten</span><span lang="en">Power / data segregation</span></td><td><span lang="de">getrennte Rohre nötig</span><span lang="en">separate conduits required</span></td><td><span lang="de">Kammern im selben Kanal</span><span lang="en">compartments within one trunking</span></td></tr>
+          <tr><td><span lang="de">Typischer Ort</span><span lang="en">Typical location</span></td><td><span lang="de">Wohnbau, im Bauteil</span><span lang="en">Housing, inside the structure</span></td><td><span lang="de">Büro, Schule, Labor, Schaltschrank, Umbau</span><span lang="en">Office, school, lab, control panel, refurbishment</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p lang="de">Der Kanal spielt seine Stärke dort aus, wo sich die Nutzung ändert: Büros werden umgestellt, Arbeitsplätze verschoben, Netzwerkdosen ergänzt. Auch im <strong>Umbau ohne Aufspitzen</strong> ist der Kanal oft die einzige wirtschaftliche Lösung.</p>
+    <p lang="en">Trunking comes into its own where usage changes: offices get rearranged, workstations moved, network outlets added. In <strong>refurbishment without chasing walls</strong> it is often the only economical solution.</p>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Aufbau eines Kanals</span><span lang="en">How trunking is built up</span></h2>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Querschnitt durch einen Brüstungskanal mit drei Kammern">
+        <defs>
+          <style>
+            .prof{fill:#EFEAE0;stroke:#171614;stroke-width:2.4;stroke-linejoin:round}
+            .lid{fill:#DFD9CB;stroke:#171614;stroke-width:2.4;stroke-linejoin:round}
+            .sep{fill:#DFD9CB;stroke:#171614;stroke-width:2}
+            .wallb{fill:#C9C2B4;stroke:#171614;stroke-width:2}
+            .p{fill:#F0DBD4;stroke:#B8402A;stroke-width:1.5}
+            .n{fill:#D6E3E9;stroke:#1D5872;stroke-width:1.5}
+            .g{fill:#E4EADF;stroke:#3F6B43;stroke-width:1.5}
+            .dim{fill:none;stroke:#7D7669;stroke-width:1.2}
+            .dl{font-family:'IBM Plex Mono',monospace;font-size:11.5px;fill:#48433B;text-anchor:middle}
+            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
+            .ldr{fill:none;stroke:#7D7669;stroke-width:1.2}
+            .cn{fill:#171614}
+            .cnt{fill:#F4F1EA;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-anchor:middle}
+          </style>
+        </defs>
+
+        <!-- Wand -->
+        <rect class="wallb" x="60" y="60" width="26" height="290"/>
+        <text class="lgs" x="52" y="368" transform="rotate(-90 52 368)"><tspan lang="de">WAND</tspan><tspan lang="en">WALL</tspan></text>
+
+        <!-- Kanalunterteil -->
+        <path class="prof" d="M86 90 h250 v210 h-250 z"/>
+        <!-- Kammertrennung -->
+        <rect class="sep" x="86" y="158" width="250" height="8"/>
+        <rect class="sep" x="86" y="232" width="250" height="8"/>
+        <!-- Deckel -->
+        <path class="lid" d="M336 86 h22 v218 h-22 z"/>
+        <path d="M336 96 h10 M336 294 h10" stroke="#171614" stroke-width="1.6" fill="none"/>
+
+        <!-- Leiter Kammer 1 : Starkstrom -->
+        <circle class="p" cx="130" cy="122" r="13"/>
+        <circle class="p" cx="164" cy="122" r="13"/>
+        <circle class="n" cx="198" cy="122" r="13"/>
+        <circle class="g" cx="232" cy="122" r="13"/>
+        <circle class="p" cx="266" cy="122" r="13"/>
+
+        <!-- Kammer 2 : Steuerung -->
+        <circle class="n" cx="130" cy="198" r="11"/>
+        <circle class="n" cx="158" cy="198" r="11"/>
+        <circle class="n" cx="186" cy="198" r="11"/>
+
+        <!-- Kammer 3 : Daten -->
+        <circle class="g" cx="130" cy="270" r="12"/>
+        <circle class="g" cx="160" cy="270" r="12"/>
+        <circle class="g" cx="190" cy="270" r="12"/>
+
+        <!-- Masse -->
+        <path class="dim" d="M86 336 H358"/>
+        <path class="dim" d="M86 330 v12 M358 330 v12"/>
+        <text class="dl" x="222" y="356"><tspan lang="de">BREITE B</tspan><tspan lang="en">WIDTH B</tspan></text>
+
+        <path class="dim" d="M400 86 V304"/>
+        <path class="dim" d="M394 86 h12 M394 304 h12"/>
+        <text class="dl" x="424" y="200" transform="rotate(-90 424 200)"><tspan lang="de">HÖHE H</tspan><tspan lang="en">HEIGHT H</tspan></text>
+
+        <!-- Callouts -->
+        <circle class="cn" cx="110" cy="102" r="12"/><text class="cnt" x="110" y="106">1</text>
+        <circle class="cn" cx="347" cy="196" r="12"/><text class="cnt" x="347" y="200">2</text>
+        <circle class="cn" cx="306" cy="162" r="12"/><text class="cnt" x="306" y="166">3</text>
+        <circle class="cn" cx="300" cy="122" r="12"/><text class="cnt" x="300" y="126">4</text>
+        <circle class="cn" cx="240" cy="270" r="12"/><text class="cnt" x="240" y="274">5</text>
+
+        <!-- Beschriftungen -->
+        <path class="ldr" d="M122 102 H470"/>
+        <text class="lg" x="478" y="98"><tspan lang="de">Unterteil</tspan><tspan lang="en">Base profile</tspan></text>
+        <text class="lgs" x="478" y="114"><tspan lang="de">AN DER WAND BEFESTIGT</tspan><tspan lang="en">FIXED TO THE WALL</tspan></text>
+
+        <path class="ldr" d="M359 196 H470"/>
+        <text class="lg" x="478" y="150"><tspan lang="de">Deckel</tspan><tspan lang="en">Lid</tspan></text>
+        <text class="lgs" x="478" y="166"><tspan lang="de">AUFCLIPSBAR, WERKZEUGLOS</tspan><tspan lang="en">CLIPS ON, NO TOOL NEEDED</tspan></text>
+
+        <path class="ldr" d="M318 162 H470 V202"/>
+        <text class="lg" x="478" y="202"><tspan lang="de">Trennsteg</tspan><tspan lang="en">Divider</tspan></text>
+        <text class="lgs" x="478" y="218"><tspan lang="de">TRENNT DIE KAMMERN</tspan><tspan lang="en">SEPARATES THE COMPARTMENTS</tspan></text>
+
+        <path class="ldr" d="M312 122 H460 V254 H478"/>
+        <text class="lg" x="478" y="258"><tspan lang="de">Kammer Starkstrom</tspan><tspan lang="en">Power compartment</tspan></text>
+
+        <path class="ldr" d="M252 270 H470 V300"/>
+        <text class="lg" x="478" y="304"><tspan lang="de">Kammer Daten</tspan><tspan lang="en">Data compartment</tspan></text>
+        <text class="lgs" x="478" y="320"><tspan lang="de">GETRENNT WEGEN EMV</tspan><tspan lang="en">SEPARATED FOR EMC</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Querschnitt durch einen dreikammrigen Brüstungskanal. <span style="color:var(--therm)">Rot = Starkstrom</span>, <span style="color:var(--mag)">blau = Steuerung</span>, <span style="color:var(--green)">grün = Daten</span>.</span>
+        <span lang="en"> — Cross-section of three-compartment dado trunking. <span style="color:var(--therm)">Red = power</span>, <span style="color:var(--mag)">blue = control</span>, <span style="color:var(--green)">green = data</span>.</span>
+      </figcaption>
+    </figure>
+
+    <ul class="legend">
+      <li><span class="n">1</span><span lang="de">Unterteil — an Wand oder Montageplatte geschraubt</span><span lang="en">Base — screwed to the wall or mounting plate</span></li>
+      <li><span class="n">2</span><span lang="de">Deckel — werkzeuglos aufclipsbar, jederzeit zu öffnen</span><span lang="en">Lid — clips on without tools, openable at any time</span></li>
+      <li><span class="n">3</span><span lang="de">Trennsteg — trennt Stromkreisarten voneinander</span><span lang="en">Divider — separates the categories of circuit</span></li>
+      <li><span class="n">4</span><span lang="de">Kammer für Starkstrom — 230/400 V</span><span lang="en">Power compartment — 230/400 V</span></li>
+      <li><span class="n">5</span><span lang="de">Kammer für Daten und Kommunikation</span><span lang="en">Compartment for data and communications</span></li>
+    </ul>
+
+    <h3><span lang="de">Zubehör und Formstücke</span><span lang="en">Accessories and fittings</span></h3>
+    <ul lang="de">
+      <li><strong>Innen- und Aussenecken</strong>, Flachwinkel für Richtungswechsel</li>
+      <li><strong>T-Stücke</strong> für Abzweigungen, <strong>Stossstellenabdeckungen</strong> für saubere Übergänge</li>
+      <li><strong>Endstücke</strong> als sauberer Abschluss</li>
+      <li><strong>Geräteeinbaudosen</strong> für Steckdosen und Datenanschlüsse direkt im Kanal</li>
+      <li><strong>Kabelhalter und Trennstege</strong> zum Ordnen der Belegung</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Internal and external corners</strong>, flat angles for changes of direction</li>
+      <li><strong>Tee pieces</strong> for branches, <strong>joint covers</strong> for clean transitions</li>
+      <li><strong>End caps</strong> for a tidy finish</li>
+      <li><strong>Accessory boxes</strong> for sockets and data outlets mounted directly in the trunking</li>
+      <li><strong>Cable retainers and dividers</strong> to organise the fill</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Kanalarten und Einsatzort</span><span lang="en">Types of trunking and where they are used</span></h2>
+
+    <figure>
+      <svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kanalarten im Raum: Sockelleiste, Brüstung, Bodenkanal und Kabelrinne">
+        <defs>
+          <style>
+            .rm{fill:none;stroke:#171614;stroke-width:2.2}
+            .fl{fill:#EAE5DA;stroke:#171614;stroke-width:2}
+            .k{fill:#F0DBD4;stroke:#B8402A;stroke-width:2}
+            .kb{fill:#D6E3E9;stroke:#1D5872;stroke-width:2}
+            .tray{fill:none;stroke:#1D5872;stroke-width:2.2}
+            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
+            .ldr{fill:none;stroke:#7D7669;stroke-width:1.2}
+          </style>
+        </defs>
+
+        <!-- Raum -->
+        <path class="rm" d="M60 40 H430 V300 H60 Z"/>
+        <rect class="fl" x="60" y="300" width="370" height="26"/>
+
+        <!-- Kabelrinne unter Decke -->
+        <path class="tray" d="M80 64 h330 M80 64 v16 M410 64 v16 M80 80 h330"/>
+        <g stroke="#1D5872" stroke-width="1.4">
+          <path d="M110 64 v16 M150 64 v16 M190 64 v16 M230 64 v16 M270 64 v16 M310 64 v16 M350 64 v16 M390 64 v16"/>
+        </g>
+
+        <!-- Brüstungskanal -->
+        <rect class="k" x="60" y="176" width="370" height="30"/>
+        <rect x="120" y="180" width="34" height="22" fill="#FBF9F5" stroke="#B8402A" stroke-width="1.4"/>
+        <rect x="164" y="180" width="34" height="22" fill="#FBF9F5" stroke="#B8402A" stroke-width="1.4"/>
+        <rect x="300" y="180" width="34" height="22" fill="#FBF9F5" stroke="#B8402A" stroke-width="1.4"/>
+
+        <!-- Sockelleistenkanal -->
+        <rect class="kb" x="60" y="278" width="370" height="22"/>
+
+        <!-- Bodenkanal -->
+        <rect class="kb" x="180" y="300" width="120" height="26"/>
+        <path d="M186 300 v26 M300 300 v26" stroke="#1D5872" stroke-width="1.6"/>
+
+        <!-- Beschriftungen -->
+        <path class="ldr" d="M410 72 H500"/>
+        <text class="lg" x="508" y="68"><tspan lang="de">Kabelrinne / Gitterrinne</tspan><tspan lang="en">Cable tray / basket</tspan></text>
+        <text class="lgs" x="508" y="84"><tspan lang="de">TRASSE UNTER DECKE · INDUSTRIE</tspan><tspan lang="en">ROUTE BELOW CEILING · INDUSTRY</tspan></text>
+
+        <path class="ldr" d="M430 190 H500"/>
+        <text class="lg" x="508" y="186"><tspan lang="de">Brüstungskanal</tspan><tspan lang="en">Dado trunking</tspan></text>
+        <text class="lgs" x="508" y="202"><tspan lang="de">BÜRO · SCHULE · LABOR</tspan><tspan lang="en">OFFICE · SCHOOL · LAB</tspan></text>
+        <text class="lgs" x="508" y="216"><tspan lang="de">MIT GERÄTEEINBAU</tspan><tspan lang="en">WITH BUILT-IN OUTLETS</tspan></text>
+
+        <path class="ldr" d="M430 288 H500"/>
+        <text class="lg" x="508" y="284"><tspan lang="de">Sockelleistenkanal</tspan><tspan lang="en">Skirting trunking</tspan></text>
+        <text class="lgs" x="508" y="300"><tspan lang="de">UMBAU · WOHNBAU</tspan><tspan lang="en">REFURBISHMENT · HOUSING</tspan></text>
+
+        <path class="ldr" d="M240 326 V352 H500"/>
+        <text class="lg" x="508" y="348"><tspan lang="de">Bodenkanal</tspan><tspan lang="en">Floor duct</tspan></text>
+        <text class="lgs" x="508" y="364"><tspan lang="de">IM ESTRICH · GROSSRAUMBÜRO</tspan><tspan lang="en">IN SCREED · OPEN-PLAN OFFICE</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 2</span><span lang="en">Fig. 2</span></b>
+        <span lang="de"> — Kanalarten am Raumquerschnitt. Die Wahl richtet sich nach Nutzung, Zugänglichkeit und Optik.</span>
+        <span lang="en"> — Types of trunking shown on a room section. The choice depends on use, accessibility and appearance.</span>
+      </figcaption>
+    </figure>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Art</span><span lang="en">Type</span></th>
+            <th><span lang="de">Merkmale</span><span lang="en">Features</span></th>
+            <th><span lang="de">Einsatzort</span><span lang="en">Where used</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Brüstungskanal</span><span lang="en">Dado trunking</span></strong></td>
+            <td><span lang="de">mehrkammrig, Geräteeinbau direkt im Kanal, auf Arbeitshöhe</span><span lang="en">multi-compartment, outlets built in, at working height</span></td>
+            <td><span lang="de">Büro, Schule, Labor, Praxis</span><span lang="en">Office, school, laboratory, surgery</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Sockelleistenkanal</span><span lang="en">Skirting trunking</span></strong></td>
+            <td><span lang="de">ersetzt die Fussleiste, unauffällig, meist zweikammrig</span><span lang="en">replaces the skirting board, discreet, usually two compartments</span></td>
+            <td><span lang="de">Umbau im Wohn- und Bürobau</span><span lang="en">Refurbishment in housing and offices</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Installationskanal</span><span lang="en">Surface trunking</span></strong></td>
+            <td><span lang="de">einfaches Profil mit Deckel, viele Grössen</span><span lang="en">simple profile with lid, many sizes</span></td>
+            <td><span lang="de">Keller, Technikraum, Werkstatt, Nachrüstung</span><span lang="en">Cellar, plant room, workshop, retrofit</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Bodenkanal</span><span lang="en">Floor duct</span></strong></td>
+            <td><span lang="de">im Estrich einbetoniert, Anschluss über Bodentanks</span><span lang="en">cast into the screed, served by floor boxes</span></td>
+            <td><span lang="de">Grossraumbüro, Ausstellungsfläche</span><span lang="en">Open-plan office, exhibition space</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Verdrahtungskanal</span><span lang="en">Panel wiring duct</span></strong></td>
+            <td><span lang="de">geschlitzte Seitenwände, Draht kann seitlich austreten</span><span lang="en">slotted sides so wires can leave sideways</span></td>
+            <td><span lang="de">Schaltschrank, Schaltgerätekombination</span><span lang="en">Control panels and assemblies</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Kabelrinne / Gitterrinne</span><span lang="en">Cable tray / basket</span></strong></td>
+            <td><span lang="de">offene Trasse, hohe Traglast, gute Wärmeabfuhr</span><span lang="en">open route, high load capacity, good heat dissipation</span></td>
+            <td><span lang="de">Industrie, Technikzentrale, Steigzone</span><span lang="en">Industry, plant rooms, riser shafts</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Dimensionen</span><span lang="en">Sizes</span></h2>
+
+    <p lang="de">Kanäle werden mit <strong>Breite × Höhe in Millimetern</strong> bezeichnet, zum Beispiel <code>60 × 40</code>. Die erste Zahl ist die Breite, die zweite die Bauhöhe. Bei Kabelrinnen ist die <strong>Breite</strong> die Leitgrösse.</p>
+    <p lang="en">Trunking is designated by <strong>width × height in millimetres</strong>, for example <code>60 × 40</code>. The first figure is the width, the second the depth. For cable trays the governing dimension is the <strong>width</strong>.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Art</span><span lang="en">Type</span></th>
+            <th><span lang="de">Übliche Grössen (B × H)</span><span lang="en">Common sizes (W × H)</span></th>
+            <th><span lang="de">Anhaltspunkt</span><span lang="en">Guidance</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span lang="de">Installationskanal klein</span><span lang="en">Small surface trunking</span></td>
+            <td class="num">15×15 · 20×20 · 25×20 · 30×30</td>
+            <td><span lang="de">einzelne Leitung, Nachrüstung</span><span lang="en">single cable, retrofit</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Installationskanal mittel</span><span lang="en">Medium surface trunking</span></td>
+            <td class="num">40×40 · 60×40 · 60×60</td>
+            <td><span lang="de">mehrere Stromkreise</span><span lang="en">several circuits</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Installationskanal gross</span><span lang="en">Large surface trunking</span></td>
+            <td class="num">80×60 · 100×60 · 110×70</td>
+            <td><span lang="de">Sammelführung, Steigzone</span><span lang="en">bundled routes, risers</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Verdrahtungskanal</span><span lang="en">Panel wiring duct</span></td>
+            <td class="num">25×40 · 40×40 · 40×60 · 60×60 · 80×60</td>
+            <td><span lang="de">im Schaltschrank, geschlitzt</span><span lang="en">inside panels, slotted</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Kabelrinne (Breite)</span><span lang="en">Cable tray (width)</span></td>
+            <td class="num">100 · 200 · 300 · 400 · 500 · 600</td>
+            <td><span lang="de">Bauhöhe typisch 35 … 110 mm</span><span lang="en">depth typically 35 … 110 mm</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="subtitle" style="margin-top:-6px">
+      <span lang="de">Die Rastermasse sind herstellerabhängig — für die Abgabe die Masse aus dem verwendeten Katalog übernehmen.</span>
+      <span lang="en">The size steps depend on the manufacturer — take the figures from the catalogue you actually use.</span>
+    </p>
+
+    <h3><span lang="de">Belegung</span><span lang="en">Fill</span></h3>
+    <p lang="de">Auch der Kanal wird nicht randvoll gefüllt. Als <strong>Faustregel</strong> gilt eine Belegung von etwa <strong>60 %</strong> des Querschnitts. Gründe: Der Deckel muss ohne Quetschen schliessen, die entstehende Wärme muss abgeführt werden, und es soll Platz für spätere Erweiterungen bleiben.</p>
+    <p lang="en">Trunking is not filled to the brim either. As a <strong>rule of thumb</strong>, fill to roughly <strong>60 %</strong> of the cross-section. Reasons: the lid must close without pinching, the heat produced must escape, and room should remain for later additions.</p>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Häufungsfaktor nicht vergessen</span><span lang="en">Don't forget grouping</span></b>
+      <p lang="de">Liegen viele belastete Leitungen dicht beieinander, erwärmen sie sich gegenseitig. Die zulässige Strombelastbarkeit sinkt und muss mit einem <strong>Reduktionsfaktor</strong> nach NIN korrigiert werden. Ein voll gestopfter Kanal kann deshalb rechnerisch zu einem kleineren zulässigen Strom führen als ein locker belegter.</p>
+      <p lang="en">When many loaded cables lie close together they heat each other. The permissible current-carrying capacity drops and must be corrected with a <strong>derating factor</strong> to NIN. A tightly packed duct can therefore end up with a lower permissible current than a loosely filled one.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Trennung von Strom und Daten</span><span lang="en">Segregating power and data</span></h2>
+
+    <p lang="de">Starkstrom- und Datenleitungen gehören <strong>nicht ungetrennt in dieselbe Kammer</strong>. Dafür gibt es zwei Gründe:</p>
+    <p lang="en">Power and data cables do <strong>not belong together in one compartment</strong>. There are two reasons:</p>
+
+    <ul lang="de">
+      <li><strong>Sicherheit</strong> — im Fehlerfall darf keine Netzspannung auf ein Kleinspannungsnetz gelangen. Die Isolation der Datenleitung ist dafür nicht ausgelegt.</li>
+      <li><strong>EMV</strong> — das Magnetfeld der stromführenden Leiter koppelt Störungen in die Datenleitung ein. Die Folge sind Übertragungsfehler und reduzierte Datenraten.</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Safety</strong> — under fault conditions no mains voltage may reach an extra-low-voltage network. Data cable insulation is not designed for it.</li>
+      <li><strong>EMC</strong> — the magnetic field of the current-carrying conductors couples interference into the data cable, causing transmission errors and reduced data rates.</li>
+    </ul>
+
+    <h3><span lang="de">Massnahmen</span><span lang="en">Measures</span></h3>
+    <ul lang="de">
+      <li><strong>Getrennte Kammern</strong> mit durchgehendem Trennsteg — die saubere Standardlösung</li>
+      <li><strong>Abstand</strong> bei paralleler Führung in einer offenen Trasse; die Mindestabstände richten sich nach EN 50174-2 und hängen von Schirmung und Länge ab</li>
+      <li><strong>Kreuzen im rechten Winkel</strong>, wo eine Kreuzung unvermeidlich ist — die Kopplungsstrecke wird dadurch minimal</li>
+      <li><strong>Geschirmte Datenleitungen</strong> und korrekt aufgelegter Schirm</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Separate compartments</strong> with a continuous divider — the clean standard solution</li>
+      <li><strong>Separation distance</strong> for parallel routes on open trays; the minimum distances follow EN 50174-2 and depend on screening and run length</li>
+      <li><strong>Cross at right angles</strong> where a crossing is unavoidable — this minimises the coupling length</li>
+      <li><strong>Screened data cables</strong> with the screen correctly terminated</li>
+    </ul>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Merksatz</span><span lang="en">Remember</span></b>
+      <p lang="de">Parallel führen heisst koppeln, kreuzen heisst kurz stören. Wo Strom und Daten sich begegnen müssen, kreuzen sie sich im rechten Winkel.</p>
+      <p lang="en">Running parallel means coupling; crossing means only a brief disturbance. Where power and data must meet, they cross at right angles.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Montage in der Praxis</span><span lang="en">Installation in practice</span></h2>
+
+    <ul lang="de">
+      <li><strong>Ausrichten</strong> — Kanäle mit Wasserwaage oder Laser setzen. Ein Kanal auf Augenhöhe verzeiht keinen Millimeter Schieflage.</li>
+      <li><strong>Befestigungsabstand</strong> nach Herstellerangabe; zusätzlich an Stossstellen, Ecken und Geräteeinbauten befestigen</li>
+      <li><strong>Untergrund beachten</strong> — Dübel passend zu Beton, Backstein, Gipskarton oder Hohlwand wählen</li>
+      <li><strong>Ablängen</strong> mit feiner Säge und Gehrungslade; Grat entfernen, sonst wird die Isolation beim Einlegen verletzt</li>
+      <li><strong>Dehnung</strong> — bei langen Strecken und Temperaturschwankungen (Aussenbereich, Hallen) Dehnungsstösse vorsehen</li>
+      <li><strong>Brandabschnitte</strong> — Durchführungen fachgerecht abschotten; der Kanal darf kein Brandüberschlagsweg werden</li>
+      <li><strong>Zuletzt Deckel</strong> — erst nach der Kontrolle der Belegung und Beschriftung schliessen</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Alignment</strong> — set trunking with a spirit level or laser. Trunking at eye level forgives not one millimetre of tilt.</li>
+      <li><strong>Fixing intervals</strong> per manufacturer's data; fix additionally at joints, corners and accessory boxes</li>
+      <li><strong>Mind the substrate</strong> — choose plugs to suit concrete, brick, plasterboard or cavity walls</li>
+      <li><strong>Cutting</strong> with a fine saw and mitre box; deburr, otherwise the insulation is damaged when laying in</li>
+      <li><strong>Expansion</strong> — on long runs with temperature swings (outdoors, halls) provide expansion joints</li>
+      <li><strong>Fire compartments</strong> — seal penetrations properly; the trunking must not become a path for fire spread</li>
+      <li><strong>Lid last</strong> — close only after the fill has been checked and labelled</li>
+    </ul>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Qualitätsmerkmal</span><span lang="en">Mark of quality</span></b>
+      <p lang="de">Am fertigen Kanal beurteilt der Kunde die ganze Arbeit. Saubere Gehrungen, gleichmässige Stossstellen, waagrechte Flucht und ordentlich abgelegte Leitungen im Innern unterscheiden eine Profiarbeit von einer Bastelei — auch wenn der Deckel später zu ist.</p>
+      <p lang="en">The customer judges the whole job by the finished trunking. Clean mitres, even joints, a true horizontal line and neatly dressed cables inside are what separates professional work from improvisation — even once the lid is closed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7 ================= -->
+<section id="s7">
+  <div class="snum">07</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Worin liegt der Hauptvorteil des Kanals gegenüber dem Rohr?</span><span lang="en">What is the main advantage of trunking over conduit?</span></summary>
+      <div class="ans">
+        <p lang="de">Die Zugänglichkeit über die ganze Länge. Der Deckel lässt sich werkzeuglos öffnen, Leitungen können jederzeit ergänzt, umgelegt oder entfernt werden — ohne Einziehen und ohne Aufspitzen der Wand.</p>
+        <p lang="en">Accessibility along the entire length. The lid opens without tools, so cables can be added, rerouted or removed at any time — with no pulling and no chasing of walls.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was bedeutet die Bezeichnung 60 × 40?</span><span lang="en">What does the designation 60 × 40 mean?</span></summary>
+      <div class="ans">
+        <p lang="de">Breite 60 mm, Bauhöhe 40 mm. Die erste Zahl ist immer die Breite.</p>
+        <p lang="en">Width 60 mm, depth 40 mm. The first figure is always the width.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum dürfen Starkstrom- und Datenleitungen nicht in dieselbe Kammer?</span><span lang="en">Why must power and data cables not share one compartment?</span></summary>
+      <div class="ans">
+        <p lang="de">Erstens aus Sicherheitsgründen: Im Fehlerfall dürfte Netzspannung auf das Kleinspannungsnetz gelangen, wofür die Isolation der Datenleitung nicht ausgelegt ist. Zweitens wegen der EMV: Das Magnetfeld der Starkstromleitung koppelt Störungen ein, was zu Übertragungsfehlern führt.</p>
+        <p lang="en">First for safety: under a fault, mains voltage could reach the extra-low-voltage network, which the data cable insulation is not designed for. Second for EMC: the magnetic field of the power cable couples in interference, causing transmission errors.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welchen Kanal wählst du für ein Grossraumbüro mit häufig wechselnden Arbeitsplätzen?</span><span lang="en">Which trunking do you choose for an open-plan office with frequently changing workstations?</span></summary>
+      <div class="ans">
+        <p lang="de">Einen Bodenkanal im Estrich mit Bodentanks, ergänzt durch Brüstungskanal an den Wänden. So sind Anschlüsse mitten im Raum verfügbar und lassen sich beim Umstellen der Möblierung neu zuordnen.</p>
+        <p lang="en">A floor duct in the screed with floor boxes, supplemented by dado trunking on the walls. That makes outlets available in the middle of the room and lets them be reassigned when the furniture is rearranged.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was ist ein Verdrahtungskanal und woran erkennst du ihn?</span><span lang="en">What is a panel wiring duct and how do you recognise it?</span></summary>
+      <div class="ans">
+        <p lang="de">Ein Kanal für den Schaltschrank mit geschlitzten Seitenwänden. Durch die Schlitze treten die Drähte seitlich zu den Klemmen und Geräten aus. Er hält die Verdrahtung geordnet und macht sie nachvollziehbar.</p>
+        <p lang="en">A duct for control panels with slotted side walls. The wires leave sideways through the slots to the terminals and devices. It keeps the wiring tidy and traceable.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie viel Prozent Belegung gilt beim Kanal als Faustregel und warum nicht mehr?</span><span lang="en">What fill percentage is the rule of thumb, and why not more?</span></summary>
+      <div class="ans">
+        <p lang="de">Rund 60 %. Der Deckel muss ohne Quetschen der Leitungen schliessen, die Verlustwärme muss abgeführt werden, und für spätere Erweiterungen soll Platz bleiben. Bei dichter Häufung sinkt zudem die zulässige Strombelastbarkeit und muss mit einem Reduktionsfaktor nach NIN korrigiert werden.</p>
+        <p lang="en">About 60 %. The lid must close without pinching cables, the heat losses must escape, and space should remain for later additions. Dense grouping also reduces the permissible current-carrying capacity, which then has to be corrected with a derating factor to NIN.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Eine Datenleitung muss eine Starkstromleitung kreuzen. Wie führst du sie?</span><span lang="en">A data cable has to cross a power cable. How do you route it?</span></summary>
+      <div class="ans">
+        <p lang="de">Im rechten Winkel. Dadurch ist die Strecke, auf der sich die beiden Leitungen beeinflussen, minimal und die eingekoppelte Störung am kleinsten. Parallelführung über längere Strecken ist zu vermeiden.</p>
+        <p lang="en">At a right angle. That keeps the length over which the two cables influence each other to a minimum and the coupled interference as small as possible. Long parallel runs are to be avoided.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Worauf achtest du bei einer Kanaldurchführung durch eine Brandabschnittswand?</span><span lang="en">What must you observe where trunking passes through a fire compartment wall?</span></summary>
+      <div class="ans">
+        <p lang="de">Die Durchführung muss fachgerecht abgeschottet werden, damit der Brandabschnitt erhalten bleibt. Sonst wird der Kanal zum Weg, über den Feuer und Rauch in den nächsten Abschnitt gelangen.</p>
+        <p lang="en">The penetration must be properly fire-stopped so the compartment remains intact. Otherwise the trunking becomes a path for fire and smoke to reach the next compartment.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="02-rohre.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>02 · <span lang="de">Rohre</span><span lang="en">Conduits</span></b>
+  </a>
+  <a class="next" href="04-kabel-und-draehte.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>04 · <span lang="de">Kabel und Drähte</span><span lang="en">Cables and Wires</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 03 · Kanäle</span><span lang="en">Learning Documentation 03 · Trunking and Ducts</span></span>
+  <span>Yanik · Etavis · <span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span></span>
+  <span><span lang="de">Normen: NIN 2020 · EN 50085 · EN 50174-2</span><span lang="en">Standards: NIN 2020 · EN 50085 · EN 50174-2</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

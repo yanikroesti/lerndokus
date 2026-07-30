@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 08 — Lampenschaltung Schema 3" data-en="Learning Documentation 08 — Lighting Circuit Schema 3">Lerndokumentation 08 — Lampenschaltung Schema 3</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span>
+    <span lang="de">Thema 08</span><span lang="en">Topic 08</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">08</div>
+    <h1><span lang="de">Lampenschaltung<br>Schema 3</span><span lang="en">Lighting Circuit<br>Schema 3</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Wechselschaltung · Aufbau · Zeichnung · Beschrieb · Korrespondierende</span>
+    <span lang="en">Two-way switching · design · drawing · description · strappers</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">08 von 12</span><span lang="en">08 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Lampe zwischen zwei Schaltern">
+        <circle cx="110" cy="64" r="30" fill="#F0DBD4" stroke="#171614" stroke-width="2.4"/>
+        <path d="M98 90 h24 v10 h-24 z" fill="#DFD9CB" stroke="#171614" stroke-width="2.2" stroke-linejoin="round"/>
+        <path d="M110 22 v-10 M146 34 l7 -7 M74 34 l-7 -7" stroke="#B8402A" stroke-width="2.6" stroke-linecap="round"/>
+        <circle cx="100" cy="60" r="3" fill="#171614"/>
+        <circle cx="120" cy="60" r="3" fill="#171614"/>
+        <path d="M100 74 q 10 8 20 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+        <g fill="#EFEAE0" stroke="#171614" stroke-width="2.4" stroke-linejoin="round">
+          <rect x="18" y="104" width="42" height="34" rx="4"/>
+          <rect x="160" y="104" width="42" height="34" rx="4"/>
+        </g>
+        <path d="M30 128 L48 114 M172 128 L190 114" stroke="#1D5872" stroke-width="3" stroke-linecap="round"/>
+        <path d="M60 118 h30 M130 118 h30" stroke="#7D7669" stroke-width="2" stroke-dasharray="5 4" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Zweck und Einsatzgebiet</span><span lang="en">Purpose and field of use</span></h2>
+
+    <p class="lead" lang="de">Die <strong>Wechselschaltung</strong> — in der Schweiz als <strong>Schema 3</strong> bezeichnet — erlaubt es, eine Lampe oder eine Lampengruppe von <strong>zwei verschiedenen Stellen</strong> unabhängig ein- und auszuschalten. Jeder der beiden Schalter kehrt den aktuellen Zustand um: Was brennt, wird gelöscht — was dunkel ist, wird eingeschaltet.</p>
+    <p class="lead" lang="en">The <strong>two-way circuit</strong> — known in Switzerland as <strong>Schema 3</strong> — allows a lamp or group of lamps to be switched on and off independently from <strong>two different places</strong>. Either switch inverts the present state: what is lit goes out, what is dark comes on.</p>
+
+    <h3><span lang="de">Typische Einsatzorte</span><span lang="en">Typical locations</span></h3>
+    <ul lang="de">
+      <li><strong>Korridor</strong> — Schalter an beiden Enden</li>
+      <li><strong>Treppe</strong> — unten und oben je ein Schalter</li>
+      <li><strong>Schlafzimmer</strong> — bei der Tür und beim Bett</li>
+      <li><strong>Durchgangszimmer</strong> mit zwei Türen</li>
+      <li><strong>Garage und Keller</strong> — bei beiden Zugängen</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Corridor</strong> — a switch at each end</li>
+      <li><strong>Staircase</strong> — one switch at the bottom, one at the top</li>
+      <li><strong>Bedroom</strong> — at the door and at the bed</li>
+      <li><strong>Walk-through rooms</strong> with two doors</li>
+      <li><strong>Garage and cellar</strong> — at both entrances</li>
+    </ul>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Einordnung in die Schweizer Schema-Nummern</span><span lang="en">Place in the Swiss schema numbering</span></b>
+      <p lang="de">Schema 3 ist eine von mehreren genormten Schalterschaltungen. <strong>Schema 0</strong> ist die einfache Ausschaltung (eine Lampe, eine Schaltstelle), <strong>Schema 1</strong> die Serieschaltung (zwei Lampengruppen an einer Stelle), <strong>Schema 2</strong> die Umschaltung (entweder die eine oder die andere Lampe), <strong>Schema 3</strong> die Wechselschaltung und <strong>Schema 6</strong> die Kreuzschaltung für drei und mehr Schaltstellen.</p>
+      <p lang="en">Schema 3 is one of several standardised switch circuits. <strong>Schema 0</strong> is simple on/off switching (one lamp, one position), <strong>Schema 1</strong> is series switching (two lamp groups from one position), <strong>Schema 2</strong> is changeover switching (either one lamp or the other), <strong>Schema 3</strong> is two-way switching and <strong>Schema 6</strong> is intermediate switching for three or more positions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Der Wechselschalter</span><span lang="en">The two-way switch</span></h2>
+
+    <p lang="de">Der Wechselschalter (Schalter Schema 3) hat <strong>drei Klemmen</strong>. Er ist kein einfacher Ein-Aus-Schalter, sondern ein <strong>Umschalter</strong>: Ein beweglicher Kontakt wird wahlweise auf den einen oder den anderen von zwei festen Kontakten gelegt. Eine echte Aus-Stellung gibt es nicht — der bewegliche Kontakt liegt immer auf einem der beiden.</p>
+    <p lang="en">The two-way switch (Schema 3 switch) has <strong>three terminals</strong>. It is not a simple on/off switch but a <strong>changeover switch</strong>: a moving contact is placed on either one or the other of two fixed contacts. There is no true off position — the moving contact always rests on one of the two.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Klemme</span><span lang="en">Terminal</span></th>
+            <th><span lang="de">Bezeichnung</span><span lang="en">Name</span></th>
+            <th><span lang="de">Angeschlossen wird</span><span lang="en">What is connected</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">1 ×</td>
+            <td><strong><span lang="de">Gemeinsamer Kontakt</span><span lang="en">Common contact</span></strong></td>
+            <td><span lang="de">beim ersten Schalter der <strong>Polleiter</strong>, beim zweiten Schalter der <strong>Lampendraht</strong></span><span lang="en">at the first switch the <strong>line conductor</strong>, at the second switch the <strong>lamp wire</strong></span></td>
+          </tr>
+          <tr>
+            <td class="num">2 ×</td>
+            <td><strong><span lang="de">Korrespondierende</span><span lang="en">Strappers</span></strong></td>
+            <td><span lang="de">die beiden Verbindungsdrähte zum anderen Wechselschalter</span><span lang="en">the two wires linking to the other two-way switch</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Klemmenbezeichnung</span><span lang="en">Terminal marking</span></b>
+      <p lang="de">Der gemeinsame Kontakt ist am Gerät besonders gekennzeichnet, die beiden Korrespondierenden häufig mit <strong>Pfeilsymbolen</strong>. Die konkrete Beschriftung ist <strong>herstellerabhängig</strong> — vor dem Anschliessen das Datenblatt oder den Aufdruck auf dem Schaltereinsatz lesen.</p>
+      <p lang="en">The common contact is specially marked on the device, the two strappers often with <strong>arrow symbols</strong>. The actual labelling <strong>depends on the manufacturer</strong> — read the data sheet or the print on the switch insert before wiring.</p>
+    </div>
+
+    <h3><span lang="de">Die Schweizer Leiterbezeichnungen</span><span lang="en">The Swiss conductor names</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Begriff</span><span lang="en">Term</span></th>
+            <th><span lang="de">Bedeutung</span><span lang="en">Meaning</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Polleiter</strong></td><td><span lang="de">der Aussenleiter (L), der zum ersten Schalter führt</span><span lang="en">the line conductor (L) running to the first switch</span></td></tr>
+          <tr><td><strong>Korrespondierende</strong></td><td><span lang="de">die zwei Drähte zwischen den beiden Wechselschaltern</span><span lang="en">the two wires between the two changeover switches</span></td></tr>
+          <tr><td><strong>Lampendraht</strong></td><td><span lang="de">der geschaltete Draht vom zweiten Schalter zur Lampe</span><span lang="en">the switched wire from the second switch to the lamp</span></td></tr>
+          <tr><td><strong>Neutralleiter</strong></td><td><span lang="de">geht <strong>direkt</strong> zur Lampe, nie über den Schalter</span><span lang="en">runs <strong>directly</strong> to the lamp, never through the switch</span></td></tr>
+          <tr><td><strong>Schutzleiter</strong></td><td><span lang="de">zur Leuchte, sofern diese einen benötigt (Schutzklasse I)</span><span lang="en">to the luminaire where required (class I)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Schaltschema</span><span lang="en">Circuit diagram</span></h2>
+
+    <figure>
+      <svg viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schaltschema der Wechselschaltung Schema 3 mit zwei Wechselschaltern und einer Lampe">
+        <defs>
+          <style>
+            .w{fill:none;stroke:#171614;stroke-width:2.6;stroke-linecap:round}
+            .wl{fill:none;stroke:#B8402A;stroke-width:2.6;stroke-linecap:round}
+            .wk{fill:none;stroke:#1D5872;stroke-width:2.6;stroke-linecap:round}
+            .wn{fill:none;stroke:#48433B;stroke-width:2.6;stroke-linecap:round}
+            .wpe{fill:none;stroke:#3F6B43;stroke-width:2.6;stroke-linecap:round;stroke-dasharray:9 5}
+            .dot{fill:#171614}
+            .lg{font-family:'IBM Plex Mono',monospace;font-size:12.5px;fill:#48433B}
+            .lgb{font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;fill:#171614}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
+            .id{font-family:'Archivo',sans-serif;font-size:15px;font-weight:700;fill:#171614}
+          </style>
+        </defs>
+
+        <!-- ===== Polleiter L ===== -->
+        <path class="wl" d="M60 60 H150 V196"/>
+        <text class="lgb" x="60" y="48" fill="#B8402A">L</text>
+        <text class="lgs" x="82" y="48" fill="#B8402A"><tspan lang="de">POLLEITER</tspan><tspan lang="en">LINE</tspan></text>
+
+        <!-- ===== Neutralleiter N ===== -->
+        <path class="wn" d="M60 380 H612"/>
+        <text class="lgb" x="60" y="404">N</text>
+        <text class="lgs" x="82" y="404"><tspan lang="de">NEUTRALLEITER — DIREKT ZUR LAMPE</tspan><tspan lang="en">NEUTRAL — DIRECT TO THE LAMP</tspan></text>
+
+        <!-- ===== Schutzleiter PE ===== -->
+        <path class="wpe" d="M60 420 H612 V300"/>
+        <text class="lgb" x="60" y="436" fill="#3F6B43">PE</text>
+
+        <!-- ===== Schalter S1 ===== -->
+        <g>
+          <!-- Drehpunkt -->
+          <circle class="dot" cx="150" cy="200" r="5"/>
+          <!-- Hebel auf oberen Kontakt -->
+          <path class="w" d="M150 200 L214 156"/>
+          <!-- feste Kontakte -->
+          <circle class="dot" cx="220" cy="152" r="5"/>
+          <circle class="dot" cx="220" cy="248" r="5"/>
+          <text class="id" x="120" y="176">S1</text>
+          <text class="lgs" x="104" y="266"><tspan lang="de">SCHEMA 3</tspan><tspan lang="en">SCHEMA 3</tspan></text>
+        </g>
+
+        <!-- ===== Korrespondierende ===== -->
+        <path class="wk" d="M220 152 H468"/>
+        <path class="wk" d="M220 248 H468"/>
+        <text class="lgs" x="286" y="140" fill="#1D5872"><tspan lang="de">KORRESPONDIERENDE 1</tspan><tspan lang="en">STRAPPER 1</tspan></text>
+        <text class="lgs" x="286" y="270" fill="#1D5872"><tspan lang="de">KORRESPONDIERENDE 2</tspan><tspan lang="en">STRAPPER 2</tspan></text>
+
+        <!-- ===== Schalter S2 ===== -->
+        <g>
+          <circle class="dot" cx="468" cy="152" r="5"/>
+          <circle class="dot" cx="468" cy="248" r="5"/>
+          <path class="w" d="M474 156 L538 200"/>
+          <circle class="dot" cx="538" cy="200" r="5"/>
+          <text class="id" x="546" y="176">S2</text>
+          <text class="lgs" x="500" y="290"><tspan lang="de">SCHEMA 3</tspan><tspan lang="en">SCHEMA 3</tspan></text>
+        </g>
+
+        <!-- ===== Lampendraht ===== -->
+        <path class="wl" d="M538 200 H612 V276"/>
+        <text class="lgs" x="548" y="192" fill="#B8402A"><tspan lang="de">LAMPENDRAHT</tspan><tspan lang="en">LAMP WIRE</tspan></text>
+
+        <!-- ===== Lampe ===== -->
+        <g transform="translate(612,300)">
+          <circle cx="0" cy="0" r="26" fill="none" stroke="#171614" stroke-width="2.6"/>
+          <path d="M-18 -18 L18 18 M18 -18 L-18 18" stroke="#171614" stroke-width="2.6" stroke-linecap="round"/>
+          <text class="id" x="36" y="6">E1</text>
+        </g>
+        <path class="wn" d="M612 326 V380"/>
+
+        <!-- Hinweis Stellung -->
+        <text class="lgs" x="286" y="330"><tspan lang="de">GEZEICHNETE STELLUNG: BEIDE HEBEL OBEN → LAMPE BRENNT</tspan><tspan lang="en">POSITION SHOWN: BOTH LEVERS UP → LAMP IS ON</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Schaltschema der Wechselschaltung. <span style="color:var(--therm)">Rot = Polleiter und Lampendraht</span>, <span style="color:var(--mag)">blau = Korrespondierende</span>, <span style="color:var(--green)">grün gestrichelt = Schutzleiter</span>.</span>
+        <span lang="en"> — Circuit diagram of the two-way circuit. <span style="color:var(--therm)">Red = line and lamp wire</span>, <span style="color:var(--mag)">blue = strappers</span>, <span style="color:var(--green)">dashed green = protective conductor</span>.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Der Stromweg in Worten</span><span lang="en">The current path in words</span></h3>
+    <ol lang="de">
+      <li>Der <strong>Polleiter</strong> führt vom Überstromunterbrecher zum gemeinsamen Kontakt von <code>S1</code>.</li>
+      <li><code>S1</code> legt diesen auf <strong>eine der beiden Korrespondierenden</strong>.</li>
+      <li>Die Korrespondierende führt zum entsprechenden festen Kontakt von <code>S2</code>.</li>
+      <li>Liegt der Hebel von <code>S2</code> auf <em>derselben</em> Korrespondierenden, ist der Stromkreis geschlossen: Der Strom fliesst über den gemeinsamen Kontakt von <code>S2</code> als <strong>Lampendraht</strong> zur Leuchte.</li>
+      <li>Von der Leuchte geht der <strong>Neutralleiter</strong> zurück — er wird nie geschaltet.</li>
+    </ol>
+    <ol lang="en">
+      <li>The <strong>line conductor</strong> runs from the protective device to the common contact of <code>S1</code>.</li>
+      <li><code>S1</code> connects it to <strong>one of the two strappers</strong>.</li>
+      <li>The strapper leads to the corresponding fixed contact of <code>S2</code>.</li>
+      <li>If the lever of <code>S2</code> rests on the <em>same</em> strapper, the circuit is closed: current flows through the common contact of <code>S2</code> as the <strong>lamp wire</strong> to the luminaire.</li>
+      <li>From the luminaire the <strong>neutral</strong> returns — it is never switched.</li>
+    </ol>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Grundregel</span><span lang="en">Fundamental rule</span></b>
+      <p lang="de">Geschaltet wird <strong>immer der Polleiter</strong>, nie der Neutralleiter. Würde der Neutralleiter geschaltet, stünde die Lampe auch im ausgeschalteten Zustand unter Spannung — beim Lampenwechsel wäre das lebensgefährlich.</p>
+      <p lang="en">It is <strong>always the line conductor</strong> that is switched, never the neutral. If the neutral were switched, the lamp would remain live even when switched off — which would be lethal when changing a bulb.</p>
+    </div>
+
+    <h3><span lang="de">Schaltzustände</span><span lang="en">Switching states</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th>S1</th><th>S2</th>
+            <th><span lang="de">Stromkreis</span><span lang="en">Circuit</span></th>
+            <th><span lang="de">Lampe</span><span lang="en">Lamp</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num"><span lang="de">oben</span><span lang="en">up</span></td><td class="num"><span lang="de">oben</span><span lang="en">up</span></td><td><span lang="de">über Korrespondierende 1 geschlossen</span><span lang="en">closed via strapper 1</span></td><td><strong class="therm-t">EIN</strong></td></tr>
+          <tr><td class="num"><span lang="de">oben</span><span lang="en">up</span></td><td class="num"><span lang="de">unten</span><span lang="en">down</span></td><td><span lang="de">offen</span><span lang="en">open</span></td><td>AUS / OFF</td></tr>
+          <tr><td class="num"><span lang="de">unten</span><span lang="en">down</span></td><td class="num"><span lang="de">oben</span><span lang="en">up</span></td><td><span lang="de">offen</span><span lang="en">open</span></td><td>AUS / OFF</td></tr>
+          <tr><td class="num"><span lang="de">unten</span><span lang="en">down</span></td><td class="num"><span lang="de">unten</span><span lang="en">down</span></td><td><span lang="de">über Korrespondierende 2 geschlossen</span><span lang="en">closed via strapper 2</span></td><td><strong class="therm-t">EIN</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p lang="de">Die Lampe brennt genau dann, wenn <strong>beide Schalter auf derselben Korrespondierenden</strong> liegen. Jede Betätigung eines Schalters kehrt den Zustand um.</p>
+    <p lang="en">The lamp is on exactly when <strong>both switches rest on the same strapper</strong>. Operating either switch inverts the state.</p>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Installationsschema und Aderzahlen</span><span lang="en">Installation plan and number of cores</span></h2>
+
+    <p lang="de">Im Rohr muss vorher klar sein, wie viele Drähte in jedes Teilstück gehören. Die häufigste Ausführung führt beide Schalterabgänge in die <strong>Deckendose</strong> bei der Leuchte, wo die Korrespondierenden durchverbunden werden.</p>
+    <p lang="en">Before pulling wires, it must be clear how many go into each section. The most common arrangement takes both switch drops back to the <strong>ceiling box</strong> at the luminaire, where the strappers are joined through.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Installationsschema der Wechselschaltung mit Aderzahlen">
+        <defs>
+          <style>
+            .rm{fill:none;stroke:#171614;stroke-width:2.2}
+            .cond{fill:none;stroke:#B8402A;stroke-width:3}
+            .feed{fill:none;stroke:#48433B;stroke-width:3}
+            .sw{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.06em}
+            .cnt{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;fill:#B8402A;text-anchor:middle}
+            .id{font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;fill:#171614}
+          </style>
+        </defs>
+
+        <!-- Raum -->
+        <path class="rm" d="M80 60 H660 V320 H80 Z"/>
+
+        <!-- Deckendose mit Lampe (Mitte) -->
+        <g transform="translate(370,140)">
+          <circle r="26" fill="none" stroke="#171614" stroke-width="2.6"/>
+          <path d="M-18 -18 L18 18 M18 -18 L-18 18" stroke="#171614" stroke-width="2.6" stroke-linecap="round"/>
+          <circle r="42" fill="none" stroke="#7D7669" stroke-width="1.6" stroke-dasharray="6 5"/>
+          <text class="id" x="0" y="-56" text-anchor="middle">E1</text>
+          <text class="lgs" x="0" y="70" text-anchor="middle"><tspan lang="de">DECKENDOSE</tspan><tspan lang="en">CEILING BOX</tspan></text>
+        </g>
+
+        <!-- Speisung -->
+        <path class="feed" d="M370 60 V98"/>
+        <text class="lgs" x="382" y="82"><tspan lang="de">SPEISUNG L · N · PE</tspan><tspan lang="en">SUPPLY L · N · PE</tspan></text>
+
+        <!-- Schalter 1 links -->
+        <g transform="translate(150,250)">
+          <rect class="sw" x="-24" y="-20" width="48" height="40" rx="3"/>
+          <path d="M-10 8 L10 -8" stroke="#171614" stroke-width="2.6" stroke-linecap="round"/>
+          <circle cx="-10" cy="8" r="3.6" fill="#171614"/>
+          <text class="id" x="0" y="-32" text-anchor="middle">S1</text>
+        </g>
+        <path class="cond" d="M150 230 V180 H328"/>
+        <text class="cnt" x="238" y="170">3</text>
+        <text class="lgs" x="188" y="204">L + <tspan lang="de">2 KORRESP.</tspan><tspan lang="en">2 STRAPPERS</tspan></text>
+
+        <!-- Schalter 2 rechts -->
+        <g transform="translate(590,250)">
+          <rect class="sw" x="-24" y="-20" width="48" height="40" rx="3"/>
+          <path d="M-10 8 L10 -8" stroke="#171614" stroke-width="2.6" stroke-linecap="round"/>
+          <circle cx="-10" cy="8" r="3.6" fill="#171614"/>
+          <text class="id" x="0" y="-32" text-anchor="middle">S2</text>
+        </g>
+        <path class="cond" d="M590 230 V180 H412"/>
+        <text class="cnt" x="502" y="170">3</text>
+        <text class="lgs" x="440" y="204"><tspan lang="de">2 KORRESP. + LAMPENDRAHT</tspan><tspan lang="en">2 STRAPPERS + LAMP WIRE</tspan></text>
+
+        <!-- Legende -->
+        <text class="lg" x="80" y="352"><tspan lang="de">Jede Zahl gibt die Anzahl Adern im Rohrstück an (ohne Schutzleiter gezählt).</tspan><tspan lang="en">Each figure gives the number of cores in that conduit section (protective conductor not counted).</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 2</span><span lang="en">Fig. 2</span></b>
+        <span lang="de"> — Installationsschema mit Aderzahlen. Beide Schalter werden mit je drei Adern an die Deckendose geführt; dort werden die Korrespondierenden verbunden.</span>
+        <span lang="en"> — Installation plan with core counts. Each switch is taken to the ceiling box with three cores; the strappers are joined there.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Aderbedarf</span><span lang="en">Cores required</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Teilstück</span><span lang="en">Section</span></th>
+            <th><span lang="de">Adern</span><span lang="en">Cores</span></th>
+            <th><span lang="de">Welche</span><span lang="en">Which</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span lang="de">Speisung → Deckendose</span><span lang="en">Supply → ceiling box</span></td><td class="num">3</td><td>L · N · PE</td></tr>
+          <tr><td><span lang="de">Deckendose → S1</span><span lang="en">Ceiling box → S1</span></td><td class="num">3</td><td><span lang="de">Polleiter + 2 Korrespondierende</span><span lang="en">line + 2 strappers</span></td></tr>
+          <tr><td><span lang="de">Deckendose → S2</span><span lang="en">Ceiling box → S2</span></td><td class="num">3</td><td><span lang="de">2 Korrespondierende + Lampendraht</span><span lang="en">2 strappers + lamp wire</span></td></tr>
+          <tr><td><span lang="de">Deckendose → Leuchte</span><span lang="en">Ceiling box → luminaire</span></td><td class="num">3</td><td><span lang="de">Lampendraht · N · PE</span><span lang="en">lamp wire · N · PE</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Andere Ausführung</span><span lang="en">Alternative arrangement</span></b>
+      <p lang="de">Werden die Korrespondierenden <strong>direkt</strong> von Schalter zu Schalter geführt, sieht die Aufteilung anders aus: Speisung zu S1, von S1 zwei Korrespondierende zu S2, von S2 der Lampendraht zur Leuchte. Welche Variante gewählt wird, hängt vom Rohrverlauf und der Lage der Dosen ab — <strong>gerechnet wird immer vor dem Einziehen</strong>.</p>
+      <p lang="en">If the strappers run <strong>directly</strong> from switch to switch, the split looks different: supply to S1, two strappers from S1 to S2, and the lamp wire from S2 to the luminaire. Which variant is chosen depends on the conduit route and box positions — <strong>always work it out before pulling wires</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Aufbau, Prüfung und Fehlersuche</span><span lang="en">Assembly, testing and fault finding</span></h2>
+
+    <h3><span lang="de">Vorgehen beim Aufbau</span><span lang="en">Assembly procedure</span></h3>
+    <ol lang="de">
+      <li>Freischalten und Spannungsfreiheit feststellen (5 Sicherheitsregeln)</li>
+      <li>Drähte einziehen, an beiden Enden <strong>beschriften</strong> — vor allem die beiden Korrespondierenden</li>
+      <li>Neutralleiter und Schutzleiter <strong>direkt</strong> auf die Leuchte legen</li>
+      <li>Polleiter auf den gemeinsamen Kontakt von <code>S1</code></li>
+      <li>Korrespondierende auf die beiden übrigen Klemmen von <code>S1</code> und <code>S2</code></li>
+      <li>Lampendraht vom gemeinsamen Kontakt von <code>S2</code> zur Leuchte</li>
+      <li>Durchgang und Isolationswiderstand messen, danach erst einschalten</li>
+      <li>Funktion an <strong>beiden</strong> Schaltern und in allen vier Stellungskombinationen prüfen</li>
+    </ol>
+    <ol lang="en">
+      <li>Isolate and verify absence of voltage (the 5 safety rules)</li>
+      <li>Pull the wires and <strong>label</strong> both ends — especially the two strappers</li>
+      <li>Take the neutral and protective conductor <strong>directly</strong> to the luminaire</li>
+      <li>Line conductor to the common contact of <code>S1</code></li>
+      <li>Strappers to the remaining terminals of <code>S1</code> and <code>S2</code></li>
+      <li>Lamp wire from the common contact of <code>S2</code> to the luminaire</li>
+      <li>Measure continuity and insulation resistance, and only then energise</li>
+      <li>Check operation at <strong>both</strong> switches and in all four position combinations</li>
+    </ol>
+
+    <h3><span lang="de">Typische Fehler</span><span lang="en">Typical faults</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Beobachtung</span><span lang="en">Observation</span></th>
+            <th><span lang="de">Wahrscheinliche Ursache</span><span lang="en">Likely cause</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span lang="de">Lampe schaltet nur an einem Schalter</span><span lang="en">Lamp switches at only one switch</span></td>
+            <td><span lang="de">Polleiter oder Lampendraht auf einer Korrespondierenden-Klemme statt auf dem gemeinsamen Kontakt</span><span lang="en">Line or lamp wire on a strapper terminal instead of the common contact</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Lampe brennt immer</span><span lang="en">Lamp is permanently on</span></td>
+            <td><span lang="de">Polleiter und Lampendraht direkt verbunden, Schalter überbrückt</span><span lang="en">Line and lamp wire connected directly, switch bypassed</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Lampe bleibt dunkel</span><span lang="en">Lamp stays dark</span></td>
+            <td><span lang="de">Korrespondierende vertauscht mit Polleiter, Unterbruch, Leuchtmittel defekt</span><span lang="en">Strapper swapped with the line conductor, break in a wire, faulty lamp</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Kurzschluss beim Schalten</span><span lang="en">Short circuit when switching</span></td>
+            <td><span lang="de">Polleiter und Neutralleiter an den beiden Korrespondierenden-Klemmen</span><span lang="en">Line and neutral on the two strapper terminals</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Lampe steht im Aus-Zustand unter Spannung</span><span lang="en">Lamp is live when switched off</span></td>
+            <td><span lang="de">Neutralleiter geschaltet statt Polleiter — <strong>gefährlich, sofort korrigieren</strong></span><span lang="en">Neutral switched instead of the line conductor — <strong>dangerous, correct immediately</strong></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Prüftipp</span><span lang="en">Testing tip</span></b>
+      <p lang="de">Die Wechselschaltung ist erst geprüft, wenn <strong>alle vier Stellungskombinationen</strong> durchgeschaltet wurden. Ein Fehler, bei dem nur ein Schalter wirkt, fällt beim flüchtigen Prüfen an einer einzigen Stelle nicht auf.</p>
+      <p lang="en">A two-way circuit is only tested once <strong>all four position combinations</strong> have been run through. A fault where only one switch works goes unnoticed if you test quickly at one position only.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Was ermöglicht die Schaltung nach Schema 3?</span><span lang="en">What does a Schema 3 circuit make possible?</span></summary>
+      <div class="ans">
+        <p lang="de">Eine Lampe oder Lampengruppe von zwei verschiedenen Stellen unabhängig ein- und auszuschalten. Jeder Schalter kehrt den aktuellen Zustand um.</p>
+        <p lang="en">Switching a lamp or group of lamps on and off independently from two different places. Either switch inverts the present state.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie viele Klemmen hat ein Wechselschalter und wie heissen sie?</span><span lang="en">How many terminals does a two-way switch have and what are they called?</span></summary>
+      <div class="ans">
+        <p lang="de">Drei: ein gemeinsamer Kontakt und zwei Klemmen für die Korrespondierenden. Am gemeinsamen Kontakt liegt beim ersten Schalter der Polleiter, beim zweiten der Lampendraht.</p>
+        <p lang="en">Three: one common contact and two terminals for the strappers. At the common contact, the first switch takes the line conductor and the second the lamp wire.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was sind die Korrespondierenden?</span><span lang="en">What are the strappers?</span></summary>
+      <div class="ans">
+        <p lang="de">Die beiden Drähte, welche die zwei Wechselschalter miteinander verbinden. Über sie läuft der Strom je nach Schalterstellung — genau eine der beiden führt Spannung, wenn S1 betätigt ist.</p>
+        <p lang="en">The two wires connecting the two changeover switches. Current runs over them depending on the switch position — exactly one of the two carries voltage once S1 is operated.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wann brennt die Lampe?</span><span lang="en">When is the lamp on?</span></summary>
+      <div class="ans">
+        <p lang="de">Wenn beide Schalter auf derselben Korrespondierenden liegen. Liegen sie auf verschiedenen, ist der Stromkreis offen und die Lampe dunkel.</p>
+        <p lang="en">When both switches rest on the same strapper. If they rest on different ones, the circuit is open and the lamp is dark.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum wird nie der Neutralleiter geschaltet?</span><span lang="en">Why is the neutral never switched?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil die Lampe sonst auch im ausgeschalteten Zustand am Polleiter hinge und unter Spannung stünde. Beim Lampenwechsel wäre das lebensgefährlich. Geschaltet wird immer der Polleiter.</p>
+        <p lang="en">Because the lamp would otherwise remain connected to the line conductor and stay live even when switched off. Changing a bulb would then be lethal. It is always the line conductor that is switched.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie viele Adern brauchst du von der Deckendose zu jedem Schalter?</span><span lang="en">How many cores do you need from the ceiling box to each switch?</span></summary>
+      <div class="ans">
+        <p lang="de">Drei. Zum ersten Schalter der Polleiter und die beiden Korrespondierenden, zum zweiten Schalter die beiden Korrespondierenden und der Lampendraht.</p>
+        <p lang="en">Three. To the first switch the line conductor and the two strappers; to the second switch the two strappers and the lamp wire.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Die Lampe lässt sich nur an einem Schalter schalten. Was prüfst du zuerst?</span><span lang="en">The lamp can be switched at only one switch. What do you check first?</span></summary>
+      <div class="ans">
+        <p lang="de">Ob Polleiter beziehungsweise Lampendraht tatsächlich am <strong>gemeinsamen Kontakt</strong> liegen. Sitzt einer davon auf einer Korrespondierenden-Klemme, wirkt nur noch ein Schalter.</p>
+        <p lang="en">Whether the line conductor and lamp wire are really on the <strong>common contact</strong>. If one of them sits on a strapper terminal, only one switch remains effective.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie prüfst du eine fertige Wechselschaltung vollständig?</span><span lang="en">How do you fully test a completed two-way circuit?</span></summary>
+      <div class="ans">
+        <p lang="de">Vor dem Einschalten Durchgang und Isolationswiderstand messen. Danach alle vier Stellungskombinationen der beiden Schalter durchschalten und kontrollieren, dass die Lampe in zwei Kombinationen brennt und in zwei dunkel bleibt.</p>
+        <p lang="en">Before energising, measure continuity and insulation resistance. Then run through all four combinations of the two switch positions and confirm that the lamp is on in two of them and dark in two.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welche Schaltung brauchst du, wenn eine dritte Schaltstelle dazukommt?</span><span lang="en">Which circuit do you need if a third switching position is added?</span></summary>
+      <div class="ans">
+        <p lang="de">Die Kreuzschaltung, Schema 6. Dabei wird zwischen die beiden Wechselschalter (Schema 3) ein Kreuzschalter eingefügt. Die beiden äusseren Schaltstellen bleiben Schema-3-Schalter.</p>
+        <p lang="en">Intermediate switching, Schema 6. An intermediate switch is inserted between the two two-way switches (Schema 3). The two outer positions remain Schema 3 switches.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="07-steckdosen.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>07 · <span lang="de">Steckdosen</span><span lang="en">Socket Outlets</span></b>
+  </a>
+  <a class="next" href="09-lampenschaltung-schema-6.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>09 · <span lang="de">Lampenschaltung Schema 6</span><span lang="en">Lighting Circuit Schema 6</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 08 · Wechselschaltung Schema 3</span><span lang="en">Learning Documentation 08 · Two-Way Circuit Schema 3</span></span>
+  <span>Yanik · Etavis · <span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span></span>
+  <span><span lang="de">Grundlagen: NIN 2020 · SN EN 60617</span><span lang="en">Basis: NIN 2020 · SN EN 60617</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

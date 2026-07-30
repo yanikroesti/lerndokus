@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 06 — Sicherungen" data-en="Learning Documentation 06 — Fuses and Breakers">Lerndokumentation 06 — Sicherungen</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span>
+    <span lang="de">Thema 06</span><span lang="en">Topic 06</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">06</div>
+    <h1><span lang="de">Sicherungen</span><span lang="en">Fuses and<br>Breakers</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Arten · Aufbau · Dimensionen · Einsatzort · Charakteristiken · Selektivität</span>
+    <span lang="en">Types · construction · ratings · where used · characteristics · discrimination</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">06 von 12</span><span lang="en">06 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Sicherung als Wächter">
+        <g fill="none" stroke="#171614" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M110 22 l52 20 v34 c0 30 -22 48 -52 56 c-30 -8 -52 -26 -52 -56 v-34 z" fill="#EFEAE0"/>
+        </g>
+        <path d="M116 54 l-20 32 h18 l-8 26 l24 -34 h-18 z" fill="#B8402A" stroke="#8A2F1E" stroke-width="1.6" stroke-linejoin="round"/>
+        <circle cx="92" cy="66" r="3" fill="#171614"/>
+        <circle cx="140" cy="66" r="3" fill="#171614"/>
+        <path d="M96 118 q 14 10 28 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Zweck der Überstromschutzeinrichtung</span><span lang="en">Purpose of overcurrent protection</span></h2>
+
+    <p class="lead" lang="de">Die Sicherung schützt nicht den Menschen und nicht das Gerät — sie schützt in erster Linie die <strong>Leitung</strong>. Fliesst mehr Strom, als die Leitung dauernd verträgt, erwärmt sich diese, die Isolation altert, verkohlt und kann in Brand geraten. Die Schutzeinrichtung trennt, bevor es so weit kommt.</p>
+    <p class="lead" lang="en">A fuse protects neither the person nor the appliance — it primarily protects the <strong>cable</strong>. If more current flows than the cable can carry continuously, it heats up, the insulation ages, chars and can catch fire. The protective device disconnects before it gets that far.</p>
+
+    <h3><span lang="de">Zwei verschiedene Fehler</span><span lang="en">Two different faults</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Fehler</span><span lang="en">Fault</span></th>
+            <th><span lang="de">Ursache</span><span lang="en">Cause</span></th>
+            <th><span lang="de">Stromhöhe</span><span lang="en">Current level</span></th>
+            <th><span lang="de">Abschaltung</span><span lang="en">Disconnection</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Überlast</span><span lang="en">Overload</span></strong></td>
+            <td><span lang="de">zu viele Verbraucher, zu grosses Gerät</span><span lang="en">too many loads, oversized appliance</span></td>
+            <td><span lang="de">wenig über dem Nennstrom</span><span lang="en">slightly above rated current</span></td>
+            <td><span lang="de">stromabhängig verzögert (thermisch)</span><span lang="en">inverse time delayed (thermal)</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Kurzschluss</span><span lang="en">Short circuit</span></strong></td>
+            <td><span lang="de">Leiterberührung, Isolationsfehler</span><span lang="en">conductors touching, insulation failure</span></td>
+            <td><span lang="de">ein Vielfaches des Nennstroms</span><span lang="en">a multiple of rated current</span></td>
+            <td><span lang="de">unverzögert (magnetisch)</span><span lang="en">instantaneous (magnetic)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Abgrenzung</span><span lang="en">Important distinction</span></b>
+      <p lang="de">Die Überstromschutzeinrichtung schützt die <strong>Leitung</strong>. Den <strong>Menschen</strong> schützt der Fehlerstromschutzschalter (FI/RCD) und die Schutzmassnahme der Abschaltung. Beide sind nötig — eines ersetzt das andere nicht.</p>
+      <p lang="en">The overcurrent device protects the <strong>cable</strong>. The <strong>person</strong> is protected by the residual current device (RCD) and by the automatic disconnection measure. Both are needed — one does not replace the other.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Schmelzsicherungen</span><span lang="en">Fuses</span></h2>
+
+    <p lang="de">Die Schmelzsicherung ist die älteste und einfachste Schutzeinrichtung: Ein dünner Schmelzleiter im Innern erwärmt sich durch den Strom und schmilzt beim Überstrom durch. Quarzsand im Gehäuse löscht den Lichtbogen. Danach ist die Sicherung verbraucht und wird ersetzt.</p>
+    <p lang="en">The fuse is the oldest and simplest protective device: a thin fuse element inside heats up with the current and melts under overcurrent. Quartz sand in the body quenches the arc. Afterwards the fuse is spent and gets replaced.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aufbau einer Schmelzsicherung im Sicherungssockel">
+        <defs>
+          <style>
+            .bd{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .mt{fill:#C9C2B4;stroke:#171614;stroke-width:1.8}
+            .snd{fill:#E8DFC8;stroke:#171614;stroke-width:1.6}
+            .wire{fill:none;stroke:#B8402A;stroke-width:3;stroke-linecap:round}
+            .cap{fill:#B8402A;stroke:#8A2F1E;stroke-width:1.6}
+            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
+            .ldr{fill:none;stroke:#7D7669;stroke-width:1.2}
+            .cn{fill:#171614}
+            .cnt{fill:#F4F1EA;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-anchor:middle}
+          </style>
+        </defs>
+
+        <!-- Sockel -->
+        <path class="bd" d="M120 250 h250 v70 h-250 z"/>
+        <text class="lgs" x="128" y="340"><tspan lang="de">SOCKEL MIT PASSEINSATZ</tspan><tspan lang="en">BASE WITH GAUGE RING</tspan></text>
+
+        <!-- Passeinsatz -->
+        <path class="mt" d="M200 226 h90 v24 h-90 z"/>
+
+        <!-- Sicherungseinsatz Körper -->
+        <path class="snd" d="M186 96 h118 v130 h-118 z"/>
+        <!-- Sandkörnung -->
+        <g fill="#C9BC94">
+          <circle cx="206" cy="126" r="3"/><circle cx="230" cy="146" r="3"/><circle cx="258" cy="122" r="3"/>
+          <circle cx="284" cy="150" r="3"/><circle cx="214" cy="176" r="3"/><circle cx="248" cy="192" r="3"/>
+          <circle cx="282" cy="182" r="3"/><circle cx="222" cy="206" r="3"/><circle cx="270" cy="210" r="3"/>
+        </g>
+        <!-- Schmelzleiter -->
+        <path class="wire" d="M245 96 V126 q -22 10 0 22 q 22 12 0 24 q -22 12 0 24 V226"/>
+        <!-- Kontaktkappen -->
+        <path class="cap" d="M186 76 h118 v22 h-118 z"/>
+        <path class="mt" d="M186 226 h118 v20 h-118 z"/>
+        <!-- Kennmelder -->
+        <circle cx="245" cy="66" r="9" fill="#D8A72A" stroke="#171614" stroke-width="1.6"/>
+
+        <!-- Schraubkappe -->
+        <path class="bd" d="M158 40 h174 v34 h-174 z"/>
+        <circle cx="245" cy="30" r="14" fill="none" stroke="#171614" stroke-width="2"/>
+
+        <!-- Callouts -->
+        <circle class="cn" cx="352" cy="57" r="12"/><text class="cnt" x="352" y="61">1</text>
+        <circle class="cn" cx="330" cy="66" r="12"/><text class="cnt" x="330" y="70">2</text>
+        <circle class="cn" cx="330" cy="160" r="12"/><text class="cnt" x="330" y="164">3</text>
+        <circle class="cn" cx="164" cy="160" r="12"/><text class="cnt" x="164" y="164">4</text>
+        <circle class="cn" cx="330" cy="238" r="12"/><text class="cnt" x="330" y="242">5</text>
+        <circle class="cn" cx="392" cy="284" r="12"/><text class="cnt" x="392" y="288">6</text>
+
+        <path class="ldr" d="M364 54 H470"/>
+        <text class="lg" x="478" y="50"><tspan lang="de">Schraubkappe</tspan><tspan lang="en">Screw cap</tspan></text>
+
+        <path class="ldr" d="M342 66 H452 V88 H470"/>
+        <text class="lg" x="478" y="92"><tspan lang="de">Kennmelder</tspan><tspan lang="en">Indicator</tspan></text>
+        <text class="lgs" x="478" y="108"><tspan lang="de">FÄLLT BEIM AUSLÖSEN HERAUS</tspan><tspan lang="en">DROPS OUT WHEN BLOWN</tspan></text>
+
+        <path class="ldr" d="M342 160 H470"/>
+        <text class="lg" x="478" y="156"><tspan lang="de">Quarzsand</tspan><tspan lang="en">Quartz sand</tspan></text>
+        <text class="lgs" x="478" y="172"><tspan lang="de">LÖSCHT DEN LICHTBOGEN</tspan><tspan lang="en">QUENCHES THE ARC</tspan></text>
+
+        <path class="ldr" d="M152 160 H60 V206"/>
+        <text class="lg" x="30" y="226"><tspan lang="de">Schmelzleiter</tspan><tspan lang="en">Fuse element</tspan></text>
+        <text class="lgs" x="30" y="242"><tspan lang="de">ENGSTELLEN</tspan><tspan lang="en">REDUCED SECTIONS</tspan></text>
+
+        <path class="ldr" d="M342 238 H470 V246"/>
+        <text class="lg" x="478" y="250"><tspan lang="de">Fusskontakt</tspan><tspan lang="en">Foot contact</tspan></text>
+
+        <path class="ldr" d="M380 284 H470 V300"/>
+        <text class="lg" x="478" y="304"><tspan lang="de">Passeinsatz</tspan><tspan lang="en">Gauge ring</tspan></text>
+        <text class="lgs" x="478" y="320"><tspan lang="de">VERHINDERT ZU GROSSE SICHERUNG</tspan><tspan lang="en">PREVENTS OVERSIZED FUSE</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Aufbau einer Schraubsicherung. Der Passeinsatz im Sockel lässt nur Sicherungen bis zum vorgesehenen Nennstrom zu.</span>
+        <span lang="en"> — Construction of a screw-in fuse. The gauge ring in the base accepts only fuses up to the intended rated current.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Der Passeinsatz — eine geniale Idee</span><span lang="en">The gauge ring — an ingenious idea</span></h3>
+    <p lang="de">Jeder Nennstrom hat einen anderen Fussdurchmesser. Der Passeinsatz im Sockel hat die passende Öffnung: Eine zu grosse Sicherung passt schlicht nicht hinein. Damit ist mechanisch verhindert, dass jemand «einfach eine stärkere» einsetzt und die Leitung ungeschützt lässt.</p>
+    <p lang="en">Each rated current has a different foot diameter. The gauge ring in the base has the matching opening: an oversized fuse simply does not fit. This mechanically prevents anyone from fitting “just a bigger one” and leaving the cable unprotected.</p>
+
+    <h3><span lang="de">Kennfarben</span><span lang="en">Colour code</span></h3>
+    <ul class="swatches">
+      <li><span class="sw" style="background:#E8A0B4"></span><span>2 A — <span lang="de">rosa</span><span lang="en">pink</span></span></li>
+      <li><span class="sw" style="background:#7A4A22"></span><span>4 A — <span lang="de">braun</span><span lang="en">brown</span></span></li>
+      <li><span class="sw" style="background:#3F6B43"></span><span>6 A — <span lang="de">grün</span><span lang="en">green</span></span></li>
+      <li><span class="sw" style="background:#B8402A"></span><span>10 A — <span lang="de">rot</span><span lang="en">red</span></span></li>
+      <li><span class="sw" style="background:#9A958A"></span><span>16 A — <span lang="de">grau</span><span lang="en">grey</span></span></li>
+      <li><span class="sw" style="background:#1D5872"></span><span>20 A — <span lang="de">blau</span><span lang="en">blue</span></span></li>
+      <li><span class="sw" style="background:#D8C93A"></span><span>25 A — <span lang="de">gelb</span><span lang="en">yellow</span></span></li>
+      <li><span class="sw" style="background:#26241F"></span><span>35 A — <span lang="de">schwarz</span><span lang="en">black</span></span></li>
+      <li><span class="sw" style="background:#F7F5F0"></span><span>50 A — <span lang="de">weiss</span><span lang="en">white</span></span></li>
+      <li><span class="sw" style="background:#B87333"></span><span>63 A — <span lang="de">kupfer</span><span lang="en">copper</span></span></li>
+    </ul>
+
+    <h3><span lang="de">Bauformen</span><span lang="en">Types</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Bauform</span><span lang="en">Type</span></th>
+            <th><span lang="de">Grössen</span><span lang="en">Sizes</span></th>
+            <th><span lang="de">Einsatzort</span><span lang="en">Where used</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Diazed</strong> (D)</td><td class="num">DII · DIII · DIV</td><td><span lang="de">ältere Verteilungen, Schraubsockel</span><span lang="en">older distribution boards, screw bases</span></td></tr>
+          <tr><td><strong>Neozed</strong> (D0)</td><td class="num">D01 · D02 · D03</td><td><span lang="de">kompakter als Diazed, moderne Verteilungen</span><span lang="en">more compact than Diazed, modern boards</span></td></tr>
+          <tr><td><strong>NH</strong></td><td class="num"><span lang="de">Grösse 000 · 00 · 1 · 2 · 3</span><span lang="en">size 000 · 00 · 1 · 2 · 3</span></td><td><span lang="de">hohe Ströme, Hausanschluss, Industrie; Wechsel nur mit Aufsteckgriff und PSA</span><span lang="en">high currents, service entrance, industry; changed only with a handle and PPE</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Leitungsschutzschalter</span><span lang="en">Miniature circuit breakers</span></h2>
+
+    <p lang="de">Der Leitungsschutzschalter (LS, englisch MCB) übernimmt dieselbe Aufgabe wie die Schmelzsicherung, ist aber <strong>wiedereinschaltbar</strong>. Er enthält zwei Auslöser: ein <span class="therm-t">Bimetall</span> für die Überlast und einen <span class="mag-t">Magnetauslöser</span> für den Kurzschluss.</p>
+    <p lang="en">The miniature circuit breaker (MCB) does the same job as a fuse but is <strong>resettable</strong>. It contains two releases: a <span class="therm-t">bimetal</span> for overload and a <span class="mag-t">magnetic release</span> for short circuit.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Auslösecharakteristiken B, C und D des Leitungsschutzschalters">
+        <defs>
+          <style>
+            .ax{fill:none;stroke:#171614;stroke-width:2}
+            .gr{fill:none;stroke:#D2CABB;stroke-width:1}
+            .cb{fill:none;stroke:#3F6B43;stroke-width:2.8;stroke-linecap:round}
+            .cc{fill:none;stroke:#B8402A;stroke-width:2.8;stroke-linecap:round}
+            .cd{fill:none;stroke:#1D5872;stroke-width:2.8;stroke-linecap:round}
+            .th{fill:none;stroke:#7D7669;stroke-width:2.6;stroke-linecap:round}
+            .tk{font-family:'IBM Plex Mono',monospace;font-size:11px;fill:#7D7669}
+            .an{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
+            .axl{font-family:'IBM Plex Mono',monospace;font-size:11px;fill:#48433B;letter-spacing:.08em}
+          </style>
+        </defs>
+
+        <!-- Gitter -->
+        <path class="gr" d="M92 40 H676 M92 100 H676 M92 160 H676 M92 220 H676 M92 280 H676 M92 340 H676"/>
+        <path class="gr" d="M92 40 V340 M188 40 V340 M260 40 V340 M332 40 V340 M404 40 V340 M476 40 V340 M548 40 V340 M620 40 V340 M676 40 V340"/>
+
+        <!-- thermischer Ast, gemeinsam -->
+        <path class="th" d="M104 60 L140 120 L188 178 L236 214 L284 238"/>
+
+        <!-- B: 3 ... 5 -->
+        <rect x="260" y="40" width="72" height="300" fill="#3F6B43" opacity=".10"/>
+        <path class="cb" d="M284 238 L296 300 V326"/>
+
+        <!-- C: 5 ... 10 -->
+        <rect x="332" y="40" width="144" height="300" fill="#B8402A" opacity=".09"/>
+        <path class="cc" d="M284 238 L340 262 L392 300 V326"/>
+
+        <!-- D: 10 ... 20 -->
+        <rect x="476" y="40" width="200" height="300" fill="#1D5872" opacity=".09"/>
+        <path class="cd" d="M284 238 L392 268 L512 302 V326"/>
+
+        <!-- Achsen -->
+        <path class="ax" d="M92 40 V340 H676"/>
+
+        <!-- x-Ticks -->
+        <g class="tk" text-anchor="middle">
+          <text x="92" y="358">1</text>
+          <text x="188" y="358">2</text>
+          <text x="260" y="358">3</text>
+          <text x="332" y="358">5</text>
+          <text x="476" y="358">10</text>
+          <text x="620" y="358">20</text>
+        </g>
+        <text class="axl" x="676" y="392" text-anchor="end"><tspan lang="de">STROM I / In →</tspan><tspan lang="en">CURRENT I / In →</tspan></text>
+
+        <!-- y-Ticks -->
+        <g class="tk" text-anchor="end">
+          <text x="84" y="44">1 h</text>
+          <text x="84" y="104">100 s</text>
+          <text x="84" y="164">10 s</text>
+          <text x="84" y="224">1 s</text>
+          <text x="84" y="284">0,1 s</text>
+          <text x="84" y="344">0,01 s</text>
+        </g>
+        <text class="axl" x="26" y="190" transform="rotate(-90 26 190)" text-anchor="middle"><tspan lang="de">AUSLÖSEZEIT t →</tspan><tspan lang="en">TRIPPING TIME t →</tspan></text>
+
+        <!-- Beschriftungen -->
+        <text class="an" x="296" y="30" text-anchor="middle" fill="#3F6B43" font-weight="600">B</text>
+        <text class="an" x="404" y="30" text-anchor="middle" fill="#B8402A" font-weight="600">C</text>
+        <text class="an" x="576" y="30" text-anchor="middle" fill="#1D5872" font-weight="600">D</text>
+        <text class="an" x="150" y="98" fill="#7D7669"><tspan lang="de">thermisch</tspan><tspan lang="en">thermal</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 2</span><span lang="en">Fig. 2</span></b>
+        <span lang="de"> — Prinzipielle Auslösecharakteristik (schematisch). Der thermische Ast ist bei allen Charakteristiken gleich; sie unterscheiden sich nur im Ansprechbereich des Magnetauslösers.</span>
+        <span lang="en"> — Principle of the tripping characteristic (schematic). The thermal branch is identical for all characteristics; they differ only in the magnetic release range.</span>
+      </figcaption>
+    </figure>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Charakteristik</span><span lang="en">Characteristic</span></th>
+            <th><span lang="de">Magnetische Auslösung</span><span lang="en">Magnetic trip</span></th>
+            <th><span lang="de">Typische Anwendung</span><span lang="en">Typical application</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num"><strong>B</strong></td><td class="num">3 … 5 × I<sub>n</sub></td><td><span lang="de">Beleuchtung, Steckdosen, allgemeine Stromkreise</span><span lang="en">Lighting, sockets, general circuits</span></td></tr>
+          <tr><td class="num"><strong>C</strong></td><td class="num">5 … 10 × I<sub>n</sub></td><td><span lang="de">Verbraucher mit Einschaltstrom: Motoren, Trafos, LED-Treiber</span><span lang="en">Loads with inrush: motors, transformers, LED drivers</span></td></tr>
+          <tr><td class="num"><strong>D</strong></td><td class="num">10 … 20 × I<sub>n</sub></td><td><span lang="de">hoher Einschaltstoss: grosse Transformatoren, Schweissgeräte</span><span lang="en">High inrush: large transformers, welding equipment</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Warum drei Charakteristiken?</span><span lang="en">Why three characteristics?</span></b>
+      <p lang="de">Beim Einschalten eines Motors oder Transformators fliesst kurzzeitig ein Vielfaches des Nennstroms. Ein B-Schalter würde dabei sofort auslösen, obwohl kein Fehler vorliegt. Die Charakteristik C oder D verschiebt die magnetische Auslöseschwelle nach oben — <strong>ohne</strong> den Überlastschutz zu verändern: Der thermische Ast bleibt identisch.</p>
+      <p lang="en">Switching on a motor or transformer briefly draws a multiple of the rated current. A type B breaker would trip immediately even though nothing is wrong. Characteristic C or D shifts the magnetic threshold upwards — <strong>without</strong> changing the overload protection: the thermal branch stays identical.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Fehlerstromschutzschalter (FI / RCD)</span><span lang="en">Residual current device (RCD)</span></h2>
+
+    <p lang="de">Der FI-Schutzschalter vergleicht laufend den <strong>hineinfliessenden mit dem zurückfliessenden Strom</strong>. Im gesunden Stromkreis ist die Summe null. Fliesst ein Teil des Stromes über einen anderen Weg ab — etwa über einen Menschen oder eine schadhafte Isolation zur Erde — entsteht eine Differenz, und der Schalter trennt.</p>
+    <p lang="en">The RCD continuously compares the <strong>current flowing in with the current flowing back</strong>. In a healthy circuit the sum is zero. If part of the current takes another path — through a person or through faulty insulation to earth — a difference arises and the device disconnects.</p>
+
+    <div class="formula">I<sub>L1</sub> + I<sub>L2</sub> + I<sub>L3</sub> + I<sub>N</sub> = 0 &nbsp;&nbsp;→&nbsp;&nbsp; <span lang="de">kein Fehler</span><span lang="en">no fault</span></div>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Bemessungsfehlerstrom</span><span lang="en">Rated residual current</span></th>
+            <th><span lang="de">Zweck</span><span lang="en">Purpose</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">10 mA</td><td><span lang="de">erhöhter Personenschutz, besondere Bereiche</span><span lang="en">Enhanced personal protection, special areas</span></td></tr>
+          <tr><td class="num">30 mA</td><td><span lang="de"><strong>Personenschutz</strong> — Standard für Steckdosenstromkreise</span><span lang="en"><strong>Personal protection</strong> — standard for socket circuits</span></td></tr>
+          <tr><td class="num">100 … 300 mA</td><td><span lang="de">Brandschutz, Anlagenschutz</span><span lang="en">Fire protection, installation protection</span></td></tr>
+          <tr><td class="num">500 mA <span lang="de">und mehr</span><span lang="en">and above</span></td><td><span lang="de">nur Anlagenschutz, kein Personenschutz</span><span lang="en">Installation protection only, no personal protection</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Typen</span><span lang="en">Types</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Typ</span><span lang="en">Type</span></th>
+            <th><span lang="de">Erfasst</span><span lang="en">Detects</span></th>
+            <th><span lang="de">Einsatz</span><span lang="en">Use</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num"><strong>AC</strong></td><td><span lang="de">nur sinusförmige Wechselfehlerströme</span><span lang="en">sinusoidal AC residual currents only</span></td><td><span lang="de">für neue Anlagen nicht mehr üblich</span><span lang="en">no longer usual for new installations</span></td></tr>
+          <tr><td class="num"><strong>A</strong></td><td><span lang="de">wie AC, zusätzlich pulsierende Gleichfehlerströme</span><span lang="en">as AC, plus pulsating DC residual currents</span></td><td><span lang="de">heutiger Standard im Wohnbau</span><span lang="en">today's standard in housing</span></td></tr>
+          <tr><td class="num"><strong>F</strong></td><td><span lang="de">wie A, zusätzlich Mischfrequenzen</span><span lang="en">as A, plus mixed frequencies</span></td><td><span lang="de">Frequenzumrichter, moderne Waschmaschinen</span><span lang="en">Frequency converters, modern washing machines</span></td></tr>
+          <tr><td class="num"><strong>B</strong></td><td><span lang="de">wie F, zusätzlich glatte Gleichfehlerströme</span><span lang="en">as F, plus smooth DC residual currents</span></td><td><span lang="de">Photovoltaik-Wechselrichter, Ladestationen</span><span lang="en">PV inverters, EV charging stations</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Prüftaste</span><span lang="en">Test button</span></b>
+      <p lang="de">Jeder FI hat eine Prüftaste <strong>T</strong>. Sie erzeugt intern einen definierten Fehlerstrom und prüft damit die Mechanik. Die Prüfung ist periodisch durchzuführen — ein FI, der jahrelang nie ausgelöst hat, kann festsitzen. Die Prüftaste ersetzt jedoch <strong>keine</strong> Messung: Auslösestrom und Auslösezeit werden mit dem Messgerät kontrolliert.</p>
+      <p lang="en">Every RCD has a test button <strong>T</strong>. It produces a defined residual current internally and thereby checks the mechanism. The test must be carried out periodically — an RCD that has not tripped for years can seize. However, the test button is <strong>no substitute</strong> for measurement: tripping current and time are verified with an instrument.</p>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Zur NIN</span><span lang="en">Regarding the NIN</span></b>
+      <p lang="de">Die NIN schreibt für Steckdosenstromkreise bis zu einem bestimmten Bemessungsstrom einen FI mit 30 mA vor; weitere Anforderungen gelten für Nassbereiche, Aussenanlagen und Baustellen. <strong>Die genauen Artikel und Grenzwerte vor der Abgabe in der eigenen NIN-Ausgabe nachschlagen</strong> und zitieren.</p>
+      <p lang="en">The NIN requires a 30 mA RCD for socket circuits up to a defined rated current; further requirements apply to wet areas, outdoor installations and construction sites. <strong>Look up the exact articles and limits in your own NIN edition</strong> and cite them.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Betriebsklassen und Selektivität</span><span lang="en">Utilisation categories and discrimination</span></h2>
+
+    <h3><span lang="de">Betriebsklassen der Schmelzsicherung</span><span lang="en">Fuse utilisation categories</span></h3>
+    <p lang="de">Zwei Buchstaben beschreiben, was eine Sicherung kann. Der <strong>Kleinbuchstabe</strong> gibt den Schutzbereich an, der <strong>Grossbuchstabe</strong> das zu schützende Objekt.</p>
+    <p lang="en">Two letters describe what a fuse can do. The <strong>lower-case</strong> letter gives the breaking range, the <strong>upper-case</strong> letter the object to be protected.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Klasse</span><span lang="en">Class</span></th>
+            <th><span lang="de">Bedeutung</span><span lang="en">Meaning</span></th>
+            <th><span lang="de">Einsatz</span><span lang="en">Use</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num"><strong>gG</strong></td><td><span lang="de">Ganzbereich, allgemeine Anwendung — schützt gegen Überlast <em>und</em> Kurzschluss</span><span lang="en">Full range, general application — protects against overload <em>and</em> short circuit</span></td><td><span lang="de">Leitungsschutz, Standardfall</span><span lang="en">Cable protection, standard case</span></td></tr>
+          <tr><td class="num"><strong>aM</strong></td><td><span lang="de">Teilbereich, Motor — schützt <em>nur</em> gegen Kurzschluss</span><span lang="en">Partial range, motor — protects <em>only</em> against short circuit</span></td><td><span lang="de">Motorstromkreise; Überlastschutz übernimmt das Überlastrelais</span><span lang="en">Motor circuits; overload protection is handled by the overload relay</span></td></tr>
+          <tr><td class="num"><strong>gR / aR</strong></td><td><span lang="de">Halbleiterschutz, sehr schnell</span><span lang="en">Semiconductor protection, very fast</span></td><td><span lang="de">Frequenzumrichter, Stromrichter</span><span lang="en">Frequency converters, rectifiers</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Achtung bei aM</span><span lang="en">Careful with aM</span></b>
+      <p lang="de">Eine aM-Sicherung allein schützt die Leitung <strong>nicht</strong> gegen Überlast. Sie darf nur zusammen mit einem Überlastschutz eingesetzt werden — sonst brennt die Leitung, während die Sicherung ruhig zuschaut.</p>
+      <p lang="en">An aM fuse on its own does <strong>not</strong> protect the cable against overload. It may only be used together with an overload protection device — otherwise the cable burns while the fuse quietly looks on.</p>
+    </div>
+
+    <h3><span lang="de">Selektivität</span><span lang="en">Discrimination</span></h3>
+    <p lang="de">Selektivität bedeutet: Bei einem Fehler löst <strong>nur die dem Fehler am nächsten liegende</strong> Schutzeinrichtung aus. Der Rest der Anlage bleibt in Betrieb.</p>
+    <p lang="en">Discrimination means: in the event of a fault, <strong>only the protective device closest to the fault</strong> operates. The rest of the installation stays in service.</p>
+
+    <p lang="de">Ein Kurzschluss in der Küche darf also die Küchensicherung auslösen — nicht aber den Hauptschalter der ganzen Wohnung oder gar die Hausanschlusssicherung. Erreicht wird das durch <strong>gestufte Nennströme und Auslösezeiten</strong> von der Quelle zum Verbraucher hin.</p>
+    <p lang="en">A short circuit in the kitchen may trip the kitchen circuit's device — but not the main switch of the whole flat, let alone the service fuse. This is achieved by <strong>grading rated currents and tripping times</strong> from source towards load.</p>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Merksatz</span><span lang="en">Remember</span></b>
+      <p lang="de">Je näher beim Verbraucher, desto kleiner und schneller. Je näher bei der Quelle, desto grösser und träger.</p>
+      <p lang="en">The closer to the load, the smaller and faster. The closer to the source, the larger and slower.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Was schützt eine Sicherung in erster Linie?</span><span lang="en">What does a fuse primarily protect?</span></summary>
+      <div class="ans">
+        <p lang="de">Die Leitung. Sie verhindert, dass die Leitung durch zu hohen Strom überhitzt, die Isolation schädigt und einen Brand auslöst. Den Menschen schützt dagegen der FI und die Abschaltung im Fehlerfall.</p>
+        <p lang="en">The cable. It prevents the cable from overheating through excessive current, damaging the insulation and starting a fire. The person, by contrast, is protected by the RCD and by automatic disconnection.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wozu dient der Passeinsatz im Sicherungssockel?</span><span lang="en">What is the gauge ring in the fuse base for?</span></summary>
+      <div class="ans">
+        <p lang="de">Er verhindert mechanisch, dass eine zu grosse Sicherung eingesetzt wird. Jeder Nennstrom hat einen anderen Fussdurchmesser — eine stärkere Sicherung passt schlicht nicht durch die Öffnung.</p>
+        <p lang="en">It mechanically prevents an oversized fuse from being fitted. Each rated current has a different foot diameter — a larger fuse simply does not fit through the opening.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Worin unterscheiden sich die Charakteristiken B, C und D?</span><span lang="en">How do characteristics B, C and D differ?</span></summary>
+      <div class="ans">
+        <p lang="de">Nur im Ansprechbereich des <strong>magnetischen</strong> Auslösers: B löst bei 3–5 × I<sub>n</sub> aus, C bei 5–10 × I<sub>n</sub>, D bei 10–20 × I<sub>n</sub>. Der thermische Überlastschutz ist bei allen dreien gleich. C und D werden gewählt, wenn ein Verbraucher einen hohen Einschaltstrom hat.</p>
+        <p lang="en">Only in the range of the <strong>magnetic</strong> release: B trips at 3–5 × I<sub>n</sub>, C at 5–10 × I<sub>n</sub>, D at 10–20 × I<sub>n</sub>. The thermal overload protection is identical for all three. C and D are chosen when a load has a high inrush current.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie funktioniert ein FI-Schutzschalter?</span><span lang="en">How does an RCD work?</span></summary>
+      <div class="ans">
+        <p lang="de">Er vergleicht den hin- und den zurückfliessenden Strom. Im fehlerfreien Stromkreis ist die Summe aller Ströme null. Fliesst ein Teil über einen anderen Weg zur Erde ab — etwa über einen Menschen — entsteht eine Differenz. Überschreitet sie den Bemessungsfehlerstrom, trennt der Schalter allpolig.</p>
+        <p lang="en">It compares the current flowing out with the current flowing back. In a healthy circuit the sum of all currents is zero. If part of the current takes another path to earth — through a person, for example — a difference arises. Once it exceeds the rated residual current, the device disconnects all poles.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welcher Bemessungsfehlerstrom gilt als Personenschutz?</span><span lang="en">Which rated residual current counts as personal protection?</span></summary>
+      <div class="ans">
+        <p lang="de">30 mA. Dieser Wert liegt unterhalb der Schwelle, ab der Herzkammerflimmern zu erwarten ist. Werte ab 300 mA dienen dem Brand- und Anlagenschutz, nicht dem Personenschutz.</p>
+        <p lang="en">30 mA. This value lies below the threshold at which ventricular fibrillation is to be expected. Values from 300 mA upwards serve fire and installation protection, not personal protection.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was bedeutet die Betriebsklasse aM und worauf musst du achten?</span><span lang="en">What does utilisation category aM mean, and what must you watch out for?</span></summary>
+      <div class="ans">
+        <p lang="de">Teilbereichssicherung für Motorstromkreise: Sie schützt <em>nur</em> gegen Kurzschluss, nicht gegen Überlast. Sie darf deshalb nie allein eingesetzt werden — der Überlastschutz muss separat vorhanden sein, üblicherweise durch ein Überlastrelais oder einen Motorschutzschalter.</p>
+        <p lang="en">Partial-range fuse for motor circuits: it protects <em>only</em> against short circuit, not against overload. It must therefore never be used alone — overload protection has to be provided separately, usually by an overload relay or a motor protection switch.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was versteht man unter Selektivität?</span><span lang="en">What is meant by discrimination?</span></summary>
+      <div class="ans">
+        <p lang="de">Dass bei einem Fehler nur die dem Fehler am nächsten liegende Schutzeinrichtung auslöst, während der Rest der Anlage in Betrieb bleibt. Erreicht wird das durch gestufte Nennströme und Auslösezeiten von der Quelle zum Verbraucher hin.</p>
+        <p lang="en">That in the event of a fault only the protective device nearest the fault operates, while the rest of the installation stays in service. It is achieved by grading rated currents and tripping times from source towards load.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welche Kennfarbe hat eine 10-A-Schmelzsicherung?</span><span lang="en">What colour marks a 10 A fuse?</span></summary>
+      <div class="ans">
+        <p lang="de">Rot. Die Reihe lautet: 2 A rosa, 4 A braun, 6 A grün, 10 A rot, 16 A grau, 20 A blau, 25 A gelb, 35 A schwarz, 50 A weiss, 63 A kupfer.</p>
+        <p lang="en">Red. The series runs: 2 A pink, 4 A brown, 6 A green, 10 A red, 16 A grey, 20 A blue, 25 A yellow, 35 A black, 50 A white, 63 A copper.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Ersetzt die Prüftaste am FI die Messung?</span><span lang="en">Does the RCD test button replace measurement?</span></summary>
+      <div class="ans">
+        <p lang="de">Nein. Die Prüftaste bestätigt nur, dass die Mechanik auslöst. Ob der Schalter innerhalb des zulässigen Fehlerstroms und der zulässigen Zeit trennt, zeigt erst die Messung mit dem Prüfgerät.</p>
+        <p lang="en">No. The test button only confirms that the mechanism operates. Whether the device disconnects within the permissible residual current and time is shown only by measurement with a test instrument.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="05-symbole.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>05 · <span lang="de">Symbole</span><span lang="en">Symbols</span></b>
+  </a>
+  <a class="next" href="07-steckdosen.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>07 · <span lang="de">Steckdosen</span><span lang="en">Socket Outlets</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 06 · Sicherungen</span><span lang="en">Learning Documentation 06 · Fuses and Breakers</span></span>
+  <span>Yanik · Etavis · <span lang="de">1. Lehrjahr</span><span lang="en">Year 1</span></span>
+  <span><span lang="de">Normen: NIN 2020 · EN 60898 · EN 61008/61009 · EN 60269</span><span lang="en">Standards: NIN 2020 · EN 60898 · EN 61008/61009 · EN 60269</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>
