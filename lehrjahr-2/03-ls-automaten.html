@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 03 — LS-Automaten" data-en="Learning Documentation 03 — Miniature Circuit Breakers">Lerndokumentation 03 — LS-Automaten</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span>
+    <span lang="de">Thema 03</span><span lang="en">Topic 03</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">03</div>
+    <h1><span lang="de">LS-Automaten</span><span lang="en">Miniature<br>Circuit Breakers</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Aufbau · Modelle · Typ B / C / D · Zeichnung · Schaltvermögen</span>
+    <span lang="en">Design · types · type B / C / D · drawing · breaking capacity</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">03 von 12</span><span lang="en">03 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Leitungsschutzschalter auf Hutschiene">
+        <rect x="72" y="26" width="76" height="98" rx="6" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <rect x="88" y="42" width="44" height="26" rx="3" fill="#B8402A" stroke="#8A2F1E" stroke-width="2"/>
+        <text x="110" y="61" font-family="'Archivo',sans-serif" font-size="15" font-weight="800" fill="#F4F1EA" text-anchor="middle">I</text>
+        <circle cx="96" cy="88" r="3" fill="#171614"/>
+        <circle cx="124" cy="88" r="3" fill="#171614"/>
+        <path d="M98 104 q 12 8 24 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M84 26 v-12 M136 26 v-12 M84 124 v12 M136 124 v12" stroke="#171614" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M40 132 h140" stroke="#C9C2B4" stroke-width="8" stroke-linecap="round"/>
+        <path d="M40 132 h140" stroke="#171614" stroke-width="2"/>
+        <text x="170" y="52" font-family="'IBM Plex Mono',monospace" font-size="15" font-weight="600" fill="#1D5872">B16</text>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Aufgabe und Einordnung</span><span lang="en">Task and classification</span></h2>
+
+    <p class="lead" lang="de">Der Leitungsschutzschalter — im Alltag «LS-Automat» oder einfach «Automat» — ersetzt die Schmelzsicherung. Er schützt die <strong>Leitung</strong> vor Überlast und Kurzschluss und lässt sich nach dem Auslösen <strong>wieder einschalten</strong>, statt ersetzt zu werden.</p>
+    <p class="lead" lang="en">The miniature circuit breaker replaces the fuse. It protects the <strong>cable</strong> against overload and short circuit and can be <strong>reset</strong> after tripping instead of being replaced.</p>
+
+    <p lang="de">Dafür enthält er zwei völlig verschiedene Auslöser in einem Gehäuse: einen <span class="therm-t">thermischen</span> für die langsame Überlast und einen <span class="mag-t">magnetischen</span> für den blitzschnellen Kurzschluss.</p>
+    <p lang="en">To do this it contains two entirely different releases in one housing: a <span class="therm-t">thermal</span> one for slow overload and a <span class="mag-t">magnetic</span> one for the instantaneous short circuit.</p>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Abgrenzung</span><span lang="en">Distinction</span></b>
+      <p lang="de">Der LS-Automat schützt die <strong>Leitung</strong>, nicht den Menschen und nicht das angeschlossene Gerät. Für den Personenschutz braucht es zusätzlich den Fehlerstromschutzschalter, für den Motorschutz den Motorschutzschalter mit einstellbarem Bimetall.</p>
+      <p lang="en">The breaker protects the <strong>cable</strong> — not the person and not the connected appliance. Personal protection additionally requires an RCD, and motor protection requires a motor protection switch with an adjustable bimetal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Aufbau</span><span lang="en">Construction</span></h2>
+
+    <figure>
+      <svg viewBox="0 0 760 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schnitt durch einen Leitungsschutzschalter">
+        <defs>
+          <style>
+            .hs{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .mt{fill:#C9C2B4;stroke:#171614;stroke-width:1.8}
+            .th{fill:#F0DBD4;stroke:#B8402A;stroke-width:2.2}
+            .mg{fill:#D6E3E9;stroke:#1D5872;stroke-width:2.2}
+            .pt{fill:none;stroke:#171614;stroke-width:3.2;stroke-linecap:round}
+            .lb{fill:none;stroke:#48433B;stroke-width:2.4;stroke-linecap:round}
+            .dl{fill:none;stroke:#7D7669;stroke-width:1.6;stroke-dasharray:6 5}
+            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
+            .ldr{fill:none;stroke:#7D7669;stroke-width:1.2}
+            .cn{fill:#171614}
+            .cnt{fill:#F4F1EA;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-anchor:middle}
+          </style>
+        </defs>
+
+        <!-- Gehäuse -->
+        <rect class="hs" x="150" y="40" width="330" height="360" rx="10"/>
+        <!-- Hutschiene -->
+        <path d="M130 400 h370 v10 h-14 v14 h-342 v-14 h-14 z" fill="#C9C2B4" stroke="#171614" stroke-width="1.8"/>
+
+        <!-- obere Klemme -->
+        <rect class="mt" x="336" y="52" width="76" height="34" rx="3"/>
+        <circle cx="374" cy="69" r="7" fill="none" stroke="#171614" stroke-width="1.6"/>
+        <path d="M369 69 h10 M374 64 v10" stroke="#171614" stroke-width="1.6"/>
+        <path class="pt" d="M374 86 V116"/>
+
+        <!-- Kontakt -->
+        <rect x="352" y="116" width="40" height="9" rx="2" fill="#171614"/>
+        <path d="M290 164 L378 123" stroke="#171614" stroke-width="8" stroke-linecap="round"/>
+        <circle cx="290" cy="164" r="6" fill="#48433B"/>
+
+        <!-- Löschkammer -->
+        <rect x="406" y="100" width="62" height="74" rx="3" fill="none" stroke="#48433B" stroke-width="1.6"/>
+        <path class="lb" d="M412 110 h50 M412 122 h50 M412 134 h50 M412 146 h50 M412 158 h50 M412 170 h50"/>
+
+        <!-- Schaltknebel -->
+        <rect x="176" y="56" width="58" height="52" rx="4" fill="#B8402A" stroke="#8A2F1E" stroke-width="2"/>
+        <text x="205" y="90" font-family="'Archivo',sans-serif" font-size="20" font-weight="800" fill="#F4F1EA" text-anchor="middle">I</text>
+        <path d="M234 82 h22" stroke="#171614" stroke-width="2.6"/>
+
+        <!-- Schaltschloss -->
+        <rect x="240" y="106" width="76" height="66" rx="4" fill="#EAE5DA" stroke="#171614" stroke-width="2"/>
+        <path d="M250 142 l18 -16 l14 20 l16 -22" fill="none" stroke="#171614" stroke-width="2.4"/>
+        <path class="dl" d="M316 144 L290 164"/>
+
+        <!-- Auslöseschiene -->
+        <rect x="252" y="180" width="18" height="180" rx="3" fill="#C9C2B4" stroke="#171614" stroke-width="1.6"/>
+
+        <!-- Magnetauslöser -->
+        <rect class="mg" x="300" y="196" width="70" height="62" rx="3"/>
+        <path d="M308 208 h54 M308 220 h54 M308 232 h54 M308 244 h54" stroke="#1D5872" stroke-width="2.2" fill="none"/>
+        <rect x="272" y="210" width="24" height="36" rx="2" fill="#1D5872"/>
+        <path d="M272 228 h-20" stroke="#1D5872" stroke-width="3"/>
+
+        <path class="pt" d="M334 258 V286"/>
+
+        <!-- Bimetall -->
+        <path class="th" d="M322 286 q -8 38 4 74 h20 q -12 -36 -4 -74 z"/>
+        <path d="M334 288 q -6 36 4 70" fill="none" stroke="#B8402A" stroke-width="1.4" stroke-dasharray="3 3"/>
+        <path d="M322 292 h-52" stroke="#B8402A" stroke-width="3"/>
+
+        <path class="pt" d="M338 360 H374 V332"/>
+
+        <!-- untere Klemme -->
+        <rect class="mt" x="336" y="298" width="76" height="34" rx="3"/>
+        <circle cx="374" cy="315" r="7" fill="none" stroke="#171614" stroke-width="1.6"/>
+        <path d="M369 315 h10 M374 310 v10" stroke="#171614" stroke-width="1.6"/>
+
+        <!-- Callouts -->
+        <circle class="cn" cx="322" cy="69" r="12"/><text class="cnt" x="322" y="73">1</text>
+        <circle class="cn" cx="205" cy="128" r="12"/><text class="cnt" x="205" y="132">2</text>
+        <circle class="cn" cx="278" cy="94" r="12"/><text class="cnt" x="278" y="98">3</text>
+        <circle class="cn" cx="350" cy="146" r="12"/><text class="cnt" x="350" y="150">4</text>
+        <circle class="cn" cx="437" cy="88" r="12"/><text class="cnt" x="437" y="92">5</text>
+        <circle class="cn" cx="335" cy="180" r="12"/><text class="cnt" x="335" y="184">6</text>
+        <circle class="cn" cx="300" cy="330" r="12"/><text class="cnt" x="300" y="334">7</text>
+        <circle class="cn" cx="261" cy="376" r="12"/><text class="cnt" x="261" y="380">8</text>
+
+        <path class="ldr" d="M334 69 H520"/>
+        <text class="lg" x="528" y="65"><tspan lang="de">Klemme Netzseite</tspan><tspan lang="en">Supply terminal</tspan></text>
+
+        <path class="ldr" d="M205 140 V430 H520 V424"/>
+        <text class="lg" x="528" y="420"><tspan lang="de">Schaltknebel</tspan><tspan lang="en">Toggle</tspan></text>
+        <text class="lgs" x="528" y="436">I = EIN / ON · 0 = AUS / OFF</text>
+
+        <path class="ldr" d="M290 94 H520 V104"/>
+        <text class="lg" x="528" y="108"><tspan lang="de">Schaltschloss mit Freiauslösung</tspan><tspan lang="en">Latch with trip-free release</tspan></text>
+
+        <path class="ldr" d="M362 146 H520 V152"/>
+        <text class="lg" x="528" y="156"><tspan lang="de">Kontaktsystem</tspan><tspan lang="en">Contact system</tspan></text>
+
+        <path class="ldr" d="M449 88 H480 V196 H520"/>
+        <text class="lg" x="528" y="200"><tspan lang="de">Lichtbogen-Löschkammer</tspan><tspan lang="en">Arc chute</tspan></text>
+
+        <path class="ldr" d="M347 180 H520 V244"/>
+        <text class="lg" x="528" y="248" fill="#1D5872" font-weight="600"><tspan lang="de">Magnetauslöser</tspan><tspan lang="en">Magnetic release</tspan></text>
+        <text class="lgs" x="528" y="264"><tspan lang="de">KURZSCHLUSS · UNVERZÖGERT</tspan><tspan lang="en">SHORT CIRCUIT · INSTANTANEOUS</tspan></text>
+
+        <path class="ldr" d="M312 330 H520 V300"/>
+        <text class="lg" x="528" y="296" fill="#B8402A" font-weight="600"><tspan lang="de">Bimetall</tspan><tspan lang="en">Bimetal</tspan></text>
+        <text class="lgs" x="528" y="312"><tspan lang="de">ÜBERLAST · VERZÖGERT</tspan><tspan lang="en">OVERLOAD · TIME DELAYED</tspan></text>
+
+        <path class="ldr" d="M249 376 H100 V352"/>
+        <text class="lg" x="30" y="348"><tspan lang="de">Auslöseschiene</tspan><tspan lang="en">Tripping bar</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Schnitt durch einen einpoligen LS-Automaten. <span style="color:var(--therm)">Rot = thermischer Zweig</span>, <span style="color:var(--mag)">blau = magnetischer Zweig</span>. Beide wirken auf dieselbe Auslöseschiene.</span>
+        <span lang="en"> — Section through a single-pole breaker. <span style="color:var(--therm)">Red = thermal branch</span>, <span style="color:var(--mag)">blue = magnetic branch</span>. Both act on the same tripping bar.</span>
+      </figcaption>
+    </figure>
+
+    <ul class="legend">
+      <li><span class="n">1</span><span lang="de">Anschlussklemme Netzseite</span><span lang="en">Supply-side terminal</span></li>
+      <li><span class="n">2</span><span lang="de">Schaltknebel — Stellung I und 0, zeigt auch die Auslösung an</span><span lang="en">Toggle — positions I and 0, also indicates a trip</span></li>
+      <li><span class="n">3</span><span lang="de">Schaltschloss mit Freiauslösung</span><span lang="en">Latch mechanism with trip-free release</span></li>
+      <li><span class="n">4</span><span lang="de">Kontaktsystem — Fest- und bewegter Kontakt</span><span lang="en">Contact system — fixed and moving contact</span></li>
+      <li><span class="n">5</span><span lang="de">Löschkammer mit Löschblechen</span><span lang="en">Arc chute with splitter plates</span></li>
+      <li><span class="n">6</span><span lang="de">Magnetauslöser — Spule mit Anker</span><span lang="en">Magnetic release — coil with armature</span></li>
+      <li><span class="n">7</span><span lang="de">Bimetall — thermischer Überlastauslöser</span><span lang="en">Bimetal — thermal overload release</span></li>
+      <li><span class="n">8</span><span lang="de">Auslöseschiene — beide Auslöser wirken darauf</span><span lang="en">Tripping bar — both releases act on it</span></li>
+    </ul>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Freiauslösung</span><span lang="en">Trip-free release</span></b>
+      <p lang="de">Wie beim Motorschutzschalter gilt: Der Automat löst auch aus, wenn der Knebel in Stellung EIN <strong>festgehalten</strong> wird. Der Schutz lässt sich nicht durch Gegenhalten überbrücken.</p>
+      <p lang="en">As with the motor protection switch: the breaker trips even if the toggle is <strong>held</strong> in the ON position. The protection cannot be defeated by holding it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Die Charakteristiken B, C und D</span><span lang="en">Characteristics B, C and D</span></h2>
+
+    <p lang="de">Der <strong>thermische</strong> Teil ist bei allen drei Charakteristiken gleich. Unterschiedlich ist nur, ab welchem Vielfachen des Bemessungsstromes der <strong>magnetische</strong> Auslöser sofort abschaltet.</p>
+    <p lang="en">The <strong>thermal</strong> part is identical for all three characteristics. What differs is only the multiple of rated current at which the <strong>magnetic</strong> release operates instantly.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Charakteristik</span><span lang="en">Characteristic</span></th>
+            <th><span lang="de">Magnetische Auslösung</span><span lang="en">Magnetic trip</span></th>
+            <th><span lang="de">Anwendung</span><span lang="en">Application</span></th>
+            <th><span lang="de">Begründung</span><span lang="en">Reason</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num"><strong>B</strong></td><td class="num">3 … 5 × I<sub>n</sub></td>
+            <td><span lang="de">Steckdosen, Beleuchtung, allgemeine Stromkreise</span><span lang="en">sockets, lighting, general circuits</span></td>
+            <td><span lang="de">kein nennenswerter Einschaltstoss, empfindlichster Schutz</span><span lang="en">no significant inrush, most sensitive protection</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>C</strong></td><td class="num">5 … 10 × I<sub>n</sub></td>
+            <td><span lang="de">Motoren, Transformatoren, LED- und FL-Gruppen</span><span lang="en">motors, transformers, groups of LED and fluorescent gear</span></td>
+            <td><span lang="de">deutlicher Einschaltstoss, darf nicht zur Fehlauslösung führen</span><span lang="en">noticeable inrush that must not cause nuisance tripping</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>D</strong></td><td class="num">10 … 20 × I<sub>n</sub></td>
+            <td><span lang="de">grosse Transformatoren, Schweissgeräte, Kondensatoren</span><span lang="en">large transformers, welding sets, capacitors</span></td>
+            <td><span lang="de">sehr hoher, kurzer Stromstoss beim Einschalten</span><span lang="en">very high, brief inrush at switch-on</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Grenzwerte des thermischen Auslösers</span><span lang="en">Limits of the thermal release</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Prüfstrom</span><span lang="en">Test current</span></th>
+            <th><span lang="de">Verhalten</span><span lang="en">Behaviour</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">1,13 × I<sub>n</sub></td><td><span lang="de">kleiner Prüfstrom — darf innerhalb der Prüfzeit <strong>nicht</strong> auslösen</span><span lang="en">conventional non-tripping current — must <strong>not</strong> trip within the test time</span></td></tr>
+          <tr><td class="num">1,45 × I<sub>n</sub></td><td><span lang="de">grosser Prüfstrom — <strong>muss</strong> innerhalb der Prüfzeit auslösen</span><span lang="en">conventional tripping current — <strong>must</strong> trip within the test time</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="subtitle" style="margin-top:-6px">
+      <span lang="de">Werte nach EN 60898; die Prüfzeit hängt vom Bemessungsstrom ab — im Datenblatt nachschlagen.</span>
+      <span lang="en">Values to EN 60898; the test time depends on the rated current — look it up in the data sheet.</span>
+    </p>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Häufiger Denkfehler</span><span lang="en">Common misconception</span></b>
+      <p lang="de">Ein B16 löst <strong>nicht</strong> bei genau 16 A aus. 16 A ist der Strom, den er dauernd führen darf. Ausgelöst wird erst deutlich darüber — bei 1,45 × I<sub>n</sub> garantiert innerhalb der Prüfzeit. Wer die Sicherung «zu schwach» findet, hat meist ein Leitungs- oder Lastproblem, kein Sicherungsproblem.</p>
+      <p lang="en">A B16 does <strong>not</strong> trip at exactly 16 A. 16 A is the current it may carry continuously. Tripping happens well above that — guaranteed within the test time at 1.45 × I<sub>n</sub>. Anyone who finds the breaker “too weak” usually has a cable or load problem, not a breaker problem.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Modelle und Kennwerte</span><span lang="en">Models and ratings</span></h2>
+
+    <h3><span lang="de">Bemessungsströme und Polzahl</span><span lang="en">Rated currents and number of poles</span></h3>
+    <div class="formula">2 · 4 · 6 · 10 · 13 · 16 · 20 · 25 · 32 · 40 · 50 · 63 A</div>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Polzahl</span><span lang="en">Poles</span></th>
+            <th><span lang="de">Bezeichnung</span><span lang="en">Designation</span></th>
+            <th><span lang="de">Einsatz</span><span lang="en">Use</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">1-polig</td><td>1P</td><td><span lang="de">Einzelner Aussenleiter, Standard im Wohnbau</span><span lang="en">single line conductor, standard in housing</span></td></tr>
+          <tr><td class="num">1-polig + N</td><td>1P+N</td><td><span lang="de">schaltet zusätzlich den Neutralleiter mit</span><span lang="en">also switches the neutral</span></td></tr>
+          <tr><td class="num">3-polig</td><td>3P</td><td><span lang="de">Drehstromkreise ohne Neutralleiter</span><span lang="en">three-phase circuits without neutral</span></td></tr>
+          <tr><td class="num">3-polig + N</td><td>3P+N</td><td><span lang="de">Drehstrom mit Neutralleiter</span><span lang="en">three-phase with neutral</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p lang="de">Mehrpolige Automaten haben ein <strong>gemeinsames Schaltschloss</strong>: Löst ein Pol aus, schalten alle ab. Das ist wichtig, damit ein Drehstrommotor nie auf zwei Phasen weiterläuft.</p>
+    <p lang="en">Multi-pole breakers share a <strong>common mechanism</strong>: if one pole trips, all disconnect. This matters so a three-phase motor never keeps running on two phases.</p>
+
+    <h3><span lang="de">Schaltvermögen</span><span lang="en">Breaking capacity</span></h3>
+    <p lang="de">Das <strong>Bemessungsschaltvermögen</strong> gibt an, welchen Kurzschlussstrom der Automat sicher abschalten kann, ohne selbst zerstört zu werden. Es steht im Rechteck auf der Front.</p>
+    <p lang="en">The <strong>rated short-circuit capacity</strong> states which fault current the breaker can safely interrupt without destroying itself. It is printed in a rectangle on the front.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Wert</span><span lang="en">Value</span></th>
+            <th><span lang="de">Typischer Einsatzort</span><span lang="en">Typical location</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">3000 A</td><td><span lang="de">weit von der Einspeisung entfernt, kleine Anlagen</span><span lang="en">far from the supply point, small installations</span></td></tr>
+          <tr><td class="num">6000 A</td><td><span lang="de">üblicher Wert im Wohnungsbau</span><span lang="en">common value in housing</span></td></tr>
+          <tr><td class="num">10 000 A</td><td><span lang="de">nahe an der Einspeisung, Gewerbe und Industrie</span><span lang="en">close to the supply, commercial and industrial</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Grundbedingung</span><span lang="en">Basic condition</span></b>
+      <p lang="de">Das Schaltvermögen muss <strong>grösser sein als der am Einbauort zu erwartende Kurzschlussstrom</strong>. Je näher der Automat bei der Trafostation liegt, desto grösser ist dieser Strom — und desto höher muss das Schaltvermögen gewählt werden.</p>
+      <p lang="en">The breaking capacity must be <strong>greater than the prospective short-circuit current at the point of installation</strong>. The closer the breaker sits to the substation, the higher that current — and the higher the capacity required.</p>
+    </div>
+
+    <h3><span lang="de">Verwandte Geräte</span><span lang="en">Related devices</span></h3>
+    <ul lang="de">
+      <li><strong>FI-LS (RCBO)</strong> — Leitungsschutz und Fehlerstromschutz in einem Gerät, spart Platz und macht den Stromkreis unabhängig von den anderen</li>
+      <li><strong>Selektiver Hauptleitungsschutzschalter</strong> — vor der Verteilung, zeitlich gestaffelt gegenüber den nachgelagerten Automaten</li>
+      <li><strong>Hilfskontakt und Störmeldeschalter</strong> — aufsteckbar, meldet Stellung oder Auslösung an die Steuerung</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>RCBO</strong> — cable protection and residual current protection in one device, saving space and making the circuit independent of the others</li>
+      <li><strong>Selective main breaker</strong> — upstream of the board, time-graded against the downstream breakers</li>
+      <li><strong>Auxiliary and fault signalling contacts</strong> — clip-on, reporting position or a trip to the control system</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Auswahl und Praxis</span><span lang="en">Selection and practice</span></h2>
+
+    <h3><span lang="de">Auswahlschritte</span><span lang="en">Selection steps</span></h3>
+    <ol lang="de">
+      <li><strong>Betriebsstrom</strong> des Stromkreises bestimmen</li>
+      <li><strong>Leitungsquerschnitt</strong> und dessen Strombelastbarkeit nach NIN festlegen</li>
+      <li><strong>Bemessungsstrom</strong> so wählen, dass I<sub>B</sub> ≤ I<sub>n</sub> ≤ I<sub>Z</sub> erfüllt ist</li>
+      <li><strong>Charakteristik</strong> nach dem Einschaltverhalten der Last wählen</li>
+      <li><strong>Schaltvermögen</strong> gegen den Kurzschlussstrom am Einbauort prüfen</li>
+      <li><strong>Selektivität</strong> zur vorgelagerten Schutzeinrichtung sicherstellen</li>
+      <li><strong>Abschaltbedingung</strong> im Fehlerfall nachweisen — die Schleifenimpedanz muss klein genug sein</li>
+    </ol>
+    <ol lang="en">
+      <li>Determine the <strong>design current</strong> of the circuit</li>
+      <li>Fix the <strong>conductor size</strong> and its current-carrying capacity to NIN</li>
+      <li>Choose the <strong>rated current</strong> so that I<sub>B</sub> ≤ I<sub>n</sub> ≤ I<sub>Z</sub> holds</li>
+      <li>Choose the <strong>characteristic</strong> from the switch-on behaviour of the load</li>
+      <li>Check the <strong>breaking capacity</strong> against the fault current at the location</li>
+      <li>Ensure <strong>discrimination</strong> with the upstream protective device</li>
+      <li>Verify the <strong>disconnection condition</strong> — the loop impedance must be low enough</li>
+    </ol>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Die Abschaltbedingung</span><span lang="en">The disconnection condition</span></b>
+      <p lang="de">Damit der Automat im Fehlerfall rechtzeitig abschaltet, muss der Fehlerstrom gross genug sein, um die magnetische Auslösung zu erreichen. Bei langen Leitungen mit kleinem Querschnitt kann die Schleifenimpedanz so gross werden, dass dies nicht mehr sicher gelingt. Dann hilft ein grösserer Querschnitt, eine empfindlichere Charakteristik — oder ein FI.</p>
+      <p lang="en">For the breaker to disconnect in time under fault conditions, the fault current must be high enough to reach the magnetic release. On long runs with a small cross-section the loop impedance can grow so large that this is no longer reliably achieved. The remedy is a larger cross-section, a more sensitive characteristic — or an RCD.</p>
+    </div>
+
+    <h3><span lang="de">Montage</span><span lang="en">Installation</span></h3>
+    <ul lang="de">
+      <li>Auf Hutschiene TH 35 aufschnappen, Reihenfolge nach Schema</li>
+      <li>Einspeisung über <strong>Sammelschiene</strong> (Kamm) — sauber abgelängt, Schnittkante berührungssicher abdecken</li>
+      <li><strong>Anzugsdrehmoment</strong> der Klemmen einhalten und nach einiger Betriebszeit nachkontrollieren</li>
+      <li><strong>Beschriften</strong> — jeder Automat trägt die Bezeichnung seines Stromkreises</li>
+      <li>Bei feindrähtigen Leitern <strong>Aderendhülsen</strong> verwenden</li>
+      <li>Nach der Montage <strong>messen</strong>: Durchgang, Isolation, Schleifenimpedanz, Drehfeld</li>
+    </ul>
+    <ul lang="en">
+      <li>Clip onto a TH 35 DIN rail, order according to the diagram</li>
+      <li>Feed via a <strong>busbar comb</strong> — cut cleanly and cover the cut end so it cannot be touched</li>
+      <li>Observe the <strong>tightening torque</strong> and re-check after some time in service</li>
+      <li><strong>Label</strong> — every breaker carries the designation of its circuit</li>
+      <li>Use <strong>ferrules</strong> on fine-stranded conductors</li>
+      <li>After installation, <strong>measure</strong>: continuity, insulation, loop impedance, phase sequence</li>
+    </ul>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Nie tun</span><span lang="en">Never do this</span></b>
+      <p lang="de">Einen ständig auslösenden Automaten durch einen grösseren ersetzen, ohne die Leitung zu prüfen. Die Leitung bleibt dieselbe — nur ihr Schutz ist dann weg. Zuerst die Ursache suchen: zu viele Verbraucher, defektes Gerät, Isolationsfehler oder ein zu klein dimensionierter Querschnitt.</p>
+      <p lang="en">Replacing a repeatedly tripping breaker with a bigger one without checking the cable. The cable stays the same — only its protection is gone. Find the cause first: too many loads, a faulty appliance, an insulation fault, or an undersized conductor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Welche zwei Auslöser enthält ein LS-Automat und wofür?</span><span lang="en">Which two releases does a breaker contain, and for what?</span></summary>
+      <div class="ans">
+        <p lang="de">Ein Bimetall für die Überlast, das stromabhängig verzögert auslöst, und einen Magnetauslöser für den Kurzschluss, der unverzögert abschaltet. Beide wirken auf dieselbe Auslöseschiene und damit auf ein gemeinsames Schaltschloss.</p>
+        <p lang="en">A bimetal for overload, tripping with an inverse time delay, and a magnetic release for short circuit, disconnecting instantaneously. Both act on the same tripping bar and therefore on one common mechanism.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Bei welchem Strom löst ein B16 sicher aus?</span><span lang="en">At what current does a B16 reliably trip?</span></summary>
+      <div class="ans">
+        <p lang="de">Thermisch garantiert bei 1,45 × I<sub>n</sub>, also rund 23 A, innerhalb der Prüfzeit. Bei 1,13 × I<sub>n</sub> darf er noch nicht auslösen. Magnetisch schaltet er zwischen 3 und 5 × I<sub>n</sub> sofort ab, also zwischen 48 und 80 A.</p>
+        <p lang="en">Thermally, guaranteed at 1.45 × I<sub>n</sub>, about 23 A, within the test time. At 1.13 × I<sub>n</sub> it must not yet trip. Magnetically it disconnects instantly between 3 and 5 × I<sub>n</sub>, i.e. between 48 and 80 A.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welche Charakteristik wählst du für einen Stromkreis mit mehreren Trafo-Netzteilen?</span><span lang="en">Which characteristic for a circuit with several transformer power supplies?</span></summary>
+      <div class="ans">
+        <p lang="de">Charakteristik C. Transformatoren ziehen beim Einschalten einen kurzen, hohen Magnetisierungsstrom. Ein B-Automat würde dabei auslösen, obwohl kein Fehler vorliegt. Bei sehr grossen Transformatoren kommt D in Frage.</p>
+        <p lang="en">Characteristic C. Transformers draw a brief, high magnetising current at switch-on. A type B would trip although nothing is wrong. For very large transformers, type D is an option.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was besagt die Zahl im Rechteck auf der Front, zum Beispiel 6000?</span><span lang="en">What does the figure in the rectangle on the front mean, for example 6000?</span></summary>
+      <div class="ans">
+        <p lang="de">Das Bemessungsschaltvermögen in Ampere — der grösste Kurzschlussstrom, den der Automat sicher abschalten kann. Er muss grösser sein als der am Einbauort zu erwartende Kurzschlussstrom.</p>
+        <p lang="en">The rated short-circuit capacity in amperes — the largest fault current the breaker can safely interrupt. It must exceed the prospective fault current at the point of installation.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum haben mehrpolige Automaten ein gemeinsames Schaltschloss?</span><span lang="en">Why do multi-pole breakers share one mechanism?</span></summary>
+      <div class="ans">
+        <p lang="de">Damit bei einem Fehler in einem Pol alle Pole gleichzeitig abschalten. Sonst liefe zum Beispiel ein Drehstrommotor auf zwei Phasen weiter, überhitzte und brennte durch.</p>
+        <p lang="en">So that a fault in one pole disconnects all poles at once. Otherwise a three-phase motor, for example, would keep running on two phases, overheat and burn out.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was ist ein FI-LS und wann setzt du ihn ein?</span><span lang="en">What is an RCBO and when do you use it?</span></summary>
+      <div class="ans">
+        <p lang="de">Ein Gerät, das Leitungsschutz und Fehlerstromschutz vereint. Es spart Platz und macht den einzelnen Stromkreis unabhängig: Ein Fehlerstrom schaltet nur diesen einen Kreis ab und nicht die ganze Gruppe hinter einem gemeinsamen FI.</p>
+        <p lang="en">A device combining cable protection and residual current protection. It saves space and makes the individual circuit independent: a residual current disconnects only that circuit rather than the whole group behind a shared RCD.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum darf ein häufig auslösender Automat nicht einfach durch einen grösseren ersetzt werden?</span><span lang="en">Why must a frequently tripping breaker not simply be replaced by a larger one?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil der Automat die Leitung schützt und die Leitung dieselbe bleibt. Ein grösserer Automat lässt einen Strom zu, den die Leitung thermisch nicht mehr verträgt — die Isolation altert, verkohlt und es entsteht Brandgefahr. Zuerst die Ursache der Auslösung beheben.</p>
+        <p lang="en">Because the breaker protects the cable and the cable stays the same. A larger breaker permits a current the cable can no longer withstand thermally — the insulation ages, chars and a fire risk arises. Eliminate the cause of tripping first.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was bedeutet Freiauslösung beim LS-Automaten?</span><span lang="en">What does trip-free mean on a breaker?</span></summary>
+      <div class="ans">
+        <p lang="de">Der Automat löst auch dann aus, wenn der Schaltknebel von Hand in Stellung EIN festgehalten wird. Der Schutz lässt sich durch Gegenhalten nicht überbrücken.</p>
+        <p lang="en">The breaker trips even if the toggle is held in the ON position by hand. The protection cannot be defeated by holding it.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="02-fl-leuchten.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>02 · <span lang="de">FL-Leuchten</span><span lang="en">Fluorescent Luminaires</span></b>
+  </a>
+  <a class="next" href="04-fi-schalter.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>04 · <span lang="de">FI-Schalter</span><span lang="en">Residual Current Devices</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 03 · LS-Automaten</span><span lang="en">Learning Documentation 03 · Miniature Circuit Breakers</span></span>
+  <span>Yanik · Etavis · <span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span></span>
+  <span><span lang="de">Normen: NIN · EN 60898 · EN 61009 (FI-LS)</span><span lang="en">Standards: NIN · EN 60898 · EN 61009 (RCBO)</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

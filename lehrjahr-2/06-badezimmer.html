@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 06 — Badezimmer" data-en="Learning Documentation 06 — Bathrooms">Lerndokumentation 06 — Badezimmer</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span>
+    <span lang="de">Thema 06</span><span lang="en">Topic 06</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">06</div>
+    <h1><span lang="de">Badezimmer</span><span lang="en">Bathrooms</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Masse · Bereiche · Vorschriften · IP-Kennzeichnung · Potentialausgleich</span>
+    <span lang="en">Dimensions · zones · rules · IP ratings · equipotential bonding</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">06 von 12</span><span lang="en">06 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Badewanne mit Wassertropfen">
+        <path d="M36 78 h148 v22 a26 26 0 0 1 -26 26 H62 a26 26 0 0 1 -26 -26 z" fill="#D6E3E9" stroke="#171614" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M28 78 h164" stroke="#171614" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M56 78 v-24 a10 10 0 0 1 20 0" fill="none" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="90" cy="100" r="3" fill="#171614"/>
+        <circle cx="126" cy="100" r="3" fill="#171614"/>
+        <path d="M94 112 q 14 8 28 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M156 34 q 10 14 0 20 q -10 -6 0 -20 z" fill="#1D5872" stroke="#153F52" stroke-width="1.6"/>
+        <path d="M182 52 q 8 11 0 16 q -8 -5 0 -16 z" fill="#1D5872" stroke="#153F52" stroke-width="1.6"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Warum das Bad ein Sonderfall ist</span><span lang="en">Why a bathroom is a special case</span></h2>
+
+    <p class="lead" lang="de">Im Badezimmer treffen drei Umstände zusammen, die jeder für sich schon gefährlich wären: <strong>Wasser</strong>, <strong>nasse Haut</strong> und <strong>barfuss auf leitfähigem Boden</strong>. Nasse Haut senkt den Körperwiderstand drastisch, und der barfüssige Kontakt zum Boden ergibt einen sehr guten Weg zur Erde.</p>
+    <p class="lead" lang="en">In a bathroom three circumstances come together that would each be dangerous on their own: <strong>water</strong>, <strong>wet skin</strong> and <strong>bare feet on a conductive floor</strong>. Wet skin drastically lowers body resistance, and barefoot contact with the floor makes an excellent path to earth.</p>
+
+    <p lang="de">Deshalb gilt das Badezimmer als <strong>Raum mit erhöhter Gefährdung</strong>. Die NIN behandelt es in einem eigenen Kapitel und teilt den Raum in <strong>Bereiche</strong> ein. Je näher an Wanne oder Dusche, desto strenger die Anforderungen.</p>
+    <p lang="en">A bathroom therefore counts as a <strong>location with increased risk</strong>. The NIN covers it in a chapter of its own and divides the room into <strong>zones</strong>. The closer to bath or shower, the stricter the requirements.</p>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Die Bereiche und ihre Masse</span><span lang="en">The zones and their dimensions</span></h2>
+
+    <figure>
+      <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bereichseinteilung im Badezimmer mit Massen">
+        <defs>
+          <style>
+            .wall{fill:#EFEAE0;stroke:#171614;stroke-width:2.4}
+            .z0{fill:#B8402A;opacity:.22}
+            .z1{fill:#D8A72A;opacity:.20}
+            .z2{fill:#1D5872;opacity:.15}
+            .tub{fill:#D6E3E9;stroke:#171614;stroke-width:2.4}
+            .dim{fill:none;stroke:#48433B;stroke-width:1.4}
+            .dl{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;fill:#171614;text-anchor:middle}
+            .zl{font-family:'Archivo',sans-serif;font-size:20px;font-weight:800;text-anchor:middle}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
+            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
+          </style>
+        </defs>
+
+        <!-- Boden und Wand -->
+        <path d="M90 350 H660" stroke="#171614" stroke-width="3"/>
+        <path d="M90 40 V350" stroke="#171614" stroke-width="3"/>
+
+        <!-- Bereich 2 (aussen) -->
+        <rect class="z2" x="330" y="60" width="96" height="290"/>
+        <!-- Bereich 1 -->
+        <rect class="z1" x="90" y="60" width="240" height="230"/>
+        <!-- Bereich 0 = Wanneninneres -->
+        <rect class="z0" x="98" y="290" width="224" height="52"/>
+
+        <!-- Wanne -->
+        <path class="tub" d="M94 288 h232 v18 a48 48 0 0 1 -48 44 H142 a48 48 0 0 1 -48 -44 z"/>
+
+        <!-- Bereichsbeschriftung -->
+        <text class="zl" x="210" y="326" fill="#8A2F1E">0</text>
+        <text class="zl" x="210" y="170" fill="#9A7B1F">1</text>
+        <text class="zl" x="378" y="170" fill="#1D5872">2</text>
+        <text class="zl" x="520" y="170" fill="#7D7669"><tspan lang="de">ausserhalb</tspan><tspan lang="en">outside</tspan></text>
+
+        <!-- Höhe 2.25 m -->
+        <path class="dim" d="M64 60 V350"/>
+        <path class="dim" d="M58 60 h12 M58 350 h12"/>
+        <text class="dl" x="40" y="210" transform="rotate(-90 40 210)">2.25 m</text>
+        <path d="M90 60 H426" stroke="#48433B" stroke-width="1.6" stroke-dasharray="7 5"/>
+
+        <!-- Breite 0.60 m -->
+        <path class="dim" d="M330 388 H426"/>
+        <path class="dim" d="M330 382 v12 M426 382 v12"/>
+        <text class="dl" x="378" y="408">0.60 m</text>
+
+        <!-- Wanne Grenze -->
+        <path class="dim" d="M330 60 V388" stroke-dasharray="5 4"/>
+        <path class="dim" d="M426 60 V388" stroke-dasharray="5 4"/>
+
+        <!-- Legende rechts -->
+        <g>
+          <rect x="470" y="240" width="22" height="14" fill="#B8402A" opacity=".4"/>
+          <text class="lg" x="502" y="252"><tspan lang="de">Bereich 0 — Wanneninneres</tspan><tspan lang="en">Zone 0 — inside the tub</tspan></text>
+          <text class="lgs" x="502" y="268">IPX7</text>
+
+          <rect x="470" y="286" width="22" height="14" fill="#D8A72A" opacity=".4"/>
+          <text class="lg" x="502" y="298"><tspan lang="de">Bereich 1 — über der Wanne</tspan><tspan lang="en">Zone 1 — above the tub</tspan></text>
+          <text class="lgs" x="502" y="314">IPX4</text>
+
+          <rect x="470" y="332" width="22" height="14" fill="#1D5872" opacity=".3"/>
+          <text class="lg" x="502" y="344"><tspan lang="de">Bereich 2 — seitlich anschliessend</tspan><tspan lang="en">Zone 2 — adjoining to the side</tspan></text>
+          <text class="lgs" x="502" y="360">IPX4</text>
+        </g>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Bereichseinteilung im Schnitt. Bereich 1 reicht bis 2,25 m über den Boden, Bereich 2 schliesst seitlich mit 0,60 m an.</span>
+        <span lang="en"> — Zones shown in section. Zone 1 extends to 2.25 m above the floor, zone 2 adjoins it laterally by 0.60 m.</span>
+      </figcaption>
+    </figure>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Bereich</span><span lang="en">Zone</span></th>
+            <th><span lang="de">Ausdehnung</span><span lang="en">Extent</span></th>
+            <th><span lang="de">Mindestschutzart</span><span lang="en">Minimum IP</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num"><strong>0</strong></td>
+            <td><span lang="de">das Innere der Badewanne oder Duschtasse</span><span lang="en">the interior of the bath tub or shower tray</span></td>
+            <td class="num">IPX7</td>
+          </tr>
+          <tr>
+            <td class="num"><strong>1</strong></td>
+            <td><span lang="de">senkrecht über Bereich 0, bis <strong>2,25 m</strong> über dem Boden</span><span lang="en">vertically above zone 0, up to <strong>2.25 m</strong> above the floor</span></td>
+            <td class="num">IPX4</td>
+          </tr>
+          <tr>
+            <td class="num"><strong>2</strong></td>
+            <td><span lang="de">seitlich an Bereich 1 anschliessend, <strong>0,60 m</strong> breit, gleiche Höhe</span><span lang="en">adjoining zone 1 laterally, <strong>0.60 m</strong> wide, same height</span></td>
+            <td class="num">IPX4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Dusche ohne Wanne</span><span lang="en">Shower without a tray</span></b>
+      <p lang="de">Bei einer bodenebenen Dusche gibt es kein Wanneninneres. Die Bereichsgrenzen werden dann von der <strong>Duschbrause</strong> beziehungsweise vom Duschbereich aus bestimmt. Die genaue Festlegung ist der NIN zu entnehmen.</p>
+      <p lang="en">With a level-access shower there is no tub interior. The zone boundaries are then measured from the <strong>shower head</strong> or the shower area. The exact definition is given in the NIN.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Was darf wo installiert werden</span><span lang="en">What may be installed where</span></h2>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Bereich</span><span lang="en">Zone</span></th>
+            <th><span lang="de">Zulässige Betriebsmittel</span><span lang="en">Permitted equipment</span></th>
+            <th><span lang="de">Steckdosen</span><span lang="en">Sockets</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num"><strong>0</strong></td>
+            <td><span lang="de">nur fest eingebaute Betriebsmittel, die ausdrücklich für diesen Bereich zugelassen sind, mit Schutzkleinspannung</span><span lang="en">only fixed equipment expressly approved for this zone, supplied at extra-low voltage</span></td>
+            <td><strong><span lang="de">verboten</span><span lang="en">prohibited</span></strong></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>1</strong></td>
+            <td><span lang="de">Boiler, Duschpumpen, Whirlpool-Aggregate, Leuchten — jeweils nur in zugelassener Ausführung</span><span lang="en">water heaters, shower pumps, whirlpool units, luminaires — only in approved versions</span></td>
+            <td><strong><span lang="de">verboten</span><span lang="en">prohibited</span></strong></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>2</strong></td>
+            <td><span lang="de">Leuchten, Heizgeräte, Lüfter in geeigneter Ausführung</span><span lang="en">luminaires, heaters, fans in suitable versions</span></td>
+            <td><strong><span lang="de">verboten</span><span lang="en">prohibited</span></strong></td>
+          </tr>
+          <tr>
+            <td><span lang="de"><strong>ausserhalb</strong></span><span lang="en"><strong>outside</strong></span></td>
+            <td><span lang="de">übliche Betriebsmittel</span><span lang="en">normal equipment</span></td>
+            <td><span lang="de">zulässig, mit Schutzkontakt und über FI 30 mA</span><span lang="en">permitted, with earth contact and behind a 30 mA RCD</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Die drei Kernregeln</span><span lang="en">The three core rules</span></b>
+      <ol lang="de">
+        <li><strong>Steckdosen erst ausserhalb von Bereich 2.</strong> In den Bereichen 0, 1 und 2 haben normale Steckdosen nichts verloren.</li>
+        <li><strong>Die ganze Installation im Bad über FI mit 30 mA.</strong></li>
+        <li><strong>Zusätzlicher Potentialausgleich</strong> für alle fremden leitfähigen Teile im Raum.</li>
+      </ol>
+      <ol lang="en">
+        <li><strong>Sockets only outside zone 2.</strong> Ordinary sockets have no place in zones 0, 1 and 2.</li>
+        <li><strong>The entire bathroom installation behind a 30 mA RCD.</strong></li>
+        <li><strong>Supplementary equipotential bonding</strong> for all extraneous conductive parts in the room.</li>
+      </ol>
+    </div>
+
+    <h3><span lang="de">Weitere Anforderungen</span><span lang="en">Further requirements</span></h3>
+    <ul lang="de">
+      <li><strong>Schalter</strong> gehören ebenfalls ausserhalb der Bereiche — bei fensterlosen Bädern wird der Lichtschalter oft ausserhalb der Tür gesetzt</li>
+      <li><strong>Verteilungen und Abzweigdosen</strong> sind in den Bereichen unzulässig</li>
+      <li><strong>Leitungen</strong> dürfen die Bereiche nur durchqueren, soweit sie die dortigen Betriebsmittel versorgen — keine Fremddurchführungen</li>
+      <li><strong>Speisegeräte</strong> für Kleinspannung stehen ausserhalb von Bereich 0 und 1</li>
+      <li><strong>Rasiersteckdosen</strong> mit Trenntransformator sind eine anerkannte Sonderlösung mit eigenen Anforderungen</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Switches</strong> also belong outside the zones — in windowless bathrooms the light switch is often placed outside the door</li>
+      <li><strong>Distribution boards and junction boxes</strong> are not permitted in the zones</li>
+      <li><strong>Cables</strong> may only cross the zones to the extent that they supply the equipment there — no unrelated routes</li>
+      <li><strong>Supply units</strong> for extra-low voltage are located outside zones 0 and 1</li>
+      <li><strong>Shaver sockets</strong> with an isolating transformer are a recognised special solution with their own requirements</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Zusätzlicher Potentialausgleich</span><span lang="en">Supplementary equipotential bonding</span></h2>
+
+    <p lang="de">Im Bad reicht der Schutzleiter allein nicht. Es kommt ein <strong>zusätzlicher Potentialausgleich</strong> dazu, der alle metallenen Teile im Raum leitend miteinander verbindet.</p>
+    <p lang="en">In a bathroom the protective conductor alone is not enough. <strong>Supplementary equipotential bonding</strong> is added, connecting all metal parts in the room together.</p>
+
+    <h3><span lang="de">Was verbunden wird</span><span lang="en">What is bonded</span></h3>
+    <ul lang="de">
+      <li>Metallene <strong>Wasserleitungen</strong>, kalt und warm</li>
+      <li>Metallene <strong>Abwasserleitungen</strong></li>
+      <li><strong>Heizungsrohre</strong> und Handtuchradiator</li>
+      <li>Metallene <strong>Lüftungskanäle</strong></li>
+      <li>Die <strong>Badewanne</strong>, wenn sie aus Metall ist</li>
+      <li>Die <strong>Schutzleiter</strong> aller Betriebsmittel im Raum</li>
+      <li>Leitfähige <strong>Gebäudeteile</strong>, sofern sie ein Potential einschleppen können</li>
+    </ul>
+    <ul lang="en">
+      <li>Metal <strong>water pipes</strong>, hot and cold</li>
+      <li>Metal <strong>waste pipes</strong></li>
+      <li><strong>Heating pipes</strong> and towel radiators</li>
+      <li>Metal <strong>ventilation ducts</strong></li>
+      <li>The <strong>bath tub</strong> if it is metal</li>
+      <li>The <strong>protective conductors</strong> of all equipment in the room</li>
+      <li>Conductive <strong>building parts</strong> that could import a potential</li>
+    </ul>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Der Gedanke dahinter</span><span lang="en">The idea behind it</span></b>
+      <p lang="de">Gefährlich ist nicht die Spannung an sich, sondern die <strong>Spannungsdifferenz zwischen zwei berührbaren Teilen</strong>. Wer gleichzeitig den Wasserhahn und ein defektes Gerät berührt, liegt genau in dieser Differenz. Sind beide Teile leitend verbunden, kann zwischen ihnen keine gefährliche Differenz entstehen — sie steigen im Fehlerfall gemeinsam an.</p>
+      <p lang="en">What is dangerous is not voltage as such but the <strong>difference in voltage between two touchable parts</strong>. Someone touching the tap and a faulty appliance at the same time is exactly in that difference. If both parts are bonded together, no dangerous difference can arise between them — under a fault they rise together.</p>
+    </div>
+
+    <h3><span lang="de">Ausführung</span><span lang="en">Execution</span></h3>
+    <ul lang="de">
+      <li>Verbindungen mit <strong>Rohrschellen</strong> auf blankem, sauberem Metall — Lack und Korrosion vorher entfernen</li>
+      <li>Anschlussstellen müssen <strong>zugänglich und lösbar</strong> bleiben, damit sie geprüft werden können</li>
+      <li>Kunststoffrohre unterbrechen die Leitfähigkeit; bei gemischten Installationen wird abschnittsweise überbrückt oder auf die Verbindung verzichtet, wo kein Potential eingeschleppt werden kann</li>
+      <li>Nach der Montage <strong>Durchgang messen</strong> und dokumentieren</li>
+    </ul>
+    <ul lang="en">
+      <li>Connections with <strong>pipe clamps</strong> on bare, clean metal — remove paint and corrosion first</li>
+      <li>Connection points must remain <strong>accessible and removable</strong> so they can be tested</li>
+      <li>Plastic pipes interrupt conductivity; in mixed installations, sections are bridged, or bonding is omitted where no potential can be imported</li>
+      <li>After installation, <strong>measure continuity</strong> and document it</li>
+    </ul>
+
+    <p lang="de">Die Querschnitte des zusätzlichen Potentialausgleichs sind in Thema 11 dieses Lehrjahres behandelt.</p>
+    <p lang="en">The cross-sections for supplementary bonding are covered in topic 11 of this year.</p>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Planung und typische Fehler</span><span lang="en">Planning and typical mistakes</span></h2>
+
+    <h3><span lang="de">Vorgehen bei der Planung</span><span lang="en">Planning procedure</span></h3>
+    <ol lang="de">
+      <li><strong>Bereiche einzeichnen</strong> — im Grundriss und im Schnitt, mit den Massen 2,25 m und 0,60 m</li>
+      <li><strong>Betriebsmittel platzieren</strong> und prüfen, in welchem Bereich sie liegen</li>
+      <li><strong>Schutzart</strong> je Betriebsmittel festlegen</li>
+      <li><strong>FI 30 mA</strong> für die ganze Badinstallation vorsehen</li>
+      <li><strong>Potentialausgleich</strong> planen und die Anschlussstellen festlegen</li>
+      <li>Mit dem Sanitär- und Heizungsplaner abstimmen, welche Rohre aus Metall sind</li>
+    </ol>
+    <ol lang="en">
+      <li><strong>Draw the zones</strong> — in plan and section, with the 2.25 m and 0.60 m dimensions</li>
+      <li><strong>Place the equipment</strong> and check which zone it falls in</li>
+      <li>Determine the <strong>IP rating</strong> for each item</li>
+      <li>Provide a <strong>30 mA RCD</strong> for the whole bathroom installation</li>
+      <li>Plan the <strong>bonding</strong> and fix the connection points</li>
+      <li>Coordinate with the plumbing and heating designer on which pipes are metal</li>
+    </ol>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Typische Fehler</span><span lang="en">Typical mistakes</span></b>
+      <ul lang="de">
+        <li>Steckdose neben dem Lavabo, die noch in Bereich 2 liegt</li>
+        <li>Vergessener oder nur teilweise ausgeführter Potentialausgleich</li>
+        <li>Leuchte mit zu tiefer Schutzart über der Dusche</li>
+        <li>Abzweigdose innerhalb eines Bereichs versteckt</li>
+        <li>Nachträglich eingebauter Spiegelschrank mit Steckdose in Bereich 2</li>
+        <li>Bereichsmasse vom Wannenrand statt vom Boden gerechnet</li>
+      </ul>
+      <ul lang="en">
+        <li>A socket beside the basin that still falls within zone 2</li>
+        <li>Bonding forgotten or only partly carried out</li>
+        <li>A luminaire with too low an IP rating above the shower</li>
+        <li>A junction box hidden inside a zone</li>
+        <li>A retrofitted mirror cabinet with a socket in zone 2</li>
+        <li>Zone dimensions measured from the tub rim instead of the floor</li>
+      </ul>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Umbau im Bestand</span><span lang="en">Refurbishment work</span></b>
+      <p lang="de">Bei Sanierungen trifft man oft Installationen an, die nach heutigem Stand nicht mehr zulässig wären — Steckdosen zu nah an der Wanne, kein FI, kein Potentialausgleich. Was beim Umbau berührt wird, ist nach den <strong>heute geltenden Regeln</strong> auszuführen. Was unverändert bleibt, geniesst Bestandsschutz. Wo die Grenze verläuft, entscheidet der Berufsbildner oder der Kontrolleur — im Zweifel nachfragen.</p>
+      <p lang="en">In refurbishment you often meet installations that would no longer be permitted today — sockets too close to the bath, no RCD, no bonding. Whatever is touched during the work must be brought up to <strong>today's rules</strong>. What remains unchanged is covered by existing-installation provisions. Where exactly the line runs is decided by your trainer or the inspector — ask when in doubt.</p>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Hinweis zur Quellenarbeit</span><span lang="en">Note on sources</span></b>
+      <p lang="de">Die Bereichseinteilung, die Masse und die zulässigen Betriebsmittel sind in der NIN im Kapitel über Räume mit Badewanne oder Dusche geregelt. Die Festlegungen <strong>unterscheiden sich zwischen den Ausgaben</strong> — insbesondere hat sich die Behandlung eines früher vorhandenen weiteren Bereichs geändert. <strong>Vor der Abgabe die Bereiche, Masse und Artikelnummern in der eigenen NIN-Ausgabe nachschlagen</strong> und im Text zitieren.</p>
+      <p lang="en">The zones, dimensions and permitted equipment are laid down in the NIN chapter on rooms with a bath or shower. The provisions <strong>differ between editions</strong> — in particular the treatment of a formerly existing further zone has changed. <strong>Before submitting, look up the zones, dimensions and article numbers in your own NIN edition</strong> and cite them.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Warum gilt das Badezimmer als Raum mit erhöhter Gefährdung?</span><span lang="en">Why does a bathroom count as a location with increased risk?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil Wasser, nasse Haut und barfüssiger Kontakt zum leitfähigen Boden zusammentreffen. Nasse Haut senkt den Körperwiderstand stark, der barfüssige Stand ergibt einen sehr guten Weg zur Erde. Damit wird schon eine kleine Spannung gefährlich.</p>
+        <p lang="en">Because water, wet skin and barefoot contact with a conductive floor come together. Wet skin sharply lowers body resistance and standing barefoot provides an excellent path to earth. Even a small voltage then becomes dangerous.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie weit reicht Bereich 1 nach oben?</span><span lang="en">How far up does zone 1 extend?</span></summary>
+      <div class="ans">
+        <p lang="de">Bis 2,25 m über den <strong>Boden</strong> — nicht über den Wannenrand. Das ist eine häufige Verwechslung.</p>
+        <p lang="en">To 2.25 m above the <strong>floor</strong> — not above the tub rim. This is a common confusion.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie breit ist Bereich 2?</span><span lang="en">How wide is zone 2?</span></summary>
+      <div class="ans">
+        <p lang="de">0,60 m, seitlich an Bereich 1 anschliessend und auf derselben Höhe.</p>
+        <p lang="en">0.60 m, adjoining zone 1 laterally and at the same height.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wo darf eine Steckdose im Bad montiert werden?</span><span lang="en">Where may a socket be fitted in a bathroom?</span></summary>
+      <div class="ans">
+        <p lang="de">Erst ausserhalb von Bereich 2. Sie muss einen Schutzkontakt haben und über einen FI mit 30 mA gespeist werden. In den Bereichen 0, 1 und 2 sind normale Steckdosen nicht zulässig.</p>
+        <p lang="en">Only outside zone 2. It must have an earth contact and be supplied through a 30 mA RCD. Ordinary sockets are not permitted in zones 0, 1 and 2.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welche Mindestschutzart gilt in Bereich 1?</span><span lang="en">What minimum IP rating applies in zone 1?</span></summary>
+      <div class="ans">
+        <p lang="de">IPX4 — geschützt gegen Spritzwasser aus allen Richtungen. In Bereich 0 ist es IPX7, weil dort Untertauchen möglich ist.</p>
+        <p lang="en">IPX4 — protected against splashing water from all directions. In zone 0 it is IPX7, because immersion is possible there.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was wird beim zusätzlichen Potentialausgleich verbunden?</span><span lang="en">What is connected by supplementary bonding?</span></summary>
+      <div class="ans">
+        <p lang="de">Alle fremden leitfähigen Teile im Raum: metallene Wasser-, Abwasser- und Heizungsrohre, Lüftungskanäle, eine Metallbadewanne sowie die Schutzleiter der Betriebsmittel im Raum.</p>
+        <p lang="en">All extraneous conductive parts in the room: metal water, waste and heating pipes, ventilation ducts, a metal bath tub, and the protective conductors of the equipment in the room.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welchen Zweck hat der zusätzliche Potentialausgleich?</span><span lang="en">What is the purpose of supplementary bonding?</span></summary>
+      <div class="ans">
+        <p lang="de">Er verhindert gefährliche Spannungsdifferenzen zwischen gleichzeitig berührbaren Teilen. Im Fehlerfall steigen alle verbundenen Teile gemeinsam auf dasselbe Potential, sodass zwischen ihnen keine gefährliche Spannung anliegt.</p>
+        <p lang="en">It prevents dangerous voltage differences between simultaneously touchable parts. Under a fault all bonded parts rise to the same potential together, so no dangerous voltage exists between them.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Ein Kunde wünscht eine Steckdose im Spiegelschrank über dem Lavabo. Was prüfst du?</span><span lang="en">A customer wants a socket in the mirror cabinet above the basin. What do you check?</span></summary>
+      <div class="ans">
+        <p lang="de">Ob der Einbauort ausserhalb von Bereich 2 liegt. Massgebend ist der Abstand zur Wanne oder Dusche, nicht zum Lavabo. Liegt er ausserhalb, ist die Steckdose mit Schutzkontakt und über FI 30 mA zulässig. Liegt er innerhalb, ist sie es nicht — auch nicht auf Kundenwunsch.</p>
+        <p lang="en">Whether the position lies outside zone 2. What counts is the distance from the bath or shower, not from the basin. If it is outside, a socket with an earth contact behind a 30 mA RCD is permitted. If it is inside, it is not — not even at the customer's request.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="05-ip-kennzeichnung.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>05 · <span lang="de">IP-Kennzeichnung</span><span lang="en">IP Ratings</span></b>
+  </a>
+  <a class="next" href="07-landwirtschaft.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>07 · <span lang="de">Landwirtschaft</span><span lang="en">Agricultural Premises</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 06 · Badezimmer</span><span lang="en">Learning Documentation 06 · Bathrooms</span></span>
+  <span>Yanik · Etavis · <span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span></span>
+  <span><span lang="de">Grundlagen: NIN, Kapitel Räume mit Badewanne oder Dusche · EN 60529</span><span lang="en">Basis: NIN, chapter on rooms with bath or shower · EN 60529</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

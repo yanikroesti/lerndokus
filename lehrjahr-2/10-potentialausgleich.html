@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 10 — Potentialausgleich" data-en="Learning Documentation 10 — Equipotential Bonding">Lerndokumentation 10 — Potentialausgleich</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span>
+    <span lang="de">Thema 10</span><span lang="en">Topic 10</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">10</div>
+    <h1><span lang="de">Potential&shy;ausgleich</span><span lang="en">Equipotential<br>Bonding</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Aufbau · Material · Dimension · Zeichnung · Erdung</span>
+    <span lang="en">Design · material · sizing · drawing · earthing</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">10 von 12</span><span lang="en">10 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Potentialausgleichsschiene">
+        <rect x="40" y="60" width="140" height="26" rx="4" fill="#C9C2B4" stroke="#171614" stroke-width="2.4"/>
+        <g fill="#171614">
+          <circle cx="62" cy="73" r="4"/><circle cx="90" cy="73" r="4"/>
+          <circle cx="118" cy="73" r="4"/><circle cx="146" cy="73" r="4"/>
+        </g>
+        <path d="M62 60 v-22 M90 60 v-30 M118 60 v-26 M146 60 v-34" stroke="#3F6B43" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M110 86 v22" stroke="#3F6B43" stroke-width="4" stroke-linecap="round"/>
+        <path d="M86 108 h48 M94 118 h32 M102 128 h16" stroke="#171614" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="176" cy="44" r="3" fill="#171614"/>
+        <circle cx="196" cy="44" r="3" fill="#171614"/>
+        <path d="M178 54 q 9 6 18 0" fill="none" stroke="#171614" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Zweck</span><span lang="en">Purpose</span></h2>
+
+    <p class="lead" lang="de">Der Potentialausgleich verbindet alle leitfähigen Teile eines Gebäudes so miteinander, dass zwischen ihnen <strong>keine gefährliche Spannungsdifferenz</strong> entstehen kann. Er ist damit eine der grundlegendsten Schutzmassnahmen überhaupt.</p>
+    <p class="lead" lang="en">Equipotential bonding connects all conductive parts of a building so that <strong>no dangerous voltage difference</strong> can arise between them. It is one of the most fundamental protective measures there is.</p>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Der Kerngedanke</span><span lang="en">The core idea</span></b>
+      <p lang="de">Gefährlich ist nicht die Spannung gegen Erde, sondern die <strong>Differenz zwischen zwei Punkten, die ein Mensch gleichzeitig berühren kann</strong>. Sind alle berührbaren Teile leitend verbunden, steigen sie im Fehlerfall gemeinsam an — zwischen ihnen bleibt die Differenz null, und es fliesst kein Strom durch den Körper.</p>
+      <p lang="en">What is dangerous is not the voltage to earth but the <strong>difference between two points a person can touch at the same time</strong>. If all touchable parts are bonded together, under a fault they rise together — the difference between them stays zero and no current flows through the body.</p>
+    </div>
+
+    <h3><span lang="de">Zwei Ebenen</span><span lang="en">Two levels</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Ebene</span><span lang="en">Level</span></th>
+            <th><span lang="de">Umfang</span><span lang="en">Scope</span></th>
+            <th><span lang="de">Ort</span><span lang="en">Location</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Hauptpotentialausgleich</span><span lang="en">Main bonding</span></strong></td>
+            <td><span lang="de">alle grossen leitfähigen Systeme, die ins Gebäude führen</span><span lang="en">all major conductive systems entering the building</span></td>
+            <td><span lang="de">einmal pro Gebäude, beim Hausanschluss</span><span lang="en">once per building, at the service entrance</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Zusätzlicher Potentialausgleich</span><span lang="en">Supplementary bonding</span></strong></td>
+            <td><span lang="de">leitfähige Teile in einem einzelnen Raum</span><span lang="en">conductive parts within one room</span></td>
+            <td><span lang="de">in Räumen mit erhöhter Gefährdung — siehe Thema 11</span><span lang="en">in locations with increased risk — see topic 11</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Aufbau des Hauptpotentialausgleichs</span><span lang="en">Layout of the main bonding</span></h2>
+
+    <figure>
+      <svg viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hauptpotentialausgleichsschiene mit allen Anschlüssen">
+        <defs>
+          <style>
+            .bar{fill:#C9C2B4;stroke:#171614;stroke-width:2.4}
+            .pe{fill:none;stroke:#3F6B43;stroke-width:3.4;stroke-linecap:round}
+            .sys{fill:none;stroke:#48433B;stroke-width:3;stroke-linecap:round}
+            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
+            .bx{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .dot{fill:#171614}
+          </style>
+        </defs>
+
+        <!-- Schiene -->
+        <rect class="bar" x="250" y="232" width="260" height="30" rx="4"/>
+        <g class="dot">
+          <circle cx="276" cy="247" r="5"/><circle cx="310" cy="247" r="5"/>
+          <circle cx="344" cy="247" r="5"/><circle cx="378" cy="247" r="5"/>
+          <circle cx="412" cy="247" r="5"/><circle cx="446" cy="247" r="5"/>
+          <circle cx="480" cy="247" r="5"/>
+        </g>
+        <text class="lgs" x="380" y="286" text-anchor="middle"><tspan lang="de">HAUPTPOTENTIALAUSGLEICHSSCHIENE</tspan><tspan lang="en">MAIN EARTHING TERMINAL</tspan></text>
+
+        <!-- Verbraucher oben -->
+        <g>
+          <rect class="bx" x="240" y="60" width="90" height="40" rx="3"/>
+          <text class="lg" x="285" y="85" text-anchor="middle"><tspan lang="de">Verteilung</tspan><tspan lang="en">Board</tspan></text>
+          <path class="pe" d="M276 100 V232"/>
+          <text class="lgs" x="200" y="170" text-anchor="end"><tspan lang="de">HAUPTSCHUTZLEITER</tspan><tspan lang="en">MAIN PE</tspan></text>
+          <path class="sys" d="M204 166 H272" stroke="#7D7669" stroke-width="1.2" stroke-dasharray="4 4"/>
+        </g>
+
+        <g>
+          <path class="sys" d="M310 232 V120 H210" stroke="#1D5872"/>
+          <text class="lg" x="200" y="124" text-anchor="end"><tspan lang="de">Wasserleitung</tspan><tspan lang="en">Water pipe</tspan></text>
+        </g>
+        <g>
+          <path class="sys" d="M344 232 V86 H210" stroke="#D8A72A"/>
+          <text class="lg" x="200" y="90" text-anchor="end"><tspan lang="de">Gasleitung</tspan><tspan lang="en">Gas pipe</tspan></text>
+        </g>
+        <g>
+          <path class="sys" d="M378 232 V52 H210" stroke="#B8402A"/>
+          <text class="lg" x="200" y="56" text-anchor="end"><tspan lang="de">Heizung</tspan><tspan lang="en">Heating</tspan></text>
+        </g>
+        <g>
+          <path class="sys" d="M412 232 V52 H556"/>
+          <text class="lg" x="566" y="56"><tspan lang="de">Lüftung, Aufzug</tspan><tspan lang="en">Ventilation, lift</tspan></text>
+        </g>
+        <g>
+          <path class="sys" d="M446 232 V86 H556"/>
+          <text class="lg" x="566" y="90"><tspan lang="de">Antenne, Telekom</tspan><tspan lang="en">Aerial, telecoms</tspan></text>
+        </g>
+        <g>
+          <path class="sys" d="M480 232 V120 H556"/>
+          <text class="lg" x="566" y="124"><tspan lang="de">Blitzschutz</tspan><tspan lang="en">Lightning protection</tspan></text>
+        </g>
+
+        <!-- Erdungsleiter nach unten -->
+        <path class="pe" d="M380 262 V330" stroke-width="5"/>
+        <text class="lg" x="396" y="304"><tspan lang="de">Erdungsleiter</tspan><tspan lang="en">Earthing conductor</tspan></text>
+
+        <!-- Erdreich -->
+        <path d="M120 340 H640" stroke="#48433B" stroke-width="2.4"/>
+        <g stroke="#7D7669" stroke-width="1" fill="none">
+          <path d="M140 356 l24 -12 M180 364 l24 -12 M220 372 l24 -12 M260 380 l24 -12 M300 388 l24 -12 M340 396 l24 -12"/>
+        </g>
+        <text class="lgs" x="124" y="334"><tspan lang="de">ERDREICH</tspan><tspan lang="en">GROUND</tspan></text>
+
+        <!-- Fundamenterder -->
+        <path d="M200 400 H560" stroke="#3F6B43" stroke-width="6" stroke-linecap="round"/>
+        <path class="pe" d="M380 330 V400" stroke-width="5"/>
+        <text class="lg" x="380" y="424" text-anchor="middle"><tspan lang="de">Fundamenterder</tspan><tspan lang="en">Foundation earth electrode</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Hauptpotentialausgleichsschiene als zentraler Sternpunkt. Alle leitfähigen Systeme laufen hier zusammen und sind über den Erdungsleiter mit dem Fundamenterder verbunden.</span>
+        <span lang="en"> — The main earthing terminal as the central star point. All conductive systems come together here and are connected to the foundation electrode via the earthing conductor.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Was angeschlossen wird</span><span lang="en">What is connected</span></h3>
+    <ul lang="de">
+      <li><strong>Hauptschutzleiter</strong> der elektrischen Installation</li>
+      <li><strong>Erdungsleiter</strong> zum Fundamenterder oder zur Erdungsanlage</li>
+      <li>Metallene <strong>Wasserleitung</strong> beim Eintritt ins Gebäude</li>
+      <li>Metallene <strong>Gasleitung</strong> beim Eintritt, nach der Hauptabsperrung</li>
+      <li><strong>Heizungs-</strong> und Fernwärmeleitungen</li>
+      <li>Metallene <strong>Lüftungskanäle</strong>, Aufzugsführungen und Tragkonstruktionen</li>
+      <li><strong>Antennen-</strong> und Telekommunikationsanlagen</li>
+      <li><strong>Blitzschutzanlage</strong>, sofern vorhanden</li>
+      <li><strong>Armierung</strong> des Gebäudes, wo als Erder genutzt</li>
+    </ul>
+    <ul lang="en">
+      <li>The <strong>main protective conductor</strong> of the electrical installation</li>
+      <li>The <strong>earthing conductor</strong> to the foundation electrode or earthing system</li>
+      <li>Metal <strong>water pipe</strong> where it enters the building</li>
+      <li>Metal <strong>gas pipe</strong> at entry, after the main isolating valve</li>
+      <li><strong>Heating</strong> and district heating pipes</li>
+      <li>Metal <strong>ventilation ducts</strong>, lift guides and supporting structures</li>
+      <li><strong>Aerial</strong> and telecommunications systems</li>
+      <li>The <strong>lightning protection system</strong> where present</li>
+      <li>The building <strong>reinforcement</strong> where used as an electrode</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Dimensionierung</span><span lang="en">Sizing</span></h2>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Leiter</span><span lang="en">Conductor</span></th>
+            <th><span lang="de">Regel</span><span lang="en">Rule</span></th>
+            <th><span lang="de">Grenzwerte</span><span lang="en">Limits</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Hauptpotential&shy;ausgleichsleiter</span><span lang="en">Main bonding conductor</span></strong></td>
+            <td><span lang="de">mindestens der <strong>halbe Querschnitt</strong> des grössten Schutzleiters der Anlage</span><span lang="en">at least <strong>half the cross-section</strong> of the largest protective conductor</span></td>
+            <td><span lang="de">mindestens 6 mm² Cu, in der Regel höchstens 16 mm² Cu</span><span lang="en">at least 6 mm² Cu, generally not more than 16 mm² Cu</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Erdungsleiter</span><span lang="en">Earthing conductor</span></strong></td>
+            <td><span lang="de">wie der Hauptschutzleiter</span><span lang="en">as the main protective conductor</span></td>
+            <td><span lang="de">nicht grösser als 50 mm² Cu erforderlich</span><span lang="en">no more than 50 mm² Cu required</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="formula">A<sub>HPA</sub> ≥ 0,5 × A<sub>PE max</sub> &nbsp;&nbsp;·&nbsp;&nbsp; <span lang="de">min.</span><span lang="en">min.</span> 6 mm² Cu</div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Wichtig zu den Zahlen</span><span lang="en">Important note on the figures</span></b>
+      <p lang="de">Die genauen Querschnitte, die Obergrenzen und die Sonderfälle sind in der NIN tabelliert und haben sich <strong>zwischen den Ausgaben verändert</strong>. Die hier genannten Werte sind Orientierung. <strong>Vor der Abgabe die massgebende Tabelle in der eigenen NIN-Ausgabe heranziehen</strong> und die Artikelnummer zitieren.</p>
+      <p lang="en">The exact cross-sections, upper limits and special cases are tabulated in the NIN and have <strong>changed between editions</strong>. The values given here are for orientation. <strong>Before submitting, use the governing table in your own NIN edition</strong> and cite the article number.</p>
+    </div>
+
+    <h3><span lang="de">Material</span><span lang="en">Material</span></h3>
+    <ul lang="de">
+      <li><strong>Kupfer</strong>, isoliert in grün-gelb oder blank</li>
+      <li>Bei erdverlegten Teilen und im Freien: <strong>korrosionsbeständige</strong> Ausführung, verzinkter Stahl oder Edelstahl</li>
+      <li><strong>Rohrschellen</strong> aus Material, das mit dem Rohr verträglich ist — sonst entsteht Kontaktkorrosion</li>
+      <li>Verbindungen <strong>lösbar</strong> ausführen, damit sie zur Messung getrennt werden können</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Copper</strong>, insulated in green-yellow or bare</li>
+      <li>For buried parts and outdoors: <strong>corrosion-resistant</strong> versions, galvanised or stainless steel</li>
+      <li><strong>Pipe clamps</strong> of a material compatible with the pipe — otherwise contact corrosion occurs</li>
+      <li>Make connections <strong>removable</strong> so they can be separated for measurement</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Der Erder</span><span lang="en">The earth electrode</span></h2>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Art</span><span lang="en">Type</span></th>
+            <th><span lang="de">Ausführung</span><span lang="en">Execution</span></th>
+            <th><span lang="de">Bemerkung</span><span lang="en">Note</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Fundamenterder</span><span lang="en">Foundation electrode</span></strong></td>
+            <td><span lang="de">Band oder Rundstahl, im Fundamentbeton eingelegt</span><span lang="en">strip or round steel, cast into the foundation concrete</span></td>
+            <td><span lang="de">Standard im Neubau, muss <strong>vor dem Betonieren</strong> eingelegt werden</span><span lang="en">standard in new builds, must be laid <strong>before pouring</strong></span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Ringerder</span><span lang="en">Ring electrode</span></strong></td>
+            <td><span lang="de">um das Gebäude im Erdreich verlegt</span><span lang="en">buried around the building</span></td>
+            <td><span lang="de">bei Blitzschutzanlagen üblich</span><span lang="en">common with lightning protection</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Tiefenerder</span><span lang="en">Rod electrode</span></strong></td>
+            <td><span lang="de">Stab senkrecht ins Erdreich getrieben</span><span lang="en">rod driven vertically into the ground</span></td>
+            <td><span lang="de">Nachrüstung, wenn kein Fundamenterder vorhanden</span><span lang="en">retrofit where no foundation electrode exists</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Der Fundamenterder ist Bauherrensache — und Terminsache</span><span lang="en">The foundation electrode is the client's job — and a matter of timing</span></b>
+      <p lang="de">Er muss eingelegt werden, <strong>bevor der Beton kommt</strong>. Wird er vergessen, ist die Nachrüstung aufwendig und teuer. Auf der Baustelle lohnt es sich deshalb, den Termin aktiv im Auge zu behalten und die Anschlussfahne herausschauen zu lassen und zu markieren.</p>
+      <p lang="en">It has to be laid <strong>before the concrete arrives</strong>. If it is forgotten, retrofitting is laborious and expensive. On site it is therefore worth actively watching the schedule and making sure the connection tail sticks out and is marked.</p>
+    </div>
+
+    <h3><span lang="de">Erdungswiderstand</span><span lang="en">Earth resistance</span></h3>
+    <p lang="de">Der Erdungswiderstand hängt von Bodenart, Feuchtigkeit und der Grösse des Erders ab. Er wird gemessen und dokumentiert. Trockener, sandiger oder felsiger Boden ergibt hohe Werte, feuchter Lehm niedrige.</p>
+    <p lang="en">Earth resistance depends on soil type, moisture and the size of the electrode. It is measured and documented. Dry, sandy or rocky ground gives high values, moist clay low ones.</p>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Ausführung und Prüfung</span><span lang="en">Execution and testing</span></h2>
+
+    <ul lang="de">
+      <li><strong>Schiene zugänglich</strong> montieren — sie muss für Kontrollen erreichbar bleiben, nicht hinter Einbauten verschwinden</li>
+      <li><strong>Jede Verbindung einzeln</strong> auf die Schiene führen; keine Ketten von Klemme zu Klemme</li>
+      <li><strong>Kontaktflächen blank</strong> machen — Lack, Rost und Zunder entfernen</li>
+      <li><strong>Rohrschellen</strong> fest anziehen, auf verträgliche Materialpaarung achten</li>
+      <li><strong>Beschriften</strong> — jede Ader mit ihrem Ziel</li>
+      <li><strong>Durchgang messen</strong> und dokumentieren, jede Verbindung einzeln</li>
+      <li>Bei Umbauten <strong>nachführen</strong> — neue Metallsysteme gehören ebenfalls angeschlossen</li>
+    </ul>
+    <ul lang="en">
+      <li>Mount the <strong>terminal accessibly</strong> — it must stay reachable for inspections, not disappear behind fittings</li>
+      <li>Take <strong>every connection separately</strong> to the terminal; no daisy-chaining from clamp to clamp</li>
+      <li>Make <strong>contact surfaces bare</strong> — remove paint, rust and scale</li>
+      <li>Tighten <strong>pipe clamps</strong> firmly and use compatible material pairings</li>
+      <li><strong>Label</strong> — each conductor with its destination</li>
+      <li><strong>Measure continuity</strong> and document it, every connection individually</li>
+      <li>Keep it <strong>up to date</strong> during refurbishment — new metal systems also need connecting</li>
+    </ul>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Warum keine Kette?</span><span lang="en">Why no daisy-chain?</span></b>
+      <p lang="de">Wird ein Teil aus einer Kette herausgenommen — etwa ein Rohrstück beim Umbau — sind alle dahinterliegenden Verbindungen unterbrochen, ohne dass es jemand merkt. Beim Sternpunkt bleibt jede Verbindung unabhängig bestehen.</p>
+      <p lang="en">If one element is removed from a chain — a section of pipe during refurbishment, say — every connection behind it is broken without anyone noticing. With a star point each connection stays independent.</p>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Kunststoffrohre verändern die Lage</span><span lang="en">Plastic pipes change the picture</span></b>
+      <p lang="de">Werden metallene Wasserleitungen abschnittsweise durch Kunststoff ersetzt, ist die Leitfähigkeit unterbrochen. Ein Rohrabschnitt kann dadurch vom Potentialausgleich abgehängt sein, obwohl die Schelle noch dran ist. Bei jedem Sanitärumbau ist der Potentialausgleich deshalb <strong>neu zu beurteilen und nachzumessen</strong>.</p>
+      <p lang="en">When metal water pipes are partly replaced by plastic, conductivity is interrupted. A section of pipe can end up disconnected from the bonding even though the clamp is still fitted. After every plumbing alteration the bonding must therefore be <strong>reassessed and re-measured</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Welchen Zweck hat der Potentialausgleich?</span><span lang="en">What is the purpose of equipotential bonding?</span></summary>
+      <div class="ans">
+        <p lang="de">Er verhindert gefährliche Spannungsdifferenzen zwischen gleichzeitig berührbaren leitfähigen Teilen. Im Fehlerfall steigen alle verbundenen Teile gemeinsam auf dasselbe Potential, sodass durch den Körper kein Strom fliesst.</p>
+        <p lang="en">It prevents dangerous voltage differences between simultaneously touchable conductive parts. Under a fault all bonded parts rise to the same potential together, so no current flows through the body.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was wird an die Hauptpotentialausgleichsschiene angeschlossen?</span><span lang="en">What is connected to the main earthing terminal?</span></summary>
+      <div class="ans">
+        <p lang="de">Der Hauptschutzleiter, der Erdungsleiter zum Erder, metallene Wasser-, Gas- und Heizungsleitungen beim Gebäudeeintritt, Lüftungskanäle, Aufzugskonstruktionen, Antennen- und Telekommunikationsanlagen, die Blitzschutzanlage sowie die Gebäudearmierung, wo sie als Erder dient.</p>
+        <p lang="en">The main protective conductor, the earthing conductor to the electrode, metal water, gas and heating pipes at the point of entry, ventilation ducts, lift structures, aerial and telecoms systems, the lightning protection system, and the building reinforcement where it serves as an electrode.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie wird der Hauptpotentialausgleichsleiter dimensioniert?</span><span lang="en">How is the main bonding conductor sized?</span></summary>
+      <div class="ans">
+        <p lang="de">Mindestens der halbe Querschnitt des grössten Schutzleiters der Anlage, aber nicht weniger als 6 mm² Kupfer und in der Regel nicht mehr als 16 mm². Die massgebende Tabelle steht in der NIN.</p>
+        <p lang="en">At least half the cross-section of the largest protective conductor in the installation, but not less than 6 mm² copper and generally not more than 16 mm². The governing table is in the NIN.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum wird jede Verbindung einzeln auf die Schiene geführt?</span><span lang="en">Why is each connection taken separately to the terminal?</span></summary>
+      <div class="ans">
+        <p lang="de">Damit das Entfernen eines einzelnen Teils nicht alle dahinterliegenden Verbindungen unterbricht. Bei einer Kette merkt niemand, dass hinter der entfernten Stelle nichts mehr verbunden ist.</p>
+        <p lang="en">So that removing one element does not break every connection behind it. In a chain, nobody notices that nothing beyond the removed point is connected any more.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wann muss der Fundamenterder eingelegt werden?</span><span lang="en">When must the foundation electrode be laid?</span></summary>
+      <div class="ans">
+        <p lang="de">Vor dem Betonieren des Fundaments. Danach ist er nicht mehr einzubringen; eine Nachrüstung mit Tiefen- oder Ringerder ist aufwendig und teuer.</p>
+        <p lang="en">Before the foundation is poured. Afterwards it can no longer be installed; retrofitting with a rod or ring electrode is laborious and expensive.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was passiert mit dem Potentialausgleich, wenn Wasserleitungen durch Kunststoff ersetzt werden?</span><span lang="en">What happens to the bonding when water pipes are replaced with plastic?</span></summary>
+      <div class="ans">
+        <p lang="de">Die leitende Verbindung ist unterbrochen. Ein Metallabschnitt hinter dem Kunststoffstück ist vom Potentialausgleich abgehängt, obwohl die Schelle noch montiert ist. Nach jedem Sanitärumbau muss der Potentialausgleich neu beurteilt und nachgemessen werden.</p>
+        <p lang="en">The conductive path is interrupted. A metal section beyond the plastic piece is disconnected from the bonding even though the clamp is still fitted. After every plumbing alteration the bonding must be reassessed and re-measured.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum müssen die Verbindungen lösbar und zugänglich sein?</span><span lang="en">Why must the connections be removable and accessible?</span></summary>
+      <div class="ans">
+        <p lang="de">Damit sie bei der Kontrolle einzeln getrennt und gemessen werden können. Eine eingemauerte oder verschweisste Verbindung lässt sich nicht mehr prüfen — und eine korrodierte Klemme sieht aus wie eine Verbindung, ist aber keine.</p>
+        <p lang="en">So they can be separated and measured individually during inspection. A walled-in or welded connection can no longer be tested — and a corroded clamp looks like a connection but is not one.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Worauf achtest du bei der Materialwahl der Rohrschellen?</span><span lang="en">What do you watch for when choosing pipe clamps?</span></summary>
+      <div class="ans">
+        <p lang="de">Auf eine verträgliche Materialpaarung mit dem Rohr. Unverträgliche Metalle bilden ein galvanisches Element und die Verbindung korrodiert — besonders in feuchter Umgebung. Zusätzlich muss die Kontaktfläche blank sein, also frei von Lack und Rost.</p>
+        <p lang="en">A material pairing compatible with the pipe. Incompatible metals form a galvanic cell and the connection corrodes — especially in damp surroundings. The contact surface must also be bare, free of paint and rust.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="09-baustellen.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>09 · <span lang="de">Baustellen</span><span lang="en">Construction Sites</span></b>
+  </a>
+  <a class="next" href="11-zusaetzlicher-potentialausgleich.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>11 · <span lang="de">Zusätzlicher Potentialausgleich</span><span lang="en">Supplementary Bonding</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 10 · Potentialausgleich</span><span lang="en">Learning Documentation 10 · Equipotential Bonding</span></span>
+  <span>Yanik · Etavis · <span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span></span>
+  <span><span lang="de">Grundlagen: NIN, Kapitel Erdung und Potentialausgleich</span><span lang="en">Basis: NIN, chapter on earthing and bonding</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 09 — Baustellen und Bauprovisorien" data-en="Learning Documentation 09 — Construction Sites">Lerndokumentation 09 — Baustellen und Bauprovisorien</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span>
+    <span lang="de">Thema 09</span><span lang="en">Topic 09</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">09</div>
+    <h1><span lang="de">Baustellen und<br>Bauprovisorien</span><span lang="en">Construction<br>Sites</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Vorschriften · FI-Schutz · IP-Schutz · Baustromverteiler · Prüfung</span>
+    <span lang="en">Rules · RCD protection · IP protection · site distribution · testing</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">09 von 12</span><span lang="en">09 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Baustromverteiler">
+        <rect x="62" y="30" width="96" height="90" rx="6" fill="#D8A72A" stroke="#171614" stroke-width="2.4"/>
+        <rect x="74" y="44" width="72" height="20" rx="3" fill="#EFEAE0" stroke="#171614" stroke-width="1.8"/>
+        <circle cx="88" cy="80" r="8" fill="#1D5872" stroke="#153F52" stroke-width="1.8"/>
+        <circle cx="110" cy="80" r="8" fill="#B8402A" stroke="#8A2F1E" stroke-width="1.8"/>
+        <circle cx="132" cy="80" r="8" fill="#1D5872" stroke="#153F52" stroke-width="1.8"/>
+        <circle cx="92" cy="100" r="2.6" fill="#171614"/>
+        <circle cx="128" cy="100" r="2.6" fill="#171614"/>
+        <path d="M96 110 q 14 7 28 0" fill="none" stroke="#171614" stroke-width="2" stroke-linecap="round"/>
+        <path d="M74 120 v16 M146 120 v16" stroke="#171614" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M158 96 q 26 4 34 22" fill="none" stroke="#26241F" stroke-width="5" stroke-linecap="round"/>
+        <path d="M46 24 h130" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Warum die Baustelle Sonderregeln braucht</span><span lang="en">Why sites need special rules</span></h2>
+
+    <p class="lead" lang="de">Die Baustelle ist die härteste Umgebung, in der eine elektrische Installation arbeiten muss. Alles, was in einer fertigen Anlage geschützt und fest ist, ist hier <strong>provisorisch, beweglich und im Weg</strong>.</p>
+    <p class="lead" lang="en">A construction site is the harshest environment an electrical installation has to work in. Everything that is protected and fixed in a finished installation is here <strong>temporary, movable and in the way</strong>.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Erschwernis</span><span lang="en">Aggravating factor</span></th>
+            <th><span lang="de">Folge</span><span lang="en">Consequence</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span lang="de">Wetter, Nässe, Schlamm</span><span lang="en">weather, wet, mud</span></td><td><span lang="de">hohe Schutzart, erhöhte Gefährdung</span><span lang="en">high IP rating, increased risk</span></td></tr>
+          <tr><td><span lang="de">Kabel am Boden, befahren und geknickt</span><span lang="en">cables on the ground, driven over and kinked</span></td><td><span lang="de">robuste Leitungstypen, FI-Schutz</span><span lang="en">robust cable types, RCD protection</span></td></tr>
+          <tr><td><span lang="de">Ständige Veränderung</span><span lang="en">constant change</span></td><td><span lang="de">Anlage wird laufend umgebaut, häufige Prüfung nötig</span><span lang="en">the installation is continually altered, frequent testing required</span></td></tr>
+          <tr><td><span lang="de">Viele Gewerke, wechselnde Personen</span><span lang="en">many trades, changing people</span></td><td><span lang="de">nicht alle sind Elektrofachleute — Bedienung muss robust sein</span><span lang="en">not all are electricians — operation must be foolproof</span></td></tr>
+          <tr><td><span lang="de">Leitfähige Umgebung</span><span lang="en">conductive surroundings</span></td><td><span lang="de">Armierung, Gerüst, feuchter Beton — guter Weg zur Erde</span><span lang="en">reinforcement, scaffolding, damp concrete — a good path to earth</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Der Kernsatz</span><span lang="en">The core statement</span></b>
+      <p lang="de">Auf der Baustelle steht man auf feuchtem Beton, hält ein Handwerkzeug und berührt Armierung oder Gerüst. Der Körper ist damit <strong>bestmöglich mit der Erde verbunden</strong>. Genau deshalb ist der FI-Schutz hier nicht eine Massnahme unter vielen, sondern <strong>die</strong> Massnahme.</p>
+      <p lang="en">On a site you stand on damp concrete, hold a power tool and touch reinforcement or scaffolding. The body is therefore <strong>as well connected to earth as it can be</strong>. That is precisely why RCD protection here is not one measure among many but <strong>the</strong> measure.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Der Baustromverteiler</span><span lang="en">The site distribution board</span></h2>
+
+    <p lang="de">Die Baustelle wird über eine <strong>Baustromverteilung</strong> gespeist — ein transportables, robustes Gehäuse, das alle Schutzeinrichtungen und Steckvorrichtungen enthält.</p>
+    <p lang="en">A site is supplied through a <strong>site distribution assembly</strong> — a transportable, robust enclosure containing all protective devices and socket outlets.</p>
+
+    <h3><span lang="de">Merkmale</span><span lang="en">Features</span></h3>
+    <ul lang="de">
+      <li><strong>Robustes Gehäuse</strong>, oft in Signalfarbe, mit Schutzart mindestens IP44 und hoher Schlagfestigkeit</li>
+      <li><strong>Standfest oder aufhängbar</strong>, nie einfach in den Schlamm gestellt</li>
+      <li><strong>CEE-Steckvorrichtungen</strong> für Maschinen, T13/T23 für Handgeräte</li>
+      <li><strong>FI-Schutz</strong> für alle Steckdosenstromkreise</li>
+      <li><strong>Hauptschalter</strong> zum allpoligen Freischalten</li>
+      <li><strong>Prüfplakette</strong> mit Datum der letzten Kontrolle</li>
+      <li>Abdeckungen und Klappdeckel <strong>vollständig vorhanden</strong></li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Robust enclosure</strong>, often in a signal colour, IP44 or better and highly impact-resistant</li>
+      <li><strong>Free-standing or hangable</strong>, never simply set down in the mud</li>
+      <li><strong>CEE outlets</strong> for machines, T13/T23 for hand tools</li>
+      <li><strong>RCD protection</strong> for all socket circuits</li>
+      <li><strong>Main switch</strong> for all-pole isolation</li>
+      <li><strong>Inspection label</strong> with the date of the last check</li>
+      <li>Covers and hinged lids <strong>all present</strong></li>
+    </ul>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Anschluss und Zuständigkeit</span><span lang="en">Connection and responsibility</span></b>
+      <p lang="de">Der Anschluss der Baustromverteilung an das Netz und die Anmeldung des Bauprovisoriums sind Sache der <strong>berechtigten Fachperson</strong>. Die Anlage wird vor der Inbetriebnahme geprüft und dokumentiert. Als Lernender arbeitet man daran im Auftrag und unter Aufsicht.</p>
+      <p lang="en">Connecting the site supply to the network and registering the temporary installation are matters for the <strong>authorised qualified person</strong>. The installation is tested and documented before being put into service. As an apprentice you work on it when instructed and supervised.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">FI-Schutz und Schutzmassnahmen</span><span lang="en">RCD protection and protective measures</span></h2>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Massnahme</span><span lang="en">Measure</span></th>
+            <th><span lang="de">Anwendung</span><span lang="en">Application</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>FI 30 mA</strong></td>
+            <td><span lang="de">alle Steckdosenstromkreise für Handgeräte und Kleinmaschinen</span><span lang="en">all socket circuits for hand tools and small machines</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Schutzkleinspannung SELV</span><span lang="en">Extra-low voltage SELV</span></strong></td>
+            <td><span lang="de">Handleuchten und Werkzeuge in engen, leitfähigen Räumen — Behälter, Kessel, Schacht</span><span lang="en">hand lamps and tools in confined conductive spaces — tanks, boilers, shafts</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Schutztrennung</span><span lang="en">Electrical separation</span></strong></td>
+            <td><span lang="de">Trenntransformator für einen einzelnen Verbraucher</span><span lang="en">isolating transformer for a single load</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Potentialausgleich</span><span lang="en">Bonding</span></strong></td>
+            <td><span lang="de">Gerüst, Kran, Armierung und leitfähige Bauteile einbeziehen</span><span lang="en">include scaffolding, cranes, reinforcement and conductive building parts</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Enge leitfähige Räume</span><span lang="en">Confined conductive spaces</span></b>
+      <p lang="de">In einem Metallbehälter, einem Kessel oder einem engen Schacht ist der Körper rundherum von leitfähigem Material umgeben — Ausweichen ist unmöglich. Hier genügt der FI nicht mehr. Es wird mit <strong>Schutzkleinspannung</strong> gearbeitet, und die Speisequelle steht <strong>ausserhalb</strong> des Behälters. Zusätzlich ist eine Aufsichtsperson ausserhalb erforderlich.</p>
+      <p lang="en">Inside a metal tank, a boiler or a narrow shaft the body is surrounded by conductive material on all sides — there is no way to move clear. An RCD is no longer sufficient here. Work is done at <strong>extra-low voltage</strong> and the supply unit stands <strong>outside</strong> the vessel. A person keeping watch outside is also required.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Leitungen und Betriebsmittel</span><span lang="en">Cables and equipment</span></h2>
+
+    <h3><span lang="de">Leitungstypen</span><span lang="en">Cable types</span></h3>
+    <p lang="de">Auf der Baustelle werden <strong>schwere Gummischlauchleitungen</strong> verwendet. Sie halten Zug, Knicken, Kälte, UV und das Überfahren aus. Leichte PVC-Leitungen und Haushaltverlängerungen haben auf der Baustelle nichts verloren.</p>
+    <p lang="en">On site, <strong>heavy rubber-sheathed flexible cables</strong> are used. They withstand tension, kinking, cold, UV and being driven over. Light PVC cords and domestic extension leads have no place on a construction site.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th><span lang="de">Typ</span><span lang="en">Type</span></th><th><span lang="de">Eignung</span><span lang="en">Suitability</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">H07RN-F</td><td><span lang="de">schwere Gummischlauchleitung — der Standard auf der Baustelle</span><span lang="en">heavy rubber flexible cable — the site standard</span></td></tr>
+          <tr><td class="num">H05VV-F</td><td><span lang="de">leichte PVC-Schlauchleitung — <strong>nicht</strong> für die Baustelle</span><span lang="en">light PVC flexible cord — <strong>not</strong> for site use</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Regeln für die Kabelführung</span><span lang="en">Rules for cable routing</span></h3>
+    <ul lang="de">
+      <li><strong>Kabeltrommeln vollständig abrollen</strong> — aufgerollt staut sich die Wärme und die Isolation wird geschädigt</li>
+      <li>Trommeln mit <strong>thermischem Überlastschutz</strong> verwenden</li>
+      <li><strong>Nicht über Verkehrswege</strong> legen; wo unvermeidbar, mit Kabelbrücken schützen oder hochhängen</li>
+      <li><strong>Nicht an scharfen Kanten</strong> ziehen oder über Armierungseisen führen</li>
+      <li><strong>Steckverbindungen aus dem Wasser</strong> halten — nie in Pfützen liegen lassen</li>
+      <li><strong>Zugentlastungen</strong> intakt; nie am Kabel statt am Stecker ziehen</li>
+      <li><strong>Beschädigte Leitungen ersetzen</strong>, nicht mit Klebeband flicken</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Unroll cable drums completely</strong> — coiled, heat builds up and damages the insulation</li>
+      <li>Use drums with <strong>thermal overload protection</strong></li>
+      <li><strong>Not across walkways</strong>; where unavoidable, protect with cable ramps or suspend them</li>
+      <li><strong>Not over sharp edges</strong> or across reinforcement bars</li>
+      <li>Keep <strong>plug connections out of water</strong> — never leave them lying in puddles</li>
+      <li><strong>Strain reliefs</strong> intact; never pull on the cable instead of the plug</li>
+      <li><strong>Replace damaged cables</strong> rather than patching them with tape</li>
+    </ul>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Warum die Kabeltrommel wirklich abgerollt gehört</span><span lang="en">Why a cable drum really must be unrolled</span></b>
+      <p lang="de">Eine aufgerollte Trommel hat zwei Probleme gleichzeitig: Die inneren Windungen können ihre Wärme nicht abgeben, und die Wicklung wirkt als Spule. Bei voller Last erreicht die Isolation innert kurzer Zeit Temperaturen, die sie dauerhaft schädigen — der Schaden bleibt unsichtbar, bis es später an dieser Stelle zum Fehler kommt.</p>
+      <p lang="en">A coiled drum has two problems at once: the inner turns cannot release their heat, and the winding acts as a coil. At full load the insulation reaches temperatures within a short time that damage it permanently — the damage stays invisible until a fault develops at that point later.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Prüfung und Betrieb</span><span lang="en">Testing and operation</span></h2>
+
+    <p lang="de">Weil die Anlage laufend verändert und stark beansprucht wird, gelten auf der Baustelle <strong>kürzere Prüfintervalle</strong> als in einer festen Installation. Geprüft wird vor der ersten Inbetriebnahme und danach wiederkehrend.</p>
+    <p lang="en">Because the installation is continually altered and heavily stressed, <strong>shorter test intervals</strong> apply on site than in a fixed installation. Testing is done before first use and repeated at intervals.</p>
+
+    <h3><span lang="de">Was geprüft wird</span><span lang="en">What is tested</span></h3>
+    <ul lang="de">
+      <li><strong>Sichtprüfung</strong> — Gehäuse, Abdeckungen, Kabel, Stecker, Zugentlastungen</li>
+      <li><strong>Schutzleiterdurchgang</strong></li>
+      <li><strong>Isolationswiderstand</strong></li>
+      <li><strong>FI</strong> — Auslösestrom und Auslösezeit messen, nicht nur die Prüftaste drücken</li>
+      <li><strong>Schleifenimpedanz</strong> und damit die Abschaltbedingung</li>
+      <li><strong>Drehfeld</strong> an den CEE-Steckdosen</li>
+      <li><strong>Prüfplakette</strong> anbringen und Ergebnisse dokumentieren</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Visual inspection</strong> — enclosures, covers, cables, plugs, strain reliefs</li>
+      <li><strong>Protective conductor continuity</strong></li>
+      <li><strong>Insulation resistance</strong></li>
+      <li><strong>RCD</strong> — measure tripping current and time, not just press the test button</li>
+      <li><strong>Loop impedance</strong> and thus the disconnection condition</li>
+      <li><strong>Phase sequence</strong> at the CEE outlets</li>
+      <li>Attach the <strong>inspection label</strong> and document the results</li>
+    </ul>
+
+    <h3><span lang="de">Tägliche Sichtkontrolle</span><span lang="en">Daily visual check</span></h3>
+    <p lang="de">Vor jedem Einsatz eines Gerätes oder einer Verlängerung wird kurz hingeschaut: Ist der Mantel unverletzt? Sitzt der Stecker fest? Ist die Zugentlastung intakt? Steht die Verteilung trocken? Diese zehn Sekunden verhindern die meisten Unfälle.</p>
+    <p lang="en">Before using any tool or extension lead, take a quick look: is the sheath undamaged? Is the plug firm? Is the strain relief intact? Is the distribution board standing dry? Those ten seconds prevent most accidents.</p>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Bauprovisorien</span><span lang="en">Temporary installations</span></b>
+      <p lang="de">Ein Bauprovisorium ist eine <strong>vollwertige elektrische Installation auf Zeit</strong>. Es unterliegt der Melde- und Kontrollpflicht, muss vor der Inbetriebnahme geprüft und dokumentiert werden und ist nach Abschluss der Arbeiten wieder ordnungsgemäss zurückzubauen. «Provisorisch» heisst nicht «weniger streng» — es heisst nur «zeitlich begrenzt».</p>
+      <p lang="en">A temporary site installation is a <strong>full electrical installation with a time limit</strong>. It is subject to notification and inspection duties, must be tested and documented before use, and must be properly dismantled when the work is finished. “Temporary” does not mean “less strict” — it only means “limited in time”.</p>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Hinweis zur Quellenarbeit</span><span lang="en">Note on sources</span></b>
+      <p lang="de">Die verbindlichen Anforderungen für Baustellen stehen in der NIN in einem eigenen Kapitel, ergänzt durch die NIV für Melde- und Kontrollpflichten sowie die Suva-Unterlagen zur Baustellensicherheit. <strong>Die Prüfintervalle, Grenzwerte für den FI-Schutz und die Anforderungen an Steckvorrichtungen vor der Abgabe dort nachschlagen</strong> und die Artikel zitieren.</p>
+      <p lang="en">The binding requirements for construction sites are set out in a dedicated NIN chapter, supplemented by the NIV for notification and inspection duties and the Suva material on site safety. <strong>Look up the test intervals, RCD limits and requirements for socket outlets there before submitting</strong> and cite the articles.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Warum ist die Gefährdung auf der Baustelle besonders hoch?</span><span lang="en">Why is the risk on a construction site particularly high?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil man auf feuchtem Beton steht, Armierung und Gerüst berührt und Handwerkzeuge benutzt, deren Zuleitungen stark beansprucht werden. Der Körper ist dadurch sehr gut mit der Erde verbunden, und schon eine kleine Berührungsspannung treibt einen gefährlichen Strom.</p>
+        <p lang="en">Because you stand on damp concrete, touch reinforcement and scaffolding and use power tools whose leads take heavy punishment. The body is therefore very well connected to earth, and even a small touch voltage drives a dangerous current.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welchen FI brauchen Steckdosen auf der Baustelle?</span><span lang="en">Which RCD do site sockets need?</span></summary>
+      <div class="ans">
+        <p lang="de">Einen FI mit 30 mA für den Personenschutz. Er ist auf der Baustelle die entscheidende Schutzmassnahme, weil die Zuleitungen der Handgeräte laufend beschädigt werden.</p>
+        <p lang="en">A 30 mA RCD for personal protection. On site it is the decisive protective measure, because the leads of hand tools are continually damaged.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welchen Leitungstyp verwendest du und welchen nicht?</span><span lang="en">Which cable type do you use, and which not?</span></summary>
+      <div class="ans">
+        <p lang="de">Schwere Gummischlauchleitung, zum Beispiel H07RN-F. Sie hält Zug, Knicken, Kälte, UV und das Überfahren aus. Leichte PVC-Schlauchleitungen wie H05VV-F und Haushaltverlängerungen sind auf der Baustelle nicht zulässig.</p>
+        <p lang="en">Heavy rubber flexible cable, for example H07RN-F. It withstands tension, kinking, cold, UV and being driven over. Light PVC cords such as H05VV-F and domestic extension leads are not permitted on site.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum muss eine Kabeltrommel vollständig abgerollt werden?</span><span lang="en">Why must a cable drum be completely unrolled?</span></summary>
+      <div class="ans">
+        <p lang="de">Aufgerollt können die inneren Windungen ihre Verlustwärme nicht abgeben, und die Wicklung wirkt zusätzlich als Spule. Die Isolation überhitzt und wird dauerhaft geschädigt — sichtbar wird der Schaden erst später beim Fehler.</p>
+        <p lang="en">Coiled, the inner turns cannot dissipate their heat losses, and the winding additionally acts as a coil. The insulation overheats and is permanently damaged — the damage only becomes visible later when a fault occurs.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welche Schutzmassnahme gilt in einem engen leitfähigen Raum?</span><span lang="en">Which protective measure applies in a confined conductive space?</span></summary>
+      <div class="ans">
+        <p lang="de">Schutzkleinspannung. Der FI reicht dort nicht, weil der Körper rundherum von leitfähigem Material umgeben ist und nicht ausweichen kann. Die Speisequelle steht ausserhalb des Behälters, und eine Aufsichtsperson bleibt draussen.</p>
+        <p lang="en">Extra-low voltage. An RCD is not enough there, because the body is surrounded by conductive material on all sides and cannot move clear. The supply unit stands outside the vessel and a person keeps watch outside.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was gehört auf der Baustelle in den Potentialausgleich?</span><span lang="en">What is included in the bonding on a site?</span></summary>
+      <div class="ans">
+        <p lang="de">Gerüst, Kran, Armierung und andere grossflächige leitfähige Bauteile. Sie können sonst ein fremdes Potential einschleppen oder im Fehlerfall Spannung führen.</p>
+        <p lang="en">Scaffolding, cranes, reinforcement and other large conductive building elements. Otherwise they can import an external potential or become live under fault conditions.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum sind die Prüfintervalle auf der Baustelle kürzer?</span><span lang="en">Why are test intervals shorter on site?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil die Anlage laufend umgebaut und stark mechanisch beansprucht wird. Was gestern geprüft war, kann heute beschädigt sein. Dazu kommt die tägliche Sichtkontrolle vor jedem Einsatz eines Gerätes.</p>
+        <p lang="en">Because the installation is continually altered and heavily stressed mechanically. What was tested yesterday can be damaged today. On top of that comes the daily visual check before every use of a tool.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Gelten für ein Bauprovisorium weniger strenge Regeln?</span><span lang="en">Do laxer rules apply to a temporary site installation?</span></summary>
+      <div class="ans">
+        <p lang="de">Nein. Ein Bauprovisorium ist eine vollwertige elektrische Installation, nur zeitlich begrenzt. Es unterliegt der Melde- und Kontrollpflicht, wird vor der Inbetriebnahme geprüft und dokumentiert und nach Abschluss ordnungsgemäss zurückgebaut.</p>
+        <p lang="en">No. A temporary site installation is a full electrical installation, merely limited in time. It is subject to notification and inspection duties, is tested and documented before use, and is properly dismantled afterwards.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="08-schreinerei.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>08 · <span lang="de">Schreinerei</span><span lang="en">Joinery Workshops</span></b>
+  </a>
+  <a class="next" href="10-potentialausgleich.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>10 · <span lang="de">Potentialausgleich</span><span lang="en">Equipotential Bonding</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 09 · Baustellen und Bauprovisorien</span><span lang="en">Learning Documentation 09 · Construction Sites</span></span>
+  <span>Yanik · Etavis · <span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span></span>
+  <span><span lang="de">Grundlagen: NIN, Kapitel Baustellen · NIV · Suva</span><span lang="en">Basis: NIN, chapter on construction sites · NIV · Suva</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

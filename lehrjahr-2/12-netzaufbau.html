@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 12 — Netzaufbau" data-en="Learning Documentation 12 — System Earthing">Lerndokumentation 12 — Netzaufbau</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span>
+    <span lang="de">Thema 12</span><span lang="en">Topic 12</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">12</div>
+    <h1><span lang="de">Netzaufbau</span><span lang="en">System<br>Earthing</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">TN-S · TN-C · TN-C-S · Bezeichnungssystem · PEN-Leiter</span>
+    <span lang="en">TN-S · TN-C · TN-C-S · designation system · PEN conductor</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">12 von 12</span><span lang="en">12 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Transformator und Haus">
+        <circle cx="56" cy="66" r="22" fill="none" stroke="#171614" stroke-width="2.6"/>
+        <circle cx="80" cy="66" r="22" fill="none" stroke="#B8402A" stroke-width="2.6"/>
+        <path d="M68 100 v18 M40 118 h56 M50 128 h36 M60 138 h16" stroke="#3F6B43" stroke-width="3" stroke-linecap="round"/>
+        <path d="M104 54 h34" stroke="#B8402A" stroke-width="3" stroke-linecap="round"/>
+        <path d="M104 66 h34" stroke="#1D5872" stroke-width="3" stroke-linecap="round"/>
+        <path d="M104 78 h34" stroke="#3F6B43" stroke-width="3" stroke-linecap="round"/>
+        <path d="M140 92 L172 62 L204 92 v34 h-64 z" fill="#EFEAE0" stroke="#171614" stroke-width="2.4" stroke-linejoin="round"/>
+        <circle cx="164" cy="104" r="2.6" fill="#171614"/>
+        <circle cx="182" cy="104" r="2.6" fill="#171614"/>
+        <path d="M164 114 q 9 6 18 0" fill="none" stroke="#171614" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Das Bezeichnungssystem</span><span lang="en">The designation system</span></h2>
+
+    <p class="lead" lang="de">Ein Netzsystem beschreibt zwei Dinge: wie die <strong>Stromquelle</strong> geerdet ist und wie die <strong>Körper der Betriebsmittel</strong> geerdet sind. Dafür stehen zwei Buchstaben, gefolgt von einer optionalen Ergänzung.</p>
+    <p class="lead" lang="en">A system earthing arrangement describes two things: how the <strong>source</strong> is earthed and how the <strong>exposed conductive parts</strong> are earthed. Two letters express this, followed by an optional addition.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Stelle</span><span lang="en">Position</span></th>
+            <th><span lang="de">Buchstabe</span><span lang="en">Letter</span></th>
+            <th><span lang="de">Bedeutung</span><span lang="en">Meaning</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2"><strong><span lang="de">1. Buchstabe</span><span lang="en">1st letter</span></strong><br><span class="lgs" lang="de">Erdung der Quelle</span><span class="lgs" lang="en">earthing of the source</span></td>
+            <td class="num">T</td><td><span lang="de">direkt geerdet (franz. <em>terre</em>)</span><span lang="en">directly earthed (French <em>terre</em>)</span></td>
+          </tr>
+          <tr><td class="num">I</td><td><span lang="de">isoliert oder über eine Impedanz geerdet</span><span lang="en">isolated or earthed through an impedance</span></td></tr>
+          <tr>
+            <td rowspan="2"><strong><span lang="de">2. Buchstabe</span><span lang="en">2nd letter</span></strong><br><span class="lgs" lang="de">Erdung der Körper</span><span class="lgs" lang="en">earthing of exposed parts</span></td>
+            <td class="num">T</td><td><span lang="de">direkt geerdet, über einen eigenen Erder</span><span lang="en">directly earthed, via their own electrode</span></td>
+          </tr>
+          <tr><td class="num">N</td><td><span lang="de">mit dem Betriebserder der Quelle verbunden</span><span lang="en">connected to the source's earthing point</span></td></tr>
+          <tr>
+            <td rowspan="2"><strong><span lang="de">Zusatz</span><span lang="en">Addition</span></strong><br><span class="lgs" lang="de">N und PE</span><span class="lgs" lang="en">N and PE</span></td>
+            <td class="num">S</td><td><span lang="de"><em>separated</em> — N und PE getrennt geführt</span><span lang="en"><em>separated</em> — N and PE run separately</span></td>
+          </tr>
+          <tr><td class="num">C</td><td><span lang="de"><em>combined</em> — N und PE in einem Leiter vereint (PEN)</span><span lang="en"><em>combined</em> — N and PE in one conductor (PEN)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Merkhilfe</span><span lang="en">Memory aid</span></b>
+      <p lang="de"><strong>TN</strong> = Quelle geerdet, Körper über den <strong>N</strong>etzschutzleiter zurück zur Quelle. <strong>TT</strong> = Quelle geerdet, Körper über einen <strong>eigenen</strong> Erder. <strong>IT</strong> = Quelle <strong>i</strong>soliert.</p>
+      <p lang="en"><strong>TN</strong> = source earthed, exposed parts returned to the source via the <strong>N</strong>etwork protective conductor. <strong>TT</strong> = source earthed, exposed parts via their <strong>own</strong> electrode. <strong>IT</strong> = source <strong>i</strong>solated.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Die drei TN-Systeme</span><span lang="en">The three TN systems</span></h2>
+
+    <figure>
+      <svg viewBox="0 0 760 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vergleich der Netzsysteme TN-C, TN-S und TN-C-S">
+        <defs>
+          <style>
+            .l1{fill:none;stroke:#7A4A22;stroke-width:2.8;stroke-linecap:round}
+            .l2{fill:none;stroke:#26241F;stroke-width:2.8;stroke-linecap:round}
+            .l3{fill:none;stroke:#9A958A;stroke-width:2.8;stroke-linecap:round}
+            .n{fill:none;stroke:#1D5872;stroke-width:2.8;stroke-linecap:round}
+            .pe{fill:none;stroke:#3F6B43;stroke-width:2.8;stroke-linecap:round}
+            .pen{fill:none;stroke:#3F6B43;stroke-width:5;stroke-linecap:round}
+            .bx{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .ttl{font-family:'Archivo',sans-serif;font-size:16px;font-weight:700;fill:#171614}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.06em}
+            .lb{font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;fill:#48433B}
+            .dot{fill:#171614}
+          </style>
+        </defs>
+
+        <!-- ===== TN-C ===== -->
+        <text class="ttl" x="30" y="28">TN-C</text>
+        <text class="lgs" x="94" y="28"><tspan lang="de">N UND PE IN EINEM LEITER — PEN</tspan><tspan lang="en">N AND PE IN ONE CONDUCTOR — PEN</tspan></text>
+        <g>
+          <path class="l1" d="M60 52 H620"/>
+          <path class="l2" d="M60 66 H620"/>
+          <path class="l3" d="M60 80 H620"/>
+          <path class="pen" d="M60 98 H620"/>
+          <text class="lb" x="632" y="56">L1 L2 L3</text>
+          <text class="lb" x="632" y="102" fill="#3F6B43">PEN</text>
+          <!-- Erder -->
+          <path class="pen" d="M90 98 V120"/>
+          <path d="M76 120 h28 M82 128 h16 M87 136 h6" stroke="#3F6B43" stroke-width="2.4" stroke-linecap="round"/>
+          <!-- Verbraucher -->
+          <rect class="bx" x="470" y="112" width="70" height="34" rx="3"/>
+          <path class="l1" d="M500 52 V112"/>
+          <path class="pen" d="M528 98 V112"/>
+          <circle class="dot" cx="500" cy="52" r="4"/>
+          <circle class="dot" cx="528" cy="98" r="4"/>
+        </g>
+
+        <!-- ===== TN-S ===== -->
+        <text class="ttl" x="30" y="204">TN-S</text>
+        <text class="lgs" x="92" y="204"><tspan lang="de">N UND PE DURCHGEHEND GETRENNT</tspan><tspan lang="en">N AND PE SEPARATE THROUGHOUT</tspan></text>
+        <g>
+          <path class="l1" d="M60 228 H620"/>
+          <path class="l2" d="M60 242 H620"/>
+          <path class="l3" d="M60 256 H620"/>
+          <path class="n" d="M60 272 H620"/>
+          <path class="pe" d="M60 288 H620"/>
+          <text class="lb" x="632" y="232">L1 L2 L3</text>
+          <text class="lb" x="632" y="276" fill="#1D5872">N</text>
+          <text class="lb" x="632" y="292" fill="#3F6B43">PE</text>
+          <path class="pe" d="M90 288 V310"/>
+          <path d="M76 310 h28 M82 318 h16 M87 326 h6" stroke="#3F6B43" stroke-width="2.4" stroke-linecap="round"/>
+          <rect class="bx" x="470" y="302" width="70" height="34" rx="3"/>
+          <path class="l1" d="M492 228 V302"/>
+          <path class="n" d="M512 272 V302"/>
+          <path class="pe" d="M532 288 V302"/>
+          <circle class="dot" cx="492" cy="228" r="4"/>
+          <circle class="dot" cx="512" cy="272" r="4"/>
+          <circle class="dot" cx="532" cy="288" r="4"/>
+        </g>
+
+        <!-- ===== TN-C-S ===== -->
+        <text class="ttl" x="30" y="392">TN-C-S</text>
+        <text class="lgs" x="116" y="392"><tspan lang="de">ZUERST PEN, AB DEM TRENNPUNKT GETRENNT</tspan><tspan lang="en">PEN FIRST, SEPARATED FROM THE SPLIT POINT</tspan></text>
+        <g>
+          <path class="l1" d="M60 416 H620"/>
+          <path class="l2" d="M60 430 H620"/>
+          <path class="l3" d="M60 444 H620"/>
+          <path class="pen" d="M60 462 H300"/>
+          <path class="n" d="M300 462 H620"/>
+          <path class="pe" d="M300 462 V486 H620"/>
+          <text class="lb" x="632" y="420">L1 L2 L3</text>
+          <text class="lb" x="632" y="466" fill="#1D5872">N</text>
+          <text class="lb" x="632" y="490" fill="#3F6B43">PE</text>
+          <!-- Trennpunkt -->
+          <circle cx="300" cy="462" r="7" fill="#B8402A" stroke="#8A2F1E" stroke-width="2"/>
+          <path d="M300 440 V452" stroke="#B8402A" stroke-width="2" stroke-dasharray="3 3"/>
+          <text class="lb" x="300" y="434" fill="#B8402A" text-anchor="middle"><tspan lang="de">TRENNPUNKT</tspan><tspan lang="en">SPLIT POINT</tspan></text>
+          <path class="pe" d="M300 486 V506"/>
+          <path d="M286 506 h28 M292 512 h16 M297 518 h6" stroke="#3F6B43" stroke-width="2.4" stroke-linecap="round"/>
+          <rect class="bx" x="470" y="498" width="70" height="20" rx="3"/>
+          <path class="l1" d="M492 416 V498"/>
+          <path class="n" d="M512 462 V498"/>
+          <circle class="dot" cx="492" cy="416" r="4"/>
+          <circle class="dot" cx="512" cy="462" r="4"/>
+        </g>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Die drei TN-Systeme. Der dicke grüne Leiter ist der PEN, der Neutralleiter und Schutzleiter in sich vereint.</span>
+        <span lang="en"> — The three TN systems. The thick green conductor is the PEN, combining neutral and protective conductor in one.</span>
+      </figcaption>
+    </figure>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">System</span><span lang="en">System</span></th>
+            <th><span lang="de">Aufbau</span><span lang="en">Arrangement</span></th>
+            <th><span lang="de">Wo anzutreffen</span><span lang="en">Where found</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>TN-C</strong></td>
+            <td><span lang="de">N und PE über die ganze Länge in einem <strong>PEN-Leiter</strong> vereint</span><span lang="en">N and PE combined in one <strong>PEN conductor</strong> over the whole length</span></td>
+            <td><span lang="de">Verteilnetz, ältere Zuleitungen bis zur Verteilung</span><span lang="en">distribution network, older supply cables up to the board</span></td>
+          </tr>
+          <tr>
+            <td><strong>TN-S</strong></td>
+            <td><span lang="de">N und PE <strong>durchgehend getrennt</strong> geführt</span><span lang="en">N and PE run <strong>separately throughout</strong></span></td>
+            <td><span lang="de">heutiger Standard in der Hausinstallation</span><span lang="en">today's standard inside buildings</span></td>
+          </tr>
+          <tr>
+            <td><strong>TN-C-S</strong></td>
+            <td><span lang="de">bis zum <strong>Trennpunkt</strong> PEN, danach getrennt</span><span lang="en">PEN up to the <strong>split point</strong>, separate thereafter</span></td>
+            <td><span lang="de">der häufigste Fall: Netz als TN-C, Gebäude als TN-S</span><span lang="en">the most common case: network as TN-C, building as TN-S</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Weitere Systeme</span><span lang="en">Further systems</span></b>
+      <p lang="de"><strong>TT</strong> — Quelle geerdet, Körper über einen eigenen Erder; verbreitet in älteren Anlagen und in einzelnen Ländern. <strong>IT</strong> — Quelle isoliert oder hochohmig geerdet; im Spital, in der Industrie und dort eingesetzt, wo ein erster Fehler <strong>nicht</strong> zur Abschaltung führen darf. Beide kommen in der Schweizer Hausinstallation selten vor.</p>
+      <p lang="en"><strong>TT</strong> — source earthed, exposed parts via their own electrode; widespread in older installations and in some countries. <strong>IT</strong> — source isolated or earthed through a high impedance; used in hospitals, industry and wherever a first fault must <strong>not</strong> cause disconnection. Both are rare in Swiss building installations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Der PEN-Leiter</span><span lang="en">The PEN conductor</span></h2>
+
+    <p lang="de">Der PEN-Leiter erfüllt <strong>zwei Aufgaben gleichzeitig</strong>: Er führt den Betriebsstrom als Neutralleiter zurück <em>und</em> dient als Schutzleiter. Das spart eine Ader — bringt aber ein erhebliches Risiko mit sich.</p>
+    <p lang="en">A PEN conductor performs <strong>two jobs at once</strong>: it carries the operating current back as the neutral <em>and</em> serves as the protective conductor. That saves one core — but brings a considerable risk.</p>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Die Gefahr beim PEN-Bruch</span><span lang="en">The danger of a broken PEN</span></b>
+      <p lang="de">Bricht der PEN-Leiter, verlieren <strong>alle angeschlossenen Gehäuse gleichzeitig ihren Schutzleiter</strong>. Schlimmer noch: Über die Verbraucher gelangt Spannung auf den unterbrochenen PEN und damit auf alle Metallgehäuse. Aus einem einzigen Leiterbruch wird so eine Gefahr in der ganzen Anlage — und es löst keine Schutzeinrichtung aus.</p>
+      <p lang="en">If the PEN conductor breaks, <strong>every connected enclosure loses its protective conductor at the same time</strong>. Worse still: voltage reaches the broken PEN through the loads and hence every metal enclosure. A single broken conductor thus becomes a hazard throughout the installation — and no protective device operates.</p>
+    </div>
+
+    <h3><span lang="de">Regeln für den PEN-Leiter</span><span lang="en">Rules for the PEN conductor</span></h3>
+    <ul lang="de">
+      <li><strong>Mindestquerschnitt</strong> 10 mm² Kupfer beziehungsweise 16 mm² Aluminium — wegen der Bruchgefahr</li>
+      <li><strong>Nie schalten, nie absichern, nie trennen</strong> — kein Schalter, keine Sicherung, kein FI-Pol im PEN</li>
+      <li><strong>Kennzeichnung</strong> grün-gelb, an den Enden zusätzlich blau markiert</li>
+      <li><strong>Kein FI möglich</strong>, solange der PEN geführt wird — der Fehlerstrom kehrt durch den Kern zurück und die Summe bleibt null</li>
+      <li><strong>Nach der Auftrennung nie wieder verbinden</strong></li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Minimum cross-section</strong> 10 mm² copper or 16 mm² aluminium — because of the risk of breakage</li>
+      <li><strong>Never switch, never fuse, never disconnect</strong> — no switch, no fuse, no RCD pole in the PEN</li>
+      <li><strong>Identification</strong> green-yellow, additionally marked blue at the ends</li>
+      <li><strong>No RCD possible</strong> while the PEN is carried — the fault current returns through the core and the sum stays zero</li>
+      <li><strong>Never reconnect after the split</strong></li>
+    </ul>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Die wichtigste Regel überhaupt</span><span lang="en">The single most important rule</span></b>
+      <p lang="de">Ist der PEN einmal in N und PE <strong>aufgetrennt</strong>, dürfen die beiden <strong>nie wieder verbunden</strong> werden — an keiner Stelle der Anlage. Sonst fliesst ein Teil des Betriebsstromes über den Schutzleiter zurück. Die Folge: Der FI löst grundlos aus oder schlimmer, er löst im Fehlerfall <em>nicht</em> aus, und auf dem Schutzleiter liegt ein Spannungsfall.</p>
+      <p lang="en">Once the PEN has been <strong>split</strong> into N and PE, the two must <strong>never be reconnected</strong> — at any point in the installation. Otherwise part of the operating current returns through the protective conductor. The result: the RCD trips for no reason or, worse, does <em>not</em> trip under a fault, and a voltage drop appears on the protective conductor.</p>
+    </div>
+
+    <p lang="de">Genau dieser Fehler steckt hinter dem häufigsten «unerklärlichen» FI-Auslösen in der Praxis: Irgendwo hinter dem Trennpunkt sind N und PE versehentlich verbunden.</p>
+    <p lang="en">This exact mistake lies behind the most common “inexplicable” RCD tripping in practice: somewhere beyond the split point, N and PE have been accidentally joined.</p>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Der Trennpunkt und die Praxis</span><span lang="en">The split point and practice</span></h2>
+
+    <p lang="de">Im typischen Schweizer Gebäude kommt die Zuleitung als <strong>TN-C</strong> an. In der Hauptverteilung wird der PEN in N und PE <strong>aufgetrennt</strong>; ab dort ist die ganze Installation <strong>TN-S</strong>. Das Gesamtsystem heisst deshalb <strong>TN-C-S</strong>.</p>
+    <p lang="en">In a typical Swiss building the supply arrives as <strong>TN-C</strong>. In the main board the PEN is <strong>split</strong> into N and PE; from there the whole installation is <strong>TN-S</strong>. The overall system is therefore called <strong>TN-C-S</strong>.</p>
+
+    <h3><span lang="de">Am Trennpunkt</span><span lang="en">At the split point</span></h3>
+    <ul lang="de">
+      <li>Der PEN wird auf die <strong>Hauptpotentialausgleichsschiene</strong> beziehungsweise die PE-Schiene geführt</li>
+      <li>Von dort geht es getrennt weiter: <strong>N-Schiene</strong> und <strong>PE-Schiene</strong></li>
+      <li>Die beiden Schienen sind <strong>voneinander isoliert</strong> montiert</li>
+      <li>Der Erdungsleiter zum Erder wird hier angeschlossen</li>
+      <li>Ab hier sind FI-Schutzschalter <strong>möglich und vorgeschrieben</strong></li>
+    </ul>
+    <ul lang="en">
+      <li>The PEN is taken to the <strong>main earthing terminal</strong> or the PE bar</li>
+      <li>From there it continues separately: <strong>N bar</strong> and <strong>PE bar</strong></li>
+      <li>The two bars are mounted <strong>insulated from each other</strong></li>
+      <li>The earthing conductor to the electrode is connected here</li>
+      <li>From this point RCDs are <strong>possible and required</strong></li>
+    </ul>
+
+    <h3><span lang="de">Warum TN-S in der Installation?</span><span lang="en">Why TN-S inside the building?</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th><span lang="de">Vorteil</span><span lang="en">Advantage</span></th><th><span lang="de">Begründung</span><span lang="en">Reason</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong><span lang="de">FI möglich</span><span lang="en">RCD possible</span></strong></td><td><span lang="de">Nur bei getrenntem PE kann ein Fehlerstrom am Ringkern vorbeifliessen und erkannt werden</span><span lang="en">only with a separate PE can a fault current bypass the core and be detected</span></td></tr>
+          <tr><td><strong><span lang="de">Kein Betriebsstrom auf dem PE</span><span lang="en">No operating current on the PE</span></strong></td><td><span lang="de">der Schutzleiter bleibt spannungsfrei und störungsfrei</span><span lang="en">the protective conductor stays free of voltage and interference</span></td></tr>
+          <tr><td><strong><span lang="de">Bessere EMV</span><span lang="en">Better EMC</span></strong></td><td><span lang="de">kein Strom im PE bedeutet keine Störspannungen auf der Bezugsmasse von Elektronik</span><span lang="en">no current in the PE means no interference on the reference earth of electronics</span></td></tr>
+          <tr><td><strong><span lang="de">Sicherer bei Leiterbruch</span><span lang="en">Safer if a conductor breaks</span></strong></td><td><span lang="de">ein gebrochener N nimmt nicht gleichzeitig den Schutzleiter mit</span><span lang="en">a broken neutral does not take the protective conductor with it</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Beim Messen erkennen</span><span lang="en">Recognising it when measuring</span></b>
+      <p lang="de">Ob eine Anlage sauber als TN-S ausgeführt ist, zeigt sich beim <strong>Isolationsmessen zwischen N und PE</strong>: Ist der Wert nahe null, sind die beiden irgendwo verbunden. Das ist entweder der Trennpunkt selbst — oder ein Fehler weiter hinten in der Anlage.</p>
+      <p lang="en">Whether an installation is cleanly built as TN-S shows up when <strong>measuring insulation between N and PE</strong>: if the value is near zero, the two are connected somewhere. That is either the split point itself — or a fault further down the installation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Wofür stehen die Buchstaben in TN-S?</span><span lang="en">What do the letters in TN-S stand for?</span></summary>
+      <div class="ans">
+        <p lang="de">T — die Stromquelle ist direkt geerdet. N — die Körper der Betriebsmittel sind mit dem Betriebserder der Quelle verbunden. S — Neutralleiter und Schutzleiter sind durchgehend getrennt geführt.</p>
+        <p lang="en">T — the source is directly earthed. N — the exposed conductive parts are connected to the source's earthing point. S — neutral and protective conductor are run separately throughout.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was ist ein PEN-Leiter?</span><span lang="en">What is a PEN conductor?</span></summary>
+      <div class="ans">
+        <p lang="de">Ein Leiter, der die Funktionen von Neutralleiter und Schutzleiter in sich vereint. Er führt den Betriebsstrom zurück und dient gleichzeitig als Schutzleiter.</p>
+        <p lang="en">A conductor combining the functions of neutral and protective conductor. It carries the operating current back and simultaneously serves as the protective conductor.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum ist ein PEN-Bruch so gefährlich?</span><span lang="en">Why is a broken PEN so dangerous?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil alle angeschlossenen Gehäuse gleichzeitig ihren Schutzleiter verlieren. Zusätzlich gelangt über die Verbraucher Spannung auf den unterbrochenen PEN und damit auf alle Metallgehäuse. Es löst dabei keine Schutzeinrichtung aus — die Gefahr bleibt unbemerkt.</p>
+        <p lang="en">Because every connected enclosure loses its protective conductor at once. In addition, voltage reaches the broken PEN through the loads and hence every metal enclosure. No protective device operates — the hazard goes unnoticed.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welcher Mindestquerschnitt gilt für einen PEN-Leiter?</span><span lang="en">What minimum cross-section applies to a PEN conductor?</span></summary>
+      <div class="ans">
+        <p lang="de">10 mm² Kupfer beziehungsweise 16 mm² Aluminium. Der grosse Querschnitt soll die mechanische Bruchgefahr verringern, weil ein Bruch so schwerwiegende Folgen hat.</p>
+        <p lang="en">10 mm² copper or 16 mm² aluminium. The large cross-section is intended to reduce the risk of mechanical breakage, because a break has such serious consequences.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum ist im TN-C-System kein FI möglich?</span><span lang="en">Why is an RCD not possible in a TN-C system?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil der Fehlerstrom über den PEN zurückfliesst und dieser durch den Ringkern des FI geführt wird. Die Summe der Ströme bleibt damit null, der FI erkennt keinen Fehler.</p>
+        <p lang="en">Because the fault current returns via the PEN, and the PEN passes through the RCD's core. The sum of the currents therefore stays zero and the RCD detects no fault.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was darf nach dem Trennpunkt nie mehr passieren?</span><span lang="en">What must never happen after the split point?</span></summary>
+      <div class="ans">
+        <p lang="de">N und PE dürfen an keiner Stelle wieder verbunden werden. Sonst fliesst Betriebsstrom über den Schutzleiter, der FI löst grundlos aus oder im Fehlerfall gar nicht, und auf dem Schutzleiter entsteht ein Spannungsfall.</p>
+        <p lang="en">N and PE must never be reconnected anywhere. Otherwise operating current flows through the protective conductor, the RCD trips for no reason or fails to trip under a fault, and a voltage drop appears on the protective conductor.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welches System liegt im typischen Schweizer Gebäude vor?</span><span lang="en">Which system is found in a typical Swiss building?</span></summary>
+      <div class="ans">
+        <p lang="de">TN-C-S. Die Zuleitung kommt als TN-C mit PEN-Leiter an, in der Hauptverteilung wird aufgetrennt, und ab dort ist die Installation TN-S mit getrenntem N und PE.</p>
+        <p lang="en">TN-C-S. The supply arrives as TN-C with a PEN conductor, the split is made in the main board, and from there the installation is TN-S with separate N and PE.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie erkennst du beim Messen, dass N und PE irgendwo verbunden sind?</span><span lang="en">How do you detect by measurement that N and PE are joined somewhere?</span></summary>
+      <div class="ans">
+        <p lang="de">Bei der Isolationsmessung zwischen N und PE ergibt sich ein Wert nahe null statt des erwarteten hohen Isolationswiderstands. Liegt der Trennpunkt ausserhalb des gemessenen Abschnitts, deutet das auf einen Fehler in der Installation hin.</p>
+        <p lang="en">Insulation measurement between N and PE gives a value close to zero instead of the expected high insulation resistance. If the split point lies outside the section measured, this indicates a fault in the installation.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was bedeutet ein IT-System und wo wird es eingesetzt?</span><span lang="en">What does an IT system mean and where is it used?</span></summary>
+      <div class="ans">
+        <p lang="de">Die Stromquelle ist isoliert oder nur über eine hohe Impedanz geerdet. Beim ersten Isolationsfehler fliesst deshalb kaum Strom und die Anlage muss nicht abgeschaltet werden. Eingesetzt wird das dort, wo eine Abschaltung gefährlicher wäre als der Fehler — etwa im Operationssaal oder in kritischen Industrieprozessen. Der erste Fehler wird durch eine Isolationsüberwachung gemeldet und dann behoben.</p>
+        <p lang="en">The source is isolated or earthed only through a high impedance. On a first insulation fault, almost no current flows and the installation need not be disconnected. It is used where disconnection would be more dangerous than the fault — for example in operating theatres or critical industrial processes. The first fault is signalled by insulation monitoring and then rectified.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="11-zusaetzlicher-potentialausgleich.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>11 · <span lang="de">Zusätzlicher Potentialausgleich</span><span lang="en">Supplementary Bonding</span></b>
+  </a>
+  <a class="next" href="../index.html">
+    <span lang="de">Zurück zur</span><span lang="en">Back to the</span>
+    <b><span lang="de">Übersicht</span><span lang="en">Overview</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 12 · Netzaufbau</span><span lang="en">Learning Documentation 12 · System Earthing</span></span>
+  <span>Yanik · Etavis · <span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span></span>
+  <span><span lang="de">Grundlagen: NIN · IEC 60364-1</span><span lang="en">Basis: NIN · IEC 60364-1</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

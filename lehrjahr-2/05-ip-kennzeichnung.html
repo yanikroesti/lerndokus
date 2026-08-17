@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 05 — IP-Kennzeichnung" data-en="Learning Documentation 05 — IP Ratings">Lerndokumentation 05 — IP-Kennzeichnung</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span>
+    <span lang="de">Thema 05</span><span lang="en">Topic 05</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">05</div>
+    <h1><span lang="de">IP-Kenn&shy;zeichnung</span><span lang="en">IP Ratings</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Beschrieb · Symbole · Zeichnung · Kennziffern · IK-Code</span>
+    <span lang="en">Description · symbols · drawing · code digits · IK code</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">05 von 12</span><span lang="en">05 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Gehäuse mit Regenschirm">
+        <rect x="46" y="66" width="100" height="62" rx="6" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <circle cx="76" cy="92" r="3" fill="#171614"/>
+        <circle cx="112" cy="92" r="3" fill="#171614"/>
+        <path d="M78 108 q 16 9 32 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M40 54 a56 56 0 0 1 112 0 z" fill="#D6E3E9" stroke="#1D5872" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M96 54 v40" stroke="#1D5872" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M96 94 q 0 10 10 10" fill="none" stroke="#1D5872" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M168 22 v14 M186 34 v14 M176 56 v12 M196 62 v12 M162 62 v12" stroke="#1D5872" stroke-width="2.6" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Was der IP-Code aussagt</span><span lang="en">What the IP code states</span></h2>
+
+    <p class="lead" lang="de">Die IP-Kennzeichnung sagt, wie gut ein Gehäuse sein Innenleben schützt — und ebenso wichtig: wie gut es <strong>Menschen vor dem Innenleben</strong> schützt. <code>IP</code> steht für <em>International Protection</em>, gefolgt von zwei Kennziffern.</p>
+    <p class="lead" lang="en">An IP rating states how well an enclosure protects what is inside — and just as importantly, how well it protects <strong>people from what is inside</strong>. <code>IP</code> stands for <em>International Protection</em>, followed by two code digits.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aufbau des IP-Codes">
+        <defs>
+          <style>
+            .chr{font-family:'Archivo',sans-serif;font-size:52px;font-weight:800;fill:#171614;text-anchor:middle}
+            .bx{fill:none;stroke:#D2CABB;stroke-width:1.4}
+            .ldr{fill:none;stroke:#7D7669;stroke-width:1.2}
+            .lg{font-family:'IBM Plex Mono',monospace;font-size:12.5px;fill:#48433B}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.06em}
+          </style>
+        </defs>
+
+        <rect class="bx" x="250" y="26" width="260" height="74" rx="3"/>
+        <text class="chr" x="300" y="82">I</text>
+        <text class="chr" x="330" y="82">P</text>
+        <text class="chr" x="400" y="82" fill="#B8402A">4</text>
+        <text class="chr" x="452" y="82" fill="#1D5872">4</text>
+
+        <path class="ldr" d="M315 106 V150 H120"/>
+        <text class="lg" x="30" y="170">IP</text>
+        <text class="lgs" x="30" y="186">INTERNATIONAL PROTECTION</text>
+
+        <path class="ldr" d="M400 106 V138 H640"/>
+        <text class="lg" x="648" y="134" fill="#B8402A" font-weight="600"><tspan lang="de">1. Kennziffer</tspan><tspan lang="en">1st digit</tspan></text>
+        <text class="lgs" x="648" y="150"><tspan lang="de">FESTKÖRPER UND BERÜHRUNG</tspan><tspan lang="en">SOLID BODIES AND CONTACT</tspan></text>
+
+        <path class="ldr" d="M452 106 V190 H640"/>
+        <text class="lg" x="648" y="186" fill="#1D5872" font-weight="600"><tspan lang="de">2. Kennziffer</tspan><tspan lang="en">2nd digit</tspan></text>
+        <text class="lgs" x="648" y="202">WASSER / WATER</text>
+
+        <text class="lgs" x="30" y="222"><tspan lang="de">EIN X ANSTELLE EINER ZIFFER HEISST: NICHT GEPRÜFT / NICHT ANGEGEBEN</tspan><tspan lang="en">AN X IN PLACE OF A DIGIT MEANS: NOT TESTED / NOT SPECIFIED</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Aufbau des IP-Codes am Beispiel IP44.</span>
+        <span lang="en"> — Structure of the IP code, shown for IP44.</span>
+      </figcaption>
+    </figure>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Das X verstehen</span><span lang="en">Understanding the X</span></b>
+      <p lang="de"><code>IPX4</code> heisst: gegen Wasser geprüft (Spritzwasser), gegen Festkörper <strong>nicht angegeben</strong>. Das X ist kein Nullwert — es bedeutet nur, dass diese Eigenschaft nicht geprüft oder nicht deklariert wurde.</p>
+      <p lang="en"><code>IPX4</code> means: tested against water (splashing), <strong>not specified</strong> against solid bodies. The X is not a zero — it merely means this property was not tested or not declared.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Erste Kennziffer — Festkörper und Berührung</span><span lang="en">First digit — solid bodies and contact</span></h2>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Ziffer</span><span lang="en">Digit</span></th>
+            <th><span lang="de">Schutz gegen Fremdkörper</span><span lang="en">Protection against solid bodies</span></th>
+            <th><span lang="de">Schutz gegen Berührung</span><span lang="en">Protection against contact</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num"><strong>0</strong></td><td><span lang="de">kein Schutz</span><span lang="en">no protection</span></td><td><span lang="de">kein Schutz</span><span lang="en">no protection</span></td></tr>
+          <tr><td class="num"><strong>1</strong></td><td><span lang="de">Fremdkörper ab 50 mm</span><span lang="en">objects from 50 mm</span></td><td><span lang="de">Handrücken</span><span lang="en">back of the hand</span></td></tr>
+          <tr><td class="num"><strong>2</strong></td><td><span lang="de">Fremdkörper ab 12,5 mm</span><span lang="en">objects from 12.5 mm</span></td><td><span lang="de">Finger</span><span lang="en">finger</span></td></tr>
+          <tr><td class="num"><strong>3</strong></td><td><span lang="de">Fremdkörper ab 2,5 mm</span><span lang="en">objects from 2.5 mm</span></td><td><span lang="de">Werkzeug, dicker Draht</span><span lang="en">tools, thick wire</span></td></tr>
+          <tr><td class="num"><strong>4</strong></td><td><span lang="de">Fremdkörper ab 1 mm</span><span lang="en">objects from 1 mm</span></td><td><span lang="de">Draht</span><span lang="en">wire</span></td></tr>
+          <tr><td class="num"><strong>5</strong></td><td><span lang="de">staubgeschützt — Staub darf eindringen, aber nicht schaden</span><span lang="en">dust protected — dust may enter but must not impair</span></td><td><span lang="de">vollständig</span><span lang="en">complete</span></td></tr>
+          <tr><td class="num"><strong>6</strong></td><td><span lang="de">staubdicht — kein Staub dringt ein</span><span lang="en">dust tight — no ingress of dust</span></td><td><span lang="de">vollständig</span><span lang="en">complete</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Merkhilfe zur ersten Ziffer</span><span lang="en">Memory aid for the first digit</span></b>
+      <p lang="de">Die Prüfkörper werden von Stufe zu Stufe kleiner: <strong>Handrücken — Finger — Werkzeug — Draht</strong>. Ab Stufe 5 geht es nicht mehr um Berührung, sondern nur noch um Staub.</p>
+      <p lang="en">The test probes get smaller step by step: <strong>back of the hand — finger — tool — wire</strong>. From level 5 onwards it is no longer about contact but only about dust.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Zweite Kennziffer — Wasser</span><span lang="en">Second digit — water</span></h2>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Ziffer</span><span lang="en">Digit</span></th>
+            <th><span lang="de">Schutz gegen</span><span lang="en">Protection against</span></th>
+            <th><span lang="de">Prüfbedingung</span><span lang="en">Test condition</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num"><strong>0</strong></td><td><span lang="de">kein Schutz</span><span lang="en">no protection</span></td><td>—</td></tr>
+          <tr><td class="num"><strong>1</strong></td><td><span lang="de">Tropfwasser</span><span lang="en">dripping water</span></td><td><span lang="de">senkrecht fallend</span><span lang="en">falling vertically</span></td></tr>
+          <tr><td class="num"><strong>2</strong></td><td><span lang="de">Tropfwasser schräg</span><span lang="en">dripping water, tilted</span></td><td><span lang="de">bis 15° Neigung</span><span lang="en">up to 15° tilt</span></td></tr>
+          <tr><td class="num"><strong>3</strong></td><td><span lang="de">Sprühwasser</span><span lang="en">spraying water</span></td><td><span lang="de">bis 60° zur Senkrechten</span><span lang="en">up to 60° from vertical</span></td></tr>
+          <tr><td class="num"><strong>4</strong></td><td><span lang="de">Spritzwasser</span><span lang="en">splashing water</span></td><td><span lang="de">aus allen Richtungen</span><span lang="en">from all directions</span></td></tr>
+          <tr><td class="num"><strong>5</strong></td><td><span lang="de">Strahlwasser</span><span lang="en">water jets</span></td><td><span lang="de">Düse, aus allen Richtungen</span><span lang="en">nozzle, from all directions</span></td></tr>
+          <tr><td class="num"><strong>6</strong></td><td><span lang="de">starkes Strahlwasser</span><span lang="en">powerful water jets</span></td><td><span lang="de">Sturzwasser, Schiffsdeck</span><span lang="en">heavy seas, ship decks</span></td></tr>
+          <tr><td class="num"><strong>7</strong></td><td><span lang="de">zeitweiliges Untertauchen</span><span lang="en">temporary immersion</span></td><td><span lang="de">definierte Tiefe und Zeit</span><span lang="en">defined depth and time</span></td></tr>
+          <tr><td class="num"><strong>8</strong></td><td><span lang="de">dauerndes Untertauchen</span><span lang="en">continuous immersion</span></td><td><span lang="de">Bedingungen nach Herstellerangabe</span><span lang="en">conditions per manufacturer</span></td></tr>
+          <tr><td class="num"><strong>9</strong></td><td><span lang="de">Hochdruck- und Dampfstrahlreinigung</span><span lang="en">high-pressure and steam cleaning</span></td><td><span lang="de">heisses Wasser unter hohem Druck</span><span lang="en">hot water at high pressure</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Achtung: 7 ist nicht besser als 6</span><span lang="en">Careful: 7 is not better than 6</span></b>
+      <p lang="de">Die Wasserziffern sind bis 6 aufsteigend, danach nicht mehr durchgehend. <strong>IPX7 heisst untertauchbar, aber nicht automatisch strahlwassersicher</strong> — die Prüfungen sind verschieden. Ein Gehäuse, das beides können muss, trägt eine Doppelangabe wie <code>IP67/IP69</code>.</p>
+      <p lang="en">The water digits increase up to 6, but not consistently beyond. <strong>IPX7 means immersible, but not automatically jet-proof</strong> — the tests differ. An enclosure that must do both carries a double rating such as <code>IP67/IP69</code>.</p>
+    </div>
+
+    <h3><span lang="de">Häufige Werte in der Praxis</span><span lang="en">Common values in practice</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th>IP</th>
+            <th><span lang="de">Bedeutung</span><span lang="en">Meaning</span></th>
+            <th><span lang="de">Typischer Einsatzort</span><span lang="en">Typical location</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num"><strong>IP20</strong></td><td><span lang="de">fingersicher, kein Wasserschutz</span><span lang="en">finger-safe, no water protection</span></td><td><span lang="de">Verteiler und Geräte im trockenen Innenraum</span><span lang="en">boards and devices in dry interiors</span></td></tr>
+          <tr><td class="num"><strong>IP40</strong></td><td><span lang="de">drahtsicher, kein Wasserschutz</span><span lang="en">wire-safe, no water protection</span></td><td><span lang="de">Innenverteilung, Schaltschrank</span><span lang="en">indoor distribution, control panels</span></td></tr>
+          <tr><td class="num"><strong>IP44</strong></td><td><span lang="de">drahtsicher, allseitig spritzwassergeschützt</span><span lang="en">wire-safe, splash-proof from all sides</span></td><td><span lang="de">Aussensteckdosen, Bad, Waschküche</span><span lang="en">outdoor sockets, bathrooms, laundry</span></td></tr>
+          <tr><td class="num"><strong>IP54</strong></td><td><span lang="de">staubgeschützt und spritzwassergeschützt</span><span lang="en">dust protected and splash-proof</span></td><td><span lang="de">Werkstatt, Landwirtschaft, staubige Räume</span><span lang="en">workshops, agriculture, dusty rooms</span></td></tr>
+          <tr><td class="num"><strong>IP65</strong></td><td><span lang="de">staubdicht und strahlwassergeschützt</span><span lang="en">dust tight and jet-proof</span></td><td><span lang="de">Aussenanlagen, Reinigung mit Schlauch</span><span lang="en">outdoor installations, hose cleaning</span></td></tr>
+          <tr><td class="num"><strong>IP67</strong></td><td><span lang="de">staubdicht, zeitweise untertauchbar</span><span lang="en">dust tight, temporarily immersible</span></td><td><span lang="de">Bodeneinbau, überflutungsgefährdete Stellen</span><span lang="en">floor mounting, locations at risk of flooding</span></td></tr>
+          <tr><td class="num"><strong>IP69</strong></td><td><span lang="de">staubdicht, Hochdruckreinigung</span><span lang="en">dust tight, high-pressure cleaning</span></td><td><span lang="de">Lebensmittelbetriebe, Waschanlagen</span><span lang="en">food industry, vehicle washes</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Zusatzbuchstaben und IK-Code</span><span lang="en">Additional letters and the IK code</span></h2>
+
+    <h3><span lang="de">Zusätzliche Buchstaben</span><span lang="en">Additional letters</span></h3>
+    <p lang="de">Nach den beiden Ziffern kann ein Buchstabe folgen. Er präzisiert den <strong>Schutz von Personen</strong>, wenn dieser besser ist, als die erste Kennziffer vermuten lässt.</p>
+    <p lang="en">A letter may follow the two digits. It specifies the <strong>protection of persons</strong> where this is better than the first digit suggests.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th><span lang="de">Buchstabe</span><span lang="en">Letter</span></th><th><span lang="de">Geschützt gegen Zugang mit</span><span lang="en">Protected against access with</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="num"><strong>A</strong></td><td><span lang="de">Handrücken</span><span lang="en">back of the hand</span></td></tr>
+          <tr><td class="num"><strong>B</strong></td><td><span lang="de">Finger</span><span lang="en">finger</span></td></tr>
+          <tr><td class="num"><strong>C</strong></td><td><span lang="de">Werkzeug</span><span lang="en">tool</span></td></tr>
+          <tr><td class="num"><strong>D</strong></td><td><span lang="de">Draht</span><span lang="en">wire</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Der IK-Code — Schutz gegen Stoss</span><span lang="en">The IK code — impact protection</span></h3>
+    <p lang="de">Der IP-Code sagt nichts über <strong>mechanische Schläge</strong>. Dafür gibt es den <strong>IK-Code</strong> nach EN 62262. Er reicht von IK00 bis IK10 und gibt die Schlagenergie in Joule an.</p>
+    <p lang="en">The IP code says nothing about <strong>mechanical impact</strong>. That is covered by the <strong>IK code</strong> to EN 62262. It runs from IK00 to IK10 and states the impact energy in joules.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>IK</th><th><span lang="de">Schlagenergie</span><span lang="en">Impact energy</span></th><th><span lang="de">Typischer Einsatz</span><span lang="en">Typical use</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">IK02</td><td class="num">0,2 J</td><td><span lang="de">geschützter Innenraum</span><span lang="en">protected interior</span></td></tr>
+          <tr><td class="num">IK07</td><td class="num">2 J</td><td><span lang="de">öffentlich zugängliche Bereiche</span><span lang="en">publicly accessible areas</span></td></tr>
+          <tr><td class="num">IK08</td><td class="num">5 J</td><td><span lang="de">Turnhalle, Werkstatt</span><span lang="en">gymnasium, workshop</span></td></tr>
+          <tr><td class="num">IK10</td><td class="num">20 J</td><td><span lang="de">Tiefgarage, Unterführung, vandalismusgefährdet</span><span lang="en">car parks, subways, vandalism-prone</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Beide Angaben zusammen lesen</span><span lang="en">Read both ratings together</span></b>
+      <p lang="de">Eine Leuchte in einer Turnhalle braucht nicht nur IP-Schutz gegen Reinigungswasser, sondern vor allem einen hohen IK-Wert gegen den Fussball. In einer Tiefgarage zählt beides: Spritzwasser von den Fahrzeugen und ein Stoss vom Kotflügel.</p>
+      <p lang="en">A luminaire in a gymnasium needs not only IP protection against cleaning water but above all a high IK value against footballs. In an underground car park both count: splashing water from vehicles and a knock from a wing mirror.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Praxis</span><span lang="en">In practice</span></h2>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Die Schutzart gilt nur montiert</span><span lang="en">The rating only applies once fitted</span></b>
+      <p lang="de">Ein Gehäuse mit IP65 erreicht diesen Wert nur, wenn <strong>alle Dichtungen sitzen, alle Verschraubungen passend gewählt und alle unbenutzten Öffnungen verschlossen</strong> sind. Eine fehlende Blindverschraubung, eine schief eingelegte Dichtung oder eine zu grosse Kabelverschraubung machen aus IP65 in der Praxis IP20.</p>
+      <p lang="en">An enclosure rated IP65 only achieves that value if <strong>all seals are seated, all glands correctly chosen and all unused openings closed</strong>. A missing blanking plug, a twisted gasket or an oversized cable gland turns IP65 into IP20 in practice.</p>
+    </div>
+
+    <h3><span lang="de">Worauf zu achten ist</span><span lang="en">What to watch for</span></h3>
+    <ul lang="de">
+      <li><strong>Kabelverschraubung passend zum Kabeldurchmesser</strong> wählen — der Klemmbereich steht auf der Verschraubung</li>
+      <li><strong>Unbenutzte Öffnungen</strong> mit Blindstopfen verschliessen</li>
+      <li><strong>Dichtung sauber und unbeschädigt</strong> einlegen, nicht verdreht</li>
+      <li><strong>Einbaulage</strong> beachten — Verschraubungen gehören nach unten, damit Wasser abläuft</li>
+      <li><strong>Bohrungen im Gehäuse</strong> nur dort, wo der Hersteller sie vorsieht</li>
+      <li><strong>Deckelschrauben gleichmässig</strong> anziehen, damit die Dichtung überall trägt</li>
+    </ul>
+    <ul lang="en">
+      <li>Choose the <strong>gland to match the cable diameter</strong> — the clamping range is printed on the gland</li>
+      <li>Close <strong>unused openings</strong> with blanking plugs</li>
+      <li>Fit the <strong>gasket clean and undamaged</strong>, not twisted</li>
+      <li>Mind the <strong>mounting position</strong> — glands belong at the bottom so water can drain</li>
+      <li><strong>Drill the enclosure</strong> only where the manufacturer allows</li>
+      <li>Tighten the <strong>lid screws evenly</strong> so the seal bears all round</li>
+    </ul>
+
+    <h3><span lang="de">Mindestanforderungen nach Raumart</span><span lang="en">Minimum requirements by type of location</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th><span lang="de">Ort</span><span lang="en">Location</span></th><th><span lang="de">Übliche Mindestschutzart</span><span lang="en">Usual minimum rating</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span lang="de">Wohnraum, Büro (trocken)</span><span lang="en">living room, office (dry)</span></td><td class="num">IP20</td></tr>
+          <tr><td><span lang="de">Badezimmer ausserhalb der Bereiche</span><span lang="en">bathroom outside the zones</span></td><td class="num">IP20 … IP44</td></tr>
+          <tr><td><span lang="de">Badezimmer Bereich 1 und 2</span><span lang="en">bathroom zones 1 and 2</span></td><td class="num">IPX4</td></tr>
+          <tr><td><span lang="de">Waschküche, Keller (feucht)</span><span lang="en">laundry, cellar (damp)</span></td><td class="num">IP44</td></tr>
+          <tr><td><span lang="de">Aussenbereich, überdacht</span><span lang="en">outdoors, sheltered</span></td><td class="num">IP44</td></tr>
+          <tr><td><span lang="de">Aussenbereich, frei bewittert</span><span lang="en">outdoors, fully exposed</span></td><td class="num">IP54 … IP65</td></tr>
+          <tr><td><span lang="de">Landwirtschaft, Stall</span><span lang="en">agriculture, livestock buildings</span></td><td class="num">IP54 <span lang="de">und höher</span><span lang="en">and above</span></td></tr>
+          <tr><td><span lang="de">Baustelle</span><span lang="en">construction site</span></td><td class="num">IP44 <span lang="de">und höher</span><span lang="en">and above</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Hinweis</span><span lang="en">Note</span></b>
+      <p lang="de">Diese Werte sind <strong>übliche Praxiswerte</strong>. Die verbindliche Mindestschutzart je Raumart und Zone steht in der NIN — <strong>vor der Abgabe dort nachschlagen</strong> und die Artikel zitieren.</p>
+      <p lang="en">These are <strong>common values from practice</strong>. The binding minimum rating per type of location and zone is given in the NIN — <strong>look it up before submitting</strong> and cite the articles.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Was bedeutet IP44 genau?</span><span lang="en">What exactly does IP44 mean?</span></summary>
+      <div class="ans">
+        <p lang="de">Erste Ziffer 4: geschützt gegen feste Fremdkörper ab 1 mm und gegen Berührung mit einem Draht. Zweite Ziffer 4: geschützt gegen Spritzwasser aus allen Richtungen.</p>
+        <p lang="en">First digit 4: protected against solid objects from 1 mm and against contact with a wire. Second digit 4: protected against splashing water from all directions.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was sagt ein X im IP-Code aus?</span><span lang="en">What does an X in the IP code mean?</span></summary>
+      <div class="ans">
+        <p lang="de">Dass diese Eigenschaft nicht geprüft oder nicht angegeben wurde. Es ist kein Nullwert. IPX4 heisst nur, dass gegen Spritzwasser geprüft wurde, über den Festkörperschutz sagt es nichts.</p>
+        <p lang="en">That this property was not tested or not declared. It is not a zero. IPX4 only says it was tested against splashing water; it says nothing about protection from solid bodies.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Worin unterscheiden sich die ersten Ziffern 5 und 6?</span><span lang="en">What is the difference between first digits 5 and 6?</span></summary>
+      <div class="ans">
+        <p lang="de">Bei 5 ist das Gehäuse staubgeschützt: Staub darf eindringen, aber nicht in einer Menge, die die Funktion beeinträchtigt. Bei 6 ist es staubdicht: Es dringt überhaupt kein Staub ein.</p>
+        <p lang="en">At 5 the enclosure is dust protected: dust may enter but not in a quantity that impairs operation. At 6 it is dust tight: no dust enters at all.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Ist IP67 besser als IP65?</span><span lang="en">Is IP67 better than IP65?</span></summary>
+      <div class="ans">
+        <p lang="de">Nicht in jeder Hinsicht. IP67 ist zeitweise untertauchbar, wurde aber nicht zwingend gegen Strahlwasser geprüft. Wer beides braucht, verlangt eine Doppelangabe wie IP67/IP69. Die Wasserziffern sind nur bis 6 durchgehend aufsteigend.</p>
+        <p lang="en">Not in every respect. IP67 is temporarily immersible but was not necessarily tested against water jets. If both are needed, ask for a double rating such as IP67/IP69. The water digits only increase consistently up to 6.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wozu dient der IK-Code?</span><span lang="en">What is the IK code for?</span></summary>
+      <div class="ans">
+        <p lang="de">Er gibt den Schutz gegen mechanische Schläge an, ausgedrückt als Schlagenergie in Joule, von IK00 bis IK10. Der IP-Code sagt darüber nichts aus.</p>
+        <p lang="en">It states the protection against mechanical impact, expressed as impact energy in joules, from IK00 to IK10. The IP code says nothing about this.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Du montierst ein IP65-Gehäuse. Was kann die Schutzart zunichtemachen?</span><span lang="en">You are fitting an IP65 enclosure. What can destroy the rating?</span></summary>
+      <div class="ans">
+        <p lang="de">Eine fehlende Blindverschraubung, eine zu grosse oder zu kleine Kabelverschraubung, eine verdrehte oder beschädigte Dichtung, ungleichmässig angezogene Deckelschrauben und eigenmächtige Bohrungen im Gehäuse. Die Schutzart gilt nur für das fachgerecht montierte Gehäuse.</p>
+        <p lang="en">A missing blanking plug, an over- or undersized cable gland, a twisted or damaged gasket, unevenly tightened lid screws, and drilling the enclosure where it is not intended. The rating only applies to a properly assembled enclosure.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welche Schutzart wählst du für eine Leuchte in einer Turnhalle?</span><span lang="en">Which rating do you choose for a luminaire in a gymnasium?</span></summary>
+      <div class="ans">
+        <p lang="de">Wichtiger als eine hohe IP-Ziffer ist hier ein hoher IK-Wert gegen Ballwurf, üblicherweise IK08 oder höher, kombiniert mit einer Schutzart, die die Reinigung verträgt. Ballwurfsichere Leuchten sind eine eigene Produktkategorie.</p>
+        <p lang="en">More important than a high IP figure here is a high IK value against ball impact, usually IK08 or above, combined with a rating that tolerates cleaning. Ball-impact-resistant luminaires are a product category of their own.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum gehören Kabelverschraubungen nach unten?</span><span lang="en">Why do cable glands belong at the bottom?</span></summary>
+      <div class="ans">
+        <p lang="de">Damit Wasser ablaufen kann und sich nicht an der Einführung sammelt. Von oben eingeführte Kabel leiten Wasser entlang des Mantels direkt in die Verschraubung. Wo eine Einführung von oben unvermeidbar ist, wird eine Tropfschlaufe gelegt.</p>
+        <p lang="en">So water can run off instead of collecting at the entry. Cables entering from above carry water along the sheath straight into the gland. Where a top entry is unavoidable, a drip loop is formed.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="04-fi-schalter.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>04 · <span lang="de">FI-Schalter</span><span lang="en">Residual Current Devices</span></b>
+  </a>
+  <a class="next" href="06-badezimmer.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>06 · <span lang="de">Badezimmer</span><span lang="en">Bathrooms</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 05 · IP-Kennzeichnung</span><span lang="en">Learning Documentation 05 · IP Ratings</span></span>
+  <span>Yanik · Etavis · <span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span></span>
+  <span><span lang="de">Normen: EN 60529 (IP) · EN 62262 (IK) · NIN</span><span lang="en">Standards: EN 60529 (IP) · EN 62262 (IK) · NIN</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

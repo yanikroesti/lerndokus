@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 01 — Glühlampen" data-en="Learning Documentation 01 — Incandescent Lamps">Lerndokumentation 01 — Glühlampen</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span>
+    <span lang="de">Thema 01</span><span lang="en">Topic 01</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">01</div>
+    <h1><span lang="de">Glühlampen</span><span lang="en">Incandescent<br>Lamps</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Aufbau · Wirkungsgrad · Modelle · Halogentechnik · Sockel</span>
+    <span lang="en">Design · efficiency · types · halogen technology · caps</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">01 von 12</span><span lang="en">01 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Glühlampe">
+        <circle cx="110" cy="62" r="34" fill="#F0DBD4" stroke="#171614" stroke-width="2.4"/>
+        <path d="M96 96 h28 v8 h-28 z M96 106 h28 v8 h-28 z M96 116 h28 v8 h-28 z" fill="#DFD9CB" stroke="#171614" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M100 78 q 4 -18 10 -18 q 6 0 10 18" fill="none" stroke="#B8402A" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M110 16 v-10 M148 30 l8 -8 M72 30 l-8 -8 M160 62 h10 M50 62 h-10" stroke="#9A7B1F" stroke-width="2.6" stroke-linecap="round"/>
+        <circle cx="100" cy="58" r="2.8" fill="#171614"/>
+        <circle cx="120" cy="58" r="2.8" fill="#171614"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Prinzip und Einordnung</span><span lang="en">Principle and classification</span></h2>
+
+    <p class="lead" lang="de">Die Glühlampe ist ein <strong>Temperaturstrahler</strong>. Ein dünner Draht wird vom Strom so stark erhitzt, dass er glüht und Licht abgibt. Das ist die älteste elektrische Lichtquelle — und zugleich die ineffizienteste, die je in Serie gebaut wurde.</p>
+    <p class="lead" lang="en">An incandescent lamp is a <strong>thermal radiator</strong>. Current heats a thin wire until it glows and emits light. It is the oldest electric light source — and at the same time the least efficient ever mass-produced.</p>
+
+    <p lang="de">Auch wenn die klassische Glühlampe für die Allgemeinbeleuchtung nicht mehr verkauft werden darf, gehört sie in die Ausbildung: Sie erklärt die Begriffe <em>Lichtstrom</em>, <em>Lichtausbeute</em> und <em>Farbtemperatur</em> am einfachsten Beispiel, und in Bestandsanlagen trifft man sie weiterhin an.</p>
+    <p lang="en">Even though the classic bulb may no longer be sold for general lighting, it belongs in training: it explains <em>luminous flux</em>, <em>luminous efficacy</em> and <em>colour temperature</em> on the simplest possible example, and it is still found in existing installations.</p>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Die entscheidende Zahl</span><span lang="en">The decisive figure</span></b>
+      <p lang="de">Von der aufgenommenen Leistung werden nur rund <strong>5 %</strong> in sichtbares Licht umgesetzt. Die übrigen 95 % gehen als Wärme verloren. Eine Glühlampe ist damit genau genommen ein kleiner Heizkörper, der nebenbei etwas leuchtet.</p>
+      <p lang="en">Only about <strong>5 %</strong> of the input power becomes visible light. The remaining 95 % is lost as heat. Strictly speaking an incandescent lamp is a small heater that happens to glow a little.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Aufbau</span><span lang="en">Construction</span></h2>
+
+    <figure>
+      <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schnitt durch eine Glühlampe">
+        <defs>
+          <style>
+            .gl{fill:#FBF9F5;stroke:#171614;stroke-width:2.4}
+            .mt{fill:#C9C2B4;stroke:#171614;stroke-width:1.8}
+            .wire{fill:none;stroke:#B8402A;stroke-width:2.6;stroke-linecap:round}
+            .sup{fill:none;stroke:#48433B;stroke-width:2;stroke-linecap:round}
+            .gas{fill:#EFEAE0}
+            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
+            .ldr{fill:none;stroke:#7D7669;stroke-width:1.2}
+            .cn{fill:#171614}
+            .cnt{fill:#F4F1EA;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-anchor:middle}
+          </style>
+        </defs>
+
+        <!-- Kolben -->
+        <path class="gl" d="M300 40 a86 86 0 0 1 0 172 c-14 14 -18 30 -18 44 h-50 c0 -14 -4 -30 -18 -44 a86 86 0 0 1 0 -172 a86 86 0 0 1 86 0 z" transform="translate(-43,0)"/>
+        <ellipse class="gas" cx="257" cy="126" rx="72" ry="72" opacity=".5"/>
+
+        <!-- Glaswindung / Quetschfuss -->
+        <path class="mt" d="M239 216 h36 v40 h-36 z"/>
+        <path class="sup" d="M248 216 V150 M266 216 V150"/>
+
+        <!-- Wendel -->
+        <path class="wire" d="M248 150 q 4 -12 9 0 q 5 12 9 0" />
+        <path class="wire" d="M248 150 h18" opacity="0"/>
+        <g class="wire">
+          <path d="M246 148 c 3 -10 8 -10 11 0 c 3 10 8 10 11 0"/>
+          <path d="M246 140 c 3 -10 8 -10 11 0 c 3 10 8 10 11 0"/>
+        </g>
+
+        <!-- Sockel -->
+        <path class="mt" d="M232 256 h50 v14 h-50 z"/>
+        <path class="mt" d="M232 270 h50 v12 h-50 z"/>
+        <path class="mt" d="M232 282 h50 v12 h-50 z"/>
+        <path class="mt" d="M232 294 h50 v12 h-50 z"/>
+        <path d="M240 306 h34 a17 12 0 0 1 -34 0 z" fill="#26241F" stroke="#171614" stroke-width="1.8"/>
+        <path d="M232 300 h50" stroke="#EFEAE0" stroke-width="2"/>
+
+        <!-- Callouts -->
+        <circle class="cn" cx="330" cy="86" r="12"/><text class="cnt" x="330" y="90">1</text>
+        <circle class="cn" cx="300" cy="144" r="12"/><text class="cnt" x="300" y="148">2</text>
+        <circle class="cn" cx="196" cy="126" r="12"/><text class="cnt" x="196" y="130">3</text>
+        <circle class="cn" cx="196" cy="182" r="12"/><text class="cnt" x="196" y="186">4</text>
+        <circle class="cn" cx="316" cy="236" r="12"/><text class="cnt" x="316" y="240">5</text>
+        <circle class="cn" cx="316" cy="284" r="12"/><text class="cnt" x="316" y="288">6</text>
+        <circle class="cn" cx="316" cy="318" r="12"/><text class="cnt" x="316" y="322">7</text>
+
+        <path class="ldr" d="M342 86 H470"/>
+        <text class="lg" x="478" y="82"><tspan lang="de">Glaskolben</tspan><tspan lang="en">Glass bulb</tspan></text>
+        <text class="lgs" x="478" y="98"><tspan lang="de">KLAR ODER MATTIERT</tspan><tspan lang="en">CLEAR OR FROSTED</tspan></text>
+
+        <path class="ldr" d="M312 144 H470 V132"/>
+        <text class="lg" x="478" y="128"><tspan lang="de">Glühwendel</tspan><tspan lang="en">Filament</tspan></text>
+        <text class="lgs" x="478" y="144"><tspan lang="de">WOLFRAM, RUND 2500 °C</tspan><tspan lang="en">TUNGSTEN, ABOUT 2500 °C</tspan></text>
+
+        <path class="ldr" d="M184 126 H90 V150"/>
+        <text class="lg" x="30" y="170"><tspan lang="de">Füllgas</tspan><tspan lang="en">Fill gas</tspan></text>
+        <text class="lgs" x="30" y="186"><tspan lang="de">ARGON ODER KRYPTON</tspan><tspan lang="en">ARGON OR KRYPTON</tspan></text>
+
+        <path class="ldr" d="M184 182 H90 V216"/>
+        <text class="lg" x="30" y="236"><tspan lang="de">Halterungsdrähte</tspan><tspan lang="en">Support wires</tspan></text>
+
+        <path class="ldr" d="M328 236 H470"/>
+        <text class="lg" x="478" y="232"><tspan lang="de">Quetschfuss</tspan><tspan lang="en">Pinch seal</tspan></text>
+        <text class="lgs" x="478" y="248"><tspan lang="de">GASDICHTE DURCHFÜHRUNG</tspan><tspan lang="en">GAS-TIGHT FEEDTHROUGH</tspan></text>
+
+        <path class="ldr" d="M328 284 H470"/>
+        <text class="lg" x="478" y="280"><tspan lang="de">Schraubsockel</tspan><tspan lang="en">Screw cap</tspan></text>
+        <text class="lgs" x="478" y="296">E27 · E14</text>
+
+        <path class="ldr" d="M328 318 H470"/>
+        <text class="lg" x="478" y="314"><tspan lang="de">Fusskontakt</tspan><tspan lang="en">Foot contact</tspan></text>
+        <text class="lgs" x="478" y="330"><tspan lang="de">HIER LIEGT DER POLLEITER</tspan><tspan lang="en">THE LINE CONDUCTOR GOES HERE</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Schnitt durch eine Glühlampe mit Schraubsockel.</span>
+        <span lang="en"> — Section through an incandescent lamp with screw cap.</span>
+      </figcaption>
+    </figure>
+
+    <ul class="legend">
+      <li><span class="n">1</span><span lang="de">Glaskolben — hält das Füllgas, klar oder mattiert</span><span lang="en">Glass bulb — holds the fill gas, clear or frosted</span></li>
+      <li><span class="n">2</span><span lang="de">Glühwendel aus Wolfram — Schmelzpunkt rund 3400 °C</span><span lang="en">Tungsten filament — melting point about 3400 °C</span></li>
+      <li><span class="n">3</span><span lang="de">Füllgas — bremst das Verdampfen des Wolframs</span><span lang="en">Fill gas — slows evaporation of the tungsten</span></li>
+      <li><span class="n">4</span><span lang="de">Halterungsdrähte — stützen die Wendel</span><span lang="en">Support wires — hold the filament</span></li>
+      <li><span class="n">5</span><span lang="de">Quetschfuss — gasdichte Stromdurchführung</span><span lang="en">Pinch seal — gas-tight current feedthrough</span></li>
+      <li><span class="n">6</span><span lang="de">Schraubsockel — Gewinde, führt den Neutralleiter</span><span lang="en">Screw cap — thread, carries the neutral</span></li>
+      <li><span class="n">7</span><span lang="de">Fusskontakt — führt den Polleiter</span><span lang="en">Foot contact — carries the line conductor</span></li>
+    </ul>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Sicherheitsregel am Sockel</span><span lang="en">Safety rule at the cap</span></b>
+      <p lang="de">Der <strong>Polleiter gehört an den Fusskontakt</strong>, der Neutralleiter ans Gewinde. Beim Wechseln der Lampe ist das Gewinde leichter berührbar als der Fusskontakt — vertauscht man die beiden, steht das Gewinde beim ausgeschalteten Schalter unter Spannung.</p>
+      <p lang="en">The <strong>line conductor belongs on the foot contact</strong>, the neutral on the thread. When changing a lamp the thread is easier to touch than the foot contact — swap the two and the thread stays live even with the switch off.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Wirkungsgrad und Kennwerte</span><span lang="en">Efficiency and characteristics</span></h2>
+
+    <p lang="de">Die <strong>Lichtausbeute</strong> sagt, wie viel Licht aus einem Watt herausgeholt wird. Sie ist die wichtigste Kennzahl beim Vergleich von Lichtquellen.</p>
+    <p lang="en">The <strong>luminous efficacy</strong> states how much light is obtained from one watt. It is the key figure when comparing light sources.</p>
+
+    <div class="formula">η = Φ / P &nbsp;&nbsp;[lm/W] &nbsp;&nbsp;<span lang="de">Lichtstrom je Watt</span><span lang="en">luminous flux per watt</span></div>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Lichtquelle</span><span lang="en">Light source</span></th>
+            <th><span lang="de">Lichtausbeute</span><span lang="en">Efficacy</span></th>
+            <th><span lang="de">Lebensdauer</span><span lang="en">Life</span></th>
+            <th><span lang="de">Farbwiedergabe R<sub>a</sub></span><span lang="en">Colour rendering R<sub>a</sub></span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span lang="de">Glühlampe</span><span lang="en">Incandescent</span></td><td class="num">≈ 10 … 15 lm/W</td><td class="num">≈ 1000 h</td><td class="num">100</td></tr>
+          <tr><td><span lang="de">Halogenlampe</span><span lang="en">Halogen</span></td><td class="num">≈ 15 … 25 lm/W</td><td class="num">2000 … 4000 h</td><td class="num">100</td></tr>
+          <tr><td><span lang="de">Leuchtstofflampe</span><span lang="en">Fluorescent</span></td><td class="num">≈ 60 … 100 lm/W</td><td class="num">10 000 … 20 000 h</td><td class="num">80 … 90</td></tr>
+          <tr><td>LED</td><td class="num">≈ 80 … 200 lm/W</td><td class="num">20 000 … 50 000 h</td><td class="num">80 … 95</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="subtitle" style="margin-top:-6px">
+      <span lang="de">Richtwerte. Die genauen Zahlen stehen auf der Verpackung und im Datenblatt des Herstellers.</span>
+      <span lang="en">Guide values. Exact figures are on the packaging and in the manufacturer's data sheet.</span>
+    </p>
+
+    <h3><span lang="de">Warum so schlecht?</span><span lang="en">Why so poor?</span></h3>
+    <p lang="de">Die Wendel erreicht rund <strong>2500 °C</strong>. Bei dieser Temperatur liegt der grösste Teil der abgestrahlten Energie im <strong>Infrarotbereich</strong> — also in der Wärme, nicht im sichtbaren Licht. Höher heizen ginge zwar, dann verdampft aber das Wolfram zu schnell und die Lampe brennt durch. Die Glühlampe steckt in diesem Zielkonflikt fest: mehr Licht bedeutet weniger Lebensdauer.</p>
+    <p lang="en">The filament reaches around <strong>2500 °C</strong>. At that temperature most of the radiated energy lies in the <strong>infrared</strong> — in heat, not visible light. Running hotter is possible, but then the tungsten evaporates too fast and the lamp burns out. The incandescent lamp is stuck in this conflict: more light means less life.</p>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Weitere Kennwerte</span><span lang="en">Further characteristics</span></b>
+      <ul lang="de">
+        <li><strong>Farbtemperatur</strong> rund 2700 K — warmweiss, deshalb die Beliebtheit im Wohnbereich</li>
+        <li><strong>Farbwiedergabe R<sub>a</sub> = 100</strong> — besser geht nicht, das Licht enthält alle Wellenlängen</li>
+        <li><strong>Dimmbar</strong> ohne Zusatzgerät und ohne Farbveränderung ins Kalte</li>
+        <li><strong>Sofort volle Helligkeit</strong>, unempfindlich gegen häufiges Schalten</li>
+        <li><strong>Einschaltstrom</strong> bis zum Zehnfachen — der kalte Wendel hat einen kleinen Widerstand</li>
+      </ul>
+      <ul lang="en">
+        <li><strong>Colour temperature</strong> about 2700 K — warm white, hence its popularity in homes</li>
+        <li><strong>Colour rendering R<sub>a</sub> = 100</strong> — cannot be beaten, the light contains all wavelengths</li>
+        <li><strong>Dimmable</strong> without extra equipment and without shifting towards cold light</li>
+        <li><strong>Instant full brightness</strong>, insensitive to frequent switching</li>
+        <li><strong>Inrush current</strong> up to ten times — the cold filament has a low resistance</li>
+      </ul>
+    </div>
+
+    <p lang="de">Dieser hohe Einschaltstrom ist der Grund, weshalb eine Glühlampe fast immer <strong>beim Einschalten</strong> durchbrennt und selten mitten im Betrieb.</p>
+    <p lang="en">This high inrush is the reason why a bulb almost always fails <strong>at switch-on</strong> and rarely in the middle of operation.</p>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Halogenlampen</span><span lang="en">Halogen lamps</span></h2>
+
+    <p lang="de">Die Halogenlampe ist eine verbesserte Glühlampe. Dem Füllgas wird ein <strong>Halogen</strong> beigemischt (Jod oder Brom). Damit entsteht ein Kreisprozess, der das verdampfte Wolfram wieder zur Wendel zurückbringt.</p>
+    <p lang="en">A halogen lamp is an improved incandescent lamp. A <strong>halogen</strong> (iodine or bromine) is added to the fill gas, creating a cycle that returns evaporated tungsten to the filament.</p>
+
+    <h3><span lang="de">Der Halogenkreisprozess</span><span lang="en">The halogen cycle</span></h3>
+    <ol lang="de">
+      <li>Von der heissen Wendel verdampft Wolfram.</li>
+      <li>In der kühleren Zone nahe der Kolbenwand verbindet es sich mit dem Halogen zu einer Wolfram-Halogen-Verbindung.</li>
+      <li>Diese Verbindung wandert zurück zur heissen Wendel.</li>
+      <li>Dort zerfällt sie wieder, das Wolfram lagert sich an — der Kreis schliesst sich.</li>
+    </ol>
+    <ol lang="en">
+      <li>Tungsten evaporates from the hot filament.</li>
+      <li>In the cooler zone near the bulb wall it combines with the halogen into a tungsten-halogen compound.</li>
+      <li>This compound migrates back to the hot filament.</li>
+      <li>There it breaks down again and the tungsten is redeposited — the cycle closes.</li>
+    </ol>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Zwei Folgen daraus</span><span lang="en">Two consequences</span></b>
+      <p lang="de">Erstens <strong>schwärzt der Kolben nicht</strong>, die Lampe bleibt bis zum Schluss gleich hell. Zweitens darf die Wendel <strong>heisser</strong> betrieben werden — das gibt mehr Licht pro Watt und eine leicht weissere Lichtfarbe. Der Kreisprozess funktioniert allerdings nur bei hoher Kolbentemperatur, weshalb der Kolben klein und aus Quarzglas ist.</p>
+      <p lang="en">First, the <strong>bulb does not blacken</strong> and the lamp stays equally bright to the end. Second, the filament may run <strong>hotter</strong> — giving more light per watt and a slightly whiter colour. The cycle only works at a high bulb temperature, which is why the bulb is small and made of quartz glass.</p>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Praxisregel</span><span lang="en">Practical rule</span></b>
+      <p lang="de">Quarzglaskolben <strong>nicht mit blossen Fingern anfassen</strong>. Fett von der Haut brennt sich bei der hohen Temperatur ein, das Glas trübt und kann an dieser Stelle springen. Immer ein Tuch oder Handschuh verwenden.</p>
+      <p lang="en">Never touch the quartz bulb <strong>with bare fingers</strong>. Grease from the skin bakes in at the high temperature, clouding the glass, which can then crack at that point. Always use a cloth or glove.</p>
+    </div>
+
+    <h3><span lang="de">Netzspannung oder Niedervolt</span><span lang="en">Mains voltage or low voltage</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Ausführung</span><span lang="en">Version</span></th>
+            <th><span lang="de">Spannung</span><span lang="en">Voltage</span></th>
+            <th><span lang="de">Merkmal</span><span lang="en">Feature</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span lang="de">Hochvolt-Halogen</span><span lang="en">Mains halogen</span></td>
+            <td class="num">230 V</td>
+            <td><span lang="de">direkt am Netz, Sockel E27, E14, GU10, G9</span><span lang="en">direct on mains, caps E27, E14, GU10, G9</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Niedervolt-Halogen</span><span lang="en">Low-voltage halogen</span></td>
+            <td class="num">12 V</td>
+            <td><span lang="de">braucht einen Transformator; dickere, robustere Wendel, kleinere Bauform</span><span lang="en">needs a transformer; thicker, more robust filament, smaller size</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p lang="de">Bei 12 V fliesst bei gleicher Leistung rund der <strong>zwanzigfache Strom</strong>. Die Wendel wird dadurch kürzer und dicker, was sie mechanisch stabiler und die Lichtquelle punktförmiger macht — ideal für Spots. Dafür sind die Leitungsquerschnitte auf der Sekundärseite grösser zu wählen und die Leitungen kurz zu halten.</p>
+    <p lang="en">At 12 V the current is about <strong>twenty times higher</strong> for the same power. The filament becomes shorter and thicker, which makes it mechanically more robust and the light source more point-like — ideal for spots. In exchange, the secondary-side conductors must be larger and the runs kept short.</p>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Modelle und Sockel</span><span lang="en">Types and caps</span></h2>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Sockel</span><span lang="en">Cap</span></th>
+            <th><span lang="de">Bauart</span><span lang="en">Design</span></th>
+            <th><span lang="de">Typischer Einsatz</span><span lang="en">Typical use</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num"><strong>E27</strong></td><td><span lang="de">Schraubsockel, 27 mm</span><span lang="en">screw, 27 mm</span></td><td><span lang="de">Standardleuchten im Wohnbereich</span><span lang="en">standard domestic luminaires</span></td></tr>
+          <tr><td class="num"><strong>E14</strong></td><td><span lang="de">Schraubsockel, 14 mm</span><span lang="en">screw, 14 mm</span></td><td><span lang="de">Kerzenlampen, Kleinleuchten, Kühlschrank</span><span lang="en">candle lamps, small fittings, fridges</span></td></tr>
+          <tr><td class="num"><strong>E40</strong></td><td><span lang="de">Schraubsockel, 40 mm</span><span lang="en">screw, 40 mm</span></td><td><span lang="de">Hallen- und Strassenbeleuchtung</span><span lang="en">industrial and street lighting</span></td></tr>
+          <tr><td class="num"><strong>GU10</strong></td><td><span lang="de">Steck-Dreh-Sockel, 230 V</span><span lang="en">twist-lock, 230 V</span></td><td><span lang="de">Einbauspots ohne Trafo</span><span lang="en">recessed spots without transformer</span></td></tr>
+          <tr><td class="num"><strong>GU5.3</strong></td><td><span lang="de">Stiftsockel, 12 V</span><span lang="en">pin base, 12 V</span></td><td><span lang="de">Niedervolt-Spots mit Trafo</span><span lang="en">low-voltage spots with transformer</span></td></tr>
+          <tr><td class="num"><strong>G9</strong></td><td><span lang="de">Stiftsockel, 230 V</span><span lang="en">pin base, 230 V</span></td><td><span lang="de">kompakte Halogenlampen</span><span lang="en">compact halogen lamps</span></td></tr>
+          <tr><td class="num"><strong>B22</strong></td><td><span lang="de">Bajonettsockel</span><span lang="en">bayonet</span></td><td><span lang="de">ältere und erschütterungsfeste Anwendungen</span><span lang="en">older and vibration-proof applications</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Kolbenformen</span><span lang="en">Bulb shapes</span></h3>
+    <ul lang="de">
+      <li><strong>Standardform</strong> — die klassische Birne für Allgemeinbeleuchtung</li>
+      <li><strong>Kerzen- und Tropfenform</strong> — für sichtbare Leuchten, Kronleuchter</li>
+      <li><strong>Reflektorlampe</strong> — verspiegelter Kolben, bündelt das Licht in eine Richtung</li>
+      <li><strong>Röhrenform</strong> — Halogenstab für Fluter und Baustrahler</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Standard shape</strong> — the classic bulb for general lighting</li>
+      <li><strong>Candle and drop shapes</strong> — for visible fittings and chandeliers</li>
+      <li><strong>Reflector lamp</strong> — mirrored bulb, directing the light one way</li>
+      <li><strong>Tubular</strong> — halogen linear lamp for floodlights and site lamps</li>
+    </ul>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Rechtliche Lage</span><span lang="en">Legal situation</span></b>
+      <p lang="de">Klassische Glühlampen für die Allgemeinbeleuchtung dürfen seit mehreren Jahren nicht mehr in Verkehr gebracht werden; die Einschränkungen wurden stufenweise eingeführt und schrittweise auf ineffiziente Halogenlampen ausgedehnt. Bestehende Lampen dürfen weiter betrieben werden. <strong>Für die Abgabe die aktuelle Regelung beim BFE beziehungsweise in der Energieeffizienzverordnung nachschlagen</strong> — der Stand ändert sich.</p>
+      <p lang="en">Classic incandescent lamps for general lighting may no longer be placed on the market; the restrictions were introduced in stages and progressively extended to inefficient halogen lamps. Existing lamps may continue to be used. <strong>Look up the current rules at the Swiss Federal Office of Energy or in the energy efficiency ordinance</strong> — the situation keeps changing.</p>
+    </div>
+
+    <h3><span lang="de">Ersatz durch LED</span><span lang="en">Replacing with LED</span></h3>
+    <p lang="de">Beim Ersatz wird nicht mehr in Watt, sondern in <strong>Lumen</strong> gerechnet. Als grober Anhaltspunkt entspricht eine 60-W-Glühlampe rund 700 lm. Zusätzlich zu prüfen sind Farbtemperatur, Dimmbarkeit und — bei Niedervolt — ob der vorhandene Transformator die kleine LED-Last überhaupt noch erkennt.</p>
+    <p lang="en">When replacing, you no longer count watts but <strong>lumens</strong>. As a rough guide a 60 W bulb corresponds to about 700 lm. Also check colour temperature, dimmability and — for low voltage — whether the existing transformer still recognises the small LED load at all.</p>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Wie viel Prozent der aufgenommenen Leistung wird zu Licht?</span><span lang="en">What percentage of the input power becomes light?</span></summary>
+      <div class="ans">
+        <p lang="de">Rund 5 %. Die übrigen 95 % gehen als Wärme verloren, weil die Wendel bei ihrer Temperatur hauptsächlich im Infrarotbereich strahlt.</p>
+        <p lang="en">About 5 %. The remaining 95 % is lost as heat, because at its temperature the filament radiates mainly in the infrared.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum wird die Wendel nicht einfach heisser betrieben?</span><span lang="en">Why not simply run the filament hotter?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil dann das Wolfram schneller verdampft. Die Wendel wird dünner und reisst, der Kolben schwärzt. Mehr Licht bedeutet bei der Glühlampe immer weniger Lebensdauer.</p>
+        <p lang="en">Because the tungsten then evaporates faster. The filament thins and breaks, and the bulb blackens. With an incandescent lamp, more light always means less life.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Erkläre den Halogenkreisprozess.</span><span lang="en">Explain the halogen cycle.</span></summary>
+      <div class="ans">
+        <p lang="de">Verdampftes Wolfram verbindet sich in der kühleren Zone nahe der Kolbenwand mit dem beigemischten Halogen. Die Verbindung wandert zur heissen Wendel zurück, zerfällt dort und lagert das Wolfram wieder an. Dadurch schwärzt der Kolben nicht und die Wendel darf heisser betrieben werden.</p>
+        <p lang="en">Evaporated tungsten combines with the added halogen in the cooler zone near the bulb wall. The compound migrates back to the hot filament, breaks down there and redeposits the tungsten. As a result the bulb does not blacken and the filament may run hotter.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum darf ein Halogenkolben nicht mit blossen Fingern berührt werden?</span><span lang="en">Why must a halogen bulb not be touched with bare fingers?</span></summary>
+      <div class="ans">
+        <p lang="de">Hautfett brennt sich bei der hohen Kolbentemperatur ein. Das Quarzglas trübt an dieser Stelle, erhitzt sich örtlich stärker und kann springen.</p>
+        <p lang="en">Skin grease bakes in at the high bulb temperature. The quartz glass clouds at that spot, heats up locally and can crack.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">An welchen Kontakt der Fassung gehört der Polleiter und warum?</span><span lang="en">Which lampholder contact takes the line conductor, and why?</span></summary>
+      <div class="ans">
+        <p lang="de">An den Fusskontakt. Das Gewinde ist beim Lampenwechsel viel leichter berührbar; liegt dort der Polleiter, steht es auch bei ausgeschaltetem Schalter unter Spannung.</p>
+        <p lang="en">The foot contact. The thread is far easier to touch when changing a lamp; if the line conductor were there, it would be live even with the switch off.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum brennt eine Glühlampe meist beim Einschalten durch?</span><span lang="en">Why does a bulb usually fail at switch-on?</span></summary>
+      <div class="ans">
+        <p lang="de">Die kalte Wendel hat einen viel kleineren Widerstand als die heisse. Beim Einschalten fliesst deshalb kurzzeitig bis zum Zehnfachen des Betriebsstromes. Diese Stromspitze belastet die bereits dünn gewordene Wendel am stärksten.</p>
+        <p lang="en">The cold filament has a far lower resistance than the hot one. At switch-on the current is therefore briefly up to ten times the operating current. This peak stresses the already thinned filament most.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was ändert sich beim Ersatz einer 12-V-Halogenlampe durch LED?</span><span lang="en">What changes when replacing a 12 V halogen lamp with LED?</span></summary>
+      <div class="ans">
+        <p lang="de">Die Last sinkt stark. Ein vorhandener elektronischer Transformator hat eine Mindestlast und erkennt die kleine LED-Leistung unter Umständen nicht mehr — die Lampe flackert oder bleibt dunkel. Dann braucht es einen LED-tauglichen Konverter. Zusätzlich werden Lumen statt Watt verglichen und die Dimmbarkeit ist zu prüfen.</p>
+        <p lang="en">The load drops sharply. An existing electronic transformer has a minimum load and may no longer detect the small LED power — the lamp flickers or stays dark. An LED-capable converter is then required. In addition, lumens rather than watts are compared and dimmability must be checked.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was bedeutet R<sub>a</sub> = 100?</span><span lang="en">What does R<sub>a</sub> = 100 mean?</span></summary>
+      <div class="ans">
+        <p lang="de">Die bestmögliche Farbwiedergabe. Das Licht enthält alle Wellenlängen des sichtbaren Spektrums, Farben erscheinen wie im Tageslicht. Genau darin ist die Glühlampe jeder anderen Lichtquelle bis heute überlegen.</p>
+        <p lang="en">The best possible colour rendering. The light contains all wavelengths of the visible spectrum, so colours appear as in daylight. In this one respect the incandescent lamp still beats every other light source.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <span class="void"></span>
+  <a class="next" href="02-fl-leuchten.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>02 · <span lang="de">FL-Leuchten</span><span lang="en">Fluorescent Luminaires</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 01 · Glühlampen</span><span lang="en">Learning Documentation 01 · Incandescent Lamps</span></span>
+  <span>Yanik · Etavis · <span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span></span>
+  <span><span lang="de">Grundlagen: NIN · Energieeffizienzverordnung</span><span lang="en">Basis: NIN · Swiss energy efficiency ordinance</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

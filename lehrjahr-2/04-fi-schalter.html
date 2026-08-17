@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 04 — FI-Schalter" data-en="Learning Documentation 04 — Residual Current Devices">Lerndokumentation 04 — FI-Schalter</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span>
+    <span lang="de">Thema 04</span><span lang="en">Topic 04</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">04</div>
+    <h1><span lang="de">FI-Schalter</span><span lang="en">Residual Current<br>Devices</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Aufbau · Modelle · Typ A / B · Zeichnung · Prüfung</span>
+    <span lang="en">Design · types · type A / B · drawing · testing</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">04 von 12</span><span lang="en">04 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: FI-Schalter mit Prüftaste">
+        <rect x="58" y="24" width="104" height="102" rx="6" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <rect x="72" y="38" width="34" height="24" rx="3" fill="#1D5872" stroke="#153F52" stroke-width="2"/>
+        <text x="89" y="56" font-family="'Archivo',sans-serif" font-size="14" font-weight="800" fill="#F4F1EA" text-anchor="middle">I</text>
+        <circle cx="134" cy="50" r="12" fill="#B8402A" stroke="#8A2F1E" stroke-width="2"/>
+        <text x="134" y="55" font-family="'Archivo',sans-serif" font-size="13" font-weight="800" fill="#F4F1EA" text-anchor="middle">T</text>
+        <circle cx="92" cy="86" r="3" fill="#171614"/>
+        <circle cx="128" cy="86" r="3" fill="#171614"/>
+        <path d="M94 102 q 16 9 32 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+        <text x="110" y="120" font-family="'IBM Plex Mono',monospace" font-size="11" font-weight="600" fill="#1D5872" text-anchor="middle">30 mA</text>
+        <path d="M70 24 v-12 M98 24 v-12 M122 24 v-12 M150 24 v-12" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M70 126 v12 M98 126 v12 M122 126 v12 M150 126 v12" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Aufgabe</span><span lang="en">Task</span></h2>
+
+    <p class="lead" lang="de">Der Fehlerstromschutzschalter ist die einzige Schutzeinrichtung in der Verteilung, die den <strong>Menschen</strong> schützt. Sicherung und LS-Automat schützen die Leitung — sie merken nichts davon, wenn ein Strom über einen Körper zur Erde abfliesst, weil dieser Strom für sie viel zu klein ist.</p>
+    <p class="lead" lang="en">The residual current device is the only protective device in the board that protects the <strong>person</strong>. Fuses and breakers protect the cable — they notice nothing when current flows through a body to earth, because that current is far too small for them.</p>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Der Grössenvergleich</span><span lang="en">A comparison of magnitudes</span></b>
+      <p lang="de">Ein Mensch, der einen Aussenleiter berührt, zieht vielleicht <strong>50 bis 200 mA</strong>. Ein B16-Automat schaltet erst bei <strong>48 000 mA</strong> magnetisch ab. Für ihn passiert schlicht nichts. Der FI dagegen erkennt bereits <strong>30 mA</strong> Differenz und trennt in Millisekunden.</p>
+      <p lang="en">A person touching a line conductor may draw <strong>50 to 200 mA</strong>. A B16 breaker only trips magnetically at <strong>48 000 mA</strong>. As far as it is concerned, nothing happens. The RCD, by contrast, detects a difference of just <strong>30 mA</strong> and disconnects within milliseconds.</p>
+    </div>
+
+    <h3><span lang="de">Wovor der FI schützt</span><span lang="en">What the RCD protects against</span></h3>
+    <ul lang="de">
+      <li><strong>Direktes Berühren</strong> eines aktiven Leiters — als Zusatzschutz, nicht als alleinige Massnahme</li>
+      <li><strong>Indirektes Berühren</strong> — Isolationsfehler bringt Spannung auf ein Metallgehäuse</li>
+      <li><strong>Brandschutz</strong> — schleichende Isolationsfehler, die einen Kriechstrom und damit Wärme erzeugen</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Direct contact</strong> with a live conductor — as additional protection, not as the sole measure</li>
+      <li><strong>Indirect contact</strong> — an insulation fault putting voltage on a metal enclosure</li>
+      <li><strong>Fire protection</strong> — creeping insulation faults producing leakage current and therefore heat</li>
+    </ul>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Wichtige Einschränkung</span><span lang="en">Important limitation</span></b>
+      <p lang="de">Der FI erkennt <strong>nur Ströme, die den Stromkreis verlassen</strong>. Wer gleichzeitig Aussenleiter und Neutralleiter berührt, wird nicht geschützt: Der Strom fliesst hin und wieder zurück, die Summe bleibt null. Der FI ersetzt darum niemals das Freischalten.</p>
+      <p lang="en">The RCD only detects <strong>current that leaves the circuit</strong>. Anyone touching the line and the neutral at the same time is not protected: the current flows out and back, and the sum stays zero. An RCD therefore never replaces isolating the circuit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Aufbau und Wirkungsweise</span><span lang="en">Construction and operation</span></h2>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wirkungsweise des FI-Schalters mit Summenstromwandler">
+        <defs>
+          <style>
+            .wl{fill:none;stroke:#B8402A;stroke-width:3;stroke-linecap:round}
+            .wn{fill:none;stroke:#1D5872;stroke-width:3;stroke-linecap:round}
+            .wpe{fill:none;stroke:#3F6B43;stroke-width:2.6;stroke-linecap:round;stroke-dasharray:8 5}
+            .core{fill:none;stroke:#48433B;stroke-width:9}
+            .coil{fill:none;stroke:#9A7B1F;stroke-width:2.6}
+            .bx{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
+            .lgb{font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;fill:#171614}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
+            .ldr{fill:none;stroke:#7D7669;stroke-width:1.2}
+            .arw{fill:none;stroke:#171614;stroke-width:2;stroke-linecap:round}
+          </style>
+        </defs>
+
+        <!-- Ringkern -->
+        <ellipse class="core" cx="330" cy="150" rx="86" ry="58"/>
+        <text class="lgs" x="330" y="238" text-anchor="middle"><tspan lang="de">SUMMENSTROMWANDLER</tspan><tspan lang="en">CORE BALANCE TRANSFORMER</tspan></text>
+
+        <!-- Leiter durch den Kern -->
+        <path class="wl" d="M60 126 H600"/>
+        <path class="wn" d="M60 174 H600"/>
+        <text class="lgb" x="60" y="116" fill="#B8402A">L</text>
+        <text class="lgb" x="60" y="200" fill="#1D5872">N</text>
+
+        <!-- Stromrichtungspfeile -->
+        <path class="arw" d="M180 126 h30 M204 120 l8 6 l-8 6" stroke="#B8402A"/>
+        <path class="arw" d="M210 174 h-30 M186 168 l-8 6 l8 6" stroke="#1D5872"/>
+
+        <!-- Sekundärwicklung -->
+        <path class="coil" d="M330 92 q -12 -10 0 -20 q 12 -10 0 -20"/>
+        <path class="coil" d="M330 52 H408"/>
+
+        <!-- Auslöserelais -->
+        <rect class="bx" x="408" y="30" width="86" height="46" rx="3"/>
+        <text class="lg" x="451" y="52" text-anchor="middle"><tspan lang="de">Auslöse-</tspan><tspan lang="en">Trip</tspan></text>
+        <text class="lg" x="451" y="68" text-anchor="middle"><tspan lang="de">relais</tspan><tspan lang="en">relay</tspan></text>
+
+        <!-- Wirkung auf Kontakte -->
+        <path d="M451 76 V96 H208" stroke="#7D7669" stroke-width="1.8" stroke-dasharray="6 5" fill="none"/>
+        <path d="M208 96 V116" stroke="#7D7669" stroke-width="1.8" stroke-dasharray="6 5" fill="none"/>
+        <!-- Kontakte -->
+        <circle cx="208" cy="126" r="4.5" fill="#171614"/>
+        <circle cx="252" cy="126" r="4.5" fill="#171614"/>
+        <path d="M208 126 L248 112" stroke="#171614" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="208" cy="174" r="4.5" fill="#171614"/>
+        <circle cx="252" cy="174" r="4.5" fill="#171614"/>
+        <path d="M208 174 L248 160" stroke="#171614" stroke-width="3" stroke-linecap="round"/>
+        <text class="lgs" x="196" y="104"><tspan lang="de">ALLPOLIGE TRENNUNG</tspan><tspan lang="en">ALL-POLE DISCONNECTION</tspan></text>
+
+        <!-- Prüfkreis -->
+        <path d="M470 126 V270 H556" stroke="#B8402A" stroke-width="2.4" fill="none"/>
+        <path d="M556 270 h18" stroke="#B8402A" stroke-width="2.4"/>
+        <circle cx="592" cy="270" r="20" fill="#F0DBD4" stroke="#B8402A" stroke-width="2.4"/>
+        <text x="592" y="276" font-family="'Archivo',sans-serif" font-size="16" font-weight="800" fill="#B8402A" text-anchor="middle">T</text>
+        <path d="M592 250 V174" stroke="#1D5872" stroke-width="2.4" fill="none" stroke-dasharray="0"/>
+        <text class="lgs" x="500" y="292"><tspan lang="de">PRÜFKREIS — ERZEUGT EINEN DEFINIERTEN FEHLERSTROM</tspan><tspan lang="en">TEST CIRCUIT — CREATES A DEFINED RESIDUAL CURRENT</tspan></text>
+
+        <!-- Fehlerstrom nach Erde -->
+        <path class="wpe" d="M600 126 V340 H330"/>
+        <path class="wpe" d="M330 340 V208"/>
+        <text class="lgs" x="356" y="360" fill="#3F6B43"><tspan lang="de">FEHLERSTROM ÜBER ERDE — VERLÄSST DEN KERN NICHT ZURÜCK</tspan><tspan lang="en">FAULT CURRENT VIA EARTH — DOES NOT RETURN THROUGH THE CORE</tspan></text>
+
+        <!-- Formel -->
+        <path class="ldr" d="M416 150 H520"/>
+        <text class="lgb" x="528" y="146">I<tspan baseline-shift="sub" font-size="9">L</tspan> + I<tspan baseline-shift="sub" font-size="9">N</tspan> = 0</text>
+        <text class="lgs" x="528" y="164"><tspan lang="de">IM FEHLERFREIEN KREIS</tspan><tspan lang="en">IN A HEALTHY CIRCUIT</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Wirkungsweise. Alle aktiven Leiter führen durch denselben Ringkern. Nur wenn die Summe der Ströme nicht null ist, entsteht in der Sekundärwicklung eine Spannung.</span>
+        <span lang="en"> — Principle of operation. All live conductors pass through the same toroidal core. Only if the sum of the currents is not zero does a voltage appear in the secondary winding.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Der Ablauf</span><span lang="en">The sequence</span></h3>
+    <ol lang="de">
+      <li>Alle aktiven Leiter — beim vierpoligen FI also L1, L2, L3 und N — führen durch denselben <strong>Ringkern</strong>. Der Schutzleiter <strong>nicht</strong>.</li>
+      <li>Im gesunden Stromkreis ist die Summe aller Ströme <strong>null</strong>. Die Magnetfelder heben sich auf, in der Sekundärwicklung entsteht keine Spannung.</li>
+      <li>Fliesst ein Teil des Stromes über einen anderen Weg ab — über einen Menschen oder eine schadhafte Isolation zur Erde — kehrt er <strong>nicht durch den Kern zurück</strong>.</li>
+      <li>Die Summe ist jetzt ungleich null. Im Kern entsteht ein Restmagnetfeld, das in der Sekundärwicklung eine Spannung induziert.</li>
+      <li>Diese Spannung speist das <strong>Auslöserelais</strong>, das über das Schaltschloss alle Pole <strong>gleichzeitig</strong> trennt.</li>
+    </ol>
+    <ol lang="en">
+      <li>All live conductors — on a four-pole device L1, L2, L3 and N — pass through the same <strong>toroidal core</strong>. The protective conductor does <strong>not</strong>.</li>
+      <li>In a healthy circuit the sum of all currents is <strong>zero</strong>. The magnetic fields cancel and no voltage appears in the secondary winding.</li>
+      <li>If part of the current takes another path — through a person or faulty insulation to earth — it does <strong>not return through the core</strong>.</li>
+      <li>The sum is now non-zero. A residual magnetic field arises in the core and induces a voltage in the secondary winding.</li>
+      <li>That voltage feeds the <strong>trip relay</strong>, which disconnects all poles <strong>simultaneously</strong> via the mechanism.</li>
+    </ol>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Der häufigste Anschlussfehler</span><span lang="en">The most common wiring mistake</span></b>
+      <p lang="de">Der <strong>Neutralleiter muss durch den FI geführt werden</strong> und darf nach dem FI nicht mit dem N eines anderen Stromkreises verbunden werden. Wird der N hinter dem FI abgezweigt oder mit dem PE verbunden, fliesst Strom am Kern vorbei — der FI löst sofort und scheinbar grundlos aus.</p>
+      <p lang="en">The <strong>neutral must pass through the RCD</strong> and must not be joined to the neutral of another circuit downstream. If the neutral is tapped after the RCD or connected to the PE, current bypasses the core — and the RCD trips immediately and apparently for no reason.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Typen nach Fehlerstromform</span><span lang="en">Types by residual current waveform</span></h2>
+
+    <p lang="de">Moderne Geräte erzeugen im Fehlerfall längst nicht mehr nur saubere Sinus-Wechselströme. Elektronik, Frequenzumrichter und Ladegeräte können Fehlerströme mit Gleichanteil hervorrufen. Ein FI, der diese Form nicht erkennt, ist im Ernstfall blind — schlimmer noch, ein Gleichanteil kann seinen Ringkern <strong>vormagnetisieren</strong> und ihn auch für normale Wechselfehler unbrauchbar machen.</p>
+    <p lang="en">Modern equipment no longer produces only clean sinusoidal fault currents. Electronics, frequency converters and chargers can cause residual currents with a DC component. An RCD that cannot detect that waveform is blind when it matters — worse, a DC component can <strong>pre-magnetise</strong> its core and render it useless even for ordinary AC faults.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Typ</span><span lang="en">Type</span></th>
+            <th><span lang="de">Erfasst</span><span lang="en">Detects</span></th>
+            <th><span lang="de">Typischer Einsatz</span><span lang="en">Typical use</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num"><strong>AC</strong></td>
+            <td><span lang="de">nur sinusförmige Wechselfehlerströme</span><span lang="en">sinusoidal AC residual currents only</span></td>
+            <td><span lang="de">für neue Anlagen nicht mehr üblich</span><span lang="en">no longer usual in new installations</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>A</strong></td>
+            <td><span lang="de">wie AC, zusätzlich pulsierende Gleichfehlerströme</span><span lang="en">as AC, plus pulsating DC residual currents</span></td>
+            <td><span lang="de">Standard im Wohn- und Bürobau</span><span lang="en">standard in housing and offices</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>F</strong></td>
+            <td><span lang="de">wie A, zusätzlich Mischfrequenzen</span><span lang="en">as A, plus mixed frequencies</span></td>
+            <td><span lang="de">Waschmaschinen und Geräte mit einphasigem Frequenzumrichter</span><span lang="en">washing machines and equipment with single-phase converters</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>B</strong></td>
+            <td><span lang="de">wie F, zusätzlich glatte Gleichfehlerströme</span><span lang="en">as F, plus smooth DC residual currents</span></td>
+            <td><span lang="de">Photovoltaik, Ladestationen, dreiphasige Umrichter</span><span lang="en">PV systems, EV charging, three-phase converters</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p lang="de">Die Typen bauen aufeinander auf: Ein Typ B kann alles, was Typ F kann, und dieser alles, was Typ A kann. Umgekehrt gilt es nicht.</p>
+    <p lang="en">The types build on one another: a type B does everything a type F does, and that does everything a type A does. The reverse is not true.</p>
+
+    <h3><span lang="de">Weitere Kennzeichnungen</span><span lang="en">Further markings</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Zeichen</span><span lang="en">Marking</span></th>
+            <th><span lang="de">Bedeutung</span><span lang="en">Meaning</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num"><strong>S</strong></td><td><span lang="de">selektiv — kurzzeitverzögert, damit der nachgelagerte FI zuerst auslöst</span><span lang="en">selective — short time delay so the downstream RCD trips first</span></td></tr>
+          <tr><td class="num"><strong>G</strong></td><td><span lang="de">kurzzeitverzögert, unempfindlicher gegen Störimpulse</span><span lang="en">short time delay, less sensitive to interference pulses</span></td></tr>
+          <tr><td class="num">≈</td><td><span lang="de">Symbol für Wechselfehlerstrom (Typ AC)</span><span lang="en">symbol for AC residual current (type AC)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Bemessungsfehlerstrom</span><span lang="en">Rated residual current</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th>I<sub>Δn</sub></th>
+            <th><span lang="de">Zweck</span><span lang="en">Purpose</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">10 mA</td><td><span lang="de">erhöhter Personenschutz — Kindergarten, medizinische Bereiche</span><span lang="en">enhanced personal protection — nurseries, medical areas</span></td></tr>
+          <tr><td class="num">30 mA</td><td><span lang="de"><strong>Personenschutz</strong> — Standard für Steckdosen und Nassbereiche</span><span lang="en"><strong>personal protection</strong> — standard for sockets and wet areas</span></td></tr>
+          <tr><td class="num">300 mA</td><td><span lang="de">Brandschutz — kein Personenschutz mehr</span><span lang="en">fire protection — no longer personal protection</span></td></tr>
+          <tr><td class="num">500 mA</td><td><span lang="de">Anlagenschutz, vorgelagert und selektiv</span><span lang="en">installation protection, upstream and selective</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Warum ausgerechnet 30 mA?</span><span lang="en">Why 30 mA of all values?</span></b>
+      <p lang="de">Weil dieser Wert unter der Schwelle liegt, ab der Herzkammerflimmern zu erwarten ist. Ein FI mit 30 mA schaltet, bevor der Strom durch den Körper lebensgefährlich wird — und zwar schnell genug, dass die Einwirkdauer kurz bleibt.</p>
+      <p lang="en">Because it lies below the threshold at which ventricular fibrillation is to be expected. A 30 mA RCD disconnects before the current through the body becomes life-threatening — and fast enough to keep the exposure time short.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Bauformen und Anschluss</span><span lang="en">Versions and connection</span></h2>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Bauform</span><span lang="en">Version</span></th>
+            <th><span lang="de">Merkmal</span><span lang="en">Feature</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong><span lang="de">2-polig</span><span lang="en">2-pole</span></strong></td><td><span lang="de">L und N — für einphasige Stromkreise</span><span lang="en">L and N — for single-phase circuits</span></td></tr>
+          <tr><td><strong><span lang="de">4-polig</span><span lang="en">4-pole</span></strong></td><td><span lang="de">L1, L2, L3 und N — für Drehstrom und für Gruppen</span><span lang="en">L1, L2, L3 and N — for three-phase and for groups</span></td></tr>
+          <tr><td><strong>FI-LS (RCBO)</strong></td><td><span lang="de">FI und Leitungsschutz in einem Gerät, ein Stromkreis</span><span lang="en">RCD and cable protection in one device, one circuit</span></td></tr>
+          <tr><td><strong><span lang="de">Netzspannungsunabhängig</span><span lang="en">Voltage-independent</span></strong></td><td><span lang="de">funktioniert rein elektromagnetisch, auch bei Ausfall des Neutralleiters</span><span lang="en">works purely electromagnetically, even if the neutral fails</span></td></tr>
+          <tr><td><strong><span lang="de">Netzspannungsabhängig</span><span lang="en">Voltage-dependent</span></strong></td><td><span lang="de">braucht Hilfsenergie aus dem Netz — im Fehlerfall ein Nachteil</span><span lang="en">needs auxiliary power from the mains — a drawback under fault conditions</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Gruppen- oder Einzelabsicherung</span><span lang="en">Group or individual protection</span></h3>
+    <p lang="de">Ein FI kann eine ganze Gruppe von Stromkreisen abdecken oder — als FI-LS — nur einen einzigen. Die Gruppenlösung ist günstiger, die Einzellösung deutlich komfortabler: Bei einem Fehler bleibt der Rest der Wohnung in Betrieb, und die Fehlersuche ist sofort eingegrenzt.</p>
+    <p lang="en">One RCD can cover a whole group of circuits or — as an RCBO — just a single one. The group solution is cheaper, the individual solution far more convenient: under a fault the rest of the flat stays in service and fault finding is immediately narrowed down.</p>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Ableitströme summieren sich</span><span lang="en">Leakage currents add up</span></b>
+      <p lang="de">Jedes elektronische Gerät hat einen kleinen, völlig normalen Ableitstrom. Hängen viele Geräte hinter demselben 30-mA-FI, addieren sich diese Ströme und der FI löst irgendwann ohne echten Fehler aus. Faustregel: Der summierte Ableitstrom soll deutlich unter der Hälfte des Bemessungsfehlerstromes bleiben. Abhilfe: Last auf mehrere FI aufteilen.</p>
+      <p lang="en">Every electronic device has a small, entirely normal leakage current. With many devices behind the same 30 mA RCD, these add up and the device eventually trips without a real fault. Rule of thumb: the total leakage should stay well below half the rated residual current. The remedy is to split the load across several RCDs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Prüfung und Fehlersuche</span><span lang="en">Testing and fault finding</span></h2>
+
+    <h3><span lang="de">Die Prüftaste</span><span lang="en">The test button</span></h3>
+    <p lang="de">Die Taste <strong>T</strong> schaltet intern einen Widerstand so ein, dass ein definierter Strom am Ringkern vorbeifliesst. Damit wird geprüft, ob die <strong>Mechanik</strong> noch funktioniert. Ein FI, der jahrelang nie ausgelöst hat, kann festsitzen — deshalb ist die periodische Betätigung sinnvoll.</p>
+    <p lang="en">The <strong>T</strong> button internally connects a resistor so that a defined current bypasses the core. This checks whether the <strong>mechanism</strong> still works. An RCD that has not tripped for years can seize — which is why periodic operation makes sense.</p>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Prüftaste ist keine Messung</span><span lang="en">The test button is not a measurement</span></b>
+      <p lang="de">Sie sagt nur «er hat ausgelöst». Sie sagt <strong>nicht</strong>, bei welchem Strom und nach welcher Zeit. Beides wird mit dem Prüfgerät gemessen: der <strong>Auslösestrom</strong> muss zwischen dem halben und dem vollen Bemessungsfehlerstrom liegen, die <strong>Auslösezeit</strong> innerhalb der Vorgabe der Norm.</p>
+      <p lang="en">It only says “it tripped”. It does <strong>not</strong> say at what current and after what time. Both are measured with a test instrument: the <strong>tripping current</strong> must lie between half and the full rated residual current, and the <strong>tripping time</strong> within the limit set by the standard.</p>
+    </div>
+
+    <h3><span lang="de">Wenn der FI auslöst</span><span lang="en">When the RCD trips</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Beobachtung</span><span lang="en">Observation</span></th>
+            <th><span lang="de">Wahrscheinliche Ursache</span><span lang="en">Likely cause</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span lang="de">Löst sofort beim Einschalten aus</span><span lang="en">Trips immediately on closing</span></td><td><span lang="de">Isolationsfehler, N nach dem FI mit PE oder fremdem N verbunden</span><span lang="en">insulation fault, or N joined to PE or another circuit's N downstream</span></td></tr>
+          <tr><td><span lang="de">Löst nur bei Regen oder Feuchtigkeit aus</span><span lang="en">Trips only in rain or damp</span></td><td><span lang="de">Feuchtigkeit in Aussensteckdose, Leuchte oder Erdkabel</span><span lang="en">moisture in an outdoor socket, luminaire or buried cable</span></td></tr>
+          <tr><td><span lang="de">Löst nur beim Einschalten eines Geräts aus</span><span lang="en">Trips only when one appliance starts</span></td><td><span lang="de">Isolationsfehler in diesem Gerät, oft Heizelement</span><span lang="en">insulation fault in that appliance, often a heating element</span></td></tr>
+          <tr><td><span lang="de">Löst sporadisch ohne erkennbaren Anlass aus</span><span lang="en">Trips sporadically for no visible reason</span></td><td><span lang="de">Summe der Ableitströme zu gross, oder falscher Typ für die Last</span><span lang="en">total leakage too high, or the wrong type for the load</span></td></tr>
+          <tr><td><span lang="de">Lässt sich gar nicht mehr einschalten</span><span lang="en">Cannot be closed at all</span></td><td><span lang="de">Fehler steht dauernd an; Stromkreise einzeln zuschalten und eingrenzen</span><span lang="en">the fault is permanent; switch circuits on one by one to narrow it down</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Vorgehen bei der Eingrenzung</span><span lang="en">How to narrow it down</span></b>
+      <p lang="de">Alle nachgelagerten Automaten ausschalten, den FI einschalten, dann die Stromkreise <strong>einzeln zuschalten</strong>. Der Kreis, bei dem der FI fällt, enthält den Fehler. Anschliessend dort die Verbraucher einzeln trennen. Das ist schneller und sicherer als jede Vermutung.</p>
+      <p lang="en">Switch off all downstream breakers, close the RCD, then switch the circuits back on <strong>one at a time</strong>. The circuit that drops the RCD contains the fault. Then disconnect the loads in that circuit one by one. Faster and safer than any guesswork.</p>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Zur NIN</span><span lang="en">Regarding the NIN</span></b>
+      <p lang="de">Wo ein FI vorgeschrieben ist, mit welchem Bemessungsfehlerstrom und welchem Typ, regelt die NIN — unter anderem für Steckdosenstromkreise, Nassbereiche, Aussenanlagen, Baustellen und Ladeeinrichtungen. <strong>Die geltenden Artikel vor der Abgabe in der eigenen NIN-Ausgabe nachschlagen</strong>, die Anforderungen wurden über die Ausgaben hinweg mehrfach erweitert.</p>
+      <p lang="en">Where an RCD is required, with which rated residual current and which type, is governed by the NIN — among others for socket circuits, wet areas, outdoor installations, construction sites and charging equipment. <strong>Look up the applicable articles in your own NIN edition</strong>; the requirements have been extended repeatedly across editions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Nach welchem Prinzip arbeitet ein FI-Schalter?</span><span lang="en">On what principle does an RCD work?</span></summary>
+      <div class="ans">
+        <p lang="de">Nach dem Summenstromprinzip. Alle aktiven Leiter führen durch einen gemeinsamen Ringkern. Im fehlerfreien Kreis ist die Summe der Ströme null. Fliesst ein Teil des Stromes über einen anderen Weg zur Erde ab, entsteht ein Restmagnetfeld, das über die Sekundärwicklung das Auslöserelais ansteuert.</p>
+        <p lang="en">On the core balance principle. All live conductors pass through one common toroidal core. In a healthy circuit the sum of the currents is zero. If part of the current takes another path to earth, a residual magnetic field arises which drives the trip relay through the secondary winding.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welcher Leiter wird <em>nicht</em> durch den Ringkern geführt?</span><span lang="en">Which conductor does <em>not</em> pass through the core?</span></summary>
+      <div class="ans">
+        <p lang="de">Der Schutzleiter. Über ihn fliesst gerade der Fehlerstrom zurück — würde er mitgeführt, wäre die Summe wieder null und der FI würde nichts erkennen.</p>
+        <p lang="en">The protective conductor. It is exactly the path the fault current returns on — if it went through the core, the sum would be zero again and the RCD would detect nothing.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Schützt der FI, wenn jemand gleichzeitig L und N berührt?</span><span lang="en">Does an RCD protect someone touching L and N at the same time?</span></summary>
+      <div class="ans">
+        <p lang="de">Nein. Der Strom fliesst durch den Körper hin und über den Neutralleiter zurück, beide durch den Ringkern. Die Summe bleibt null, der FI erkennt keinen Fehler. Deshalb ersetzt er niemals das Freischalten und die 5 Sicherheitsregeln.</p>
+        <p lang="en">No. The current flows through the body and back via the neutral, both through the core. The sum stays zero and the RCD detects no fault. This is why it never replaces isolating the circuit and the 5 safety rules.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Worin unterscheiden sich Typ A und Typ B?</span><span lang="en">What is the difference between type A and type B?</span></summary>
+      <div class="ans">
+        <p lang="de">Typ A erfasst sinusförmige Wechselfehlerströme und pulsierende Gleichfehlerströme. Typ B erfasst zusätzlich Mischfrequenzen und glatte Gleichfehlerströme. Typ B wird dort gebraucht, wo Photovoltaik-Wechselrichter, Ladestationen oder dreiphasige Frequenzumrichter im Spiel sind.</p>
+        <p lang="en">Type A detects sinusoidal AC and pulsating DC residual currents. Type B additionally detects mixed frequencies and smooth DC residual currents. Type B is needed wherever PV inverters, EV chargers or three-phase converters are involved.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum ist ein glatter Gleichfehlerstrom für einen Typ A gefährlich?</span><span lang="en">Why is a smooth DC residual current dangerous for a type A?</span></summary>
+      <div class="ans">
+        <p lang="de">Er wird nicht nur nicht erkannt — er kann den Ringkern vormagnetisieren. Danach spricht der FI auch auf normale Wechselfehlerströme nicht mehr zuverlässig an. Das Gerät sieht intakt aus, schützt aber nicht mehr.</p>
+        <p lang="en">Not only is it not detected — it can pre-magnetise the core. After that the RCD no longer responds reliably even to ordinary AC faults. The device looks intact but no longer protects.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was prüft die Prüftaste und was nicht?</span><span lang="en">What does the test button check, and what not?</span></summary>
+      <div class="ans">
+        <p lang="de">Sie prüft, ob die Mechanik auslöst. Sie sagt nichts über den tatsächlichen Auslösestrom und die Auslösezeit — beides muss mit dem Prüfgerät gemessen werden.</p>
+        <p lang="en">It checks whether the mechanism operates. It says nothing about the actual tripping current and time — both must be measured with a test instrument.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Der FI löst sofort aus, sobald du ihn einschaltest. Was prüfst du zuerst?</span><span lang="en">The RCD trips as soon as you close it. What do you check first?</span></summary>
+      <div class="ans">
+        <p lang="de">Ob der Neutralleiter hinter dem FI irgendwo mit dem Schutzleiter oder mit dem N eines anderen Stromkreises verbunden ist. Das ist der häufigste Anschlussfehler. Danach die Stromkreise einzeln zuschalten und den Fehler eingrenzen.</p>
+        <p lang="en">Whether the neutral downstream of the RCD is connected anywhere to the protective conductor or to another circuit's neutral. That is the most common wiring mistake. Then switch the circuits on one at a time to narrow down the fault.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum löst ein FI manchmal aus, obwohl kein Gerät defekt ist?</span><span lang="en">Why does an RCD sometimes trip although no appliance is faulty?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil sich die kleinen, betriebsmässigen Ableitströme vieler elektronischer Geräte summieren. Erreicht die Summe den Auslösebereich, schaltet der FI ohne echten Fehler ab. Abhilfe: die Verbraucher auf mehrere FI verteilen.</p>
+        <p lang="en">Because the small, normal leakage currents of many electronic devices add up. Once the total reaches the tripping range, the RCD disconnects without a real fault. The remedy is to spread the loads across several RCDs.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was bedeutet die Kennzeichnung S auf einem FI?</span><span lang="en">What does the marking S on an RCD mean?</span></summary>
+      <div class="ans">
+        <p lang="de">Selektiv: Das Gerät löst kurzzeitverzögert aus. Damit hat ein nachgelagerter FI Zeit, zuerst abzuschalten. So bleibt bei einem Fehler nur der betroffene Teil der Anlage stromlos statt die ganze Installation.</p>
+        <p lang="en">Selective: the device trips with a short time delay, giving a downstream RCD time to disconnect first. Under a fault, only the affected part of the installation loses supply rather than the whole system.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="03-ls-automaten.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>03 · <span lang="de">LS-Automaten</span><span lang="en">Miniature Circuit Breakers</span></b>
+  </a>
+  <a class="next" href="05-ip-kennzeichnung.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>05 · <span lang="de">IP-Kennzeichnung</span><span lang="en">IP Ratings</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 04 · FI-Schalter</span><span lang="en">Learning Documentation 04 · Residual Current Devices</span></span>
+  <span>Yanik · Etavis · <span lang="de">2. Lehrjahr</span><span lang="en">Year 2</span></span>
+  <span><span lang="de">Normen: NIN · EN 61008 · EN 61009 · IEC 60479</span><span lang="en">Standards: NIN · EN 61008 · EN 61009 · IEC 60479</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>
