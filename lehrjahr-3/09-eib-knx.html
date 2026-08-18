@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 09 — EIB / KNX" data-en="Learning Documentation 09 — EIB / KNX">Lerndokumentation 09 — EIB / KNX</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span>
+    <span lang="de">Thema 09</span><span lang="en">Topic 09</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">09</div>
+    <h1><span lang="de">EIB / KNX</span><span lang="en">EIB / KNX</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Aufbau · Schema · Beschrieb · Bus</span>
+    <span lang="en">Design · diagram · description · bus</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">09 von 12</span><span lang="en">09 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Taster schickt ein Telegramm über den Bus zum Aktor mit Lampe">
+        <path d="M14 112 H206" fill="none" stroke="#1D5872" stroke-width="4.5" stroke-linecap="round"/>
+        <rect x="26" y="52" width="56" height="52" rx="4" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <circle cx="43" cy="72" r="2.8" fill="#171614"/>
+        <circle cx="65" cy="72" r="2.8" fill="#171614"/>
+        <path d="M43 86 q 11 8 22 0" fill="none" stroke="#171614" stroke-width="2" stroke-linecap="round"/>
+        <path d="M54 104 V112" fill="none" stroke="#171614" stroke-width="2.4"/>
+        <circle cx="54" cy="112" r="3.4" fill="#171614"/>
+        <circle cx="102" cy="112" r="3" fill="#1D5872"/>
+        <circle cx="118" cy="112" r="3" fill="#1D5872"/>
+        <circle cx="134" cy="112" r="3" fill="#1D5872"/>
+        <rect x="150" y="58" width="52" height="46" rx="4" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <path d="M162 81 h12 l-6 -9 M176 81 h14" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M176 104 V112" fill="none" stroke="#171614" stroke-width="2.4"/>
+        <circle cx="176" cy="112" r="3.4" fill="#171614"/>
+        <circle cx="176" cy="30" r="13" fill="none" stroke="#B8402A" stroke-width="2.4"/>
+        <path d="M176 43 V58" fill="none" stroke="#B8402A" stroke-width="2.2"/>
+        <path d="M158 18 l-7 -6 M194 18 l7 -6 M176 12 V4" fill="none" stroke="#B8402A" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Vom EIB zum KNX</span><span lang="en">From EIB to KNX</span></h2>
+
+    <p class="lead" lang="de">KNX ist die genormte Weiterentwicklung des <strong>Europäischen Installationsbus EIB</strong>. 1999 wurden die drei europäischen Systeme EIB, BatiBUS und EHS zum KNX-Standard zusammengeführt; getragen wird er seither von der KNX Association mit Sitz in Brüssel.</p>
+    <p class="lead" lang="en">KNX is the standardised continuation of the <strong>European Installation Bus EIB</strong>. In 1999 the three European systems EIB, BatiBUS and EHS were merged into the KNX standard; it has been maintained since then by the KNX Association, based in Brussels.</p>
+
+    <p lang="de">Für die Baustelle bedeutet das zweierlei. Erstens: Ein zertifiziertes Gerät arbeitet mit den Geräten aller anderen Hersteller zusammen — der Bus ist <strong>herstellerunabhängig</strong>. Zweitens: Bestehende EIB-Anlagen sind nicht überholt. EIB-Geräte laufen am KNX-Bus weiter, weil KNX das EIB-Übertragungsverfahren übernommen hat. Deshalb liest man in Schemas und Katalogen bis heute beide Bezeichnungen nebeneinander.</p>
+    <p lang="en">For site work this means two things. First: a certified device works together with devices from every other manufacturer — the bus is <strong>manufacturer-independent</strong>. Second: existing EIB installations are not obsolete. EIB devices keep running on a KNX bus because KNX adopted the EIB transmission method. That is why both names still appear side by side in diagrams and catalogues.</p>
+
+    <h3><span lang="de">Wozu Gebäudeautomation?</span><span lang="en">What is building automation for?</span></h3>
+    <p lang="de">KNX steuert nicht nur Licht. Über denselben Bus laufen <strong>Beleuchtung, Storen und Beschattung, Heizung, Lüftung und Klima, Sicherheitsfunktionen sowie Verbrauchserfassung</strong>. Der eigentliche Gewinn entsteht dort, wo diese Gewerke zusammenarbeiten: Die Storen fahren hoch, wenn die Heizung Sonnenwärme braucht, und das Licht schaltet aus, wenn die Präsenzmeldung wegfällt.</p>
+    <p lang="en">KNX does not only control lighting. The same bus carries <strong>lighting, blinds and shading, heating, ventilation and air conditioning, safety functions and energy metering</strong>. The real benefit appears where these trades work together: the blinds go up when the heating system needs solar gain, and the light switches off when presence detection ends.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Norm</span><span lang="en">Standard</span></th>
+            <th><span lang="de">Ebene</span><span lang="en">Level</span></th>
+            <th><span lang="de">Was darin geregelt ist</span><span lang="en">What it covers</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">EN 50090</td>
+            <td><span lang="de">europäisch (CENELEC)</span><span lang="en">European (CENELEC)</span></td>
+            <td><span lang="de">Elektrische Systemtechnik für Heim und Gebäude (HBES) — die eigentliche KNX-Grundnorm</span><span lang="en">Home and Building Electronic Systems (HBES) — the core KNX standard</span></td>
+          </tr>
+          <tr>
+            <td class="num">ISO/IEC 14543-3</td>
+            <td><span lang="de">international</span><span lang="en">international</span></td>
+            <td><span lang="de">KNX als weltweite Norm, seit 2006</span><span lang="en">KNX as a worldwide standard, since 2006</span></td>
+          </tr>
+          <tr>
+            <td class="num">EN 13321-1</td>
+            <td><span lang="de">europäisch (CEN)</span><span lang="en">European (CEN)</span></td>
+            <td><span lang="de">offene Datenkommunikation in der Gebäudeautomation</span><span lang="en">open data communication in building automation</span></td>
+          </tr>
+          <tr>
+            <td class="num">EN 50491</td>
+            <td><span lang="de">europäisch (CENELEC)</span><span lang="en">European (CENELEC)</span></td>
+            <td><span lang="de">allgemeine Anforderungen an HBES- und Gebäudeautomationssysteme</span><span lang="en">general requirements for HBES and building automation systems</span></td>
+          </tr>
+          <tr>
+            <td class="num">NIN</td>
+            <td><span lang="de">Schweiz</span><span lang="en">Switzerland</span></td>
+            <td><span lang="de">Verlegung, Trennung von Stark- und Schwachstrom, Schutzkleinspannung in der Installation</span><span lang="en">wiring, separation of power and low-voltage circuits, extra-low voltage in the installation</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Merksatz</span><span lang="en">Key point</span></b>
+      <p lang="de">KNX ist <strong>kein neues System</strong>, sondern der genormte Nachfolger des EIB. Wer EIB verstanden hat, versteht KNX — dazugekommen sind vor allem weitere Übertragungsmedien und ein gemeinsames Werkzeug für die Projektierung.</p>
+      <p lang="en">KNX is <strong>not a new system</strong> but the standardised successor to EIB. Anyone who has understood EIB understands KNX — what has been added is mainly further transmission media and one common engineering tool.</p>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Vor der Abgabe prüfen</span><span lang="en">Check before submitting</span></b>
+      <p lang="de">Normen werden in Teile gegliedert und regelmässig neu aufgelegt. Die genauen Teilnummern und Ausgabejahre (zum Beispiel ISO/IEC 14543-3-1 ff.) vor der Abgabe in der eigenen NIN-Ausgabe beziehungsweise im aktuellen Normenverzeichnis nachschlagen.</p>
+      <p lang="en">Standards are split into parts and reissued regularly. Look up the exact part numbers and years of issue (for example ISO/IEC 14543-3-1 ff.) in your own NIN edition or the current list of standards before submitting.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Dezentral: Sensor, Aktor, Telegramm</span><span lang="en">Decentralised: sensor, actuator, telegram</span></h2>
+
+    <p lang="de">Der entscheidende Unterschied zur konventionellen Installation liegt nicht im Kabel, sondern in der <strong>Aufteilung der Aufgaben</strong>. In der konventionellen Installation trägt der Schalter den Laststrom. Beim Bus trägt er gar nichts mehr — er meldet nur, dass er gedrückt wurde.</p>
+    <p lang="en">The decisive difference from a conventional installation is not the cable but the <strong>division of tasks</strong>. In a conventional installation the switch carries the load current. On the bus it carries nothing at all — it merely reports that it has been pressed.</p>
+
+    <h3><span lang="de">Die zwei Gerätearten</span><span lang="en">The two kinds of device</span></h3>
+    <ul lang="de">
+      <li><strong>Sensoren</strong> erfassen ein Ereignis und <strong>senden</strong> ein Telegramm auf den Bus: Taster, Präsenzmelder, Helligkeits- und Windwächter, Raumthermostat, Binäreingang für konventionelle Taster.</li>
+      <li><strong>Aktoren</strong> <strong>empfangen</strong> Telegramme und führen sie aus: Schaltaktor (Relais), Dimmaktor, Storenaktor, Heizungsaktor. Sie sitzen in der Verteilung und schalten dort die 230-V-Last.</li>
+      <li><strong>Systemgeräte</strong> halten den Bus am Laufen: Spannungsversorgung mit Drossel, Linienverstärker, Linien- und Bereichskoppler, Schnittstellen zur Programmierung.</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Sensors</strong> detect an event and <strong>send</strong> a telegram onto the bus: push-buttons, presence detectors, light and wind sensors, room thermostats, binary inputs for conventional switches.</li>
+      <li><strong>Actuators</strong> <strong>receive</strong> telegrams and carry them out: switch actuator (relay), dimming actuator, blind actuator, heating actuator. They sit in the distribution board and switch the 230 V load there.</li>
+      <li><strong>System devices</strong> keep the bus running: power supply with choke, line repeaters, line and backbone couplers, interfaces for programming.</li>
+    </ul>
+
+    <p lang="de">Jeder Teilnehmer bringt seinen <strong>eigenen Mikroprozessor und sein eigenes Applikationsprogramm</strong> mit. Deshalb heisst KNX ein dezentrales System: Es braucht <strong>keinen zentralen Rechner und keine Steuerung</strong>, die alles koordiniert. Fällt ein Gerät aus, arbeiten die übrigen weiter — es fällt nur dessen Funktion aus. Eine Visualisierung oder ein Server ist möglich, aber nie Voraussetzung für den Grundbetrieb.</p>
+    <p lang="en">Every device carries <strong>its own microprocessor and its own application program</strong>. That is why KNX is called a decentralised system: <strong>no central computer and no controller</strong> is needed to coordinate everything. If one device fails, the others keep working — only its function is lost. A visualisation or a server is possible but never a precondition for basic operation.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Frage</span><span lang="en">Question</span></th>
+            <th><span lang="de">Konventionelle Installation</span><span lang="en">Conventional installation</span></th>
+            <th><span lang="de">KNX</span><span lang="en">KNX</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Wo entsteht die Funktion?</span><span lang="en">Where is the function created?</span></strong></td>
+            <td><span lang="de">in der Verdrahtung — Schema und Kabel legen sie fest</span><span lang="en">in the wiring — diagram and cable define it</span></td>
+            <td><span lang="de">in der Software — die Verknüpfung wird <strong>programmiert</strong></span><span lang="en">in the software — the link is <strong>programmed</strong></span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Was führt der Schalter?</span><span lang="en">What does the switch carry?</span></strong></td>
+            <td><span lang="de">den vollen Laststrom, 230 V</span><span lang="en">the full load current, 230 V</span></td>
+            <td><span lang="de">nur ein Telegramm, Schutzkleinspannung</span><span lang="en">only a telegram, extra-low voltage</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Änderung der Funktion</span><span lang="en">Changing a function</span></strong></td>
+            <td><span lang="de">umverdrahten, oft aufspitzen</span><span lang="en">rewiring, often chasing walls open</span></td>
+            <td><span lang="de">neue Verknüpfung in der ETS laden</span><span lang="en">load a new link with the ETS</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Zentralfunktionen, Szenen</span><span lang="en">Central functions, scenes</span></strong></td>
+            <td><span lang="de">nur mit erheblichem Zusatzaufwand</span><span lang="en">only with considerable extra effort</span></td>
+            <td><span lang="de">ohne zusätzliche Leitung möglich</span><span lang="en">possible without extra cabling</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Aufwand bei kleinen Anlagen</span><span lang="en">Effort on small installations</span></strong></td>
+            <td><span lang="de">gering</span><span lang="en">low</span></td>
+            <td><span lang="de">höher — Material und Projektierung lohnen sich erst ab einer gewissen Grösse</span><span lang="en">higher — hardware and engineering only pay off from a certain size</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Dokumentation</span><span lang="en">Documentation</span></strong></td>
+            <td><span lang="de">Schema im Verteiler</span><span lang="en">diagram in the board</span></td>
+            <td><span lang="de">ETS-Projektdatei — ohne sie ist die Anlage kaum änderbar</span><span lang="en">the ETS project file — without it the installation is hard to modify</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Der Kernsatz</span><span lang="en">The core sentence</span></b>
+      <p lang="de">Bei KNX wird die Funktion <strong>programmiert statt verdrahtet</strong>. Die Leitung sagt nur noch, <em>welche Geräte</em> überhaupt miteinander reden können — <em>wer mit wem</em> tatsächlich redet, entscheidet die Programmierung.</p>
+      <p lang="en">With KNX the function is <strong>programmed instead of wired</strong>. The cable only says <em>which devices</em> are able to talk to each other at all — <em>who actually talks to whom</em> is decided by the programming.</p>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Praxisfolge</span><span lang="en">Consequence in practice</span></b>
+      <p lang="de">Die ETS-Projektdatei gehört zur Anlage wie das Schema zum Verteiler. Geht sie verloren, lässt sich die bestehende Programmierung nur mit erheblichem Aufwand rekonstruieren. Sie wird deshalb dem Kunden übergeben und im Betrieb archiviert.</p>
+      <p lang="en">The ETS project file belongs to the installation just as the diagram belongs to the board. If it is lost, the existing programming can only be reconstructed with considerable effort. It is therefore handed over to the customer and archived by the company.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Die Busleitung und ihre Speisung</span><span lang="en">The bus cable and its supply</span></h2>
+
+    <p lang="de">Die KNX-Busleitung führt <strong>Speisung und Daten auf demselben Aderpaar</strong>. Die Spannungsversorgung legt eine Gleichspannung auf den Bus; die Telegramme werden dieser Gleichspannung als kurze Spannungseinbrüche überlagert. Deshalb genügen zwei Adern für einen ganzen Strang.</p>
+    <p lang="en">The KNX bus cable carries <strong>supply and data on the same pair</strong>. The power supply applies a DC voltage to the bus; telegrams are superimposed on this DC voltage as short voltage dips. Two conductors are therefore enough for an entire branch.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schema: Spannungsversorgung mit Drossel, Taster als Sensor und Schaltaktor an der KNX-Buslinie">
+        <defs>
+          <style>
+            .pw{fill:none;stroke:#7A4A22;stroke-width:2.6;stroke-linecap:round}
+            .nw{fill:none;stroke:#1D5872;stroke-width:2.6;stroke-linecap:round}
+            .bp{fill:none;stroke:#B8402A;stroke-width:3.4;stroke-linecap:round}
+            .bm{fill:none;stroke:#26241F;stroke-width:3.4;stroke-linecap:round}
+            .wr{fill:none;stroke:#48433B;stroke-width:2.2;stroke-linecap:round}
+            .bx{fill:#EFEAE0;stroke:#171614;stroke-width:2.4}
+            .ttl{font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;fill:#171614}
+            .lb{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;fill:#48433B}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10px;fill:#7D7669;letter-spacing:.07em}
+            .dot{fill:#171614}
+          </style>
+        </defs>
+
+        <!-- 230 V Schiene -->
+        <text class="lgs" x="34" y="22"><tspan lang="de">230 V AC · STARKSTROM</tspan><tspan lang="en">230 V AC · MAINS</tspan></text>
+        <path class="nw" d="M34 40 H700"/>
+        <path class="pw" d="M34 62 H560"/>
+        <text class="lb" x="18" y="44" fill="#1D5872">N</text>
+        <text class="lb" x="18" y="66" fill="#7A4A22">L</text>
+
+        <!-- Spannungsversorgung -->
+        <rect class="bx" x="60" y="100" width="140" height="90" rx="3"/>
+        <text class="ttl" x="130" y="130" text-anchor="middle"><tspan lang="de">SPANNUNGS-</tspan><tspan lang="en">KNX POWER</tspan></text>
+        <text class="ttl" x="130" y="146" text-anchor="middle"><tspan lang="de">VERSORGUNG</tspan><tspan lang="en">SUPPLY</tspan></text>
+        <text class="lgs" x="130" y="166" text-anchor="middle"><tspan lang="de">230 V AC → 30 V DC</tspan><tspan lang="en">230 V AC → 30 V DC</tspan></text>
+        <text class="lgs" x="130" y="180" text-anchor="middle"><tspan lang="de">SELV</tspan><tspan lang="en">SELV</tspan></text>
+        <path class="pw" d="M100 100 V62"/>
+        <circle class="dot" cx="100" cy="62" r="3.6"/>
+        <path class="nw" d="M140 100 V70 C148 67, 148 57, 140 54 V40"/>
+        <circle class="dot" cx="140" cy="40" r="3.6"/>
+
+        <!-- Drossel -->
+        <rect class="bx" x="230" y="112" width="76" height="66" rx="3"/>
+        <path d="M244 138 a8 8 0 0 1 16 0 a8 8 0 0 1 16 0 a8 8 0 0 1 16 0" fill="none" stroke="#171614" stroke-width="2.4"/>
+        <text class="ttl" x="268" y="168" text-anchor="middle"><tspan lang="de">DROSSEL</tspan><tspan lang="en">CHOKE</tspan></text>
+        <path class="bp" d="M200 130 H230"/>
+        <path class="bm" d="M200 160 H230"/>
+        <path class="bp" d="M250 178 V250"/>
+        <path class="bm" d="M282 178 V243 C290 246, 290 254, 282 257 V275"/>
+        <circle class="dot" cx="250" cy="250" r="4"/>
+        <circle class="dot" cx="282" cy="275" r="4"/>
+
+        <!-- Sensor -->
+        <rect class="bx" x="330" y="100" width="140" height="90" rx="3"/>
+        <text class="ttl" x="400" y="132" text-anchor="middle"><tspan lang="de">TASTER</tspan><tspan lang="en">PUSH-BUTTON</tspan></text>
+        <text class="lgs" x="400" y="152" text-anchor="middle"><tspan lang="de">SENSOR — SENDET</tspan><tspan lang="en">SENSOR — SENDS</tspan></text>
+        <text class="lgs" x="400" y="168" text-anchor="middle"><tspan lang="de">PHYS. ADRESSE 1.1.1</tspan><tspan lang="en">IND. ADDRESS 1.1.1</tspan></text>
+        <path class="bp" d="M365 190 V250"/>
+        <path class="bm" d="M405 190 V243 C413 246, 413 254, 405 257 V275"/>
+        <circle class="dot" cx="365" cy="250" r="4"/>
+        <circle class="dot" cx="405" cy="275" r="4"/>
+
+        <!-- Aktor -->
+        <rect class="bx" x="520" y="100" width="140" height="100" rx="3"/>
+        <text class="ttl" x="590" y="130" text-anchor="middle"><tspan lang="de">SCHALTAKTOR</tspan><tspan lang="en">SWITCH ACTUATOR</tspan></text>
+        <text class="lgs" x="590" y="150" text-anchor="middle"><tspan lang="de">AKTOR — EMPFÄNGT</tspan><tspan lang="en">ACTUATOR — RECEIVES</tspan></text>
+        <text class="lgs" x="590" y="166" text-anchor="middle"><tspan lang="de">PHYS. ADRESSE 1.1.20</tspan><tspan lang="en">IND. ADDRESS 1.1.20</tspan></text>
+        <path d="M556 178 h22 M578 178 l14 -12" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+        <path class="bp" d="M545 200 V250"/>
+        <path class="bm" d="M585 200 V243 C593 246, 593 254, 585 257 V275"/>
+        <circle class="dot" cx="545" cy="250" r="4"/>
+        <circle class="dot" cx="585" cy="275" r="4"/>
+        <path class="pw" d="M556 100 V62"/>
+        <circle class="dot" cx="556" cy="62" r="3.6"/>
+        <path class="wr" d="M660 150 H676"/>
+
+        <!-- Lampe -->
+        <circle cx="702" cy="150" r="26" fill="#FBF9F5" stroke="#171614" stroke-width="2.4"/>
+        <path d="M684 132 L720 168 M720 132 L684 168" stroke="#171614" stroke-width="2"/>
+        <path class="nw" d="M702 124 V40"/>
+        <circle class="dot" cx="702" cy="40" r="3.6"/>
+
+        <!-- Telegramm -->
+        <path d="M420 224 H528" fill="none" stroke="#1D5872" stroke-width="2.2" stroke-dasharray="6 5"/>
+        <path d="M528 224 l-9 -5 v10 z" fill="#1D5872"/>
+        <text class="lgs" x="474" y="214" text-anchor="middle" fill="#1D5872"><tspan lang="de">TELEGRAMM</tspan><tspan lang="en">TELEGRAM</tspan></text>
+
+        <!-- Buslinie -->
+        <path class="bp" d="M210 250 H700"/>
+        <path class="bm" d="M210 275 H700"/>
+        <text class="lb" x="710" y="254" fill="#B8402A">+</text>
+        <text class="lb" x="710" y="279" fill="#26241F">−</text>
+
+        <path d="M330 288 V300 H470 V288" fill="none" stroke="#7D7669" stroke-width="1.6"/>
+        <text class="lgs" x="400" y="318" text-anchor="middle"><tspan lang="de">KNX-BUSKABEL GRÜN 2×2×0,8 mm</tspan><tspan lang="en">KNX BUS CABLE, GREEN, 2×2×0.8 mm</tspan></text>
+        <text class="lgs" x="400" y="334" text-anchor="middle"><tspan lang="de">ROT = +   SCHWARZ = −   WEISS/GELB = RESERVE</tspan><tspan lang="en">RED = +   BLACK = −   WHITE/YELLOW = SPARE</tspan></text>
+        <text class="lgs" x="34" y="356"><tspan lang="de">SELV-BEREICH: BUSSPANNUNG BERÜHRUNGSSICHER, ABER STRIKT VOM 230-V-TEIL GETRENNT KLEMMEN</tspan><tspan lang="en">SELV ZONE: BUS VOLTAGE IS TOUCH-SAFE, BUT MUST BE TERMINATED STRICTLY APART FROM THE 230 V PART</tspan></text>
+        <text class="lgs" x="34" y="374"><tspan lang="de">KREUZUNGEN OHNE PUNKT SIND KEINE VERBINDUNGEN</tspan><tspan lang="en">CROSSINGS WITHOUT A DOT ARE NOT CONNECTIONS</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Grundschema einer KNX-Linie: Spannungsversorgung mit Drossel, ein Taster als Sensor und ein Schaltaktor als Aktor. Der Taster schaltet die Lampe nicht selbst — er sendet ein Telegramm, der Aktor schaltet die 230-V-Last.</span>
+        <span lang="en"> — Basic diagram of a KNX line: power supply with choke, a push-button as sensor and a switch actuator as actuator. The push-button does not switch the lamp itself — it sends a telegram and the actuator switches the 230 V load.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Kabel und Adern</span><span lang="en">Cable and conductors</span></h3>
+    <p lang="de">Verwendet wird eine <strong>verdrillte, geschirmte Zweipaarleitung mit grünem Mantel</strong>, üblicherweise mit dem Aderdurchmesser <strong>0,8 mm</strong> (Bezeichnung 2×2×0,8). Genutzt wird nur das Paar <strong>rot / schwarz</strong>: rot ist Plus, schwarz ist Minus. Das zweite Paar <strong>weiss / gelb</strong> bleibt Reserve und darf nur für weitere Kleinspannungszwecke im SELV-Bereich verwendet werden — nie für 230 V.</p>
+    <p lang="en">A <strong>twisted, screened two-pair cable with a green sheath</strong> is used, normally with a conductor diameter of <strong>0.8 mm</strong> (designation 2×2×0.8). Only the <strong>red / black</strong> pair is used: red is positive, black is negative. The second pair, <strong>white / yellow</strong>, stays in reserve and may only be used for further extra-low-voltage purposes within the SELV range — never for 230 V.</p>
+
+    <h3><span lang="de">Spannungsversorgung und Drossel</span><span lang="en">Power supply and choke</span></h3>
+    <p lang="de">Die Spannungsversorgung macht aus 230 V Wechselspannung eine Gleichspannung im Bereich von rund <strong>29 bis 30 V</strong>. Sie ist als <strong>SELV</strong> ausgeführt, also berührungssicher und sicher vom Netz getrennt. Die Teilnehmer selbst arbeiten in einem weiten Bereich von etwa <strong>21 bis 30 V</strong>, weil auf langen Leitungen ein Spannungsfall entsteht.</p>
+    <p lang="en">The power supply turns 230 V AC into a DC voltage of roughly <strong>29 to 30 V</strong>. It is designed as <strong>SELV</strong>, that is touch-safe and safely separated from the mains. The devices themselves work over a wide range of about <strong>21 to 30 V</strong>, because a voltage drop builds up over long cable runs.</p>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Warum die Drossel?</span><span lang="en">Why the choke?</span></b>
+      <p lang="de">Ein Netzteil ist für Gleichspannung sehr niederohmig — es würde die kurzen Spannungseinbrüche der Telegramme sofort wieder ausgleichen und damit die Kommunikation kurzschliessen. Die <strong>Drossel</strong> liegt in Serie zwischen Netzteil und Bus: Für die Gleichspannung ist sie fast ein Kurzschluss, für die schnellen Telegrammsignale ein hoher Widerstand. So bleibt die Speisung stabil und die Telegramme bleiben lesbar. Bei vielen Geräten ist sie bereits eingebaut; bei zusätzlichen Segmenten braucht es je eine eigene.</p>
+      <p lang="en">A power supply unit has a very low impedance for DC — it would immediately smooth out the short voltage dips of the telegrams and thereby short-circuit the communication. The <strong>choke</strong> sits in series between the power supply and the bus: for DC it is almost a short circuit, for the fast telegram signals a high impedance. The supply stays stable and the telegrams stay readable. In many devices it is already built in; each additional segment needs one of its own.</p>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Kennwert</span><span lang="en">Characteristic</span></th>
+            <th><span lang="de">Üblicher Wert</span><span lang="en">Typical value</span></th>
+            <th><span lang="de">Begründung / Bemerkung</span><span lang="en">Reason / remark</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Busspannung, Speisung</span><span lang="en">Bus voltage, supply</span></strong></td>
+            <td class="num">29–30 V DC</td>
+            <td><span lang="de">SELV; Teilnehmer arbeiten etwa von 21 bis 30 V</span><span lang="en">SELV; devices operate from roughly 21 to 30 V</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Übertragungsrate TP</span><span lang="en">Data rate on TP</span></strong></td>
+            <td class="num">9600 bit/s</td>
+            <td><span lang="de">reicht für Schaltbefehle, nicht für Bild oder Ton</span><span lang="en">enough for switching commands, not for video or audio</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Leitung gesamt je Segment</span><span lang="en">Total cable per segment</span></strong></td>
+            <td class="num">1000 m</td>
+            <td><span lang="de">Summe aller Äste, nicht die längste Strecke</span><span lang="en">the sum of all branches, not the longest run</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Spannungsversorgung → Teilnehmer</span><span lang="en">Power supply → device</span></strong></td>
+            <td class="num">350 m</td>
+            <td><span lang="de">begrenzt durch den Spannungsfall auf der Leitung</span><span lang="en">limited by the voltage drop along the cable</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Teilnehmer → Teilnehmer</span><span lang="en">Device → device</span></strong></td>
+            <td class="num">700 m</td>
+            <td><span lang="de">begrenzt durch die Signallaufzeit</span><span lang="en">limited by the signal propagation time</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Zwei Spannungsversorgungen</span><span lang="en">Two power supplies</span></strong></td>
+            <td class="num">min. 200 m</td>
+            <td><span lang="de">Mindestabstand im selben Segment, damit sie sich nicht gegenseitig stören</span><span lang="en">minimum distance within the same segment so they do not disturb each other</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Zahlen vor der Abgabe prüfen</span><span lang="en">Check the figures before submitting</span></b>
+      <p lang="de">Busspannung, Nennstrom der Spannungsversorgung, Stromaufnahme je Teilnehmer und die Leitungslängen sind <strong>keine festen Naturkonstanten</strong>: Sie hängen vom Hersteller, vom Gerätetyp und von der Topologievariante ab. Diese Werte vor der Abgabe im Herstellerkatalog beziehungsweise im Datenblatt des eingesetzten Geräts und in der eigenen NIN-Ausgabe nachschlagen. Nie eine Artikelnummer aus dem Gedächtnis in die Doku schreiben.</p>
+      <p lang="en">Bus voltage, rated current of the power supply, current draw per device and the cable lengths are <strong>not fixed constants of nature</strong>: they depend on the manufacturer, the device type and the topology variant. Look these values up in the manufacturer's catalogue or the data sheet of the device actually used, and in your own NIN edition, before submitting. Never write an article number into the documentation from memory.</p>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Häufige Fehler auf der Baustelle</span><span lang="en">Common mistakes on site</span></b>
+      <ul lang="de">
+        <li><strong>Ring gebildet</strong> — Linie, Stern und Baum sind erlaubt, ein geschlossener Ring nicht. Er entsteht schnell, wenn zwei Äste in einer Dose «zur Sicherheit» verbunden werden.</li>
+        <li><strong>Rot und schwarz vertauscht</strong> — die Polarität ist zwingend einzuhalten.</li>
+        <li><strong>Schirm beidseitig aufgelegt</strong> — der Schirm der Busleitung wird nicht beidseitig geerdet; Vorgabe des Herstellers und die NIN beachten.</li>
+        <li><strong>Bus und 230 V in derselben Dose ohne Ordnungstrennung</strong> — die Busleitung wird im Verteiler bis an die Klemme im Mantel geführt.</li>
+      </ul>
+      <ul lang="en">
+        <li><strong>A ring has been formed</strong> — line, star and tree layouts are allowed, a closed ring is not. It happens quickly when two branches are joined in a box “to be safe”.</li>
+        <li><strong>Red and black swapped</strong> — the polarity must be observed.</li>
+        <li><strong>Screen connected at both ends</strong> — the screen of the bus cable is not earthed at both ends; follow the manufacturer's instruction and the NIN.</li>
+        <li><strong>Bus and 230 V in the same box without orderly separation</strong> — in the board the bus cable is taken right up to the terminal inside its sheath.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Topologie: Linie, Bereich, Koppler</span><span lang="en">Topology: line, area, coupler</span></h2>
+
+    <p lang="de">Eine KNX-Anlage wächst nicht beliebig als ein einziger Strang. Sie ist in <strong>drei Ebenen</strong> gegliedert. Das hat zwei Gründe: Die Spannungsversorgung schafft nur eine begrenzte Zahl von Teilnehmern, und die Buslast würde bei zu vielen Geräten in einem Strang zu hoch.</p>
+    <p lang="en">A KNX installation does not simply grow as one endless branch. It is structured into <strong>three levels</strong>. There are two reasons: the power supply can only feed a limited number of devices, and the bus load would become too high with too many devices on one branch.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Topologie: Bereichslinie mit Bereichskopplern, Hauptlinien mit Linienkopplern und Linien mit Teilnehmern">
+        <defs>
+          <style>
+            .bb{fill:none;stroke:#171614;stroke-width:4.4;stroke-linecap:round}
+            .ml{fill:none;stroke:#1D5872;stroke-width:3.4;stroke-linecap:round}
+            .ln{fill:none;stroke:#3F6B43;stroke-width:3.2;stroke-linecap:round}
+            .dr{fill:none;stroke:#48433B;stroke-width:2.2;stroke-linecap:round}
+            .bx{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .sv{fill:#F0DBD4;stroke:#B8402A;stroke-width:2}
+            .dv{fill:#FBF9F5;stroke:#171614;stroke-width:1.8}
+            .lb{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;fill:#171614}
+            .sm{font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:600;fill:#B8402A}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10px;fill:#7D7669;letter-spacing:.07em}
+            .ad{font-family:'IBM Plex Mono',monospace;font-size:10px;fill:#48433B}
+          </style>
+        </defs>
+
+        <!-- Bereichslinie -->
+        <text class="lgs" x="78" y="30"><tspan lang="de">BEREICHSLINIE · BACKBONE</tspan><tspan lang="en">BACKBONE LINE</tspan></text>
+        <rect class="sv" x="56" y="46" width="24" height="18" rx="2"/>
+        <text class="sm" x="68" y="59" text-anchor="middle"><tspan lang="de">SV</tspan><tspan lang="en">PS</tspan></text>
+        <path class="bb" d="M80 55 H690"/>
+        <text class="lgs" x="620" y="40"><tspan lang="de">… BIS 15 BEREICHE</tspan><tspan lang="en">… UP TO 15 AREAS</tspan></text>
+
+        <!-- Bereichskoppler 1 -->
+        <path class="dr" d="M200 55 V88"/>
+        <rect class="bx" x="178" y="88" width="44" height="26" rx="2"/>
+        <text class="lb" x="200" y="106" text-anchor="middle"><tspan lang="de">BK</tspan><tspan lang="en">AC</tspan></text>
+        <text class="ad" x="228" y="106">1.0.0</text>
+        <path class="dr" d="M200 114 V145"/>
+
+        <!-- Bereichskoppler 2 -->
+        <path class="dr" d="M520 55 V88"/>
+        <rect class="bx" x="498" y="88" width="44" height="26" rx="2"/>
+        <text class="lb" x="520" y="106" text-anchor="middle"><tspan lang="de">BK</tspan><tspan lang="en">AC</tspan></text>
+        <text class="ad" x="548" y="106">2.0.0</text>
+        <path class="dr" d="M520 114 V145"/>
+
+        <!-- Hauptlinie 1 -->
+        <rect class="sv" x="76" y="136" width="24" height="18" rx="2"/>
+        <text class="sm" x="88" y="149" text-anchor="middle"><tspan lang="de">SV</tspan><tspan lang="en">PS</tspan></text>
+        <path class="ml" d="M100 145 H430"/>
+        <text class="lgs" x="100" y="128"><tspan lang="de">HAUPTLINIE · LINIE 0</tspan><tspan lang="en">MAIN LINE · LINE 0</tspan></text>
+
+        <!-- Hauptlinie 2 -->
+        <rect class="sv" x="446" y="136" width="24" height="18" rx="2"/>
+        <text class="sm" x="458" y="149" text-anchor="middle"><tspan lang="de">SV</tspan><tspan lang="en">PS</tspan></text>
+        <path class="ml" d="M470 145 H700"/>
+
+        <!-- Linienkoppler -->
+        <path class="dr" d="M160 145 V176"/>
+        <rect class="bx" x="138" y="176" width="44" height="26" rx="2"/>
+        <text class="lb" x="160" y="194" text-anchor="middle"><tspan lang="de">LK</tspan><tspan lang="en">LC</tspan></text>
+        <text class="ad" x="188" y="194">1.1.0</text>
+        <path class="dr" d="M160 202 V245"/>
+
+        <path class="dr" d="M350 145 V176"/>
+        <rect class="bx" x="328" y="176" width="44" height="26" rx="2"/>
+        <text class="lb" x="350" y="194" text-anchor="middle"><tspan lang="de">LK</tspan><tspan lang="en">LC</tspan></text>
+        <text class="ad" x="378" y="194">1.2.0</text>
+        <path class="dr" d="M350 202 V245"/>
+
+        <path class="dr" d="M540 145 V176"/>
+        <rect class="bx" x="518" y="176" width="44" height="26" rx="2"/>
+        <text class="lb" x="540" y="194" text-anchor="middle"><tspan lang="de">LK</tspan><tspan lang="en">LC</tspan></text>
+        <text class="ad" x="568" y="194">2.1.0</text>
+        <path class="dr" d="M540 202 V245"/>
+
+        <!-- Linie 1.1 -->
+        <rect class="sv" x="76" y="236" width="24" height="18" rx="2"/>
+        <text class="sm" x="88" y="249" text-anchor="middle"><tspan lang="de">SV</tspan><tspan lang="en">PS</tspan></text>
+        <path class="ln" d="M100 245 H255"/>
+        <path class="dr" d="M118 245 V262 M150 245 V262 M212 245 V262 M244 245 V262"/>
+        <rect class="dv" x="109" y="262" width="18" height="16" rx="2"/>
+        <rect class="dv" x="141" y="262" width="18" height="16" rx="2"/>
+        <rect class="dv" x="203" y="262" width="18" height="16" rx="2"/>
+        <rect class="dv" x="235" y="262" width="18" height="16" rx="2"/>
+        <text class="ad" x="118" y="292" text-anchor="middle">1.1.1</text>
+        <text class="ad" x="244" y="292" text-anchor="middle">1.1.4</text>
+
+        <!-- Linie 1.2 -->
+        <rect class="sv" x="270" y="236" width="24" height="18" rx="2"/>
+        <text class="sm" x="282" y="249" text-anchor="middle"><tspan lang="de">SV</tspan><tspan lang="en">PS</tspan></text>
+        <path class="ln" d="M294 245 H430"/>
+        <path class="dr" d="M312 245 V262 M382 245 V262 M414 245 V262"/>
+        <rect class="dv" x="303" y="262" width="18" height="16" rx="2"/>
+        <rect class="dv" x="373" y="262" width="18" height="16" rx="2"/>
+        <rect class="dv" x="405" y="262" width="18" height="16" rx="2"/>
+        <text class="ad" x="312" y="292" text-anchor="middle">1.2.1</text>
+
+        <!-- Linie 2.1 -->
+        <rect class="sv" x="446" y="236" width="24" height="18" rx="2"/>
+        <text class="sm" x="458" y="249" text-anchor="middle"><tspan lang="de">SV</tspan><tspan lang="en">PS</tspan></text>
+        <path class="ln" d="M470 245 H640"/>
+        <path class="dr" d="M488 245 V262 M582 245 V262 M614 245 V262"/>
+        <rect class="dv" x="479" y="262" width="18" height="16" rx="2"/>
+        <rect class="dv" x="573" y="262" width="18" height="16" rx="2"/>
+        <rect class="dv" x="605" y="262" width="18" height="16" rx="2"/>
+        <text class="ad" x="488" y="292" text-anchor="middle">2.1.1</text>
+
+        <text class="lgs" x="34" y="326"><tspan lang="de">LINIE · JE SEGMENT 64 TEILNEHMER, MIT LINIENVERSTÄRKER BIS 4 SEGMENTE</tspan><tspan lang="en">LINE · 64 DEVICES PER SEGMENT, UP TO 4 SEGMENTS WITH LINE REPEATERS</tspan></text>
+        <text class="lgs" x="34" y="346"><tspan lang="de">BEREICH · BIS 15 LINIEN AN EINER HAUPTLINIE, BIS 15 BEREICHE AN DER BEREICHSLINIE</tspan><tspan lang="en">AREA · UP TO 15 LINES ON ONE MAIN LINE, UP TO 15 AREAS ON THE BACKBONE</tspan></text>
+        <text class="lgs" x="34" y="366"><tspan lang="de">SV · JEDE LINIE UND JEDES SEGMENT BRAUCHT EINE EIGENE SPANNUNGSVERSORGUNG</tspan><tspan lang="en">PS · EVERY LINE AND EVERY SEGMENT NEEDS ITS OWN POWER SUPPLY</tspan></text>
+        <text class="lgs" x="34" y="386"><tspan lang="de">BK = BEREICHSKOPPLER · LK = LINIENKOPPLER · KÄSTCHEN = TEILNEHMER</tspan><tspan lang="en">AC = AREA COUPLER · LC = LINE COUPLER · SMALL BOXES = DEVICES</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 2</span><span lang="en">Fig. 2</span></b>
+        <span lang="de"> — Die drei Ebenen der KNX-Topologie. Jede Linie hat ihre eigene Spannungsversorgung; die Koppler verbinden die Ebenen und filtern gleichzeitig den Verkehr.</span>
+        <span lang="en"> — The three levels of KNX topology. Every line has its own power supply; the couplers connect the levels and at the same time filter the traffic.</span>
+      </figcaption>
+    </figure>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Ebene</span><span lang="en">Level</span></th>
+            <th><span lang="de">Was sie enthält</span><span lang="en">What it contains</span></th>
+            <th><span lang="de">Verbunden durch</span><span lang="en">Connected by</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Liniensegment</span><span lang="en">Line segment</span></strong></td>
+            <td><span lang="de">bis <strong>64 Teilnehmer</strong>, eine eigene Spannungsversorgung mit Drossel</span><span lang="en">up to <strong>64 devices</strong>, one power supply of its own with a choke</span></td>
+            <td><span lang="de">—</span><span lang="en">—</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Linie</span><span lang="en">Line</span></strong></td>
+            <td><span lang="de">bis <strong>4 Segmente</strong>, dadurch rund 256 Teilnehmer</span><span lang="en">up to <strong>4 segments</strong>, giving roughly 256 devices</span></td>
+            <td><span lang="de">Linienverstärker, je Zusatzsegment einer mit eigener Speisung</span><span lang="en">line repeaters, one per extra segment with its own supply</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Bereich</span><span lang="en">Area</span></strong></td>
+            <td><span lang="de">bis <strong>15 Linien</strong> an einer Hauptlinie (Linie 0)</span><span lang="en">up to <strong>15 lines</strong> on one main line (line 0)</span></td>
+            <td><span lang="de">Linienkoppler, physikalische Adresse x.y.0</span><span lang="en">line couplers, individual address x.y.0</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Gesamtanlage</span><span lang="en">Whole installation</span></strong></td>
+            <td><span lang="de">bis <strong>15 Bereiche</strong> an der Bereichslinie (Backbone)</span><span lang="en">up to <strong>15 areas</strong> on the backbone line</span></td>
+            <td><span lang="de">Bereichskoppler, physikalische Adresse x.0.0</span><span lang="en">backbone couplers, individual address x.0.0</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Was ein Koppler wirklich tut</span><span lang="en">What a coupler really does</span></h3>
+    <p lang="de">Ein Koppler ist nicht nur eine Verbindung, sondern vor allem ein <strong>Filter</strong>. Er lässt ein Telegramm nur dann in die andere Linie durch, wenn dort auch tatsächlich ein Empfänger für diese Gruppenadresse sitzt. Dadurch bleibt der Verkehr lokal, die Buslast sinkt, und ein Fehler in einer Linie bleibt in dieser Linie. Der Koppler zählt selbst als Teilnehmer und wird aus der übergeordneten Linie gespeist; die untergeordnete Linie braucht ihre eigene Spannungsversorgung.</p>
+    <p lang="en">A coupler is not just a connection but above all a <strong>filter</strong>. It only lets a telegram through into the other line if a receiver for that group address actually sits there. Traffic therefore stays local, the bus load drops, and a fault in one line stays in that line. The coupler itself counts as a device and is fed from the higher-level line; the lower-level line needs its own power supply.</p>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Neuere Variante TP1-256</span><span lang="en">Newer variant TP1-256</span></b>
+      <p lang="de">Seit rund 2019 gibt es die Topologievariante <strong>TP1-256</strong>. Damit sind bis zu 256 Teilnehmer auf einer Linie möglich, <em>ohne</em> Linienverstärker — vorausgesetzt, alle Geräte unterstützen sie und die Spannungsversorgung liefert genügend Strom. In Bestandsanlagen und in vielen Lehrmitteln gilt weiterhin die Rechnung mit 64 Teilnehmern je Segment. Welche Variante in einem konkreten Projekt gilt, geht aus den Gerätedatenblättern und der ETS hervor.</p>
+      <p lang="en">Since around 2019 there has been the topology variant <strong>TP1-256</strong>. It allows up to 256 devices on one line <em>without</em> line repeaters — provided all devices support it and the power supply delivers enough current. In existing installations and in many textbooks the calculation with 64 devices per segment still applies. Which variant applies in a specific project is shown by the device data sheets and by the ETS.</p>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Keine Ringe</span><span lang="en">No rings</span></b>
+      <p lang="de">Innerhalb einer Linie sind <strong>Linie, Stern und Baum</strong> in beliebiger Mischung erlaubt — man darf also abzweigen, wo es passt. Ein <strong>geschlossener Ring ist nicht zulässig</strong>: Er erzeugt Signalreflexionen und lässt Telegramme mehrfach umlaufen. Ein Busabschlusswiderstand ist bei KNX TP nicht erforderlich.</p>
+      <p lang="en">Within a line, <strong>line, star and tree</strong> layouts may be mixed freely — you may branch off wherever it suits. A <strong>closed ring is not permitted</strong>: it creates signal reflections and lets telegrams circulate repeatedly. A bus terminating resistor is not required with KNX TP.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Physikalische Adresse und Gruppenadresse</span><span lang="en">Individual address and group address</span></h2>
+
+    <p class="lead" lang="de">Jedes KNX-Gerät hat <strong>zwei völlig verschiedene Arten von Adressen</strong>. Sie zu verwechseln ist der häufigste Anfängerfehler — deshalb der Satz zum Merken: Die physikalische Adresse sagt, <em>wo</em> ein Gerät steckt. Die Gruppenadresse sagt, <em>wer mit wem</em> spricht.</p>
+    <p class="lead" lang="en">Every KNX device has <strong>two completely different kinds of address</strong>. Confusing them is the most common beginner's mistake — hence the sentence to remember: the individual address says <em>where</em> a device is. The group address says <em>who talks to whom</em>.</p>
+
+    <h3><span lang="de">Die physikalische Adresse</span><span lang="en">The individual address</span></h3>
+    <p lang="de">Sie beschreibt den <strong>Ort im Bus</strong> und ist im Aufbau <code>Bereich.Linie.Teilnehmer</code>, also zum Beispiel <code>1.1.20</code>: Teilnehmer 20 in der Linie 1 des Bereichs 1. Sie kommt in einer Anlage <strong>genau einmal</strong> vor. Vergeben wird sie in der ETS und beim Programmieren ins Gerät geschrieben — deshalb hat jedes KNX-Gerät eine Programmiertaste mit Kontroll-LED. Koppler bekommen die Teilnehmernummer 0: <code>1.1.0</code> ist der Linienkoppler der Linie 1.1, <code>1.0.0</code> der Bereichskoppler des Bereichs 1.</p>
+    <p lang="en">It describes the <strong>place in the bus</strong> and has the form <code>area.line.device</code>, for example <code>1.1.20</code>: device 20 in line 1 of area 1. It occurs <strong>exactly once</strong> in an installation. It is assigned in the ETS and written into the device during programming — which is why every KNX device has a programming button with an indicator LED. Couplers get device number 0: <code>1.1.0</code> is the line coupler of line 1.1, <code>1.0.0</code> the backbone coupler of area 1.</p>
+
+    <h3><span lang="de">Die Gruppenadresse</span><span lang="en">The group address</span></h3>
+    <p lang="de">Sie beschreibt die <strong>Funktion</strong> und wird mit Schrägstrichen geschrieben, dreistufig als <code>Hauptgruppe/Mittelgruppe/Untergruppe</code>, zum Beispiel <code>1/2/3</code>. Sie kommt in einer Anlage <strong>mehrfach</strong> vor — genau das ist ihr Sinn: Alle Kommunikationsobjekte, die dieselbe Gruppenadresse tragen, gehören zusammen. Ein Taster mit der Gruppenadresse «Licht Küche schalten» erreicht damit einen einzigen Aktorkanal oder gleichzeitig zwanzig, ohne dass sich an der Verdrahtung etwas ändert.</p>
+    <p lang="en">It describes the <strong>function</strong> and is written with slashes, in three levels as <code>main group/middle group/sub group</code>, for example <code>1/2/3</code>. It occurs <strong>several times</strong> in an installation — and that is precisely its purpose: all communication objects carrying the same group address belong together. A push-button with the group address “switch kitchen light” thus reaches a single actuator channel or twenty at once, without changing anything in the wiring.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Merkmal</span><span lang="en">Feature</span></th>
+            <th><span lang="de">Physikalische Adresse</span><span lang="en">Individual address</span></th>
+            <th><span lang="de">Gruppenadresse</span><span lang="en">Group address</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Beantwortet die Frage</span><span lang="en">Answers the question</span></strong></td>
+            <td><span lang="de">Wo steckt das Gerät?</span><span lang="en">Where is the device?</span></td>
+            <td><span lang="de">Wer spricht mit wem?</span><span lang="en">Who talks to whom?</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Schreibweise</span><span lang="en">Notation</span></strong></td>
+            <td class="num">1.1.20</td>
+            <td class="num">1/2/3</td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Aufbau</span><span lang="en">Structure</span></strong></td>
+            <td><span lang="de">Bereich . Linie . Teilnehmer</span><span lang="en">area . line . device</span></td>
+            <td><span lang="de">Hauptgruppe / Mittelgruppe / Untergruppe</span><span lang="en">main group / middle group / sub group</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Wie oft in der Anlage?</span><span lang="en">How often in the installation?</span></strong></td>
+            <td><span lang="de">genau einmal, eindeutig</span><span lang="en">exactly once, unique</span></td>
+            <td><span lang="de">mehrfach — mindestens bei einem Sender und einem Empfänger</span><span lang="en">several times — at least on one sender and one receiver</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Im Telegramm</span><span lang="en">In the telegram</span></strong></td>
+            <td><span lang="de">immer die <strong>Quelladresse</strong></span><span lang="en">always the <strong>source address</strong></span></td>
+            <td><span lang="de">im Normalfall die <strong>Zieladresse</strong></span><span lang="en">normally the <strong>destination address</strong></span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Wozu gebraucht</span><span lang="en">Used for</span></strong></td>
+            <td><span lang="de">Programmieren, Diagnose, Auslesen eines bestimmten Geräts</span><span lang="en">programming, diagnosis, reading out one particular device</span></td>
+            <td><span lang="de">der eigentliche Betrieb: schalten, dimmen, fahren, melden</span><span lang="en">actual operation: switching, dimming, moving, reporting</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">So läuft ein Schaltbefehl ab</span><span lang="en">How a switching command runs</span></b>
+      <p lang="de">Der Taster <code>1.1.1</code> wird gedrückt und legt ein Telegramm auf den Bus. Als Quelladresse steht seine physikalische Adresse darin, als Zieladresse die Gruppenadresse <code>1/2/3</code>. Das Telegramm läuft über die ganze Linie; <strong>jeder</strong> Teilnehmer liest mit. Nur die Geräte, bei denen ein Kommunikationsobjekt auf <code>1/2/3</code> programmiert ist, reagieren — hier der Schaltaktor <code>1.1.20</code>. Er zieht sein Relais an und bestätigt den Empfang.</p>
+      <p lang="en">Push-button <code>1.1.1</code> is pressed and puts a telegram onto the bus. Its individual address is entered as the source address, the group address <code>1/2/3</code> as the destination address. The telegram travels along the whole line; <strong>every</strong> device reads it. Only those devices with a communication object programmed to <code>1/2/3</code> react — here the switch actuator <code>1.1.20</code>. It pulls in its relay and acknowledges receipt.</p>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Wertebereiche in der ETS prüfen</span><span lang="en">Check the value ranges in the ETS</span></b>
+      <p lang="de">Die Gruppenadresse ist 16 Bit lang und lässt sich zwei- oder dreistufig darstellen. Die zulässigen Wertebereiche der Hauptgruppe hängen von der ETS-Einstellung und vom Projektalter ab — in älteren Projekten oft 0 bis 15, in neueren bis 31. Den tatsächlichen Bereich im konkreten ETS-Projekt nachschlagen, bevor eine Zahl als Absolutwert in die Doku geschrieben wird.</p>
+      <p lang="en">The group address is 16 bits long and can be shown in two or three levels. The permitted value ranges of the main group depend on the ETS setting and on the age of the project — often 0 to 15 in older projects, up to 31 in newer ones. Look up the actual range in the specific ETS project before writing a figure into the documentation as an absolute value.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Medien und Projektierung mit der ETS</span><span lang="en">Media and engineering with the ETS</span></h2>
+
+    <p lang="de">KNX ist nicht an ein einziges Kabel gebunden. Das Protokoll bleibt dasselbe, nur der Übertragungsweg wechselt. In der Schweizer Hausinstallation ist <strong>Twisted Pair</strong> der Normalfall; die anderen Medien dienen vor allem der Nachrüstung und der Anbindung an das Gebäudenetz.</p>
+    <p lang="en">KNX is not tied to a single cable. The protocol stays the same, only the transmission path changes. In Swiss building installations <strong>twisted pair</strong> is the normal case; the other media serve mainly for retrofitting and for connection to the building network.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Medium</span><span lang="en">Medium</span></th>
+            <th><span lang="de">Träger</span><span lang="en">Carrier</span></th>
+            <th><span lang="de">Rate</span><span lang="en">Rate</span></th>
+            <th><span lang="de">Wann eingesetzt</span><span lang="en">When used</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>KNX TP</strong></td>
+            <td><span lang="de">eigene verdrillte Zweidrahtleitung</span><span lang="en">dedicated twisted pair cable</span></td>
+            <td class="num">9600 bit/s</td>
+            <td><span lang="de">der Standardfall im Neubau und bei Umbauten mit Zugang zur Installation</span><span lang="en">the standard case in new buildings and refits with access to the installation</span></td>
+          </tr>
+          <tr>
+            <td><strong>KNX PL</strong></td>
+            <td><span lang="de">bestehendes 230-V-Netz (Powerline)</span><span lang="en">existing 230 V mains (powerline)</span></td>
+            <td class="num">1200 bit/s</td>
+            <td><span lang="de">Nachrüstung ohne neue Leitung; störanfälliger, heute selten</span><span lang="en">retrofit without new cabling; more prone to interference, rare today</span></td>
+          </tr>
+          <tr>
+            <td><strong>KNX RF</strong></td>
+            <td><span lang="de">Funk im Bereich 868 MHz</span><span lang="en">radio in the 868 MHz band</span></td>
+            <td><span lang="de">je nach Modus</span><span lang="en">depends on the mode</span></td>
+            <td><span lang="de">einzelne Räume, Denkmalschutz, dort wo kein Kabel möglich ist</span><span lang="en">individual rooms, listed buildings, wherever no cable is possible</span></td>
+          </tr>
+          <tr>
+            <td><strong>KNX IP</strong></td>
+            <td><span lang="de">Ethernet / vorhandenes Datennetz</span><span lang="en">Ethernet / existing data network</span></td>
+            <td><span lang="de">Netzwerkgeschwindigkeit</span><span lang="en">network speed</span></td>
+            <td><span lang="de">als schneller Backbone zwischen Bereichen, für Visualisierung und Fernzugriff</span><span lang="en">as a fast backbone between areas, for visualisation and remote access</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Die ETS</span><span lang="en">The ETS</span></h3>
+    <p lang="de">Die <strong>ETS</strong> (Engineering Tool Software) ist das herstellerunabhängige Werkzeug der KNX Association. Ein einziges Programm genügt für die Geräte aller Hersteller — die Hersteller liefern dazu nur ihre Produktdatenbanken. Genau das macht KNX für den Installateur handhabbar: Er muss nicht für jede Marke ein eigenes Programm lernen.</p>
+    <p lang="en">The <strong>ETS</strong> (Engineering Tool Software) is the manufacturer-independent tool of the KNX Association. A single program is enough for the devices of all manufacturers — the manufacturers only supply their product databases. That is exactly what makes KNX manageable for the installer: there is no need to learn a separate program for every brand.</p>
+
+    <h3><span lang="de">Ablauf einer Inbetriebnahme</span><span lang="en">Sequence of a commissioning</span></h3>
+    <ol lang="de">
+      <li><strong>Projekt anlegen</strong> und die Gebäudestruktur abbilden: Liegenschaft, Geschoss, Raum.</li>
+      <li><strong>Geräte einfügen</strong> aus den Produktdatenbanken der Hersteller.</li>
+      <li><strong>Topologie festlegen</strong> und die physikalischen Adressen vergeben.</li>
+      <li><strong>Gruppenadressen bilden</strong> und die Kommunikationsobjekte von Sensoren und Aktoren damit verknüpfen.</li>
+      <li><strong>Parameter einstellen</strong>: Einschaltverhalten, Zeiten, Szenen, Laufzeiten der Storen.</li>
+      <li><strong>Programmieren</strong>: Gerät für Gerät über die Programmiertaste laden.</li>
+      <li><strong>Prüfen und dokumentieren</strong>: Funktionen durchgehen, Diagnose mitlesen, Projektdatei sichern und übergeben.</li>
+    </ol>
+    <ol lang="en">
+      <li><strong>Create the project</strong> and reproduce the building structure: property, floor, room.</li>
+      <li><strong>Insert the devices</strong> from the manufacturers' product databases.</li>
+      <li><strong>Define the topology</strong> and assign the individual addresses.</li>
+      <li><strong>Create group addresses</strong> and link the communication objects of sensors and actuators to them.</li>
+      <li><strong>Set the parameters</strong>: switch-on behaviour, times, scenes, travel times of the blinds.</li>
+      <li><strong>Program</strong>: load device by device using the programming button.</li>
+      <li><strong>Test and document</strong>: go through the functions, follow the diagnosis, save and hand over the project file.</li>
+    </ol>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Keine Preise und Artikelnummern aus dem Gedächtnis</span><span lang="en">No prices or article numbers from memory</span></b>
+      <p lang="de">Die ETS gibt es in mehreren Lizenzstufen, die sich in der zulässigen Gerätezahl unterscheiden. Bezeichnungen, Gerätegrenzen und Preise ändern sich — sie gehören nur dann in die Doku, wenn sie vorher auf der Seite der KNX Association beziehungsweise beim Lieferanten nachgeschlagen wurden. Dasselbe gilt für Typen- und Artikelnummern von Spannungsversorgungen, Kopplern und Aktoren: Sie werden aus dem aktuellen Herstellerkatalog übernommen, nie geschätzt.</p>
+      <p lang="en">The ETS exists in several licence levels which differ in the permitted number of devices. Names, device limits and prices change — they only belong in the documentation if they have been looked up beforehand on the KNX Association website or at the supplier. The same applies to type and article numbers of power supplies, couplers and actuators: they are taken from the current manufacturer's catalogue, never estimated.</p>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Wann sich KNX lohnt</span><span lang="en">When KNX pays off</span></b>
+      <p lang="de">KNX ist der konventionellen Installation nicht in jedem Fall überlegen. Bei einer kleinen Wohnung mit wenigen Schaltstellen ist die konventionelle Lösung günstiger und schneller montiert. Der Bus spielt seine Stärken dort aus, wo <strong>viele Verbraucher, mehrere Gewerke und spätere Änderungen</strong> zusammenkommen — im Verwaltungsbau, in der Schule, im grösseren Einfamilienhaus mit Storen-, Heizungs- und Lichtsteuerung.</p>
+      <p lang="en">KNX is not superior to a conventional installation in every case. In a small flat with few switching points the conventional solution is cheaper and quicker to install. The bus shows its strengths where <strong>many loads, several trades and later changes</strong> come together — in office buildings, schools, or a larger single-family house with blind, heating and lighting control.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7 ================= -->
+<section id="s7">
+  <div class="snum">07</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">In welchem Verhältnis stehen EIB und KNX zueinander?</span><span lang="en">How are EIB and KNX related?</span></summary>
+      <div class="ans">
+        <p lang="de">KNX ist der genormte Nachfolger des Europäischen Installationsbus EIB. 1999 wurden EIB, BatiBUS und EHS zum KNX-Standard zusammengeführt. Weil KNX das EIB-Übertragungsverfahren übernommen hat, laufen EIB-Geräte am KNX-Bus weiter.</p>
+        <p lang="en">KNX is the standardised successor to the European Installation Bus EIB. In 1999 EIB, BatiBUS and EHS were merged into the KNX standard. Because KNX adopted the EIB transmission method, EIB devices keep running on a KNX bus.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welche Normen liegen KNX zugrunde?</span><span lang="en">Which standards is KNX based on?</span></summary>
+      <div class="ans">
+        <p lang="de">Europäisch die EN 50090 für die elektrische Systemtechnik für Heim und Gebäude, international die ISO/IEC 14543-3. Dazu kommen EN 13321-1 für die offene Datenkommunikation und EN 50491 mit allgemeinen Anforderungen. Für die Verlegung in der Schweiz gilt zusätzlich die NIN.</p>
+        <p lang="en">In Europe EN 50090 for home and building electronic systems, internationally ISO/IEC 14543-3. In addition there are EN 13321-1 for open data communication and EN 50491 with general requirements. For wiring in Switzerland the NIN applies as well.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was heisst «dezentrale Intelligenz» und welchen Vorteil bringt sie?</span><span lang="en">What does “decentralised intelligence” mean and what is its advantage?</span></summary>
+      <div class="ans">
+        <p lang="de">Jeder Teilnehmer hat einen eigenen Mikroprozessor und ein eigenes Applikationsprogramm. Es braucht deshalb keinen zentralen Rechner und keine übergeordnete Steuerung. Fällt ein Gerät aus, arbeiten alle übrigen weiter; nur dessen Funktion fehlt. Eine Visualisierung ist möglich, aber für den Grundbetrieb nicht nötig.</p>
+        <p lang="en">Every device has its own microprocessor and its own application program. No central computer and no higher-level controller is therefore needed. If one device fails, all the others keep working; only its function is missing. A visualisation is possible but not required for basic operation.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Worin unterscheiden sich Sensor und Aktor?</span><span lang="en">What is the difference between a sensor and an actuator?</span></summary>
+      <div class="ans">
+        <p lang="de">Der Sensor erfasst ein Ereignis und sendet ein Telegramm auf den Bus, zum Beispiel ein Taster oder ein Präsenzmelder. Der Aktor empfängt Telegramme und führt sie aus, zum Beispiel ein Schaltaktor, der ein Relais anzieht. Nur der Aktor schaltet die 230-V-Last; der Taster führt keinen Laststrom mehr.</p>
+        <p lang="en">The sensor detects an event and sends a telegram onto the bus, for example a push-button or a presence detector. The actuator receives telegrams and carries them out, for example a switch actuator that pulls in a relay. Only the actuator switches the 230 V load; the push-button no longer carries any load current.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wozu dient die Drossel in der Spannungsversorgung?</span><span lang="en">What is the choke in the power supply for?</span></summary>
+      <div class="ans">
+        <p lang="de">Sie entkoppelt das niederohmige Netzteil vom Bus. Für die Gleichspannung ist die Drossel fast ein Kurzschluss, für die schnellen Telegrammsignale dagegen ein hoher Widerstand. Ohne sie würde das Netzteil die als Spannungseinbrüche übertragenen Telegramme sofort ausgleichen und damit die Kommunikation verhindern. Jedes zusätzliche Liniensegment braucht eine eigene Speisung mit Drossel.</p>
+        <p lang="en">It decouples the low-impedance power supply unit from the bus. For DC the choke is almost a short circuit, but for the fast telegram signals it is a high impedance. Without it the power supply would immediately smooth out the telegrams, which are transmitted as voltage dips, and thereby prevent communication. Every additional line segment needs its own supply with a choke.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie ist die KNX-Busleitung aufgebaut und welche Adern werden benutzt?</span><span lang="en">How is the KNX bus cable built up and which conductors are used?</span></summary>
+      <div class="ans">
+        <p lang="de">Eine verdrillte, geschirmte Zweipaarleitung mit grünem Mantel, üblich mit Aderdurchmesser 0,8 mm, Bezeichnung 2×2×0,8. Genutzt wird nur das Paar rot / schwarz — rot ist Plus, schwarz ist Minus. Das Paar weiss / gelb bleibt Reserve und darf nur im SELV-Bereich verwendet werden. Die genaue Typenbezeichnung richtet sich nach dem Lieferanten und ist im Katalog nachzuschlagen.</p>
+        <p lang="en">A twisted, screened two-pair cable with a green sheath, normally with a conductor diameter of 0.8 mm, designation 2×2×0.8. Only the red / black pair is used — red is positive, black is negative. The white / yellow pair stays in reserve and may only be used within the SELV range. The exact type designation depends on the supplier and must be looked up in the catalogue.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie ist eine KNX-Anlage topologisch gegliedert?</span><span lang="en">How is a KNX installation structured topologically?</span></summary>
+      <div class="ans">
+        <p lang="de">In drei Ebenen. Das Liniensegment fasst bis 64 Teilnehmer mit einer eigenen Spannungsversorgung. Über Linienverstärker lassen sich bis vier Segmente zu einer Linie verbinden. Bis 15 Linien werden über Linienkoppler an eine Hauptlinie gehängt und bilden einen Bereich; bis 15 Bereiche werden über Bereichskoppler an die Bereichslinie gehängt. Jede Linie und jedes Segment braucht eine eigene Speisung.</p>
+        <p lang="en">In three levels. A line segment holds up to 64 devices with a power supply of its own. Using line repeaters, up to four segments can be combined into one line. Up to 15 lines are attached to a main line by line couplers and form an area; up to 15 areas are attached to the backbone line by backbone couplers. Every line and every segment needs its own supply.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was ist der Unterschied zwischen physikalischer Adresse und Gruppenadresse?</span><span lang="en">What is the difference between an individual address and a group address?</span></summary>
+      <div class="ans">
+        <p lang="de">Die physikalische Adresse sagt, wo ein Gerät steckt. Sie ist aufgebaut als Bereich.Linie.Teilnehmer, zum Beispiel 1.1.20, kommt in der Anlage genau einmal vor und dient dem Programmieren und der Diagnose. Die Gruppenadresse sagt, wer mit wem spricht. Sie wird mit Schrägstrichen geschrieben, zum Beispiel 1/2/3, kommt mehrfach vor und verknüpft Sensoren mit Aktoren. Im Telegramm ist die physikalische Adresse die Quelladresse, die Gruppenadresse im Normalfall die Zieladresse.</p>
+        <p lang="en">The individual address says where a device is. It has the form area.line.device, for example 1.1.20, occurs exactly once in the installation and is used for programming and diagnosis. The group address says who talks to whom. It is written with slashes, for example 1/2/3, occurs several times and links sensors to actuators. In the telegram the individual address is the source address, the group address normally the destination address.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum spricht man bei KNX davon, dass die Funktion programmiert statt verdrahtet wird?</span><span lang="en">Why is it said that with KNX the function is programmed instead of wired?</span></summary>
+      <div class="ans">
+        <p lang="de">In der konventionellen Installation legt die Verdrahtung fest, welcher Schalter welche Leuchte schaltet; eine Änderung bedeutet umverdrahten. Bei KNX führt die Busleitung nur an allen Geräten vorbei. Welcher Taster welchen Aktorkanal auslöst, entscheidet die Verknüpfung über die Gruppenadressen in der ETS. Eine Änderung ist deshalb meist ein neuer Ladevorgang statt eine Baustelle. Voraussetzung dafür ist, dass die ETS-Projektdatei vorhanden ist.</p>
+        <p lang="en">In a conventional installation the wiring determines which switch operates which luminaire; a change means rewiring. With KNX the bus cable merely passes every device. Which push-button triggers which actuator channel is decided by the link through the group addresses in the ETS. A change is therefore usually a new download rather than building work. The precondition is that the ETS project file is available.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="08-dali.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>08 · <span lang="de">DALI</span><span lang="en">DALI</span></b>
+  </a>
+  <a class="next" href="10-tt-installationen.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>10 · <span lang="de">T+T-Installationen</span><span lang="en">Telephone Installations</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 09 · EIB / KNX</span><span lang="en">Learning Documentation 09 · EIB / KNX</span></span>
+  <span>Yanik · Etavis · <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></span>
+  <span><span lang="de">Grundlagen: EN 50090 · ISO/IEC 14543-3 · EN 50491 · NIN</span><span lang="en">Basis: EN 50090 · ISO/IEC 14543-3 · EN 50491 · NIN</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

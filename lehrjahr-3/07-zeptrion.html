@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 07 — Zeptrion" data-en="Learning Documentation 07 — Zeptrion">Lerndokumentation 07 — Zeptrion</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span>
+    <span lang="de">Thema 07</span><span lang="en">Topic 07</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">07</div>
+    <h1><span lang="de">Zeptrion</span><span lang="en">Zeptrion</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Licht · Storen · Aufbau · Schema · Haupt- und Nebenstelle</span>
+    <span lang="en">Lighting · blinds · design · diagram · main and secondary unit</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">07 von 12</span><span lang="en">07 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Hauptstelle und Nebenstelle, verbunden mit einem Draht">
+        <circle cx="61" cy="24" r="13" fill="none" stroke="#171614" stroke-width="2.4"/>
+        <path d="M52 15 L70 33 M70 15 L52 33" stroke="#171614" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M61 37 V52" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <rect x="24" y="52" width="74" height="74" rx="9" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <rect x="36" y="63" width="50" height="21" rx="4" fill="none" stroke="#171614" stroke-width="2"/>
+        <circle cx="48" cy="100" r="3.2" fill="#171614"/>
+        <circle cx="74" cy="100" r="3.2" fill="#171614"/>
+        <path d="M47 110 q 14 9 28 0" fill="none" stroke="#171614" stroke-width="2" stroke-linecap="round"/>
+        <path d="M98 92 h42" stroke="#B8402A" stroke-width="3" stroke-linecap="round"/>
+        <text x="119" y="85" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" font-weight="600" fill="#B8402A">K</text>
+        <rect x="140" y="66" width="56" height="56" rx="8" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <rect x="149" y="75" width="38" height="16" rx="3" fill="none" stroke="#171614" stroke-width="2"/>
+        <circle cx="157" cy="103" r="2.8" fill="#171614"/>
+        <circle cx="179" cy="103" r="2.8" fill="#171614"/>
+        <path d="M157 111 q 11 7 22 0" fill="none" stroke="#171614" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Was zeptrion ist</span><span lang="en">What zeptrion is</span></h2>
+
+    <p class="lead" lang="de">zeptrion ist ein drahtgebundenes Licht- und Storensteuerungssystem der Feller AG. Es ersetzt den klassischen Schalter durch einen elektronischen Einsatz, der den Verbraucher selbst schaltet, dimmt oder fährt. Weitere Bedienstellen kommen mit <strong>einem einzigen zusätzlichen Draht</strong> dazu.</p>
+    <p class="lead" lang="en">zeptrion is a wired lighting and blind control system made by Feller AG. It replaces the classic switch with an electronic insert that switches, dims or drives the load itself. Further operating points are added using <strong>one single additional wire</strong>.</p>
+
+    <p lang="de">Darin steckt der ganze Kern des Systems. In der klassischen Installation braucht jede weitere Schaltstelle eine eigene Verbindung im Lampendraht — beim Schema 3 zwei Korrespondenzdrähte zwischen den Wechselschaltern, beim Schema 6 nochmals zwei je Kreuzschalter. Bei zeptrion bleibt die Last immer an <strong>einer</strong> Stelle, der Hauptstelle. Alle weiteren Bedienstellen melden ihren Tastendruck nur noch über einen Steuerdraht dorthin.</p>
+    <p lang="en">That is the entire core of the system. In a classic installation every additional switching point needs its own connection in the lamp wire — two strapping wires between the two-way switches for Schema 3, and another two per intermediate switch for Schema 6. With zeptrion the load always stays in <strong>one</strong> place, the main unit. All further operating points merely report their button press to it over a control wire.</p>
+
+    <h3><span lang="de">Was das System kann</span><span lang="en">What the system can do</span></h3>
+    <ul lang="de">
+      <li><strong>Licht schalten</strong> — ein und aus, wie ein gewöhnlicher Schalter</li>
+      <li><strong>Licht dimmen</strong> — heller und dunkler über einen langen Tastendruck</li>
+      <li><strong>Storen fahren</strong> — auf und ab, dazu die <strong>Lamellenverstellung</strong></li>
+      <li><strong>Szenen</strong> — eine gespeicherte Stimmung aus Licht- und Storenwerten auf Knopfdruck abrufen</li>
+      <li><strong>Gruppen- und Zentralschaltungen</strong> — zum Beispiel ein Zentral-Aus an der Haustür</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Switching light</strong> — on and off, like an ordinary switch</li>
+      <li><strong>Dimming light</strong> — brighter and darker with a long button press</li>
+      <li><strong>Driving blinds</strong> — up and down, plus <strong>slat adjustment</strong></li>
+      <li><strong>Scenes</strong> — recall a stored mood of light and blind values at the touch of a button</li>
+      <li><strong>Group and central switching</strong> — for example a central-off at the front door</li>
+    </ul>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Hinweis: zeptrion ist abgekündigt</span><span lang="en">Note: zeptrion has been discontinued</span></b>
+      <p lang="de">Feller hat die <strong>Abkündigung von zeptrion und zeptrionAIR</strong> kommuniziert. Auf der Feller-Seite werden ein Abkündigungsdatum <strong>28. Februar 2025</strong> und die Ersatzteilversorgung <strong>ab 1. März 2025</strong> genannt, dazu fünf Jahre Garantie auf die bis zur Abkündigung gelieferten Geräte und zwei Jahre Garantie auf Ersatzteile. Die zeptrion Taster selbst werden laut Feller <em>nicht</em> abgekündigt, weil sie auch in KNX-Anlagen verbaut werden. <strong>Für Neuanlagen den aktuellen Stand und das Nachfolgesystem beim Lieferanten prüfen.</strong> Feller nennt auf derselben Seite Wiser by Feller, KNX, UNI, Matter und DALI als weiterführende Systeme, legt aber keinen einzelnen Nachfolger fest. Daten und Fristen vor der Abgabe auf feller.ch nachlesen — sie können sich ändern.</p>
+      <p lang="en">Feller has announced the <strong>discontinuation of zeptrion and zeptrionAIR</strong>. The Feller page states a discontinuation date of <strong>28 February 2025</strong> and spare-parts supply <strong>from 1 March 2025</strong>, plus a five-year warranty on devices delivered up to discontinuation and a two-year warranty on spare parts. According to Feller the zeptrion buttons themselves are <em>not</em> discontinued, because they are also fitted in KNX systems. <strong>For new installations, check the current status and the successor system with the supplier.</strong> On the same page Feller lists Wiser by Feller, KNX, UNI, Matter and DALI as onward systems, but does not designate a single successor. Re-read the dates and deadlines on feller.ch before handing this in — they can change.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Aufbau: Einsatz und Bedienaufsatz</span><span lang="en">Design: insert and operating cover</span></h2>
+
+    <p lang="de">Ein zeptrion Gerät ist <strong>modular</strong> aufgebaut. Es besteht aus dem <strong>Funktionseinsatz</strong> — dem Aktor, der die eigentliche Arbeit macht — und einem <strong>steckbaren Abdeckset</strong>, das die Bedienoberfläche bildet. Erst beide zusammen ergeben ein fertiges Gerät.</p>
+    <p lang="en">A zeptrion device is built <strong>modularly</strong>. It consists of the <strong>function insert</strong> — the actuator that does the actual work — and a <strong>plug-on cover set</strong> that forms the operating surface. Only both together make a finished device.</p>
+
+    <p lang="de">Diese Trennung ist praktisch. Der Einsatz sitzt fest in der Unterputzdose und ist verdrahtet, der Aufsatz lässt sich abziehen und wechseln. Wer später eine andere Tastenaufteilung oder eine Zeitschaltuhr will, tauscht nur den Aufsatz und muss nichts neu verdrahten. Die Abdecksets sind je nach Bedürfnis mit <strong>1, 2 oder 4 Bedientasten</strong> erhältlich, wahlweise mit LED, mit Infrarot-Empfänger oder als Astrozeitschaltuhr.</p>
+    <p lang="en">This separation is practical. The insert sits firmly in the flush box and is wired, the cover can be pulled off and exchanged. If a different button layout or a time switch is wanted later, only the cover is swapped and nothing has to be rewired. The cover sets are available with <strong>1, 2 or 4 buttons</strong> as required, optionally with an LED, with an infrared receiver, or as an astronomical time switch.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Teil</span><span lang="en">Part</span></th>
+            <th><span lang="de">Was es ist</span><span lang="en">What it is</span></th>
+            <th><span lang="de">Aufgabe</span><span lang="en">Job</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Funktionseinsatz</span><span lang="en">Function insert</span></strong><br><span class="lgs" lang="de">der Aktor</span><span class="lgs" lang="en">the actuator</span></td>
+            <td><span lang="de">UP-Einsatz mit der Elektronik; je nach Typ ON/OFF, Dimmer oder Motor</span><span lang="en">flush-mounted insert with the electronics; ON/OFF, dimmer or motor depending on type</span></td>
+            <td><span lang="de">schaltet, dimmt oder fährt den Verbraucher; trägt die Anschlussklemmen</span><span lang="en">switches, dims or drives the load; carries the terminals</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Bedienaufsatz / Abdeckset</span><span lang="en">Operating cover / cover set</span></strong><br><span class="lgs" lang="de">die Bedienoberfläche</span><span class="lgs" lang="en">the operating surface</span></td>
+            <td><span lang="de">steckbare Oberfläche mit 1, 2 oder 4 Bedientasten</span><span lang="en">plug-on surface with 1, 2 or 4 buttons</span></td>
+            <td><span lang="de">nimmt den Tastendruck auf; Varianten mit LED, IR-Empfänger oder Zeitschaltuhr</span><span lang="en">receives the button press; variants with LED, IR receiver or time switch</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Abdeckrahmen</span><span lang="en">Frame</span></strong><br><span class="lgs" lang="de">die Schalterlinie</span><span class="lgs" lang="en">the switch range</span></td>
+            <td><span lang="de">Rahmen der gewählten Linie, zum Beispiel EDIZIOdue</span><span lang="en">frame of the chosen range, for example EDIZIOdue</span></td>
+            <td><span lang="de">Optik und Farbe; technisch ohne Funktion</span><span lang="en">appearance and colour; technically without function</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Kanal und Taste</span><span lang="en">Channel and button</span></b>
+      <p lang="de">Ein <strong>Kanal</strong> ist ein schaltbarer Verbraucherkreis. Ein 2-Kanal-Gerät hat also zwei getrennte Ausgänge in derselben Dose und braucht entsprechend zwei Steuerdrähte, wenn beide Kanäle von aussen bedient werden sollen. In den Katalogbezeichnungen tauchen Kürzel wie <span class="mono">1K/1T</span> für Kanal- und Tastenzahl auf. Die genaue Bedeutung und vor allem die zulässigen Anschlussleistungen je Gerätetyp stehen im Herstellerkatalog — <strong>dort nachschlagen, nicht schätzen</strong>. Artikelnummern und Leistungsangaben gehören nie aus dem Gedächtnis in eine Dokumentation.</p>
+      <p lang="en">A <strong>channel</strong> is one switchable load circuit. A 2-channel device therefore has two separate outputs in the same box and needs two control wires if both channels are to be operated from elsewhere. Catalogue names contain abbreviations such as <span class="mono">1K/1T</span> for the number of channels and buttons. The exact meaning and above all the permitted connected loads per device type are in the manufacturer's catalogue — <strong>look them up there, do not estimate</strong>. Article numbers and load ratings never belong in a documentation from memory.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Hauptstelle, Nebenstelle und das Schema</span><span lang="en">Main unit, secondary unit and the diagram</span></h2>
+
+    <p lang="de">Die <strong>Hauptstelle</strong> ist das Gerät, an dem der Verbraucher hängt. Sie ersetzt den klassischen Schalter und schaltet, dimmt oder fährt die Last. Die <strong>Nebenstelle</strong> schaltet selbst keine Last; sie meldet den Tastendruck an die Hauptstelle weiter. Damit lässt sich derselbe Verbraucher von mehreren Orten aus bedienen.</p>
+    <p lang="en">The <strong>main unit</strong> is the device the load is connected to. It replaces the classic switch and switches, dims or drives the load. The <strong>secondary unit</strong> switches no load of its own; it passes the button press on to the main unit. This allows the same load to be operated from several places.</p>
+
+    <p lang="de">Wichtig ist der Unterschied zwischen <em>Speisung</em> und <em>Steuerung</em>. Jedes zeptrion Gerät braucht für seine eigene Elektronik einen Polleiter und einen Neutralleiter — auch die Nebenstelle, obwohl sie nichts schaltet. Die eigentliche Verbindung zwischen den Bedienstellen ist dagegen nur <strong>ein einziger zusätzlicher Steuerdraht je Kanal</strong>, in der Feller-Dokumentation als <strong>K-Draht</strong> bezeichnet und mit <strong>1 × 1,5 mm²</strong> angegeben.</p>
+    <p lang="en">The difference between <em>supply</em> and <em>control</em> matters. Every zeptrion device needs a line conductor and a neutral conductor for its own electronics — the secondary unit too, even though it switches nothing. The actual link between the operating points, by contrast, is only <strong>one single additional control wire per channel</strong>, called the <strong>K wire</strong> in the Feller documentation and specified as <strong>1 × 1.5 mm²</strong>.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Prinzipschema zeptrion mit Hauptstelle, zwei Nebenstellen und Verbraucher">
+        <defs>
+          <style>
+            .l{fill:none;stroke:#7A4A22;stroke-width:2.8;stroke-linecap:round}
+            .nn{fill:none;stroke:#1D5872;stroke-width:2.8;stroke-linecap:round}
+            .k{fill:none;stroke:#B8402A;stroke-width:3.4;stroke-linecap:round}
+            .ld{fill:none;stroke:#26241F;stroke-width:2.8;stroke-linecap:round}
+            .bx{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .ttl{font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;fill:#171614}
+            .sub{font-family:'Source Serif 4',Georgia,serif;font-size:12px;fill:#48433B}
+            .lb{font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;fill:#48433B}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.06em}
+            .dot{fill:#171614}
+          </style>
+        </defs>
+
+        <!-- Speiseschienen -->
+        <path class="l" d="M46 40 H700"/>
+        <path class="nn" d="M46 64 H700"/>
+        <text class="lb" x="712" y="44" fill="#7A4A22">L</text>
+        <text class="lb" x="712" y="68" fill="#1D5872">N</text>
+
+        <!-- Abzweige Speisung -->
+        <path class="l" d="M96 40 V112"/>
+        <path class="nn" d="M132 64 V112"/>
+        <path class="l" d="M330 40 V112"/>
+        <path class="nn" d="M366 64 V112"/>
+        <path class="l" d="M540 40 V112"/>
+        <path class="nn" d="M576 64 V112"/>
+        <circle class="dot" cx="96" cy="40" r="4"/>
+        <circle class="dot" cx="330" cy="40" r="4"/>
+        <circle class="dot" cx="540" cy="40" r="4"/>
+        <circle class="dot" cx="132" cy="64" r="4"/>
+        <circle class="dot" cx="366" cy="64" r="4"/>
+        <circle class="dot" cx="576" cy="64" r="4"/>
+
+        <text class="lb" x="96" y="104" text-anchor="middle">L</text>
+        <text class="lb" x="132" y="104" text-anchor="middle">N</text>
+        <text class="lb" x="330" y="104" text-anchor="middle">L</text>
+        <text class="lb" x="366" y="104" text-anchor="middle">N</text>
+        <text class="lb" x="540" y="104" text-anchor="middle">L</text>
+        <text class="lb" x="576" y="104" text-anchor="middle">N</text>
+
+        <!-- Geräte -->
+        <rect class="bx" x="64" y="112" width="176" height="96" rx="4"/>
+        <text class="ttl" x="152" y="144" text-anchor="middle"><tspan lang="de">HAUPTSTELLE</tspan><tspan lang="en">MAIN UNIT</tspan></text>
+        <text class="sub" x="152" y="166" text-anchor="middle"><tspan lang="de">schaltet die Last</tspan><tspan lang="en">switches the load</tspan></text>
+        <text class="sub" x="152" y="186" text-anchor="middle"><tspan lang="de">Einsatz + Aufsatz</tspan><tspan lang="en">insert + cover</tspan></text>
+
+        <rect class="bx" x="300" y="112" width="150" height="96" rx="4"/>
+        <text class="ttl" x="375" y="144" text-anchor="middle"><tspan lang="de">NEBENSTELLE 1</tspan><tspan lang="en">SECONDARY 1</tspan></text>
+        <text class="sub" x="375" y="166" text-anchor="middle"><tspan lang="de">schaltet keine Last</tspan><tspan lang="en">switches no load</tspan></text>
+        <text class="sub" x="375" y="186" text-anchor="middle"><tspan lang="de">nur Steuerung</tspan><tspan lang="en">control only</tspan></text>
+
+        <rect class="bx" x="510" y="112" width="150" height="96" rx="4"/>
+        <text class="ttl" x="585" y="144" text-anchor="middle"><tspan lang="de">NEBENSTELLE 2</tspan><tspan lang="en">SECONDARY 2</tspan></text>
+        <text class="sub" x="585" y="166" text-anchor="middle"><tspan lang="de">schaltet keine Last</tspan><tspan lang="en">switches no load</tspan></text>
+        <text class="sub" x="585" y="186" text-anchor="middle"><tspan lang="de">max. 10 insgesamt</tspan><tspan lang="en">max. 10 in total</tspan></text>
+
+        <!-- Steuerdraht K -->
+        <path class="k" d="M210 208 V272"/>
+        <path class="k" d="M420 208 V272"/>
+        <path class="k" d="M630 208 V272"/>
+        <path class="k" d="M210 272 H630"/>
+        <circle cx="420" cy="272" r="4.5" fill="#B8402A"/>
+        <text class="lb" x="204" y="246" text-anchor="end" fill="#B8402A">K</text>
+        <text class="lb" x="414" y="246" text-anchor="end" fill="#B8402A">K</text>
+        <text class="lb" x="624" y="246" text-anchor="end" fill="#B8402A">K</text>
+        <text class="lgs" x="420" y="294" text-anchor="middle" fill="#B8402A"><tspan lang="de">STEUERDRAHT K — 1 × 1,5 mm² JE KANAL</tspan><tspan lang="en">CONTROL WIRE K — 1 × 1.5 mm² PER CHANNEL</tspan></text>
+
+        <!-- Lastkreis -->
+        <path class="ld" d="M110 208 V330"/>
+        <text class="lgs" x="100" y="250" text-anchor="end"><tspan lang="de">LASTLEITUNG</tspan><tspan lang="en">LOAD WIRE</tspan></text>
+        <circle cx="110" cy="350" r="20" fill="none" stroke="#26241F" stroke-width="2.8"/>
+        <path d="M96 336 L124 364 M124 336 L96 364" stroke="#26241F" stroke-width="2.2" stroke-linecap="round"/>
+        <path class="nn" d="M130 350 H692"/>
+        <path class="nn" d="M692 350 V64"/>
+        <circle class="dot" cx="692" cy="64" r="4"/>
+        <text class="lgs" x="110" y="388" text-anchor="middle"><tspan lang="de">VERBRAUCHER</tspan><tspan lang="en">LOAD</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Prinzipschema: eine Hauptstelle, zwei Nebenstellen, ein Verbraucher. Alle drei Geräte hängen an L und N. Verbunden sind sie nur durch den roten Steuerdraht K, Klemme K auf Klemme K. Die Lampe hängt allein an der Hauptstelle.</span>
+        <span lang="en"> — Schematic principle: one main unit, two secondary units, one load. All three devices are fed from L and N. They are linked only by the red control wire K, terminal K to terminal K. The lamp hangs on the main unit alone.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Die Klemmen</span><span lang="en">The terminals</span></h3>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Klemme</span><span lang="en">Terminal</span></th>
+            <th><span lang="de">Bedeutung</span><span lang="en">Meaning</span></th>
+            <th><span lang="de">Bemerkung</span><span lang="en">Remark</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">L</td>
+            <td><span lang="de">Polleiter, 230 V AC / 50 Hz</span><span lang="en">line conductor, 230 V AC / 50 Hz</span></td>
+            <td><span lang="de">Speisung der Geräteelektronik — an jedem zeptrion Gerät nötig</span><span lang="en">supply for the device electronics — needed on every zeptrion device</span></td>
+          </tr>
+          <tr>
+            <td class="num">N</td>
+            <td><span lang="de">Neutralleiter</span><span lang="en">neutral conductor</span></td>
+            <td><span lang="de">auch die Nebenstelle braucht N, obwohl sie keine Last schaltet</span><span lang="en">the secondary unit needs N too, although it switches no load</span></td>
+          </tr>
+          <tr>
+            <td class="num">K</td>
+            <td><span lang="de">Nebenstellenanschluss</span><span lang="en">secondary-unit connection</span></td>
+            <td><span lang="de">der eine zusätzliche Steuerdraht; auf gleicher Stufe wird K stets mit K verbunden</span><span lang="en">the one additional control wire; on the same level K is always joined to K</span></td>
+          </tr>
+          <tr>
+            <td class="num">K1, K2</td>
+            <td><span lang="de">Nebenstellenanschluss Kanal 1 und Kanal 2</span><span lang="en">secondary-unit connection for channel 1 and channel 2</span></td>
+            <td><span lang="de">bei 2-Kanal-Geräten; jeder Kanal hat seinen eigenen Steuerdraht</span><span lang="en">on 2-channel devices; every channel has its own control wire</span></td>
+          </tr>
+          <tr>
+            <td class="num">Z</td>
+            <td><span lang="de">Zentralstellenanschluss</span><span lang="en">central-unit connection</span></td>
+            <td><span lang="de">für den Befehl von der übergeordneten Zentralstelle, etwa das Zentral-Aus</span><span lang="en">for the command from the superordinate central unit, such as central-off</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Merksatz</span><span lang="en">Memory aid</span></b>
+      <p lang="de"><strong>K auf K, Z von oben.</strong> Auf derselben Hierarchiestufe wird Klemme K immer mit Klemme K verbunden — Hauptstelle mit Nebenstelle. Klemme Z nimmt den Befehl der übergeordneten Zentralstelle entgegen. Die Last hängt ausschliesslich an der Hauptstelle.</p>
+      <p lang="en"><strong>K to K, Z from above.</strong> On the same hierarchy level, terminal K is always joined to terminal K — main unit to secondary unit. Terminal Z receives the command from the superordinate central unit. The load hangs on the main unit only.</p>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Vor der Montage prüfen</span><span lang="en">Check before installing</span></b>
+      <p lang="de">Klemmenbezeichnungen und Anschlussbilder sind <strong>gerätespezifisch</strong>. Ein ON/OFF-Einsatz, ein Dimmer und ein Motoreinsatz sind unterschiedlich beschriftet, und 2-Kanal-Geräte haben zusätzliche Klemmen. Massgebend ist immer der <strong>Anschlussplan auf dem Gerät beziehungsweise in der Montageanleitung</strong>, nicht dieses Prinzipschema.</p>
+      <p lang="en">Terminal designations and connection diagrams are <strong>device-specific</strong>. An ON/OFF insert, a dimmer and a motor insert are labelled differently, and 2-channel devices have additional terminals. What counts is always the <strong>connection diagram on the device or in the installation instructions</strong>, not this schematic principle.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Vergleich mit Schema 3 und Schema 6</span><span lang="en">Comparison with Schema 3 and Schema 6</span></h2>
+
+    <p lang="de">Aus dem 1. Lehrjahr ist bekannt: Wer eine Lampe von zwei Stellen aus schalten will, baut eine <strong>Wechselschaltung nach Schema 3</strong>. Für jede weitere Stelle kommt ein <strong>Kreuzschalter nach Schema 6</strong> dazwischen. Das funktioniert einwandfrei, kostet aber Draht — und zwar mit jeder zusätzlichen Schaltstelle mehr.</p>
+    <p lang="en">From year 1 we know: to switch a lamp from two places you build a <strong>two-way circuit to Schema 3</strong>. For every further place an <strong>intermediate switch to Schema 6</strong> is inserted in between. That works perfectly well, but it costs wire — and more of it with every additional switching point.</p>
+
+    <p lang="de">Genau hier liegt der Nutzen von zeptrion. Die Nebenstelle ermöglicht Schaltungen ähnlich Schema 3 und 6, also die Bedienung des Verbrauchers von verschiedenen Orten aus — aber ohne Korrespondenzdrähte. Es kommt <strong>je Kanal genau ein Draht</strong> dazu, egal ob es die zweite oder die zehnte Bedienstelle ist.</p>
+    <p lang="en">That is exactly where zeptrion pays off. The secondary unit enables circuits similar to Schema 3 and 6, that is operation of the load from various places — but without strapping wires. <strong>Exactly one wire per channel</strong> is added, whether it is the second or the tenth operating point.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Punkt</span><span lang="en">Point</span></th>
+            <th><span lang="de">Schema 3 und Schema 6</span><span lang="en">Schema 3 and Schema 6</span></th>
+            <th><span lang="de">zeptrion</span><span lang="en">zeptrion</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Wer schaltet</span><span lang="en">What does the switching</span></strong></td>
+            <td><span lang="de">jeder Schalter liegt im Lastkreis und trägt den Laststrom</span><span lang="en">every switch lies in the load circuit and carries the load current</span></td>
+            <td><span lang="de">nur die Hauptstelle; die Nebenstellen führen keinen Laststrom</span><span lang="en">only the main unit; the secondary units carry no load current</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Draht für die 2. Stelle</span><span lang="en">Wire for the 2nd point</span></strong></td>
+            <td><span lang="de">zwei Korrespondenzdrähte zwischen den Wechselschaltern</span><span lang="en">two strapping wires between the two-way switches</span></td>
+            <td><span lang="de">ein Steuerdraht K je Kanal</span><span lang="en">one control wire K per channel</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Draht für jede weitere Stelle</span><span lang="en">Wire for each further point</span></strong></td>
+            <td><span lang="de">nochmals zwei Drähte je Kreuzschalter</span><span lang="en">another two wires per intermediate switch</span></td>
+            <td><span lang="de">der bestehende K-Draht wird durchgeschlauft, K auf K</span><span lang="en">the existing K wire is looped through, K to K</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Nachträglich erweitern</span><span lang="en">Extending later</span></strong></td>
+            <td><span lang="de">aufwendig, der Lastkreis muss aufgetrennt werden</span><span lang="en">laborious, the load circuit has to be opened up</span></td>
+            <td><span lang="de">einfach, solange ein K-Draht zum Ort gezogen wurde</span><span lang="en">simple, as long as a K wire was pulled to the location</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Zusatzfunktionen</span><span lang="en">Additional functions</span></strong></td>
+            <td><span lang="de">keine — ein Schalter schaltet nur ein und aus</span><span lang="en">none — a switch only switches on and off</span></td>
+            <td><span lang="de">Dimmen, Storen, Lamellen, Szenen, Zentral-Aus</span><span lang="en">dimming, blinds, slats, scenes, central-off</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Speisung der Bedienstelle</span><span lang="en">Supply of the operating point</span></strong></td>
+            <td><span lang="de">nicht nötig, der Schalter ist rein mechanisch</span><span lang="en">not needed, the switch is purely mechanical</span></td>
+            <td><span lang="de">L und N an jedem Gerät nötig, auch an der Nebenstelle</span><span lang="en">L and N needed at every device, including the secondary unit</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Der eigentliche Gewinn</span><span lang="en">The actual gain</span></b>
+      <p lang="de">Der Vorteil ist nicht nur der gesparte Draht. Weil die Nebenstelle keinen Laststrom führt, ist es <strong>gleichgültig, wo sie sitzt</strong> — die Lastleitung muss nicht mehr über jede Schaltstelle geführt werden. Bei einer Treppenhaus- oder Korridorbeleuchtung mit vier oder fünf Bedienstellen verkürzt das die Leitungswege deutlich und macht die Dose an der Bedienstelle kleiner.</p>
+      <p lang="en">The advantage is not only the wire saved. Because the secondary unit carries no load current, <strong>it does not matter where it sits</strong> — the load wire no longer has to be routed via every switching point. In a stairwell or corridor lighting circuit with four or five operating points this shortens the cable runs considerably and keeps the box at the operating point smaller.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Funktionen, Bedienung und Grenzen</span><span lang="en">Functions, operation and limits</span></h2>
+
+    <p lang="de">Welche Funktion eine Taste hat, hängt vom Einsatz dahinter ab — ON/OFF, Dimmer oder Motor. Das Bedienprinzip ist aber überall dasselbe: <strong>Ein kurzer Tastendruck löst die Grundfunktion aus, ein langer Tastendruck die Feinfunktion.</strong></p>
+    <p lang="en">Which function a button has depends on the insert behind it — ON/OFF, dimmer or motor. The operating principle, however, is the same everywhere: <strong>a short press triggers the basic function, a long press the fine function.</strong></p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Einsatz</span><span lang="en">Insert</span></th>
+            <th><span lang="de">Kurzer Tastendruck</span><span lang="en">Short press</span></th>
+            <th><span lang="de">Langer Tastendruck</span><span lang="en">Long press</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Schalter (ON/OFF)</span><span lang="en">Switch (ON/OFF)</span></strong></td>
+            <td><span lang="de">EIN / AUS</span><span lang="en">ON / OFF</span></td>
+            <td><span lang="de">keine weitere Funktion</span><span lang="en">no further function</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Dimmer</span><span lang="en">Dimmer</span></strong></td>
+            <td><span lang="de">EIN / AUS</span><span lang="en">ON / OFF</span></td>
+            <td><span lang="de">heller / dunkler</span><span lang="en">brighter / darker</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Storenschalter (Motor)</span><span lang="en">Blind switch (motor)</span></strong></td>
+            <td><span lang="de">AUF / AB — starten und stoppen</span><span lang="en">UP / DOWN — start and stop</span></td>
+            <td><span lang="de">Lamellen wippen</span><span lang="en">tilting the slats</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Szenentaste</span><span lang="en">Scene button</span></strong></td>
+            <td><span lang="de">Szene abrufen</span><span lang="en">recall the scene</span></td>
+            <td><span lang="de">Szene speichern — Taste halten, bis die Quittung erscheint (rund 5 Sekunden)</span><span lang="en">store the scene — hold the button until the confirmation appears (around 5 seconds)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Zeiten gerätespezifisch</span><span lang="en">Timings are device-specific</span></b>
+      <p lang="de">Die genauen Schwellen für «kurz» und «lang» sind je nach Gerät und Aufsatz unterschiedlich definiert. Die Bedienungsanleitung der Astrozeitschaltuhr unterscheidet zum Beispiel drei Stufen: kurzer Tastendruck unter 1 Sekunde, mittlerer über 5 und unter 10 Sekunden, langer über 10 Sekunden. <strong>Diese Werte nicht verallgemeinern</strong> — für den konkret verbauten Aufsatz die zugehörige Bedienungsanleitung heranziehen.</p>
+      <p lang="en">The exact thresholds for “short” and “long” are defined differently depending on the device and cover. The operating instructions for the astronomical time switch, for example, distinguish three steps: short press under 1 second, medium over 5 and under 10 seconds, long over 10 seconds. <strong>Do not generalise these values</strong> — consult the relevant operating instructions for the cover actually fitted.</p>
+    </div>
+
+    <h3><span lang="de">Grenzen der Anlage</span><span lang="en">Limits of the installation</span></h3>
+    <ul lang="de">
+      <li>An eine Hauptstelle lassen sich <strong>maximal 10 Nebenstellen</strong> anschliessen; mit Signalkoppler ist mehr möglich</li>
+      <li>Direkt angeschlossen werden dürfen sie nur, wenn sie auf der <strong>gleichen Sicherungsgruppe</strong> liegen — sonst über einen <strong>Signalkoppler</strong> (Typen SK-W und SK-2K)</li>
+      <li>An eine Zentralstelle lassen sich ebenfalls <strong>maximal 10 Hauptstellen</strong> anschliessen, wiederum ausbaubar mit Signalkoppler</li>
+      <li><strong>Je Systemtyp eine eigene Steuerleitung</strong> — ON/OFF, Dimmer und Motor lassen sich nicht auf demselben K-Draht mischen</li>
+      <li>Die Planung erfolgt <strong>von unten nach oben</strong>: zuerst Haupt- und Nebenstellen, dann Gruppenstellen, dann Zentralstellen</li>
+      <li>Szenen sind bei Haupt- und Nebenstellen für das reine <strong>Schalten</strong> von Licht nicht möglich</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>A maximum of 10 secondary units</strong> can be connected to one main unit; more is possible with a signal coupler</li>
+      <li>They may only be connected directly if they are on the <strong>same fuse group</strong> — otherwise via a <strong>signal coupler</strong> (types SK-W and SK-2K)</li>
+      <li><strong>A maximum of 10 main units</strong> can likewise be connected to one central unit, again extendable with a signal coupler</li>
+      <li><strong>One dedicated control wire per system type</strong> — ON/OFF, dimmer and motor cannot be mixed on the same K wire</li>
+      <li>Planning proceeds <strong>from the bottom up</strong>: first main and secondary units, then group units, then central units</li>
+      <li>Scenes are not available at main and secondary units for plain <strong>switching</strong> of light</li>
+    </ul>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Häufige Fehler</span><span lang="en">Common mistakes</span></b>
+      <p lang="de">Der häufigste Planungsfehler ist der <strong>vergessene Steuerdraht</strong>. Wird beim Rohbau nur die klassische Wechselschaltung eingezogen, fehlt später der K-Draht, und die Nebenstelle lässt sich nicht anschliessen. Der zweite häufige Fehler ist die <strong>unterschiedliche Sicherungsgruppe</strong>: Nebenstellen aus einer anderen Gruppe direkt auf K zu legen, funktioniert nicht — dafür ist der Signalkoppler da. Der dritte ist die <strong>vergessene Speisung</strong>: Auch eine Nebenstelle braucht L und N, obwohl sie keine Last schaltet.</p>
+      <p lang="en">The most frequent planning mistake is the <strong>forgotten control wire</strong>. If only the classic two-way circuit is pulled during the shell phase, the K wire is missing later and the secondary unit cannot be connected. The second frequent mistake is the <strong>different fuse group</strong>: wiring secondary units from another group directly onto K does not work — that is what the signal coupler is for. The third is the <strong>forgotten supply</strong>: a secondary unit needs L and N too, even though it switches no load.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Was ist der Unterschied zwischen Hauptstelle und Nebenstelle?</span><span lang="en">What is the difference between a main unit and a secondary unit?</span></summary>
+      <div class="ans">
+        <p lang="de">Die Hauptstelle ersetzt den klassischen Schalter und schaltet, dimmt oder fährt den Verbraucher — an ihr hängt die Last. Die Nebenstelle schaltet selbst keine Last, sondern meldet ihren Tastendruck über den Steuerdraht an die Hauptstelle weiter. Sie dient nur als zusätzliche Bedienstelle.</p>
+        <p lang="en">The main unit replaces the classic switch and switches, dims or drives the load — the load is connected to it. The secondary unit switches no load of its own but passes its button press on to the main unit over the control wire. It serves purely as an additional operating point.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie viele Nebenstellen dürfen an eine Hauptstelle?</span><span lang="en">How many secondary units may be connected to one main unit?</span></summary>
+      <div class="ans">
+        <p lang="de">Maximal 10. Direkt angeschlossen werden dürfen sie nur, wenn sie auf der gleichen Sicherungsgruppe liegen; andernfalls braucht es einen Signalkoppler. Mit Signalkoppler lässt sich die Anlage über diese Grenze hinaus erweitern.</p>
+        <p lang="en">A maximum of 10. They may only be connected directly if they are on the same fuse group; otherwise a signal coupler is required. With a signal coupler the installation can be extended beyond this limit.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Mit wie vielen zusätzlichen Drähten wird eine Nebenstelle angeschlossen?</span><span lang="en">How many additional wires connect a secondary unit?</span></summary>
+      <div class="ans">
+        <p lang="de">Mit genau einem zusätzlichen Steuerdraht je Kanal, dem K-Draht, angegeben mit 1 × 1,5 mm². Dazu kommen L und N, die aber nicht der Steuerung dienen, sondern der Speisung der Geräteelektronik.</p>
+        <p lang="en">With exactly one additional control wire per channel, the K wire, specified as 1 × 1.5 mm². In addition L and N are required, but these do not serve the control function — they supply the device electronics.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum braucht auch eine Nebenstelle L und N?</span><span lang="en">Why does a secondary unit need L and N as well?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil in ihr Elektronik steckt, die eine Speisung benötigt. Sie ist kein mechanischer Schalter, sondern ein elektronisches Gerät, das ein Signal erzeugt. Geschaltet wird über sie trotzdem kein Laststrom.</p>
+        <p lang="en">Because it contains electronics that need a supply. It is not a mechanical switch but an electronic device that generates a signal. Even so, no load current is switched through it.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Woraus besteht ein zeptrion Gerät?</span><span lang="en">What does a zeptrion device consist of?</span></summary>
+      <div class="ans">
+        <p lang="de">Aus dem Funktionseinsatz, dem Aktor mit der Elektronik und den Klemmen, und einem steckbaren Abdeckset, das die Bedienoberfläche bildet. Die Abdecksets gibt es mit 1, 2 oder 4 Bedientasten, wahlweise mit LED, IR-Empfänger oder als Zeitschaltuhr. Dazu kommt der Abdeckrahmen der gewählten Schalterlinie.</p>
+        <p lang="en">Of the function insert — the actuator with the electronics and the terminals — and a plug-on cover set that forms the operating surface. Cover sets are available with 1, 2 or 4 buttons, optionally with an LED, an IR receiver or as a time switch. The frame of the chosen switch range is added on top.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was bedeuten die Klemmen K und Z?</span><span lang="en">What do the terminals K and Z mean?</span></summary>
+      <div class="ans">
+        <p lang="de">K ist der Nebenstellenanschluss. Auf derselben Hierarchiestufe wird K immer mit K verbunden, also Hauptstelle mit Nebenstelle. Bei 2-Kanal-Geräten heissen sie K1 und K2, je Kanal einer. Z ist der Zentralstellenanschluss und nimmt den Befehl der übergeordneten Zentralstelle entgegen, zum Beispiel ein Zentral-Aus.</p>
+        <p lang="en">K is the secondary-unit connection. On the same hierarchy level K is always joined to K, that is main unit to secondary unit. On 2-channel devices they are called K1 and K2, one per channel. Z is the central-unit connection and receives the command from the superordinate central unit, for instance a central-off.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie viel Draht spart zeptrion gegenüber Schema 3 und 6?</span><span lang="en">How much wire does zeptrion save compared with Schema 3 and 6?</span></summary>
+      <div class="ans">
+        <p lang="de">Beim Schema 3 braucht es zwei Korrespondenzdrähte zwischen den beiden Wechselschaltern, beim Schema 6 nochmals zwei je Kreuzschalter. Bei zeptrion kommt unabhängig von der Anzahl Bedienstellen nur ein Steuerdraht je Kanal dazu, der von Gerät zu Gerät durchgeschlauft wird. Zusätzlich muss die Lastleitung nicht mehr über jede Schaltstelle geführt werden.</p>
+        <p lang="en">Schema 3 needs two strapping wires between the two two-way switches, Schema 6 another two per intermediate switch. With zeptrion only one control wire per channel is added regardless of the number of operating points, looped from device to device. In addition the load wire no longer has to be routed via every switching point.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie wird eine Store mit zeptrion bedient?</span><span lang="en">How is a blind operated with zeptrion?</span></summary>
+      <div class="ans">
+        <p lang="de">Mit einem kurzen Tastendruck fährt die Store auf oder ab; ein weiterer kurzer Druck stoppt sie. Mit einem langen Tastendruck werden die Lamellen gewippt, also in ihrer Neigung verstellt. Die genauen Zeitschwellen sind gerätespezifisch und stehen in der Bedienungsanleitung des jeweiligen Aufsatzes.</p>
+        <p lang="en">A short press moves the blind up or down; another short press stops it. A long press tilts the slats, that is adjusts their angle. The exact time thresholds are device-specific and are given in the operating instructions of the respective cover.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was musst du beachten, wenn du heute eine Neuanlage mit zeptrion planst?</span><span lang="en">What must you bear in mind when planning a new installation with zeptrion today?</span></summary>
+      <div class="ans">
+        <p lang="de">Dass Feller die Abkündigung von zeptrion und zeptrionAIR kommuniziert hat. Für Neuanlagen ist deshalb der aktuelle Stand beim Lieferanten zu prüfen und ein Nachfolgesystem zu wählen; Feller verweist auf Wiser by Feller, KNX, UNI, Matter und DALI. Für bestehende Anlagen bleiben Ersatzteile und Garantieleistungen befristet verfügbar — die konkreten Fristen vor jeder Offerte auf feller.ch nachlesen.</p>
+        <p lang="en">That Feller has announced the discontinuation of zeptrion and zeptrionAIR. For new installations the current status must therefore be checked with the supplier and a successor system chosen; Feller points to Wiser by Feller, KNX, UNI, Matter and DALI. For existing installations spare parts and warranty services remain available for a limited period — read up on the actual deadlines on feller.ch before every quotation.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="06-steuerung-easy4.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>06 · <span lang="de">Steuerung easyE4</span><span lang="en">easyE4 Controller</span></b>
+  </a>
+  <a class="next" href="08-dali.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>08 · <span lang="de">DALI</span><span lang="en">DALI</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 07 · Zeptrion</span><span lang="en">Learning Documentation 07 · Zeptrion</span></span>
+  <span>Yanik · Etavis · <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></span>
+  <span><span lang="de">Grundlagen: Feller Systemdokumentation zeptrion · NIN · NIV</span><span lang="en">Basis: Feller zeptrion system documentation · NIN · NIV</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

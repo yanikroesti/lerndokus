@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 03 — Motoren" data-en="Learning Documentation 03 — Motors">Lerndokumentation 03 — Motoren</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span>
+    <span lang="de">Thema 03</span><span lang="en">Topic 03</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">03</div>
+    <h1><span lang="de">Motoren</span><span lang="en">Motors</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Arten · Aufbau · Dimensionen · Einsatzort</span>
+    <span lang="en">Types · design · sizes · where used</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">03 von 12</span><span lang="en">03 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Drehstrommotor mit Klemmenkasten">
+        <!-- Fuesse -->
+        <path d="M56 118 h22 v10 h-22 z M124 118 h22 v10 h-22 z" fill="#EFEAE0" stroke="#171614" stroke-width="2.4" stroke-linejoin="round"/>
+        <!-- Gehaeuse -->
+        <rect x="44" y="52" width="114" height="66" rx="13" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <!-- Kuehlrippen -->
+        <path d="M60 52 v-8 M76 52 v-8 M92 52 v-8 M108 52 v-8 M124 52 v-8 M140 52 v-8" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <!-- Klemmenkasten -->
+        <rect x="82" y="26" width="42" height="20" rx="3" fill="#FFFFFF" stroke="#1D5872" stroke-width="2.4"/>
+        <path d="M92 36 h22" stroke="#1D5872" stroke-width="2" stroke-linecap="round"/>
+        <!-- Welle -->
+        <path d="M158 85 h34" stroke="#171614" stroke-width="5.5" stroke-linecap="round"/>
+        <!-- Drehrichtungs-Schwung -->
+        <path d="M180 62 a 22 22 0 0 1 6 16" fill="none" stroke="#B8402A" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M172 60 l 9 1 l -3 9 z" fill="#B8402A"/>
+        <!-- Gesicht -->
+        <circle cx="84" cy="80" r="3.1" fill="#171614"/>
+        <circle cx="110" cy="80" r="3.1" fill="#171614"/>
+        <path d="M83 94 q 14 9 28 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Der Drehstrom-Asynchronmotor</span><span lang="en">The three-phase induction motor</span></h2>
+
+    <p class="lead" lang="de">Der Motor wandelt elektrische Energie in eine Drehbewegung um. Auf der Baustelle, in der Haustechnik und in der Industrie ist ein Typ so dominant, dass man von ihm ausgeht, wenn nichts anderes gesagt wird: der <strong>Drehstrom-Asynchronmotor mit Kurzschlussläufer</strong>.</p>
+    <p class="lead" lang="en">A motor converts electrical energy into rotation. On site, in building services and in industry one type is so dominant that it is assumed unless stated otherwise: the <strong>three-phase induction motor with a squirrel-cage rotor</strong>.</p>
+
+    <p lang="de">Er ist so verbreitet, weil er im Inneren <strong>keine Schleifkontakte</strong> hat. Es gibt keine Bürsten, die verschleissen, und keinen Kommutator, der Funken zieht. Der Läufer ist ein massiver Käfig aus Leiterstäben — mechanisch praktisch unzerstörbar. Damit ist der Motor wartungsarm, robust und günstig.</p>
+    <p lang="en">It is so widespread because it has <strong>no sliding contacts</strong> inside. There are no brushes to wear out and no commutator to spark. The rotor is a solid cage of conductor bars — mechanically almost indestructible. That makes the motor low-maintenance, robust and inexpensive.</p>
+
+    <h3><span lang="de">Aufbau</span><span lang="en">Construction</span></h3>
+
+    <figure>
+      <svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schnittbild eines Drehstrom-Asynchronmotors mit Kurzschlusslaeufer">
+        <defs>
+          <style>
+            .aFill{fill:#EFEAE0;stroke:#171614;stroke-width:2.2;stroke-linejoin:round}
+            .aWind{fill:#D6E3E9;stroke:#1D5872;stroke-width:2}
+            .aRot{fill:#F0DBD4;stroke:#B8402A;stroke-width:2}
+            .aLine{fill:none;stroke:#171614;stroke-width:2.2;stroke-linecap:round}
+            .aThin{fill:none;stroke:#7D7669;stroke-width:1.3}
+            .aNum{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;fill:#F4F1EA}
+            .aTtl{font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;fill:#171614}
+            .aLbl{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.06em}
+          </style>
+        </defs>
+
+        <text class="aTtl" x="40" y="34"><tspan lang="de">Schnitt durch einen Kurzschlussläufermotor</tspan><tspan lang="en">Section through a squirrel-cage motor</tspan></text>
+
+        <!-- Fuesse -->
+        <path class="aFill" d="M170 262 h64 v20 h-64 z"/>
+        <path class="aFill" d="M400 262 h64 v20 h-64 z"/>
+
+        <!-- Gehaeuse -->
+        <rect class="aFill" x="150" y="96" width="330" height="166" rx="10"/>
+        <!-- Kuehlrippen -->
+        <path class="aLine" d="M180 96 v-16 M212 96 v-16 M244 96 v-16 M276 96 v-16 M308 96 v-16 M340 96 v-16 M372 96 v-16 M404 96 v-16 M436 96 v-16"/>
+
+        <!-- Staenderblechpaket + Wicklung -->
+        <rect class="aWind" x="176" y="114" width="270" height="34" rx="3"/>
+        <rect class="aWind" x="176" y="210" width="270" height="34" rx="3"/>
+
+        <!-- Rotor -->
+        <rect class="aRot" x="196" y="158" width="230" height="42" rx="4"/>
+        <path d="M212 158 L204 200 M236 158 L228 200 M260 158 L252 200 M284 158 L276 200 M308 158 L300 200 M332 158 L324 200 M356 158 L348 200 M380 158 L372 200 M404 158 L396 200" stroke="#B8402A" stroke-width="1.8" fill="none"/>
+
+        <!-- Welle -->
+        <path class="aLine" d="M96 179 H196 M426 179 H470" stroke-width="9"/>
+        <!-- Lager -->
+        <rect class="aFill" x="186" y="164" width="14" height="30" rx="2"/>
+        <rect class="aFill" x="422" y="164" width="14" height="30" rx="2"/>
+
+        <!-- Luefter und Haube -->
+        <rect class="aFill" x="470" y="112" width="72" height="134" rx="8"/>
+        <path class="aLine" d="M506 130 v98"/>
+        <path d="M506 179 L488 152 M506 179 L524 152 M506 179 L488 206 M506 179 L524 206" stroke="#171614" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <path class="aLine" d="M556 140 h30 M556 160 h30 M556 200 h30 M556 220 h30" stroke="#1D5872" stroke-width="2"/>
+
+        <!-- Klemmenkasten -->
+        <rect class="aFill" x="262" y="44" width="106" height="36" rx="4"/>
+        <path class="aThin" d="M276 62 h78"/>
+        <circle cx="286" cy="62" r="3" fill="#1D5872"/>
+        <circle cx="315" cy="62" r="3" fill="#1D5872"/>
+        <circle cx="344" cy="62" r="3" fill="#1D5872"/>
+
+        <!-- Nummern-Badges -->
+        <g>
+          <circle cx="315" cy="30" r="11" fill="#171614"/><text class="aNum" x="315" y="34" text-anchor="middle">1</text>
+          <path class="aThin" d="M315 41 v3"/>
+          <circle cx="120" cy="146" r="11" fill="#171614"/><text class="aNum" x="120" y="150" text-anchor="middle">2</text>
+          <path class="aThin" d="M128 152 L176 122"/>
+          <circle cx="120" cy="228" r="11" fill="#171614"/><text class="aNum" x="120" y="232" text-anchor="middle">3</text>
+          <path class="aThin" d="M129 226 L196 200"/>
+          <circle cx="311" cy="300" r="11" fill="#171614"/><text class="aNum" x="311" y="304" text-anchor="middle">4</text>
+          <path class="aThin" d="M311 289 v-79"/>
+          <circle cx="86" cy="216" r="11" fill="#171614"/><text class="aNum" x="86" y="220" text-anchor="middle">5</text>
+          <path class="aThin" d="M92 206 L110 186"/>
+          <circle cx="192" cy="316" r="11" fill="#171614"/><text class="aNum" x="192" y="320" text-anchor="middle">6</text>
+          <path class="aThin" d="M192 305 v-21"/>
+          <circle cx="506" cy="76" r="11" fill="#171614"/><text class="aNum" x="506" y="80" text-anchor="middle">7</text>
+          <path class="aThin" d="M506 87 v22"/>
+          <circle cx="612" cy="180" r="11" fill="#171614"/><text class="aNum" x="612" y="184" text-anchor="middle">8</text>
+          <path class="aThin" d="M601 180 h-13"/>
+        </g>
+
+        <text class="aLbl" x="40" y="318"><tspan lang="de">MASSSTABSLOSE PRINZIPDARSTELLUNG</tspan><tspan lang="en">SCHEMATIC — NOT TO SCALE</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Schnitt durch einen Drehstrom-Asynchronmotor. Blau der feststehende Ständer mit der Wicklung, rot der drehende Kurzschlussläufer.</span>
+        <span lang="en"> — Section through a three-phase induction motor. Blue is the fixed stator with its winding, red the rotating squirrel-cage rotor.</span>
+      </figcaption>
+    </figure>
+
+    <ul class="legend">
+      <li><span class="n">1</span><span lang="de">Klemmenkasten — hier kommt die Zuleitung an, hier sitzen die Brücken</span><span lang="en">Terminal box — the supply arrives here, the links sit here</span></li>
+      <li><span class="n">2</span><span lang="de">Ständerblechpaket — geschichtete Bleche gegen Wirbelströme</span><span lang="en">Stator core — laminated sheets against eddy currents</span></li>
+      <li><span class="n">3</span><span lang="de">Ständerwicklung — drei Stränge, um 120° versetzt eingelegt</span><span lang="en">Stator winding — three phase bands, offset by 120°</span></li>
+      <li><span class="n">4</span><span lang="de">Kurzschlussläufer — Leiterstäbe, an beiden Enden mit einem Ring kurzgeschlossen</span><span lang="en">Squirrel-cage rotor — bars shorted by a ring at both ends</span></li>
+      <li><span class="n">5</span><span lang="de">Welle — überträgt das Drehmoment auf die Arbeitsmaschine</span><span lang="en">Shaft — transmits the torque to the driven machine</span></li>
+      <li><span class="n">6</span><span lang="de">Lagerung und Motorfüsse — nehmen Kräfte und Vibrationen auf</span><span lang="en">Bearings and motor feet — take up forces and vibration</span></li>
+      <li><span class="n">7</span><span lang="de">Eigenlüfter auf der Welle — kühlt nur, solange der Motor dreht</span><span lang="en">Shaft-mounted fan — cools only while the motor turns</span></li>
+      <li><span class="n">8</span><span lang="de">Lüfterhaube mit Luftleitrippen am Gehäuse</span><span lang="en">Fan cowl with cooling fins on the housing</span></li>
+    </ul>
+
+    <h3><span lang="de">Das Drehfeld</span><span lang="en">The rotating field</span></h3>
+
+    <p lang="de">Die drei Wicklungsstränge sind räumlich um <strong>120°</strong> versetzt in den Ständer eingelegt. Die drei Aussenleiter sind zeitlich ebenfalls um 120° versetzt. Aus dieser Kombination entsteht ein Magnetfeld, das nicht steht, sondern im Luftspalt <strong>umläuft</strong> — das Drehfeld.</p>
+    <p lang="en">The three winding bands are placed in the stator <strong>120°</strong> apart in space. The three line conductors are likewise 120° apart in time. This combination produces a magnetic field that does not stand still but <strong>rotates</strong> in the air gap — the rotating field.</p>
+
+    <p lang="de">Das umlaufende Feld schneidet die Stäbe des Läufers und <strong>induziert</strong> in ihnen eine Spannung. Weil die Stäbe an den Enden kurzgeschlossen sind, fliesst sofort ein hoher Strom. Dieser Strom im Magnetfeld erzeugt eine Kraft — der Läufer wird mitgenommen und dreht dem Drehfeld hinterher.</p>
+    <p lang="en">The rotating field cuts the rotor bars and <strong>induces</strong> a voltage in them. Because the bars are shorted at their ends, a high current flows immediately. This current in the magnetic field produces a force — the rotor is dragged along and follows the rotating field.</p>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Warum «asynchron»?</span><span lang="en">Why “asynchronous”?</span></b>
+      <p lang="de">Der Läufer kann das Drehfeld <strong>nie ganz einholen</strong>. Liefe er exakt gleich schnell, gäbe es keine Relativbewegung, keine Induktion, keinen Strom und damit auch kein Drehmoment. Der Motor braucht den Nachlauf, um überhaupt Kraft zu entwickeln — deshalb heisst er asynchron.</p>
+      <p lang="en">The rotor can <strong>never quite catch up</strong> with the rotating field. If it ran at exactly the same speed there would be no relative movement, no induction, no current and therefore no torque. The motor needs to lag behind in order to produce any force at all — hence the name asynchronous.</p>
+    </div>
+
+    <p lang="de">Die Drehrichtung ergibt sich aus der Reihenfolge der drei Aussenleiter am Klemmenbrett. Werden <strong>zwei beliebige Aussenleiter getauscht</strong>, dreht das Feld und damit der Motor in die Gegenrichtung. Mehr braucht es für einen Drehrichtungswechsel nicht.</p>
+    <p lang="en">The direction of rotation follows from the order of the three line conductors at the terminal board. Swapping <strong>any two line conductors</strong> reverses the field and hence the motor. Nothing more is needed to change the direction.</p>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Drehzahl, Polpaare und Schlupf</span><span lang="en">Speed, pole pairs and slip</span></h2>
+
+    <p lang="de">Die Drehzahl eines Asynchronmotors lässt sich <strong>nicht frei wählen</strong>. Sie wird von der Netzfrequenz und vom Aufbau der Wicklung bestimmt. Je mehr Polpaare die Wicklung hat, desto langsamer läuft das Drehfeld um.</p>
+    <p lang="en">The speed of an induction motor <strong>cannot be chosen freely</strong>. It is set by the mains frequency and by the way the winding is built. The more pole pairs the winding has, the slower the field rotates.</p>
+
+    <div class="formula">n<sub>s</sub> = 60 · f / p &nbsp;&nbsp;[min<sup>−1</sup>] &nbsp;&nbsp;<span lang="de">f = Frequenz · p = Polpaarzahl</span><span lang="en">f = frequency · p = number of pole pairs</span></div>
+
+    <p lang="de">Wichtig: <strong>p ist die Polpaarzahl, nicht die Polzahl.</strong> Ein Motor mit vier Polen hat zwei Polpaare. Das ist die häufigste Verwechslung bei dieser Formel.</p>
+    <p lang="en">Important: <strong>p is the number of pole pairs, not the number of poles.</strong> A motor with four poles has two pole pairs. This is the most common mix-up with this formula.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Polpaare p</span><span lang="en">Pole pairs p</span></th>
+            <th><span lang="de">Pole</span><span lang="en">Poles</span></th>
+            <th><span lang="de">Synchrondrehzahl bei 50 Hz</span><span lang="en">Synchronous speed at 50 Hz</span></th>
+            <th><span lang="de">Typische Nenndrehzahl</span><span lang="en">Typical rated speed</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">1</td><td class="num">2</td><td class="num">3000 min<sup>−1</sup></td><td class="num">2850…2900 min<sup>−1</sup></td></tr>
+          <tr><td class="num">2</td><td class="num">4</td><td class="num">1500 min<sup>−1</sup></td><td class="num">1420…1450 min<sup>−1</sup></td></tr>
+          <tr><td class="num">3</td><td class="num">6</td><td class="num">1000 min<sup>−1</sup></td><td class="num">940…960 min<sup>−1</sup></td></tr>
+          <tr><td class="num">4</td><td class="num">8</td><td class="num">750 min<sup>−1</sup></td><td class="num">700…720 min<sup>−1</sup></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Der Schlupf</span><span lang="en">Slip</span></h3>
+
+    <p lang="de">Der Schlupf ist die Differenz zwischen Drehfeld und Läufer, bezogen auf die Synchrondrehzahl. Er ist keine Panne, sondern die <strong>Voraussetzung dafür, dass der Motor Drehmoment abgibt</strong>.</p>
+    <p lang="en">Slip is the difference between the rotating field and the rotor, referred to the synchronous speed. It is not a defect but the <strong>precondition for the motor producing torque</strong>.</p>
+
+    <div class="formula">s = (n<sub>s</sub> − n) / n<sub>s</sub> · 100 % &nbsp;&nbsp;<span lang="de">n = wirkliche Läuferdrehzahl</span><span lang="en">n = actual rotor speed</span></div>
+
+    <p lang="de">Bei Nennlast liegt der Schlupf üblicher Käfigläufer im Bereich weniger Prozent — je nach Bauart und Belastung etwa <strong>1 bis 8 %</strong>. Kleine Motoren schlupfen stärker als grosse. Im Leerlauf ist der Schlupf sehr klein, unter Last steigt er an: Der Motor wird langsamer und nimmt dafür mehr Strom auf.</p>
+    <p lang="en">At rated load the slip of a typical cage motor is a few per cent — depending on design and load roughly <strong>1 to 8 %</strong>. Small motors slip more than large ones. At no load the slip is very small; under load it rises: the motor slows down and draws more current in exchange.</p>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Rechenbeispiel</span><span lang="en">Worked example</span></b>
+      <p lang="de">Typenschild: 4-polig, 50 Hz, 1435 min<sup>−1</sup>. Polpaarzahl p = 2, also n<sub>s</sub> = 60 · 50 / 2 = 1500 min<sup>−1</sup>. Schlupf s = (1500 − 1435) / 1500 = 0,043 → <strong>4,3 %</strong>. Umgekehrt gilt: Aus einer Nenndrehzahl knapp unter 1500 min<sup>−1</sup> liest man sofort ab, dass es ein 4-poliger Motor ist.</p>
+      <p lang="en">Nameplate: 4-pole, 50 Hz, 1435 min<sup>−1</sup>. Pole pairs p = 2, so n<sub>s</sub> = 60 · 50 / 2 = 1500 min<sup>−1</sup>. Slip s = (1500 − 1435) / 1500 = 0.043 → <strong>4.3 %</strong>. Conversely: a rated speed just under 1500 min<sup>−1</sup> immediately tells you it is a 4-pole motor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Klemmenkasten, Brücken, Stern und Dreieck</span><span lang="en">Terminal box, links, star and delta</span></h2>
+
+    <p lang="de">Im Klemmenkasten enden die <strong>sechs Anschlüsse</strong> der drei Wicklungsstränge. Jeder Strang hat einen Anfang und ein Ende. Damit lässt sich derselbe Motor auf zwei verschiedene Arten zusammenschalten — in <strong>Stern</strong> oder in <strong>Dreieck</strong>. Welche der beiden richtig ist, entscheidet das Typenschild zusammen mit der Netzspannung.</p>
+    <p lang="en">Inside the terminal box the <strong>six ends</strong> of the three winding phases terminate. Each phase has a beginning and an end. The same motor can therefore be connected in two different ways — in <strong>star</strong> or in <strong>delta</strong>. Which of the two is correct is decided by the nameplate together with the supply voltage.</p>
+
+    <h3><span lang="de">Die Klemmenbezeichnungen</span><span lang="en">The terminal designations</span></h3>
+
+    <ul lang="de">
+      <li><strong>U1 · V1 · W1</strong> — die Wicklungsanfänge, in der oberen Reihe</li>
+      <li><strong>W2 · U2 · V2</strong> — die Wicklungsenden, in der unteren Reihe</li>
+      <li>Die untere Reihe ist bewusst <strong>versetzt</strong> beschriftet: Über W2 liegt U1, über U2 liegt V1, über V2 liegt W1</li>
+      <li>Genau diese Versetzung sorgt dafür, dass <strong>dieselben drei Schaltbügel</strong> sowohl Stern als auch Dreieck ergeben — einmal quer, einmal längs gelegt</li>
+      <li>Der Schutzleiter kommt auf die separate <strong>PE-Klemme</strong> im Klemmenkasten, nicht auf das Klemmenbrett</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>U1 · V1 · W1</strong> — the winding beginnings, in the upper row</li>
+      <li><strong>W2 · U2 · V2</strong> — the winding ends, in the lower row</li>
+      <li>The lower row is deliberately labelled <strong>offset</strong>: U1 sits above W2, V1 above U2, W1 above V2</li>
+      <li>Exactly this offset means that <strong>the same three links</strong> produce either star or delta — laid crosswise once, lengthwise the other time</li>
+      <li>The protective conductor goes to the separate <strong>PE terminal</strong> in the box, not onto the terminal board</li>
+    </ul>
+
+    <figure>
+      <svg viewBox="0 0 760 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Klemmenbrett eines Drehstrommotors mit Bruecken in Stern- und in Dreieckschaltung">
+        <defs>
+          <style>
+            .kBox{fill:#EFEAE0;stroke:#171614;stroke-width:2.4}
+            .kStud{fill:#FBF9F5;stroke:#171614;stroke-width:2.2}
+            .kBrg{stroke:#B8402A;stroke-width:9;stroke-linecap:round;fill:none}
+            .kSup{stroke:#171614;stroke-width:2.6;stroke-linecap:round;fill:none}
+            .kWdg{stroke:#1D5872;stroke-width:2.6;stroke-linecap:round;fill:none}
+            .kTtl{font-family:'Archivo',sans-serif;font-size:15px;font-weight:700;fill:#171614}
+            .kTag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
+            .kTrm{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;fill:#48433B}
+            .kNote{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;fill:#B8402A}
+            .kSml{font-family:'IBM Plex Mono',monospace;font-size:9.5px;fill:#48433B}
+          </style>
+        </defs>
+
+        <!-- ============ STERN ============ -->
+        <text class="kTtl" x="40" y="34"><tspan lang="de">STERN — Y</tspan><tspan lang="en">STAR — Y</tspan></text>
+        <text class="kTag" x="144" y="34"><tspan lang="de">BRÜCKEN QUER ÜBER DIE UNTERE REIHE</tspan><tspan lang="en">LINKS ACROSS THE LOWER ROW</tspan></text>
+
+        <!-- Zuleitung -->
+        <text class="kTrm" x="100" y="66" text-anchor="middle">L1</text>
+        <text class="kTrm" x="190" y="66" text-anchor="middle">L2</text>
+        <text class="kTrm" x="280" y="66" text-anchor="middle">L3</text>
+        <path class="kSup" d="M100 74 V150 M190 74 V150 M280 74 V150"/>
+
+        <!-- Klemmenbrett -->
+        <rect class="kBox" x="52" y="126" width="276" height="120" rx="6"/>
+        <!-- Bruecken Stern: quer ueber die untere Reihe -->
+        <path class="kBrg" d="M100 218 H280"/>
+        <!-- Klemmen -->
+        <circle class="kStud" cx="100" cy="158" r="10"/><circle class="kStud" cx="190" cy="158" r="10"/><circle class="kStud" cx="280" cy="158" r="10"/>
+        <circle class="kStud" cx="100" cy="218" r="10"/><circle class="kStud" cx="190" cy="218" r="10"/><circle class="kStud" cx="280" cy="218" r="10"/>
+        <text class="kTrm" x="100" y="146" text-anchor="middle">U1</text>
+        <text class="kTrm" x="190" y="146" text-anchor="middle">V1</text>
+        <text class="kTrm" x="280" y="146" text-anchor="middle">W1</text>
+        <text class="kTrm" x="100" y="240" text-anchor="middle">W2</text>
+        <text class="kTrm" x="190" y="240" text-anchor="middle">U2</text>
+        <text class="kTrm" x="280" y="240" text-anchor="middle">V2</text>
+
+        <text class="kNote" x="190" y="270" text-anchor="middle"><tspan lang="de">je Wicklung 230 V</tspan><tspan lang="en">230 V per winding</tspan></text>
+
+        <!-- Wicklungsbild Stern -->
+        <g>
+          <path class="kWdg" d="M190 370 V324 M190 370 L148 394 M190 370 L232 394"/>
+          <circle cx="190" cy="370" r="5" fill="#1D5872"/>
+          <circle cx="190" cy="324" r="4.5" fill="#171614"/>
+          <circle cx="148" cy="394" r="4.5" fill="#171614"/>
+          <circle cx="232" cy="394" r="4.5" fill="#171614"/>
+          <text class="kSml" x="190" y="315" text-anchor="middle">U1 · L1</text>
+          <text class="kSml" x="134" y="408" text-anchor="middle">V1 · L2</text>
+          <text class="kSml" x="248" y="408" text-anchor="middle">W1 · L3</text>
+          <path stroke="#7D7669" stroke-width="1.2" fill="none" d="M64 370 H182"/>
+          <text class="kSml" x="60" y="373" text-anchor="end"><tspan lang="de">Sternpunkt W2·U2·V2</tspan><tspan lang="en">Star point W2·U2·V2</tspan></text>
+        </g>
+
+        <!-- Trennlinie -->
+        <path d="M380 24 V412" stroke="#D2CABB" stroke-width="1.5" stroke-dasharray="5 5"/>
+
+        <!-- ============ DREIECK ============ -->
+        <text class="kTtl" x="420" y="34"><tspan lang="de">DREIECK — Δ</tspan><tspan lang="en">DELTA — Δ</tspan></text>
+        <text class="kTag" x="540" y="34"><tspan lang="de">DREI BRÜCKEN LÄNGS</tspan><tspan lang="en">THREE LINKS LENGTHWISE</tspan></text>
+
+        <text class="kTrm" x="480" y="66" text-anchor="middle">L1</text>
+        <text class="kTrm" x="570" y="66" text-anchor="middle">L2</text>
+        <text class="kTrm" x="660" y="66" text-anchor="middle">L3</text>
+        <path class="kSup" d="M480 74 V150 M570 74 V150 M660 74 V150"/>
+
+        <rect class="kBox" x="432" y="126" width="276" height="120" rx="6"/>
+        <!-- Bruecken Dreieck: laengs -->
+        <path class="kBrg" d="M480 158 V218 M570 158 V218 M660 158 V218"/>
+        <circle class="kStud" cx="480" cy="158" r="10"/><circle class="kStud" cx="570" cy="158" r="10"/><circle class="kStud" cx="660" cy="158" r="10"/>
+        <circle class="kStud" cx="480" cy="218" r="10"/><circle class="kStud" cx="570" cy="218" r="10"/><circle class="kStud" cx="660" cy="218" r="10"/>
+        <text class="kTrm" x="480" y="146" text-anchor="middle">U1</text>
+        <text class="kTrm" x="570" y="146" text-anchor="middle">V1</text>
+        <text class="kTrm" x="660" y="146" text-anchor="middle">W1</text>
+        <text class="kTrm" x="480" y="240" text-anchor="middle">W2</text>
+        <text class="kTrm" x="570" y="240" text-anchor="middle">U2</text>
+        <text class="kTrm" x="660" y="240" text-anchor="middle">V2</text>
+
+        <text class="kNote" x="570" y="270" text-anchor="middle"><tspan lang="de">je Wicklung 400 V</tspan><tspan lang="en">400 V per winding</tspan></text>
+
+        <!-- Wicklungsbild Dreieck -->
+        <g>
+          <path class="kWdg" d="M570 322 L528 394 L612 394 Z"/>
+          <circle cx="570" cy="322" r="4.5" fill="#171614"/>
+          <circle cx="528" cy="394" r="4.5" fill="#171614"/>
+          <circle cx="612" cy="394" r="4.5" fill="#171614"/>
+          <text class="kSml" x="570" y="314" text-anchor="middle">U1+W2 · L1</text>
+          <text class="kSml" x="512" y="408" text-anchor="middle">V1+U2 · L2</text>
+          <text class="kSml" x="630" y="408" text-anchor="middle">W1+V2 · L3</text>
+        </g>
+
+        <text class="kTag" x="420" y="296"><tspan lang="de">BRÜCKEN ROT · WICKLUNGSBILD BLAU</tspan><tspan lang="en">LINKS IN RED · WINDING DIAGRAM IN BLUE</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 2</span><span lang="en">Fig. 2</span></b>
+        <span lang="de"> — Klemmenbrett mit den Brücken. Links Stern: eine Querbrücke verbindet W2·U2·V2 zum Sternpunkt. Rechts Dreieck: drei Längsbrücken verbinden U1–W2, V1–U2 und W1–V2.</span>
+        <span lang="en"> — Terminal board with the links. Left, star: one crosswise link joins W2·U2·V2 to the star point. Right, delta: three lengthwise links join U1–W2, V1–U2 and W1–V2.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Wann Stern, wann Dreieck?</span><span lang="en">When star, when delta?</span></h3>
+
+    <p lang="de">Die Regel ist kurz: <strong>Die höhere Spannungsangabe des Typenschilds gehört zur Sternschaltung, die tiefere zur Dreieckschaltung.</strong> Der Grund liegt in der Geometrie: In Stern liegt an jeder Wicklung nur die Spannung zwischen Aussenleiter und Sternpunkt, also die Netzspannung geteilt durch √3. In Dreieck liegt an jeder Wicklung die volle Spannung zwischen zwei Aussenleitern.</p>
+    <p lang="en">The rule is short: <strong>the higher voltage on the nameplate belongs to the star connection, the lower one to delta.</strong> The reason is geometric: in star each winding only sees the voltage between a line conductor and the star point, that is the supply voltage divided by √3. In delta each winding sees the full voltage between two line conductors.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Merkmal</span><span lang="en">Property</span></th>
+            <th><span lang="de">Stern — Y</span><span lang="en">Star — Y</span></th>
+            <th><span lang="de">Dreieck — Δ</span><span lang="en">Delta — Δ</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Brücken</span><span lang="en">Links</span></strong></td>
+            <td><span lang="de">quer über die untere Reihe: W2–U2–V2</span><span lang="en">crosswise over the lower row: W2–U2–V2</span></td>
+            <td><span lang="de">längs: U1–W2, V1–U2, W1–V2</span><span lang="en">lengthwise: U1–W2, V1–U2, W1–V2</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Spannung je Wicklung</span><span lang="en">Voltage per winding</span></strong></td>
+            <td class="num">U<sub>Netz</sub> / √3 &nbsp;→&nbsp; 230 V</td>
+            <td class="num">U<sub>Netz</sub> &nbsp;→&nbsp; 400 V</td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Netzstrom</span><span lang="en">Line current</span></strong></td>
+            <td><span lang="de">der kleinere der beiden Werte auf dem Schild</span><span lang="en">the smaller of the two values on the plate</span></td>
+            <td><span lang="de">der grössere Wert — um den Faktor √3 höher</span><span lang="en">the larger value — higher by a factor of √3</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Leistung und Moment</span><span lang="en">Power and torque</span></strong></td>
+            <td><span lang="de">ein Drittel gegenüber Dreieck</span><span lang="en">one third of the delta value</span></td>
+            <td><span lang="de">volle Nennleistung</span><span lang="en">full rated output</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Am 400-V-Netz gilt</span><span lang="en">On a 400 V supply</span></strong></td>
+            <td><span lang="de">für einen Motor 230/400 V — Betriebsschaltung</span><span lang="en">for a 230/400 V motor — running connection</span></td>
+            <td><span lang="de">für einen Motor 400/690 V — Betriebsschaltung</span><span lang="en">for a 400/690 V motor — running connection</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Der teuerste Fehler am Klemmenbrett</span><span lang="en">The most expensive terminal-board mistake</span></b>
+      <p lang="de">Wird ein Motor mit Typenschild <strong>230/400 V</strong> am 400-V-Netz in <strong>Dreieck</strong> gebrückt, liegen an jeder Wicklung 400 V statt der zulässigen 230 V. Der Strom steigt weit über den Nennwert, die Wicklung überhitzt und der Motor brennt innert Minuten durch. Umgekehrt gilt: Ein Motor <strong>400/690 V</strong> in Stern am 400-V-Netz läuft zwar, gibt aber nur <strong>ein Drittel</strong> seiner Leistung ab und bleibt unter Last stehen. Vor dem Brücken immer das Typenschild lesen.</p>
+      <p lang="en">If a motor with a <strong>230/400 V</strong> nameplate is linked in <strong>delta</strong> on a 400 V supply, each winding sees 400 V instead of the permitted 230 V. The current rises far above the rated value, the winding overheats and the motor burns out within minutes. The other way round: a <strong>400/690 V</strong> motor connected in star on 400 V will run, but delivers only <strong>one third</strong> of its output and stalls under load. Always read the nameplate before fitting the links.</p>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Sauber arbeiten im Klemmenkasten</span><span lang="en">Good practice in the terminal box</span></b>
+      <p lang="de">Muttern gleichmässig und mit dem vorgeschriebenen Drehmoment anziehen — eine lose Brücke wird warm und brennt die Klemme weg. Die Kabeleinführung mit einer passenden Verschraubung abdichten, sonst geht die Schutzart des Motors verloren. Den Deckel mit unbeschädigter Dichtung schliessen. Die Anschlussleitung so einlegen, dass sie nicht am Klemmenbrett zieht.</p>
+      <p lang="en">Tighten the nuts evenly to the specified torque — a loose link gets hot and burns the terminal away. Seal the cable entry with a matching gland, otherwise the motor's degree of protection is lost. Close the lid with an undamaged gasket. Route the connecting cable so that it does not pull on the terminal board.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Das Typenschild lesen</span><span lang="en">Reading the nameplate</span></h2>
+
+    <p lang="de">Das Typenschild ist die <strong>Bedienungsanleitung des Motors auf einem Blech</strong>. Welche Angaben darauf stehen müssen, regelt die Normenreihe <strong>IEC/EN 60034</strong>. Wer das Schild lesen kann, weiss, wie gebrückt, wie abgesichert und wie geschützt wird.</p>
+    <p lang="en">The nameplate is the <strong>motor's manual on a piece of metal</strong>. Which data must appear on it is laid down in the <strong>IEC/EN 60034</strong> series of standards. Anyone who can read the plate knows how to link, how to fuse and how to protect the motor.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Angabe</span><span lang="en">Entry</span></th>
+            <th><span lang="de">Beispiel</span><span lang="en">Example</span></th>
+            <th><span lang="de">Bedeutung und Nutzen</span><span lang="en">Meaning and use</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Spannung</span><span lang="en">Voltage</span></strong></td>
+            <td class="num">Δ 230 V / Y 400 V</td>
+            <td><span lang="de">tiefere Angabe = Dreieck, höhere = Stern; entscheidet über die Brücken</span><span lang="en">lower figure = delta, higher = star; decides how the links are fitted</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Strom</span><span lang="en">Current</span></strong></td>
+            <td class="num">8,7 A / 5,0 A</td>
+            <td><span lang="de">der grosse Wert gehört zu Dreieck, der kleine zu Stern; Verhältnis √3</span><span lang="en">the large value belongs to delta, the small one to star; ratio √3</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Leistung</span><span lang="en">Output</span></strong></td>
+            <td class="num">2,2 kW</td>
+            <td><span lang="de">abgegebene <em>mechanische</em> Wellenleistung, nicht die aufgenommene elektrische</span><span lang="en">delivered <em>mechanical</em> shaft power, not the electrical input</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Frequenz</span><span lang="en">Frequency</span></strong></td>
+            <td class="num">50 Hz</td>
+            <td><span lang="de">Bezugsfrequenz; am Frequenzumrichter gelten andere Werte</span><span lang="en">reference frequency; other values apply on a variable-frequency drive</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Drehzahl</span><span lang="en">Speed</span></strong></td>
+            <td class="num">1435 min<sup>−1</sup></td>
+            <td><span lang="de">Nenndrehzahl unter Last; daraus liest man Polzahl und Schlupf ab</span><span lang="en">rated speed under load; gives the pole number and the slip</span></td>
+          </tr>
+          <tr>
+            <td><strong>cos φ</strong></td>
+            <td class="num">0,81</td>
+            <td><span lang="de">Leistungsfaktor; nötig für die Strom- und Blindleistungsrechnung</span><span lang="en">power factor; needed for current and reactive-power calculations</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Effizienzklasse</span><span lang="en">Efficiency class</span></strong></td>
+            <td class="num">IE3 · 86,7 %</td>
+            <td><span lang="de">Wirkungsgradklasse nach IEC 60034-30-1; bei Ersatz mindestens gleichwertig wählen</span><span lang="en">efficiency class to IEC 60034-30-1; choose at least an equal class when replacing</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Betriebsart</span><span lang="en">Duty type</span></strong></td>
+            <td class="num">S1</td>
+            <td><span lang="de">S1 = Dauerbetrieb; Kurzzeit- und Aussetzbetrieb haben eigene Kennungen</span><span lang="en">S1 = continuous duty; short-time and intermittent duty have their own codes</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Isolationsklasse</span><span lang="en">Insulation class</span></strong></td>
+            <td class="num">F</td>
+            <td><span lang="de">zulässige Wicklungstemperatur; sagt, wie viel Wärme die Isolation erträgt</span><span lang="en">permissible winding temperature; states how much heat the insulation withstands</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Schutzart</span><span lang="en">Degree of protection</span></strong></td>
+            <td class="num">IP55</td>
+            <td><span lang="de">Schutz gegen Staub und Wasser; bestimmt den möglichen Einsatzort</span><span lang="en">protection against dust and water; determines where the motor may be used</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Bauform</span><span lang="en">Mounting</span></strong></td>
+            <td class="num">IM B3</td>
+            <td><span lang="de">Fuss- oder Flanschmotor nach IEC 60034-7; bestimmt die Befestigung</span><span lang="en">foot- or flange-mounted to IEC 60034-7; determines the fixing</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Die zwei Spannungs- und die zwei Stromangaben</span><span lang="en">The two voltage and the two current figures</span></h3>
+
+    <p lang="de">Die vier Zahlen gehören paarweise zusammen. Sie beschreiben <strong>denselben Motor mit derselben Leistung</strong>, nur einmal in Dreieck und einmal in Stern zusammengeschaltet. Verändert wird nicht die Maschine, sondern nur die Verschaltung der drei Stränge.</p>
+    <p lang="en">The four numbers belong together in pairs. They describe <strong>the same motor with the same output</strong>, once connected in delta and once in star. What changes is not the machine but only how the three phases are joined.</p>
+
+    <div class="formula">U<sub>Y</sub> = √3 · U<sub>Δ</sub> &nbsp;&nbsp;·&nbsp;&nbsp; I<sub>Y</sub> = I<sub>Δ</sub> / √3 &nbsp;&nbsp;<span lang="de">√3 ≈ 1,73</span><span lang="en">√3 ≈ 1.73</span></div>
+
+    <p lang="de">Am Schweizer Niederspannungsnetz mit <strong>400 V zwischen den Aussenleitern</strong> heisst das in der Praxis: Ein Motor mit dem Schild 230/400 V wird in <strong>Stern</strong> gebrückt und läuft mit dem kleineren Stromwert. Ein Motor mit dem Schild 400/690 V wird in <strong>Dreieck</strong> gebrückt und läuft mit dem grösseren Stromwert. Nur der zweite ist am 400-V-Netz für einen Stern-Dreieck-Anlauf geeignet.</p>
+    <p lang="en">On the Swiss low-voltage supply with <strong>400 V between line conductors</strong> this means in practice: a motor labelled 230/400 V is linked in <strong>star</strong> and runs at the smaller current figure. A motor labelled 400/690 V is linked in <strong>delta</strong> and runs at the larger current figure. Only the second one is suitable for star-delta starting on a 400 V supply.</p>
+
+    <h3><span lang="de">Die IE-Effizienzklassen</span><span lang="en">The IE efficiency classes</span></h3>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Klasse</span><span lang="en">Class</span></th>
+            <th><span lang="de">Bezeichnung</span><span lang="en">Designation</span></th>
+            <th><span lang="de">Einordnung</span><span lang="en">Position</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">IE1</td><td>Standard Efficiency</td><td><span lang="de">alter Bestand; für neue Motoren im Geltungsbereich nicht mehr zulässig</span><span lang="en">legacy stock; no longer permitted for new motors within the scope</span></td></tr>
+          <tr><td class="num">IE2</td><td>High Efficiency</td><td><span lang="de">Mindestklasse für sehr kleine Leistungen</span><span lang="en">minimum class for very small ratings</span></td></tr>
+          <tr><td class="num">IE3</td><td>Premium Efficiency</td><td><span lang="de">heutiger Standard im weitaus grössten Leistungsbereich</span><span lang="en">today's standard across by far the largest power range</span></td></tr>
+          <tr><td class="num">IE4</td><td>Super Premium Efficiency</td><td><span lang="de">gefordert für ein mittleres Leistungsband, sonst freiwillig</span><span lang="en">required for a middle power band, otherwise voluntary</span></td></tr>
+          <tr><td class="num">IE5</td><td>Ultra Premium Efficiency</td><td><span lang="de">höchste Klasse der Norm; meist Motoren mit Permanentmagneten</span><span lang="en">highest class in the standard; mostly permanent-magnet motors</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Zahlen vor der Abgabe prüfen</span><span lang="en">Check the figures before handing in</span></b>
+      <p lang="de">Die Klassenbezeichnungen IE1 bis IE5 stammen aus <strong>IEC 60034-30-1</strong> und sind stabil. Die <strong>Leistungsgrenzen und Stichdaten</strong>, ab wann welche Klasse Pflicht ist, stehen dagegen in der Energieverordnung (EnV, SR 730.01) beziehungsweise in der EU-Ökodesign-Verordnung 2019/1781 — und diese Grenzen wurden bereits mehrfach verschärft. Deshalb sind sie hier bewusst ohne Jahres- und kW-Werte beschrieben. <strong>Vor der Abgabe die geltende Fassung der EnV beziehungsweise den aktuellen Herstellerkatalog nachschlagen</strong> und die Werte dort belegen.</p>
+      <p lang="en">The class labels IE1 to IE5 come from <strong>IEC 60034-30-1</strong> and are stable. The <strong>power limits and effective dates</strong> stating when which class becomes mandatory are set out in the Swiss Energy Ordinance (EnV, SR 730.01) and in EU Ecodesign Regulation 2019/1781 — and those limits have already been tightened several times. They are therefore described here deliberately without years and kW figures. <strong>Look up the version of the EnV in force, or the current manufacturer's catalogue, before handing this in</strong> and cite the values from there.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Weitere Motorarten</span><span lang="en">Other types of motor</span></h2>
+
+    <p lang="de">Nicht überall steht Drehstrom zur Verfügung, und nicht überall passt ein Käfigläufer. Für kleine Leistungen, für den Einphasenanschluss und für regelbare Antriebe gibt es eigene Bauarten.</p>
+    <p lang="en">Three-phase power is not available everywhere, and a cage rotor does not suit every job. For small outputs, for single-phase supplies and for variable-speed drives there are dedicated designs.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Bauart</span><span lang="en">Type</span></th>
+            <th><span lang="de">Kennzeichen</span><span lang="en">Characteristic</span></th>
+            <th><span lang="de">Grössenordnung</span><span lang="en">Size range</span></th>
+            <th><span lang="de">Typischer Einsatzort</span><span lang="en">Typical location</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Drehstrom-Asynchronmotor</span><span lang="en">Three-phase induction motor</span></strong></td>
+            <td><span lang="de">Kurzschlussläufer, kein Verschleissteil im Inneren</span><span lang="en">cage rotor, no wearing part inside</span></td>
+            <td><span lang="de">wenige hundert Watt bis viele hundert kW</span><span lang="en">a few hundred watts to many hundred kW</span></td>
+            <td><span lang="de">Lüftung, Pumpen, Aufzüge, Werkzeugmaschinen, Förderanlagen</span><span lang="en">ventilation, pumps, lifts, machine tools, conveyors</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Einphasen-Kondensatormotor</span><span lang="en">Single-phase capacitor motor</span></strong></td>
+            <td><span lang="de">Hilfswicklung mit Kondensator erzeugt das Drehfeld</span><span lang="en">auxiliary winding with capacitor creates the rotating field</span></td>
+            <td><span lang="de">rund 0,1 bis wenige kW</span><span lang="en">roughly 0.1 to a few kW</span></td>
+            <td><span lang="de">Storenmotoren, Kühlgeräte, Umwälzpumpen, Schleifböcke</span><span lang="en">blind motors, refrigeration units, circulating pumps, bench grinders</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Spaltpolmotor</span><span lang="en">Shaded-pole motor</span></strong></td>
+            <td><span lang="de">Kurzschlussring am geteilten Pol, sehr einfacher Aufbau</span><span lang="en">shading ring on a split pole, very simple design</span></td>
+            <td><span lang="de">meist unter 100 W</span><span lang="en">mostly below 100 W</span></td>
+            <td><span lang="de">kleine Lüfter, Gerätepumpen, Kühlschrankventilatoren</span><span lang="en">small fans, appliance pumps, refrigerator fans</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Gleichstrom- und Universalmotor</span><span lang="en">DC and universal motor</span></strong></td>
+            <td><span lang="de">Kommutator und Kohlebürsten, hohes Anzugsmoment</span><span lang="en">commutator and carbon brushes, high starting torque</span></td>
+            <td><span lang="de">Watt-Bereich bis einige kW</span><span lang="en">watts up to a few kW</span></td>
+            <td><span lang="de">Handbohrmaschinen, Staubsauger, Küchengeräte, Stellantriebe</span><span lang="en">hand drills, vacuum cleaners, kitchen appliances, actuators</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">EC-/BLDC-Motor</span><span lang="en">EC/BLDC motor</span></strong></td>
+            <td><span lang="de">Permanentmagnet-Läufer, elektronische Kommutierung</span><span lang="en">permanent-magnet rotor, electronic commutation</span></td>
+            <td><span lang="de">Watt-Bereich bis mehrere kW</span><span lang="en">watts up to several kW</span></td>
+            <td><span lang="de">Komfortlüftung, Hocheffizienzpumpen, Kältetechnik</span><span lang="en">comfort ventilation, high-efficiency pumps, refrigeration</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Einphasen-Kondensatormotor</span><span lang="en">Single-phase capacitor motor</span></h3>
+
+    <p lang="de">Mit nur einer Wechselspannung entsteht kein Drehfeld, sondern ein pulsierendes Wechselfeld — der Läufer würde stehen bleiben. Deshalb erhält der Motor eine zweite, räumlich versetzte <strong>Hilfswicklung</strong>, der ein <strong>Kondensator</strong> vorgeschaltet ist. Der Kondensator verschiebt den Strom in dieser Wicklung zeitlich, und aus den beiden versetzten Feldern wird ein — allerdings unrundes — Drehfeld.</p>
+    <p lang="en">A single alternating voltage produces no rotating field but a pulsating alternating field — the rotor would stand still. The motor therefore has a second, spatially offset <strong>auxiliary winding</strong> fed through a <strong>capacitor</strong>. The capacitor shifts the current in that winding in time, and the two offset fields together form a rotating field — an uneven one, admittedly.</p>
+
+    <ul lang="de">
+      <li>Der <strong>Betriebskondensator</strong> bleibt dauernd in Betrieb und bestimmt den Rundlauf</li>
+      <li>Ein zusätzlicher <strong>Anlaufkondensator</strong> mit deutlich grösserer Kapazität wird nur beim Hochlauf zugeschaltet und danach getrennt; er verbessert das Anzugsmoment</li>
+      <li>Die <strong>Drehrichtung</strong> ändert man durch Umpolen der Hilfswicklung, nicht durch Tauschen von L und N</li>
+      <li>Der Wirkungsgrad liegt spürbar unter dem eines gleich grossen Drehstrommotors</li>
+      <li>Ein Drehstrommotor kann über die <strong>Steinmetzschaltung</strong> notdürftig einphasig betrieben werden — mit deutlichem Leistungsverlust und nur als Behelfslösung</li>
+    </ul>
+    <ul lang="en">
+      <li>The <strong>run capacitor</strong> stays connected permanently and determines smooth running</li>
+      <li>An additional <strong>start capacitor</strong> of much larger capacitance is switched in only while running up and disconnected afterwards; it improves the starting torque</li>
+      <li>The <strong>direction of rotation</strong> is changed by reversing the auxiliary winding, not by swapping L and N</li>
+      <li>The efficiency is noticeably lower than that of a three-phase motor of the same size</li>
+      <li>A three-phase motor can be run single-phase after a fashion using the <strong>Steinmetz connection</strong> — with a clear loss of output and only as a makeshift</li>
+    </ul>
+
+    <h3><span lang="de">Spaltpolmotor</span><span lang="en">Shaded-pole motor</span></h3>
+
+    <p lang="de">Der einfachste Motor überhaupt. Jeder Statorpol ist geteilt, und um den kleineren Teil liegt ein massiver <strong>Kurzschlussring</strong>. Der Ring verzögert den Feldaufbau in seinem Polabschnitt, und dieses Nachhinken erzeugt ein schwaches, elliptisches Drehfeld. Der Motor läuft von selbst an, braucht keinen Kondensator und keine Elektronik.</p>
+    <p lang="en">The simplest motor of all. Each stator pole is split and a solid <strong>shading ring</strong> surrounds the smaller part. The ring delays the build-up of flux in that part of the pole, and this lag produces a weak, elliptical rotating field. The motor starts on its own, needs no capacitor and no electronics.</p>
+
+    <p lang="de">Der Preis dafür ist ein sehr schlechter Wirkungsgrad — er liegt in der Grössenordnung von rund 30 %. Deshalb baut man Spaltpolmotoren nur für kleine Leistungen. Die Drehrichtung ist durch die Lage der Kurzschlussringe festgelegt und lässt sich im Normalfall <strong>nicht umkehren</strong>.</p>
+    <p lang="en">The price is very poor efficiency — in the order of about 30 %. Shaded-pole motors are therefore built only for small outputs. The direction of rotation is fixed by the position of the shading rings and normally <strong>cannot be reversed</strong>.</p>
+
+    <h3><span lang="de">Gleichstrom- und Universalmotor</span><span lang="en">DC and universal motor</span></h3>
+
+    <p lang="de">Beim Gleichstrommotor wird der Strom im Läufer über <strong>Kommutator und Kohlebürsten</strong> laufend umgeschaltet. Das ergibt ein hohes Anzugsmoment und eine sehr einfache Drehzahlstellung über die Spannung — aber auch Bürstenverschleiss, Funkenbildung und Störspannungen. Der <strong>Universalmotor</strong> ist eine Reihenschlussmaschine, die sowohl an Gleich- als auch an Wechselspannung läuft; er steckt in fast jedem Handwerkzeug.</p>
+    <p lang="en">In a DC motor the current in the rotor is continually reversed by a <strong>commutator and carbon brushes</strong>. That gives a high starting torque and very simple speed control through the voltage — but also brush wear, sparking and interference. The <strong>universal motor</strong> is a series-wound machine that runs on both DC and AC; it is fitted in almost every hand tool.</p>
+
+    <h3><span lang="de">EC- beziehungsweise BLDC-Motor</span><span lang="en">EC or BLDC motor</span></h3>
+
+    <p lang="de">Der EC-Motor ist im Grunde ein Drehstrommotor mit <strong>Permanentmagneten im Läufer</strong>, dessen Drehfeld nicht vom Netz, sondern von einer eingebauten Elektronik erzeugt wird. Er kommutiert also elektronisch statt mechanisch. Daraus folgen ein hoher Wirkungsgrad über den ganzen Drehzahlbereich, eine stufenlose Drehzahlregelung ohne zusätzlichen Umrichter und ein leiser Lauf. In der Komfortlüftung und bei Hocheffizienz-Umwälzpumpen ist er heute der Normalfall.</p>
+    <p lang="en">An EC motor is essentially a three-phase motor with <strong>permanent magnets in the rotor</strong> whose rotating field is produced not by the supply but by built-in electronics. It therefore commutates electronically rather than mechanically. The result is high efficiency across the whole speed range, stepless speed control without a separate drive, and quiet running. In comfort ventilation and high-efficiency circulating pumps it is the normal choice today.</p>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Bei EC-Motoren mitdenken</span><span lang="en">Points to note with EC motors</span></b>
+      <p lang="de">Weil die Elektronik gleichrichtet, entsteht ein <strong>Ableitstrom mit Gleichstromanteil</strong>. Ein normaler FI vom Typ AC oder A kann dadurch blind werden. Welcher Fehlerstromschutz nötig ist, gibt der Hersteller in der Montageanleitung vor — häufig Typ B oder Typ F. Diese Angabe gehört vor der Montage geklärt und nicht nachträglich.</p>
+      <p lang="en">Because the electronics rectify, a <strong>leakage current with a DC component</strong> arises. An ordinary type AC or type A RCD can be blinded by it. Which residual-current protection is required is stated by the manufacturer in the installation instructions — often type B or type F. This has to be clarified before installation, not afterwards.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Anlaufarten, Anlaufstrom und Motorschutz</span><span lang="en">Starting methods, inrush current and motor protection</span></h2>
+
+    <p lang="de">Im Stillstand wirkt der Kurzschlussläufer wie ein kurzgeschlossener Transformator: Der Motor nimmt ein Vielfaches seines Nennstroms auf. Als Faustwert rechnet man beim Direktanlauf mit dem <strong>5- bis 8-fachen Nennstrom</strong>. Der Anlaufstrom dauert nur Sekunden, belastet aber Leitung, Schutzorgan und Netz erheblich und erzeugt Spannungseinbrüche, die man als Lichtflackern sieht.</p>
+    <p lang="en">At standstill the cage rotor behaves like a short-circuited transformer: the motor draws a multiple of its rated current. As a rule of thumb, direct-on-line starting draws <strong>five to eight times the rated current</strong>. The inrush lasts only seconds, but it loads the cable, the protective device and the supply considerably and causes voltage dips that show up as flickering light.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Anlaufart</span><span lang="en">Starting method</span></th>
+            <th><span lang="de">Anlaufstrom</span><span lang="en">Inrush current</span></th>
+            <th><span lang="de">Anzugsmoment</span><span lang="en">Starting torque</span></th>
+            <th><span lang="de">Bemerkung</span><span lang="en">Comment</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Direktanlauf</span><span lang="en">Direct on line</span></strong></td>
+            <td class="num">≈ 5…8 · I<sub>N</sub></td>
+            <td><span lang="de">voll</span><span lang="en">full</span></td>
+            <td><span lang="de">einfachste Lösung; nur ein Schütz nötig</span><span lang="en">simplest solution; only one contactor needed</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Stern-Dreieck</span><span lang="en">Star-delta</span></strong></td>
+            <td class="num">≈ 1/3</td>
+            <td class="num">≈ 1/3</td>
+            <td><span lang="de">nur bei leichtem Anlauf; Stromstoss beim Umschalten</span><span lang="en">only for light starting duty; current surge when changing over</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Sanftanlaufgerät</span><span lang="en">Soft starter</span></strong></td>
+            <td><span lang="de">einstellbar, deutlich reduziert</span><span lang="en">adjustable, clearly reduced</span></td>
+            <td><span lang="de">einstellbar</span><span lang="en">adjustable</span></td>
+            <td><span lang="de">Thyristoren mit Phasenanschnitt; stufenloser Hochlauf</span><span lang="en">thyristors with phase-angle control; stepless run-up</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Frequenzumrichter</span><span lang="en">Variable-frequency drive</span></strong></td>
+            <td><span lang="de">am kleinsten von allen</span><span lang="en">the smallest of all</span></td>
+            <td><span lang="de">voll, ab Drehzahl null</span><span lang="en">full, from zero speed</span></td>
+            <td><span lang="de">regelt Spannung und Frequenz; erlaubt jede Betriebsdrehzahl</span><span lang="en">controls voltage and frequency; allows any running speed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Der Stern-Dreieck-Anlauf</span><span lang="en">Star-delta starting</span></h3>
+
+    <p lang="de">Der Motor wird zuerst in <strong>Stern</strong> eingeschaltet. Damit liegt an jeder Wicklung nur die um √3 kleinere Spannung. Weil das Drehmoment mit dem Quadrat der Spannung geht, sinken <strong>Anlaufstrom und Anzugsmoment auf je etwa ein Drittel</strong>. Nach dem Hochlauf schaltet die Steuerung auf <strong>Dreieck</strong> um, und der Motor gibt seine volle Leistung ab.</p>
+    <p lang="en">The motor is first switched on in <strong>star</strong>. Each winding then only sees the voltage reduced by √3. Because torque follows the square of the voltage, <strong>inrush current and starting torque each fall to about one third</strong>. After running up, the control gear changes over to <strong>delta</strong> and the motor delivers its full output.</p>
+
+    <ul lang="de">
+      <li>Voraussetzung: Der Motor muss für die <strong>Dreieckschaltung an der Netzspannung</strong> ausgelegt sein — am 400-V-Netz also ein Motor 400/690 V</li>
+      <li>Alle <strong>sechs Klemmen</strong> müssen einzeln zur Steuerung geführt werden; die Brücken im Klemmenkasten entfallen</li>
+      <li>Geeignet nur für <strong>leichten Anlauf</strong>: Lüfter, Kreiselpumpen, leerlaufende Maschinen</li>
+      <li>Beim Umschalten entsteht ein <strong>Stromstoss</strong>, weil der Motor kurz vom Netz getrennt wird</li>
+      <li>Wird zu spät umgeschaltet, läuft der Motor zu lange im Stern und wird überlastet</li>
+    </ul>
+    <ul lang="en">
+      <li>Prerequisite: the motor must be rated for <strong>delta connection at the supply voltage</strong> — on a 400 V supply therefore a 400/690 V motor</li>
+      <li>All <strong>six terminals</strong> must be run individually to the control gear; the links in the terminal box are removed</li>
+      <li>Suitable only for <strong>light starting duty</strong>: fans, centrifugal pumps, machines starting unloaded</li>
+      <li>Changing over produces a <strong>current surge</strong>, because the motor is briefly disconnected from the supply</li>
+      <li>If the changeover comes too late, the motor runs too long in star and is overloaded</li>
+    </ul>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Motorschutz — siehe 1. Lehrjahr, Thema 12</span><span lang="en">Motor protection — see Year 1, Topic 12</span></b>
+      <p lang="de">Der Motorschutzschalter mit thermischem und magnetischem Auslöser sowie Phasenausfallschutz ist in der <strong>Lerndokumentation 12 des 1. Lehrjahrs</strong> ausführlich behandelt. Hier nur der Anschluss an das vorliegende Thema: Beim Direktanlauf wird der Motorschutzschalter auf den <strong>Nennstrom des Typenschilds in der gewählten Schaltung</strong> eingestellt.</p>
+      <p lang="en">The motor protection switch with its thermal and magnetic releases and phase-failure protection is covered in detail in <strong>Learning Documentation 12 of Year 1</strong>. Only the link to the present topic here: for direct-on-line starting the motor protection switch is set to the <strong>rated current on the nameplate for the connection actually used</strong>.</p>
+      <p lang="de">Beim Stern-Dreieck-Anlauf sitzt das Überlastrelais dagegen in der <strong>Strangleitung</strong> und führt nur den Wicklungsstrom. Es wird deshalb auf <strong>I<sub>N</sub> · 0,58</strong>, also auf I<sub>N</sub> geteilt durch √3, eingestellt. Wer hier den vollen Nennstrom einstellt, hat praktisch keinen Überlastschutz mehr.</p>
+      <p lang="en">With star-delta starting, by contrast, the overload relay sits in the <strong>winding leg</strong> and only carries the winding current. It is therefore set to <strong>I<sub>N</sub> · 0.58</strong>, that is I<sub>N</sub> divided by √3. Setting the full rated current here leaves practically no overload protection at all.</p>
+    </div>
+
+    <h3><span lang="de">Einsatzorte und passende Anlaufart</span><span lang="en">Locations and the matching starting method</span></h3>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Einsatzort</span><span lang="en">Location</span></th>
+            <th><span lang="de">Antrieb</span><span lang="en">Drive</span></th>
+            <th><span lang="de">Übliche Lösung</span><span lang="en">Usual solution</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span lang="de">Wohnbau, Haustechnik</span><span lang="en">Housing, building services</span></td>
+            <td><span lang="de">Umwälzpumpe, Komfortlüftung, Storen</span><span lang="en">circulating pump, comfort ventilation, blinds</span></td>
+            <td><span lang="de">EC-Motor oder Einphasen-Kondensatormotor</span><span lang="en">EC motor or single-phase capacitor motor</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Gewerbe, Werkstatt</span><span lang="en">Commercial, workshop</span></td>
+            <td><span lang="de">Kompressor, Absaugung, Werkzeugmaschine</span><span lang="en">compressor, extraction, machine tool</span></td>
+            <td><span lang="de">Drehstrommotor direkt oder mit Stern-Dreieck</span><span lang="en">three-phase motor, direct or star-delta</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Industrie, Förderanlagen</span><span lang="en">Industry, conveying</span></td>
+            <td><span lang="de">Förderband, Rührwerk, Mühle</span><span lang="en">conveyor, agitator, mill</span></td>
+            <td><span lang="de">Frequenzumrichter wegen Drehzahlregelung und Rampen</span><span lang="en">variable-frequency drive for speed control and ramps</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Wasserversorgung, Lüftungszentrale</span><span lang="en">Water supply, air-handling plant</span></td>
+            <td><span lang="de">grosse Kreiselpumpe, Grossventilator</span><span lang="en">large centrifugal pump, large fan</span></td>
+            <td><span lang="de">Sanftanlaufgerät gegen Druckstösse und Riemenschlag</span><span lang="en">soft starter against pressure surges and belt shock</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Aufzug, Hebezeug</span><span lang="en">Lift, hoist</span></td>
+            <td><span lang="de">Treibscheibe, Kranfahrwerk</span><span lang="en">traction sheave, crane travel gear</span></td>
+            <td><span lang="de">geregelter Antrieb mit Umrichter, volles Moment ab Stillstand</span><span lang="en">controlled drive with a converter, full torque from standstill</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Grenzwerte beim Netzbetreiber nachfragen</span><span lang="en">Ask the network operator for the limits</span></b>
+      <p lang="de">Ab welcher Motorleistung eine <strong>Anlaufstrombegrenzung</strong> vorgeschrieben ist, steht nicht in der NIN, sondern in den <strong>Werkvorschriften</strong> — schweizweit in den WV-CH und ergänzend in den regionalen Vorschriften des zuständigen Netzbetreibers. Diese Grenze ist von Werk zu Werk unterschiedlich und wird periodisch angepasst. Deshalb steht hier bewusst keine kW- oder Ampere-Zahl. <strong>Vor der Abgabe die geltenden Werkvorschriften des zuständigen EVU nachschlagen</strong> und den Wert von dort übernehmen.</p>
+      <p lang="en">From which motor rating a <strong>starting-current limitation</strong> is mandatory is not stated in the NIN but in the <strong>utility connection rules</strong> — nationally in the WV-CH and additionally in the regional rules of the responsible network operator. This limit differs from utility to utility and is revised periodically. No kW or ampere figure is given here for that reason. <strong>Look up the connection rules in force at the responsible utility before handing this in</strong> and take the value from there.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7 ================= -->
+<section id="s7">
+  <div class="snum">07</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Warum heisst der Asynchronmotor asynchron?</span><span lang="en">Why is the induction motor called asynchronous?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil der Läufer immer langsamer dreht als das Drehfeld. Nur aus dieser Drehzahldifferenz entsteht eine Relativbewegung, die im Läufer eine Spannung induziert. Ohne Schlupf gäbe es keinen Läuferstrom und damit kein Drehmoment.</p>
+        <p lang="en">Because the rotor always turns more slowly than the rotating field. Only this difference in speed creates the relative movement that induces a voltage in the rotor. Without slip there would be no rotor current and hence no torque.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie gross ist die Synchrondrehzahl eines 6-poligen Motors bei 50 Hz?</span><span lang="en">What is the synchronous speed of a 6-pole motor at 50 Hz?</span></summary>
+      <div class="ans">
+        <p lang="de">Sechs Pole bedeuten drei Polpaare, also p = 3. Damit ist n<sub>s</sub> = 60 · 50 / 3 = 1000 min<sup>−1</sup>. Die Nenndrehzahl liegt schlupfbedingt etwas darunter, typischerweise bei etwa 940 bis 960 min<sup>−1</sup>.</p>
+        <p lang="en">Six poles mean three pole pairs, so p = 3. That gives n<sub>s</sub> = 60 · 50 / 3 = 1000 min<sup>−1</sup>. Because of slip the rated speed lies somewhat below this, typically around 940 to 960 min<sup>−1</sup>.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie sind die sechs Klemmen am Klemmenbrett bezeichnet und angeordnet?</span><span lang="en">How are the six terminals on the board designated and arranged?</span></summary>
+      <div class="ans">
+        <p lang="de">Obere Reihe U1, V1, W1 — die Wicklungsanfänge. Untere Reihe W2, U2, V2 — die Wicklungsenden. Die untere Reihe ist versetzt beschriftet, sodass U1 über W2, V1 über U2 und W1 über V2 liegt. Dadurch passen dieselben Schaltbügel für beide Schaltungsarten.</p>
+        <p lang="en">Upper row U1, V1, W1 — the winding beginnings. Lower row W2, U2, V2 — the winding ends. The lower row is labelled offset, so that U1 sits above W2, V1 above U2 and W1 above V2. This lets the same links serve both connection types.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie werden die Brücken für Stern und wie für Dreieck gesetzt?</span><span lang="en">How are the links fitted for star and how for delta?</span></summary>
+      <div class="ans">
+        <p lang="de">Stern: Die Brücken liegen quer über die untere Reihe und verbinden W2, U2 und V2 zum Sternpunkt. Die Zuleitung kommt auf U1, V1, W1. Dreieck: Drei Brücken liegen längs und verbinden U1 mit W2, V1 mit U2 und W1 mit V2. Die Zuleitung kommt ebenfalls auf U1, V1, W1.</p>
+        <p lang="en">Star: the links lie crosswise over the lower row and join W2, U2 and V2 to form the star point. The supply goes to U1, V1, W1. Delta: three links lie lengthwise and join U1 to W2, V1 to U2 and W1 to V2. The supply again goes to U1, V1, W1.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Auf dem Typenschild steht 230/400 V. Wie wird der Motor am 400-V-Netz gebrückt?</span><span lang="en">The nameplate says 230/400 V. How is the motor linked on a 400 V supply?</span></summary>
+      <div class="ans">
+        <p lang="de">In Stern. Die höhere Spannungsangabe gehört immer zur Sternschaltung. In Stern liegt an jeder Wicklung 400 V geteilt durch √3, also rund 230 V — genau der Wert, für den die Wicklung ausgelegt ist. Wird dieser Motor in Dreieck gebrückt, liegen 400 V an jeder Wicklung und der Motor brennt durch.</p>
+        <p lang="en">In star. The higher voltage figure always belongs to the star connection. In star each winding sees 400 V divided by √3, that is about 230 V — exactly the value the winding is designed for. If this motor is linked in delta, each winding sees 400 V and the motor burns out.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum stehen zwei Stromangaben auf dem Typenschild?</span><span lang="en">Why are there two current figures on the nameplate?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil derselbe Motor in zwei Schaltungen betrieben werden kann und dabei unterschiedlich viel Netzstrom aufnimmt. Der grössere Wert gehört zur Dreieckschaltung, der kleinere zur Sternschaltung; sie unterscheiden sich um den Faktor √3. Die abgegebene Leistung ist in beiden Fällen dieselbe, weil auch die Spannung entsprechend anders ist.</p>
+        <p lang="en">Because the same motor can be run in two connections and draws a different line current in each. The larger value belongs to delta, the smaller one to star; they differ by a factor of √3. The output is the same in both cases, because the voltage differs correspondingly.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie hoch ist der Anlaufstrom beim Direktanlauf und warum ist er so hoch?</span><span lang="en">How large is the inrush current on direct starting and why is it so high?</span></summary>
+      <div class="ans">
+        <p lang="de">Als Faustwert das 5- bis 8-fache des Nennstroms. Im Stillstand ist der Schlupf gleich 100 %, das Drehfeld schneidet die Läuferstäbe mit voller Geschwindigkeit und der kurzgeschlossene Läufer wirkt wie die kurzgeschlossene Sekundärwicklung eines Transformators. Erst mit steigender Drehzahl sinkt der Strom auf den Nennwert.</p>
+        <p lang="en">As a rule of thumb five to eight times the rated current. At standstill the slip is 100 %, the rotating field cuts the rotor bars at full speed and the shorted rotor acts like the short-circuited secondary of a transformer. Only as the speed rises does the current fall to its rated value.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welche Voraussetzung muss ein Motor für den Stern-Dreieck-Anlauf erfüllen?</span><span lang="en">What must a motor satisfy to allow star-delta starting?</span></summary>
+      <div class="ans">
+        <p lang="de">Er muss für die Dreieckschaltung an der vorhandenen Netzspannung ausgelegt sein, am 400-V-Netz also ein Motor mit dem Typenschild 400/690 V. Zusätzlich müssen alle sechs Wicklungsenden einzeln zur Steuerung geführt werden; die Brücken im Klemmenkasten werden entfernt. Geeignet ist das Verfahren nur bei leichtem Anlauf, weil im Stern nur etwa ein Drittel des Anzugsmoments zur Verfügung steht.</p>
+        <p lang="en">It must be rated for delta connection at the available supply voltage — on a 400 V supply therefore a motor with a 400/690 V nameplate. In addition all six winding ends must be run individually to the control gear; the links in the terminal box are removed. The method suits light starting duty only, because in star just about one third of the starting torque is available.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Auf welchen Wert wird das Überlastrelais beim Stern-Dreieck-Anlauf eingestellt?</span><span lang="en">To what value is the overload relay set for star-delta starting?</span></summary>
+      <div class="ans">
+        <p lang="de">Auf den Nennstrom des Typenschilds multipliziert mit 0,58, also auf I<sub>N</sub> geteilt durch √3. Grund: Das Relais sitzt in der Strangleitung und führt nur den Wicklungsstrom, nicht den Netzstrom. Wird der volle Nennstrom eingestellt, löst das Relais bei Überlast praktisch nicht mehr aus. Die Grundlagen dazu stehen in der Lerndokumentation 12 des 1. Lehrjahrs.</p>
+        <p lang="en">To the rated current on the nameplate multiplied by 0.58, that is I<sub>N</sub> divided by √3. Reason: the relay sits in the winding leg and carries only the winding current, not the line current. If the full rated current is set, the relay will practically not trip on overload. The background is covered in Learning Documentation 12 of Year 1.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="02-kochplatten.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>02 · <span lang="de">Kochplatten</span><span lang="en">Cooking Appliances</span></b>
+  </a>
+  <a class="next" href="04-schuetzensteuerung-dauerkontakt.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>04 · <span lang="de">Schuetzensteuerung Dauerkontakt</span><span lang="en">Contactor Control — Maintained</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 03 · Motoren</span><span lang="en">Learning Documentation 03 · Motors</span></span>
+  <span>Yanik · Etavis · <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></span>
+  <span><span lang="de">Grundlagen: IEC/EN 60034-1 · IEC 60034-30-1 · NIN · WV-CH</span><span lang="en">Basis: IEC/EN 60034-1 · IEC 60034-30-1 · NIN · WV-CH</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

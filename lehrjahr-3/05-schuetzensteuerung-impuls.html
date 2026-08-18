@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 05 — Schuetzensteuerung Impuls" data-en="Learning Documentation 05 — Contactor Control — Pulse">Lerndokumentation 05 — Schuetzensteuerung Impuls</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span>
+    <span lang="de">Thema 05</span><span lang="en">Topic 05</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">05</div>
+    <h1><span lang="de">Schützen&shy;steuerung<br>Impuls</span><span lang="en">Contactor Control<br>Pulse</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Schema · Funktion · Beschrieb · Selbsthaltung</span>
+    <span lang="en">Diagram · function · description · self-holding</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">05 von 12</span><span lang="en">05 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Taster mit Selbsthalte-Schleife">
+        <path d="M40 118 h140" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <rect x="62" y="66" width="96" height="52" rx="5" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <circle cx="110" cy="62" r="26" fill="#FBF9F5" stroke="#171614" stroke-width="2.4"/>
+        <circle cx="101" cy="57" r="2.8" fill="#171614"/>
+        <circle cx="119" cy="57" r="2.8" fill="#171614"/>
+        <path d="M100 70 q 10 7 20 0" fill="none" stroke="#171614" stroke-width="2" stroke-linecap="round"/>
+        <path d="M78 118 v14 M142 118 v14" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M158 74 C 200 66, 200 122, 158 112" fill="none" stroke="#B8402A" stroke-width="2.8" stroke-linecap="round"/>
+        <path d="M158 112 l 13 -3 M158 112 l 9 9" fill="none" stroke="#B8402A" stroke-width="2.8" stroke-linecap="round"/>
+        <path d="M32 88 h20 M32 96 h20" stroke="#1D5872" stroke-width="2.6" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Impuls statt Dauerkontakt</span><span lang="en">Pulse instead of maintained contact</span></h2>
+
+    <p class="lead" lang="de">Bei der <strong>Dauerkontaktsteuerung</strong> hält das Befehlsgerät selbst den Zustand fest: Ein Schalter bleibt in der Stellung EIN stehen und die Schützspule bleibt so lange unter Spannung, wie der Schalter eingeschaltet ist. Bei der <strong>Impulssteuerung</strong> geben zwei Taster nur einen kurzen Befehl ab. Den Zustand merkt sich das Schütz danach selber — über einen eigenen Hilfskontakt, die <strong>Selbsthaltung</strong>.</p>
+    <p class="lead" lang="en">With a <strong>maintained-contact control</strong> the command device itself stores the state: a switch stays in the ON position and the contactor coil remains energised for as long as the switch is closed. With a <strong>pulse control</strong> two momentary buttons only issue a short command. The contactor then remembers the state itself — through one of its own auxiliary contacts, the <strong>self-holding</strong> circuit.</p>
+
+    <p lang="de">Der Unterschied klingt klein, ist aber sicherheitstechnisch entscheidend. Ein Dauerkontakt bleibt auch dann in Stellung EIN stehen, wenn die Spannung ausfällt — kommt sie zurück, läuft die Maschine sofort wieder an. Die Impulssteuerung kann das gar nicht: Ihr Speicher ist das Schütz selbst, und ein stromloses Schütz fällt ab.</p>
+    <p lang="en">The difference sounds small but is decisive in terms of safety. A maintained contact stays in the ON position even when the supply fails — when it returns, the machine restarts immediately. A pulse control cannot do this: its memory is the contactor itself, and a de-energised contactor drops out.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Merkmal</span><span lang="en">Feature</span></th>
+            <th><span lang="de">Dauerkontaktsteuerung</span><span lang="en">Maintained-contact control</span></th>
+            <th><span lang="de">Impulssteuerung</span><span lang="en">Pulse control</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Befehlsgerät</span><span lang="en">Command device</span></strong></td>
+            <td><span lang="de">Schalter, rastend</span><span lang="en">switch, latching</span></td>
+            <td><span lang="de">zwei Taster, tastend</span><span lang="en">two momentary buttons</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Wo der Zustand gespeichert ist</span><span lang="en">Where the state is stored</span></strong></td>
+            <td><span lang="de">mechanisch im Schalter</span><span lang="en">mechanically in the switch</span></td>
+            <td><span lang="de">elektrisch im Schütz, über den Selbsthaltekontakt</span><span lang="en">electrically in the contactor, via the self-holding contact</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Nach Spannungsausfall</span><span lang="en">After a supply failure</span></strong></td>
+            <td><span lang="de">Maschine läuft bei Spannungswiederkehr selbsttätig an</span><span lang="en">machine restarts by itself when the supply returns</span></td>
+            <td><span lang="de">Maschine bleibt stehen, es braucht einen neuen EIN-Befehl</span><span lang="en">machine stays off, a new ON command is required</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Mehrere Bedienstellen</span><span lang="en">Several control points</span></strong></td>
+            <td><span lang="de">aufwendig, Schalter müssen mechanisch gekoppelt werden</span><span lang="en">awkward, switches must be mechanically coupled</span></td>
+            <td><span lang="de">einfach: EIN-Taster parallel, AUS-Taster in Reihe</span><span lang="en">simple: ON buttons in parallel, OFF buttons in series</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Typische Anwendung</span><span lang="en">Typical use</span></strong></td>
+            <td><span lang="de">Heizung, Lüftung, unkritische Dauerverbraucher</span><span lang="en">heating, ventilation, non-critical continuous loads</span></td>
+            <td><span lang="de">Maschinenantriebe, Pumpen, Kompressoren, alles mit Verletzungsgefahr</span><span lang="en">machine drives, pumps, compressors, anything with a risk of injury</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Merksatz</span><span lang="en">Key sentence</span></b>
+      <p lang="de">Der Taster gibt den Impuls, das Schütz hält sich selbst. Fällt die Spannung weg, verliert das Schütz seinen Speicher — und genau das ist gewollt.</p>
+      <p lang="en">The button gives the pulse, the contactor holds itself. If the supply fails the contactor loses its memory — and that is exactly the intention.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Das Schema: Haupt- und Steuerstromkreis</span><span lang="en">The diagram: main and control circuit</span></h2>
+
+    <p lang="de">Eine Schützensteuerung wird immer in <strong>zwei getrennten Stromkreisen</strong> gezeichnet. Der <strong>Hauptstromkreis</strong> führt den Motorstrom über die Hauptkontakte des Schützes; er ist dick ausgeführt und entsprechend abgesichert. Der <strong>Steuerstromkreis</strong> führt nur den kleinen Spulenstrom und enthält die Taster. Beide Kreise sind im Schema nebeneinander dargestellt und nur durch die <strong>mechanische Kopplung</strong> der Spule mit ihren Kontakten verbunden — im Schema als gestrichelte Linie.</p>
+    <p lang="en">A contactor control is always drawn as <strong>two separate circuits</strong>. The <strong>main circuit</strong> carries the motor current through the contactor's main contacts; it uses large cross-sections and is protected accordingly. The <strong>control circuit</strong> carries only the small coil current and contains the buttons. Both circuits are drawn side by side and are linked only by the <strong>mechanical coupling</strong> between the coil and its contacts — shown in the diagram as a dashed line.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schema der Schuetzensteuerung mit Selbsthaltung: links der Hauptstromkreis mit Motor, rechts der Steuerstromkreis mit EIN-Taster, AUS-Taster und Selbsthaltekontakt">
+        <defs>
+          <style>
+            .w{fill:none;stroke:#171614;stroke-width:2.4;stroke-linecap:round}
+            .wa{fill:none;stroke:#B8402A;stroke-width:2.8;stroke-linecap:round}
+            .pe{fill:none;stroke:#3F6B43;stroke-width:2.4;stroke-linecap:round}
+            .bm{fill:none;stroke:#B8402A;stroke-width:2.4;stroke-linecap:round}
+            .mech{fill:none;stroke:#7D7669;stroke-width:1.8;stroke-dasharray:7 5}
+            .dv{fill:none;stroke:#C9C2B4;stroke-width:1.4;stroke-dasharray:4 6}
+            .bx{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .tn{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;fill:#48433B}
+            .cd{font-family:'Archivo',sans-serif;font-size:13.5px;font-weight:700;fill:#171614}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.09em}
+            .acc{font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:600;fill:#B8402A;letter-spacing:.09em}
+            .dot{fill:#171614}
+          </style>
+        </defs>
+
+        <text class="lgs" x="56" y="17"><tspan lang="de">HAUPTSTROMKREIS</tspan><tspan lang="en">MAIN CIRCUIT</tspan></text>
+        <text class="lgs" x="406" y="17"><tspan lang="de">STEUERSTROMKREIS</tspan><tspan lang="en">CONTROL CIRCUIT</tspan></text>
+        <path class="dv" d="M370 26 V336"/>
+
+        <!-- ===== Hauptstromkreis ===== -->
+        <text class="tn" x="110" y="38" text-anchor="middle">L1</text>
+        <text class="tn" x="150" y="38" text-anchor="middle">L2</text>
+        <text class="tn" x="190" y="38" text-anchor="middle">L3</text>
+        <text class="tn" x="236" y="38" fill="#3F6B43">PE</text>
+
+        <path class="w" d="M110 44 V300 M150 44 V300 M190 44 V300"/>
+        <path class="pe" d="M230 44 V352 H182"/>
+
+        <rect class="bx" x="101" y="52" width="18" height="28" rx="1"/>
+        <rect class="bx" x="141" y="52" width="18" height="28" rx="1"/>
+        <rect class="bx" x="181" y="52" width="18" height="28" rx="1"/>
+        <text class="cd" x="94" y="72" text-anchor="end">F1</text>
+
+        <text class="tn" x="98" y="100" text-anchor="end">1</text>
+        <text class="tn" x="138" y="100" text-anchor="end">3</text>
+        <text class="tn" x="178" y="100" text-anchor="end">5</text>
+        <text class="tn" x="98" y="168" text-anchor="end">2</text>
+        <text class="tn" x="138" y="168" text-anchor="end">4</text>
+        <text class="tn" x="178" y="168" text-anchor="end">6</text>
+        <path class="w" d="M110 152 L126 98 M150 152 L166 98 M190 152 L206 98"/>
+        <circle class="dot" cx="110" cy="104" r="3.2"/>
+        <circle class="dot" cx="150" cy="104" r="3.2"/>
+        <circle class="dot" cx="190" cy="104" r="3.2"/>
+        <circle class="dot" cx="110" cy="152" r="3.2"/>
+        <circle class="dot" cx="150" cy="152" r="3.2"/>
+        <circle class="dot" cx="190" cy="152" r="3.2"/>
+        <text class="cd" x="94" y="132" text-anchor="end">K1</text>
+
+        <rect class="bx" x="88" y="212" width="118" height="44" rx="2"/>
+        <path class="bm" d="M101 224 h18 v14 M141 224 h18 v14 M181 224 h18 v14"/>
+        <text class="cd" x="80" y="238" text-anchor="end">F2</text>
+
+        <text class="tn" x="104" y="296" text-anchor="end">U1</text>
+        <text class="tn" x="144" y="296" text-anchor="end">V1</text>
+        <text class="tn" x="184" y="296" text-anchor="end">W1</text>
+        <path class="w" d="M110 300 V312 L127 329 M150 300 V320 M190 300 V312 L173 329"/>
+        <circle cx="150" cy="352" r="32" fill="#FBF9F5" stroke="#171614" stroke-width="2.4"/>
+        <text class="cd" x="150" y="352" text-anchor="middle" font-size="17">M</text>
+        <text class="tn" x="150" y="368" text-anchor="middle">3~</text>
+        <text class="cd" x="196" y="392" text-anchor="middle">M1</text>
+
+        <path class="mech" d="M126 126 H250 V362 H456"/>
+        <text class="lgs" x="258" y="356"><tspan lang="de">MECHANISCHE KOPPLUNG</tspan><tspan lang="en">MECHANICAL COUPLING</tspan></text>
+
+        <!-- ===== Steuerstromkreis ===== -->
+        <path class="w" d="M420 60 H700 M420 392 H700"/>
+        <text class="tn" x="412" y="64" text-anchor="end">L1</text>
+        <text class="tn" x="412" y="396" text-anchor="end">N</text>
+
+        <path class="w" d="M480 60 V84"/>
+        <rect class="bx" x="470" y="84" width="20" height="32" rx="1"/>
+        <text class="cd" x="502" y="100">F3</text>
+        <text class="lgs" x="502" y="114"><tspan lang="de">STEUERSICHERUNG</tspan><tspan lang="en">CONTROL FUSE</tspan></text>
+
+        <path class="w" d="M480 116 V150 M480 150 H494 M480 188 L494 150 M480 188 V218"/>
+        <text class="tn" x="474" y="148" text-anchor="end">95</text>
+        <text class="tn" x="474" y="196" text-anchor="end">96</text>
+        <text class="cd" x="502" y="170">F2</text>
+        <text class="lgs" x="502" y="184"><tspan lang="de">MOTORSCHUTZ</tspan><tspan lang="en">OVERLOAD</tspan></text>
+
+        <path class="w" d="M480 218 H494 M480 256 L494 218 M480 256 V272"/>
+        <text class="tn" x="474" y="216" text-anchor="end">11</text>
+        <text class="tn" x="474" y="264" text-anchor="end">12</text>
+        <text class="cd" x="502" y="234">S0</text>
+        <text class="lgs" x="502" y="248"><tspan lang="de">AUS · ÖFFNER</tspan><tspan lang="en">OFF · NC</tspan></text>
+
+        <circle class="dot" cx="480" cy="272" r="3.6"/>
+        <path class="w" d="M480 272 V280 M480 318 L494 274 M480 318 V332"/>
+        <text class="tn" x="474" y="278" text-anchor="end">13</text>
+        <text class="tn" x="474" y="326" text-anchor="end">14</text>
+        <text class="cd" x="502" y="296">S1</text>
+        <text class="lgs" x="502" y="310"><tspan lang="de">EIN · SCHLIESSER</tspan><tspan lang="en">ON · NO</tspan></text>
+        <circle class="dot" cx="480" cy="332" r="3.6"/>
+
+        <path class="wa" d="M480 272 H588 V280 M588 318 L602 274 M588 318 V332 H480"/>
+        <text class="tn" x="582" y="278" text-anchor="end" fill="#B8402A">13</text>
+        <text class="tn" x="582" y="326" text-anchor="end" fill="#B8402A">14</text>
+        <text class="cd" x="610" y="296" fill="#B8402A">K1</text>
+        <text class="acc" x="596" y="262"><tspan lang="de">SELBSTHALTUNG</tspan><tspan lang="en">SELF-HOLDING</tspan></text>
+
+        <path class="w" d="M480 332 V344 M480 380 V392"/>
+        <rect class="bx" x="456" y="344" width="48" height="36" rx="2"/>
+        <text class="tn" x="450" y="342" text-anchor="end">A1</text>
+        <text class="tn" x="450" y="390" text-anchor="end">A2</text>
+        <text class="cd" x="516" y="362">K1</text>
+        <text class="lgs" x="516" y="376"><tspan lang="de">SPULE</tspan><tspan lang="en">COIL</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Schützensteuerung mit Selbsthaltung. Links der Hauptstromkreis, rechts der Steuerstromkreis. Rot hervorgehoben ist der Selbsthaltezweig: der Hilfsschliesser K1 13/14 liegt <strong>parallel zum EIN-Taster S1</strong>. Kontaktstellung: alle Kontakte im stromlosen Ruhezustand gezeichnet.</span>
+        <span lang="en"> — Contactor control with self-holding. Main circuit on the left, control circuit on the right. The self-holding branch is highlighted in red: auxiliary NO contact K1 13/14 lies <strong>parallel to the ON button S1</strong>. Contact position: all contacts drawn in the de-energised rest state.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Die Betriebsmittel im Schema</span><span lang="en">The devices in the diagram</span></h3>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Kennzeichen</span><span lang="en">Designation</span></th>
+            <th><span lang="de">Betriebsmittel</span><span lang="en">Device</span></th>
+            <th><span lang="de">Aufgabe</span><span lang="en">Function</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">F1</td>
+            <td><span lang="de">Vorsicherung oder Leistungsschalter</span><span lang="en">back-up fuses or circuit breaker</span></td>
+            <td><span lang="de">Kurzschlussschutz für Leitung und Schütz</span><span lang="en">short-circuit protection for the cable and the contactor</span></td>
+          </tr>
+          <tr>
+            <td class="num">K1</td>
+            <td><span lang="de">Schütz mit drei Hauptkontakten und Hilfskontakten</span><span lang="en">contactor with three main contacts and auxiliary contacts</span></td>
+            <td><span lang="de">schaltet den Motor, hält sich über 13/14 selbst</span><span lang="en">switches the motor, holds itself via 13/14</span></td>
+          </tr>
+          <tr>
+            <td class="num">F2</td>
+            <td><span lang="de">Überlastrelais (Thermorelais)</span><span lang="en">overload relay (thermal relay)</span></td>
+            <td><span lang="de">Überlastschutz des Motors, Öffner 95/96 im Steuerkreis</span><span lang="en">motor overload protection, NC contact 95/96 in the control circuit</span></td>
+          </tr>
+          <tr>
+            <td class="num">F3</td>
+            <td><span lang="de">Steuersicherung</span><span lang="en">control-circuit fuse</span></td>
+            <td><span lang="de">schützt den Steuerstromkreis, der viel kleiner dimensioniert ist</span><span lang="en">protects the control circuit, which is sized much smaller</span></td>
+          </tr>
+          <tr>
+            <td class="num">S0</td>
+            <td><span lang="de">AUS-Taster, Öffner</span><span lang="en">OFF button, NC</span></td>
+            <td><span lang="de">unterbricht die Selbsthaltung und damit den Spulenstrom</span><span lang="en">interrupts the self-holding circuit and hence the coil current</span></td>
+          </tr>
+          <tr>
+            <td class="num">S1</td>
+            <td><span lang="de">EIN-Taster, Schliesser</span><span lang="en">ON button, NO</span></td>
+            <td><span lang="de">gibt den kurzen Einschaltimpuls auf die Spule</span><span lang="en">gives the short switch-on pulse to the coil</span></td>
+          </tr>
+          <tr>
+            <td class="num">M1</td>
+            <td><span lang="de">Drehstrom-Asynchronmotor</span><span lang="en">three-phase induction motor</span></td>
+            <td><span lang="de">der Antrieb, den die Steuerung schaltet</span><span lang="en">the drive that the control switches</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Kennbuchstaben</span><span lang="en">Designation letters</span></b>
+      <p lang="de">Die Kennbuchstaben stammen aus der Reihe <strong>IEC 81346-2</strong> (früher IEC/EN 61346-2): <code>F</code> für Schutzeinrichtungen, <code>K</code> für Schütze und Relais, <code>Q</code> für Schaltgeräte im Energiekreis, <code>S</code> für Befehlsgeräte, <code>M</code> für Motoren. Die frühere starre Zuordnung Gerät → Buchstabe wurde in der neueren Ausgabe gelockert: entscheidend ist die <em>Funktion</em> des Betriebsmittels in der Anlage, nicht seine Bauart. Deshalb findest du dasselbe Schütz je nach Firmenstandard als <code>K1</code> oder als <code>Q1</code>.</p>
+      <p lang="en">The designation letters come from the <strong>IEC 81346-2</strong> series (formerly IEC/EN 61346-2): <code>F</code> for protective devices, <code>K</code> for contactors and relays, <code>Q</code> for switching devices in the power circuit, <code>S</code> for command devices, <code>M</code> for motors. The former rigid device-to-letter mapping was relaxed in the newer edition: what counts is the <em>function</em> of the device in the installation, not its construction. That is why the same contactor appears as <code>K1</code> or as <code>Q1</code> depending on the company standard.</p>
+    </div>
+
+    <h3><span lang="de">Klemmenbezeichnungen am Schütz</span><span lang="en">Terminal designations on the contactor</span></h3>
+
+    <p lang="de">Die Klemmen sind genormt, damit jeder Elektriker ein Schütz ohne Datenblatt anschliessen kann. Bei den Hilfskontakten steht die <strong>erste Ziffer</strong> für die laufende Nummer des Kontaktes (Ordnungsziffer) und die <strong>zweite Ziffer</strong> für seine Funktion (Funktionsziffer): 1/2 bedeutet Öffner, 3/4 bedeutet Schliesser.</p>
+    <p lang="en">The terminals are standardised so that any electrician can wire a contactor without a data sheet. On the auxiliary contacts the <strong>first digit</strong> gives the sequential number of the contact and the <strong>second digit</strong> gives its function: 1/2 means NC, 3/4 means NO.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Kontakt</span><span lang="en">Contact</span></th>
+            <th><span lang="de">Klemmen</span><span lang="en">Terminals</span></th>
+            <th><span lang="de">Bedeutung</span><span lang="en">Meaning</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Spule</span><span lang="en">Coil</span></strong></td>
+            <td class="num">A1 – A2</td>
+            <td><span lang="de">Anschluss der Steuerspannung; ohne Polarität bei Wechselspannung</span><span lang="en">connection of the control voltage; no polarity with AC</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Hauptkontakte</span><span lang="en">Main contacts</span></strong></td>
+            <td class="num">1–2 · 3–4 · 5–6</td>
+            <td><span lang="de">Schliesser im Hauptstromkreis; ungerade Ziffer = Netzseite</span><span lang="en">NO contacts in the main circuit; odd digit = supply side</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Hilfsschliesser</span><span lang="en">Auxiliary NO</span></strong></td>
+            <td class="num">13–14 · 23–24 · 33–34</td>
+            <td><span lang="de">Funktionsziffer 3/4; einer davon wird zum Selbsthaltekontakt</span><span lang="en">function digits 3/4; one of these becomes the self-holding contact</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Hilfsöffner</span><span lang="en">Auxiliary NC</span></strong></td>
+            <td class="num">11–12 · 21–22 · 31–32</td>
+            <td><span lang="de">Funktionsziffer 1/2; wird für Verriegelung und Meldung gebraucht</span><span lang="en">function digits 1/2; used for interlocking and signalling</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Überlastrelais, Öffner</span><span lang="en">Overload relay, NC</span></strong></td>
+            <td class="num">95 – 96</td>
+            <td><span lang="de">im Ruhezustand geschlossen, öffnet beim Auslösen</span><span lang="en">closed at rest, opens when the relay trips</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Überlastrelais, Schliesser</span><span lang="en">Overload relay, NO</span></strong></td>
+            <td class="num">97 – 98</td>
+            <td><span lang="de">im Ruhezustand offen, schliesst beim Auslösen — für die Störmeldung</span><span lang="en">open at rest, closes when the relay trips — for the fault signal</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Vor der Abgabe prüfen</span><span lang="en">Check before handing in</span></b>
+      <p lang="de">Die <strong>Steuerspannung</strong> ist kein fester Wert. Je nach Maschine und Firmenstandard sind 230 V AC (direkt ab L1 und N), 400 V AC, 24 V AC über einen Steuertransformator oder 24 V DC üblich. Ebenso hängt die Zahl der verfügbaren Hilfskontakte vom Schütztyp ab — kleine Schütze haben oft nur einen einzigen Hilfsschliesser, weitere müssen als Hilfskontaktblock aufgesteckt werden. Beides <strong>im Herstellerkatalog und im Anlagenschema des eigenen Objekts nachschlagen</strong>, bevor du eine Zahl in die Doku schreibst.</p>
+      <p lang="en">The <strong>control voltage</strong> is not a fixed value. Depending on the machine and the company standard, 230 V AC (taken directly from L1 and N), 400 V AC, 24 V AC via a control transformer or 24 V DC are all common. The number of available auxiliary contacts likewise depends on the contactor type — small contactors often have only a single auxiliary NO contact, further ones have to be added as a plug-on auxiliary contact block. <strong>Look both up in the manufacturer's catalogue and in the diagram of your own installation</strong> before you write a figure into the documentation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Funktionsablauf Schritt für Schritt</span><span lang="en">Step-by-step sequence</span></h2>
+
+    <p lang="de">Der ganze Steuerstromkreis ist eine <strong>Reihenschaltung</strong> von L1 bis N: Steuersicherung, Öffner des Überlastrelais, AUS-Taster, dann die Parallelschaltung aus EIN-Taster und Selbsthaltekontakt, und zuletzt die Spule. Damit die Spule anzieht, müssen <em>alle</em> Glieder dieser Kette geschlossen sein. Das ist der Schlüssel zum Verständnis: Jedes einzelne Element kann die Maschine ausschalten, aber nur der EIN-Taster kann sie einschalten.</p>
+    <p lang="en">The whole control circuit is one <strong>series connection</strong> from L1 to N: control fuse, NC contact of the overload relay, OFF button, then the parallel combination of ON button and self-holding contact, and finally the coil. For the coil to pull in, <em>every</em> link in this chain must be closed. That is the key to understanding it: each individual element can switch the machine off, but only the ON button can switch it on.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Schritt</span><span lang="en">Step</span></th>
+            <th><span lang="de">Vorgang</span><span lang="en">Action</span></th>
+            <th><span lang="de">Zustand danach</span><span lang="en">State afterwards</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">1</td>
+            <td><span lang="de">Ruhezustand: S0 geschlossen, S1 offen, K1 13/14 offen</span><span lang="en">rest state: S0 closed, S1 open, K1 13/14 open</span></td>
+            <td><span lang="de">Spule stromlos, Motor steht still</span><span lang="en">coil de-energised, motor at standstill</span></td>
+          </tr>
+          <tr>
+            <td class="num">2</td>
+            <td><span lang="de">S1 wird gedrückt — der Strom findet den Weg L1 → F3 → F2 (95/96) → S0 (11/12) → S1 (13/14) → A1 → A2 → N</span><span lang="en">S1 is pressed — the current finds the path L1 → F3 → F2 (95/96) → S0 (11/12) → S1 (13/14) → A1 → A2 → N</span></td>
+            <td><span lang="de">die Spule steht unter Spannung</span><span lang="en">the coil is energised</span></td>
+          </tr>
+          <tr>
+            <td class="num">3</td>
+            <td><span lang="de">das Schütz zieht an: alle Kontakte werden mechanisch bewegt</span><span lang="en">the contactor pulls in: all contacts are moved mechanically</span></td>
+            <td><span lang="de">Hauptkontakte 1/2, 3/4, 5/6 geschlossen, Motor läuft an; Hilfsschliesser 13/14 geschlossen</span><span lang="en">main contacts 1/2, 3/4, 5/6 closed, motor starts; auxiliary NO 13/14 closed</span></td>
+          </tr>
+          <tr>
+            <td class="num">4</td>
+            <td><span lang="de">S1 wird losgelassen und öffnet wieder</span><span lang="en">S1 is released and opens again</span></td>
+            <td><span lang="de">der Strom fliesst jetzt über den parallelen Kontakt 13/14 weiter — <strong>die Selbsthaltung greift</strong>, der Motor läuft</span><span lang="en">the current now continues through the parallel contact 13/14 — <strong>the self-holding takes over</strong>, the motor keeps running</span></td>
+          </tr>
+          <tr>
+            <td class="num">5</td>
+            <td><span lang="de">S0 wird gedrückt</span><span lang="en">S0 is pressed</span></td>
+            <td><span lang="de">die Reihenschaltung ist unterbrochen, die Spule wird stromlos, das Schütz fällt ab</span><span lang="en">the series chain is interrupted, the coil is de-energised, the contactor drops out</span></td>
+          </tr>
+          <tr>
+            <td class="num">6</td>
+            <td><span lang="de">S0 wird losgelassen</span><span lang="en">S0 is released</span></td>
+            <td><span lang="de">S0 schliesst wieder, aber 13/14 ist inzwischen offen und S1 ebenfalls — der Motor bleibt stehen</span><span lang="en">S0 closes again, but 13/14 has meanwhile opened and so has S1 — the motor stays off</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p lang="de">Schritt 4 ist der eigentliche Kern der Schaltung. In dem Augenblick, in dem der Finger den EIN-Taster verlässt, muss der Selbsthaltekontakt bereits geschlossen sein. Das ist er auch: Das Schütz zieht in wenigen Millisekunden an, ein Tastendruck dauert um Grössenordnungen länger.</p>
+    <p lang="en">Step 4 is the actual heart of the circuit. At the moment the finger leaves the ON button, the self-holding contact must already be closed. And it is: the contactor pulls in within a few milliseconds, while a button press lasts orders of magnitude longer.</p>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Häufiger Fehler im Schema</span><span lang="en">Common mistake in the diagram</span></b>
+      <p lang="de">Der Selbsthaltekontakt wird versehentlich <strong>parallel zum AUS-Taster</strong> statt parallel zum EIN-Taster gezeichnet. Die Folge: Das Schütz zieht an und lässt sich danach <em>nicht mehr ausschalten</em>, weil der Selbsthaltekontakt den AUS-Taster überbrückt. Beim Prüfen deshalb immer die Frage stellen: «Welchen Taster überbrückt der Hilfskontakt?» Die Antwort muss <strong>EIN</strong> lauten.</p>
+      <p lang="en">The self-holding contact is accidentally drawn <strong>parallel to the OFF button</strong> instead of parallel to the ON button. The result: the contactor pulls in and then <em>cannot be switched off any more</em>, because the self-holding contact bridges the OFF button. When checking a diagram, always ask: “Which button does the auxiliary contact bridge?” The answer must be <strong>ON</strong>.</p>
+    </div>
+
+    <p lang="de">Ein zweiter, ebenso häufiger Fehler ist die Verwechslung der Kontaktart. Wird für die Selbsthaltung versehentlich ein Öffner (11/12) statt eines Schliessers (13/14) verdrahtet, ist die Spule dauernd überbrückt, solange das Schütz abgefallen ist — die Maschine läuft an, sobald die Steuerspannung anliegt.</p>
+    <p lang="en">A second, equally common mistake is mixing up the contact type. If an NC contact (11/12) is wired for the self-holding function instead of an NO contact (13/14), the coil is permanently bridged while the contactor is dropped out — the machine starts as soon as the control voltage is present.</p>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Wiederanlaufsperre und Drahtbruchsicherheit</span><span lang="en">Restart inhibition and open-circuit safety</span></h2>
+
+    <p class="lead" lang="de">Die Impulssteuerung mit Selbsthaltung bringt die <strong>Wiederanlaufsperre</strong> nicht als Zusatzgerät mit, sondern als eingebaute Eigenschaft ihres Aufbaus. Das ist der wichtigste sicherheitstechnische Grund, weshalb Maschinenantriebe so gesteuert werden.</p>
+    <p class="lead" lang="en">A pulse control with self-holding does not provide the <strong>restart inhibition</strong> as an add-on device, but as an inherent property of its layout. This is the most important safety reason why machine drives are controlled in this way.</p>
+
+    <h3><span lang="de">Was bei einem Spannungsausfall passiert</span><span lang="en">What happens during a supply failure</span></h3>
+
+    <ul lang="de">
+      <li>Die Steuerspannung bricht zusammen, die Spule wird stromlos.</li>
+      <li>Die Federkraft im Schütz zieht den Anker zurück, das Schütz <strong>fällt ab</strong>.</li>
+      <li>Die Hauptkontakte öffnen, der Motor wird spannungslos.</li>
+      <li>Gleichzeitig öffnet der Hilfsschliesser 13/14 — <strong>die Selbsthaltung ist unterbrochen</strong>.</li>
+      <li>Kommt die Spannung zurück, ist die Kette bei S1 und bei 13/14 offen. Der Steuerstromkreis bleibt stromlos.</li>
+      <li>Die Maschine läuft <strong>nicht</strong> von selbst an. Es braucht einen neuen, bewussten Druck auf den EIN-Taster.</li>
+    </ul>
+    <ul lang="en">
+      <li>The control voltage collapses and the coil is de-energised.</li>
+      <li>The spring force in the contactor pulls the armature back, the contactor <strong>drops out</strong>.</li>
+      <li>The main contacts open and the motor is disconnected.</li>
+      <li>At the same time the auxiliary NO contact 13/14 opens — <strong>the self-holding circuit is broken</strong>.</li>
+      <li>When the supply returns, the chain is open at S1 and at 13/14. The control circuit stays de-energised.</li>
+      <li>The machine does <strong>not</strong> start by itself. A new, deliberate press of the ON button is required.</li>
+    </ul>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Warum das lebenswichtig ist</span><span lang="en">Why this matters</span></b>
+      <p lang="de">Nach einem Stromausfall geht der Mitarbeiter davon aus, dass die Maschine steht. Er greift in den Arbeitsbereich, entfernt ein Werkstück oder reinigt ein Sägeblatt. Läuft die Maschine bei Spannungswiederkehr selbsttätig wieder an, geschieht das ohne jede Vorwarnung und ohne dass jemand einen Befehl gegeben hätte. Genau diesen Fall verhindert die Selbsthaltung — nicht durch ein zusätzliches Sicherheitsbauteil, sondern weil das Schütz seinen Speicher verliert, sobald die Spannung wegfällt.</p>
+      <p lang="en">After a power cut a worker assumes the machine is stopped. He reaches into the working area, removes a workpiece or cleans a saw blade. If the machine restarts by itself when the supply returns, it does so without any warning and without anybody having given a command. This is exactly the case the self-holding circuit prevents — not through an extra safety component, but because the contactor loses its memory the moment the voltage disappears.</p>
+    </div>
+
+    <h3><span lang="de">Warum der AUS-Taster ein Öffner ist</span><span lang="en">Why the OFF button is an NC contact</span></h3>
+
+    <p lang="de">Der AUS-Taster liegt als <strong>Öffner in Reihe</strong> im Steuerstromkreis. Im Normalbetrieb fliesst also dauernd Strom durch ihn und durch seine Zuleitung. Dieses Vorgehen heisst <strong>Ruhestromprinzip</strong>: Der sichere Zustand ist der stromlose Zustand, und Strom fliesst nur, solange alles in Ordnung ist.</p>
+    <p lang="en">The OFF button sits as an <strong>NC contact in series</strong> in the control circuit. In normal operation, current therefore flows continuously through it and through its wiring. This approach is called the <strong>closed-circuit principle</strong>: the safe state is the currentless state, and current flows only as long as everything is in order.</p>
+
+    <p lang="de">Der Vorteil zeigt sich beim Fehler. Bricht ein Draht zum AUS-Taster, löst sich eine Klemme oder wird das Kabel beschädigt, so ist die Reihenschaltung unterbrochen. Das Schütz fällt ab, die Maschine geht in den sicheren Zustand — der Fehler <strong>schaltet aus statt ein</strong>. Wäre der AUS-Taster ein Schliesser, der beim Drücken einen Kurzschluss über die Spule legt oder ein Abschaltrelais ansteuert, würde derselbe Drahtbruch unbemerkt bleiben: Die Maschine liefe weiter, und beim Drücken des AUS-Tasters würde nichts passieren. Man merkt den Fehler erst, wenn man ausschalten will — und dann geht es nicht.</p>
+    <p lang="en">The advantage shows up when something fails. If a wire to the OFF button breaks, a terminal comes loose or the cable is damaged, the series chain is interrupted. The contactor drops out and the machine goes to the safe state — the fault <strong>switches off instead of on</strong>. If the OFF button were an NO contact that short-circuits the coil or energises a tripping relay when pressed, the same broken wire would go unnoticed: the machine would keep running, and pressing the OFF button would do nothing. The fault is only noticed when someone wants to switch off — and then it does not work.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Ereignis</span><span lang="en">Event</span></th>
+            <th><span lang="de">Was im Steuerstromkreis geschieht</span><span lang="en">What happens in the control circuit</span></th>
+            <th><span lang="de">Folge für die Maschine</span><span lang="en">Consequence for the machine</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Netzspannung fällt aus</span><span lang="en">Supply voltage fails</span></strong></td>
+            <td><span lang="de">Spule stromlos, 13/14 öffnet</span><span lang="en">coil de-energised, 13/14 opens</span></td>
+            <td><span lang="de">Motor stoppt, Selbsthaltung ist gelöscht</span><span lang="en">motor stops, self-holding is erased</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Spannung kehrt zurück</span><span lang="en">Voltage returns</span></strong></td>
+            <td><span lang="de">Kette bei S1 und 13/14 offen</span><span lang="en">chain open at S1 and at 13/14</span></td>
+            <td><span lang="de">Motor bleibt stehen — Wiederanlaufsperre</span><span lang="en">motor stays off — restart inhibition</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Drahtbruch zum AUS-Taster</span><span lang="en">Broken wire to the OFF button</span></strong></td>
+            <td><span lang="de">Reihenschaltung unterbrochen</span><span lang="en">series chain interrupted</span></td>
+            <td><span lang="de">Motor stoppt, Fehler wird sofort bemerkt</span><span lang="en">motor stops, the fault is noticed at once</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Steuersicherung F3 löst aus</span><span lang="en">Control fuse F3 operates</span></strong></td>
+            <td><span lang="de">Steuerspannung weg</span><span lang="en">control voltage gone</span></td>
+            <td><span lang="de">Motor stoppt, Anlauf erst nach Behebung möglich</span><span lang="en">motor stops, restart only possible after the fault is cleared</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Überlastrelais F2 löst aus</span><span lang="en">Overload relay F2 trips</span></strong></td>
+            <td><span lang="de">Öffner 95/96 öffnet, Schliesser 97/98 schliesst</span><span lang="en">NC 95/96 opens, NO 97/98 closes</span></td>
+            <td><span lang="de">Motor stoppt und die Störmeldung wird abgesetzt</span><span lang="en">motor stops and the fault signal is issued</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Not-Halt betätigt</span><span lang="en">Emergency stop actuated</span></strong></td>
+            <td><span lang="de">zwangsöffnender Kontakt trennt die Kette, Taster rastet ein</span><span lang="en">positively opening contact breaks the chain, the button latches</span></td>
+            <td><span lang="de">Motor stoppt; Entriegeln allein startet ihn nicht wieder</span><span lang="en">motor stops; unlatching alone does not restart it</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Normbezug prüfen</span><span lang="en">Verify the standard reference</span></b>
+      <p lang="de">Die Anforderung, dass eine Maschine nach Spannungsunterbrechung und Spannungswiederkehr nicht selbsttätig anlaufen darf, steht in der Norm für die elektrische Ausrüstung von Maschinen, in der Schweiz <strong>SN EN 60204-1</strong> (Ausgabe 2018, beruhend auf IEC 60204-1:2016, herausgegeben von Electrosuisse). Die Abschnittsnummern haben zwischen den Ausgaben gewechselt; verbreitet zitiert wird Abschnitt 7.5 für den Schutz gegen selbsttätigen Wiederanlauf. <strong>Die genaue Ziffer vor der Abgabe in der eigenen Normausgabe nachschlagen</strong> und nicht aus zweiter Hand übernehmen.</p>
+      <p lang="en">The requirement that a machine must not restart by itself after a supply interruption and its return is set out in the standard for the electrical equipment of machinery, in Switzerland <strong>SN EN 60204-1</strong> (2018 edition, based on IEC 60204-1:2016, published by Electrosuisse). The clause numbers have changed between editions; clause 7.5 is commonly quoted for protection against automatic restart. <strong>Look the exact number up in your own edition of the standard before handing in</strong> rather than taking it second-hand.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Mehrere Taster, Not-Halt und Verriegelung</span><span lang="en">Several buttons, emergency stop and interlocking</span></h2>
+
+    <p lang="de">Sobald eine Maschine von mehreren Stellen aus bedient werden soll, wird die Impulssteuerung erweitert. Die Regel ergibt sich direkt aus der Logik der Reihenschaltung und muss nicht auswendig gelernt werden — man kann sie herleiten.</p>
+    <p lang="en">As soon as a machine is to be operated from several positions, the pulse control is extended. The rule follows directly from the logic of the series chain and does not have to be memorised — it can be derived.</p>
+
+    <ul lang="de">
+      <li><strong>EIN-Taster parallel.</strong> Jeder einzelne Taster soll für sich allein einschalten können. Bei einer Parallelschaltung genügt ein geschlossener Zweig, damit Strom fliesst — also reicht ein gedrückter Taster.</li>
+      <li><strong>AUS-Taster in Reihe.</strong> Jeder einzelne Taster soll für sich allein ausschalten können. Bei einer Reihenschaltung genügt ein geöffneter Kontakt, um den Kreis zu unterbrechen — also reicht ein gedrückter Taster.</li>
+      <li><strong>Der Selbsthaltekontakt liegt parallel zur ganzen Gruppe</strong> der EIN-Taster, nicht nur zu einem davon. Sonst würde die Selbsthaltung nur beim Einschalten von einer bestimmten Stelle aus funktionieren.</li>
+      <li><strong>Ausschalten hat Vorrang.</strong> Werden EIN und AUS gleichzeitig gedrückt, bleibt die Kette unterbrochen und das Schütz fällt ab. Diese Schaltung ist damit «vorrangig rücksetzend» — die sichere Richtung gewinnt.</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>ON buttons in parallel.</strong> Each individual button must be able to switch on by itself. In a parallel connection a single closed branch is enough for current to flow — so one pressed button is enough.</li>
+      <li><strong>OFF buttons in series.</strong> Each individual button must be able to switch off by itself. In a series connection a single opened contact is enough to break the circuit — so one pressed button is enough.</li>
+      <li><strong>The self-holding contact sits parallel to the whole group</strong> of ON buttons, not just to one of them. Otherwise the self-holding would only work when switching on from one particular position.</li>
+      <li><strong>Switching off takes priority.</strong> If ON and OFF are pressed at the same time, the chain stays interrupted and the contactor drops out. The circuit is therefore “reset-dominant” — the safe direction wins.</li>
+    </ul>
+
+    <figure>
+      <svg viewBox="0 0 760 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Erweiterter Steuerstromkreis mit Not-Halt, zwei AUS-Tastern in Reihe und zwei EIN-Tastern parallel">
+        <defs>
+          <style>
+            .w2{fill:none;stroke:#171614;stroke-width:2.4;stroke-linecap:round}
+            .wa2{fill:none;stroke:#B8402A;stroke-width:2.8;stroke-linecap:round}
+            .br{fill:none;stroke:#7D7669;stroke-width:1.6}
+            .bx2{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .tn2{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;fill:#48433B}
+            .cd2{font-family:'Archivo',sans-serif;font-size:13.5px;font-weight:700;fill:#171614}
+            .lgs2{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.09em}
+            .acc2{font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:600;fill:#B8402A;letter-spacing:.09em}
+            .dot2{fill:#171614}
+          </style>
+        </defs>
+
+        <path class="w2" d="M60 40 H700 M60 452 H700"/>
+        <text class="tn2" x="52" y="44" text-anchor="end">L1</text>
+        <text class="tn2" x="52" y="456" text-anchor="end">N</text>
+
+        <path class="w2" d="M300 40 V64"/>
+        <rect class="bx2" x="290" y="64" width="20" height="32" rx="1"/>
+        <text class="cd2" x="326" y="84">F3</text>
+
+        <!-- Not-Halt -->
+        <path class="w2" d="M300 96 V112 M300 112 H314 M300 150 L314 112 M300 150 V166"/>
+        <path class="w2" d="M307 131 H332"/>
+        <path d="M324 131 a 8 8 0 0 1 16 0 z" fill="#B8402A" stroke="#B8402A" stroke-width="2"/>
+        <text class="tn2" x="294" y="110" text-anchor="end">11</text>
+        <text class="tn2" x="294" y="158" text-anchor="end">12</text>
+        <text class="cd2" x="352" y="136">S10</text>
+        <text class="lgs2" x="266" y="136" text-anchor="end"><tspan lang="de">NOT-HALT</tspan><tspan lang="en">EMERGENCY STOP</tspan></text>
+
+        <!-- AUS 1 -->
+        <path class="w2" d="M300 166 H314 M300 204 L314 166 M300 204 V220"/>
+        <text class="tn2" x="294" y="176" text-anchor="end">11</text>
+        <text class="tn2" x="294" y="212" text-anchor="end">12</text>
+        <text class="cd2" x="326" y="190">S0</text>
+
+        <!-- AUS 2 -->
+        <path class="w2" d="M300 220 H314 M300 258 L314 220 M300 258 V272"/>
+        <text class="tn2" x="294" y="230" text-anchor="end">11</text>
+        <text class="tn2" x="294" y="266" text-anchor="end">12</text>
+        <text class="cd2" x="326" y="244">S3</text>
+
+        <path class="br" d="M240 166 H230 V258 H240"/>
+        <text class="lgs2" x="224" y="206" text-anchor="end"><tspan lang="de">AUS-TASTER IN REIHE</tspan><tspan lang="en">OFF BUTTONS IN SERIES</tspan></text>
+
+        <!-- Knoten -->
+        <circle class="dot2" cx="300" cy="272" r="3.6"/>
+        <circle class="dot2" cx="300" cy="332" r="3.6"/>
+
+        <!-- EIN 1 -->
+        <path class="w2" d="M300 272 V280 M300 318 L314 274 M300 318 V332"/>
+        <text class="tn2" x="294" y="280" text-anchor="end">13</text>
+        <text class="tn2" x="294" y="326" text-anchor="end">14</text>
+        <text class="cd2" x="326" y="300">S1</text>
+
+        <!-- EIN 2 -->
+        <path class="w2" d="M300 272 H390 V280 M390 318 L404 274 M390 318 V332 H300"/>
+        <text class="tn2" x="384" y="280" text-anchor="end">13</text>
+        <text class="tn2" x="384" y="326" text-anchor="end">14</text>
+        <text class="cd2" x="416" y="300">S2</text>
+
+        <!-- Selbsthaltung -->
+        <path class="wa2" d="M300 272 H490 V280 M490 318 L504 274 M490 318 V332 H300"/>
+        <text class="tn2" x="484" y="280" text-anchor="end" fill="#B8402A">13</text>
+        <text class="tn2" x="484" y="326" text-anchor="end" fill="#B8402A">14</text>
+        <text class="cd2" x="516" y="300" fill="#B8402A">K1</text>
+        <text class="acc2" x="540" y="262"><tspan lang="de">SELBSTHALTUNG</tspan><tspan lang="en">SELF-HOLDING</tspan></text>
+
+        <path class="br" d="M240 272 H230 V332 H240"/>
+        <text class="lgs2" x="224" y="306" text-anchor="end"><tspan lang="de">EIN-TASTER PARALLEL</tspan><tspan lang="en">ON BUTTONS IN PARALLEL</tspan></text>
+
+        <!-- Spule -->
+        <path class="w2" d="M300 332 V368 M300 404 V452"/>
+        <rect class="bx2" x="276" y="368" width="48" height="36" rx="2"/>
+        <text class="tn2" x="270" y="366" text-anchor="end">A1</text>
+        <text class="tn2" x="270" y="414" text-anchor="end">A2</text>
+        <text class="cd2" x="336" y="382">K1</text>
+        <text class="lgs2" x="336" y="396"><tspan lang="de">SPULE</tspan><tspan lang="en">COIL</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 2</span><span lang="en">Fig. 2</span></b>
+        <span lang="de"> — Erweiterter Steuerstromkreis. Not-Halt S10 und die beiden AUS-Taster S0 und S3 liegen als Öffner in Reihe, die EIN-Taster S1 und S2 parallel. Der Selbsthaltekontakt K1 13/14 überbrückt die ganze EIN-Gruppe. Das rote Pilzsymbol kennzeichnet den Not-Halt-Befehlsgeber.</span>
+        <span lang="en"> — Extended control circuit. Emergency stop S10 and the two OFF buttons S0 and S3 are NC contacts in series, the ON buttons S1 and S2 are in parallel. The self-holding contact K1 13/14 bridges the entire ON group. The red mushroom symbol marks the emergency stop actuator.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Not-Halt einbinden</span><span lang="en">Integrating the emergency stop</span></h3>
+
+    <p lang="de">Der Not-Halt wird wie ein zusätzlicher AUS-Taster behandelt: als <strong>Öffner in Reihe</strong>, möglichst weit vorne in der Kette. Er unterscheidet sich aber in drei Punkten von einem gewöhnlichen AUS-Taster.</p>
+    <p lang="en">The emergency stop is treated like an additional OFF button: as an <strong>NC contact in series</strong>, placed as far forward in the chain as possible. It differs from an ordinary OFF button in three respects, however.</p>
+
+    <ul lang="de">
+      <li><strong>Zwangsöffnend.</strong> Der Kontakt wird beim Drücken mechanisch zwangsweise aufgerissen. Selbst ein verschweisster Kontakt wird so getrennt. Diese Forderung stellt EN ISO 13850.</li>
+      <li><strong>Rastend.</strong> Der Pilzdrucktaster bleibt nach dem Betätigen mechanisch verriegelt und muss bewusst entriegelt werden — durch Drehen oder Ziehen.</li>
+      <li><strong>Entriegeln startet nicht.</strong> Das Entriegeln hebt nur die Sperre auf; der Wiederanlauf muss durch eine separate, bewusste Handlung erfolgen. Genau das leistet die Selbsthaltung von sich aus: Nach dem Not-Halt ist das Schütz abgefallen und der Selbsthaltekontakt offen, es braucht wieder den EIN-Taster.</li>
+      <li><strong>Kennzeichnung.</strong> Roter Pilzkopf auf gelbem Grund, ohne zusätzliche farbige Symbole, damit er auf den ersten Blick erkennbar ist.</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Positively opening.</strong> When pressed, the contact is forced open mechanically. Even a welded contact is separated this way. This requirement comes from EN ISO 13850.</li>
+      <li><strong>Latching.</strong> After actuation the mushroom-head button stays mechanically locked and has to be released deliberately — by turning or pulling.</li>
+      <li><strong>Releasing does not start.</strong> Releasing only cancels the lock; the restart must be brought about by a separate, deliberate action. The self-holding circuit does exactly this on its own: after the emergency stop the contactor has dropped out and the self-holding contact is open, so the ON button is needed again.</li>
+      <li><strong>Identification.</strong> Red mushroom head on a yellow background, without additional coloured symbols, so that it is recognisable at first glance.</li>
+    </ul>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Grenze der einfachen Schaltung</span><span lang="en">Limits of the simple circuit</span></b>
+      <p lang="de">Ein einzelner Öffner in der Spulenkette ist die Grundform der Not-Halt-Einbindung. Ob sie für eine bestimmte Maschine genügt, ergibt sich aus der Risikobeurteilung: Verlangt diese ein höheres Performance Level nach EN ISO 13849-1, braucht es zweikanalige Verdrahtung, ein Sicherheitsrelais und die Rückführung der Schützstellung über Zwangsführungskontakte. <strong>Diese Bewertung gehört ins Projekt und nicht in eine Faustregel</strong> — im konkreten Fall mit dem Sicherheitskonzept der Anlage abgleichen.</p>
+      <p lang="en">A single NC contact in the coil chain is the basic form of emergency stop integration. Whether it is sufficient for a particular machine follows from the risk assessment: if that calls for a higher performance level to EN ISO 13849-1, two-channel wiring, a safety relay and feedback of the contactor position via mechanically linked contacts are needed. <strong>This assessment belongs to the project and not to a rule of thumb</strong> — in a real case, compare it with the safety concept of the installation.</p>
+    </div>
+
+    <h3><span lang="de">Verriegelung bei der Wendeschützschaltung</span><span lang="en">Interlocking in a reversing contactor circuit</span></h3>
+
+    <p lang="de">Soll ein Drehstrommotor die Drehrichtung wechseln, braucht es zwei Schütze, die zwei Aussenleiter vertauschen. Ziehen beide gleichzeitig an, entsteht ein <strong>zweipoliger Kurzschluss</strong> zwischen den vertauschten Aussenleitern. Die beiden Schütze müssen deshalb <strong>gegeneinander verriegelt</strong> sein. Jedes der beiden Schütze arbeitet dabei weiterhin mit seiner eigenen Selbsthaltung.</p>
+    <p lang="en">If a three-phase motor is to change its direction of rotation, two contactors are needed which swap two line conductors. If both pull in at the same time, a <strong>two-pole short circuit</strong> occurs between the swapped line conductors. The two contactors must therefore be <strong>interlocked against each other</strong>. Each of the two contactors still works with its own self-holding circuit.</p>
+
+    <ul lang="de">
+      <li><strong>Elektrische Schützverriegelung:</strong> Ein Hilfsöffner (11/12) jedes Schützes liegt in Reihe im Spulenkreis des Gegenschützes. Zieht K1 an, öffnet sein Öffner den Kreis von K2.</li>
+      <li><strong>Tasterverriegelung:</strong> Zusätzlich zum Schliesser wird der Öffner des jeweiligen EIN-Tasters in den Spulenkreis der Gegenrichtung gelegt. Damit unterbricht das Drücken des einen Tasters die andere Richtung schon vor dem Schaltvorgang.</li>
+      <li><strong>Mechanische Verriegelung:</strong> Ein Verriegelungsbaustein zwischen den beiden Schützen verhindert, dass beide Anker gleichzeitig anziehen können.</li>
+      <li><strong>Doppelte Verriegelung:</strong> Die Kombination aus mechanischer und elektrischer Verriegelung ist die sichere Variante und in der Praxis üblich.</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Electrical contactor interlock:</strong> an auxiliary NC contact (11/12) of each contactor sits in series in the coil circuit of the opposite contactor. When K1 pulls in, its NC contact opens the circuit of K2.</li>
+      <li><strong>Button interlock:</strong> in addition to the NO contact, the NC contact of each ON button is placed in the coil circuit of the opposite direction. Pressing one button therefore interrupts the other direction before the switching operation even starts.</li>
+      <li><strong>Mechanical interlock:</strong> an interlocking module between the two contactors prevents both armatures from pulling in at the same time.</li>
+      <li><strong>Double interlock:</strong> the combination of mechanical and electrical interlocking is the safe variant and is common in practice.</li>
+    </ul>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Quellenhinweis</span><span lang="en">Source note</span></b>
+      <p lang="de">Die Forderung, dass Wendeschütze so verriegelt sein müssen, dass im Normalbetrieb kein Kurzschluss entstehen kann, wird in der Fachliteratur der Norm EN 60204-1, Abschnitt 9.3.4 zugeschrieben. Diese Angabe stammt aus deutschsprachigen Sekundärquellen zur DIN-Fassung. <strong>Abschnitt und Wortlaut vor dem Zitieren in der eigenen Ausgabe der SN EN 60204-1 überprüfen</strong>, da sich die Gliederung zwischen den Ausgaben verschoben hat.</p>
+      <p lang="en">The requirement that reversing contactors must be interlocked so that no short circuit can occur in normal operation is attributed in the technical literature to EN 60204-1, clause 9.3.4. This attribution comes from German-language secondary sources on the DIN version. <strong>Check the clause and the wording in your own edition of SN EN 60204-1 before quoting it</strong>, since the structure has shifted between editions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Was ist der Unterschied zwischen Dauerkontakt- und Impulssteuerung?</span><span lang="en">What is the difference between maintained-contact and pulse control?</span></summary>
+      <div class="ans">
+        <p lang="de">Bei der Dauerkontaktsteuerung speichert das Befehlsgerät den Zustand mechanisch: Ein rastender Schalter hält die Spule unter Spannung. Bei der Impulssteuerung geben zwei Taster nur einen kurzen Befehl; den Zustand speichert das Schütz selbst über seinen Selbsthaltekontakt. Der entscheidende Unterschied zeigt sich bei Spannungswiederkehr: Die Dauerkontaktsteuerung lässt die Maschine selbsttätig anlaufen, die Impulssteuerung nicht.</p>
+        <p lang="en">With a maintained-contact control the command device stores the state mechanically: a latching switch keeps the coil energised. With a pulse control two momentary buttons only give a short command; the contactor stores the state itself via its self-holding contact. The decisive difference appears when the supply returns: the maintained-contact control lets the machine restart by itself, the pulse control does not.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wo genau liegt der Selbsthaltekontakt und welche Klemmen hat er?</span><span lang="en">Where exactly does the self-holding contact sit and which terminals does it have?</span></summary>
+      <div class="ans">
+        <p lang="de">Er liegt als Hilfsschliesser des Schützes <strong>parallel zum EIN-Taster</strong>, typischerweise an den Klemmen 13/14. Sobald das Schütz angezogen hat, überbrückt dieser Kontakt den EIN-Taster, sodass der Spulenstrom weiterfliesst, wenn der Taster losgelassen wird.</p>
+        <p lang="en">It sits as an auxiliary NO contact of the contactor <strong>parallel to the ON button</strong>, typically on terminals 13/14. As soon as the contactor has pulled in, this contact bridges the ON button so that the coil current keeps flowing when the button is released.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Beschreibe den Stromweg im Steuerstromkreis vom Drücken bis zum Loslassen des EIN-Tasters.</span><span lang="en">Describe the current path in the control circuit from pressing to releasing the ON button.</span></summary>
+      <div class="ans">
+        <p lang="de">Beim Drücken: L1 → Steuersicherung F3 → Öffner 95/96 des Überlastrelais → Öffner 11/12 des AUS-Tasters → Schliesser 13/14 des EIN-Tasters → Spule A1/A2 → N. Das Schütz zieht an und schliesst dabei seinen Hilfsschliesser 13/14. Beim Loslassen öffnet der EIN-Taster, der Strom fliesst nun über den Selbsthaltekontakt statt über den Taster. Alle übrigen Glieder der Reihenschaltung bleiben gleich.</p>
+        <p lang="en">When pressed: L1 → control fuse F3 → NC 95/96 of the overload relay → NC 11/12 of the OFF button → NO 13/14 of the ON button → coil A1/A2 → N. The contactor pulls in and in doing so closes its auxiliary NO contact 13/14. On release the ON button opens and the current now flows through the self-holding contact instead of the button. All other links of the series chain stay the same.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum läuft die Maschine nach einem Spannungsausfall nicht von selbst wieder an?</span><span lang="en">Why does the machine not restart by itself after a supply failure?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil die Spule stromlos wird und das Schütz abfällt. Dabei öffnet auch der Hilfsschliesser 13/14, und die Selbsthaltung ist unterbrochen. Kommt die Spannung zurück, ist die Reihenschaltung sowohl beim EIN-Taster als auch beim Selbsthaltekontakt offen — der Steuerstromkreis bleibt stromlos. Es braucht einen neuen, bewussten EIN-Befehl. Diese Eigenschaft heisst Wiederanlaufsperre.</p>
+        <p lang="en">Because the coil is de-energised and the contactor drops out. In doing so the auxiliary NO contact 13/14 also opens and the self-holding circuit is broken. When the supply returns, the series chain is open both at the ON button and at the self-holding contact — the control circuit stays de-energised. A new, deliberate ON command is needed. This property is called restart inhibition.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum ist der AUS-Taster ein Öffner und kein Schliesser?</span><span lang="en">Why is the OFF button an NC and not an NO contact?</span></summary>
+      <div class="ans">
+        <p lang="de">Wegen der Drahtbruchsicherheit. Als Öffner in Reihe führt der AUS-Taster im Normalbetrieb dauernd Strom (Ruhestromprinzip). Bricht ein Draht, löst sich eine Klemme oder wird das Kabel beschädigt, unterbricht das die Kette genauso wie ein Tastendruck: Das Schütz fällt ab und die Maschine geht in den sicheren Zustand. Ein Fehler in der Verdrahtung führt also zum Ausschalten und nicht zum unbemerkten Weiterlaufen.</p>
+        <p lang="en">Because of open-circuit safety. As an NC contact in series, the OFF button carries current continuously in normal operation (closed-circuit principle). If a wire breaks, a terminal comes loose or the cable is damaged, this interrupts the chain in exactly the same way as pressing the button: the contactor drops out and the machine goes to the safe state. A wiring fault therefore leads to switching off, not to unnoticed continued running.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie schaltest du mehrere EIN- und AUS-Taster und warum so?</span><span lang="en">How do you connect several ON and OFF buttons, and why?</span></summary>
+      <div class="ans">
+        <p lang="de">EIN-Taster werden parallel geschaltet, AUS-Taster in Reihe. Begründung: Jeder EIN-Taster soll allein einschalten können, und in einer Parallelschaltung genügt ein geschlossener Zweig. Jeder AUS-Taster soll allein ausschalten können, und in einer Reihenschaltung genügt ein geöffneter Kontakt. Der Selbsthaltekontakt liegt parallel zur ganzen Gruppe der EIN-Taster.</p>
+        <p lang="en">ON buttons are connected in parallel, OFF buttons in series. Reason: each ON button must be able to switch on by itself, and in a parallel connection one closed branch is enough. Each OFF button must be able to switch off by itself, and in a series connection one opened contact is enough. The self-holding contact sits parallel to the whole group of ON buttons.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was passiert, wenn EIN und AUS gleichzeitig gedrückt werden?</span><span lang="en">What happens if ON and OFF are pressed at the same time?</span></summary>
+      <div class="ans">
+        <p lang="de">Der AUS-Taster unterbricht die Reihenschaltung, und der EIN-Taster kann daran nichts ändern, weil er weiter hinten in derselben Kette liegt. Die Spule bleibt stromlos, das Schütz fällt ab beziehungsweise zieht gar nicht erst an. Die Schaltung ist also vorrangig rücksetzend: Ausschalten gewinnt.</p>
+        <p lang="en">The OFF button interrupts the series chain and the ON button cannot change that, because it lies further along in the same chain. The coil stays de-energised, the contactor drops out or does not pull in at all. The circuit is therefore reset-dominant: switching off wins.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welche drei Eigenschaften unterscheiden einen Not-Halt von einem normalen AUS-Taster?</span><span lang="en">Which three properties distinguish an emergency stop from an ordinary OFF button?</span></summary>
+      <div class="ans">
+        <p lang="de">Erstens ist sein Kontakt zwangsöffnend, wird also mechanisch aufgerissen und trennt selbst bei verschweissten Kontakten. Zweitens rastet der Pilzdrucktaster ein und muss bewusst entriegelt werden. Drittens darf das Entriegeln allein die Maschine nicht wieder starten — der Wiederanlauf braucht eine separate Handlung. Dazu kommt die Kennzeichnung: roter Pilzkopf auf gelbem Grund. Grundlage ist EN ISO 13850.</p>
+        <p lang="en">First, its contact opens positively, that is, it is forced open mechanically and separates even with welded contacts. Second, the mushroom-head button latches and has to be released deliberately. Third, releasing alone must not restart the machine — the restart requires a separate action. In addition there is the identification: red mushroom head on a yellow background. The basis is EN ISO 13850.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum müssen die Schütze einer Wendeschützschaltung verriegelt werden?</span><span lang="en">Why must the contactors of a reversing circuit be interlocked?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil die beiden Schütze zwei Aussenleiter vertauschen. Ziehen beide gleichzeitig an, verbindet das diese beiden Aussenleiter direkt miteinander und es entsteht ein Kurzschluss. Verriegelt wird über Hilfsöffner im Spulenkreis des Gegenschützes (elektrische Verriegelung), über die Öffner der EIN-Taster (Tasterverriegelung) und über einen mechanischen Verriegelungsbaustein. In der Praxis wird die doppelte Verriegelung aus mechanischer und elektrischer Verriegelung eingesetzt.</p>
+        <p lang="en">Because the two contactors swap two line conductors. If both pull in at the same time, those two line conductors are connected directly to each other and a short circuit occurs. Interlocking is done via auxiliary NC contacts in the coil circuit of the opposite contactor (electrical interlock), via the NC contacts of the ON buttons (button interlock) and via a mechanical interlocking module. In practice the double interlock combining mechanical and electrical interlocking is used.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="04-schuetzensteuerung-dauerkontakt.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>04 · <span lang="de">Schuetzensteuerung Dauerkontakt</span><span lang="en">Contactor Control — Maintained</span></b>
+  </a>
+  <a class="next" href="06-steuerung-easy4.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>06 · <span lang="de">Steuerung easyE4</span><span lang="en">easyE4 Controller</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 05 · Schuetzensteuerung Impuls</span><span lang="en">Learning Documentation 05 · Contactor Control — Pulse</span></span>
+  <span>Yanik · Etavis · <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></span>
+  <span><span lang="de">Grundlagen: SN EN 60204-1 · EN ISO 13850 · IEC 60947 / EN 50005 · IEC 81346-2 · IEC 60617</span><span lang="en">Basis: SN EN 60204-1 · EN ISO 13850 · IEC 60947 / EN 50005 · IEC 81346-2 · IEC 60617</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

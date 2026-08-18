@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 08 — DALI" data-en="Learning Documentation 08 — DALI">Lerndokumentation 08 — DALI</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span>
+    <span lang="de">Thema 08</span><span lang="en">Topic 08</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">08</div>
+    <h1><span lang="de">DALI</span><span lang="en">DALI</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Aufbau · Schema · Beschrieb · Bus</span>
+    <span lang="en">Design · diagram · description · bus</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">08 von 12</span><span lang="en">08 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Leuchte am DALI-Bus">
+        <path d="M18 16 H202" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M78 16 V34 M142 16 V34" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M6 48 H58 M6 60 H58" stroke="#1D5872" stroke-width="2.6" stroke-linecap="round"/>
+        <rect x="56" y="34" width="110" height="48" rx="9" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <circle cx="96" cy="54" r="3.2" fill="#171614"/>
+        <circle cx="128" cy="54" r="3.2" fill="#171614"/>
+        <path d="M96 65 q16 9 32 0" fill="none" stroke="#171614" stroke-width="2" stroke-linecap="round"/>
+        <path d="M76 84 L54 122 M111 84 V126 M146 84 L168 122" stroke="#B8402A" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M46 134 q65 13 130 0" fill="none" stroke="#B8402A" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="6 6"/>
+        <circle cx="184" cy="48" r="4" fill="#1D5872"/>
+        <circle cx="184" cy="60" r="4" fill="#1D5872"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Was DALI ist</span><span lang="en">What DALI is</span></h2>
+
+    <p class="lead" lang="de"><strong>DALI</strong> steht für <em>Digital Addressable Lighting Interface</em>, also digitale adressierbare Beleuchtungsschnittstelle. Es ist ein <strong>digitales Bussystem, das ausschliesslich für die Beleuchtung</strong> gedacht ist, und es ist in der Normenreihe <strong>IEC 62386</strong> festgelegt.</p>
+    <p class="lead" lang="en"><strong>DALI</strong> stands for <em>Digital Addressable Lighting Interface</em>. It is a <strong>digital bus system intended purely for lighting</strong>, and it is defined in the <strong>IEC 62386</strong> series of standards.</p>
+
+    <p lang="de">Der entscheidende Unterschied zur klassischen Installation liegt in der Zuordnung. Klassisch bestimmt die <strong>Verdrahtung</strong>, welcher Schalter welche Leuchte bedient — wer die Gruppierung ändern will, muss umverdrahten. Bei DALI hängen alle Leuchten an derselben zweiadrigen Steuerleitung, jede hat eine <strong>eigene Adresse</strong>, und die Zuordnung wird <strong>programmiert statt verdrahtet</strong>.</p>
+    <p lang="en">The decisive difference from a classic installation lies in the assignment. Classically the <strong>wiring</strong> decides which switch operates which luminaire — anyone wanting to change the grouping has to rewire. With DALI all luminaires hang on the same two-core control pair, each has <strong>its own address</strong>, and the assignment is <strong>programmed instead of wired</strong>.</p>
+
+    <p lang="de">Weil die Kommunikation <strong>bidirektional</strong> ist, redet nicht nur das Steuergerät zu den Leuchten, sondern die Leuchten antworten auch. Ein Vorschaltgerät kann seinen aktuellen Lichtwert, einen <strong>Lampenausfall</strong> oder einen Gerätefehler zurückmelden. Genau das macht DALI für Zweckbauten interessant: Die Störung steht auf der Leitstelle, bevor sie jemand meldet.</p>
+    <p lang="en">Because communication is <strong>bidirectional</strong>, the controller does not only talk to the luminaires — the luminaires answer as well. A control gear can report its present light level, a <strong>lamp failure</strong> or a device fault. That is exactly what makes DALI attractive for commercial buildings: the fault appears at the control station before anyone reports it.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Merkmal</span><span lang="en">Feature</span></th>
+            <th><span lang="de">Wert</span><span lang="en">Value</span></th>
+            <th><span lang="de">Bemerkung</span><span lang="en">Note</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Norm</span><span lang="en">Standard</span></strong></td>
+            <td class="num">IEC 62386</td>
+            <td><span lang="de">internationale Normenreihe, in Teile gegliedert</span><span lang="en">international series of standards, split into parts</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Teilnehmer je Linie</span><span lang="en">Devices per line</span></strong></td>
+            <td class="num">64</td>
+            <td><span lang="de">Kurzadressen 0 … 63, dazu der Broadcast-Befehl an alle</span><span lang="en">short addresses 0 … 63, plus the broadcast command to all</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Gruppen</span><span lang="en">Groups</span></strong></td>
+            <td class="num">16</td>
+            <td><span lang="de">ein Teilnehmer darf zu mehreren Gruppen gehören</span><span lang="en">one device may belong to several groups</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Szenen</span><span lang="en">Scenes</span></strong></td>
+            <td class="num">16</td>
+            <td><span lang="de">je Teilnehmer ein gespeicherter Lichtwert pro Szene</span><span lang="en">one stored light level per device and scene</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Übertragung</span><span lang="en">Transmission</span></strong></td>
+            <td class="num">1200 bit/s</td>
+            <td><span lang="de">digital und bidirektional — Rückmeldung möglich</span><span lang="en">digital and bidirectional — feedback possible</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Busspannung</span><span lang="en">Bus voltage</span></strong></td>
+            <td class="num">16 V DC</td>
+            <td><span lang="de">Nennwert; Pegel «1» rund 9,5 … 22,5 V</span><span lang="en">nominal value; level “1” roughly 9.5 … 22.5 V</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Busstrom</span><span lang="en">Bus current</span></strong></td>
+            <td class="num">max. 250 mA</td>
+            <td><span lang="de">für die ganze Linie, ein einziges Bus-Netzteil</span><span lang="en">for the whole line, one single bus power supply</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Stromaufnahme je Betriebsgerät</span><span lang="en">Current per control gear</span></strong></td>
+            <td class="num">max. 2 mA</td>
+            <td><span lang="de">Normwert; im Datenblatt des Herstellers nachprüfen</span><span lang="en">standard value; verify in the manufacturer's data sheet</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Spannungsfall</span><span lang="en">Voltage drop</span></strong></td>
+            <td class="num">max. 2 V</td>
+            <td><span lang="de">über die ganze Steuerleitung — bestimmt die Grenzlänge</span><span lang="en">over the whole control line — this sets the limiting length</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Steuerleitung</span><span lang="en">Control pair</span></strong></td>
+            <td class="num">DA+ / DA−</td>
+            <td><span lang="de">verpolungssicher, kein Abschlusswiderstand nötig</span><span lang="en">polarity-free, no termination resistor required</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Merksatz</span><span lang="en">Memory aid</span></b>
+      <p lang="de"><strong>DALI ist ein Licht-Bus, kein Gebäudebus.</strong> Storen, Heizung oder Lüftung laufen nicht über DALI — dafür ist KNX zuständig. DALI wird darum oft <em>unter</em> KNX gehängt: Ein Gateway bildet die DALI-Linie auf KNX ab.</p>
+      <p lang="en"><strong>DALI is a lighting bus, not a building bus.</strong> Blinds, heating or ventilation do not run over DALI — that is KNX's job. DALI is therefore often placed <em>below</em> KNX: a gateway maps the DALI line onto KNX.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Aufbau der DALI-Linie</span><span lang="en">Layout of a DALI line</span></h2>
+
+    <p lang="de">Eine DALI-Linie besteht immer aus denselben Bausteinen: der <strong>Busspeisung</strong>, dem <strong>Steuergerät</strong>, den <strong>Betriebsgeräten</strong> in den Leuchten und — seit DALI-2 — den <strong>Eingabegeräten</strong> wie Taster und Präsenzmelder. Wichtig zu sehen ist, dass jede Leuchte <strong>zwei</strong> Anschlüsse hat: die Netzleitung für die Leistung und die Steuerleitung für die Information.</p>
+    <p lang="en">A DALI line always consists of the same building blocks: the <strong>bus power supply</strong>, the <strong>controller</strong>, the <strong>control gear</strong> inside the luminaires and — since DALI-2 — the <strong>input devices</strong> such as push buttons and occupancy sensors. The key point is that every luminaire has <strong>two</strong> connections: the mains cable for the power and the control pair for the information.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schema einer DALI-Linie mit Speisung, Steuergerät, Eingabegeräten und drei Leuchten">
+        <defs>
+          <style>
+            .l1{fill:none;stroke:#7A4A22;stroke-width:2.4;stroke-linecap:round}
+            .nl{fill:none;stroke:#1D5872;stroke-width:2.4;stroke-linecap:round}
+            .pe{fill:none;stroke:#3F6B43;stroke-width:2.4;stroke-linecap:round}
+            .da{fill:none;stroke:#B8402A;stroke-width:2.8;stroke-linecap:round}
+            .bx{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .bx2{fill:#FBF9F5;stroke:#171614;stroke-width:2.2}
+            .ttl{font-family:'Archivo',sans-serif;font-size:15px;font-weight:700;fill:#171614}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:9.5px;fill:#7D7669;letter-spacing:.06em}
+            .lb{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;fill:#48433B}
+            .dot{fill:#171614}
+          </style>
+        </defs>
+
+        <text class="ttl" x="24" y="22"><tspan lang="de">DALI-LINIE</tspan><tspan lang="en">DALI LINE</tspan></text>
+        <text class="lgs" x="126" y="22"><tspan lang="de">MAX. 64 TEILNEHMER · 16 GRUPPEN · 16 SZENEN</tspan><tspan lang="en">MAX. 64 DEVICES · 16 GROUPS · 16 SCENES</tspan></text>
+
+        <!-- obere Gerätereihe -->
+        <rect class="bx" x="24" y="38" width="118" height="54" rx="3"/>
+        <text class="lb" x="83" y="62" text-anchor="middle"><tspan lang="de">SPEISUNG</tspan><tspan lang="en">BUS PSU</tspan></text>
+        <text class="lgs" x="83" y="78" text-anchor="middle">16 V DC · 250 mA</text>
+
+        <rect class="bx" x="160" y="38" width="134" height="54" rx="3"/>
+        <text class="lb" x="227" y="62" text-anchor="middle"><tspan lang="de">STEUERGERÄT</tspan><tspan lang="en">CONTROLLER</tspan></text>
+        <text class="lgs" x="227" y="78" text-anchor="middle">GATEWAY</text>
+
+        <rect class="bx" x="320" y="38" width="118" height="54" rx="3"/>
+        <text class="lb" x="379" y="62" text-anchor="middle"><tspan lang="de">TASTER</tspan><tspan lang="en">PUSH BUTTON</tspan></text>
+        <text class="lgs" x="379" y="78" text-anchor="middle"><tspan lang="de">EINGABEGERÄT</tspan><tspan lang="en">INPUT DEVICE</tspan></text>
+
+        <rect class="bx" x="470" y="38" width="138" height="54" rx="3"/>
+        <text class="lb" x="539" y="62" text-anchor="middle"><tspan lang="de">PRÄSENZMELDER</tspan><tspan lang="en">PRESENCE SENSOR</tspan></text>
+        <text class="lgs" x="539" y="78" text-anchor="middle">DALI-2</text>
+
+        <!-- Bus -->
+        <path class="da" d="M44 132 H660"/>
+        <path class="da" d="M44 148 H660"/>
+        <text class="lb" x="668" y="136" fill="#B8402A">DA+</text>
+        <text class="lb" x="668" y="152" fill="#B8402A">DA−</text>
+        <text class="lgs" x="660" y="114" text-anchor="end"><tspan lang="de">KEIN ABSCHLUSSWIDERSTAND</tspan><tspan lang="en">NO TERMINATION RESISTOR</tspan></text>
+
+        <!-- Anschluesse der oberen Reihe an den Bus -->
+        <path class="da" d="M54 92 V132 M76 92 V148"/>
+        <path class="da" d="M188 92 V132 M210 92 V148"/>
+        <path class="da" d="M348 92 V132 M370 92 V148"/>
+        <path class="da" d="M498 92 V132 M520 92 V148"/>
+        <circle class="dot" cx="54" cy="132" r="3.6"/><circle class="dot" cx="76" cy="148" r="3.6"/>
+        <circle class="dot" cx="188" cy="132" r="3.6"/><circle class="dot" cx="210" cy="148" r="3.6"/>
+        <circle class="dot" cx="348" cy="132" r="3.6"/><circle class="dot" cx="370" cy="148" r="3.6"/>
+        <circle class="dot" cx="498" cy="132" r="3.6"/><circle class="dot" cx="520" cy="148" r="3.6"/>
+
+        <!-- Leuchte 1 -->
+        <text class="lb" x="170" y="204" text-anchor="middle">A0</text>
+        <text class="lgs" x="170" y="217" text-anchor="middle"><tspan lang="de">GRUPPE 0</tspan><tspan lang="en">GROUP 0</tspan></text>
+        <rect class="bx" x="110" y="226" width="120" height="52" rx="3"/>
+        <text class="lb" x="170" y="248" text-anchor="middle"><tspan lang="de">VORSCHALTGERÄT</tspan><tspan lang="en">CONTROL GEAR</tspan></text>
+        <text class="lgs" x="170" y="264" text-anchor="middle">IEC 62386-102</text>
+        <path class="da" d="M144 132 V226 M168 148 V226"/>
+        <circle class="dot" cx="144" cy="132" r="3.6"/><circle class="dot" cx="168" cy="148" r="3.6"/>
+        <path d="M154 278 V292" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+        <rect class="bx2" x="124" y="292" width="60" height="26" rx="4"/>
+        <path d="M124 292 L184 318 M184 292 L124 318" stroke="#9A7B1F" stroke-width="2.2"/>
+        <path class="l1" d="M190 278 V356"/>
+        <path class="nl" d="M204 278 V370"/>
+        <path class="pe" d="M218 278 V384"/>
+        <circle class="dot" cx="190" cy="356" r="3.6"/><circle class="dot" cx="204" cy="370" r="3.6"/><circle class="dot" cx="218" cy="384" r="3.6"/>
+
+        <!-- Leuchte 2 -->
+        <text class="lb" x="380" y="204" text-anchor="middle">A1</text>
+        <text class="lgs" x="380" y="217" text-anchor="middle"><tspan lang="de">GRUPPE 0</tspan><tspan lang="en">GROUP 0</tspan></text>
+        <rect class="bx" x="320" y="226" width="120" height="52" rx="3"/>
+        <text class="lb" x="380" y="248" text-anchor="middle"><tspan lang="de">VORSCHALTGERÄT</tspan><tspan lang="en">CONTROL GEAR</tspan></text>
+        <text class="lgs" x="380" y="264" text-anchor="middle">IEC 62386-102</text>
+        <path class="da" d="M354 132 V226 M378 148 V226"/>
+        <circle class="dot" cx="354" cy="132" r="3.6"/><circle class="dot" cx="378" cy="148" r="3.6"/>
+        <path d="M364 278 V292" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+        <rect class="bx2" x="334" y="292" width="60" height="26" rx="4"/>
+        <path d="M334 292 L394 318 M394 292 L334 318" stroke="#9A7B1F" stroke-width="2.2"/>
+        <path class="l1" d="M400 278 V356"/>
+        <path class="nl" d="M414 278 V370"/>
+        <path class="pe" d="M428 278 V384"/>
+        <circle class="dot" cx="400" cy="356" r="3.6"/><circle class="dot" cx="414" cy="370" r="3.6"/><circle class="dot" cx="428" cy="384" r="3.6"/>
+
+        <!-- Leuchte 3 -->
+        <text class="lb" x="590" y="204" text-anchor="middle">A2</text>
+        <text class="lgs" x="590" y="217" text-anchor="middle"><tspan lang="de">GRUPPE 1</tspan><tspan lang="en">GROUP 1</tspan></text>
+        <rect class="bx" x="530" y="226" width="120" height="52" rx="3"/>
+        <text class="lb" x="590" y="248" text-anchor="middle"><tspan lang="de">VORSCHALTGERÄT</tspan><tspan lang="en">CONTROL GEAR</tspan></text>
+        <text class="lgs" x="590" y="264" text-anchor="middle">IEC 62386-102</text>
+        <path class="da" d="M564 132 V226 M588 148 V226"/>
+        <circle class="dot" cx="564" cy="132" r="3.6"/><circle class="dot" cx="588" cy="148" r="3.6"/>
+        <path d="M574 278 V292" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+        <rect class="bx2" x="544" y="292" width="60" height="26" rx="4"/>
+        <path d="M544 292 L604 318 M604 292 L544 318" stroke="#9A7B1F" stroke-width="2.2"/>
+        <path class="l1" d="M610 278 V356"/>
+        <path class="nl" d="M624 278 V370"/>
+        <path class="pe" d="M638 278 V384"/>
+        <circle class="dot" cx="610" cy="356" r="3.6"/><circle class="dot" cx="624" cy="370" r="3.6"/><circle class="dot" cx="638" cy="384" r="3.6"/>
+
+        <!-- Netz -->
+        <path class="l1" d="M22 356 H660"/>
+        <path class="nl" d="M22 370 H660"/>
+        <path class="pe" d="M22 384 H660"/>
+        <text class="lb" x="668" y="360" fill="#7A4A22">L</text>
+        <text class="lb" x="668" y="374" fill="#1D5872">N</text>
+        <text class="lb" x="668" y="388" fill="#3F6B43">PE</text>
+        <text class="lgs" x="22" y="342">230 V AC</text>
+        <path class="l1" d="M30 356 V92"/>
+        <path class="nl" d="M38 370 V92"/>
+        <circle class="dot" cx="30" cy="356" r="3.6"/><circle class="dot" cx="38" cy="370" r="3.6"/>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Eine DALI-Linie. Rot die beiden Steueradern DA+ und DA−, unten die Netzleitung. Jedes Vorschaltgerät hat eine eigene Kurzadresse (A0, A1, A2) und ist zusätzlich einer Gruppe zugeteilt. Ein Abschlusswiderstand am Leitungsende ist nicht nötig.</span>
+        <span lang="en"> — A DALI line. In red the two control cores DA+ and DA−, at the bottom the mains supply. Every control gear has its own short address (A0, A1, A2) and is additionally assigned to a group. No termination resistor is needed at the end of the line.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Was zur Linie gehört</span><span lang="en">What belongs to a line</span></h3>
+    <ul lang="de">
+      <li><strong>Bus-Speisung</strong> — liefert die Busspannung von nominell 16 V DC. Pro Linie ist nur <strong>ein</strong> Netzteil zulässig; oft steckt es bereits im Gateway.</li>
+      <li><strong>Steuergerät / Gateway</strong> — sendet die Befehle, verwaltet Adressen, Gruppen und Szenen und liest die Rückmeldungen aus.</li>
+      <li><strong>Betriebsgeräte</strong> — die DALI-Vorschaltgeräte beziehungsweise LED-Treiber in den Leuchten. Jedes hat eine eigene Kurzadresse.</li>
+      <li><strong>Eingabegeräte</strong> — Taster, Präsenz- und Helligkeitsmelder. Sie sind erst mit DALI-2 genormt und speisen sich aus dem Bus.</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Bus power supply</strong> — provides the bus voltage of nominally 16 V DC. Only <strong>one</strong> supply per line is permitted; often it is already built into the gateway.</li>
+      <li><strong>Controller / gateway</strong> — sends the commands, manages addresses, groups and scenes and reads the feedback.</li>
+      <li><strong>Control gear</strong> — the DALI ballasts or LED drivers in the luminaires. Each has its own short address.</li>
+      <li><strong>Input devices</strong> — push buttons, presence and light sensors. They were only standardised with DALI-2 and are powered from the bus.</li>
+    </ul>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Die Leuchte bleibt am Netz</span><span lang="en">The luminaire stays energised</span></b>
+      <p lang="de">Der DALI-Befehl «AUS» setzt den Lichtwert auf null — er trennt die Leuchte <strong>nicht</strong> vom Netz. Das Betriebsgerät bleibt in Bereitschaft, damit es weiterhin Befehle empfangen kann. Wer die Leuchte wirklich spannungsfrei haben will, braucht einen Schalter oder ein Schütz in der Netzleitung.</p>
+      <p lang="en">The DALI command “OFF” sets the light level to zero — it does <strong>not</strong> disconnect the luminaire from the mains. The control gear stays in standby so that it can keep receiving commands. Anyone who really wants the luminaire de-energised needs a switch or a contactor in the mains circuit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Topologie und Verlegung</span><span lang="en">Topology and wiring</span></h2>
+
+    <p lang="de">Weil DALI mit nur 1200 bit/s sehr langsam überträgt, ist der Bus gegenüber der Leitungsführung ausgesprochen gutmütig. Die Topologie ist <strong>frei wählbar</strong>: Linie, Stern, Baum oder eine Mischung davon. Ein <strong>Ring ist nicht erlaubt</strong>, ebenso wenig eine Vermaschung — der Bus darf nirgends in sich zurücklaufen.</p>
+    <p lang="en">Because DALI transmits at only 1200 bit/s, the bus is remarkably tolerant of how the cable is routed. The topology is <strong>free</strong>: line, star, tree or a mixture of these. A <strong>ring is not permitted</strong>, nor is a meshed layout — the bus must never close back on itself.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Erlaubte und nicht erlaubte DALI-Topologien">
+        <defs>
+          <style>
+            .tp{fill:none;stroke:#B8402A;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
+            .nd{fill:#171614}
+            .th{font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;fill:#171614}
+            .st{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;font-weight:600}
+            .fr{fill:none;stroke:#D2CABB;stroke-width:1.5}
+          </style>
+        </defs>
+
+        <rect class="fr" x="18" y="14" width="168" height="200" rx="4"/>
+        <rect class="fr" x="204" y="14" width="168" height="200" rx="4"/>
+        <rect class="fr" x="390" y="14" width="168" height="200" rx="4"/>
+        <rect class="fr" x="576" y="14" width="168" height="200" rx="4"/>
+
+        <!-- Linie -->
+        <text class="th" x="102" y="42" text-anchor="middle"><tspan lang="de">LINIE</tspan><tspan lang="en">LINE</tspan></text>
+        <path class="tp" d="M44 110 H160"/>
+        <circle class="nd" cx="44" cy="110" r="5"/><circle class="nd" cx="73" cy="110" r="5"/>
+        <circle class="nd" cx="102" cy="110" r="5"/><circle class="nd" cx="131" cy="110" r="5"/>
+        <circle class="nd" cx="160" cy="110" r="5"/>
+        <path d="M92 168 l8 8 l14 -18" fill="none" stroke="#3F6B43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <text class="st" x="102" y="200" text-anchor="middle" fill="#3F6B43"><tspan lang="de">ERLAUBT</tspan><tspan lang="en">ALLOWED</tspan></text>
+
+        <!-- Stern -->
+        <text class="th" x="288" y="42" text-anchor="middle"><tspan lang="de">STERN</tspan><tspan lang="en">STAR</tspan></text>
+        <path class="tp" d="M288 110 L232 76 M288 110 L344 76 M288 110 L232 144 M288 110 L344 144 M288 110 V150"/>
+        <circle class="nd" cx="288" cy="110" r="6"/>
+        <circle class="nd" cx="232" cy="76" r="5"/><circle class="nd" cx="344" cy="76" r="5"/>
+        <circle class="nd" cx="232" cy="144" r="5"/><circle class="nd" cx="344" cy="144" r="5"/>
+        <path d="M278 168 l8 8 l14 -18" fill="none" stroke="#3F6B43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <text class="st" x="288" y="200" text-anchor="middle" fill="#3F6B43"><tspan lang="de">ERLAUBT</tspan><tspan lang="en">ALLOWED</tspan></text>
+
+        <!-- Baum -->
+        <text class="th" x="474" y="42" text-anchor="middle"><tspan lang="de">BAUM</tspan><tspan lang="en">TREE</tspan></text>
+        <path class="tp" d="M412 110 H536 M446 110 V76 M446 110 V144 M508 110 V76 M508 110 V144"/>
+        <circle class="nd" cx="412" cy="110" r="5"/>
+        <circle class="nd" cx="446" cy="76" r="5"/><circle class="nd" cx="446" cy="144" r="5"/>
+        <circle class="nd" cx="508" cy="76" r="5"/><circle class="nd" cx="508" cy="144" r="5"/>
+        <circle class="nd" cx="536" cy="110" r="5"/>
+        <path d="M464 168 l8 8 l14 -18" fill="none" stroke="#3F6B43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <text class="st" x="474" y="200" text-anchor="middle" fill="#3F6B43"><tspan lang="de">ERLAUBT</tspan><tspan lang="en">ALLOWED</tspan></text>
+
+        <!-- Ring -->
+        <text class="th" x="660" y="42" text-anchor="middle"><tspan lang="de">RING</tspan><tspan lang="en">RING</tspan></text>
+        <rect class="tp" x="608" y="76" width="104" height="68" rx="16"/>
+        <circle class="nd" cx="608" cy="110" r="5"/><circle class="nd" cx="660" cy="76" r="5"/>
+        <circle class="nd" cx="712" cy="110" r="5"/><circle class="nd" cx="660" cy="144" r="5"/>
+        <path d="M626 92 L694 128 M694 92 L626 128" stroke="#B8402A" stroke-width="4" stroke-linecap="round"/>
+        <path d="M650 166 l20 20 M670 166 l-20 20" stroke="#B8402A" stroke-width="3" stroke-linecap="round"/>
+        <text class="st" x="660" y="204" text-anchor="middle" fill="#B8402A"><tspan lang="de">NICHT ERLAUBT</tspan><tspan lang="en">NOT ALLOWED</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 2</span><span lang="en">Fig. 2</span></b>
+        <span lang="de"> — Zulässige und unzulässige Topologien. Linie, Stern und Baum dürfen beliebig gemischt werden; der Ring und jede Vermaschung sind verboten.</span>
+        <span lang="en"> — Permitted and prohibited topologies. Line, star and tree may be mixed as required; a ring and any meshed layout are forbidden.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Regeln für die Steuerleitung</span><span lang="en">Rules for the control pair</span></h3>
+    <ul lang="de">
+      <li><strong>Zwei Adern</strong> DA+ und DA− genügen. Es braucht keine geschirmte und keine verdrillte Leitung.</li>
+      <li><strong>Verpolungssicher</strong> — die beiden Adern dürfen vertauscht werden, das Gerät funktioniert trotzdem. Trotzdem gehört im Betrieb eine saubere, durchgehende Aderfarbe dazu.</li>
+      <li><strong>Kein Abschlusswiderstand</strong> am Leitungsende, weil die Übertragung so langsam ist.</li>
+      <li><strong>Kein Ring, keine Vermaschung</strong> — Linie, Stern, Baum und Mischformen sind erlaubt.</li>
+      <li><strong>Nur ein Bus-Netzteil</strong> pro Linie, sonst arbeiten zwei Speisungen gegeneinander.</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Two cores</strong> DA+ and DA− are enough. Neither a screened nor a twisted cable is required.</li>
+      <li><strong>Polarity-free</strong> — the two cores may be swapped and the device still works. Even so, a consistent core colour throughout is part of good workmanship.</li>
+      <li><strong>No termination resistor</strong> at the end of the line, because transmission is so slow.</li>
+      <li><strong>No ring, no mesh</strong> — line, star, tree and mixtures of these are permitted.</li>
+      <li><strong>Only one bus power supply</strong> per line, otherwise two supplies work against each other.</li>
+    </ul>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Warum die Steueradern ins Netzkabel dürfen</span><span lang="en">Why the control cores may share the mains cable</span></b>
+      <p lang="de">Die DALI-Steuerspannung ist <strong>keine Schutzkleinspannung (SELV)</strong>. Sie gilt als netzspannungsführend und muss darum wie eine Netzader <strong>basisisoliert</strong> sein. Genau deshalb dürfen DA+ und DA− <strong>im selben Kabel wie L, N und PE</strong> geführt werden — in der Praxis also zum Beispiel in einer fünfadrigen Leitung, bei der zwei Adern die Steuerung übernehmen. Das spart ein zweites Kabel und ist der grosse Installationsvorteil von DALI.</p>
+      <p lang="en">The DALI control voltage is <strong>not safety extra-low voltage (SELV)</strong>. It counts as mains-voltage-carrying and must therefore have <strong>basic insulation</strong> like any mains core. That is precisely why DA+ and DA− may run <strong>in the same cable as L, N and PE</strong> — in practice, for example, in a five-core cable in which two cores handle the control. This saves a second cable and is DALI's big installation advantage.</p>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Häufiger Fehler</span><span lang="en">Common mistake</span></b>
+      <p lang="de">Die Steueradern werden gerne wie eine Kleinspannungsleitung behandelt — dünn, ungeprüft, im gleichen Rohr mit Telefon- oder Netzwerkadern. Das ist falsch. Es gilt die <strong>umgekehrte</strong> Richtung: DALI darf zum Netz, aber nicht ohne Weiteres zu echten SELV-Leitungen. Und wer am Bus arbeitet, muss die Leitung wie eine <strong>spannungsführende Netzleitung</strong> behandeln und freischalten.</p>
+      <p lang="en">The control cores are often treated like an extra-low-voltage cable — thin, untested, in the same conduit as telephone or network cores. That is wrong. The rule runs the <strong>other</strong> way: DALI may share a cable with the mains, but not automatically with genuine SELV circuits. And anyone working on the bus must treat the cable like a <strong>live mains conductor</strong> and isolate it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Speisung, Strom und Leitungslänge</span><span lang="en">Supply, current and cable length</span></h2>
+
+    <p lang="de">Der Bus wird aus einem eigenen Netzteil gespeist. Dieses liefert die Busspannung und begrenzt den Strom auf <strong>höchstens 250 mA</strong> für die ganze Linie. Jedes Betriebsgerät zieht dabei nach Norm <strong>höchstens 2 mA</strong>. Mit 64 Teilnehmern × 2 mA = 128 mA bleibt also Reserve für Eingabegeräte und Gateway — vorausgesetzt, man rechnet die tatsächlichen Werte aus dem Datenblatt zusammen.</p>
+    <p lang="en">The bus is fed from its own power supply. It provides the bus voltage and limits the current to <strong>250 mA at most</strong> for the whole line. According to the standard each control gear draws <strong>no more than 2 mA</strong>. With 64 devices × 2 mA = 128 mA there is therefore headroom for input devices and the gateway — provided the actual figures from the data sheets are added up.</p>
+
+    <p lang="de">Die zweite Grenze ist der <strong>Spannungsfall</strong>. Über die ganze Steuerleitung dürfen höchstens <strong>2 V</strong> verloren gehen, sonst erkennt das letzte Gerät die Pegel nicht mehr sicher. Genau daraus ergibt sich die zulässige Leitungslänge:</p>
+    <p lang="en">The second limit is the <strong>voltage drop</strong>. No more than <strong>2 V</strong> may be lost over the whole control line, otherwise the last device can no longer reliably detect the levels. This is exactly what determines the permissible cable length:</p>
+
+    <div class="formula">ΔU = 2 · ρ · l · I / A ≤ 2 V</div>
+
+    <ul lang="de">
+      <li><span class="mono">ΔU</span> — Spannungsfall über Hin- und Rückleiter, höchstens 2 V</li>
+      <li><span class="mono">ρ</span> — spezifischer Widerstand von Kupfer, rund 0,0178 Ω·mm²/m</li>
+      <li><span class="mono">l</span> — einfache Leitungslänge in Metern</li>
+      <li><span class="mono">I</span> — Busstrom, im ungünstigsten Fall 0,25 A</li>
+      <li><span class="mono">A</span> — Querschnitt der Steuerader in mm²</li>
+    </ul>
+    <ul lang="en">
+      <li><span class="mono">ΔU</span> — voltage drop across the outgoing and return core, 2 V at most</li>
+      <li><span class="mono">ρ</span> — resistivity of copper, roughly 0.0178 Ω·mm²/m</li>
+      <li><span class="mono">l</span> — one-way cable length in metres</li>
+      <li><span class="mono">I</span> — bus current, 0.25 A in the worst case</li>
+      <li><span class="mono">A</span> — cross-section of the control core in mm²</li>
+    </ul>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Leitungslänge</span><span lang="en">Cable length</span></th>
+            <th><span lang="de">Empfohlener Querschnitt</span><span lang="en">Recommended cross-section</span></th>
+            <th><span lang="de">Bemerkung</span><span lang="en">Note</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">&lt; 100 m</td>
+            <td class="num">0,5 mm²</td>
+            <td><span lang="de">kleinster in der Praxis übliche Querschnitt für Steueradern</span><span lang="en">smallest cross-section normally used for control cores</span></td>
+          </tr>
+          <tr>
+            <td class="num">100 … 150 m</td>
+            <td class="num">0,75 mm²</td>
+            <td><span lang="de">Zwischengrösse, wenn kein 1,5 mm² gezogen werden soll</span><span lang="en">intermediate size when 1.5 mm² is not to be pulled</span></td>
+          </tr>
+          <tr>
+            <td class="num">&gt; 150 m</td>
+            <td class="num">1,5 mm²</td>
+            <td><span lang="de">üblich, weil es dem Querschnitt der Netzadern entspricht</span><span lang="en">common, because it matches the cross-section of the mains cores</span></td>
+          </tr>
+          <tr>
+            <td class="num">max. 300 m</td>
+            <td><span lang="de">harte Obergrenze</span><span lang="en">hard upper limit</span></td>
+            <td><span lang="de">gilt unabhängig vom Querschnitt für die ganze Linie</span><span lang="en">applies to the whole line regardless of cross-section</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Vor der Abgabe nachschlagen</span><span lang="en">Look it up before handing in</span></b>
+      <p lang="de">Die Zahlen in dieser Tabelle sind <strong>Herstellerempfehlungen</strong>, keine Normwerte. Verschiedene Quellen nennen für dieselbe Länge unterschiedliche Querschnitte, weil sie mit unterschiedlichen Busströmen rechnen. Verbindlich sind nur zwei Grössen: <strong>max. 2 V Spannungsfall</strong> und <strong>max. 300 m</strong>. Den Querschnitt für ein konkretes Projekt in der eigenen NIN-Ausgabe und im Herstellerkatalog nachschlagen und mit der Formel oben nachrechnen.</p>
+      <p lang="en">The figures in this table are <strong>manufacturer recommendations</strong>, not standard values. Different sources give different cross-sections for the same length because they assume different bus currents. Only two quantities are binding: <strong>max. 2 V voltage drop</strong> and <strong>max. 300 m</strong>. For a real project, look the cross-section up in your own NIN edition and in the manufacturer's catalogue and check it with the formula above.</p>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Mehr als 64 Teilnehmer</span><span lang="en">More than 64 devices</span></b>
+      <p lang="de">Reichen 64 Adressen nicht, wird nicht die Linie vergrössert, sondern eine <strong>zweite Linie</strong> mit eigenem Netzteil aufgebaut. Gateways gibt es deshalb häufig mit mehreren Kanälen. Die Linien bleiben elektrisch getrennt und werden erst auf der übergeordneten Ebene — meist KNX — zusammengeführt.</p>
+      <p lang="en">If 64 addresses are not enough, the line is not enlarged; instead a <strong>second line</strong> with its own power supply is built. That is why gateways are often available with several channels. The lines stay electrically separate and are only brought together at the higher level — usually KNX.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">DALI gegen 1-10 V</span><span lang="en">DALI versus 1-10 V</span></h2>
+
+    <p lang="de">Vor DALI wurde mit der analogen Schnittstelle <strong>1-10 V</strong> gedimmt. Sie ist einfach und billig, hat aber drei entscheidende Schwächen: Sie ist <strong>analog</strong>, sie kennt <strong>keine Adressen</strong> und sie ist <strong>polaritätsabhängig</strong>. Wer 1-10 V verstanden hat, versteht auch, warum DALI erfunden wurde.</p>
+    <p lang="en">Before DALI, dimming was done with the analogue <strong>1-10 V</strong> interface. It is simple and cheap, but it has three decisive weaknesses: it is <strong>analogue</strong>, it knows <strong>no addresses</strong> and it is <strong>polarity-dependent</strong>. Anyone who has understood 1-10 V also understands why DALI was invented.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Merkmal</span><span lang="en">Feature</span></th>
+            <th>DALI</th>
+            <th>1-10 V</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Signal</span><span lang="en">Signal</span></strong></td>
+            <td><span lang="de">digital, 1200 bit/s</span><span lang="en">digital, 1200 bit/s</span></td>
+            <td><span lang="de">analoge Gleichspannung 1 … 10 V</span><span lang="en">analogue DC voltage 1 … 10 V</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Adressierung</span><span lang="en">Addressing</span></strong></td>
+            <td><span lang="de">64 Einzeladressen, 16 Gruppen, 16 Szenen</span><span lang="en">64 individual addresses, 16 groups, 16 scenes</span></td>
+            <td><span lang="de">keine — alle Geräte an einer Leitung folgen demselben Wert</span><span lang="en">none — all devices on one line follow the same value</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Polarität</span><span lang="en">Polarity</span></strong></td>
+            <td><span lang="de">verpolungssicher, DA+ und DA− vertauschbar</span><span lang="en">polarity-free, DA+ and DA− interchangeable</span></td>
+            <td><span lang="de">polaritätsabhängig, + und − müssen stimmen</span><span lang="en">polarity-dependent, + and − must be correct</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Rückmeldung</span><span lang="en">Feedback</span></strong></td>
+            <td><span lang="de">ja — Lichtwert, Lampenausfall, Gerätefehler</span><span lang="en">yes — light level, lamp failure, device fault</span></td>
+            <td><span lang="de">nein, die Übertragung läuft nur in eine Richtung</span><span lang="en">no, transmission runs in one direction only</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Ausschalten</span><span lang="en">Switching off</span></strong></td>
+            <td><span lang="de">Befehl «AUS»; Leuchte bleibt für Befehle am Netz</span><span lang="en">command “OFF”; luminaire stays energised for commands</span></td>
+            <td><span lang="de">nur über einen zusätzlichen Schalter oder ein Relais im Netz</span><span lang="en">only via an additional switch or relay in the mains circuit</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Änderung der Gruppen</span><span lang="en">Changing the groups</span></strong></td>
+            <td><span lang="de">umprogrammieren, ohne einen Draht anzufassen</span><span lang="en">reprogramme without touching a single wire</span></td>
+            <td><span lang="de">neu verdrahten, je Gruppe eine eigene Steuerleitung</span><span lang="en">rewire; one separate control line per group</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Verlegung</span><span lang="en">Wiring</span></strong></td>
+            <td><span lang="de">im selben Kabel wie das Netz zulässig, Topologie frei</span><span lang="en">permitted in the same cable as the mains, topology free</span></td>
+            <td><span lang="de">ebenfalls netzspannungsführend, aber je Gruppe getrennt</span><span lang="en">also mains-voltage-carrying, but separate for each group</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">In der Praxis</span><span lang="en">In practice</span></b>
+      <p lang="de">1-10 V verschwindet nicht einfach. In Bestandsanlagen trifft man es laufend an, und es gibt Schnittstellenmodule, die eine DALI-Adresse auf einen 1-10-V-Ausgang umsetzen. Damit lässt sich ein altes Vorschaltgerät in eine neue DALI-Linie einbinden, ohne die Leuchte zu ersetzen.</p>
+      <p lang="en">1-10 V is not simply disappearing. It is encountered constantly in existing installations, and there are interface modules that convert a DALI address into a 1-10 V output. This allows an old ballast to be integrated into a new DALI line without replacing the luminaire.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Inbetriebnahme, Adressierung und DALI-2</span><span lang="en">Commissioning, addressing and DALI-2</span></h2>
+
+    <p lang="de">Nach dem Verdrahten ist die Anlage noch nicht fertig. Ab Werk hat kein Betriebsgerät eine Kurzadresse, es reagiert nur auf den <strong>Broadcast-Befehl</strong> an alle. Erst die Inbetriebnahme macht aus der Linie eine steuerbare Beleuchtung — und dieser Teil gehört zum Auftrag, nicht zur Kür.</p>
+    <p lang="en">Wiring is not the end of the job. Out of the box no control gear has a short address; it only reacts to the <strong>broadcast command</strong> to all devices. Only commissioning turns the line into a controllable lighting system — and that part belongs to the job, not to the extras.</p>
+
+    <h3><span lang="de">So läuft die Adressierung</span><span lang="en">How addressing works</span></h3>
+    <ul lang="de">
+      <li><strong>Verdrahten und einschalten.</strong> Alle Geräte hängen am Bus und reagieren gemeinsam auf Broadcast.</li>
+      <li><strong>Adressierung starten.</strong> Jedes Betriebsgerät hat eine zufällig erzeugte Langadresse (Zufallsadresse, drei Byte lang), über die es eindeutig ansprechbar ist.</li>
+      <li><strong>Kurzadressen vergeben.</strong> Die Software teilt über die Langadresse jedem Gerät eine <strong>Kurzadresse 0 … 63</strong> zu. Die Reihenfolge ist zufällig und hat nichts mit der Lage im Raum zu tun.</li>
+      <li><strong>Identifizieren.</strong> Man lässt eine Adresse blinken und notiert, welche Leuchte reagiert. So entsteht die Zuordnung Adresse ↔ Leuchte.</li>
+      <li><strong>Gruppen und Szenen setzen</strong> und die Lichtwerte in den Geräten speichern.</li>
+      <li><strong>Dokumentieren.</strong> Die Adressliste gehört ins Schema und ins Anlagedossier — sonst beginnt der nächste Servicefall wieder mit Blinken.</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Wire up and switch on.</strong> All devices hang on the bus and respond together to broadcast.</li>
+      <li><strong>Start addressing.</strong> Every control gear has a randomly generated long address (random address, three bytes), through which it can be addressed uniquely.</li>
+      <li><strong>Assign short addresses.</strong> Using the long address, the software gives each device a <strong>short address 0 … 63</strong>. The order is random and has nothing to do with the physical layout.</li>
+      <li><strong>Identify.</strong> One address is made to blink and you note which luminaire responds. This creates the address ↔ luminaire assignment.</li>
+      <li><strong>Set groups and scenes</strong> and store the light levels in the devices.</li>
+      <li><strong>Document.</strong> The address list belongs in the diagram and in the installation file — otherwise the next service call starts with blinking all over again.</li>
+    </ul>
+
+    <h3><span lang="de">DALI-2 und die Teile der Norm</span><span lang="en">DALI-2 and the parts of the standard</span></h3>
+
+    <p lang="de">Beim ursprünglichen DALI waren nur die <strong>Betriebsgeräte</strong> genormt. Taster und Melder waren Herstellersache, und darum liessen sich Geräte verschiedener Marken nur mit Glück kombinieren. <strong>DALI-2</strong> hat diese Lücke geschlossen: Seither sind auch die <strong>Steuergeräte</strong> genormt (Teil 103), mehrere Master dürfen an derselben Linie arbeiten, und die DALI Alliance prüft und zertifiziert die Geräte.</p>
+    <p lang="en">In the original DALI only the <strong>control gear</strong> was standardised. Push buttons and sensors were a matter for each manufacturer, so devices from different brands could only be combined with luck. <strong>DALI-2</strong> closed this gap: since then the <strong>control devices</strong> are standardised too (Part 103), several masters may work on the same line, and the DALI Alliance tests and certifies the devices.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Teil von IEC 62386</span><span lang="en">Part of IEC 62386</span></th>
+            <th><span lang="de">Inhalt</span><span lang="en">Content</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">101</td>
+            <td><span lang="de">System — Bus, Pegel, Speisung, allgemeine Anforderungen</span><span lang="en">system — bus, levels, power supply, general requirements</span></td>
+          </tr>
+          <tr>
+            <td class="num">102</td>
+            <td><span lang="de">Betriebsgeräte — Vorschaltgeräte und Treiber in den Leuchten</span><span lang="en">control gear — ballasts and drivers inside the luminaires</span></td>
+          </tr>
+          <tr>
+            <td class="num">103</td>
+            <td><span lang="de">Steuergeräte — Taster, Melder, Applikationssteuerung (neu mit DALI-2)</span><span lang="en">control devices — buttons, sensors, application controllers (new with DALI-2)</span></td>
+          </tr>
+          <tr>
+            <td class="num">207</td>
+            <td><span lang="de">besondere Anforderungen für LED-Module</span><span lang="en">particular requirements for LED modules</span></td>
+          </tr>
+          <tr>
+            <td class="num">202</td>
+            <td><span lang="de">besondere Anforderungen für Notbeleuchtung mit eigener Batterie</span><span lang="en">particular requirements for self-contained emergency lighting</span></td>
+          </tr>
+          <tr>
+            <td class="num">301 / 303</td>
+            <td><span lang="de">Eingabegeräte — Taster beziehungsweise Präsenzmelder</span><span lang="en">input devices — push buttons and occupancy sensors</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Quellenhinweis</span><span lang="en">Source note</span></b>
+      <p lang="de">Die Teile der Normenreihe werden laufend ergänzt und in neuen Ausgaben überarbeitet. Die Liste oben zeigt die Teile, die im Lehrbetrieb am häufigsten vorkommen; sie ist nicht vollständig. Für ein konkretes Produkt gilt immer, was auf dem Gerät und im Datenblatt steht — <strong>Artikelbezeichnungen und Teilenummern nie aus dem Kopf ins Protokoll schreiben</strong>, sondern im Herstellerkatalog nachschlagen.</p>
+      <p lang="en">The parts of the series are continually extended and revised in new editions. The list above shows the parts most frequently met in the trade; it is not complete. For a specific product, what is printed on the device and in the data sheet always governs — <strong>never write product designations or part numbers into a report from memory</strong>, always look them up in the manufacturer's catalogue.</p>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">D4i — DALI in der Leuchte</span><span lang="en">D4i — DALI inside the luminaire</span></b>
+      <p lang="de">D4i ist eine Erweiterung von DALI-2 für den Bus <strong>innerhalb</strong> der Leuchte. Der Treiber speist dort Sensor oder Funkmodul und liefert zusätzlich Betriebsdaten wie Betriebsstunden, Energieverbrauch und Temperatur. Für die Installation ändert sich nichts — die Leuchte bleibt nach aussen ein normaler DALI-Teilnehmer.</p>
+      <p lang="en">D4i is an extension of DALI-2 for the bus <strong>inside</strong> the luminaire. There the driver powers a sensor or radio module and additionally supplies operating data such as running hours, energy consumption and temperature. Nothing changes for the installation — from the outside the luminaire remains an ordinary DALI device.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7 ================= -->
+<section id="s7">
+  <div class="snum">07</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Wofür steht DALI und wofür wird es eingesetzt?</span><span lang="en">What does DALI stand for and what is it used for?</span></summary>
+      <div class="ans">
+        <p lang="de">DALI heisst Digital Addressable Lighting Interface, also digitale adressierbare Beleuchtungsschnittstelle. Es ist ein digitales Bussystem ausschliesslich für die Beleuchtung und ist in der Normenreihe IEC 62386 festgelegt. Andere Gewerke wie Storen oder Heizung laufen nicht über DALI.</p>
+        <p lang="en">DALI stands for Digital Addressable Lighting Interface. It is a digital bus system used exclusively for lighting and is defined in the IEC 62386 series of standards. Other trades such as blinds or heating do not run over DALI.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie viele Teilnehmer, Gruppen und Szenen sind je Linie möglich?</span><span lang="en">How many devices, groups and scenes are possible per line?</span></summary>
+      <div class="ans">
+        <p lang="de">64 Teilnehmer mit den Kurzadressen 0 bis 63, 16 Gruppen und 16 Szenen. Dazu kommt der Broadcast-Befehl, der alle Teilnehmer gleichzeitig anspricht. Ein Teilnehmer darf mehreren Gruppen angehören.</p>
+        <p lang="en">64 devices with short addresses 0 to 63, 16 groups and 16 scenes. In addition there is the broadcast command, which addresses all devices at once. One device may belong to several groups.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welche Topologien sind erlaubt und welche nicht?</span><span lang="en">Which topologies are permitted and which are not?</span></summary>
+      <div class="ans">
+        <p lang="de">Erlaubt sind Linie, Stern, Baum und beliebige Mischformen davon. Nicht erlaubt sind der Ring und jede Vermaschung, weil der Bus nirgends in sich zurücklaufen darf. Möglich ist diese Freiheit, weil die Übertragung mit 1200 bit/s sehr langsam ist.</p>
+        <p lang="en">Line, star, tree and any mixture of them are permitted. A ring and any meshed layout are not permitted, because the bus must never close back on itself. This freedom is possible because transmission at 1200 bit/s is very slow.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum darf die DALI-Steuerleitung im selben Kabel wie die Netzleitung liegen?</span><span lang="en">Why may the DALI control pair share a cable with the mains?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil die DALI-Steuerspannung keine Schutzkleinspannung ist. Sie gilt als netzspannungsführend und wird deshalb wie eine Netzader basisisoliert ausgeführt. Damit dürfen DA+ und DA− zusammen mit L, N und PE in derselben Leitung geführt werden — in der Praxis oft in einer fünfadrigen Leitung. Umgekehrt bedeutet das: Beim Arbeiten ist der Bus wie eine spannungsführende Netzleitung zu behandeln.</p>
+        <p lang="en">Because the DALI control voltage is not safety extra-low voltage. It counts as mains-voltage-carrying and therefore has basic insulation like any mains core. DA+ and DA− may thus run together with L, N and PE in the same cable — in practice often in a five-core cable. Conversely this means that when working on it, the bus must be treated like a live mains conductor.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Braucht der DALI-Bus einen Abschlusswiderstand, und muss auf die Polarität geachtet werden?</span><span lang="en">Does the DALI bus need a termination resistor, and does polarity matter?</span></summary>
+      <div class="ans">
+        <p lang="de">Nein und nein. Ein Abschlusswiderstand ist wegen der geringen Übertragungsrate nicht nötig, und die Steuerleitung ist verpolungssicher — DA+ und DA− dürfen vertauscht werden, ohne dass etwas beschädigt wird oder ausfällt. Sauber gearbeitet wird trotzdem mit durchgehend gleicher Aderfarbe.</p>
+        <p lang="en">No and no. A termination resistor is unnecessary because of the low data rate, and the control pair is polarity-free — DA+ and DA− may be swapped without damage or failure. Even so, good workmanship means keeping the same core colour throughout.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welche Grenzwerte gelten für Busstrom, Stromaufnahme und Spannungsfall?</span><span lang="en">What limits apply to bus current, current draw and voltage drop?</span></summary>
+      <div class="ans">
+        <p lang="de">Der gesamte Busstrom einer Linie beträgt höchstens 250 mA und wird von einem einzigen Netzteil geliefert. Ein Betriebsgerät darf nach Norm höchstens 2 mA aufnehmen. Über die ganze Steuerleitung dürfen höchstens 2 V Spannungsfall entstehen; daraus ergibt sich die maximale Leitungslänge von 300 m.</p>
+        <p lang="en">The total bus current of a line is 250 mA at most and is supplied by a single power supply. According to the standard a control gear may draw no more than 2 mA. No more than 2 V of voltage drop may occur over the whole control line; this gives the maximum cable length of 300 m.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was ist der Hauptunterschied zwischen DALI und 1-10 V?</span><span lang="en">What is the main difference between DALI and 1-10 V?</span></summary>
+      <div class="ans">
+        <p lang="de">DALI ist digital, adressierbar und bidirektional: Jede Leuchte hat eine eigene Adresse und meldet zurück. 1-10 V ist ein analoges Signal ohne Adressierung — alle Geräte an einer Steuerleitung folgen demselben Wert, es gibt keine Rückmeldung, und die Polarität muss stimmen. Zum vollständigen Ausschalten braucht 1-10 V zusätzlich einen Schalter oder ein Relais in der Netzleitung.</p>
+        <p lang="en">DALI is digital, addressable and bidirectional: every luminaire has its own address and reports back. 1-10 V is an analogue signal without addressing — all devices on one control line follow the same value, there is no feedback, and the polarity must be correct. To switch off completely, 1-10 V additionally requires a switch or relay in the mains circuit.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie läuft die Adressierung bei der Inbetriebnahme ab?</span><span lang="en">How does addressing work during commissioning?</span></summary>
+      <div class="ans">
+        <p lang="de">Ab Werk reagieren alle Geräte nur auf Broadcast. Jedes Betriebsgerät besitzt eine zufällig erzeugte Langadresse; über diese vergibt die Inbetriebnahme-Software jedem Gerät eine Kurzadresse zwischen 0 und 63. Weil die Vergabe zufällig ist, muss man anschliessend identifizieren: Eine Adresse blinken lassen und notieren, welche Leuchte reagiert. Danach werden Gruppen und Szenen gesetzt und die Adressliste dokumentiert.</p>
+        <p lang="en">Out of the box all devices respond only to broadcast. Every control gear has a randomly generated long address; using it, the commissioning software assigns each device a short address between 0 and 63. Because the assignment is random, identification follows: make one address blink and note which luminaire responds. Groups and scenes are then set and the address list is documented.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was bringt DALI-2 gegenüber dem ursprünglichen DALI?</span><span lang="en">What does DALI-2 add compared with the original DALI?</span></summary>
+      <div class="ans">
+        <p lang="de">Beim ursprünglichen DALI waren nur die Betriebsgeräte genormt. DALI-2 normt zusätzlich die Steuergeräte im Teil 103 — also Taster, Präsenz- und Helligkeitsmelder sowie Applikationssteuerungen. Mehrere Master dürfen an derselben Linie arbeiten, und die Geräte werden von der DALI Alliance geprüft und zertifiziert. Damit lassen sich Produkte verschiedener Hersteller zuverlässig kombinieren.</p>
+        <p lang="en">In the original DALI only the control gear was standardised. DALI-2 additionally standardises the control devices in Part 103 — push buttons, presence and light sensors and application controllers. Several masters may work on the same line, and devices are tested and certified by the DALI Alliance. This makes products from different manufacturers reliably combinable.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="07-zeptrion.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>07 · <span lang="de">Zeptrion</span><span lang="en">Zeptrion</span></b>
+  </a>
+  <a class="next" href="09-eib-knx.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>09 · <span lang="de">EIB / KNX</span><span lang="en">EIB / KNX</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 08 · DALI</span><span lang="en">Learning Documentation 08 · DALI</span></span>
+  <span>Yanik · Etavis · <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></span>
+  <span><span lang="de">Grundlagen: IEC 62386 (DALI / DALI-2) · NIN</span><span lang="en">Basis: IEC 62386 (DALI / DALI-2) · NIN</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

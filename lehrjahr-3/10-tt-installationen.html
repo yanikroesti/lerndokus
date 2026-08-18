@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 10 — T+T-Installationen" data-en="Learning Documentation 10 — Telephone Installations">Lerndokumentation 10 — T+T-Installationen</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span>
+    <span lang="de">Thema 10</span><span lang="en">Topic 10</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">10</div>
+    <h1><span lang="de">T+T-<br>Installationen</span><span lang="en">Telephone<br>Installations</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Material · Verkabelungen · Anschluesse</span>
+    <span lang="en">Materials · cabling · connections</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">10 von 12</span><span lang="en">10 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Telefondose und Stecker">
+        <rect x="24" y="34" width="86" height="86" rx="7" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <rect x="46" y="48" width="42" height="24" rx="3" fill="#FBF9F5" stroke="#1D5872" stroke-width="2.4"/>
+        <path d="M54 54 v12 M61 54 v12 M68 54 v12 M75 54 v12 M82 54 v12" stroke="#1D5872" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="55" cy="92" r="3" fill="#171614"/>
+        <circle cx="80" cy="92" r="3" fill="#171614"/>
+        <path d="M54 102 q 13 9 26 0" fill="none" stroke="#171614" stroke-width="2" stroke-linecap="round"/>
+        <rect x="140" y="60" width="48" height="32" rx="4" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <path d="M128 68 h12 M128 84 h12" stroke="#1D5872" stroke-width="3" stroke-linecap="round"/>
+        <path d="M188 76 q 24 8 18 40" fill="none" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M116 76 h10" stroke="#171614" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 3"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Was eine T+T-Installation ist</span><span lang="en">What a T+T installation is</span></h2>
+
+    <p class="lead" lang="de">Die T+T-Installation ist die klassische Telefonverkabelung im Schweizer Gebäude. Sie gehört zum <strong>Schwachstrom</strong> und führt keine Energie, sondern ein Sprachsignal über eine einfache <strong>Kupferdoppelader</strong>. Der Name stammt aus der Zeit der PTT: T+T stand für die Sparte Telefon und Telegraf.</p>
+    <p class="lead" lang="en">The T+T installation is the classic telephone wiring found in Swiss buildings. It belongs to <strong>low-current engineering</strong> and carries no energy, only a voice signal over a simple <strong>copper pair</strong>. The name comes from the PTT era: T+T stood for the telephone and telegraph division.</p>
+
+    <p lang="de">Das analoge Telefon braucht keine eigene Speisung. Die Vermittlungsstelle legt eine Gleichspannung auf die beiden Adern, speist damit den Apparat und überträgt gleichzeitig die Sprache. Für einen Anruf wird eine Wechselspannung überlagert, die den Wecker im Apparat zum Klingeln bringt. Zwei Adern genügen für alles: Speisung, Signalisierung, Hin- und Rückweg der Sprache.</p>
+    <p lang="en">An analogue telephone needs no supply of its own. The exchange places a DC voltage on the two wires, feeding the set and carrying speech at the same time. For an incoming call an AC voltage is superimposed, which makes the bell in the set ring. Two wires do everything: supply, signalling, and speech in both directions.</p>
+
+    <p lang="de">Die beiden Adern heissen traditionell <strong>a</strong> und <strong>b</strong>. Diese Bezeichnung begegnet dir überall wieder — auf der Dose, im Schema und in den Unterlagen der Netzbetreiberin.</p>
+    <p lang="en">The two wires are traditionally called <strong>a</strong> and <strong>b</strong>. You will meet this designation everywhere — on the socket, in the diagram and in the network operator's documents.</p>
+
+    <h3><span lang="de">Die drei Bauteile des Systems</span><span lang="en">The three parts of the system</span></h3>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Bezeichnung</span><span lang="en">Designation</span></th>
+            <th><span lang="de">Bauteil</span><span lang="en">Component</span></th>
+            <th><span lang="de">Besonderheit</span><span lang="en">Characteristic</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num"><strong>T+T 83</strong><br><span class="lgs" lang="de">auch TT83</span><span class="lgs" lang="en">also TT83</span></td>
+            <td><span lang="de">die <strong>Dose</strong> — fest in der Wand oder als Aufputzgehäuse</span><span lang="en">the <strong>socket</strong> — flush in the wall or as a surface box</span></td>
+            <td><span lang="de">sechspolig, Schraubklemmen für die Installationsadern</span><span lang="en">six-pole, screw terminals for the installation wires</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>T+T 87</strong></td>
+            <td><span lang="de">der <strong>gerade Stecker</strong> am Apparatekabel</span><span lang="en">the <strong>straight plug</strong> on the apparatus cord</span></td>
+            <td><span lang="de">die Kontaktstifte werden mit einem Werkzeug eingesetzt</span><span lang="en">the contact pins are fitted using a tool</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>T+T 89</strong></td>
+            <td><span lang="de">der <strong>Winkelstecker</strong></span><span lang="en">the <strong>angled plug</strong></span></td>
+            <td><span lang="de">Schneidklemmtechnik, die Adern eines Flachbandkabels werden ohne Werkzeug angepresst</span><span lang="en">insulation displacement, the cores of a flat cable are pressed in without a tool</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Woher der Name Reichle-Stecker kommt</span><span lang="en">Where the name Reichle plug comes from</span></b>
+      <p lang="de">T+T 87 und T+T 89 heissen umgangssprachlich <strong>Reichle-Stecker</strong>, nach der Firma <strong>Reichle &amp; De-Massari AG</strong>. Hans Reichle und Renato De-Massari gründeten sie 1964 mit genau dieser Idee: eine Telefonsteckdose, die sich einfacher installieren lässt als das damals Übliche. Aus dem Zweimannbetrieb wurde ein internationaler Anbieter von Netzwerkinfrastruktur mit Sitz in Wetzikon ZH.</p>
+      <p lang="en">T+T 87 and T+T 89 are colloquially called <strong>Reichle plugs</strong>, after the company <strong>Reichle &amp; De-Massari AG</strong>. Hans Reichle and Renato De-Massari founded it in 1964 with exactly this idea: a telephone socket that is easier to install than what was common at the time. The two-man workshop became an international supplier of network infrastructure based in Wetzikon ZH.</p>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Einordnung Stark- und Schwachstrom</span><span lang="en">Classification: high and low current</span></b>
+      <p lang="de">Das Elektrizitätsgesetz unterscheidet Stark- und Schwachstromanlagen. Eine <strong>Schwachstromanlage</strong> führt im Normalbetrieb keine Ströme, die für Personen oder Sachen gefährlich sind. Die T+T-Installation ist genau das. Sie ist deshalb nicht ungefährlich zu behandeln, sondern getrennt zu behandeln — dazu mehr in Abschnitt 05.</p>
+      <p lang="en">Swiss electricity law distinguishes high-current from low-current installations. A <strong>low-current installation</strong> carries no currents in normal operation that are dangerous to persons or property. The T+T installation is exactly that. It is therefore not to be treated as harmless, but to be treated separately — more on this in section 05.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Aufbau und Anschluss der T+T-83-Dose</span><span lang="en">Construction and wiring of the T+T 83 socket</span></h2>
+
+    <p lang="de">Die T+T-83-Dose besteht aus einem <strong>Einsatz</strong> mit den sechs Kontakten und den Anschlussklemmen, einem <strong>Tragring</strong> und der <strong>Abdeckung</strong> des jeweiligen Designs. Sie wird in eine gewöhnliche Einlasskasten-Kombination gesetzt oder als Aufputzgehäuse montiert. Die Adern werden auf Schraubklemmen aufgelegt, die für die üblichen feindrähtigen Telefonadern ausgelegt sind.</p>
+    <p lang="en">A T+T 83 socket consists of an <strong>insert</strong> carrying the six contacts and the terminals, a <strong>mounting ring</strong> and the <strong>cover plate</strong> of the chosen design line. It is fitted into an ordinary flush box or mounted as a surface box. The wires land on screw terminals dimensioned for the usual fine telephone conductors.</p>
+
+    <h3><span lang="de">Die sechs Kontakte</span><span lang="en">The six contacts</span></h3>
+
+    <p lang="de">Die sechs Kontakte bilden <strong>drei Paare</strong>. Jedes Paar besteht aus einer a- und einer b-Ader und wird durchnummeriert: 1a/1b, 2a/2b, 3a/3b. Je nach Hersteller findest du auch die Schreibweise a1/b1. Für einen gewöhnlichen analogen Telefonanschluss wird nur das <strong>erste Paar</strong> gebraucht.</p>
+    <p lang="en">The six contacts form <strong>three pairs</strong>. Each pair consists of an a wire and a b wire and is numbered: 1a/1b, 2a/2b, 3a/3b. Depending on the manufacturer you will also find the notation a1/b1. An ordinary analogue telephone line uses only the <strong>first pair</strong>.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Kontakt</span><span lang="en">Contact</span></th>
+            <th><span lang="de">Funktion</span><span lang="en">Function</span></th>
+            <th><span lang="de">Ader Telefonkabel</span><span lang="en">Core, telephone cord</span></th>
+            <th><span lang="de">Ader Modemkabel</span><span lang="en">Core, modem cord</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num"><strong>1a</strong></td>
+            <td><span lang="de">Sprechader <strong>a</strong> — der eigentliche Anschluss</span><span lang="en">speech wire <strong>a</strong> — the actual line</span></td>
+            <td><span lang="de">weiss</span><span lang="en">white</span></td>
+            <td><span lang="de">grün</span><span lang="en">green</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>1b</strong></td>
+            <td><span lang="de">Sprechader <strong>b</strong> — der eigentliche Anschluss</span><span lang="en">speech wire <strong>b</strong> — the actual line</span></td>
+            <td><span lang="de">blau</span><span lang="en">blue</span></td>
+            <td><span lang="de">braun/blau</span><span lang="en">brown/blue</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>2a</strong></td>
+            <td><span lang="de">zweites Paar, für einen zweiten Anschluss oder Zusatzfunktionen</span><span lang="en">second pair, for a second line or auxiliary functions</span></td>
+            <td><span lang="de">cyan</span><span lang="en">cyan</span></td>
+            <td><span lang="de">gelb/violett</span><span lang="en">yellow/violet</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>2b</strong></td>
+            <td><span lang="de">zweites Paar; bei geschirmtem Installationskabel legt Swisscom den Schirm impedanzarm auf diesen Kontakt</span><span lang="en">second pair; with a screened installation cable Swisscom lands the screen on this contact with low impedance</span></td>
+            <td><span lang="de">violett</span><span lang="en">violet</span></td>
+            <td><span lang="de">weiss</span><span lang="en">white</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>3a / 3b</strong></td>
+            <td><span lang="de">drittes Paar, in der gewöhnlichen Wohnungsinstallation nicht belegt</span><span lang="en">third pair, not used in an ordinary domestic installation</span></td>
+            <td><span lang="de">—</span><span lang="en">—</span></td>
+            <td><span lang="de">—</span><span lang="en">—</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Häufiger Fehler</span><span lang="en">Common mistake</span></b>
+      <p lang="de">In der Schweiz ist ein <strong>Telefonkabel anders beschaltet als ein Modemkabel</strong>, obwohl die Stecker gleich aussehen. Der Unterschied ist von aussen <em>nur an den Aderfarben</em> erkennbar. Wer ein Kabel nach Farbe statt nach Kontaktnummer auflegt, verdrahtet früher oder später falsch. <strong>Immer nach Kontaktbezeichnung arbeiten</strong>, nie nach Gefühl.</p>
+      <p lang="en">In Switzerland a <strong>telephone cord is wired differently from a modem cord</strong>, even though the plugs look identical. From the outside the difference shows <em>only in the core colours</em>. Anyone who terminates by colour instead of by contact number will sooner or later get it wrong. <strong>Always work to the contact designation</strong>, never by feel.</p>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Vor der Abgabe nachschlagen</span><span lang="en">Look up before handing in</span></b>
+      <p lang="de">Die <strong>räumliche Anordnung</strong> der sechs Kontakte in der Dose und die genaue Klemmenbeschriftung sind <strong>herstellerabhängig</strong>. Die Zeichnung in Bild 1 zeigt das Prinzip, nicht die Massanordnung eines bestimmten Fabrikats. Vor der Montage im <strong>Herstellerkatalog beziehungsweise auf dem Datenblatt des verwendeten Einsatzes</strong> nachschlagen. Ebenso sind Speise- und Rufspannung der analogen Leitung netzabhängig; die genauen Werte gehören in die eigene NIN-Ausgabe beziehungsweise in die Unterlagen der Netzbetreiberin nachgeprüft.</p>
+      <p lang="en">The <strong>physical arrangement</strong> of the six contacts inside the socket and the exact terminal marking are <strong>manufacturer-specific</strong>. The drawing in Fig. 1 shows the principle, not the dimensioned layout of a particular make. Before installing, look it up in the <strong>manufacturer's catalogue or the data sheet of the insert used</strong>. The feeding and ringing voltages of the analogue line likewise depend on the network; the exact values must be checked in your own NIN edition or in the network operator's documents.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Verkabelung ab dem Übergabepunkt</span><span lang="en">Cabling from the transfer point</span></h2>
+
+    <p lang="de">Das Netz der Anbieterin endet im Gebäude an einer klar definierten Stelle. Swisscom nennt sie <strong>Netz-Trennstelle (NTS)</strong>; sie entspricht dem <strong>Gebäudeeinführungspunkt</strong> nach der Verordnung über Fernmeldedienste. Bis dorthin gehört alles der Anbieterin. Ab dort beginnt die <strong>Hausinstallation</strong> — und die ist Sache der Bauherrschaft und damit unsere Arbeit.</p>
+    <p lang="en">The provider's network ends inside the building at a clearly defined place. Swisscom calls it the <strong>network termination separation point (NTS)</strong>; it corresponds to the <strong>building entry point</strong> under the telecommunications services ordinance. Up to there everything belongs to the provider. From there the <strong>in-house installation</strong> begins — and that is the building owner's business, and therefore our work.</p>
+
+    <p lang="de">Das Ende der Hausinstallation ist der <strong>Netzabschlusspunkt (NTP)</strong>. Beim analogen Anschluss ist das die Telefonsteckdose, die mit der Breitbanddose verbunden ist, oder — wenn es keine gibt — die kabellängenmässig nächstgelegene Dose zur Netz-Trennstelle. Zwischen NTS und NTP handelt es sich <strong>immer um eine Punkt-Punkt-Verbindung</strong>.</p>
+    <p lang="en">The end of the in-house installation is the <strong>network termination point (NTP)</strong>. On an analogue line this is the telephone socket connected to the broadband socket or — if there is none — the socket closest to the network termination separation point in terms of cable length. Between NTS and NTP it is <strong>always a point-to-point connection</strong>.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sternverkabelung ab Übergabepunkt und Kontakte der T+T-83-Dose">
+        <defs>
+          <style>
+            .ln{fill:none;stroke:#1D5872;stroke-width:2.6;stroke-linecap:round}
+            .lnh{fill:none;stroke:#B8402A;stroke-width:3.2;stroke-linecap:round}
+            .bx{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .bx2{fill:#FBF9F5;stroke:#171614;stroke-width:1.8}
+            .ttl{font-family:'Archivo',sans-serif;font-size:15px;font-weight:700;fill:#171614}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10px;fill:#7D7669;letter-spacing:.09em}
+            .lb{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;fill:#48433B}
+            .sm{font-family:'IBM Plex Mono',monospace;font-size:9.5px;fill:#48433B}
+            .dot{fill:#171614}
+          </style>
+        </defs>
+
+        <!-- ===== links: Sternverkabelung ===== -->
+        <text class="ttl" x="26" y="26"><tspan lang="de">Sternverkabelung</tspan><tspan lang="en">Star wiring</tspan></text>
+        <text class="lgs" x="26" y="44"><tspan lang="de">JEDE DOSE EIN EIGENES PAAR AB DEM VERTEILER</tspan><tspan lang="en">EACH SOCKET ITS OWN PAIR FROM THE DISTRIBUTOR</tspan></text>
+
+        <!-- Netz -->
+        <path class="ln" d="M20 214 H58" stroke-dasharray="6 4"/>
+        <text class="sm" x="20" y="204"><tspan lang="de">NETZ</tspan><tspan lang="en">NETWORK</tspan></text>
+
+        <!-- Übergabepunkt -->
+        <rect class="bx" x="58" y="176" width="92" height="76" rx="4"/>
+        <text class="lb" x="104" y="204" text-anchor="middle">NTS</text>
+        <text class="sm" x="104" y="222" text-anchor="middle"><tspan lang="de">ÜBERGABE-</tspan><tspan lang="en">TRANSFER</tspan></text>
+        <text class="sm" x="104" y="236" text-anchor="middle"><tspan lang="de">PUNKT</tspan><tspan lang="en">POINT</tspan></text>
+        <circle class="dot" cx="150" cy="214" r="4"/>
+
+        <!-- Sternleitungen -->
+        <path class="lnh" d="M150 214 C 200 214 200 74 250 74"/>
+        <path class="ln" d="M150 214 C 200 214 200 154 250 154"/>
+        <path class="ln" d="M150 214 C 200 214 200 234 250 234"/>
+        <path class="ln" d="M150 214 C 200 214 200 314 250 314"/>
+
+        <!-- Dosen -->
+        <rect class="bx" x="250" y="56" width="72" height="36" rx="3"/>
+        <text class="lb" x="286" y="79" text-anchor="middle">T+T 83</text>
+        <text class="sm" x="330" y="72"><tspan lang="de">Büro · NTP</tspan><tspan lang="en">Office · NTP</tspan></text>
+        <text class="sm" x="330" y="86"><tspan lang="de">Wohnzimmer</tspan><tspan lang="en">Living room</tspan></text>
+
+        <rect class="bx" x="250" y="136" width="72" height="36" rx="3"/>
+        <text class="lb" x="286" y="159" text-anchor="middle">T+T 83</text>
+        <text class="sm" x="330" y="159"><tspan lang="de">Schlafzimmer</tspan><tspan lang="en">Bedroom</tspan></text>
+
+        <rect class="bx" x="250" y="216" width="72" height="36" rx="3"/>
+        <text class="lb" x="286" y="239" text-anchor="middle">T+T 83</text>
+        <text class="sm" x="330" y="239"><tspan lang="de">Küche</tspan><tspan lang="en">Kitchen</tspan></text>
+
+        <rect class="bx" x="250" y="296" width="72" height="36" rx="3"/>
+        <text class="lb" x="286" y="319" text-anchor="middle">T+T 83</text>
+        <text class="sm" x="330" y="319"><tspan lang="de">Keller</tspan><tspan lang="en">Cellar</tspan></text>
+
+        <text class="sm" x="26" y="356" fill="#B8402A"><tspan lang="de">rot = Leitung zum Netzabschlusspunkt, ohne Abzweigungen</tspan><tspan lang="en">red = line to the network termination point, no branches</tspan></text>
+        <text class="sm" x="26" y="372"><tspan lang="de">blau = weitere Dosen, je ein eigenes Paar</tspan><tspan lang="en">blue = further sockets, one pair each</tspan></text>
+
+        <!-- Trennlinie -->
+        <path d="M406 24 V378" stroke="#D2CABB" stroke-width="1.6" stroke-dasharray="5 5"/>
+
+        <!-- ===== rechts: Dose ===== -->
+        <text class="ttl" x="430" y="26"><tspan lang="de">Die T+T-83-Dose</tspan><tspan lang="en">The T+T 83 socket</tspan></text>
+        <text class="lgs" x="430" y="44"><tspan lang="de">SECHS KONTAKTE · DREI PAARE · SCHEMATISCH</tspan><tspan lang="en">SIX CONTACTS · THREE PAIRS · SCHEMATIC</tspan></text>
+
+        <!-- Frontansicht -->
+        <rect class="bx" x="446" y="62" width="196" height="120" rx="7"/>
+        <rect class="bx2" x="480" y="92" width="128" height="60" rx="4"/>
+        <rect x="492" y="102" width="6" height="26" rx="1.5" fill="#B8402A"/>
+        <rect x="512" y="102" width="6" height="26" rx="1.5" fill="#B8402A"/>
+        <rect x="532" y="102" width="6" height="26" rx="1.5" fill="#48433B"/>
+        <rect x="552" y="102" width="6" height="26" rx="1.5" fill="#48433B"/>
+        <rect x="572" y="102" width="6" height="26" rx="1.5" fill="#48433B"/>
+        <rect x="592" y="102" width="6" height="26" rx="1.5" fill="#48433B"/>
+        <text class="sm" x="495" y="145" text-anchor="middle" fill="#B8402A">1a</text>
+        <text class="sm" x="515" y="145" text-anchor="middle" fill="#B8402A">1b</text>
+        <text class="sm" x="535" y="145" text-anchor="middle">2a</text>
+        <text class="sm" x="555" y="145" text-anchor="middle">2b</text>
+        <text class="sm" x="575" y="145" text-anchor="middle">3a</text>
+        <text class="sm" x="595" y="145" text-anchor="middle">3b</text>
+        <path d="M492 168 H518" stroke="#B8402A" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M492 168 v-6 M518 168 v-6" stroke="#B8402A" stroke-width="2.2" stroke-linecap="round"/>
+        <text class="sm" x="528" y="172" fill="#B8402A"><tspan lang="de">Sprechpaar a / b</tspan><tspan lang="en">speech pair a / b</tspan></text>
+        <text class="sm" x="544" y="200" text-anchor="middle"><tspan lang="de">FRONTANSICHT</tspan><tspan lang="en">FRONT VIEW</tspan></text>
+
+        <!-- Klemmenseite -->
+        <rect class="bx" x="446" y="230" width="196" height="110" rx="7"/>
+        <circle class="bx2" cx="486" cy="266" r="9"/>
+        <circle class="bx2" cx="518" cy="266" r="9"/>
+        <circle class="bx2" cx="550" cy="266" r="9"/>
+        <circle class="bx2" cx="582" cy="266" r="9"/>
+        <circle class="bx2" cx="502" cy="308" r="9"/>
+        <circle class="bx2" cx="534" cy="308" r="9"/>
+        <path d="M482 262 l8 8 M490 262 l-8 8" stroke="#171614" stroke-width="1.6"/>
+        <path d="M514 262 l8 8 M522 262 l-8 8" stroke="#171614" stroke-width="1.6"/>
+        <path d="M546 262 l8 8 M554 262 l-8 8" stroke="#171614" stroke-width="1.6"/>
+        <path d="M578 262 l8 8 M586 262 l-8 8" stroke="#171614" stroke-width="1.6"/>
+        <path d="M498 304 l8 8 M506 304 l-8 8" stroke="#171614" stroke-width="1.6"/>
+        <path d="M530 304 l8 8 M538 304 l-8 8" stroke="#171614" stroke-width="1.6"/>
+        <path class="lnh" d="M486 266 C 640 266 660 300 700 300"/>
+        <path class="lnh" d="M518 266 C 640 266 660 316 700 316"/>
+        <text class="sm" x="704" y="296"><tspan lang="de">a</tspan><tspan lang="en">a</tspan></text>
+        <text class="sm" x="704" y="322"><tspan lang="de">b</tspan><tspan lang="en">b</tspan></text>
+        <text class="sm" x="544" y="360" text-anchor="middle"><tspan lang="de">KLEMMENSEITE · SCHRAUBKLEMMEN</tspan><tspan lang="en">TERMINAL SIDE · SCREW TERMINALS</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Links die Sternverkabelung ab dem Übergabepunkt, rechts die T+T-83-Dose mit ihren sechs Kontakten. Die Anordnung der Kontakte ist schematisch dargestellt; massgebend ist das Datenblatt des Fabrikats.</span>
+        <span lang="en"> — On the left the star wiring from the transfer point, on the right the T+T 83 socket with its six contacts. The contact arrangement is shown schematically; the make's data sheet is what counts.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Stern statt Schlaufe</span><span lang="en">Star instead of loop</span></h3>
+
+    <p lang="de">In alten Anlagen wurden die Telefondosen oft <strong>durchgeschlauft</strong>: eine einzige Doppelader lief von Dose zu Dose, alle Apparate hingen parallel an derselben Leitung. Für reine Sprachtelefonie funktioniert das. Sobald aber ein Breitbandsignal auf derselben Leitung liegt, wirken die Abzweigungen als <strong>Stichleitungen</strong> und stören die Übertragung.</p>
+    <p lang="en">In older installations the telephone sockets were often <strong>looped through</strong>: a single pair ran from socket to socket and every set hung in parallel on the same line. For plain voice telephony that works. As soon as a broadband signal sits on the same line, however, the branches act as <strong>stubs</strong> and disturb transmission.</p>
+
+    <p lang="de">Deshalb gilt heute die <strong>Sternverkabelung</strong>: Von einem zentralen Punkt — der Netz-Trennstelle beziehungsweise dem Kommunikationsverteiler — geht zu jeder Dose eine eigene Leitung. Swisscom verlangt ausdrücklich, dass das DSL-Signal von der Netz-Trennstelle <strong>direkt</strong> zum Netzabschlussgerät geführt wird und dabei nicht von Zweigleitungen, Nebenzweigen für weitere Dosen oder schlechten Kontakten beeinflusst wird.</p>
+    <p lang="en">Today <strong>star wiring</strong> therefore applies: from one central point — the network termination separation point or the communications distributor — a separate line runs to every socket. Swisscom explicitly requires the DSL signal to run <strong>directly</strong> from the network termination separation point to the network termination device, undisturbed by branch lines, spurs to further sockets or poor contacts.</p>
+
+    <h3><span lang="de">Vorgaben an Kabel und Leitung</span><span lang="en">Requirements for cable and line</span></h3>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Grösse</span><span lang="en">Quantity</span></th>
+            <th><span lang="de">Vorgabe</span><span lang="en">Requirement</span></th>
+            <th><span lang="de">Warum</span><span lang="en">Why</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span lang="de">Leiterdurchmesser</span><span lang="en">Conductor diameter</span></td>
+            <td class="num"><span lang="de">mindestens 0,5 mm, verdrillt</span><span lang="en">at least 0.5 mm, twisted</span></td>
+            <td><span lang="de">geringer Widerstand, verdrillt gegen Einstreuung</span><span lang="en">low resistance, twisting suppresses pick-up</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Leitungslänge</span><span lang="en">Line length</span></td>
+            <td class="num"><span lang="de">höchstens 100 m</span><span lang="en">100 m maximum</span></td>
+            <td><span lang="de">darüber wird die Dämpfung für die Dienste zu gross</span><span lang="en">beyond that the attenuation becomes too great for the services</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Gleichstromwiderstand der Ader</span><span lang="en">DC resistance of the core</span></td>
+            <td class="num"><span lang="de">≤ 10 Ω pro 100 m bei 20 °C</span><span lang="en">≤ 10 Ω per 100 m at 20 °C</span></td>
+            <td><span lang="de">der Apparat wird über dieselben Adern gespeist</span><span lang="en">the set is fed over the same wires</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Wellendämpfung</span><span lang="en">Attenuation</span></td>
+            <td class="num"><span lang="de">≤ 1 dB pro 100 m bei 40 kHz</span><span lang="en">≤ 1 dB per 100 m at 40 kHz</span></td>
+            <td><span lang="de">Reserve für die höheren Frequenzen der Breitbanddienste</span><span lang="en">headroom for the higher frequencies of broadband services</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Kabeltyp</span><span lang="en">Cable type</span></td>
+            <td class="num"><span lang="de">U 72 oder Cat-5-Paare, 100–135 Ω (± 15 %)</span><span lang="en">U 72 or Cat 5 pairs, 100–135 Ω (± 15 %)</span></td>
+            <td><span lang="de">grössere Durchmesser und geschirmte Typen sind von Vorteil</span><span lang="en">larger diameters and screened types are an advantage</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Das Kabel U 72</span><span lang="en">The U 72 cable</span></b>
+      <p lang="de">U 72 ist das klassische Schweizer Kommunikationsinstallationskabel: «U» für Universalkabel, «72» für das Einführungsjahr 1972. Verbreitet ist die Ausführung <strong>1 × 4 × 0,5 mm</strong>, also vier Adern zu zwei Paaren. Für eine einzelne Telefondose reicht ein Paar; das zweite bleibt als Reserve liegen. Ältere Kabeltypen wie das I 83 müssen nicht ersetzt werden, werden für Neuinstallationen aber nicht mehr empfohlen.</p>
+      <p lang="en">U 72 is the classic Swiss communications installation cable: “U” for universal cable, “72” for its year of introduction, 1972. The common version is <strong>1 × 4 × 0.5 mm</strong>, that is four cores forming two pairs. A single telephone socket needs one pair; the second stays in place as a reserve. Older cable types such as I 83 need not be replaced, but are no longer recommended for new installations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Von analog zu IP</span><span lang="en">From analogue to IP</span></h2>
+
+    <p lang="de">Bis vor wenigen Jahren führte die Kupferdoppelader von der Vermittlungsstelle bis in die Wohnung, und die T+T-83-Dose war das Ende dieser Kette. Swisscom hat die analoge Festnetztelefonie <strong>Ende 2017</strong> eingestellt und ab 2018 die alte Telefoninfrastruktur schrittweise ausser Betrieb genommen. Seither läuft die Telefonie als <strong>IP-Telefonie</strong> über den Router beziehungsweise die Internet-Box.</p>
+    <p lang="en">Until a few years ago the copper pair ran from the exchange right into the flat, and the T+T 83 socket was the end of that chain. Swisscom shut down analogue fixed-line telephony at the <strong>end of 2017</strong> and from 2018 progressively took the old telephone infrastructure out of service. Since then telephony runs as <strong>IP telephony</strong> over the router or internet box.</p>
+
+    <p lang="de">Damit kehrt sich die Richtung um. Früher kam das Sprachsignal aus der Wand und ging zum Apparat. Heute kommt es aus dem <strong>Router</strong> und muss — wenn man die bestehenden Dosen weiter benutzen will — in die Hausinstallation <strong>zurückgespeist</strong> werden.</p>
+    <p lang="en">This reverses the direction. In the past the voice signal came out of the wall and went to the set. Today it comes out of the <strong>router</strong> and — if the existing sockets are to stay in use — has to be <strong>fed back</strong> into the in-house installation.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VoIP-Rückspeisung in die bestehende T+T-Installation">
+        <defs>
+          <style>
+            .b3{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .dsl{fill:none;stroke:#1D5872;stroke-width:3;stroke-linecap:round}
+            .ana{fill:none;stroke:#B8402A;stroke-width:3;stroke-linecap:round}
+            .t1{font-family:'Archivo',sans-serif;font-size:15px;font-weight:700;fill:#171614}
+            .t2{font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:600;fill:#48433B}
+            .t3{font-family:'IBM Plex Mono',monospace;font-size:9.5px;fill:#7D7669}
+          </style>
+        </defs>
+
+        <text class="t1" x="26" y="26"><tspan lang="de">VoIP-Rückspeisung</tspan><tspan lang="en">VoIP feed-back</tspan></text>
+        <text class="t3" x="26" y="44"><tspan lang="de">BESTEHENDE T+T-DOSEN BLEIBEN IN BETRIEB</tspan><tspan lang="en">EXISTING T+T SOCKETS STAY IN SERVICE</tspan></text>
+
+        <!-- Netz -->
+        <path class="dsl" d="M22 116 H62" stroke-dasharray="6 4"/>
+        <text class="t3" x="22" y="106"><tspan lang="de">NETZ</tspan><tspan lang="en">NETWORK</tspan></text>
+
+        <!-- Übergabepunkt -->
+        <rect class="b3" x="62" y="88" width="92" height="56" rx="4"/>
+        <text class="t2" x="108" y="112" text-anchor="middle"><tspan lang="de">Übergabe</tspan><tspan lang="en">Transfer</tspan></text>
+        <text class="t3" x="108" y="130" text-anchor="middle">NTS / OTO</text>
+
+        <!-- Rückführungsdose -->
+        <rect class="b3" x="222" y="80" width="112" height="72" rx="4"/>
+        <text class="t2" x="278" y="106" text-anchor="middle"><tspan lang="de">Rückführungs-</tspan><tspan lang="en">Feed-back</tspan></text>
+        <text class="t2" x="278" y="122" text-anchor="middle"><tspan lang="de">dose</tspan><tspan lang="en">socket</tspan></text>
+        <text class="t3" x="278" y="140" text-anchor="middle">RJ45</text>
+        <path class="dsl" d="M154 116 H222"/>
+
+        <!-- Router -->
+        <rect class="b3" x="222" y="204" width="112" height="60" rx="4"/>
+        <text class="t2" x="278" y="230" text-anchor="middle"><tspan lang="de">Router /</tspan><tspan lang="en">Router /</tspan></text>
+        <text class="t2" x="278" y="246" text-anchor="middle"><tspan lang="de">Internet-Box</tspan><tspan lang="en">internet box</tspan></text>
+        <path class="dsl" d="M250 152 V204"/>
+        <path class="ana" d="M306 204 V152"/>
+        <text class="t3" x="192" y="182"><tspan lang="de">DSL / LAN</tspan><tspan lang="en">DSL / LAN</tspan></text>
+        <text class="t3" x="314" y="182" fill="#B8402A"><tspan lang="de">analog zurück</tspan><tspan lang="en">analogue back</tspan></text>
+
+        <!-- Verteiler in die Hausinstallation -->
+        <circle cx="386" cy="116" r="5" fill="#171614"/>
+        <path class="ana" d="M334 116 H386"/>
+        <path class="ana" d="M386 116 C 430 116 430 62 474 62"/>
+        <path class="ana" d="M386 116 C 430 116 430 116 474 116"/>
+        <path class="ana" d="M386 116 C 430 116 430 170 474 170"/>
+
+        <rect class="b3" x="474" y="44" width="86" height="36" rx="3"/>
+        <text class="t2" x="517" y="67" text-anchor="middle">T+T 83</text>
+        <rect class="b3" x="474" y="98" width="86" height="36" rx="3"/>
+        <text class="t2" x="517" y="121" text-anchor="middle">T+T 83</text>
+        <rect class="b3" x="474" y="152" width="86" height="36" rx="3"/>
+        <text class="t2" x="517" y="175" text-anchor="middle">T+T 83</text>
+
+        <!-- Apparat -->
+        <rect class="b3" x="628" y="98" width="96" height="36" rx="3"/>
+        <text class="t2" x="676" y="121" text-anchor="middle"><tspan lang="de">Apparat</tspan><tspan lang="en">Telephone</tspan></text>
+        <path class="ana" d="M560 116 H628"/>
+        <text class="t3" x="628" y="152"><tspan lang="de">analog, T+T 87</tspan><tspan lang="en">analogue, T+T 87</tspan></text>
+
+        <text class="t3" x="474" y="234" fill="#B8402A"><tspan lang="de">rot = analoges Signal aus dem Router</tspan><tspan lang="en">red = analogue signal from the router</tspan></text>
+        <text class="t3" x="474" y="250" fill="#1D5872"><tspan lang="de">blau = Breitbandsignal aus dem Netz</tspan><tspan lang="en">blue = broadband signal from the network</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 2</span><span lang="en">Fig. 2</span></b>
+        <span lang="de"> — Die Rückführungsdose trennt das ankommende Breitbandsignal vom abgehenden analogen Signal. Alle nach ihr angeschlossenen T+T-83-Dosen führen wieder eine analoge Leitung.</span>
+        <span lang="en"> — The feed-back socket separates the incoming broadband signal from the outgoing analogue signal. Every T+T 83 socket connected downstream of it carries an analogue line again.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Die Rückführungsdose</span><span lang="en">The feed-back socket</span></h3>
+
+    <p lang="de">Ist eine Rückspeisung in die bestehende Hausinstallation nötig, wird die alte T+T-Dose am Übergabepunkt durch eine <strong>VoIP-Rückführungsdose</strong> ersetzt — je nach Hersteller auch Digitaldose oder Breitband-DSL-Dose genannt. Wird der Router mit ihr verbunden, öffnen sich in der Dose interne Kontakte: Das ankommende Breitbandsignal und das abgehende analoge Signal sind dann sauber voneinander getrennt. <strong>Alle nach dieser Dose angeschlossenen T+T-83-Dosen</strong> erhalten das analoge Telefonsignal aus dem Router, und die alten Apparate funktionieren an jeder Dose weiter.</p>
+    <p lang="en">If feeding back into the existing in-house installation is required, the old T+T socket at the transfer point is replaced by a <strong>VoIP feed-back socket</strong> — depending on the manufacturer also called a digital socket or broadband DSL socket. When the router is connected to it, internal contacts inside the socket open: the incoming broadband signal and the outgoing analogue signal are then cleanly separated. <strong>Every T+T 83 socket connected downstream of it</strong> receives the analogue telephone signal from the router, and the old sets keep working at any socket.</p>
+
+    <h3><span lang="de">Wo liegt das a/b-Paar?</span><span lang="en">Where does the a/b pair sit?</span></h3>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Dosentyp</span><span lang="en">Socket type</span></th>
+            <th><span lang="de">Ader a</span><span lang="en">Wire a</span></th>
+            <th><span lang="de">Ader b</span><span lang="en">Wire b</span></th>
+            <th><span lang="de">Bemerkung</span><span lang="en">Remark</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>T+T 83 / T+T 87</strong></td>
+            <td class="num">1a</td>
+            <td class="num">1b</td>
+            <td><span lang="de">sechspolig, drei Paare</span><span lang="en">six-pole, three pairs</span></td>
+          </tr>
+          <tr>
+            <td><strong>RJ11 (6P2C)</strong></td>
+            <td class="num">Pin 3</td>
+            <td class="num">Pin 4</td>
+            <td><span lang="de">die beiden mittleren Kontakte</span><span lang="en">the two centre contacts</span></td>
+          </tr>
+          <tr>
+            <td><strong>RJ45</strong></td>
+            <td class="num">Pin 4</td>
+            <td class="num">Pin 5</td>
+            <td><span lang="de">das blaue Paar der UKV-Belegung</span><span lang="en">the blue pair of the structured-cabling scheme</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Breitbanddose RJ45</span><span lang="en">Broadband socket RJ45</span></strong></td>
+            <td class="num"><span lang="de">Pin 3 hausseitig</span><span lang="en">pin 3 house side</span></td>
+            <td class="num"><span lang="de">Pin 6 hausseitig</span><span lang="en">pin 6 house side</span></td>
+            <td><span lang="de">Netzpaar auf Pin 4/5; automatische Brücke 3–4 und 5–6, solange kein Stecker steckt; Front empfohlen in Blau</span><span lang="en">network pair on pins 4/5; automatic bridge 3–4 and 5–6 while no plug is inserted; front recommended in blue</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Kombidosen</span><span lang="en">Combination sockets</span></b>
+      <p lang="de">Im Umbau trifft man häufig <strong>Kombidosen</strong> an: eine T+T-83-Buchse und eine oder zwei RJ45-Buchsen im selben Rahmen. So bleibt der alte Apparat anschliessbar, während daneben schon die Datendose sitzt. Wichtig ist, dass die RJ45-Buchse für die jeweilige Aufgabe taugt — die eine breitbandtauglich für den Anschluss, die andere nach Kategorie für das Datennetz.</p>
+      <p lang="en">In refurbishments you often meet <strong>combination sockets</strong>: one T+T 83 outlet plus one or two RJ45 outlets in the same frame. The old set can still be plugged in while the data outlet already sits next to it. What matters is that the RJ45 outlet suits its task — one broadband-capable for the line, the other to category for the data network.</p>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Quellenhinweis</span><span lang="en">Source note</span></b>
+      <p lang="de">Die Angaben zu Pin-Belegung, Kabelvorgaben und Netzabschlusspunkt stammen aus dem Swisscom-Dokument «Technische Anforderungen an die Hausinstallation für die drahtgebundene analoge und digitale Netzschnittstelle» (Version 1.1, gültig ab 1.1.2008). Produkte und Bezeichnungen ändern sich: Vor der Abgabe die <strong>aktuelle Fassung der Anbieterin und den Herstellerkatalog</strong> prüfen. Artikelnummern sind hier bewusst keine aufgeführt.</p>
+      <p lang="en">The details on pin assignment, cable requirements and network termination point come from the Swisscom document “Technical requirements for the in-house installation for the wired analogue and digital network interface” (version 1.1, valid from 1 January 2008). Products and designations change: before handing in, check the <strong>provider's current edition and the manufacturer's catalogue</strong>. No article numbers are quoted here on purpose.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Material, Werkzeug und Trennung vom Starkstrom</span><span lang="en">Materials, tools and separation from power</span></h2>
+
+    <h3><span lang="de">Was auf die Baustelle gehört</span><span lang="en">What belongs on site</span></h3>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Gruppe</span><span lang="en">Group</span></th>
+            <th><span lang="de">Material und Werkzeug</span><span lang="en">Materials and tools</span></th>
+            <th><span lang="de">Wozu</span><span lang="en">Purpose</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Kabel</span><span lang="en">Cable</span></strong></td>
+            <td><span lang="de">U 72, üblich 1 × 4 × 0,5 mm; alternativ Cat-5-Installationskabel</span><span lang="en">U 72, typically 1 × 4 × 0.5 mm; alternatively Cat 5 installation cable</span></td>
+            <td><span lang="de">Verbindung Verteiler – Dose</span><span lang="en">link from distributor to socket</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Dosen</span><span lang="en">Sockets</span></strong></td>
+            <td><span lang="de">T+T-83-Einsatz, Tragring, Abdeckung der Designlinie; Kombieinsatz T+T 83 / RJ45; Rückführungsdose</span><span lang="en">T+T 83 insert, mounting ring, cover of the design line; combination insert T+T 83 / RJ45; feed-back socket</span></td>
+            <td><span lang="de">Anschlussstelle in Zimmer und Verteiler</span><span lang="en">connection point in room and distributor</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Stecker</span><span lang="en">Plugs</span></strong></td>
+            <td><span lang="de">T+T 87 gerade, T+T 89 abgewinkelt; Adapter RJ11 auf T+T</span><span lang="en">T+T 87 straight, T+T 89 angled; RJ11-to-T+T adapter</span></td>
+            <td><span lang="de">Apparatekabel konfektionieren, Altgeräte anschliessen</span><span lang="en">making up apparatus cords, connecting older devices</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Werkzeug</span><span lang="en">Tools</span></strong></td>
+            <td><span lang="de">Abisolierzange für feine Adern, Seitenschneider, kleiner Schraubenzieher, Anlegewerkzeug für Schneidklemmen, Crimpzange für den T+T-87-Stecker</span><span lang="en">stripping pliers for fine cores, side cutters, small screwdriver, punch-down tool for insulation displacement, crimping tool for the T+T 87 plug</span></td>
+            <td><span lang="de">sauberes Absetzen und Auflegen ohne Aderbruch</span><span lang="en">clean stripping and terminating without breaking cores</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Prüfen</span><span lang="en">Testing</span></strong></td>
+            <td><span lang="de">Durchgangsprüfer, Leitungssucher, Prüfapparat oder Prüfhandy</span><span lang="en">continuity tester, cable tracer, test set or test handset</span></td>
+            <td><span lang="de">Zuordnung der Dosen, Nachweis der Verbindung</span><span lang="en">identifying sockets, proving the connection</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Stark- und Schwachstrom trennen</span><span lang="en">Separating power and low current</span></h3>
+
+    <p lang="de">Stark- und Schwachstrom werden aus <strong>zwei Gründen</strong> getrennt geführt. Der erste ist die <strong>Sicherheit</strong>: Gerät bei einem Fehler Netzspannung auf eine Telefonader, liegt sie unmittelbar am Apparat und damit an der Person, die telefoniert. Der zweite ist die <strong>elektromagnetische Verträglichkeit</strong>: Eine Energieleitung, die über eine längere Strecke dicht neben einem Datenpaar liegt, koppelt Störungen ein. Bei der analogen Sprache hört man das als Brummen, bei Breitbanddiensten sinkt die erreichbare Geschwindigkeit.</p>
+    <p lang="en">Power and low-current wiring are kept apart for <strong>two reasons</strong>. The first is <strong>safety</strong>: if a fault puts mains voltage onto a telephone wire, that voltage sits directly at the set and therefore at the person on the phone. The second is <strong>electromagnetic compatibility</strong>: a power cable running close to a data pair over a long distance couples interference into it. On analogue speech you hear it as hum; on broadband services the achievable speed drops.</p>
+
+    <ul lang="de">
+      <li><strong>Getrennte Rohre und getrennte Kanalabteile</strong> — Kommunikationskabel gehören nicht ins gleiche Rohr wie die Energieleitung</li>
+      <li><strong>Getrennte Einlasskästen</strong>, oder mindestens eine trennende Zwischenwand in der Kombination</li>
+      <li><strong>Parallelführung vermeiden</strong>; wo sich Leitungen begegnen müssen, möglichst rechtwinklig kreuzen</li>
+      <li><strong>Verdrillte Paare verwenden</strong> und die Verdrillung bis unmittelbar an die Klemme führen</li>
+      <li><strong>Schirm nur einseitig und impedanzarm auflegen</strong>, damit kein Ausgleichsstrom über den Schirm fliesst</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Separate conduits and separate trunking compartments</strong> — communications cables do not belong in the same conduit as the power cable</li>
+      <li><strong>Separate flush boxes</strong>, or at least a dividing partition inside the combination</li>
+      <li><strong>Avoid running in parallel</strong>; where lines have to meet, cross them at right angles if possible</li>
+      <li><strong>Use twisted pairs</strong> and keep the twist right up to the terminal</li>
+      <li><strong>Bond the screen at one end only and with low impedance</strong>, so that no equalising current flows through it</li>
+    </ul>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Vor der Abgabe in der eigenen NIN-Ausgabe nachschlagen</span><span lang="en">Look up in your own NIN edition before handing in</span></b>
+      <p lang="de">Die konkreten <strong>Mindestabstände</strong> zwischen Energie- und Kommunikationsleitungen sind <strong>keine feste Zahl</strong>. Sie hängen von der Trennklasse, von der Art des Kanals, von der Schirmung und von der Parallellänge ab und stehen in der <strong>SN EN 50174-2</strong>, ergänzt durch die Regeln der <strong>NIN (SN 411000)</strong>. Für die Lerndokumentation ist die richtige Antwort deshalb «nach Trennklasse gemäss SN EN 50174-2» — die Tabellenwerte gehören vor der Abgabe in der aktuellen Ausgabe nachgeschlagen und mit dem Projekt abgeglichen.</p>
+      <p lang="en">The concrete <strong>minimum separation distances</strong> between power and communications cables are <strong>not a single fixed figure</strong>. They depend on the separation class, the type of containment, the screening and the parallel length, and are given in <strong>SN EN 50174-2</strong>, supplemented by the rules of the <strong>NIN (SN 411000)</strong>. For this learning documentation the correct answer is therefore “according to the separation class per SN EN 50174-2” — the table values must be looked up in the current edition before handing in and matched to the project.</p>
+    </div>
+
+    <h3><span lang="de">Abgrenzung zur UKV</span><span lang="en">Distinction from structured cabling</span></h3>
+
+    <p lang="de">Die T+T-Installation ist eine <strong>dienstgebundene</strong> Verkabelung: Sie ist für Telefonie gebaut und kann nichts anderes. Die <strong>universelle Kommunikationsverkabelung (UKV)</strong> — Thema 12 — ist das Gegenteil: eine <strong>anwendungsneutrale</strong> Verkabelung nach SN EN 50173, sternförmig ab einem Kommunikationsverteiler, durchgehend mit RJ45 und geprüften Kategorien. Über dieselbe Dose läuft dann Telefonie, Netzwerk, Fernsehen oder Gebäudetechnik, je nachdem, was im Verteiler aufgepatcht wird.</p>
+    <p lang="en">The T+T installation is a <strong>service-specific</strong> cabling system: it is built for telephony and can do nothing else. <strong>Structured cabling (UKV)</strong> — topic 12 — is the opposite: an <strong>application-neutral</strong> cabling system to SN EN 50173, star-shaped from a communications distributor, RJ45 throughout and tested to category. The same outlet then carries telephony, network, television or building services, depending on what is patched in the distributor.</p>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Warum die T+T-Dose trotzdem bleibt</span><span lang="en">Why the T+T socket nevertheless remains</span></b>
+      <p lang="de">Im Neubau wird keine T+T-Installation mehr erstellt; dort wird UKV verlegt. Im Bestand ist die T+T-Dose aber weiterhin überall anzutreffen. Wer sie kennt, kann eine Altanlage sauber übernehmen, mit einer Rückführungsdose weiterbetreiben oder Schritt für Schritt auf RJ45 umbauen — statt sie blind herauszureissen.</p>
+      <p lang="en">No new T+T installation is built in new construction; structured cabling is laid instead. In existing buildings, however, the T+T socket is still everywhere. Anyone who knows it can take over an old installation properly, keep it running with a feed-back socket, or convert it to RJ45 step by step — instead of tearing it out blindly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Was bezeichnen T+T 83, T+T 87 und T+T 89?</span><span lang="en">What do T+T 83, T+T 87 and T+T 89 designate?</span></summary>
+      <div class="ans">
+        <p lang="de">T+T 83 ist die sechspolige Telefondose. T+T 87 ist der gerade Stecker, dessen Kontaktstifte mit einem Werkzeug eingesetzt werden. T+T 89 ist der Winkelstecker, bei dem die Adern eines Flachbandkabels in Schneidklemmtechnik ohne Werkzeug angepresst werden. Die beiden Stecker heissen nach ihrer Entwicklerin Reichle &amp; De-Massari umgangssprachlich Reichle-Stecker.</p>
+        <p lang="en">T+T 83 is the six-pole telephone socket. T+T 87 is the straight plug whose contact pins are fitted with a tool. T+T 89 is the angled plug, in which the cores of a flat cable are pressed in by insulation displacement without a tool. Both plugs are colloquially called Reichle plugs after their developer Reichle &amp; De-Massari.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie viele Kontakte hat eine T+T-83-Dose und wie sind sie bezeichnet?</span><span lang="en">How many contacts does a T+T 83 socket have and how are they designated?</span></summary>
+      <div class="ans">
+        <p lang="de">Sechs Kontakte, die drei Paare bilden: 1a/1b, 2a/2b und 3a/3b. Für einen gewöhnlichen analogen Anschluss wird nur das erste Paar gebraucht — die Sprechadern a und b liegen auf 1a und 1b.</p>
+        <p lang="en">Six contacts forming three pairs: 1a/1b, 2a/2b and 3a/3b. An ordinary analogue line uses only the first pair — the speech wires a and b sit on 1a and 1b.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum darf man ein T+T-Kabel nicht einfach nach Aderfarbe auflegen?</span><span lang="en">Why must you not simply terminate a T+T cord by core colour?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil in der Schweiz ein Telefonkabel anders beschaltet ist als ein Modemkabel, obwohl die Stecker gleich aussehen. Beim Telefonkabel liegen weiss auf 1a und blau auf 1b, beim Modemkabel grün auf 1a und braun/blau auf 1b. Der Unterschied ist von aussen nur an den Farben erkennbar. Massgebend ist deshalb immer die Kontaktbezeichnung, nicht die Farbe.</p>
+        <p lang="en">Because in Switzerland a telephone cord is wired differently from a modem cord, even though the plugs look identical. On the telephone cord white is on 1a and blue on 1b; on the modem cord green is on 1a and brown/blue on 1b. From the outside the difference shows only in the colours. The contact designation is therefore always what counts, not the colour.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was ist der Unterschied zwischen Netz-Trennstelle und Netzabschlusspunkt?</span><span lang="en">What is the difference between the network termination separation point and the network termination point?</span></summary>
+      <div class="ans">
+        <p lang="de">Die Netz-Trennstelle (NTS) ist der Gebäudeeinführungspunkt: Dort endet das Anschlussnetz der Anbieterin und beginnt die Hausinstallation. Der Netzabschlusspunkt (NTP) ist das Ende der Hausinstallation — beim analogen Anschluss die mit der Breitbanddose verbundene Telefonsteckdose oder, wenn keine vorhanden ist, die kabellängenmässig nächstgelegene Dose zur Netz-Trennstelle. Dazwischen liegt immer eine Punkt-Punkt-Verbindung.</p>
+        <p lang="en">The network termination separation point (NTS) is the building entry point: there the provider's access network ends and the in-house installation begins. The network termination point (NTP) is the end of the in-house installation — on an analogue line the telephone socket connected to the broadband socket or, if there is none, the socket closest to the separation point in cable length. Between the two there is always a point-to-point connection.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum wird sternförmig statt durchgeschlauft verkabelt?</span><span lang="en">Why is star wiring used instead of looping through?</span></summary>
+      <div class="ans">
+        <p lang="de">Beim Durchschlaufen hängen alle Dosen parallel an derselben Doppelader. Für reine Sprachtelefonie genügt das, aber jede Abzweigung wirkt für ein Breitbandsignal als Stichleitung und stört die Übertragung. Swisscom verlangt darum, dass das DSL-Signal ohne Zweigleitungen und schlechte Kontakte direkt von der Netz-Trennstelle zum Netzabschlussgerät geführt wird. Die Sternverkabelung gibt jeder Dose eine eigene Leitung ab dem Verteiler.</p>
+        <p lang="en">When looping through, all sockets hang in parallel on the same pair. That is enough for plain voice telephony, but for a broadband signal every branch acts as a stub and disturbs transmission. Swisscom therefore requires the DSL signal to run directly from the separation point to the network termination device, free of branches and poor contacts. Star wiring gives every socket its own line from the distributor.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welche Eckwerte gelten für das Kabel der Hausinstallation?</span><span lang="en">Which key figures apply to the in-house installation cable?</span></summary>
+      <div class="ans">
+        <p lang="de">Verdrilltes Kabel mit einem Leiterdurchmesser von mindestens 0,5 mm, höchstens 100 m Leitungslänge, ein Gleichstromwiderstand der Ader von höchstens 10 Ω pro 100 m bei 20 °C und eine Wellendämpfung von höchstens 1 dB pro 100 m bei 40 kHz. Empfohlen wird das Kabel U 72 oder Cat-5-Paare mit einem Wellenwiderstand von 100 bis 135 Ω (± 15 %).</p>
+        <p lang="en">Twisted cable with a conductor diameter of at least 0.5 mm, a line length of no more than 100 m, a DC core resistance of no more than 10 Ω per 100 m at 20 °C and an attenuation of no more than 1 dB per 100 m at 40 kHz. The recommended cable is U 72 or Cat 5 pairs with a characteristic impedance of 100 to 135 Ω (± 15 %).</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie kann ein analoger Apparat heute noch an einer T+T-83-Dose betrieben werden?</span><span lang="en">How can an analogue set still be operated on a T+T 83 socket today?</span></summary>
+      <div class="ans">
+        <p lang="de">Über die VoIP-Rückspeisung. Die Telefonie kommt heute als IP-Dienst aus dem Router. Am Übergabepunkt wird die alte T+T-Dose durch eine Rückführungsdose ersetzt. Wird der Router mit ihr verbunden, öffnen sich interne Kontakte, das ankommende Breitbandsignal und das abgehende analoge Signal werden getrennt, und alle nachgelagerten T+T-83-Dosen führen wieder eine analoge Leitung.</p>
+        <p lang="en">Through VoIP feed-back. Telephony today comes from the router as an IP service. At the transfer point the old T+T socket is replaced by a feed-back socket. When the router is connected to it, internal contacts open, the incoming broadband signal and the outgoing analogue signal are separated, and all downstream T+T 83 sockets carry an analogue line again.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Nenne zwei Gründe für die Trennung von Stark- und Schwachstrom.</span><span lang="en">Name two reasons for separating power and low-current wiring.</span></summary>
+      <div class="ans">
+        <p lang="de">Erstens die Sicherheit: Gerät bei einem Fehler Netzspannung auf eine Telefonader, liegt diese Spannung direkt am Apparat und damit an der Person. Zweitens die elektromagnetische Verträglichkeit: Eine lange Parallelführung neben einer Energieleitung koppelt Störungen in das Datenpaar ein — hörbar als Brummen, messbar als geringere Übertragungsrate. Die einzuhaltenden Abstände richten sich nach der Trennklasse gemäss SN EN 50174-2 und sind vor der Ausführung nachzuschlagen.</p>
+        <p lang="en">First, safety: if a fault puts mains voltage onto a telephone wire, that voltage sits directly at the set and therefore at the person. Second, electromagnetic compatibility: a long parallel run next to a power cable couples interference into the data pair — audible as hum, measurable as a lower transmission rate. The distances to be observed follow the separation class per SN EN 50174-2 and must be looked up before the work is carried out.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Worin unterscheidet sich die T+T-Installation von der UKV?</span><span lang="en">How does the T+T installation differ from structured cabling?</span></summary>
+      <div class="ans">
+        <p lang="de">Die T+T-Installation ist dienstgebunden: Sie ist für die analoge Telefonie gebaut und kann nichts anderes. Die UKV nach SN EN 50173 ist anwendungsneutral, sternförmig ab einem Kommunikationsverteiler und durchgehend mit RJ45 aufgebaut. Über dieselbe Dose läuft je nach Patchung Telefonie, Netzwerk oder Gebäudetechnik. Im Neubau wird deshalb UKV verlegt, während T+T-Dosen im Bestand weiterhin überall anzutreffen sind.</p>
+        <p lang="en">The T+T installation is service-specific: it is built for analogue telephony and can do nothing else. Structured cabling to SN EN 50173 is application-neutral, star-shaped from a communications distributor and built with RJ45 throughout. Depending on the patching, the same outlet carries telephony, network or building services. New buildings therefore get structured cabling, while T+T sockets are still found everywhere in existing stock.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="09-eib-knx.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>09 · <span lang="de">EIB / KNX</span><span lang="en">EIB / KNX</span></b>
+  </a>
+  <a class="next" href="11-tv-installationen.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>11 · <span lang="de">TV-Installationen</span><span lang="en">TV Installations</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 10 · T+T-Installationen</span><span lang="en">Learning Documentation 10 · Telephone Installations</span></span>
+  <span>Yanik · Etavis · <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></span>
+  <span><span lang="de">Grundlagen: NIN · SN EN 50174-2 · SN EN 50173 · FDV · Swisscom GV08</span><span lang="en">Basis: NIN · SN EN 50174-2 · SN EN 50173 · FDV · Swisscom GV08</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

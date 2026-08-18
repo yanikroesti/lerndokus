@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 06 — Steuerung easyE4" data-en="Learning Documentation 06 — easyE4 Controller">Lerndokumentation 06 — Steuerung easyE4</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span>
+    <span lang="de">Thema 06</span><span lang="en">Topic 06</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">06</div>
+    <h1><span lang="de">Steuerung<br>easyE4</span><span lang="en">easyE4<br>Controller</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Schema · Beschrieb · Programmierung · Funktionsbausteine · Grenzen</span>
+    <span lang="en">Diagram · description · programming · function blocks · limitations</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">06 von 12</span><span lang="en">06 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Steuerrelais mit Display">
+        <rect x="52" y="26" width="116" height="98" rx="7" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <rect x="66" y="40" width="88" height="36" rx="3" fill="#26241F" stroke="#171614" stroke-width="2"/>
+        <path d="M74 56 h20 M100 56 h16 M124 56 h14 M74 66 h34 M114 66 h24" stroke="#3F6B43" stroke-width="2.2" stroke-linecap="round"/>
+        <g fill="#C9C2B4" stroke="#171614" stroke-width="1.8">
+          <rect x="70" y="88" width="16" height="14" rx="2"/>
+          <rect x="92" y="88" width="16" height="14" rx="2"/>
+          <rect x="114" y="88" width="16" height="14" rx="2"/>
+          <rect x="136" y="88" width="16" height="14" rx="2"/>
+        </g>
+        <circle cx="92" cy="112" r="2.6" fill="#171614"/>
+        <circle cx="128" cy="112" r="2.6" fill="#171614"/>
+        <path d="M64 26 v-12 M88 26 v-12 M112 26 v-12 M136 26 v-12 M160 26 v-12" stroke="#B8402A" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M64 124 v12 M88 124 v12 M112 124 v12 M136 124 v12 M160 124 v12" stroke="#1D5872" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M32 130 h156" stroke="#C9C2B4" stroke-width="7" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Was ein Steuerrelais ist</span><span lang="en">What a control relay is</span></h2>
+
+    <p class="lead" lang="de">Das Steuerrelais schliesst die Lücke zwischen der <strong>fest verdrahteten Schützensteuerung</strong> und der <strong>speicherprogrammierbaren Steuerung</strong>. Es ist klein, sitzt auf der Hutschiene und wird nicht verdrahtet, sondern <strong>programmiert</strong>.</p>
+    <p class="lead" lang="en">A control relay fills the gap between <strong>hard-wired contactor control</strong> and a full <strong>programmable logic controller</strong>. It is small, sits on the DIN rail and is not wired but <strong>programmed</strong>.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th><span lang="de">Schützensteuerung</span><span lang="en">Contactor control</span></th>
+            <th><span lang="de">Steuerrelais</span><span lang="en">Control relay</span></th>
+            <th>SPS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span lang="de">Logik steckt in</span><span lang="en">Logic lives in</span></td><td><span lang="de">der Verdrahtung</span><span lang="en">the wiring</span></td><td><span lang="de">der Software</span><span lang="en">software</span></td><td><span lang="de">der Software</span><span lang="en">software</span></td></tr>
+          <tr><td><span lang="de">Änderung</span><span lang="en">Changes</span></td><td><span lang="de">umverdrahten</span><span lang="en">rewire</span></td><td><span lang="de">umprogrammieren</span><span lang="en">reprogram</span></td><td><span lang="de">umprogrammieren</span><span lang="en">reprogram</span></td></tr>
+          <tr><td><span lang="de">Zeitfunktionen</span><span lang="en">Timing functions</span></td><td><span lang="de">Zusatzgeräte nötig</span><span lang="en">extra devices needed</span></td><td><span lang="de">eingebaut</span><span lang="en">built in</span></td><td><span lang="de">eingebaut</span><span lang="en">built in</span></td></tr>
+          <tr><td><span lang="de">Umfang</span><span lang="en">Scale</span></td><td><span lang="de">wenige Funktionen</span><span lang="en">few functions</span></td><td><span lang="de">kleine bis mittlere Aufgaben</span><span lang="en">small to medium tasks</span></td><td><span lang="de">grosse Anlagen</span><span lang="en">large installations</span></td></tr>
+          <tr><td><span lang="de">Bedienung vor Ort</span><span lang="en">Local operation</span></td><td>—</td><td><span lang="de">Display und Tasten am Gerät</span><span lang="en">display and keys on the device</span></td><td><span lang="de">meist externes Panel</span><span lang="en">usually an external panel</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Zur Bezeichnung</span><span lang="en">On the naming</span></b>
+      <p lang="de">Mit «Easy 4» ist die vierte Gerätegeneration der <strong>easy-Steuerrelais von Eaton</strong> gemeint, die als <strong>easyE4</strong> bezeichnet wird. Ältere Generationen sind unter easy500, easy700 und easy800 im Einsatz und funktionieren im Grundsatz gleich, unterscheiden sich aber in Ein- und Ausgängen, Programmiersprachen und Zubehör. <strong>Für die Abgabe das im Betrieb tatsächlich verwendete Gerät und dessen Handbuch heranziehen.</strong></p>
+      <p lang="en">“Easy 4” refers to the fourth generation of <strong>Eaton easy control relays</strong>, designated <strong>easyE4</strong>. Older generations remain in service as easy500, easy700 and easy800; they work on the same principle but differ in inputs and outputs, programming languages and accessories. <strong>For your submission, use the device actually in use at your company and its manual.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Aufbau und Anschluss</span><span lang="en">Construction and connection</span></h2>
+
+    <figure>
+      <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anschlussschema eines Steuerrelais mit Eingängen und Relaisausgängen">
+        <defs>
+          <style>
+            .hs{fill:#EFEAE0;stroke:#171614;stroke-width:2.4}
+            .disp{fill:#26241F;stroke:#171614;stroke-width:2}
+            .tm{fill:#C9C2B4;stroke:#171614;stroke-width:1.6}
+            .win{fill:none;stroke:#1D5872;stroke-width:2.6;stroke-linecap:round}
+            .wout{fill:none;stroke:#B8402A;stroke-width:2.6;stroke-linecap:round}
+            .wp{fill:none;stroke:#48433B;stroke-width:2.6;stroke-linecap:round}
+            .lb{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;fill:#171614;text-anchor:middle}
+            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.06em}
+            .dot{fill:#171614}
+          </style>
+        </defs>
+
+        <!-- Gerät -->
+        <rect class="hs" x="250" y="130" width="260" height="150" rx="8"/>
+        <rect class="disp" x="286" y="152" width="128" height="52" rx="3"/>
+        <path d="M296 172 h34 M340 172 h26 M376 172 h28 M296 188 h52 M356 188 h48" stroke="#3F6B43" stroke-width="2" stroke-linecap="round"/>
+        <g class="tm">
+          <rect x="430" y="152" width="20" height="16" rx="2"/>
+          <rect x="456" y="152" width="20" height="16" rx="2"/>
+          <rect x="430" y="176" width="20" height="16" rx="2"/>
+          <rect x="456" y="176" width="20" height="16" rx="2"/>
+        </g>
+        <text class="lgs" x="380" y="264" text-anchor="middle">easyE4</text>
+
+        <!-- Eingangsklemmen oben -->
+        <g>
+          <rect class="tm" x="266" y="112" width="26" height="18" rx="2"/><text class="lb" x="279" y="106">I1</text>
+          <rect class="tm" x="306" y="112" width="26" height="18" rx="2"/><text class="lb" x="319" y="106">I2</text>
+          <rect class="tm" x="346" y="112" width="26" height="18" rx="2"/><text class="lb" x="359" y="106">I3</text>
+          <rect class="tm" x="386" y="112" width="26" height="18" rx="2"/><text class="lb" x="399" y="106">I4</text>
+          <rect class="tm" x="446" y="112" width="46" height="18" rx="2"/><text class="lb" x="469" y="106">L / +24V</text>
+        </g>
+
+        <!-- Ausgangsklemmen unten -->
+        <g>
+          <rect class="tm" x="286" y="280" width="30" height="18" rx="2"/><text class="lb" x="301" y="312">Q1</text>
+          <rect class="tm" x="340" y="280" width="30" height="18" rx="2"/><text class="lb" x="355" y="312">Q2</text>
+          <rect class="tm" x="394" y="280" width="30" height="18" rx="2"/><text class="lb" x="409" y="312">Q3</text>
+          <rect class="tm" x="448" y="280" width="30" height="18" rx="2"/><text class="lb" x="463" y="312">Q4</text>
+        </g>
+
+        <!-- Eingänge: Taster und Schalter -->
+        <g>
+          <path class="win" d="M279 112 V70"/>
+          <path class="win" d="M279 70 h-40"/>
+          <path d="M225 70 h14 M239 70 V58 M225 58 h14" stroke="#171614" stroke-width="2.4" fill="none"/>
+          <path class="win" d="M211 70 h14"/>
+          <text class="lg" x="120" y="66"><tspan lang="de">Taster S1</tspan><tspan lang="en">Button S1</tspan></text>
+          <path class="win" d="M118 70 h-30" stroke="#7D7669" stroke-width="1.2" stroke-dasharray="4 4"/>
+
+          <path class="win" d="M319 112 V44"/>
+          <path class="win" d="M319 44 h-60"/>
+          <circle class="dot" cx="259" cy="44" r="4"/>
+          <path d="M259 44 L232 32" stroke="#171614" stroke-width="2.4"/>
+          <circle class="dot" cx="228" cy="44" r="4"/>
+          <path class="win" d="M228 44 h-40"/>
+          <text class="lg" x="120" y="40"><tspan lang="de">Schalter S2</tspan><tspan lang="en">Switch S2</tspan></text>
+        </g>
+
+        <!-- Versorgung -->
+        <path class="wp" d="M469 112 V60 H620"/>
+        <text class="lg" x="628" y="56"><tspan lang="de">Speisung</tspan><tspan lang="en">Supply</tspan></text>
+        <text class="lgs" x="628" y="72">24 V DC / 230 V AC</text>
+
+        <!-- Ausgänge: Schütz und Lampe -->
+        <g>
+          <path class="wout" d="M301 298 V340"/>
+          <rect x="272" y="340" width="58" height="34" rx="3" fill="#F0DBD4" stroke="#B8402A" stroke-width="2.2"/>
+          <text class="lb" x="301" y="362">K1</text>
+          <text class="lgs" x="301" y="392" text-anchor="middle"><tspan lang="de">SCHÜTZ</tspan><tspan lang="en">CONTACTOR</tspan></text>
+
+          <path class="wout" d="M409 298 V340"/>
+          <circle cx="409" cy="358" r="18" fill="none" stroke="#B8402A" stroke-width="2.4"/>
+          <path d="M397 346 L421 370 M421 346 L397 370" stroke="#B8402A" stroke-width="2.4" stroke-linecap="round"/>
+          <text class="lgs" x="409" y="392" text-anchor="middle"><tspan lang="de">MELDELEUCHTE</tspan><tspan lang="en">INDICATOR</tspan></text>
+        </g>
+
+        <!-- Beschriftungen -->
+        <path d="M492 160 H620" stroke="#7D7669" stroke-width="1.2" fill="none"/>
+        <text class="lg" x="628" y="156"><tspan lang="de">Bedientasten</tspan><tspan lang="en">Operating keys</tspan></text>
+        <path d="M520 200 H620" stroke="#7D7669" stroke-width="1.2" fill="none"/>
+        <text class="lg" x="628" y="196"><tspan lang="de">Display</tspan><tspan lang="en">Display</tspan></text>
+        <text class="lgs" x="628" y="212"><tspan lang="de">SCHEMA UND DIAGNOSE</tspan><tspan lang="en">PROGRAM AND DIAGNOSTICS</tspan></text>
+
+        <text class="lgs" x="130" y="240" fill="#1D5872"><tspan lang="de">EINGÄNGE I</tspan><tspan lang="en">INPUTS I</tspan></text>
+        <text class="lgs" x="130" y="256"><tspan lang="de">TASTER, SCHALTER, SENSOREN</tspan><tspan lang="en">BUTTONS, SWITCHES, SENSORS</tspan></text>
+        <text class="lgs" x="560" y="340" fill="#B8402A"><tspan lang="de">AUSGÄNGE Q</tspan><tspan lang="en">OUTPUTS Q</tspan></text>
+        <text class="lgs" x="560" y="356"><tspan lang="de">SCHÜTZE, LEUCHTEN, VENTILE</tspan><tspan lang="en">CONTACTORS, LAMPS, VALVES</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Anschlussschema. <span style="color:var(--mag)">Blau = Eingänge</span>, <span style="color:var(--therm)">rot = Ausgänge</span>. Zwischen Ein- und Ausgang liegt keine Verdrahtung, sondern das Programm.</span>
+        <span lang="en"> — Connection diagram. <span style="color:var(--mag)">Blue = inputs</span>, <span style="color:var(--therm)">red = outputs</span>. Between input and output there is no wiring but the program.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Baugruppen</span><span lang="en">Assemblies</span></h3>
+    <ul lang="de">
+      <li><strong>Digitale Eingänge (I)</strong> — Taster, Schalter, Endschalter, Sensoren; je nach Gerät auch als Analogeingang nutzbar</li>
+      <li><strong>Ausgänge (Q)</strong> — als <strong>Relaisausgang</strong> (potentialfreier Kontakt, für Schütze und Leuchten) oder als <strong>Transistorausgang</strong> (schnell, nur DC)</li>
+      <li><strong>Display und Tasten</strong> — zum Programmieren, Parametrieren und für die Diagnose direkt am Gerät</li>
+      <li><strong>Speicher</strong> — das Programm bleibt bei Spannungsausfall erhalten; Sicherung und Übertragung über Speicherkarte oder PC</li>
+      <li><strong>Erweiterungsmodule</strong> — zusätzliche Ein- und Ausgänge, wenn das Basisgerät nicht reicht</li>
+      <li><strong>Schnittstelle</strong> — je nach Gerät Ethernet oder Programmierbuchse für die PC-Software</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Digital inputs (I)</strong> — buttons, switches, limit switches, sensors; on some devices usable as analogue inputs too</li>
+      <li><strong>Outputs (Q)</strong> — as a <strong>relay output</strong> (volt-free contact, for contactors and lamps) or a <strong>transistor output</strong> (fast, DC only)</li>
+      <li><strong>Display and keys</strong> — for programming, parameter setting and diagnostics directly on the device</li>
+      <li><strong>Memory</strong> — the program survives a power failure; backup and transfer via memory card or PC</li>
+      <li><strong>Expansion modules</strong> — additional inputs and outputs when the base unit is not enough</li>
+      <li><strong>Interface</strong> — depending on the device, Ethernet or a programming socket for the PC software</li>
+    </ul>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Relais- oder Transistorausgang?</span><span lang="en">Relay or transistor output?</span></b>
+      <p lang="de">Der <strong>Relaisausgang</strong> ist potentialfrei und kann auch 230 V schalten — ideal für Schütze und Leuchten, aber mechanisch begrenzt in der Schaltspielzahl. Der <strong>Transistorausgang</strong> schaltet nur Gleichspannung, dafür verschleissfrei und sehr schnell — passend für häufig taktende Signale.</p>
+      <p lang="en">A <strong>relay output</strong> is volt-free and can switch 230 V — ideal for contactors and lamps, but mechanically limited in the number of operations. A <strong>transistor output</strong> switches DC only, but does so without wear and very fast — suitable for frequently cycling signals.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Programmierung</span><span lang="en">Programming</span></h2>
+
+    <p lang="de">Das Programm wird im <strong>Kontaktplan</strong> geschrieben — also genau in der Denkweise, die man von der Schützensteuerung schon kennt. Links die Bedingungen, rechts das Ergebnis.</p>
+    <p lang="en">The program is written as a <strong>ladder diagram</strong> — in exactly the way of thinking already familiar from contactor control. Conditions on the left, the result on the right.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kontaktplan-Beispiel mit Selbsthaltung">
+        <defs>
+          <style>
+            .rail{fill:none;stroke:#171614;stroke-width:3}
+            .w{fill:none;stroke:#171614;stroke-width:2.4;stroke-linecap:round}
+            .lb{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;fill:#171614;text-anchor:middle}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.06em}
+            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
+          </style>
+        </defs>
+
+        <!-- Stromschienen -->
+        <path class="rail" d="M80 50 V220"/>
+        <path class="rail" d="M660 50 V220"/>
+
+        <!-- Strompfad 1 -->
+        <path class="w" d="M80 100 H180"/>
+        <path class="w" d="M180 88 v24 M212 88 v24"/>
+        <path class="w" d="M212 100 H320"/>
+        <path class="w" d="M320 88 v24 M352 88 v24"/>
+        <path d="M320 112 L352 88" stroke="#171614" stroke-width="2.4"/>
+        <path class="w" d="M352 100 H560"/>
+        <circle cx="590" cy="100" r="22" fill="none" stroke="#B8402A" stroke-width="2.6"/>
+        <path class="w" d="M560 100 H568"/>
+        <text class="lb" x="590" y="105" fill="#B8402A">Q1</text>
+        <path class="w" d="M612 100 H660"/>
+
+        <text class="lb" x="196" y="78">I1</text>
+        <text class="lgs" x="196" y="132" text-anchor="middle"><tspan lang="de">START</tspan><tspan lang="en">START</tspan></text>
+        <text class="lb" x="336" y="78">I2</text>
+        <text class="lgs" x="336" y="132" text-anchor="middle"><tspan lang="de">STOPP (ÖFFNER)</tspan><tspan lang="en">STOP (NC)</tspan></text>
+
+        <!-- Selbsthaltung -->
+        <path class="w" d="M80 170 H180"/>
+        <path class="w" d="M180 158 v24 M212 158 v24"/>
+        <path class="w" d="M212 170 H320"/>
+        <path class="w" d="M320 100 V170"/>
+        <circle cx="320" cy="100" r="4" fill="#171614"/>
+        <text class="lb" x="196" y="148" fill="#B8402A">Q1</text>
+        <text class="lgs" x="196" y="202" text-anchor="middle"><tspan lang="de">SELBSTHALTUNG</tspan><tspan lang="en">SELF-HOLDING</tspan></text>
+
+        <text class="lgs" x="80" y="248"><tspan lang="de">I1 STARTET · I2 STOPPT · Q1 HÄLT SICH ÜBER DEN EIGENEN KONTAKT — GENAU WIE IN DER SCHÜTZENSTEUERUNG</tspan><tspan lang="en">I1 STARTS · I2 STOPS · Q1 HOLDS ITSELF VIA ITS OWN CONTACT — EXACTLY AS IN CONTACTOR CONTROL</tspan></text>
+        <text class="lgs" x="80" y="272" fill="#B8402A"><tspan lang="de">DER KONTAKT VON Q1 IST HIER SOFTWARE — ER MUSS NICHT VERDRAHTET WERDEN</tspan><tspan lang="en">THE Q1 CONTACT HERE IS SOFTWARE — IT DOES NOT HAVE TO BE WIRED</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 2</span><span lang="en">Fig. 2</span></b>
+        <span lang="de"> — Selbsthaltung im Kontaktplan. Dasselbe Verhalten wie bei der Schützensteuerung, aber ohne einen einzigen zusätzlichen Draht.</span>
+        <span lang="en"> — Self-holding in a ladder diagram. The same behaviour as contactor control, but without a single extra wire.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Zwei Wege zum Programm</span><span lang="en">Two routes to the program</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Weg</span><span lang="en">Route</span></th>
+            <th><span lang="de">Vorteil</span><span lang="en">Advantage</span></th>
+            <th><span lang="de">Nachteil</span><span lang="en">Drawback</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Direkt am Gerät</span><span lang="en">On the device</span></strong></td>
+            <td><span lang="de">kein PC nötig, ideal für kleine Änderungen vor Ort</span><span lang="en">no PC needed, ideal for small changes on site</span></td>
+            <td><span lang="de">mühsam bei grösseren Programmen, keine Dokumentation</span><span lang="en">tedious for larger programs, no documentation</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Mit PC-Software</span><span lang="en">With PC software</span></strong></td>
+            <td><span lang="de">übersichtlich, simulierbar vor dem Aufspielen, druckbare Dokumentation, Sicherungskopie</span><span lang="en">clear, can be simulated before download, printable documentation, backup copy</span></td>
+            <td><span lang="de">PC und Software nötig</span><span lang="en">requires a PC and the software</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Simulation vor dem Aufspielen</span><span lang="en">Simulate before downloading</span></b>
+      <p lang="de">Die PC-Software kann das Programm <strong>am Bildschirm durchspielen</strong>, bevor es auf das Gerät kommt. Ein- und Ausgänge lassen sich von Hand setzen und das Verhalten beobachten. Das findet Denkfehler, bevor ein Schütz zieht, das nicht ziehen sollte — und ist bei einer Anlage, die schon läuft, oft die einzige sichere Testmöglichkeit.</p>
+      <p lang="en">The PC software can <strong>run the program on screen</strong> before it reaches the device. Inputs and outputs can be set by hand and the behaviour observed. This finds logical errors before a contactor pulls in that should not — and on a running installation it is often the only safe way to test.</p>
+    </div>
+
+    <h3><span lang="de">Funktionsbausteine</span><span lang="en">Function blocks</span></h3>
+    <p lang="de">Der eigentliche Gewinn gegenüber der Schützensteuerung liegt in den fertigen Bausteinen. Was in Relaistechnik ein eigenes Gerät bräuchte, ist hier eine Zeile im Programm.</p>
+    <p lang="en">The real gain over contactor control lies in the ready-made blocks. What would need a separate device in relay technology is one line in the program here.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th><span lang="de">Baustein</span><span lang="en">Block</span></th><th><span lang="de">Funktion</span><span lang="en">Function</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong><span lang="de">Zeitrelais</span><span lang="en">Timer</span></strong></td><td><span lang="de">ein- und ausschaltverzögert, taktend, impulsformend</span><span lang="en">on-delay, off-delay, cycling, pulse-forming</span></td></tr>
+          <tr><td><strong><span lang="de">Zähler</span><span lang="en">Counter</span></strong></td><td><span lang="de">vorwärts, rückwärts, mit Vorwahlwert</span><span lang="en">up, down, with a preset value</span></td></tr>
+          <tr><td><strong><span lang="de">Schaltuhr</span><span lang="en">Time switch</span></strong></td><td><span lang="de">Wochen- und Jahresprogramm, teils mit Astrofunktion</span><span lang="en">weekly and yearly programs, sometimes with astro function</span></td></tr>
+          <tr><td><strong><span lang="de">Analogwertvergleicher</span><span lang="en">Analogue comparator</span></strong></td><td><span lang="de">Schwellwerte auswerten, etwa von einem Temperaturfühler</span><span lang="en">evaluate thresholds, e.g. from a temperature sensor</span></td></tr>
+          <tr><td><strong><span lang="de">Merker</span><span lang="en">Marker</span></strong></td><td><span lang="de">interne Hilfsvariablen — die «Hilfsschütze» der Software</span><span lang="en">internal auxiliary variables — the software's “auxiliary relays”</span></td></tr>
+          <tr><td><strong><span lang="de">Betriebsstundenzähler</span><span lang="en">Hour counter</span></strong></td><td><span lang="de">Wartungsintervalle überwachen</span><span lang="en">monitor maintenance intervals</span></td></tr>
+          <tr><td><strong><span lang="de">Textanzeige</span><span lang="en">Text display</span></strong></td><td><span lang="de">Meldungen und Werte auf dem Display ausgeben</span><span lang="en">show messages and values on the display</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Einsatz und Grenzen</span><span lang="en">Applications and limitations</span></h2>
+
+    <h3><span lang="de">Typische Anwendungen</span><span lang="en">Typical applications</span></h3>
+    <ul lang="de">
+      <li><strong>Beleuchtungssteuerung</strong> — Treppenhaus, Aussenbeleuchtung mit Dämmerungsschalter und Zeitprogramm</li>
+      <li><strong>Torsteuerung</strong> — Garagentor, Schranke, mit Endschaltern und Sicherheitsleiste</li>
+      <li><strong>Lüftungssteuerung</strong> — nach Zeit, Feuchte oder Temperatur</li>
+      <li><strong>Pumpensteuerung</strong> — Niveauüberwachung, Wechselbetrieb zweier Pumpen</li>
+      <li><strong>Heizungssteuerung</strong> — einfache Regelungen mit Schwellwerten</li>
+      <li><strong>Nachrüstungen</strong>, wo eine bestehende Schützensteuerung um Zeit- oder Zählfunktionen erweitert werden soll</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Lighting control</strong> — staircases, outdoor lighting with a twilight switch and time program</li>
+      <li><strong>Gate control</strong> — garage doors, barriers, with limit switches and a safety edge</li>
+      <li><strong>Ventilation control</strong> — by time, humidity or temperature</li>
+      <li><strong>Pump control</strong> — level monitoring, alternating duty between two pumps</li>
+      <li><strong>Heating control</strong> — simple threshold-based control</li>
+      <li><strong>Retrofits</strong> where an existing contactor circuit is to gain timing or counting functions</li>
+    </ul>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Die wichtigste Grenze — Sicherheitsfunktionen</span><span lang="en">The key limitation — safety functions</span></b>
+      <p lang="de">Ein gewöhnliches Steuerrelais ist <strong>keine Sicherheitssteuerung</strong>. Der <strong>Not-Halt</strong> darf nicht über das Programm laufen: Ein Softwarefehler, ein Absturz oder ein defekter Ausgang würde die Sicherheitsfunktion aushebeln, ohne dass es jemand merkt.</p>
+      <p lang="en">An ordinary control relay is <strong>not a safety controller</strong>. The <strong>emergency stop</strong> must not run through the program: a software error, a crash or a faulty output would defeat the safety function without anyone noticing.</p>
+      <p lang="de">Der Not-Halt wird deshalb <strong>hardwaremässig</strong> ausgeführt — er trennt den Steuerkreis der Schütze direkt oder wirkt über ein zugelassenes <strong>Sicherheitsrelais</strong>. Das Steuerrelais darf den Zustand höchstens <em>melden</em>, nicht die Sicherheit <em>herstellen</em>.</p>
+      <p lang="en">The emergency stop is therefore implemented <strong>in hardware</strong> — it interrupts the contactor control circuit directly or acts through an approved <strong>safety relay</strong>. The control relay may at most <em>report</em> the state, never <em>provide</em> the safety.</p>
+    </div>
+
+    <h3><span lang="de">Weitere Grenzen</span><span lang="en">Further limitations</span></h3>
+    <ul lang="de">
+      <li><strong>Begrenzte Anzahl Ein- und Ausgänge</strong> — bei grösseren Anlagen wird eine SPS wirtschaftlicher</li>
+      <li><strong>Die Logik ist unsichtbar</strong> — wer das Programm nicht kennt, sieht der Verdrahtung die Funktion nicht mehr an</li>
+      <li><strong>Abhängigkeit von der Dokumentation</strong> — ohne Programmausdruck und Sicherungskopie ist die Anlage bei einem Defekt schwer zu reparieren</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Limited number of inputs and outputs</strong> — for larger installations a PLC becomes more economical</li>
+      <li><strong>The logic is invisible</strong> — anyone who does not know the program cannot read the function from the wiring</li>
+      <li><strong>Dependence on documentation</strong> — without a program printout and backup copy, the installation is hard to repair after a failure</li>
+    </ul>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Dokumentationspflicht in der Praxis</span><span lang="en">Documentation duty in practice</span></b>
+      <p lang="de">Zu jeder Anlage mit Steuerrelais gehören: <strong>Programmausdruck</strong> im Schaltschrank, <strong>Sicherungskopie</strong> des Programms, Angabe der Geräteversion und ein Schema, das zeigt, welcher Eingang und Ausgang wozu gehört. Ohne das steht der nächste Monteur — vielleicht du selbst in drei Jahren — vor einem Gerät, dessen Verhalten er nur durch Ausprobieren herausfindet.</p>
+      <p lang="en">Every installation with a control relay needs: a <strong>program printout</strong> in the panel, a <strong>backup copy</strong> of the program, a note of the device version, and a diagram showing which input and output serves what. Without that, the next technician — perhaps you in three years — faces a device whose behaviour can only be discovered by trial and error.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Inbetriebnahme und Fehlersuche</span><span lang="en">Commissioning and fault finding</span></h2>
+
+    <h3><span lang="de">Vorgehen</span><span lang="en">Procedure</span></h3>
+    <ol lang="de">
+      <li>Verdrahtung prüfen und mit dem Schema vergleichen</li>
+      <li>Speisung anlegen, Gerät startet</li>
+      <li>Programm aufspielen oder eingeben</li>
+      <li><strong>Eingänge einzeln prüfen</strong> — am Display zeigt das Gerät, welcher Eingang gerade ansteht</li>
+      <li>Programm im <strong>Betriebszustand beobachten</strong>: Die Software zeigt stromführende Pfade an</li>
+      <li>Ausgänge kontrollieren, Schütze und Verbraucher prüfen</li>
+      <li><strong>Not-Halt separat testen</strong> — er muss unabhängig vom Programm wirken</li>
+      <li>Programm sichern und ausdrucken, Schema nachführen</li>
+    </ol>
+    <ol lang="en">
+      <li>Check the wiring against the diagram</li>
+      <li>Apply the supply; the device starts up</li>
+      <li>Download or enter the program</li>
+      <li><strong>Check the inputs one by one</strong> — the display shows which input is currently active</li>
+      <li><strong>Watch the program running</strong>: the software highlights the energised paths</li>
+      <li>Check the outputs, contactors and loads</li>
+      <li><strong>Test the emergency stop separately</strong> — it must work independently of the program</li>
+      <li>Back up and print the program, update the diagram</li>
+    </ol>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Der grosse Vorteil bei der Fehlersuche</span><span lang="en">The big advantage in fault finding</span></b>
+      <p lang="de">Das Display zeigt den <strong>Zustand jedes Ein- und Ausgangs in Echtzeit</strong>. Damit lässt sich sofort trennen, ob ein Fehler <em>vor</em> dem Gerät liegt (Eingang kommt nicht an — Taster, Verdrahtung, Sensor), <em>im</em> Gerät (Eingang da, Ausgang schaltet nicht — Programm) oder <em>nach</em> dem Gerät (Ausgang schaltet, Verbraucher tut nichts — Schütz, Last, Verdrahtung).</p>
+      <p lang="en">The display shows the <strong>state of every input and output in real time</strong>. That immediately separates whether a fault lies <em>before</em> the device (input not arriving — button, wiring, sensor), <em>inside</em> it (input present, output not switching — the program), or <em>after</em> it (output switches, load does nothing — contactor, load, wiring).</p>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th><span lang="de">Beobachtung</span><span lang="en">Observation</span></th><th><span lang="de">Wahrscheinliche Ursache</span><span lang="en">Likely cause</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span lang="de">Display bleibt dunkel</span><span lang="en">Display stays dark</span></td><td><span lang="de">Speisung fehlt oder falsche Spannungsart am Gerät</span><span lang="en">no supply, or the wrong supply type for the device</span></td></tr>
+          <tr><td><span lang="de">Eingang wird nicht angezeigt</span><span lang="en">Input is not indicated</span></td><td><span lang="de">Taster, Verdrahtung oder Bezugspotential des Eingangs</span><span lang="en">button, wiring or the input's reference potential</span></td></tr>
+          <tr><td><span lang="de">Eingang da, Ausgang schaltet nicht</span><span lang="en">Input present, output does not switch</span></td><td><span lang="de">Programmfehler, Verriegelung aktiv, Zeitbaustein läuft noch</span><span lang="en">program error, an interlock active, a timer still running</span></td></tr>
+          <tr><td><span lang="de">Ausgang schaltet, Verbraucher läuft nicht</span><span lang="en">Output switches, load does not run</span></td><td><span lang="de">Schützspule, Lastkreis, Sicherung im Lastkreis</span><span lang="en">contactor coil, load circuit, fuse in the load circuit</span></td></tr>
+          <tr><td><span lang="de">Anlage verhält sich nach Spannungsausfall anders</span><span lang="en">Installation behaves differently after a power cut</span></td><td><span lang="de">Anlaufverhalten und remanente Merker im Programm prüfen</span><span lang="en">check the start-up behaviour and retentive markers in the program</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Hinweis zur Quellenarbeit</span><span lang="en">Note on sources</span></b>
+      <p lang="de">Anzahl Ein- und Ausgänge, verfügbare Programmiersprachen, Speisespannungen und Erweiterungsmöglichkeiten sind <strong>gerätespezifisch</strong> und unterscheiden sich zwischen den Generationen deutlich. <strong>Für die Abgabe das Handbuch des im Betrieb verwendeten Gerätes heranziehen</strong> und die konkreten Werte daraus übernehmen.</p>
+      <p lang="en">The number of inputs and outputs, the available programming languages, supply voltages and expansion options are <strong>device-specific</strong> and differ noticeably between generations. <strong>For your submission, use the manual of the device your company actually uses</strong> and take the concrete figures from it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Worin unterscheidet sich ein Steuerrelais von einer Schützensteuerung?</span><span lang="en">How does a control relay differ from contactor control?</span></summary>
+      <div class="ans">
+        <p lang="de">Bei der Schützensteuerung steckt die Logik in der Verdrahtung, beim Steuerrelais in der Software. Eine Änderung bedeutet dort Umverdrahten, hier Umprogrammieren. Zeit- und Zählfunktionen sind im Steuerrelais bereits eingebaut und brauchen keine Zusatzgeräte.</p>
+        <p lang="en">With contactor control the logic lies in the wiring, with a control relay in software. A change means rewiring in one case and reprogramming in the other. Timing and counting functions are already built into the control relay and need no extra devices.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was bedeuten I und Q am Gerät?</span><span lang="en">What do I and Q mean on the device?</span></summary>
+      <div class="ans">
+        <p lang="de">I sind die Eingänge, an die Taster, Schalter und Sensoren angeschlossen werden. Q sind die Ausgänge, die Schütze, Leuchten oder Ventile schalten. Zwischen I und Q liegt keine Verdrahtung, sondern das Programm.</p>
+        <p lang="en">I are the inputs to which buttons, switches and sensors are connected. Q are the outputs that switch contactors, lamps or valves. Between I and Q there is no wiring but the program.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wann wählst du einen Relais-, wann einen Transistorausgang?</span><span lang="en">When do you choose a relay, and when a transistor output?</span></summary>
+      <div class="ans">
+        <p lang="de">Den Relaisausgang für Schütze und Leuchten, weil er potentialfrei ist und auch 230 V schalten kann; er ist aber mechanisch in der Schaltspielzahl begrenzt. Den Transistorausgang für häufig taktende Signale, weil er verschleissfrei und schnell ist — er schaltet allerdings nur Gleichspannung.</p>
+        <p lang="en">A relay output for contactors and lamps, because it is volt-free and can switch 230 V; it is, however, mechanically limited in the number of operations. A transistor output for frequently cycling signals, because it is wear-free and fast — but it switches DC only.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie realisierst du eine Selbsthaltung im Kontaktplan?</span><span lang="en">How do you implement self-holding in a ladder diagram?</span></summary>
+      <div class="ans">
+        <p lang="de">Der Ausgang Q1 wird parallel zum Starttaster als Kontakt eingefügt. Der Stopptaster liegt als Öffner in Reihe dazu. Nach dem Start hält sich Q1 über den eigenen Kontakt, bis der Stopp die Kette unterbricht — genau wie in der Schützensteuerung, aber ohne zusätzlichen Draht.</p>
+        <p lang="en">The output Q1 is inserted as a contact in parallel with the start button. The stop button sits in series as a break contact. After starting, Q1 holds itself through its own contact until the stop breaks the chain — exactly as in contactor control, but without an extra wire.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum darf der Not-Halt nicht über das Programm laufen?</span><span lang="en">Why must the emergency stop not run through the program?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil ein gewöhnliches Steuerrelais keine Sicherheitssteuerung ist. Ein Softwarefehler, ein Absturz oder ein defekter Ausgang würde die Sicherheitsfunktion unbemerkt ausser Kraft setzen. Der Not-Halt wird deshalb hardwaremässig ausgeführt und trennt den Steuerkreis direkt oder wirkt über ein zugelassenes Sicherheitsrelais.</p>
+        <p lang="en">Because an ordinary control relay is not a safety controller. A software error, a crash or a faulty output would disable the safety function unnoticed. The emergency stop is therefore implemented in hardware and interrupts the control circuit directly or acts through an approved safety relay.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welche Funktionsbausteine ersparen dir Zusatzgeräte?</span><span lang="en">Which function blocks save you extra devices?</span></summary>
+      <div class="ans">
+        <p lang="de">Zeitrelais in verschiedenen Ausführungen, Zähler, Wochen- und Jahresschaltuhr, Analogwertvergleicher, Merker als interne Hilfsvariablen, Betriebsstundenzähler und die Textanzeige. Jedes davon wäre in Relaistechnik ein eigenes Gerät im Schaltschrank.</p>
+        <p lang="en">Timers in various forms, counters, weekly and yearly time switches, analogue comparators, markers as internal auxiliary variables, hour counters and the text display. Each of these would be a separate device in the panel using relay technology.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum lohnt sich die Simulation vor dem Aufspielen?</span><span lang="en">Why is simulation before downloading worthwhile?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil sich das Verhalten am Bildschirm prüfen lässt, ohne dass ein Schütz zieht. Denkfehler fallen auf, bevor sie an der Anlage Schaden anrichten. Bei einer bereits laufenden Anlage ist das oft die einzige sichere Testmöglichkeit.</p>
+        <p lang="en">Because the behaviour can be checked on screen without any contactor pulling in. Logical errors show up before they cause damage. On an installation already running, this is often the only safe way to test.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie grenzt du mit dem Display einen Fehler ein?</span><span lang="en">How do you narrow down a fault using the display?</span></summary>
+      <div class="ans">
+        <p lang="de">Das Display zeigt den Zustand jedes Ein- und Ausgangs. Kommt der Eingang nicht an, liegt der Fehler davor — bei Taster, Sensor oder Verdrahtung. Ist der Eingang da und der Ausgang schaltet nicht, liegt er im Programm. Schaltet der Ausgang und der Verbraucher läuft trotzdem nicht, liegt er dahinter — bei Schütz, Last oder Lastkreis.</p>
+        <p lang="en">The display shows the state of every input and output. If the input does not arrive, the fault lies before it — at the button, sensor or wiring. If the input is present but the output does not switch, it lies in the program. If the output switches and the load still does not run, it lies after it — at the contactor, load or load circuit.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was gehört zur Dokumentation einer Anlage mit Steuerrelais?</span><span lang="en">What belongs to the documentation of an installation with a control relay?</span></summary>
+      <div class="ans">
+        <p lang="de">Ein Programmausdruck im Schaltschrank, eine Sicherungskopie des Programms, die Angabe der Geräteversion und ein Schema, das die Zuordnung von Ein- und Ausgängen zeigt. Ohne diese Unterlagen ist die Logik unsichtbar und die Anlage bei einem Defekt kaum zu reparieren.</p>
+        <p lang="en">A program printout in the panel, a backup copy of the program, a note of the device version, and a diagram showing the assignment of inputs and outputs. Without this documentation the logic is invisible and the installation is barely repairable after a failure.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="05-schuetzensteuerung-impuls.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>05 · <span lang="de">Schützensteuerung Impuls</span><span lang="en">Contactor Control — Pulse</span></b>
+  </a>
+  <a class="next" href="07-zeptrion.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>07 · <span lang="de">Zeptrion</span><span lang="en">Zeptrion</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 06 · Steuerung easyE4</span><span lang="en">Learning Documentation 06 · easyE4 Controller</span></span>
+  <span>Yanik · Etavis · <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></span>
+  <span><span lang="de">Grundlagen: Gerätehandbuch Eaton easy · Maschinensicherheit</span><span lang="en">Basis: Eaton easy device manual · machine safety</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

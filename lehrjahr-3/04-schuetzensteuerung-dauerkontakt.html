@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 04 — Schuetzensteuerung Dauerkontakt" data-en="Learning Documentation 04 — Contactor Control — Maintained">Lerndokumentation 04 — Schuetzensteuerung Dauerkontakt</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span>
+    <span lang="de">Thema 04</span><span lang="en">Topic 04</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">04</div>
+    <h1><span lang="de">Schützen&shy;steuerung<br>Dauerkontakt</span><span lang="en">Contactor Control<br>Maintained</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Schema · Beschrieb · Haupt- und Steuerstromkreis</span>
+    <span lang="en">Diagram · description · load and control circuit</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">04 von 12</span><span lang="en">04 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Schütz mit rastendem Schalter">
+        <path d="M42 54 L58 54 L48 74 L60 74 L38 106 L46 80 L32 80 Z" fill="#B8402A"/>
+        <path d="M78 40 V22 M110 40 V22 M142 40 V22" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M78 128 V146 M110 128 V146 M142 128 V146" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <rect x="62" y="40" width="96" height="88" rx="9" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <path d="M76 102 h68 M76 112 h68" fill="none" stroke="#1D5872" stroke-width="2.6" stroke-linecap="round"/>
+        <circle cx="92" cy="70" r="3.4" fill="#171614"/>
+        <circle cx="128" cy="70" r="3.4" fill="#171614"/>
+        <path d="M92 84 q18 12 36 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M158 78 H186 V92" fill="none" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M186 56 V42" fill="none" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="186" cy="94" r="3" fill="#171614"/>
+        <circle cx="186" cy="56" r="3" fill="#171614"/>
+        <path d="M186 94 L200 62" fill="none" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Das Schütz</span><span lang="en">The contactor</span></h2>
+
+    <p class="lead" lang="de">Ein Schütz ist ein <strong>elektromagnetisch betätigter Schalter</strong>. Ein kleiner Strom durch die Spule schaltet einen grossen Strom im Hauptstromkreis. Bedienstelle und Last sind dadurch voneinander getrennt: Man schaltet einen Motor, ohne den Motorstrom je über den Schalter in der Hand zu führen.</p>
+    <p class="lead" lang="en">A contactor is an <strong>electromagnetically operated switch</strong>. A small current through the coil switches a large current in the load circuit. The operating point and the load are thereby separated: a motor is switched without the motor current ever passing through the switch in your hand.</p>
+
+    <p lang="de">Der Aufbau ist bei allen Bauformen derselbe. Eine <strong>Spule</strong> mit den Klemmen A1 und A2 bildet zusammen mit dem festen Kern einen Elektromagneten. Fliesst Strom durch die Spule, wird der bewegliche <strong>Anker</strong> gegen die Rückstellfeder angezogen. Der Anker nimmt über einen Schaft die <strong>Kontaktbrücken</strong> mit, und die Hauptkontakte schliessen. Wird die Spule stromlos, drückt die Feder alles wieder in die Ruhestellung zurück.</p>
+    <p lang="en">The construction is the same in all designs. A <strong>coil</strong> with terminals A1 and A2 forms an electromagnet together with the fixed core. When current flows through the coil, the movable <strong>armature</strong> is pulled in against the return spring. Through a shaft the armature carries the <strong>contact bridges</strong> with it, and the main contacts close. When the coil is de-energised, the spring pushes everything back into the rest position.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aufbau eines Schützes im Schnitt und das zugehörige Schaltzeichen mit allen Klemmen">
+        <defs>
+          <style>
+            .w{fill:none;stroke:#171614;stroke-width:2.6;stroke-linecap:round}
+            .wc{fill:none;stroke:#1D5872;stroke-width:2.6;stroke-linecap:round}
+            .bx{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .hs{fill:#FBF9F5;stroke:#171614;stroke-width:2.4}
+            .dot{fill:#171614}
+            .lgb{font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;fill:#171614}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
+            .id{font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;fill:#171614}
+            .mk{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;fill:#F4F1EA}
+            .sep{fill:none;stroke:#D2CABB;stroke-width:1.4;stroke-dasharray:8 6}
+            .cpl{fill:none;stroke:#7D7669;stroke-width:1.8;stroke-dasharray:5 5}
+          </style>
+        </defs>
+
+        <path class="sep" d="M392 26 V376"/>
+        <text class="lgs" x="40" y="22"><tspan lang="de">SCHNITT DURCH EINEN POL</tspan><tspan lang="en">SECTION THROUGH ONE POLE</tspan></text>
+        <text class="lgs" x="412" y="22"><tspan lang="de">SCHALTZEICHEN MIT KLEMMEN</tspan><tspan lang="en">SYMBOL WITH TERMINALS</tspan></text>
+
+        <!-- ===== Schnitt ===== -->
+        <rect class="hs" x="56" y="40" width="284" height="330" rx="6"/>
+
+        <!-- Festkontakt links + Klemme 1 -->
+        <path class="w" d="M120 96 V18"/>
+        <rect class="bx" x="110" y="96" width="20" height="12"/>
+        <text class="lgb" x="96" y="34">1</text>
+
+        <!-- Festkontakt rechts, Leitung nach unten zur Klemme 2 -->
+        <rect class="bx" x="248" y="96" width="20" height="12"/>
+        <path class="w" d="M258 96 V70 H310 V350 V382"/>
+        <text class="lgb" x="296" y="378">2</text>
+
+        <!-- Kontaktbrücke -->
+        <rect class="bx" x="104" y="118" width="170" height="14" rx="2"/>
+        <path class="w" d="M183 132 V196"/>
+
+        <!-- Luftspalt Kontakte -->
+        <path class="cpl" d="M280 102 H336 M280 124 H336"/>
+        <text class="lgs" x="284" y="116"><tspan lang="de">OFFEN</tspan><tspan lang="en">OPEN</tspan></text>
+
+        <!-- Anker -->
+        <rect class="bx" x="126" y="196" width="114" height="22" rx="2"/>
+
+        <!-- Luftspalt Magnet -->
+        <path class="cpl" d="M126 228 H240"/>
+
+        <!-- Spule -->
+        <rect class="bx" x="122" y="238" width="122" height="66" rx="2"/>
+        <path class="wc" d="M138 250 V292 M154 250 V292 M170 250 V292 M186 250 V292 M202 250 V292 M218 250 V292"/>
+        <path class="wc" d="M122 250 H70 V18"/>
+        <path class="wc" d="M122 292 H88 V382"/>
+        <text class="lgb" x="46" y="34" fill="#1D5872">A1</text>
+        <text class="lgb" x="66" y="378" fill="#1D5872">A2</text>
+
+        <!-- Kern -->
+        <path class="w" d="M112 238 V330 H254 V238"/>
+
+        <!-- Rückstellfeder -->
+        <path class="w" d="M300 138 l14 8 -28 12 28 12 -28 12 28 12 -14 8"/>
+        <path class="w" d="M274 125 H300 V138"/>
+        <path class="w" d="M300 202 V214 H244"/>
+
+        <!-- Marker -->
+        <g>
+          <circle cx="120" cy="82" r="9" fill="#171614"/><text class="mk" x="120" y="86" text-anchor="middle">1</text>
+          <circle cx="88" cy="125" r="9" fill="#171614"/><text class="mk" x="88" y="129" text-anchor="middle">2</text>
+          <circle cx="183" cy="207" r="9" fill="#171614"/><text class="mk" x="183" y="211" text-anchor="middle">3</text>
+          <circle cx="266" cy="228" r="9" fill="#171614"/><text class="mk" x="266" y="232" text-anchor="middle">4</text>
+          <circle cx="183" cy="271" r="9" fill="#171614"/><text class="mk" x="183" y="275" text-anchor="middle">5</text>
+          <circle cx="112" cy="348" r="9" fill="#171614"/><text class="mk" x="112" y="352" text-anchor="middle">6</text>
+          <circle cx="322" cy="170" r="9" fill="#171614"/><text class="mk" x="322" y="174" text-anchor="middle">7</text>
+        </g>
+
+        <!-- ===== Schaltzeichen ===== -->
+        <!-- Spule -->
+        <rect class="bx" x="430" y="70" width="56" height="44" rx="2"/>
+        <path class="wc" d="M446 80 V104 M458 80 V104 M470 80 V104"/>
+        <path class="wc" d="M458 70 V44"/>
+        <path class="wc" d="M458 114 V140"/>
+        <text class="lgb" x="466" y="40" fill="#1D5872">A1</text>
+        <text class="lgb" x="466" y="152" fill="#1D5872">A2</text>
+        <text class="id" x="398" y="96">K1</text>
+
+        <!-- mechanische Kopplung -->
+        <path class="cpl" d="M486 92 H690"/>
+        <text class="lgs" x="500" y="86"><tspan lang="de">MECHANISCHE KOPPLUNG</tspan><tspan lang="en">MECHANICAL LINKAGE</tspan></text>
+
+        <!-- Hauptkontakte -->
+        <g>
+          <path class="w" d="M560 44 V60"/><circle class="dot" cx="560" cy="60" r="4"/>
+          <circle class="dot" cx="560" cy="124" r="4"/><path class="w" d="M560 124 V140"/>
+          <path class="w" d="M560 124 L578 66"/>
+          <text class="lgb" x="534" y="42">1</text><text class="lgb" x="534" y="152">2</text>
+
+          <path class="w" d="M620 44 V60"/><circle class="dot" cx="620" cy="60" r="4"/>
+          <circle class="dot" cx="620" cy="124" r="4"/><path class="w" d="M620 124 V140"/>
+          <path class="w" d="M620 124 L638 66"/>
+          <text class="lgb" x="594" y="42">3</text><text class="lgb" x="594" y="152">4</text>
+
+          <path class="w" d="M680 44 V60"/><circle class="dot" cx="680" cy="60" r="4"/>
+          <circle class="dot" cx="680" cy="124" r="4"/><path class="w" d="M680 124 V140"/>
+          <path class="w" d="M680 124 L698 66"/>
+          <text class="lgb" x="654" y="42">5</text><text class="lgb" x="654" y="152">6</text>
+        </g>
+        <text class="lgs" x="540" y="176"><tspan lang="de">HAUPTKONTAKTE — EINSTELLIGE ZIFFERN</tspan><tspan lang="en">MAIN CONTACTS — SINGLE DIGITS</tspan></text>
+
+        <!-- Hilfskontakte -->
+        <path class="cpl" d="M470 262 H640"/>
+        <g>
+          <path class="w" d="M470 218 V236"/><circle class="dot" cx="470" cy="236" r="4"/>
+          <circle class="dot" cx="470" cy="300" r="4"/><path class="w" d="M470 300 V318"/>
+          <path class="w" d="M470 300 L488 244"/>
+          <text class="lgb" x="436" y="216">13</text><text class="lgb" x="436" y="330">14</text>
+          <text class="lgs" x="430" y="352"><tspan lang="de">SCHLIESSER</tspan><tspan lang="en">NORMALLY OPEN</tspan></text>
+        </g>
+        <g>
+          <path class="w" d="M640 218 V236"/><circle class="dot" cx="640" cy="236" r="4"/>
+          <circle class="dot" cx="622" cy="300" r="4"/><path class="w" d="M622 300 V318"/>
+          <path class="w" d="M622 300 L640 242"/>
+          <text class="lgb" x="656" y="216">21</text><text class="lgb" x="588" y="330">22</text>
+          <text class="lgs" x="596" y="352"><tspan lang="de">ÖFFNER</tspan><tspan lang="en">NORMALLY CLOSED</tspan></text>
+        </g>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Links das Schütz im Schnitt, gezeichnet in der Ruhestellung. Rechts das Schaltzeichen mit allen Klemmen. Die gestrichelte Linie ist die mechanische Kopplung: Alle Kontakte bewegen sich gemeinsam mit dem Anker.</span>
+        <span lang="en"> — On the left the contactor in section, drawn in the rest position. On the right the symbol with all terminals. The dashed line is the mechanical linkage: all contacts move together with the armature.</span>
+      </figcaption>
+    </figure>
+
+    <ul class="legend">
+      <li><span class="n">1</span><span lang="de">Fester Hauptkontakt, Klemme 1 — Netzseite</span><span lang="en">Fixed main contact, terminal 1 — supply side</span></li>
+      <li><span class="n">2</span><span lang="de">Kontaktbrücke — unterbricht doppelt</span><span lang="en">Contact bridge — double break</span></li>
+      <li><span class="n">3</span><span lang="de">Anker mit Schaft — beweglich</span><span lang="en">Armature with shaft — movable</span></li>
+      <li><span class="n">4</span><span lang="de">Luftspalt — verschwindet beim Anziehen</span><span lang="en">Air gap — closes when the coil pulls in</span></li>
+      <li><span class="n">5</span><span lang="de">Spule mit den Klemmen A1 und A2</span><span lang="en">Coil with terminals A1 and A2</span></li>
+      <li><span class="n">6</span><span lang="de">Fester Kern — führt den magnetischen Fluss</span><span lang="en">Fixed core — carries the magnetic flux</span></li>
+      <li><span class="n">7</span><span lang="de">Rückstellfeder — bringt alles in die Ruhestellung</span><span lang="en">Return spring — restores the rest position</span></li>
+    </ul>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Monostabil — die Grundeigenschaft</span><span lang="en">Monostable — the basic property</span></b>
+      <p lang="de">Ein Schütz hat nur <strong>eine</strong> stabile Lage: die Ruhestellung. Die eingeschaltete Stellung muss dauernd durch den Spulenstrom gehalten werden. Verschwindet die Spannung an A1/A2, fällt das Schütz sofort ab. Ein Stromstossschalter dagegen ist <strong>bistabil</strong> und behält seine Stellung auch stromlos. Aus diesem einen Unterschied ergibt sich fast alles, was in dieser Dokumentation folgt.</p>
+      <p lang="en">A contactor has only <strong>one</strong> stable position: the rest position. The energised position must be held continuously by the coil current. If the voltage at A1/A2 disappears, the contactor drops out immediately. An impulse relay, by contrast, is <strong>bistable</strong> and keeps its position even when de-energised. Almost everything that follows in this documentation comes from this single difference.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Klemmen und Kennzeichnung</span><span lang="en">Terminals and marking</span></h2>
+
+    <p lang="de">Die Klemmen eines Schützes sind genormt beschriftet. Das ist keine Formsache: Wer die Systematik kennt, liest an jedem Schütz jedes Herstellers sofort ab, welche Klemme was tut — und kann ein Schema verdrahten, ohne das Datenblatt zu suchen.</p>
+    <p lang="en">The terminals of a contactor are marked to a standard. This is not a formality: anyone who knows the system can immediately read off any contactor from any manufacturer which terminal does what — and can wire a diagram without hunting for the data sheet.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Klemmen</span><span lang="en">Terminals</span></th>
+            <th><span lang="de">Funktion</span><span lang="en">Function</span></th>
+            <th><span lang="de">Gehört zum</span><span lang="en">Belongs to</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num"><strong>A1 · A2</strong></td>
+            <td><span lang="de"><strong>Spule.</strong> A1 ist der Zuleitungsanschluss, A2 der Rückleiter. Sie tragen als einzige Klemmen einen Buchstaben.</span><span lang="en"><strong>Coil.</strong> A1 is the incoming connection, A2 the return. They are the only terminals carrying a letter.</span></td>
+            <td><span lang="de">Steuerstromkreis</span><span lang="en">control circuit</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>1–2 · 3–4 · 5–6</strong></td>
+            <td><span lang="de"><strong>Hauptkontakte</strong>, drei Pole. <strong>Einstellige</strong> Ziffern. Ungerade Ziffern (1, 3, 5) liegen auf der Netzseite, gerade Ziffern (2, 4, 6) führen zum Verbraucher.</span><span lang="en"><strong>Main contacts</strong>, three poles. <strong>Single</strong> digits. Odd numbers (1, 3, 5) are on the supply side, even numbers (2, 4, 6) lead to the load.</span></td>
+            <td><span lang="de">Hauptstromkreis</span><span lang="en">load circuit</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>13–14</strong></td>
+            <td><span lang="de"><strong>Hilfskontakt Schliesser.</strong> Offen in der Ruhestellung, geschlossen bei angezogenem Schütz.</span><span lang="en"><strong>Auxiliary contact, normally open.</strong> Open at rest, closed when the contactor is energised.</span></td>
+            <td><span lang="de">Steuerstromkreis</span><span lang="en">control circuit</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>21–22</strong></td>
+            <td><span lang="de"><strong>Hilfskontakt Öffner.</strong> Geschlossen in der Ruhestellung, offen bei angezogenem Schütz.</span><span lang="en"><strong>Auxiliary contact, normally closed.</strong> Closed at rest, open when the contactor is energised.</span></td>
+            <td><span lang="de">Steuerstromkreis</span><span lang="en">control circuit</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Die Systematik der Hilfskontakte</span><span lang="en">The system behind the auxiliary contacts</span></h3>
+
+    <p lang="de">Hilfskontakte tragen <strong>zweistellige</strong> Ziffern. Die <strong>erste Ziffer</strong> ist die Ordnungsziffer und sagt nur, um den wievielten Kontakt am Gerät es sich handelt. Die <strong>zweite Ziffer</strong> ist die Funktionsziffer und verrät die Kontaktart: Das Ziffernpaar 1–2 bedeutet Öffner, das Ziffernpaar 3–4 bedeutet Schliesser.</p>
+    <p lang="en">Auxiliary contacts carry <strong>two-digit</strong> numbers. The <strong>first digit</strong> is the position number and only says which contact on the device it is. The <strong>second digit</strong> is the function digit and reveals the contact type: the digit pair 1–2 means normally closed, the digit pair 3–4 means normally open.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Klemmenpaar</span><span lang="en">Terminal pair</span></th>
+            <th><span lang="de">Ordnungsziffer</span><span lang="en">Position digit</span></th>
+            <th><span lang="de">Funktionsziffern</span><span lang="en">Function digits</span></th>
+            <th><span lang="de">Bedeutung</span><span lang="en">Meaning</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">13 – 14</td><td class="num">1</td><td class="num">3 – 4</td><td><span lang="de">erster Schliesser</span><span lang="en">first normally open contact</span></td></tr>
+          <tr><td class="num">21 – 22</td><td class="num">2</td><td class="num">1 – 2</td><td><span lang="de">erster Öffner</span><span lang="en">first normally closed contact</span></td></tr>
+          <tr><td class="num">23 – 24</td><td class="num">2</td><td class="num">3 – 4</td><td><span lang="de">weiterer Schliesser</span><span lang="en">further normally open contact</span></td></tr>
+          <tr><td class="num">31 – 32</td><td class="num">3</td><td class="num">1 – 2</td><td><span lang="de">weiterer Öffner</span><span lang="en">further normally closed contact</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Quelle und Vorbehalt</span><span lang="en">Source and caveat</span></b>
+      <p lang="de">Die Anschlussbezeichnungen und Kennzahlen sind in der <strong>EN 50005</strong> (Anschlussbezeichnungen und Kennzahlen, allgemeine Regeln) festgelegt; für Hilfsschütze gilt zusätzlich die <strong>EN 50011</strong>. Welche Ordnungsziffern ein konkreter Hilfskontaktblock trägt, hängt vom Gerät und vom Anbauplatz ab. Die Belegung deshalb <strong>immer am Gerät und im Datenblatt des Herstellers</strong> ablesen und nicht aus dem Kopf annehmen.</p>
+      <p lang="en">Terminal designations and distinctive numbers are laid down in <strong>EN 50005</strong> (terminal marking and distinctive numbers, general rules); for auxiliary contactors <strong>EN 50011</strong> applies in addition. Which position digits a particular auxiliary contact block carries depends on the device and on the mounting position. Therefore <strong>always read the assignment on the device and in the manufacturer's data sheet</strong> rather than assuming it from memory.</p>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Betriebsmittelkennzeichen K — vor der Abgabe prüfen</span><span lang="en">Reference designation K — check before handing in</span></b>
+      <p lang="de">Schütze werden im Schema klassisch mit dem Kennbuchstaben <strong>K</strong> bezeichnet: K1, K2, K3. Das stammt aus der älteren Kennzeichnungssystematik (DIN 40719, später DIN EN 61346-2), in der K die Sammelklasse für Schütze und Relais war. In der neueren <strong>DIN EN IEC 81346-2</strong> ist die feste Zuordnung eines Buchstabens zu einer Geräteart aufgehoben; dort wird nach <em>Funktion</em> gekennzeichnet, und ein Leistungsschütz erhält QA, ein Steuerrelais KF. In der Berufsschule und auf den meisten Schweizer Installationsschemas wird weiterhin mit <strong>K</strong> gearbeitet. <strong>Vor der Abgabe in der eigenen NIN-Ausgabe und in den Schulunterlagen nachschlagen</strong>, welche Kennzeichnung verlangt wird — und im ganzen Schema einheitlich bleiben.</p>
+      <p lang="en">In diagrams, contactors are classically marked with the letter <strong>K</strong>: K1, K2, K3. This comes from the older designation system (DIN 40719, later DIN EN 61346-2), in which K was the collective class for contactors and relays. In the more recent <strong>DIN EN IEC 81346-2</strong> the fixed link between a letter and a device type has been dropped; designation there follows <em>function</em>, and a power contactor gets QA, a control relay KF. Vocational school and most Swiss installation diagrams still work with <strong>K</strong>. <strong>Before handing in, check in your own NIN edition and school material</strong> which marking is required — and stay consistent throughout the diagram.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Die Steuerung mit Dauerkontakt</span><span lang="en">Control with a maintained contact</span></h2>
+
+    <p class="lead" lang="de">Bei der Steuerung mit Dauerkontakt liegt im Steuerstromkreis ein <strong>rastender Schalter</strong>. Er bleibt in der Stellung, in die man ihn gebracht hat, und hält damit die Spule <strong>dauernd</strong> unter Strom. Solange der Schalter eingeschaltet ist, ist auch das Schütz angezogen.</p>
+    <p class="lead" lang="en">In maintained-contact control the control circuit contains a <strong>latching switch</strong>. It stays in the position it was put into and therefore keeps the coil <strong>permanently</strong> energised. As long as the switch is on, the contactor is pulled in.</p>
+
+    <p lang="de">Das Schema wird immer in <strong>zwei getrennten Teilen</strong> gezeichnet: links oder oben der <strong>Hauptstromkreis</strong> mit den drei Aussenleitern, den Hauptkontakten und dem Motor, daneben der <strong>Steuerstromkreis</strong> mit Schalter und Spule. Die beiden Teile sind galvanisch verbunden, gehören aber gedanklich und zeichnerisch auseinander. Verknüpft werden sie einzig über das Betriebsmittelkennzeichen — überall dort, wo K1 steht, gehört es zum selben Schütz.</p>
+    <p lang="en">The diagram is always drawn in <strong>two separate parts</strong>: on the left or at the top the <strong>load circuit</strong> with the three line conductors, the main contacts and the motor, next to it the <strong>control circuit</strong> with switch and coil. The two parts are electrically connected but belong apart, both mentally and on paper. They are linked only by the reference designation — wherever K1 appears, it belongs to the same contactor.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schema der Schützensteuerung mit Dauerkontakt, links Hauptstromkreis mit Drehstrommotor, rechts Steuerstromkreis mit rastendem Schalter und Schützspule">
+        <defs>
+          <style>
+            .w2{fill:none;stroke:#171614;stroke-width:2.6;stroke-linecap:round}
+            .wl{fill:none;stroke:#B8402A;stroke-width:2.6;stroke-linecap:round}
+            .wc2{fill:none;stroke:#1D5872;stroke-width:2.6;stroke-linecap:round}
+            .wn{fill:none;stroke:#48433B;stroke-width:2.6;stroke-linecap:round}
+            .bx2{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .dot2{fill:#171614}
+            .lgb2{font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;fill:#171614}
+            .lgs2{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
+            .id2{font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;fill:#171614}
+            .sep2{fill:none;stroke:#D2CABB;stroke-width:1.4;stroke-dasharray:8 6}
+            .cpl2{fill:none;stroke:#7D7669;stroke-width:1.8;stroke-dasharray:5 5}
+            .mtxt{font-family:'Archivo',sans-serif;font-size:20px;font-weight:700;fill:#171614}
+          </style>
+        </defs>
+
+        <path class="sep2" d="M430 24 V400"/>
+        <text class="lgs2" x="40" y="20"><tspan lang="de">HAUPTSTROMKREIS</tspan><tspan lang="en">LOAD CIRCUIT</tspan></text>
+        <text class="lgs2" x="452" y="20"><tspan lang="de">STEUERSTROMKREIS</tspan><tspan lang="en">CONTROL CIRCUIT</tspan></text>
+
+        <!-- ===== Hauptstromkreis ===== -->
+        <path class="wl" d="M60 54 H150 V130"/>
+        <path class="wl" d="M60 70 H200 V130"/>
+        <path class="wl" d="M60 86 H250 V130"/>
+        <text class="lgb2" x="30" y="58">L1</text>
+        <text class="lgb2" x="30" y="74">L2</text>
+        <text class="lgb2" x="30" y="90">L3</text>
+
+        <!-- Sicherungen -->
+        <rect class="bx2" x="139" y="130" width="22" height="34"/>
+        <rect class="bx2" x="189" y="130" width="22" height="34"/>
+        <rect class="bx2" x="239" y="130" width="22" height="34"/>
+        <path class="w2" d="M150 130 V164 M200 130 V164 M250 130 V164"/>
+        <text class="id2" x="278" y="152">F1</text>
+
+        <!-- Hauptkontakte K1 -->
+        <path class="wl" d="M150 164 V200 M200 164 V200 M250 164 V200"/>
+        <g>
+          <circle class="dot2" cx="150" cy="200" r="4"/><circle class="dot2" cx="150" cy="244" r="4"/>
+          <path class="w2" d="M150 244 L168 204"/>
+          <circle class="dot2" cx="200" cy="200" r="4"/><circle class="dot2" cx="200" cy="244" r="4"/>
+          <path class="w2" d="M200 244 L218 204"/>
+          <circle class="dot2" cx="250" cy="200" r="4"/><circle class="dot2" cx="250" cy="244" r="4"/>
+          <path class="w2" d="M250 244 L268 204"/>
+          <text class="lgb2" x="128" y="196">1</text><text class="lgb2" x="128" y="264">2</text>
+          <text class="lgb2" x="178" y="196">3</text><text class="lgb2" x="178" y="264">4</text>
+          <text class="lgb2" x="228" y="196">5</text><text class="lgb2" x="228" y="264">6</text>
+          <text class="id2" x="292" y="226">K1</text>
+        </g>
+
+        <!-- mechanische Kopplung zur Spule -->
+        <path class="cpl2" d="M160 224 H540"/>
+        <text class="lgs2" x="320" y="218"><tspan lang="de">EIN GERÄT — K1</tspan><tspan lang="en">ONE DEVICE — K1</tspan></text>
+
+        <!-- Motor -->
+        <path class="wl" d="M150 244 V280 L186 302"/>
+        <path class="wl" d="M200 244 V302"/>
+        <path class="wl" d="M250 244 V280 L214 302"/>
+        <circle cx="200" cy="332" r="34" fill="#FBF9F5" stroke="#171614" stroke-width="2.6"/>
+        <text class="mtxt" x="200" y="330" text-anchor="middle">M</text>
+        <text class="lgb2" x="200" y="350" text-anchor="middle">3~</text>
+        <text class="id2" x="252" y="336">M1</text>
+
+        <!-- ===== Steuerstromkreis ===== -->
+        <path class="wl" d="M470 54 H700"/>
+        <text class="lgb2" x="448" y="58">L</text>
+        <path class="wl" d="M560 54 V88"/>
+        <rect class="bx2" x="549" y="88" width="22" height="32"/>
+        <path class="w2" d="M560 88 V120"/>
+        <text class="id2" x="586" y="110">F2</text>
+
+        <!-- rastender Schalter -->
+        <path class="wc2" d="M560 120 V148"/>
+        <circle class="dot2" cx="560" cy="148" r="4"/>
+        <circle class="dot2" cx="560" cy="190" r="4"/>
+        <path class="w2" d="M560 190 L580 152"/>
+        <path class="w2" d="M572 170 V158"/>
+        <text class="id2" x="600" y="176">S1</text>
+        <text class="lgs2" x="600" y="194"><tspan lang="de">RASTEND</tspan><tspan lang="en">LATCHING</tspan></text>
+
+        <!-- Spule -->
+        <path class="wc2" d="M560 190 V218"/>
+        <rect class="bx2" x="532" y="218" width="56" height="44" rx="2"/>
+        <path class="wc2" d="M546 228 V252 M560 228 V252 M574 228 V252"/>
+        <text class="lgb2" x="496" y="216" fill="#1D5872">A1</text>
+        <text class="lgb2" x="496" y="278" fill="#1D5872">A2</text>
+        <text class="id2" x="604" y="244">K1</text>
+        <path class="wn" d="M560 262 V340"/>
+        <path class="wn" d="M470 340 H700"/>
+        <text class="lgb2" x="448" y="344">N</text>
+
+        <text class="lgs2" x="452" y="382"><tspan lang="de">DER SCHALTER HÄLT DIE SPULE DAUERND UNTER STROM</tspan><tspan lang="en">THE SWITCH KEEPS THE COIL PERMANENTLY ENERGISED</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 2</span><span lang="en">Fig. 2</span></b>
+        <span lang="de"> — Schützensteuerung mit Dauerkontakt. <span style="color:var(--therm)">Rot = Polleiter</span>, <span style="color:var(--mag)">blau = Steuerader und Spule</span>. Beide Stromkreise sind getrennt gezeichnet und nur über das Kennzeichen K1 miteinander verknüpft.</span>
+        <span lang="en"> — Contactor control with a maintained contact. <span style="color:var(--therm)">Red = line conductor</span>, <span style="color:var(--mag)">blue = control wire and coil</span>. Both circuits are drawn separately and are linked only by the designation K1.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Der Ablauf Schritt für Schritt</span><span lang="en">The sequence step by step</span></h3>
+    <ul lang="de">
+      <li>Der rastende Schalter <strong>S1</strong> wird eingeschaltet und bleibt in dieser Stellung stehen.</li>
+      <li>Über die Steuersicherung <strong>F2</strong> fliesst Strom von L über S1 zur Klemme <strong>A1</strong>, durch die Spule und über <strong>A2</strong> zurück nach N.</li>
+      <li>Der Elektromagnet zieht den Anker an. Die drei <strong>Hauptkontakte 1–2, 3–4, 5–6</strong> schliessen; der Motor <strong>M1</strong> läuft an.</li>
+      <li>Solange S1 eingeschaltet bleibt, fliesst dauernd Haltestrom durch die Spule. Das Schütz bleibt angezogen.</li>
+      <li>Wird S1 ausgeschaltet, wird die Spule stromlos. Die Rückstellfeder öffnet die Hauptkontakte, der Motor läuft aus.</li>
+    </ul>
+    <ul lang="en">
+      <li>The latching switch <strong>S1</strong> is turned on and stays in that position.</li>
+      <li>Through the control fuse <strong>F2</strong>, current flows from L via S1 to terminal <strong>A1</strong>, through the coil and back via <strong>A2</strong> to N.</li>
+      <li>The electromagnet pulls in the armature. The three <strong>main contacts 1–2, 3–4, 5–6</strong> close; motor <strong>M1</strong> starts.</li>
+      <li>As long as S1 stays on, holding current flows continuously through the coil. The contactor remains energised.</li>
+      <li>When S1 is switched off, the coil is de-energised. The return spring opens the main contacts and the motor coasts to a stop.</li>
+    </ul>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Warum überhaupt ein Schütz?</span><span lang="en">Why use a contactor at all?</span></b>
+      <p lang="de">Man könnte den Motor auch direkt mit einem dreipoligen Schalter ein- und ausschalten. Das Schütz bringt drei Vorteile: Der <strong>Steuerstromkreis führt nur den kleinen Spulenstrom</strong>, deshalb genügen dünne Steueradern und kleine Schalter. Die <strong>Bedienstelle kann beliebig weit weg liegen</strong> und mehrfach vorhanden sein. Und das Schütz schaltet <strong>alle drei Pole exakt gleichzeitig</strong> und mit hoher Schaltgeschwindigkeit, was den Lichtbogen kurz hält und die Kontakte schont.</p>
+      <p lang="en">The motor could also be switched directly with a three-pole switch. The contactor brings three advantages: the <strong>control circuit carries only the small coil current</strong>, so thin control wires and small switches are sufficient. The <strong>operating point can be any distance away</strong> and can exist several times over. And the contactor switches <strong>all three poles at exactly the same moment</strong> and at high speed, which keeps the arc short and protects the contacts.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Verhalten bei Spannungsausfall</span><span lang="en">Behaviour on loss of voltage</span></h2>
+
+    <p lang="de">Hier liegt der entscheidende Punkt dieser Steuerungsart — und der Grund, weshalb sie in vielen Anwendungen <strong>nicht</strong> zulässig ist.</p>
+    <p lang="en">This is the decisive point of this type of control — and the reason why it is <strong>not</strong> permissible in many applications.</p>
+
+    <p lang="de">Fällt die Netzspannung aus, wird die Spule stromlos. Weil das Schütz monostabil ist, fällt es ab und der Motor bleibt stehen. Der rastende Schalter S1 dagegen ist ein <strong>mechanisches</strong> Bauteil: Er bemerkt vom Spannungsausfall nichts und bleibt in der Stellung «Ein». Kommt die Spannung zurück, liegt sie sofort wieder an A1 — die Spule zieht an, die Hauptkontakte schliessen, und der Motor <strong>läuft von selbst wieder an</strong>.</p>
+    <p lang="en">If the mains voltage fails, the coil is de-energised. Because the contactor is monostable, it drops out and the motor stops. The latching switch S1, however, is a <strong>mechanical</strong> component: it notices nothing of the voltage failure and stays in the "on" position. When the voltage returns, it is immediately present at A1 again — the coil pulls in, the main contacts close, and the motor <strong>restarts by itself</strong>.</p>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Der selbsttätige Wiederanlauf</span><span lang="en">The automatic restart</span></b>
+      <p lang="de">Bei der Steuerung mit Dauerkontakt läuft die Maschine nach einem Spannungsunterbruch <strong>ohne jede Bedienhandlung wieder an</strong>. Das ist in den meisten Fällen unerwünscht und oft gefährlich: Wer nach dem Stromausfall an der stillstehenden Maschine hantiert, rechnet nicht damit, dass sie ohne Vorwarnung anläuft. Genau deshalb wird bei Maschinen und überall dort, wo Personen im Gefahrenbereich arbeiten können, statt des Dauerkontakts eine <strong>Impulssteuerung mit Selbsthaltung</strong> eingesetzt — sie fällt beim Spannungsausfall in den Aus-Zustand und bleibt dort, bis bewusst wieder eingeschaltet wird.</p>
+      <p lang="en">With maintained-contact control the machine <strong>restarts without any operator action</strong> after an interruption of supply. In most cases this is unwanted and often dangerous: anyone working on the stopped machine after a power cut does not expect it to start without warning. That is precisely why machines, and anywhere people can work in the danger zone, use a <strong>pulse control with self-holding</strong> instead of a maintained contact — it falls to the off state on loss of voltage and stays there until it is deliberately switched on again.</p>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Vorgang</span><span lang="en">Event</span></th>
+            <th><span lang="de">Dauerkontakt (Thema 04)</span><span lang="en">Maintained contact (topic 04)</span></th>
+            <th><span lang="de">Impuls mit Selbsthaltung (Thema 05)</span><span lang="en">Pulse with self-holding (topic 05)</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Bedienelement</span><span lang="en">Operating device</span></strong></td>
+            <td><span lang="de">rastender Schalter, bleibt stehen</span><span lang="en">latching switch, stays put</span></td>
+            <td><span lang="de">Taster, gibt nur einen Impuls</span><span lang="en">push button, gives only a pulse</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Spannungsausfall</span><span lang="en">Loss of voltage</span></strong></td>
+            <td><span lang="de">Schütz fällt ab, Motor steht</span><span lang="en">contactor drops out, motor stops</span></td>
+            <td><span lang="de">Schütz fällt ab, Selbsthaltung wird unterbrochen</span><span lang="en">contactor drops out, self-holding is broken</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Spannungswiederkehr</span><span lang="en">Return of voltage</span></strong></td>
+            <td><span lang="de"><strong>Schütz zieht selbsttätig wieder an</strong>, Motor läuft ohne Bedienung an</span><span lang="en"><strong>contactor pulls in again on its own</strong>, motor starts without any operation</span></td>
+            <td><span lang="de">Schütz bleibt abgefallen, Motor bleibt stehen</span><span lang="en">contactor stays dropped out, motor stays stopped</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Wiederinbetriebnahme</span><span lang="en">Restarting</span></strong></td>
+            <td><span lang="de">geschieht von selbst</span><span lang="en">happens by itself</span></td>
+            <td><span lang="de">nur durch bewusstes Drücken des Ein-Tasters</span><span lang="en">only by deliberately pressing the on button</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Typische Anwendung</span><span lang="en">Typical application</span></strong></td>
+            <td><span lang="de">Boiler, Heizung, Lüfter, Beleuchtungsgruppen — Lasten ohne Gefahrenbereich, bei denen der Wiederanlauf sogar erwünscht ist</span><span lang="en">water heaters, heating, fans, lighting groups — loads with no danger zone, where a restart is even desirable</span></td>
+            <td><span lang="de">Maschinen, Antriebe, alles mit bewegten Teilen</span><span lang="en">machines, drives, anything with moving parts</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Normbezug — in der eigenen Ausgabe nachschlagen</span><span lang="en">Standards reference — look it up in your own edition</span></b>
+      <p lang="de">Der <strong>Schutz bei Unterspannung</strong> ist in der NIN im Teil über die Schutzmassnahmen geregelt; für Maschinen verlangt die <strong>EN 60204-1</strong> (Elektrische Ausrüstung von Maschinen) ausdrücklich, dass ein selbsttätiger Wiederanlauf nach Spannungswiederkehr verhindert wird. Die genaue Ziffer und der Wortlaut hängen von der Ausgabe ab. <strong>Vor der Abgabe in der eigenen NIN-Ausgabe und in der für den Betrieb gültigen Maschinennorm nachschlagen</strong> und die Ziffer dort zitieren, statt sie aus dem Gedächtnis anzugeben.</p>
+      <p lang="en">Protection against <strong>undervoltage</strong> is covered in the protective-measures part of the NIN; for machinery, <strong>EN 60204-1</strong> (electrical equipment of machines) explicitly requires that automatic restart after the return of voltage be prevented. The exact clause and wording depend on the edition. <strong>Before handing in, look it up in your own NIN edition and in the machinery standard applicable to the company</strong> and quote the clause from there instead of from memory.</p>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Merksatz</span><span lang="en">Memory aid</span></b>
+      <p lang="de">Der <strong>Schalter</strong> merkt sich den Zustand mechanisch, das <strong>Schütz</strong> merkt sich nichts. Wer sich erinnert, entscheidet, was nach dem Stromausfall passiert. Beim Dauerkontakt erinnert sich der Schalter — also läuft die Anlage wieder an.</p>
+      <p lang="en">The <strong>switch</strong> remembers the state mechanically, the <strong>contactor</strong> remembers nothing. Whichever one remembers decides what happens after a power cut. With a maintained contact it is the switch that remembers — so the installation starts up again.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Abgrenzung und Gebrauchskategorien</span><span lang="en">Delimitation and utilisation categories</span></h2>
+
+    <p lang="de">Schütz, Relais und Stromstossschalter sehen im Schema ähnlich aus — eine Spule und Kontakte. Sie unterscheiden sich aber grundlegend in Schaltleistung und Schaltverhalten, und im Prüfungsgespräch wird genau danach gefragt.</p>
+    <p lang="en">Contactor, relay and impulse relay look similar in a diagram — a coil and contacts. But they differ fundamentally in switching capacity and switching behaviour, and this is exactly what gets asked in an oral exam.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Merkmal</span><span lang="en">Feature</span></th>
+            <th><span lang="de">Schütz</span><span lang="en">Contactor</span></th>
+            <th><span lang="de">Relais</span><span lang="en">Relay</span></th>
+            <th><span lang="de">Stromstossschalter</span><span lang="en">Impulse relay</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Schaltverhalten</span><span lang="en">Switching behaviour</span></strong></td>
+            <td><span lang="de">monostabil</span><span lang="en">monostable</span></td>
+            <td><span lang="de">monostabil</span><span lang="en">monostable</span></td>
+            <td><span lang="de"><strong>bistabil</strong></span><span lang="en"><strong>bistable</strong></span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Ansteuerung</span><span lang="en">Actuation</span></strong></td>
+            <td><span lang="de">Dauersignal an der Spule</span><span lang="en">continuous signal at the coil</span></td>
+            <td><span lang="de">Dauersignal an der Spule</span><span lang="en">continuous signal at the coil</span></td>
+            <td><span lang="de">kurzer Impuls, jeder Impuls kippt den Zustand</span><span lang="en">short pulse, each pulse flips the state</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Kontaktarten</span><span lang="en">Contact types</span></strong></td>
+            <td><span lang="de">nur Schliesser und Öffner</span><span lang="en">only NO and NC contacts</span></td>
+            <td><span lang="de">auch Wechsler möglich</span><span lang="en">changeover contacts also possible</span></td>
+            <td><span lang="de">meist Schliesser, je nach Typ auch Wechsler</span><span lang="en">mostly NO, depending on type also changeover</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Lichtbogen</span><span lang="en">Arc</span></strong></td>
+            <td><span lang="de">Löschkammern, doppelt unterbrechende Kontaktbrücke</span><span lang="en">arc chutes, double-breaking contact bridge</span></td>
+            <td><span lang="de">meist einfach unterbrechend, keine Löschkammer</span><span lang="en">usually single-breaking, no arc chute</span></td>
+            <td><span lang="de">für Beleuchtungs- und Installationslasten ausgelegt</span><span lang="en">designed for lighting and installation loads</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Typischer Einsatz</span><span lang="en">Typical use</span></strong></td>
+            <td><span lang="de">Motoren, Heizungen, grosse Lasten</span><span lang="en">motors, heating, large loads</span></td>
+            <td><span lang="de">Steuer- und Signalstromkreise, kleine Leistungen</span><span lang="en">control and signal circuits, small power</span></td>
+            <td><span lang="de">Beleuchtungsgruppen mit mehreren Tastern</span><span lang="en">lighting groups with several push buttons</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Nach Spannungsausfall</span><span lang="en">After loss of voltage</span></strong></td>
+            <td><span lang="de">fällt ab, Ruhestellung</span><span lang="en">drops out, rest position</span></td>
+            <td><span lang="de">fällt ab, Ruhestellung</span><span lang="en">drops out, rest position</span></td>
+            <td><span lang="de">bleibt in der zuletzt eingenommenen Stellung</span><span lang="en">stays in the position last taken</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Produktnorm</span><span lang="en">Product standard</span></strong></td>
+            <td><span lang="de">IEC/EN 60947-4-1</span><span lang="en">IEC/EN 60947-4-1</span></td>
+            <td><span lang="de">IEC/EN 60947-5-1 für Steuergeräte und Schaltelemente</span><span lang="en">IEC/EN 60947-5-1 for control circuit devices and switching elements</span></td>
+            <td><span lang="de">IEC/EN 60669-2-2</span><span lang="en">IEC/EN 60669-2-2</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Gebrauchskategorien</span><span lang="en">Utilisation categories</span></h3>
+
+    <p lang="de">Ein Schütz trägt auf dem Typenschild <strong>mehrere Strom- und Leistungsangaben</strong>. Der Grund: Wie stark ein Kontakt beim Schalten belastet wird, hängt nicht nur vom Strom ab, sondern von der Art der Last. Ein Motor zieht beim Anlauf ein Mehrfaches seines Nennstromes, und beim Ausschalten unter Last entsteht ein kräftiger Lichtbogen. Eine Heizung tut beides nicht. Die <strong>Gebrauchskategorie</strong> nach IEC/EN 60947-4-1 beschreibt genau diesen Anwendungsfall.</p>
+    <p lang="en">A contactor carries <strong>several current and power ratings</strong> on its nameplate. The reason: how heavily a contact is stressed when switching depends not only on the current but on the type of load. A motor draws a multiple of its rated current when starting, and switching it off under load produces a substantial arc. A heater does neither. The <strong>utilisation category</strong> to IEC/EN 60947-4-1 describes exactly this application case.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Kategorie</span><span lang="en">Category</span></th>
+            <th><span lang="de">Last und Schaltvorgang</span><span lang="en">Load and switching operation</span></th>
+            <th><span lang="de">Beispiel aus der Praxis</span><span lang="en">Example from practice</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num"><strong>AC-1</strong></td>
+            <td><span lang="de">nicht oder schwach induktive Lasten, Widerstandsöfen</span><span lang="en">non-inductive or slightly inductive loads, resistance furnaces</span></td>
+            <td><span lang="de">Boiler, Heizregister, Widerstandsheizung</span><span lang="en">water heater, heating element, resistance heating</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>AC-2</strong></td>
+            <td><span lang="de">Schleifringläufermotoren: Anlassen, Ausschalten</span><span lang="en">slip-ring motors: starting, switching off</span></td>
+            <td><span lang="de">ältere Antriebe mit Anlasswiderständen</span><span lang="en">older drives with starting resistors</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>AC-3</strong></td>
+            <td><span lang="de">Käfigläufermotoren: Anlassen, Ausschalten während des Laufs — der Normalfall beim Motor</span><span lang="en">squirrel-cage motors: starting, switching off while running — the normal case for a motor</span></td>
+            <td><span lang="de">Pumpe, Lüfter, Kompressor, Sägeantrieb</span><span lang="en">pump, fan, compressor, saw drive</span></td>
+          </tr>
+          <tr>
+            <td class="num"><strong>AC-4</strong></td>
+            <td><span lang="de">Käfigläufermotoren: Anlassen, Gegenstrombremsen, Tippbetrieb — die härteste Beanspruchung</span><span lang="en">squirrel-cage motors: starting, plugging, inching — the most severe duty</span></td>
+            <td><span lang="de">Krananlagen, Wendeantriebe</span><span lang="en">cranes, reversing drives</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Zahlenwerte nie aus dem Gedächtnis</span><span lang="en">Never quote figures from memory</span></b>
+      <p lang="de">Derselbe Schütz verträgt in AC-1 einen deutlich höheren Strom als in AC-3, weil die Beanspruchung geringer ist. Die konkreten Werte — Bemessungsbetriebsstrom in Ampere und die zugeordnete Motorleistung in kW — <strong>hängen vom Typ, von der Betriebsspannung und vom Hersteller ab</strong>. Sie gehören nicht in eine Merkliste. <strong>Immer im Herstellerkatalog beziehungsweise auf dem Typenschild nachschlagen</strong> und nie eine Artikelnummer oder einen Stromwert aus der Erinnerung angeben. Neben AC-1 bis AC-4 gibt es je nach Hersteller weitere Kategorien, etwa AC-3e für Motoren mit erhöhtem Anlaufstrom.</p>
+      <p lang="en">The same contactor withstands a distinctly higher current in AC-1 than in AC-3, because the duty is lighter. The actual figures — rated operational current in amperes and the assigned motor power in kW — <strong>depend on the type, the operating voltage and the manufacturer</strong>. They do not belong on a memory list. <strong>Always look them up in the manufacturer's catalogue or on the nameplate</strong> and never quote a part number or a current value from memory. Besides AC-1 to AC-4 there are further categories depending on the manufacturer, for example AC-3e for motors with increased starting current.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Wie sind die Klemmen eines Schützes bezeichnet?</span><span lang="en">How are the terminals of a contactor marked?</span></summary>
+      <div class="ans">
+        <p lang="de">Die Spule hat A1 und A2. Die Hauptkontakte tragen einstellige Ziffern: 1–2, 3–4 und 5–6, wobei die ungeraden Ziffern auf der Netzseite und die geraden auf der Lastseite liegen. Hilfskontakte tragen zweistellige Ziffern: 13–14 ist der erste Schliesser, 21–22 der erste Öffner.</p>
+        <p lang="en">The coil has A1 and A2. The main contacts carry single digits: 1–2, 3–4 and 5–6, with the odd numbers on the supply side and the even ones on the load side. Auxiliary contacts carry two digits: 13–14 is the first normally open contact, 21–22 the first normally closed one.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Woran erkennst du an der Klemmennummer, ob ein Hilfskontakt ein Schliesser oder ein Öffner ist?</span><span lang="en">How does the terminal number tell you whether an auxiliary contact is NO or NC?</span></summary>
+      <div class="ans">
+        <p lang="de">An der zweiten Ziffer, der Funktionsziffer. Das Ziffernpaar 3–4 bedeutet Schliesser, das Ziffernpaar 1–2 bedeutet Öffner. Die erste Ziffer ist nur die Ordnungsziffer und sagt, um den wievielten Kontakt am Gerät es sich handelt.</p>
+        <p lang="en">By the second digit, the function digit. The digit pair 3–4 means normally open, the digit pair 1–2 means normally closed. The first digit is only the position number and says which contact on the device it is.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was bedeutet «monostabil» beim Schütz?</span><span lang="en">What does “monostable” mean for a contactor?</span></summary>
+      <div class="ans">
+        <p lang="de">Das Schütz hat nur eine stabile Lage, die Ruhestellung. Die eingeschaltete Stellung wird ausschliesslich durch den Strom in der Spule gehalten. Sobald die Spule stromlos wird, drückt die Rückstellfeder die Kontakte wieder auf.</p>
+        <p lang="en">The contactor has only one stable position, the rest position. The energised position is held solely by the current in the coil. As soon as the coil is de-energised, the return spring pushes the contacts open again.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was passiert bei der Steuerung mit Dauerkontakt, wenn die Spannung ausfällt und wiederkommt?</span><span lang="en">With maintained-contact control, what happens when the voltage fails and then returns?</span></summary>
+      <div class="ans">
+        <p lang="de">Beim Ausfall wird die Spule stromlos, das Schütz fällt ab und der Motor bleibt stehen. Der rastende Schalter bleibt jedoch mechanisch in der Stellung «Ein». Sobald die Spannung wiederkommt, liegt sie sofort an A1, die Spule zieht an und der Motor läuft selbsttätig wieder an — ohne dass jemand etwas bedient hat.</p>
+        <p lang="en">On failure the coil is de-energised, the contactor drops out and the motor stops. The latching switch, however, stays mechanically in the “on” position. As soon as the voltage returns it is immediately present at A1, the coil pulls in and the motor restarts automatically — without anyone having operated anything.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum ist dieser selbsttätige Wiederanlauf meist unerwünscht?</span><span lang="en">Why is this automatic restart usually unwanted?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil niemand damit rechnet. Nach einem Stromausfall geht man zur stillstehenden Maschine, greift hinein oder beginnt mit der Störungssuche. Läuft der Antrieb in diesem Moment ohne Vorwarnung an, ist das eine unmittelbare Verletzungsgefahr. Deshalb wird bei Maschinen die Impulssteuerung mit Selbsthaltung verlangt, die nach dem Spannungsausfall im Aus-Zustand bleibt.</p>
+        <p lang="en">Because nobody expects it. After a power cut people walk up to the stopped machine, reach into it or start fault-finding. If the drive starts at that moment without warning, that is an immediate risk of injury. This is why machines require pulse control with self-holding, which stays in the off state after a loss of voltage.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wo darf die Steuerung mit Dauerkontakt trotzdem eingesetzt werden?</span><span lang="en">Where may maintained-contact control nevertheless be used?</span></summary>
+      <div class="ans">
+        <p lang="de">Bei Lasten ohne bewegte Teile und ohne Gefahrenbereich, bei denen der Wiederanlauf sogar erwünscht ist: Boiler, Heizungen, Lüftungen, Beleuchtungsgruppen. Dort ist es ein Vorteil, dass die Anlage nach dem Stromausfall von selbst weiterläuft, statt dass jemand jedes Gerät einzeln wieder einschalten muss.</p>
+        <p lang="en">With loads that have no moving parts and no danger zone, and where a restart is even desirable: water heaters, heating, ventilation, lighting groups. There it is an advantage that the installation continues by itself after a power cut, rather than someone having to switch every device back on individually.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie unterscheidest du Schütz, Relais und Stromstossschalter?</span><span lang="en">How do you distinguish contactor, relay and impulse relay?</span></summary>
+      <div class="ans">
+        <p lang="de">Das Schütz ist monostabil, für grosse Leistungen gebaut, hat Löschkammern und doppelt unterbrechende Kontaktbrücken und kennt nur Schliesser und Öffner. Das Relais ist ebenfalls monostabil, aber für kleine Leistungen in Steuer- und Signalstromkreisen; es kann auch Wechslerkontakte haben. Der Stromstossschalter ist bistabil: Er reagiert auf einen kurzen Impuls und behält seine Stellung auch stromlos.</p>
+        <p lang="en">The contactor is monostable, built for high power, has arc chutes and double-breaking contact bridges and knows only NO and NC contacts. The relay is also monostable but for small power in control and signal circuits; it can also have changeover contacts. The impulse relay is bistable: it reacts to a short pulse and keeps its position even when de-energised.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was sagt die Gebrauchskategorie aus, und warum steht auf einem Schütz mehr als ein Stromwert?</span><span lang="en">What does the utilisation category say, and why does a contactor carry more than one current rating?</span></summary>
+      <div class="ans">
+        <p lang="de">Die Gebrauchskategorie nach IEC/EN 60947-4-1 beschreibt die Art der Last und den Schaltvorgang. AC-1 gilt für nicht oder schwach induktive Lasten wie Heizungen, AC-3 für Käfigläufermotoren, die im Lauf ein- und ausgeschaltet werden. Weil ein Motor beim Anlauf ein Vielfaches des Nennstromes zieht und beim Ausschalten einen kräftigen Lichtbogen erzeugt, ist derselbe Schütz in AC-3 für einen kleineren Strom zugelassen als in AC-1. Die konkreten Werte sind im Herstellerkatalog nachzuschlagen.</p>
+        <p lang="en">The utilisation category to IEC/EN 60947-4-1 describes the type of load and the switching operation. AC-1 applies to non-inductive or slightly inductive loads such as heating, AC-3 to squirrel-cage motors switched on and off while running. Because a motor draws a multiple of its rated current when starting and produces a substantial arc when switched off, the same contactor is rated for a lower current in AC-3 than in AC-1. The actual figures are to be looked up in the manufacturer's catalogue.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welches Betriebsmittelkennzeichen trägt ein Schütz im Schema?</span><span lang="en">Which reference designation does a contactor carry in a diagram?</span></summary>
+      <div class="ans">
+        <p lang="de">Klassisch den Kennbuchstaben K, also K1, K2 und so weiter — so wird es in der Berufsschule und auf den meisten Schweizer Schemas gehandhabt. Nach der neueren DIN EN IEC 81346-2 wird nicht mehr nach Geräteart, sondern nach Funktion gekennzeichnet; dort erhält ein Leistungsschütz QA und ein Steuerrelais KF. Welche Systematik verlangt ist, vor der Abgabe in der eigenen NIN-Ausgabe und in den Schulunterlagen nachschlagen.</p>
+        <p lang="en">Classically the letter K, that is K1, K2 and so on — this is how it is handled at vocational school and on most Swiss diagrams. Under the more recent DIN EN IEC 81346-2, marking follows function rather than device type; there a power contactor gets QA and a control relay KF. Which system is required should be checked in your own NIN edition and school material before handing in.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="03-motoren.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>03 · <span lang="de">Motoren</span><span lang="en">Motors</span></b>
+  </a>
+  <a class="next" href="05-schuetzensteuerung-impuls.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>05 · <span lang="de">Schuetzensteuerung Impuls</span><span lang="en">Contactor Control — Pulse</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 04 · Schuetzensteuerung Dauerkontakt</span><span lang="en">Learning Documentation 04 · Contactor Control — Maintained</span></span>
+  <span>Yanik · Etavis · <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></span>
+  <span><span lang="de">Grundlagen: NIN · IEC/EN 60947-4-1 · EN 50005 · EN 60204-1</span><span lang="en">Basis: NIN · IEC/EN 60947-4-1 · EN 50005 · EN 60204-1</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

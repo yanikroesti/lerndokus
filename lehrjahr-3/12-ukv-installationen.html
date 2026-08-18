@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 12 — UKV-Installationen" data-en="Learning Documentation 12 — Structured Cabling">Lerndokumentation 12 — UKV-Installationen</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span>
+    <span lang="de">Thema 12</span><span lang="en">Topic 12</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">12</div>
+    <h1><span lang="de">UKV-<br>Installationen</span><span lang="en">Structured<br>Cabling</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Material · Verkabelungen · Anschlüsse</span>
+    <span lang="en">Materials · cabling · connections</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">12 von 12</span><span lang="en">12 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Anschlussdose mit Patchkabel">
+        <rect x="40" y="42" width="108" height="80" rx="7" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <rect x="60" y="54" width="68" height="27" rx="2" fill="#FBF9F5" stroke="#171614" stroke-width="2"/>
+        <path d="M68 60 v14 M76 60 v14 M84 60 v14 M92 60 v14 M100 60 v14 M108 60 v14 M116 60 v14" stroke="#1D5872" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="74" cy="100" r="2.8" fill="#171614"/>
+        <circle cx="98" cy="100" r="2.8" fill="#171614"/>
+        <path d="M74 109 q 12 8 24 0" fill="none" stroke="#171614" stroke-width="2" stroke-linecap="round"/>
+        <path d="M148 66 C 172 66 178 50 190 40" fill="none" stroke="#1D5872" stroke-width="3.2" stroke-linecap="round"/>
+        <rect x="182" y="24" width="24" height="16" rx="2.5" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <path d="M188 40 v6 h12 v-6" fill="none" stroke="#171614" stroke-width="2.2" stroke-linejoin="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Was UKV bedeutet</span><span lang="en">What structured cabling means</span></h2>
+
+    <p class="lead" lang="de">UKV heisst <strong>universelle Kommunikationsverkabelung</strong>. «Universell» meint <strong>anwendungsneutral</strong>: Es wird <em>ein</em> einziges Kabelsystem im Gebäude verlegt, und erst am Verteiler entscheidet sich, ob an einer Dose ein Computer, ein Telefon, ein Access Point oder eine Kamera hängt.</p>
+    <p class="lead" lang="en">Structured cabling (German: UKV) means <strong>generic communication cabling</strong>. “Generic” means <strong>application-neutral</strong>: <em>one</em> single cabling system is installed in the building, and only at the distributor is it decided whether a computer, a telephone, an access point or a camera sits on a given outlet.</p>
+
+    <p lang="de">Früher bekam jeder Dienst sein eigenes Kabel — Telefon, Netzwerk, Türsprechanlage. Das war teuer, unübersichtlich und bei jeder Umnutzung eines Raumes musste neu verlegt werden. Die UKV löst das: Man verlegt einmal grosszügig und ändert später nur noch die <strong>Rangierung im Verteiler</strong>.</p>
+    <p lang="en">In the past every service had its own cable — telephone, network, door entry system. That was expensive, confusing, and every change of use in a room meant new cabling. Structured cabling solves this: you install generously once and later only change the <strong>patching in the distributor</strong>.</p>
+
+    <h3><span lang="de">Die massgebenden Normen</span><span lang="en">The governing standards</span></h3>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Norm</span><span lang="en">Standard</span></th>
+            <th><span lang="de">Was sie regelt</span><span lang="en">What it governs</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>SN EN 50173</strong></td>
+            <td><span lang="de">Aufbau der Verkabelung, Klassen und Strecken — die Norm für anwendungsneutrale Kommunikationskabelanlagen. Teil 1 allgemein, Teil 2 Bürogebäude, Teil 4 Wohnbauten, Teil 5 Rechenzentren</span><span lang="en">structure of the cabling, classes and links — the standard for generic communication cabling. Part 1 general, part 2 office buildings, part 4 homes, part 5 data centres</span></td>
+          </tr>
+          <tr>
+            <td><strong>SN EN 50174</strong></td>
+            <td><span lang="de">Planung, Installation, Betrieb und Qualitätssicherung — also die Ausführung auf der Baustelle, inklusive Trennungsabstände zu Energieleitungen</span><span lang="en">planning, installation, operation and quality assurance — the site work itself, including separation distances from power cables</span></td>
+          </tr>
+          <tr>
+            <td><strong>ISO/IEC 11801</strong></td>
+            <td><span lang="de">die internationale Entsprechung zu EN 50173, inhaltlich weitgehend identisch</span><span lang="en">the international counterpart to EN 50173, largely identical in content</span></td>
+          </tr>
+          <tr>
+            <td><strong>ANSI/TIA-568</strong></td>
+            <td><span lang="de">die nordamerikanische Normenreihe; von dort stammen die Belegungen T568A und T568B</span><span lang="en">the North American series; the T568A and T568B pin assignments come from it</span></td>
+          </tr>
+          <tr>
+            <td><strong>NIN</strong></td>
+            <td><span lang="de">nicht die UKV selbst, aber die Starkstromseite daneben: Schutzmassnahmen, Erdung und der Potentialausgleich, an den die Schirme und das Rack angebunden werden</span><span lang="en">not the cabling itself, but the power side next to it: protective measures, earthing and the bonding to which screens and the rack are connected</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Merksatz</span><span lang="en">Key sentence</span></b>
+      <p lang="de"><strong>EN 50173 sagt, <em>was</em> die Verkabelung können muss. EN 50174 sagt, <em>wie</em> sie eingebaut wird.</strong> Wer nur die erste Norm kennt, plant richtig und montiert trotzdem falsch.</p>
+      <p lang="en"><strong>EN 50173 says <em>what</em> the cabling must achieve. EN 50174 says <em>how</em> it is installed.</strong> Knowing only the first standard means planning correctly and still fitting it wrongly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Sterntopologie und die 100-Meter-Regel</span><span lang="en">Star topology and the 100 metre rule</span></h2>
+
+    <p lang="de">Die UKV ist <strong>sternförmig</strong> aufgebaut. Von einem Verteiler — meist ein 19-Zoll-Rack mit Patchpanel und Switch — geht zu <em>jeder</em> Anschlussdose ein eigenes Kabel. Keine Dose hängt an einer anderen, es gibt keine Ringe und keine Abzweigungen. Nur so lässt sich jede Strecke einzeln messen, einzeln rangieren und im Fehlerfall einzeln abhängen.</p>
+    <p lang="en">Structured cabling is built as a <strong>star</strong>. From one distributor — usually a 19-inch rack with patch panel and switch — a separate cable runs to <em>every</em> outlet. No outlet hangs off another, there are no rings and no spurs. Only this way can each link be measured individually, patched individually and isolated individually when there is a fault.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sterntopologie der UKV mit Laengenbudget Channel und Permanent Link">
+        <defs>
+          <style>
+            .inst{fill:none;stroke:#1D5872;stroke-width:2.8;stroke-linecap:round}
+            .pat{fill:none;stroke:#B8402A;stroke-width:2.6;stroke-linecap:round}
+            .instT{fill:none;stroke:#1D5872;stroke-width:8;stroke-linecap:butt}
+            .patT{fill:none;stroke:#B8402A;stroke-width:8;stroke-linecap:butt}
+            .bx{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .bx2{fill:#FBF9F5;stroke:#171614;stroke-width:1.8}
+            .prt{fill:#DDD6C8;stroke:#48433B;stroke-width:1}
+            .lb{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;fill:#48433B}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10px;fill:#7D7669;letter-spacing:.06em}
+            .dim{fill:none;stroke:#7D7669;stroke-width:1.3}
+            .dot{fill:#171614}
+          </style>
+        </defs>
+
+        <!-- Verteiler -->
+        <text class="lgs" x="44" y="56"><tspan lang="de">VERTEILER · RACK</tspan><tspan lang="en">DISTRIBUTOR · RACK</tspan></text>
+        <rect class="bx" x="44" y="64" width="126" height="208" rx="3"/>
+        <rect class="bx2" x="56" y="80" width="102" height="28" rx="2"/>
+        <rect class="prt" x="62" y="86" width="8" height="10"/>
+        <rect class="prt" x="74" y="86" width="8" height="10"/>
+        <rect class="prt" x="86" y="86" width="8" height="10"/>
+        <rect class="prt" x="98" y="86" width="8" height="10"/>
+        <rect class="prt" x="110" y="86" width="8" height="10"/>
+        <rect class="prt" x="122" y="86" width="8" height="10"/>
+        <rect class="prt" x="134" y="86" width="8" height="10"/>
+        <rect class="prt" x="146" y="86" width="8" height="10"/>
+        <text class="lb" x="107" y="105" text-anchor="middle">PATCHPANEL</text>
+        <rect class="bx2" x="56" y="124" width="102" height="28" rx="2"/>
+        <rect class="prt" x="62" y="130" width="8" height="10"/>
+        <rect class="prt" x="74" y="130" width="8" height="10"/>
+        <rect class="prt" x="86" y="130" width="8" height="10"/>
+        <rect class="prt" x="98" y="130" width="8" height="10"/>
+        <rect class="prt" x="110" y="130" width="8" height="10"/>
+        <rect class="prt" x="122" y="130" width="8" height="10"/>
+        <text class="lb" x="107" y="149" text-anchor="middle">SWITCH</text>
+        <path class="pat" d="M78 108 v16 M102 108 v16 M126 108 v16"/>
+        <text class="lgs" x="107" y="176" text-anchor="middle"><tspan lang="de">RANGIERUNG</tspan><tspan lang="en">PATCHING</tspan></text>
+        <text class="lgs" x="107" y="192" text-anchor="middle"><tspan lang="de">MIT PATCHKABEL</tspan><tspan lang="en">WITH PATCH CORDS</tspan></text>
+
+        <!-- Sternverkabelung -->
+        <path class="inst" d="M158 94 H186"/>
+        <circle class="dot" cx="186" cy="94" r="4.5"/>
+        <path class="inst" d="M186 94 L540 84"/>
+        <path class="inst" d="M186 94 L540 140"/>
+        <path class="inst" d="M186 94 L540 196"/>
+        <path class="inst" d="M186 94 L540 252"/>
+        <text class="lgs" x="250" y="222"><tspan lang="de">INSTALLATIONSKABEL — JE DOSE EIN EIGENES</tspan><tspan lang="en">FIXED CABLE — ONE PER OUTLET</tspan></text>
+
+        <!-- Anschlussdosen -->
+        <text class="lgs" x="540" y="56"><tspan lang="de">ANSCHLUSSDOSEN</tspan><tspan lang="en">TELECOM OUTLETS</tspan></text>
+        <rect class="bx" x="540" y="66" width="66" height="36" rx="3"/>
+        <text class="lb" x="573" y="89" text-anchor="middle">TA 1</text>
+        <rect class="bx" x="540" y="122" width="66" height="36" rx="3"/>
+        <text class="lb" x="573" y="145" text-anchor="middle">TA 2</text>
+        <rect class="bx" x="540" y="178" width="66" height="36" rx="3"/>
+        <text class="lb" x="573" y="201" text-anchor="middle">TA 3</text>
+        <rect class="bx" x="540" y="234" width="66" height="36" rx="3"/>
+        <text class="lb" x="573" y="257" text-anchor="middle">TA 4</text>
+
+        <!-- Endgeraete -->
+        <text class="lgs" x="648" y="56"><tspan lang="de">GERÄTE</tspan><tspan lang="en">DEVICES</tspan></text>
+        <path class="pat" d="M606 84 H648"/>
+        <rect class="bx2" x="648" y="68" width="64" height="32" rx="3"/>
+        <text class="lb" x="680" y="89" text-anchor="middle">PC</text>
+        <path class="pat" d="M606 140 H648"/>
+        <rect class="bx2" x="648" y="124" width="64" height="32" rx="3"/>
+        <text class="lb" x="680" y="145" text-anchor="middle">AP</text>
+        <path class="pat" d="M606 196 H648"/>
+        <rect class="bx2" x="648" y="180" width="64" height="32" rx="3"/>
+        <text class="lb" x="680" y="201" text-anchor="middle">TEL</text>
+        <path class="pat" d="M606 252 H648"/>
+        <rect class="bx2" x="648" y="236" width="64" height="32" rx="3"/>
+        <text class="lb" x="680" y="257" text-anchor="middle">CAM</text>
+
+        <path class="dim" d="M44 288 H716" stroke-dasharray="4 5"/>
+
+        <!-- Laengenbudget -->
+        <text class="lb" x="375" y="306" text-anchor="middle">PERMANENT LINK — max. 90 m</text>
+        <path class="dim" d="M130 314 H620 M130 308 V320 M620 308 V320"/>
+        <text class="lb" x="95" y="338" text-anchor="middle" fill="#B8402A">PATCH</text>
+        <text class="lb" x="375" y="338" text-anchor="middle" fill="#1D5872"><tspan lang="de">INSTALLATIONSKABEL, FEST VERLEGT</tspan><tspan lang="en">FIXED HORIZONTAL CABLE</tspan></text>
+        <text class="lb" x="660" y="338" text-anchor="middle" fill="#B8402A">PATCH</text>
+        <path class="patT" d="M60 350 H130"/>
+        <path class="instT" d="M130 350 H620"/>
+        <path class="patT" d="M620 350 H700"/>
+        <path class="dim" d="M60 374 H700 M60 368 V380 M700 368 V380"/>
+        <text class="lb" x="60" y="394">CHANNEL — max. 100 m</text>
+        <text class="lgs" x="700" y="394" text-anchor="end"><tspan lang="de">PATCHKABEL ZUSAMMEN MAX. 10 M</tspan><tspan lang="en">PATCH CORDS TOGETHER MAX. 10 M</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Sterntopologie: Von jedem Anschluss am Patchpanel führt ein eigenes Installationskabel (blau) zu einer Anschlussdose. Rangier- und Patchkabel (rot) zählen zum Channel, gehören aber nicht zum Permanent Link.</span>
+        <span lang="en"> — Star topology: from every port on the patch panel a separate fixed cable (blue) runs to one outlet. Patch cords (red) count towards the channel but are not part of the permanent link.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Permanent Link und Channel</span><span lang="en">Permanent link and channel</span></h3>
+
+    <p lang="de">Die berühmten 100 Meter sind kein einziges Kabel, sondern ein <strong>Längenbudget</strong>. Es teilt sich auf in maximal <strong>90 m fest verlegtes Installationskabel</strong> und maximal <strong>10 m Patchkabel</strong> — beide Enden zusammengerechnet, also Rangierkabel im Rack plus Anschlusskabel beim Arbeitsplatz.</p>
+    <p lang="en">The famous 100 metres are not one single cable but a <strong>length budget</strong>. It splits into a maximum of <strong>90 m of permanently installed cable</strong> and a maximum of <strong>10 m of patch cord</strong> — both ends added together, that is the patch cord in the rack plus the lead at the workstation.</p>
+
+    <ul lang="de">
+      <li><strong>Permanent Link</strong> — die fest verlegte Strecke vom Patchpanel bis zur Anschlussdose, höchstens 90 m. Das ist der Teil, den der Installateur baut und abnimmt.</li>
+      <li><strong>Channel</strong> — die ganze Übertragungsstrecke inklusive beider Patchkabel, höchstens 100 m. Das ist der Teil, den das Netzwerk tatsächlich sieht.</li>
+      <li><strong>Primärbereich</strong> (Gelände, zwischen Gebäuden) und <strong>Sekundärbereich</strong> (Steigzone, zwischen Etagenverteilern) haben eigene, längere Budgets und werden meist mit Lichtwellenleiter ausgeführt.</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Permanent link</strong> — the fixed run from the patch panel to the outlet, 90 m at most. This is the part the installer builds and hands over.</li>
+      <li><strong>Channel</strong> — the whole transmission path including both patch cords, 100 m at most. This is the part the network actually sees.</li>
+      <li>The <strong>campus backbone</strong> (between buildings) and the <strong>building backbone</strong> (risers, between floor distributors) have their own, longer budgets and are usually built in optical fibre.</li>
+    </ul>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Ebene</span><span lang="en">Level</span></th>
+            <th><span lang="de">Von — bis</span><span lang="en">From — to</span></th>
+            <th><span lang="de">Richtwert Länge</span><span lang="en">Typical length</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Primär</span><span lang="en">Campus</span></strong></td>
+            <td><span lang="de">Geländeverteiler → Gebäudeverteiler</span><span lang="en">campus distributor → building distributor</span></td>
+            <td class="num">1500 m</td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Sekundär</span><span lang="en">Building</span></strong></td>
+            <td><span lang="de">Gebäudeverteiler → Etagenverteiler</span><span lang="en">building distributor → floor distributor</span></td>
+            <td class="num">500 m</td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Tertiär</span><span lang="en">Horizontal</span></strong></td>
+            <td><span lang="de">Etagenverteiler → Anschlussdose</span><span lang="en">floor distributor → telecom outlet</span></td>
+            <td class="num">90 m</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Häufiger Fehler</span><span lang="en">Common mistake</span></b>
+      <p lang="de">Die 90 m sind die <strong>Kabellänge in der Trasse</strong>, nicht die Luftlinie im Grundriss. Steigzonen, Umwege um Brandabschnitte, die Schlaufe im Zwischendeck und die Reserve im Rack zählen alle mit. Wer auf dem Plan 70 m misst, kann in der Realität bequem über 90 m kommen — und die Strecke fällt bei der Abnahmemessung durch.</p>
+      <p lang="en">The 90 m is the <strong>cable length along the route</strong>, not the straight line on the floor plan. Risers, detours around fire compartments, the loop in the ceiling void and the service coil in the rack all count. Measuring 70 m on the drawing can easily become more than 90 m in reality — and the link then fails the acceptance test.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Kategorie und Klasse</span><span lang="en">Category and class</span></h2>
+
+    <p class="lead" lang="de">Das ist die Unterscheidung, die in der Prüfung am häufigsten schiefgeht — und auf der Baustelle am meisten kostet.</p>
+    <p class="lead" lang="en">This is the distinction that most often goes wrong in the exam — and costs the most on site.</p>
+
+    <ul lang="de">
+      <li><strong>Kategorie (Cat)</strong> beschreibt eine <strong>einzelne Komponente</strong>: das Kabel, das Anschlussmodul, den Stecker, das Patchpanel. Cat 6A ist eine Eigenschaft eines Bauteils.</li>
+      <li><strong>Klasse</strong> beschreibt die <strong>fertige Strecke</strong>, also die ganze Verbindung aus Kabel, Dosen, Panel und Patchkabeln. Klasse E<sub>A</sub> ist eine Eigenschaft der gemessenen Verbindung.</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Category (Cat)</strong> describes a <strong>single component</strong>: the cable, the connection module, the plug, the patch panel. Cat 6A is a property of a part.</li>
+      <li><strong>Class</strong> describes the <strong>finished link</strong>, that is the whole connection made of cable, outlets, panel and patch cords. Class E<sub>A</sub> is a property of the measured connection.</li>
+    </ul>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Klasse (Strecke)</span><span lang="en">Class (link)</span></th>
+            <th><span lang="de">Kategorie (Komponente)</span><span lang="en">Category (component)</span></th>
+            <th><span lang="de">Grenzfrequenz</span><span lang="en">Bandwidth</span></th>
+            <th><span lang="de">Typische Anwendung</span><span lang="en">Typical application</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>C</strong></td><td>Cat 3</td><td class="num">16 MHz</td>
+            <td><span lang="de">alte Telefonie, heute nicht mehr neu gebaut</span><span lang="en">legacy telephony, no longer newly installed</span></td>
+          </tr>
+          <tr>
+            <td><strong>D</strong></td><td>Cat 5e</td><td class="num">100 MHz</td>
+            <td><span lang="de">1000BASE-T, Bestand in älteren Anlagen</span><span lang="en">1000BASE-T, existing older installations</span></td>
+          </tr>
+          <tr>
+            <td><strong>E</strong></td><td>Cat 6</td><td class="num">250 MHz</td>
+            <td><span lang="de">1000BASE-T mit Reserve, 10G nur auf verkürzter Strecke</span><span lang="en">1000BASE-T with headroom, 10G only on shortened links</span></td>
+          </tr>
+          <tr>
+            <td><strong>E<sub>A</sub></strong></td><td>Cat 6A</td><td class="num">500 MHz</td>
+            <td><span lang="de">10GBASE-T über die vollen 100 m — heute der übliche Neubaustandard</span><span lang="en">10GBASE-T over the full 100 m — today's usual new-build standard</span></td>
+          </tr>
+          <tr>
+            <td><strong>F</strong></td><td>Cat 7</td><td class="num">600 MHz</td>
+            <td><span lang="de">10G mit Reserve, immer paargeschirmt</span><span lang="en">10G with headroom, always pair-screened</span></td>
+          </tr>
+          <tr>
+            <td><strong>F<sub>A</sub></strong></td><td>Cat 7A</td><td class="num">1000 MHz</td>
+            <td><span lang="de">10G plus Breitbanddienste auf demselben Kabel</span><span lang="en">10G plus broadband services on the same cable</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Die entscheidende Regel</span><span lang="en">The decisive rule</span></b>
+      <p lang="de">Eine Strecke erreicht <strong>nie eine höhere Klasse als ihr schwächstes Bauteil</strong>. Ein Cat-6A-Kabel mit einem Cat-5e-Modul in der Dose ergibt eine Strecke der Klasse D — nicht E<sub>A</sub>. Umgekehrt gilt: Eine höherwertige Komponente darf in einer tieferen Klasse eingesetzt werden, sie bringt einfach nur Reserve. <strong>Deshalb wird eine Klasse immer gemessen und nicht aus dem Lieferschein abgelesen.</strong></p>
+      <p lang="en">A link <strong>never reaches a higher class than its weakest part</strong>. A Cat 6A cable with a Cat 5e module in the outlet gives a class D link — not E<sub>A</sub>. Conversely, a higher-grade component may be used in a lower class; it simply provides headroom. <strong>That is why a class is always measured, never read off the delivery note.</strong></p>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Cat 8 und die Klassen I und II</span><span lang="en">Cat 8 and classes I and II</span></b>
+      <p lang="de">Für Rechenzentren gibt es zusätzlich die Klassen I und II mit den Kategorien 8.1 und 8.2 und einer Grenzfrequenz bis rund 2000 MHz. Dafür ist die zulässige Streckenlänge aber stark verkürzt — sie liegt im Bereich von etwa 30 m. Im normalen Gebäudebau kommt das praktisch nicht vor.</p>
+      <p lang="en">For data centres there are additionally classes I and II with categories 8.1 and 8.2 and a bandwidth of up to about 2000 MHz. In return the permitted link length is much shorter — in the region of 30 m. In ordinary building work this hardly ever appears.</p>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Vor der Abgabe nachschlagen</span><span lang="en">Look it up before handing in</span></b>
+      <p lang="de">Welche Klasse in einem konkreten Projekt <em>gefordert</em> ist, steht nicht in der Norm, sondern im <strong>Devis beziehungsweise im Pflichtenheft des Bauherrn</strong>. Viele öffentliche Bauherren in der Schweiz verlangen heute mindestens Klasse E<sub>A</sub> mit S/FTP-Kabel. Diese Vorgabe im Projektdossier prüfen und nicht aus der Erinnerung übernehmen.</p>
+      <p lang="en">Which class is <em>required</em> in a specific project is not written in the standard but in the <strong>tender documents or the client's specification</strong>. Many public clients in Switzerland today require at least class E<sub>A</sub> with S/FTP cable. Check this requirement in the project file rather than quoting it from memory.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Kabelaufbau und Schirmung</span><span lang="en">Cable construction and screening</span></h2>
+
+    <p lang="de">Ein UKV-Kabel enthält <strong>vier Paare</strong>, also acht Adern. Der Wellenwiderstand beträgt <strong>100 Ω</strong>. Installationskabel haben massive Einzeldrähte (üblich AWG 22 bis 24) und werden auf Schneidklemmen aufgelegt; Patchkabel haben feindrähtige Litzen, damit sie biegsam bleiben, und werden nicht selbst konfektioniert.</p>
+    <p lang="en">A structured-cabling cable contains <strong>four pairs</strong>, that is eight conductors. The characteristic impedance is <strong>100 Ω</strong>. Fixed cable has solid conductors (typically AWG 22 to 24) and is terminated on insulation-displacement contacts; patch cords have stranded conductors so they stay flexible, and are not field-assembled.</p>
+
+    <h3><span lang="de">Warum die Adern verdrillt sind</span><span lang="en">Why the conductors are twisted</span></h3>
+
+    <p lang="de">Die Übertragung ist <strong>symmetrisch</strong>: Auf den beiden Adern eines Paares läuft dasselbe Signal, einmal davon gegenphasig. Der Empfänger wertet nur die <em>Differenz</em> aus.</p>
+    <p lang="en">Transmission is <strong>balanced</strong>: the same signal runs on both conductors of a pair, one of them inverted. The receiver evaluates only the <em>difference</em>.</p>
+
+    <ul lang="de">
+      <li>Eine <strong>äussere Störung</strong> trifft beide Adern gleich stark, weil sie eng beieinander liegen. In der Differenz hebt sie sich auf — das ist die Gleichtaktunterdrückung.</li>
+      <li>Durch das <strong>Verdrillen</strong> tauschen die beiden Adern laufend die Position. So sammeln sie über die Kabellänge dieselbe Störung ein und keine Ader wird bevorzugt.</li>
+      <li>Die vier Paare haben <strong>unterschiedliche Schlaglängen</strong>, sind also verschieden stark verdrillt. Das verhindert, dass sich benachbarte Paare gegenseitig einkoppeln — es senkt das Übersprechen (NEXT).</li>
+      <li>Ein verdrilltes Paar strahlt aus demselben Grund auch selbst kaum ab. Die UKV stört ihre Umgebung also ebenso wenig, wie sie sich stören lässt.</li>
+    </ul>
+    <ul lang="en">
+      <li>An <strong>external disturbance</strong> hits both conductors equally because they lie close together. In the difference it cancels out — this is common-mode rejection.</li>
+      <li><strong>Twisting</strong> makes the two conductors constantly swap position. Over the cable length they therefore pick up the same disturbance and neither conductor is favoured.</li>
+      <li>The four pairs have <strong>different lay lengths</strong>, so they are twisted to different degrees. This stops adjacent pairs coupling into each other — it lowers crosstalk (NEXT).</li>
+      <li>For the same reason a twisted pair also radiates very little itself. Structured cabling therefore disturbs its surroundings as little as it is disturbed by them.</li>
+    </ul>
+
+    <h3><span lang="de">Das Bezeichnungssystem der Schirmung</span><span lang="en">The screening designation system</span></h3>
+
+    <p lang="de">Die Bezeichnung folgt dem Schema <strong>XX/YTP</strong>. Vor dem Schrägstrich steht der <strong>Gesamtschirm</strong> um alle vier Paare, nach dem Schrägstrich der <strong>Schirm um das einzelne Paar</strong>. TP steht für Twisted Pair. Die Buchstaben bedeuten: <strong>U</strong> = ungeschirmt, <strong>F</strong> = Folienschirm, <strong>S</strong> = Geflechtschirm, <strong>SF</strong> = Geflecht und Folie zusammen.</p>
+    <p lang="en">The designation follows the pattern <strong>XX/YTP</strong>. Before the slash is the <strong>overall screen</strong> around all four pairs, after the slash the <strong>screen around the individual pair</strong>. TP stands for twisted pair. The letters mean: <strong>U</strong> = unscreened, <strong>F</strong> = foil screen, <strong>S</strong> = braid screen, <strong>SF</strong> = braid and foil together.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Bezeichnung</span><span lang="en">Designation</span></th>
+            <th><span lang="de">Gesamtschirm</span><span lang="en">Overall screen</span></th>
+            <th><span lang="de">Schirm je Paar</span><span lang="en">Screen per pair</span></th>
+            <th><span lang="de">Einordnung</span><span lang="en">Where it fits</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>U/UTP</strong></td>
+            <td><span lang="de">keiner</span><span lang="en">none</span></td>
+            <td><span lang="de">keiner</span><span lang="en">none</span></td>
+            <td><span lang="de">weltweit die häufigste Bauart, günstig und dünn; empfindlicher auf Störungen</span><span lang="en">the most common type worldwide, cheap and thin; more sensitive to interference</span></td>
+          </tr>
+          <tr>
+            <td><strong>F/UTP</strong></td>
+            <td><span lang="de">Folie</span><span lang="en">foil</span></td>
+            <td><span lang="de">keiner</span><span lang="en">none</span></td>
+            <td><span lang="de">einfacher Gesamtschirm gegen Einstrahlung von aussen</span><span lang="en">simple overall screen against external interference</span></td>
+          </tr>
+          <tr>
+            <td><strong>SF/UTP</strong></td>
+            <td><span lang="de">Geflecht + Folie</span><span lang="en">braid + foil</span></td>
+            <td><span lang="de">keiner</span><span lang="en">none</span></td>
+            <td><span lang="de">robuster Gesamtschirm, gut bei tiefen und hohen Frequenzen</span><span lang="en">robust overall screen, good at low and high frequencies</span></td>
+          </tr>
+          <tr>
+            <td><strong>U/FTP</strong></td>
+            <td><span lang="de">keiner</span><span lang="en">none</span></td>
+            <td><span lang="de">Folie</span><span lang="en">foil</span></td>
+            <td><span lang="de">wirkt vor allem gegen das Übersprechen zwischen den Paaren; schlanker Kabeldurchmesser</span><span lang="en">works mainly against crosstalk between the pairs; slim cable diameter</span></td>
+          </tr>
+          <tr>
+            <td><strong>S/FTP</strong></td>
+            <td><span lang="de">Geflecht</span><span lang="en">braid</span></td>
+            <td><span lang="de">Folie</span><span lang="en">foil</span></td>
+            <td><span lang="de">die beste EMV-Variante und in der Schweiz bei UKV weit verbreitet; nötig ab Kategorie 7</span><span lang="en">the best EMC variant and widely used for structured cabling in Switzerland; required from category 7</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Ein Schirm ohne Auflage ist schlechter als kein Schirm</span><span lang="en">An unbonded screen is worse than no screen</span></b>
+      <p lang="de">Ein Schirm wirkt nur, wenn er <strong>rundum und beidseitig sauber aufgelegt</strong> ist — auf das Modul in der Dose <em>und</em> auf das Patchpanel, und von dort über das Rack an den Potentialausgleich. Ein Schirm, der nur an einem Ende oder gar nirgends angeschlossen ist, wirkt als <strong>Antenne</strong> und verschlechtert die Strecke gegenüber einem ungeschirmten Kabel. Beim Auflegen darf das Geflecht nicht abgeschnitten, sondern muss über die Schirmauflage zurückgestülpt werden.</p>
+      <p lang="en">A screen only works if it is <strong>bonded cleanly all round and at both ends</strong> — to the module in the outlet <em>and</em> to the patch panel, and from there via the rack to the equipotential bonding. A screen connected at only one end, or nowhere at all, acts as an <strong>aerial</strong> and makes the link worse than an unscreened cable would be. When terminating, the braid must not be cut off but folded back over the screen contact.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Anschlusstechnik RJ45</span><span lang="en">RJ45 termination</span></h2>
+
+    <p lang="de">Der Steckverbinder der UKV ist der <strong>RJ45</strong> mit acht Kontakten, in der Norm 8P8C genannt. In der Dose und im Patchpanel sitzt die <strong>Buchse</strong> als Modul, am Patchkabel der <strong>Stecker</strong>. Der Installateur legt nur die Module auf — Stecker werden ab Werk konfektioniert geliefert.</p>
+    <p lang="en">The connector used in structured cabling is the <strong>RJ45</strong> with eight contacts, called 8P8C in the standard. The <strong>jack</strong> sits as a module in the outlet and in the patch panel, the <strong>plug</strong> on the patch cord. The installer only terminates the modules — plugs come factory-assembled.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RJ45 Belegung nach T568A und T568B mit Paarzuordnung">
+        <defs>
+          <style>
+            .pin{stroke:#171614;stroke-width:1.4}
+            .pw{fill:#FBF9F5}
+            .body{fill:#EFEAE0;stroke:#171614;stroke-width:2.4;stroke-linejoin:round}
+            .ttl{font-family:'Archivo',sans-serif;font-size:17px;font-weight:700;fill:#171614}
+            .lb{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;fill:#48433B}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10px;fill:#7D7669;letter-spacing:.06em}
+            .brk{fill:none;stroke:#48433B;stroke-width:1.6}
+          </style>
+        </defs>
+
+        <!-- ===== T568A ===== -->
+        <text class="ttl" x="100" y="60">T568A</text>
+        <path class="body" d="M100 84 H280 V190 H222 V212 H158 V190 H100 Z"/>
+        <rect class="pin pw" x="123" y="92" width="14" height="56" rx="1"/>
+        <rect x="123" y="102" width="14" height="7" fill="#2E7D32"/><rect x="123" y="124" width="14" height="7" fill="#2E7D32"/>
+        <rect class="pin" x="143" y="92" width="14" height="56" rx="1" fill="#2E7D32"/>
+        <rect class="pin pw" x="163" y="92" width="14" height="56" rx="1"/>
+        <rect x="163" y="102" width="14" height="7" fill="#D97B24"/><rect x="163" y="124" width="14" height="7" fill="#D97B24"/>
+        <rect class="pin" x="183" y="92" width="14" height="56" rx="1" fill="#1D5872"/>
+        <rect class="pin pw" x="203" y="92" width="14" height="56" rx="1"/>
+        <rect x="203" y="102" width="14" height="7" fill="#1D5872"/><rect x="203" y="124" width="14" height="7" fill="#1D5872"/>
+        <rect class="pin" x="223" y="92" width="14" height="56" rx="1" fill="#D97B24"/>
+        <rect class="pin pw" x="243" y="92" width="14" height="56" rx="1"/>
+        <rect x="243" y="102" width="14" height="7" fill="#7A4A22"/><rect x="243" y="124" width="14" height="7" fill="#7A4A22"/>
+        <rect class="pin" x="263" y="92" width="14" height="56" rx="1" fill="#7A4A22"/>
+        <text class="lb" x="130" y="168" text-anchor="middle">1</text>
+        <text class="lb" x="150" y="168" text-anchor="middle">2</text>
+        <text class="lb" x="170" y="168" text-anchor="middle">3</text>
+        <text class="lb" x="190" y="168" text-anchor="middle">4</text>
+        <text class="lb" x="210" y="168" text-anchor="middle">5</text>
+        <text class="lb" x="230" y="168" text-anchor="middle">6</text>
+        <text class="lb" x="250" y="168" text-anchor="middle">7</text>
+        <text class="lb" x="270" y="168" text-anchor="middle">8</text>
+        <path class="brk" d="M130 224 V240 H150 V224"/>
+        <text class="lb" x="140" y="254" text-anchor="middle">P3</text>
+        <path class="brk" d="M170 224 V272 H230 V224"/>
+        <text class="lb" x="200" y="286" text-anchor="middle">P2</text>
+        <path class="brk" d="M190 224 V240 H210 V224"/>
+        <text class="lb" x="200" y="254" text-anchor="middle">P1</text>
+        <path class="brk" d="M250 224 V240 H270 V224"/>
+        <text class="lb" x="260" y="254" text-anchor="middle">P4</text>
+
+        <!-- ===== T568B ===== -->
+        <text class="ttl" x="470" y="60">T568B</text>
+        <path class="body" d="M470 84 H650 V190 H592 V212 H528 V190 H470 Z"/>
+        <rect class="pin pw" x="493" y="92" width="14" height="56" rx="1"/>
+        <rect x="493" y="102" width="14" height="7" fill="#D97B24"/><rect x="493" y="124" width="14" height="7" fill="#D97B24"/>
+        <rect class="pin" x="513" y="92" width="14" height="56" rx="1" fill="#D97B24"/>
+        <rect class="pin pw" x="533" y="92" width="14" height="56" rx="1"/>
+        <rect x="533" y="102" width="14" height="7" fill="#2E7D32"/><rect x="533" y="124" width="14" height="7" fill="#2E7D32"/>
+        <rect class="pin" x="553" y="92" width="14" height="56" rx="1" fill="#1D5872"/>
+        <rect class="pin pw" x="573" y="92" width="14" height="56" rx="1"/>
+        <rect x="573" y="102" width="14" height="7" fill="#1D5872"/><rect x="573" y="124" width="14" height="7" fill="#1D5872"/>
+        <rect class="pin" x="593" y="92" width="14" height="56" rx="1" fill="#2E7D32"/>
+        <rect class="pin pw" x="613" y="92" width="14" height="56" rx="1"/>
+        <rect x="613" y="102" width="14" height="7" fill="#7A4A22"/><rect x="613" y="124" width="14" height="7" fill="#7A4A22"/>
+        <rect class="pin" x="633" y="92" width="14" height="56" rx="1" fill="#7A4A22"/>
+        <text class="lb" x="500" y="168" text-anchor="middle">1</text>
+        <text class="lb" x="520" y="168" text-anchor="middle">2</text>
+        <text class="lb" x="540" y="168" text-anchor="middle">3</text>
+        <text class="lb" x="560" y="168" text-anchor="middle">4</text>
+        <text class="lb" x="580" y="168" text-anchor="middle">5</text>
+        <text class="lb" x="600" y="168" text-anchor="middle">6</text>
+        <text class="lb" x="620" y="168" text-anchor="middle">7</text>
+        <text class="lb" x="640" y="168" text-anchor="middle">8</text>
+        <path class="brk" d="M500 224 V240 H520 V224"/>
+        <text class="lb" x="510" y="254" text-anchor="middle">P2</text>
+        <path class="brk" d="M540 224 V272 H600 V224"/>
+        <text class="lb" x="570" y="286" text-anchor="middle">P3</text>
+        <path class="brk" d="M560 224 V240 H580 V224"/>
+        <text class="lb" x="570" y="254" text-anchor="middle">P1</text>
+        <path class="brk" d="M620 224 V240 H640 V224"/>
+        <text class="lb" x="630" y="254" text-anchor="middle">P4</text>
+
+        <!-- Legende -->
+        <rect x="86" y="316" width="18" height="12" fill="#1D5872" stroke="#171614" stroke-width="1.2"/>
+        <text class="lgs" x="112" y="326"><tspan lang="de">P1 · BLAU</tspan><tspan lang="en">P1 · BLUE</tspan></text>
+        <rect x="236" y="316" width="18" height="12" fill="#D97B24" stroke="#171614" stroke-width="1.2"/>
+        <text class="lgs" x="262" y="326"><tspan lang="de">P2 · ORANGE</tspan><tspan lang="en">P2 · ORANGE</tspan></text>
+        <rect x="396" y="316" width="18" height="12" fill="#2E7D32" stroke="#171614" stroke-width="1.2"/>
+        <text class="lgs" x="422" y="326"><tspan lang="de">P3 · GRÜN</tspan><tspan lang="en">P3 · GREEN</tspan></text>
+        <rect x="546" y="316" width="18" height="12" fill="#7A4A22" stroke="#171614" stroke-width="1.2"/>
+        <text class="lgs" x="572" y="326"><tspan lang="de">P4 · BRAUN</tspan><tspan lang="en">P4 · BROWN</tspan></text>
+        <text class="lgs" x="380" y="364" text-anchor="middle"><tspan lang="de">PAARE AUF DEN GLEICHEN PINS: 1/2 · 3/6 · 4/5 · 7/8 — NUR P2 UND P3 SIND GETAUSCHT</tspan><tspan lang="en">PAIRS ON THE SAME PINS: 1/2 · 3/6 · 4/5 · 7/8 — ONLY P2 AND P3 ARE SWAPPED</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 2</span><span lang="en">Fig. 2</span></b>
+        <span lang="de"> — Blick auf die acht Kontakte, Pin 1 links. Bei beiden Belegungen liegt Paar 1 auf 4/5, Paar 4 auf 7/8, und ein Paar liegt gesplittet auf 3/6. Vertauscht sind nur die Farben von Paar 2 und Paar 3.</span>
+        <span lang="en"> — View of the eight contacts, pin 1 on the left. In both assignments pair 1 sits on 4/5, pair 4 on 7/8, and one pair is split across 3/6. Only the colours of pair 2 and pair 3 are exchanged.</span>
+      </figcaption>
+    </figure>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Pin</th>
+            <th><span lang="de">Paar auf Pin</span><span lang="en">Pair on pins</span></th>
+            <th><span lang="de">Ader nach T568A</span><span lang="en">Conductor per T568A</span></th>
+            <th><span lang="de">Ader nach T568B</span><span lang="en">Conductor per T568B</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">1</td><td class="num">1/2</td><td><span lang="de">weiss-grün</span><span lang="en">white-green</span></td><td><span lang="de">weiss-orange</span><span lang="en">white-orange</span></td></tr>
+          <tr><td class="num">2</td><td class="num">1/2</td><td><span lang="de">grün</span><span lang="en">green</span></td><td><span lang="de">orange</span><span lang="en">orange</span></td></tr>
+          <tr><td class="num">3</td><td class="num">3/6</td><td><span lang="de">weiss-orange</span><span lang="en">white-orange</span></td><td><span lang="de">weiss-grün</span><span lang="en">white-green</span></td></tr>
+          <tr><td class="num">4</td><td class="num">4/5</td><td><span lang="de">blau</span><span lang="en">blue</span></td><td><span lang="de">blau</span><span lang="en">blue</span></td></tr>
+          <tr><td class="num">5</td><td class="num">4/5</td><td><span lang="de">weiss-blau</span><span lang="en">white-blue</span></td><td><span lang="de">weiss-blau</span><span lang="en">white-blue</span></td></tr>
+          <tr><td class="num">6</td><td class="num">3/6</td><td><span lang="de">orange</span><span lang="en">orange</span></td><td><span lang="de">grün</span><span lang="en">green</span></td></tr>
+          <tr><td class="num">7</td><td class="num">7/8</td><td><span lang="de">weiss-braun</span><span lang="en">white-brown</span></td><td><span lang="de">weiss-braun</span><span lang="en">white-brown</span></td></tr>
+          <tr><td class="num">8</td><td class="num">7/8</td><td><span lang="de">braun</span><span lang="en">brown</span></td><td><span lang="de">braun</span><span lang="en">brown</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Auflegen mit dem LSA-Werkzeug</span><span lang="en">Terminating with the punch-down tool</span></h3>
+
+    <p lang="de">Die Module arbeiten mit <strong>Schneidklemmen</strong> (LSA: löt-, schraub- und abisolierfreie Anschlusstechnik). Die Ader wird <em>nicht</em> abisoliert; das Werkzeug drückt sie in einen Schlitz, dessen Kanten die Isolation durchschneiden und sich gasdicht in den Kupferdraht pressen. Das Aufleger-Werkzeug schneidet den Überstand im selben Arbeitsgang ab.</p>
+    <p lang="en">The modules use <strong>insulation-displacement contacts</strong> (IDC). The conductor is <em>not</em> stripped; the tool presses it into a slot whose edges cut through the insulation and bite gas-tight into the copper. The punch-down tool cuts off the excess in the same movement.</p>
+
+    <ul lang="de">
+      <li>Den Mantel nur so weit entfernen, wie es zwingend nötig ist, und dabei die Adern nicht anritzen.</li>
+      <li>Bei geschirmten Kabeln zuerst die <strong>Schirmauflage</strong> herstellen, erst dann die Adern auflegen.</li>
+      <li>Die <strong>Verdrillung bis unmittelbar an die Klemme</strong> führen. Nach Norm dürfen die Paare höchstens rund <strong>13 mm</strong> aufgedreht sein.</li>
+      <li>Die Klinge des Werkzeugs zeigt nach aussen, sonst wird die falsche Seite abgeschnitten.</li>
+      <li>Nach dem Auflegen die Zugentlastung setzen — der Binder darf das Kabel nicht einschnüren.</li>
+      <li>Beide Enden derselben Strecke <strong>gleich</strong> belegen und die Dose sofort beschriften.</li>
+    </ul>
+    <ul lang="en">
+      <li>Remove only as much sheath as absolutely necessary, and do not nick the conductors.</li>
+      <li>On screened cable make the <strong>screen contact</strong> first, only then terminate the conductors.</li>
+      <li>Carry the <strong>twist right up to the contact</strong>. The standard permits the pairs to be untwisted by no more than about <strong>13 mm</strong>.</li>
+      <li>The blade of the tool points outwards, otherwise the wrong side is cut off.</li>
+      <li>Fit the strain relief after terminating — the tie must not pinch the cable.</li>
+      <li>Terminate both ends of the same link the <strong>same way</strong> and label the outlet immediately.</li>
+    </ul>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Warum 13 mm entscheidend sind</span><span lang="en">Why 13 mm matters</span></b>
+      <p lang="de">Jeder Zentimeter aufgedrehtes Paar ist eine Stelle, an der die Symmetrie fehlt. Genau dort koppeln die Paare ineinander und das <strong>NEXT verschlechtert sich</strong> — und zwar am Kabelende, wo das Sendesignal noch am stärksten ist. Eine Strecke, die sonst Klasse E<sub>A</sub> erreichen würde, fällt allein wegen zu weit aufgedrehter Paare durch die Messung. Bei Kategorie 6A verlangen viele Hersteller deutlich weniger als 13 mm; <strong>die Montageanleitung des verwendeten Moduls gilt vor dem Faustwert.</strong></p>
+      <p lang="en">Every centimetre of untwisted pair is a place where the balance is missing. Exactly there the pairs couple into one another and <strong>NEXT gets worse</strong> — right at the cable end, where the transmitted signal is still strongest. A link that would otherwise reach class E<sub>A</sub> fails the test purely because the pairs were opened up too far. For category 6A many manufacturers demand considerably less than 13 mm; <strong>the fitting instructions of the module used take precedence over the rule of thumb.</strong></p>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">T568A oder T568B?</span><span lang="en">T568A or T568B?</span></b>
+      <p lang="de">Elektrisch sind die beiden Belegungen <strong>gleichwertig</strong>, weil die Paare auf denselben Pinpaaren liegen. Entscheidend ist einzig, dass in einer Anlage <strong>durchgehend dieselbe</strong> verwendet wird — sonst entsteht ungewollt ein Crossover, und die Abnahmemessung zeigt vertauschte Paare. Welche Belegung gilt, ist eine <strong>Betriebs- beziehungsweise Projektvorgabe</strong>: im Pflichtenheft oder beim Vorarbeiter abklären, nicht selber wählen.</p>
+      <p lang="en">Electrically the two assignments are <strong>equivalent</strong>, because the pairs sit on the same pin pairs. What matters is only that <strong>one and the same</strong> assignment is used throughout an installation — otherwise an unintended crossover results and the acceptance test reports swapped pairs. Which assignment applies is a <strong>company or project decision</strong>: clarify it in the specification or with the foreman, do not choose it yourself.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Montage, Messung und PoE</span><span lang="en">Installation, testing and PoE</span></h2>
+
+    <h3><span lang="de">Montageregeln</span><span lang="en">Installation rules</span></h3>
+
+    <p lang="de">Ein Datenkabel verzeiht deutlich weniger als ein Starkstromkabel. Wird der Aufbau verformt, ändern sich Abstand und Lage der Adern zueinander — und damit der Wellenwiderstand. Die Folge ist eine Reflexionsstelle, die man erst bei der Messung sieht.</p>
+    <p lang="en">A data cable is far less forgiving than a power cable. If the construction is deformed, the spacing and position of the conductors change — and with them the characteristic impedance. The result is a point of reflection that only shows up when measuring.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Regel</span><span lang="en">Rule</span></th>
+            <th><span lang="de">Richtwert</span><span lang="en">Guide value</span></th>
+            <th><span lang="de">Warum</span><span lang="en">Why</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Biegeradius im Betrieb</span><span lang="en">Bend radius in service</span></strong></td>
+            <td><span lang="de">rund 4 × Kabeldurchmesser</span><span lang="en">about 4 × cable diameter</span></td>
+            <td><span lang="de">enge Bogen verschieben die Adern im Paar und stören den Wellenwiderstand</span><span lang="en">tight bends displace the conductors within the pair and upset the impedance</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Biegeradius beim Einziehen</span><span lang="en">Bend radius while pulling</span></strong></td>
+            <td><span lang="de">rund 8 × Kabeldurchmesser</span><span lang="en">about 8 × cable diameter</span></td>
+            <td><span lang="de">unter Zug wirkt jede Umlenkung zusätzlich als Presse auf den Aufbau</span><span lang="en">under tension every deflection additionally squeezes the construction</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Zugkraft</span><span lang="en">Pulling force</span></strong></td>
+            <td><span lang="de">rund 100 N beim Einziehen, dauernd deutlich weniger</span><span lang="en">about 100 N while pulling, permanently much less</span></td>
+            <td><span lang="de">zu starker Zug längt die Adern und öffnet die Verdrillung</span><span lang="en">excessive pull stretches the conductors and opens the twist</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Kein Knick</span><span lang="en">No kinks</span></strong></td>
+            <td><span lang="de">keiner, auch nicht kurzzeitig</span><span lang="en">none, not even briefly</span></td>
+            <td><span lang="de">ein Knick ist ein bleibender Schaden, auch wenn das Kabel danach wieder gerade aussieht</span><span lang="en">a kink is permanent damage, even if the cable looks straight again afterwards</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Keine Quetschung</span><span lang="en">No crushing</span></strong></td>
+            <td><span lang="de">Binder nur handfest, Bündel nicht abschnüren</span><span lang="en">ties only hand-tight, do not choke bundles</span></td>
+            <td><span lang="de">ein zu fester Kabelbinder drückt genauso auf den Aufbau wie ein Knick</span><span lang="en">an over-tightened tie presses on the construction just like a kink</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Quellenhinweis — vor der Abgabe nachschlagen</span><span lang="en">Source note — look it up before handing in</span></b>
+      <p lang="de">Biegeradius und Zugkraft sind <strong>keine allgemeingültigen Normwerte</strong>, sondern Produktangaben. Sie unterscheiden sich je nach Kabeltyp, Schirmung und Hersteller. Die Werte oben sind verbreitete Richtwerte — die verbindliche Zahl steht im <strong>Datenblatt des verwendeten Kabels</strong>. Ebenso gilt für die <strong>Trennungsabstände zu Energieleitungen</strong>: EN 50174-2 rechnet mit Trennungsklassen, die von der Schirmung des Datenkabels, der Anzahl Stromkreise und einer allfälligen metallischen Trennwand abhängen. Die Abstände reichen dabei von wenigen Millimetern bis über 200 mm. Den konkreten Wert im <strong>Projektdossier, in EN 50174-2 und für die Starkstromseite in der eigenen NIN-Ausgabe</strong> nachschlagen, nicht schätzen.</p>
+      <p lang="en">Bend radius and pulling force are <strong>not universal standard values</strong> but product data. They differ with cable type, screening and manufacturer. The values above are widely used guide figures — the binding number is in the <strong>data sheet of the cable actually used</strong>. The same applies to <strong>separation distances from power cables</strong>: EN 50174-2 works with separation classes that depend on the screening of the data cable, the number of power circuits and any metallic divider. The distances range from a few millimetres to more than 200 mm. Look the specific value up in the <strong>project file, in EN 50174-2 and, for the power side, in your own edition of the NIN</strong> — do not estimate it.</p>
+    </div>
+
+    <p lang="de">Als Arbeitsregel gilt: Datenkabel und Energieleitungen werden <strong>getrennt geführt</strong>, kreuzen sich nach Möglichkeit im rechten Winkel und teilen sich keinen Kanalabschnitt ohne Trennsteg. Geschirmte Datenkabel und geschirmte Energieleitungen erlauben kleinere Abstände als ungeschirmte, und Leuchtstofflampen, Frequenzumrichter sowie Motorzuleitungen sind bewusst grosszügig zu umgehen.</p>
+    <p lang="en">As a working rule: data cables and power cables are <strong>run separately</strong>, cross at right angles wherever possible and do not share a trunking section without a divider. Screened data cables and screened power cables allow smaller distances than unscreened ones, and fluorescent luminaires, frequency converters and motor supply cables should deliberately be given a wide berth.</p>
+
+    <h3><span lang="de">Messung und Zertifizierung</span><span lang="en">Testing and certification</span></h3>
+
+    <p lang="de">Eine UKV wird nicht «durchgeklingelt», sondern <strong>zertifiziert</strong>. Das Messgerät prüft die Strecke gegen die Grenzwerte der geforderten Klasse und speichert für jede Dose ein Protokoll. Dieses Protokoll ist Teil der Abnahme und die Grundlage für die Garantie des Systemherstellers.</p>
+    <p lang="en">Structured cabling is not simply “buzzed out” but <strong>certified</strong>. The tester checks the link against the limits of the required class and stores a report for every outlet. That report is part of the handover and the basis for the system manufacturer's warranty.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Parameter</span><span lang="en">Parameter</span></th>
+            <th><span lang="de">Was geprüft wird</span><span lang="en">What is checked</span></th>
+            <th><span lang="de">Typische Ursache bei Fehler</span><span lang="en">Typical cause when it fails</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Wiremap</strong></td>
+            <td><span lang="de">ob jeder Pin am richtigen Pin ankommt und kein Kurzschluss, Unterbruch oder Splitpair vorliegt</span><span lang="en">whether every pin lands on the right pin and there is no short, open or split pair</span></td>
+            <td><span lang="de">Ader verwechselt, T568A und T568B gemischt, Ader nicht sauber geklemmt</span><span lang="en">conductor swapped, T568A and T568B mixed, conductor not properly punched down</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Länge, Laufzeit, Delay Skew</span><span lang="en">Length, delay, delay skew</span></strong></td>
+            <td><span lang="de">Streckenlänge und Laufzeitunterschied zwischen den Paaren</span><span lang="en">link length and difference in propagation time between the pairs</span></td>
+            <td><span lang="de">Strecke zu lang, oder Paare mit sehr unterschiedlicher Schlaglänge</span><span lang="en">link too long, or pairs with very different lay lengths</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Einfügedämpfung</span><span lang="en">Insertion loss</span></strong></td>
+            <td><span lang="de">wie stark das Signal auf dem Weg schwächer wird, über die ganze Frequenz</span><span lang="en">how much the signal weakens along the way, across the whole frequency range</span></td>
+            <td><span lang="de">zu lange Strecke, zu warme Umgebung, minderwertige Patchkabel</span><span lang="en">excessive length, high ambient temperature, poor patch cords</span></td>
+          </tr>
+          <tr>
+            <td><strong>NEXT / PSNEXT</strong></td>
+            <td><span lang="de">Nahnebensprechen: wie stark ein sendendes Paar in ein benachbartes Paar einkoppelt; PSNEXT rechnet alle Paare zusammen</span><span lang="en">near-end crosstalk: how strongly a transmitting pair couples into a neighbouring pair; PSNEXT sums all pairs</span></td>
+            <td><span lang="de">Paare am Anschluss zu weit aufgedreht — der klassische Montagefehler</span><span lang="en">pairs untwisted too far at the termination — the classic workmanship fault</span></td>
+          </tr>
+          <tr>
+            <td><strong>ACR-F / PSACR-F</strong></td>
+            <td><span lang="de">Fernnebensprechen im Verhältnis zur Dämpfung, gemessen am anderen Ende</span><span lang="en">far-end crosstalk relative to attenuation, measured at the far end</span></td>
+            <td><span lang="de">Kabelaufbau beschädigt, Quetschung über eine längere Strecke</span><span lang="en">damaged cable construction, crushing over a longer section</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Rückflussdämpfung</span><span lang="en">Return loss</span></strong></td>
+            <td><span lang="de">wie viel Signal an Impedanzsprüngen zurückreflektiert wird</span><span lang="en">how much signal is reflected back at impedance discontinuities</span></td>
+            <td><span lang="de">Knick, zu enger Bogen, schlechte Klemmstelle, gemischte Kabeltypen</span><span lang="en">kink, too tight a bend, poor contact, mixed cable types</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Schleifenwiderstand</span><span lang="en">Loop resistance</span></strong></td>
+            <td><span lang="de">Gleichstromwiderstand der Paare und deren Symmetrie zueinander</span><span lang="en">DC resistance of the pairs and their balance to each other</span></td>
+            <td><span lang="de">schlechte Klemmstelle; bei PoE besonders kritisch</span><span lang="en">poor contact; particularly critical with PoE</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Permanent Link oder Channel messen</span><span lang="en">Measuring permanent link or channel</span></b>
+      <p lang="de">Der Installateur misst in aller Regel den <strong>Permanent Link</strong>, weil er nur für die fest verlegte Strecke verantwortlich ist. Dafür braucht das Messgerät den passenden Permanent-Link-Adapter; mit einem Channel-Adapter gemessen ergäbe dasselbe Kabel andere Werte und ein wertloses Protokoll. Vor dem Messen wird das Gerät <strong>kalibriert</strong> und die geforderte Klasse eingestellt — sonst prüft es gegen die falschen Grenzwerte.</p>
+      <p lang="en">The installer normally measures the <strong>permanent link</strong>, because he is responsible only for the fixed run. This requires the matching permanent-link adapter; measured with a channel adapter the same cable would give different values and a worthless report. Before measuring, the instrument is <strong>calibrated</strong> and the required class selected — otherwise it tests against the wrong limits.</p>
+    </div>
+
+    <h3><span lang="de">Power over Ethernet</span><span lang="en">Power over Ethernet</span></h3>
+
+    <p lang="de">Bei PoE speist der Switch über dieselben Adern zusätzlich Gleichspannung ein und versorgt so Access Points, IP-Telefone oder Kameras. Es braucht keine separate Steckdose beim Gerät. Für den Installateur heisst das: Die UKV wird zur <strong>stromführenden Installation</strong>, auch wenn sie keine ist im Sinne der Starkstromvorschriften.</p>
+    <p lang="en">With PoE the switch additionally feeds DC voltage over the same conductors and thus supplies access points, IP telephones or cameras. No separate socket outlet is needed at the device. For the installer this means the cabling becomes a <strong>current-carrying installation</strong>, even though it is not one in the sense of the low-voltage regulations.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Norm</span><span lang="en">Standard</span></th>
+            <th><span lang="de">Typ</span><span lang="en">Type</span></th>
+            <th><span lang="de">Leistung am Switch</span><span lang="en">Power at the switch</span></th>
+            <th><span lang="de">Genutzte Paare</span><span lang="en">Pairs used</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>IEEE 802.3af</td><td class="num">1</td><td class="num">15,4 W</td><td class="num">2</td></tr>
+          <tr><td>IEEE 802.3at</td><td class="num">2</td><td class="num">30 W</td><td class="num">2</td></tr>
+          <tr><td>IEEE 802.3bt</td><td class="num">3</td><td class="num">60 W</td><td class="num">4</td></tr>
+          <tr><td>IEEE 802.3bt</td><td class="num">4</td><td class="num">90 W</td><td class="num">4</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ul lang="de">
+      <li>Beim Endgerät kommt <strong>weniger</strong> an als am Switch abgegeben wird — die Differenz bleibt als Wärme im Kabel.</li>
+      <li>Der Speisestrom fliesst als <strong>Gleichtakt über beide Adern eines Paares</strong>. Die Datenübertragung wird dadurch nicht gestört, solange die Paare symmetrisch sind — eine schlechte Klemmstelle rächt sich hier doppelt.</li>
+      <li>Ein <strong>dickes Kabelbündel</strong> mit vielen PoE-Strecken erwärmt sich in der Mitte am stärksten. Wärme erhöht die Dämpfung, deshalb Bündel klein halten und Kabelkanäle nicht vollstopfen.</li>
+      <li><strong>Nie unter Last stecken oder ziehen</strong>, wenn es sich vermeiden lässt: Der Lichtbogen an den Kontakten frisst die Vergoldung weg.</li>
+      <li>Wie viele PoE-Strecken in einem Bündel zulässig sind und welcher Aderquerschnitt dafür nötig ist, hängt von Leistungsklasse und Umgebungstemperatur ab — <strong>im Herstellerkatalog und in der Projektvorgabe nachschlagen</strong>.</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Less</strong> arrives at the device than the switch delivers — the difference stays in the cable as heat.</li>
+      <li>The supply current flows as a <strong>common mode over both conductors of a pair</strong>. Data transmission is not disturbed by this as long as the pairs are balanced — a poor contact takes double revenge here.</li>
+      <li>A <strong>thick cable bundle</strong> with many PoE links heats up most in the middle. Heat increases attenuation, so keep bundles small and do not overfill trunking.</li>
+      <li><strong>Never plug or unplug under load</strong> where it can be avoided: the arc at the contacts eats away the gold plating.</li>
+      <li>How many PoE links are permitted in one bundle and which conductor size is needed depends on power class and ambient temperature — <strong>look it up in the manufacturer's catalogue and in the project specification</strong>.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 7 ================= -->
+<section id="s7">
+  <div class="snum">07</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Was heisst «anwendungsneutral» bei einer UKV?</span><span lang="en">What does “application-neutral” mean in structured cabling?</span></summary>
+      <div class="ans">
+        <p lang="de">Es wird ein einziges, einheitliches Kabelsystem verlegt, das nicht auf einen bestimmten Dienst festgelegt ist. Ob an einer Dose ein Computer, ein Telefon, ein Access Point oder eine Kamera hängt, entscheidet erst die Rangierung im Verteiler. Eine Umnutzung erfordert deshalb kein neues Kabel, sondern nur ein anderes Patchkabel.</p>
+        <p lang="en">A single, uniform cabling system is installed that is not tied to a particular service. Whether a computer, a telephone, an access point or a camera sits on an outlet is decided only by the patching in the distributor. A change of use therefore needs no new cable, only a different patch cord.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Woraus setzen sich die 100 m zusammen, und was ist der Unterschied zum Permanent Link?</span><span lang="en">What makes up the 100 m, and how does it differ from the permanent link?</span></summary>
+      <div class="ans">
+        <p lang="de">Der Channel darf höchstens 100 m lang sein: maximal 90 m fest verlegtes Installationskabel plus maximal 10 m Patchkabel, beide Enden zusammengerechnet. Der Permanent Link ist nur der fest verlegte Teil vom Patchpanel bis zur Anschlussdose, also höchstens 90 m. Der Installateur baut und misst den Permanent Link, das Netzwerk sieht den Channel.</p>
+        <p lang="en">The channel may be 100 m long at most: a maximum of 90 m of permanently installed cable plus a maximum of 10 m of patch cord, both ends added together. The permanent link is only the fixed part from the patch panel to the outlet, so 90 m at most. The installer builds and measures the permanent link, the network sees the channel.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was ist der Unterschied zwischen Kategorie und Klasse?</span><span lang="en">What is the difference between category and class?</span></summary>
+      <div class="ans">
+        <p lang="de">Die Kategorie beschreibt eine einzelne Komponente — Kabel, Modul, Stecker, Patchpanel. Die Klasse beschreibt die fertige, gemessene Strecke aus allen diesen Komponenten. Cat 6A ist eine Komponente, Klasse E<sub>A</sub> ist eine Strecke. Die Strecke erreicht nie eine höhere Klasse als ihr schwächstes Bauteil zulässt.</p>
+        <p lang="en">The category describes a single component — cable, module, plug, patch panel. The class describes the finished, measured link made of all those components. Cat 6A is a component, class E<sub>A</sub> is a link. The link never reaches a higher class than its weakest part allows.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum sind die Adern paarweise verdrillt?</span><span lang="en">Why are the conductors twisted in pairs?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil symmetrisch übertragen wird und der Empfänger nur die Differenz der beiden Adern auswertet. Durch das Verdrillen tauschen die Adern laufend die Lage, sodass eine äussere Störung beide gleich stark trifft und sich in der Differenz aufhebt. Die vier Paare haben zudem unterschiedliche Schlaglängen, damit sie nicht ineinander einkoppeln — das senkt das Nebensprechen.</p>
+        <p lang="en">Because transmission is balanced and the receiver evaluates only the difference between the two conductors. Twisting makes the conductors swap position continuously, so an external disturbance affects both equally and cancels out in the difference. The four pairs also have different lay lengths so they do not couple into each other — this lowers crosstalk.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was bedeutet die Bezeichnung S/FTP?</span><span lang="en">What does the designation S/FTP mean?</span></summary>
+      <div class="ans">
+        <p lang="de">Vor dem Schrägstrich steht der Gesamtschirm, dahinter der Schirm um das einzelne Paar. S/FTP heisst also: ein Geflechtschirm um alle vier Paare und zusätzlich ein Folienschirm um jedes einzelne Paar. Das ist die beste Variante für die elektromagnetische Verträglichkeit und ab Kategorie 7 zwingend.</p>
+        <p lang="en">Before the slash is the overall screen, after it the screen around the individual pair. S/FTP therefore means a braid screen around all four pairs plus a foil screen around each individual pair. This is the best variant for electromagnetic compatibility and mandatory from category 7 upwards.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Worin unterscheiden sich T568A und T568B, und was bleibt gleich?</span><span lang="en">How do T568A and T568B differ, and what stays the same?</span></summary>
+      <div class="ans">
+        <p lang="de">Vertauscht sind nur die Farben des orangen und des grünen Paares. Gleich bleibt die Pinbelegung der Paare: Paar 1 auf 4/5, ein Paar auf 1/2, ein Paar gesplittet auf 3/6 und Paar 4 auf 7/8. Elektrisch sind beide gleichwertig. Entscheidend ist, dass in einer Anlage durchgehend dieselbe Belegung verwendet wird, sonst entsteht ungewollt ein Crossover.</p>
+        <p lang="en">Only the colours of the orange and the green pair are exchanged. The pin allocation of the pairs stays the same: pair 1 on 4/5, one pair on 1/2, one pair split across 3/6 and pair 4 on 7/8. Electrically the two are equivalent. What matters is that one and the same assignment is used throughout an installation, otherwise an unintended crossover results.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum dürfen die Paare beim Auflegen nicht weit aufgedreht werden?</span><span lang="en">Why must the pairs not be untwisted far when terminating?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil an jeder aufgedrehten Stelle die Symmetrie des Paares fehlt und die Paare dort ineinander einkoppeln. Das verschlechtert das Nahnebensprechen genau am Kabelende, wo das Sendesignal am stärksten ist. Nach Norm sind rund 13 mm zulässig; bei Kategorie 6A verlangen viele Hersteller weniger, deshalb gilt die Montageanleitung des Moduls.</p>
+        <p lang="en">Because at every untwisted point the balance of the pair is missing and the pairs couple into one another there. That worsens near-end crosstalk exactly at the cable end, where the transmitted signal is strongest. The standard permits about 13 mm; for category 6A many manufacturers demand less, so the module's fitting instructions apply.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welche Parameter gehören zu einer Zertifizierungsmessung, und was sagt NEXT aus?</span><span lang="en">Which parameters belong to a certification test, and what does NEXT say?</span></summary>
+      <div class="ans">
+        <p lang="de">Wiremap, Länge und Laufzeit mit Delay Skew, Einfügedämpfung, NEXT und PSNEXT, ACR-F und PSACR-F, Rückflussdämpfung sowie der Schleifenwiderstand. NEXT ist das Nahnebensprechen: Es misst, wie stark ein sendendes Paar in ein benachbartes Paar einkoppelt, gemessen am selben Kabelende. Ein schlechter NEXT-Wert deutet fast immer auf zu weit aufgedrehte Paare an der Anschlussstelle hin.</p>
+        <p lang="en">Wiremap, length and propagation delay with delay skew, insertion loss, NEXT and PSNEXT, ACR-F and PSACR-F, return loss and loop resistance. NEXT is near-end crosstalk: it measures how strongly a transmitting pair couples into a neighbouring pair, measured at the same cable end. A poor NEXT value nearly always points to pairs untwisted too far at the termination.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was ist bei PoE zusätzlich zu beachten?</span><span lang="en">What has to be considered additionally with PoE?</span></summary>
+      <div class="ans">
+        <p lang="de">Über dieselben Adern fliesst zusätzlich Gleichstrom, der Verluste als Wärme im Kabel hinterlässt. Grosse Bündel erwärmen sich in der Mitte am stärksten, und Wärme erhöht die Dämpfung — Bündel deshalb klein halten. Schlechte Klemmstellen sind bei PoE doppelt kritisch, weil dort zusätzlich der Speisestrom fliesst. Wie viele PoE-Strecken pro Bündel zulässig sind, ist eine Hersteller- und Projektangabe und muss nachgeschlagen werden.</p>
+        <p lang="en">Direct current additionally flows over the same conductors and leaves its losses in the cable as heat. Large bundles heat up most in the middle, and heat increases attenuation — so keep bundles small. Poor contacts are doubly critical with PoE because the supply current flows through them as well. How many PoE links are permitted per bundle is a manufacturer and project figure and must be looked up.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="11-tv-installationen.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>11 · <span lang="de">TV-Installationen</span><span lang="en">TV Installations</span></b>
+  </a>
+  <a class="next" href="../index.html">
+    <span lang="de">Zurück zur</span><span lang="en">Back to the</span>
+    <b><span lang="de">Übersicht</span><span lang="en">Overview</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 12 · UKV-Installationen</span><span lang="en">Learning Documentation 12 · Structured Cabling</span></span>
+  <span>Yanik · Etavis · <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></span>
+  <span><span lang="de">Grundlagen: SN EN 50173 · SN EN 50174 · ISO/IEC 11801 · ANSI/TIA-568 · IEEE 802.3</span><span lang="en">Basis: SN EN 50173 · SN EN 50174 · ISO/IEC 11801 · ANSI/TIA-568 · IEEE 802.3</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 11 — TV-Installationen" data-en="Learning Documentation 11 — TV Installations">Lerndokumentation 11 — TV-Installationen</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span>
+    <span lang="de">Thema 11</span><span lang="en">Topic 11</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">11</div>
+    <h1><span lang="de">TV-<br>Installationen</span><span lang="en">TV<br>Installations</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Material · Verkabelungen · Anschluesse</span>
+    <span lang="en">Materials · cabling · connections</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">11 von 12</span><span lang="en">11 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Fernseher und Koaxialkabel">
+        <path d="M28 46 h34 a6 6 0 0 1 6 6 v52 a6 6 0 0 1 -6 6 h-34 a6 6 0 0 1 -6 -6 v-52 a6 6 0 0 1 6 -6 z" fill="#EFEAE0" stroke="#171614" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M34 34 l11 12 M56 34 l-11 12" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="45" cy="30" r="3" fill="#B8402A"/>
+        <path d="M68 78 q 28 0 28 -22 q 0 -22 28 -22 h20" fill="none" stroke="#1D5872" stroke-width="3.4" stroke-linecap="round"/>
+        <circle cx="146" cy="34" r="6" fill="none" stroke="#171614" stroke-width="2.4"/>
+        <path d="M152 34 h10" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M120 66 L200 66 a6 6 0 0 1 6 6 v46 a6 6 0 0 1 -6 6 h-80 a6 6 0 0 1 -6 -6 v-46 a6 6 0 0 1 6 -6 z" fill="#EFEAE0" stroke="#171614" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M132 132 h56" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="146" cy="90" r="3.2" fill="#171614"/>
+        <circle cx="176" cy="90" r="3.2" fill="#171614"/>
+        <path d="M146 104 q 15 10 30 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Warum ein Koaxialkabel?</span><span lang="en">Why a coaxial cable?</span></h2>
+
+    <p class="lead" lang="de">Radio- und Fernsehsignale sind <strong>Hochfrequenz</strong>. Eine gewöhnliche Installationsleitung würde solche Signale abstrahlen wie eine Antenne und gleichzeitig jede Störung von aussen aufnehmen. Das Koaxialkabel löst beides mit einer einzigen Idee: Der Signalleiter liegt <strong>in der Mitte</strong>, und rundherum liegt der Schirm, der zugleich Rückleiter und Abschirmung ist.</p>
+    <p class="lead" lang="en">Radio and television signals are <strong>high frequency</strong>. An ordinary installation cable would radiate such signals like an antenna and pick up every disturbance from outside at the same time. The coaxial cable solves both with a single idea: the signal conductor sits <strong>in the centre</strong>, and the screen around it acts as return conductor and shield in one.</p>
+
+    <p lang="de">Weil Innenleiter und Schirm dieselbe Achse haben — daher <em>koaxial</em> —, bleibt das elektromagnetische Feld vollständig im Kabel eingeschlossen. Aussen bleibt es idealerweise feldfrei. Genau davon lebt die ganze Anlage: Was nicht hinaus kann, kann auch nicht stören, und was nicht hinein kann, stört nicht.</p>
+    <p lang="en">Because the inner conductor and the screen share the same axis — hence <em>coaxial</em> — the electromagnetic field stays entirely inside the cable. Outside it is ideally field-free. The whole installation depends on exactly this: what cannot get out cannot interfere, and what cannot get in does not disturb.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aufbau eines Koaxialkabels, abgesetzt und im Querschnitt">
+        <defs>
+          <style>
+            .ol{fill:none;stroke:#171614;stroke-width:2.2}
+            .lead2{fill:none;stroke:#7D7669;stroke-width:1.2}
+            .lb{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;fill:#48433B}
+            .lgs2{font-family:'IBM Plex Mono',monospace;font-size:10px;fill:#7D7669;letter-spacing:.07em}
+            .ttl2{font-family:'Archivo',sans-serif;font-size:14px;font-weight:700;fill:#171614}
+          </style>
+          <pattern id="braid" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+            <path d="M0 0 v10 M5 0 v10" stroke="#7A4A22" stroke-width="2.4" fill="none"/>
+          </pattern>
+        </defs>
+
+        <text class="ttl2" x="34" y="30"><tspan lang="de">ABGESETZTES KABEL</tspan><tspan lang="en">STRIPPED CABLE</tspan></text>
+        <text class="ttl2" x="540" y="30"><tspan lang="de">QUERSCHNITT</tspan><tspan lang="en">CROSS-SECTION</tspan></text>
+
+        <!-- gestufter Kabelaufbau -->
+        <rect x="34" y="128" width="196" height="76" rx="4" fill="#9A958A" class="ol"/>
+        <rect x="34" y="140" width="266" height="52" rx="3" fill="url(#braid)" class="ol"/>
+        <rect x="34" y="149" width="322" height="34" rx="3" fill="#D8D2C6" class="ol"/>
+        <rect x="34" y="155" width="378" height="22" rx="3" fill="#EFEAE0" class="ol"/>
+        <rect x="34" y="161" width="434" height="10" rx="3" fill="#B8402A" class="ol"/>
+
+        <!-- Beschriftungen oben -->
+        <path class="lead2" d="M132 128 V88 H96"/>
+        <text class="lb" x="92" y="84" text-anchor="end"><tspan lang="de">Aussenmantel</tspan><tspan lang="en">outer sheath</tspan></text>
+        <path class="lead2" d="M266 140 V64 H210"/>
+        <text class="lb" x="206" y="60" text-anchor="end"><tspan lang="de">Geflechtschirm</tspan><tspan lang="en">braided screen</tspan></text>
+        <path class="lead2" d="M340 149 V100 H420"/>
+        <text class="lb" x="424" y="96"><tspan lang="de">Folienschirm</tspan><tspan lang="en">foil screen</tspan></text>
+
+        <!-- Beschriftungen unten -->
+        <path class="lead2" d="M396 177 V240 H452"/>
+        <text class="lb" x="456" y="244"><tspan lang="de">Dielektrikum</tspan><tspan lang="en">dielectric</tspan></text>
+        <path class="lead2" d="M452 171 V296 H386"/>
+        <text class="lb" x="382" y="300" text-anchor="end" fill="#B8402A"><tspan lang="de">Innenleiter</tspan><tspan lang="en">inner conductor</tspan></text>
+
+        <!-- Querschnitt -->
+        <circle cx="614" cy="196" r="86" fill="#9A958A" class="ol"/>
+        <circle cx="614" cy="196" r="70" fill="url(#braid)" class="ol"/>
+        <circle cx="614" cy="196" r="56" fill="#D8D2C6" class="ol"/>
+        <circle cx="614" cy="196" r="46" fill="#EFEAE0" class="ol"/>
+        <circle cx="614" cy="196" r="11" fill="#B8402A" class="ol"/>
+        <path d="M614 196 H700" stroke="#1D5872" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <path d="M614 196 L657 196" stroke="#1D5872" stroke-width="2.6"/>
+        <text class="lgs2" x="626" y="188" fill="#1D5872">d</text>
+        <text class="lgs2" x="668" y="188" fill="#1D5872">D</text>
+
+        <text class="lb" x="614" y="318" text-anchor="middle">Z = 75 Ω</text>
+        <text class="lgs2" x="614" y="338" text-anchor="middle"><tspan lang="de">WELLENWIDERSTAND — GILT FUER RADIO UND TV</tspan><tspan lang="en">CHARACTERISTIC IMPEDANCE — RADIO AND TV</tspan></text>
+
+        <text class="lgs2" x="34" y="366"><tspan lang="de">DER SCHIRM IST RUECKLEITER UND ABSCHIRMUNG ZUGLEICH — ER MUSS RUNDUM SAUBER AUFLIEGEN</tspan><tspan lang="en">THE SCREEN IS RETURN CONDUCTOR AND SHIELD IN ONE — IT MUST SEAT CLEANLY ALL ROUND</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Aufbau des Koaxialkabels. Der Wellenwiderstand ergibt sich aus dem Verhältnis der Durchmesser D/d und aus dem Dielektrikum — nicht aus der Kabellänge.</span>
+        <span lang="en"> — Construction of a coaxial cable. The characteristic impedance follows from the diameter ratio D/d and from the dielectric — not from the length of the cable.</span>
+      </figcaption>
+    </figure>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Schicht</span><span lang="en">Layer</span></th>
+            <th><span lang="de">Werkstoff</span><span lang="en">Material</span></th>
+            <th><span lang="de">Aufgabe</span><span lang="en">Function</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Innenleiter</span><span lang="en">Inner conductor</span></strong></td>
+            <td><span lang="de">Kupfer, massiv oder verkupferter Stahl</span><span lang="en">copper, solid or copper-clad steel</span></td>
+            <td><span lang="de">führt das HF-Signal; wegen des Skineffekts fliesst der Strom nur in der äussersten Randschicht</span><span lang="en">carries the RF signal; because of the skin effect the current flows only in the outermost layer</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Dielektrikum</span><span lang="en">Dielectric</span></strong></td>
+            <td><span lang="de">geschäumtes Polyethylen</span><span lang="en">foamed polyethylene</span></td>
+            <td><span lang="de">hält den Innenleiter exakt zentriert; seine Permittivität bestimmt zusammen mit D/d den Wellenwiderstand</span><span lang="en">keeps the inner conductor exactly centred; its permittivity together with D/d sets the impedance</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Folienschirm</span><span lang="en">Foil screen</span></strong></td>
+            <td><span lang="de">aluminiumkaschierte Kunststofffolie</span><span lang="en">aluminium-laminated plastic foil</span></td>
+            <td><span lang="de">schliesst die Lücken des Geflechts; wirkt vor allem bei hohen Frequenzen</span><span lang="en">closes the gaps of the braid; effective mainly at high frequencies</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Geflechtschirm</span><span lang="en">Braided screen</span></strong></td>
+            <td><span lang="de">verzinnte Kupferdrähte</span><span lang="en">tinned copper wires</span></td>
+            <td><span lang="de">führt niederfrequente Störströme ab und ist der mechanisch belastbare Teil; er wird an Dose und Stecker aufgelegt</span><span lang="en">carries low-frequency interference away and is the mechanically robust part; it is landed at socket and connector</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Aussenmantel</span><span lang="en">Outer sheath</span></strong></td>
+            <td><span lang="de">PVC oder halogenfreier Kunststoff</span><span lang="en">PVC or halogen-free compound</span></td>
+            <td><span lang="de">mechanischer Schutz; das Brandverhalten wird als Euroklasse angegeben, z. B. Dca</span><span lang="en">mechanical protection; the reaction to fire is stated as a Euroclass, e.g. Dca</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Warum 75 Ohm?</span><span lang="en">Why 75 ohms?</span></b>
+      <p lang="de">Der Wellenwiderstand ist <strong>keine messbare Gleichstromgrösse</strong> — mit dem Ohmmeter findest du ihn nicht. Er ergibt sich aus dem Verhältnis der Durchmesser und dem Dielektrikum, näherungsweise nach der Beziehung unten. Für Rundfunk und Fernsehen hat sich 75 Ω durchgesetzt, weil in diesem Bereich die Dämpfung am kleinsten ist; in der Funktechnik sind dagegen 50 Ω üblich, weil dort die übertragbare Leistung optimiert wird.</p>
+      <p lang="en">The characteristic impedance is <strong>not a measurable DC quantity</strong> — you will not find it with an ohmmeter. It follows from the diameter ratio and the dielectric, approximately as shown below. Broadcasting and television settled on 75 Ω because attenuation is lowest there; radio engineering uses 50 Ω instead, because there the transferable power is optimised.</p>
+      <div class="formula">Z ≈ (60 Ω / √ε<sub>r</sub>) · ln(D / d)</div>
+      <p lang="de">Alle Bauteile einer Anlage — Kabel, Dosen, Verteiler, Stecker und der Abschluss — müssen denselben Wellenwiderstand haben. Passt ein Teil nicht, wird ein Anteil des Signals am Übergang <strong>reflektiert</strong> und läuft zurück. Das erzeugt Geisterbilder im analogen und Bitfehler im digitalen Betrieb.</p>
+      <p lang="en">Every part of an installation — cable, sockets, splitters, connectors and the termination — must share the same impedance. If one part does not match, a portion of the signal is <strong>reflected</strong> at the transition and travels back. That produced ghosting in analogue operation and produces bit errors in digital operation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Schirmungsmass und Dämpfung</span><span lang="en">Screening and attenuation</span></h2>
+
+    <p lang="de">Zwei Kennwerte eines Koaxialkabels werden beide in Dezibel angegeben und deshalb gerne verwechselt. Sie beschreiben etwas völlig Verschiedenes, und beim einen ist <em>viel</em> gut, beim anderen <em>wenig</em>.</p>
+    <p lang="en">Two characteristics of a coaxial cable are both given in decibels and are therefore easily confused. They describe entirely different things, and for one <em>a lot</em> is good, for the other <em>a little</em>.</p>
+
+    <ul lang="de">
+      <li><strong>Schirmungsmass</strong> — wie stark der Schirm das Signal drinnen und die Störungen draussen hält. <strong>Je höher, desto besser.</strong></li>
+      <li><strong>Dämpfung</strong> — wie viel Signal auf dem Weg durch das Kabel verloren geht. <strong>Je tiefer, desto besser.</strong></li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Screening attenuation</strong> — how well the screen keeps the signal in and the interference out. <strong>The higher the better.</strong></li>
+      <li><strong>Attenuation</strong> — how much signal is lost on the way through the cable. <strong>The lower the better.</strong></li>
+    </ul>
+
+    <h3><span lang="de">Die Schirmungsklassen</span><span lang="en">The screening classes</span></h3>
+
+    <p lang="de">Koaxialkabel werden nach ihrer Schirmwirkung in Klassen eingeteilt. Grundlage ist die Normenreihe EN 50117 für Koaxialkabel; sie bewertet zwei Dinge: den <strong>Kopplungswiderstand</strong> im unteren Frequenzbereich und das <strong>Schirmungsmass</strong> darüber.</p>
+    <p lang="en">Coaxial cables are graded into classes according to their screening performance. The basis is the EN 50117 series for coaxial cables; it assesses two things: the <strong>transfer impedance</strong> in the lower frequency range and the <strong>screening attenuation</strong> above it.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Klasse</span><span lang="en">Class</span></th>
+            <th><span lang="de">Kopplungswiderstand 5–30 MHz</span><span lang="en">Transfer impedance 5–30 MHz</span></th>
+            <th><span lang="de">Schirmungsmass (Richtwerte)</span><span lang="en">Screening attenuation (guide values)</span></th>
+            <th><span lang="de">Bauweise</span><span lang="en">Construction</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>A+</strong></td>
+            <td class="num">&lt; 2,5 mΩ/m</td>
+            <td class="num">&gt; 95 dB / &gt; 85 dB / &gt; 75 dB</td>
+            <td><span lang="de">drei- bis fünffach geschirmt</span><span lang="en">triple to quintuple screened</span></td>
+          </tr>
+          <tr>
+            <td><strong>A</strong></td>
+            <td class="num">5 mΩ/m</td>
+            <td class="num">85 dB / 75 dB / 65 dB</td>
+            <td><span lang="de">meist dreifach geschirmt</span><span lang="en">usually triple screened</span></td>
+          </tr>
+          <tr>
+            <td><strong>B</strong></td>
+            <td class="num">15 mΩ/m</td>
+            <td class="num">75 dB / 65 dB / 55 dB</td>
+            <td><span lang="de">doppelt geschirmt</span><span lang="en">double screened</span></td>
+          </tr>
+          <tr>
+            <td><strong>C</strong></td>
+            <td class="num">50 mΩ/m</td>
+            <td class="num">75 dB / 65 dB / 55 dB</td>
+            <td><span lang="de">einfaches Geflecht, heute nicht mehr zeitgemäss</span><span lang="en">simple braid, no longer up to date</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Vor der Abgabe nachschlagen</span><span lang="en">Look it up before handing in</span></b>
+      <p lang="de">Die drei dB-Werte je Klasse gelten für gestaffelte Frequenzbereiche (grob: unterer Bereich, bis 1 GHz, über 1 GHz), und die Grenzen unterscheiden sich je nach <strong>Ausgabe der EN 50117</strong>. Die Bezeichnungen <strong>A+ und A++</strong> sind zudem <strong>keine einheitlich genormten Klassen</strong> — ein Hersteller nennt 95 dB «A++», ein anderer schreibt bei 120 dB «A+». Schlage die gültige Tabelle in deiner NIN-Ausgabe beziehungsweise im Herstellerkatalog nach und übernimm keine Werbeangabe ungeprüft.</p>
+      <p lang="en">The three dB values per class apply to staggered frequency ranges (roughly: lower band, up to 1 GHz, above 1 GHz), and the limits differ between <strong>editions of EN 50117</strong>. The labels <strong>A+ and A++</strong> are moreover <strong>not uniformly standardised classes</strong> — one manufacturer calls 95 dB “A++”, another writes “A+” at 120 dB. Look the valid table up in your own NIN edition or in the manufacturer's catalogue and never adopt a marketing figure unchecked.</p>
+    </div>
+
+    <h3><span lang="de">Dämpfung: steigt mit Frequenz und Länge</span><span lang="en">Attenuation: rises with frequency and length</span></h3>
+
+    <p lang="de">Die Dämpfung wird in <strong>dB pro 100 m</strong> angegeben. Sie steigt mit der Länge — doppelte Länge, doppelte Dämpfung in dB — und sie steigt mit der Frequenz, weil der Strom durch den Skineffekt in eine immer dünnere Randschicht des Leiters gedrängt wird. Deshalb ist der oberste Kanal einer Anlage immer der kritische, und deshalb wird der Pegel immer bei der <strong>oberen und der unteren Planfrequenz</strong> gerechnet.</p>
+    <p lang="en">Attenuation is given in <strong>dB per 100 m</strong>. It rises with length — twice the length, twice the attenuation in dB — and it rises with frequency, because the skin effect forces the current into an ever thinner outer layer of the conductor. That is why the topmost channel of an installation is always the critical one, and why levels are always calculated at the <strong>upper and the lower design frequency</strong>.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Frequenz</span><span lang="en">Frequency</span></th>
+            <th><span lang="de">Dämpfung pro 100 m</span><span lang="en">Attenuation per 100 m</span></th>
+            <th><span lang="de">Wo dieser Bereich liegt</span><span lang="en">What lives in this band</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">100 MHz</td><td class="num">5,9 dB</td><td><span lang="de">Radio und untere TV-Kanäle</span><span lang="en">radio and lower TV channels</span></td></tr>
+          <tr><td class="num">400 MHz</td><td class="num">12,0 dB</td><td><span lang="de">mittlerer Bereich des Kabelnetzes</span><span lang="en">middle range of the cable network</span></td></tr>
+          <tr><td class="num">862 MHz</td><td class="num">17,9 dB</td><td><span lang="de">früheres oberes Ende des Kabelnetzes</span><span lang="en">former upper end of the cable network</span></td></tr>
+          <tr><td class="num">1000 MHz</td><td class="num">19,4 dB</td><td><span lang="de">heutige Ausbaugrenze vieler Netze</span><span lang="en">today's expansion limit of many networks</span></td></tr>
+          <tr><td class="num">2000 MHz</td><td class="num">28,2 dB</td><td><span lang="de">oberes Ende der Satelliten-Zwischenfrequenz</span><span lang="en">upper end of the satellite intermediate frequency</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Herkunft der Zahlen</span><span lang="en">Where these numbers come from</span></b>
+      <p lang="de">Die Werte in der Tabelle stammen aus dem Datenblatt eines in der Schweiz gängigen, dreifach geschirmten Installationskabels mit 6,8 mm Aussendurchmesser. Sie sind <strong>ein Beispiel, keine Norm</strong>: Jeder Kabeltyp hat seine eigene Dämpfungskurve. Für eine Pegelrechnung nimmst du immer das Datenblatt des tatsächlich verlegten Kabels.</p>
+      <p lang="en">The values in the table come from the data sheet of a triple-screened installation cable common in Switzerland, 6.8 mm in outer diameter. They are <strong>an example, not a standard</strong>: every cable type has its own attenuation curve. For a level calculation always use the data sheet of the cable actually installed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Die Empfangswege in der Schweiz</span><span lang="en">Reception paths in Switzerland</span></h2>
+
+    <p lang="de">Das Signal kann auf vier Wegen ins Gebäude kommen. Drei davon führen im Haus auf ein Koaxialkabel, der vierte nicht — und genau das ist der Punkt, an dem sich die TV-Installation heute verändert.</p>
+    <p lang="en">The signal can reach the building by four routes. Three of them continue inside the house on a coaxial cable, the fourth does not — and that is exactly the point where TV installation work is changing today.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Empfangsweg</span><span lang="en">Reception path</span></th>
+            <th><span lang="de">Übertragung im Gebäude</span><span lang="en">Transmission inside the building</span></th>
+            <th><span lang="de">Merkmale</span><span lang="en">Characteristics</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Kabelnetz (CATV)</span><span lang="en">Cable network (CATV)</span></strong></td>
+            <td><span lang="de">Koax ab dem Hausübergabepunkt</span><span lang="en">coax from the building handover point</span></td>
+            <td><span lang="de">der häufigste Fall; überträgt Fernsehen, Radio und über DOCSIS auch Internet und Telefonie — in beiden Richtungen</span><span lang="en">the most common case; carries television, radio and, via DOCSIS, internet and telephony too — in both directions</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Satellit</span><span lang="en">Satellite</span></strong></td>
+            <td><span lang="de">Koax ab dem LNB, meist über einen Multischalter</span><span lang="en">coax from the LNB, usually via a multiswitch</span></td>
+            <td><span lang="de">grosses Programmangebot, reiner Empfang ohne Rückweg; braucht freie Sicht nach Süden</span><span lang="en">large programme choice, reception only with no return path; needs a clear view to the south</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Terrestrisch</span><span lang="en">Terrestrial</span></strong></td>
+            <td><span lang="de">Koax ab der Dach- oder Zimmerantenne</span><span lang="en">coax from the roof or indoor aerial</span></td>
+            <td><span lang="de">in der Schweiz stark zurückgegangen, seit die SRG die DVB-T-Verbreitung am 3. Juni 2019 eingestellt hat</span><span lang="en">much reduced in Switzerland since the SRG ended DVB-T distribution on 3 June 2019</span></td>
+          </tr>
+          <tr>
+            <td><strong>IPTV</strong></td>
+            <td><span lang="de">Datennetz: Twisted Pair oder Glasfaser, Ethernet bis zur TV-Box</span><span lang="en">data network: twisted pair or fibre, Ethernet to the TV box</span></td>
+            <td><span lang="de">kein Koax mehr; das Fernsehbild ist ein Datenstrom im Hausnetz</span><span lang="en">no coax any more; the picture is a data stream on the building network</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Satellitenempfang: LNB und Multischalter</span><span lang="en">Satellite reception: LNB and multiswitch</span></h3>
+
+    <p lang="de">Der Satellit sendet im Ku-Band bei rund 10,7 bis 12,75 GHz. So hohe Frequenzen lassen sich nicht durch ein Hausinstallationskabel schicken. Deshalb sitzt im Brennpunkt der Schüssel das <strong>LNB</strong> — ein rauscharmer Umsetzer, der das Signal auf die <strong>Satelliten-Zwischenfrequenz von 950 bis 2150 MHz</strong> heruntermischt. Erst diese ZF läuft über das Koaxialkabel ins Haus.</p>
+    <p lang="en">The satellite transmits in the Ku band at roughly 10.7 to 12.75 GHz. Frequencies that high cannot be sent through a building installation cable. That is why the <strong>LNB</strong> sits at the focus of the dish — a low-noise block converter that mixes the signal down to the <strong>satellite intermediate frequency of 950 to 2150 MHz</strong>. Only this IF travels over the coaxial cable into the house.</p>
+
+    <p lang="de">Ein Universal-LNB deckt das Band in vier Ebenen ab. Der Receiver wählt sie über zwei Steuersignale, die er <em>über dasselbe Koaxialkabel</em> zum LNB schickt:</p>
+    <p lang="en">A universal LNB covers the band in four planes. The receiver selects them with two control signals that it sends to the LNB <em>over the same coaxial cable</em>:</p>
+
+    <ul lang="de">
+      <li><strong>Polarisation</strong> über die Speisespannung: rund 14 V für vertikal, rund 18 V für horizontal</li>
+      <li><strong>Frequenzband</strong> über ein aufmoduliertes 22-kHz-Signal: ohne Ton das untere Band (Oszillator 9750 MHz), mit Ton das obere Band (Oszillator 10 600 MHz)</li>
+      <li>Ein <strong>Quattro-LNB</strong> gibt alle vier Ebenen fest auf vier Ausgänge und gehört an einen Multischalter</li>
+      <li>Ein <strong>Quad-LNB</strong> sieht gleich aus, versorgt aber vier Receiver direkt — die beiden dürfen nie verwechselt werden</li>
+      <li>Der <strong>Multischalter</strong> schaltet jedem Teilnehmer die Ebene durch, die sein Receiver gerade anfordert</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Polarisation</strong> via the supply voltage: about 14 V for vertical, about 18 V for horizontal</li>
+      <li><strong>Frequency band</strong> via a superimposed 22 kHz tone: without the tone the lower band (oscillator 9750 MHz), with the tone the upper band (oscillator 10,600 MHz)</li>
+      <li>A <strong>quattro LNB</strong> puts all four planes permanently on four outputs and belongs on a multiswitch</li>
+      <li>A <strong>quad LNB</strong> looks the same but feeds four receivers directly — the two must never be mixed up</li>
+      <li>The <strong>multiswitch</strong> passes each subscriber the plane their receiver is currently requesting</li>
+    </ul>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Fernspeisung nicht vergessen</span><span lang="en">Do not forget the remote supply</span></b>
+      <p lang="de">Auf der Sat-Leitung liegt eine <strong>Gleichspannung</strong>, die das LNB speist. Alle Bauteile im Sat-Zweig — Verteiler, Dosen, Abzweiger — müssen deshalb <strong>gleichstromdurchlässig</strong> sein. Ein gewöhnlicher CATV-Verteiler sperrt die Speisespannung, und das LNB bleibt dunkel. Genau deshalb dürfen Sat- und Kabelnetz-Bauteile nie unbesehen gegeneinander getauscht werden.</p>
+      <p lang="en">The satellite line carries a <strong>DC voltage</strong> that powers the LNB. All components in the satellite branch — splitters, sockets, taps — must therefore be <strong>DC-passing</strong>. An ordinary CATV splitter blocks the supply voltage and the LNB stays dead. This is exactly why satellite and cable-network components must never be swapped for one another without checking.</p>
+    </div>
+
+    <div class="callout neutral">
+      <b class="tag"><span lang="de">Radio im Wandel</span><span lang="en">Radio in transition</span></b>
+      <p lang="de">Die SRG stellte ihre UKW-Verbreitung per 31. Dezember 2024 ein; Radio läuft seither vor allem über DAB+, das Internet und das Kabelnetz. Nach einem Parlamentsentscheid plant die SRG allerdings eine Rückkehr auf UKW. Der Radioteil einer Anlage ist damit ein Thema, das du <strong>vor der Abgabe auf den aktuellen Stand prüfen</strong> solltest — die Dose selbst bleibt davon unberührt, sie überträgt schlicht den Frequenzbereich, den das Netz anliefert.</p>
+      <p lang="en">The SRG ended its FM distribution on 31 December 2024; since then radio runs mainly over DAB+, the internet and the cable network. Following a parliamentary decision, however, the SRG is planning a return to FM. The radio part of an installation is therefore a subject you should <strong>check for the current state before handing in</strong> — the socket itself is unaffected, it simply passes on whatever frequency range the network delivers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Die Hausverteilanlage</span><span lang="en">The in-building distribution system</span></h2>
+
+    <p lang="de">Die Anlage im Gebäude heisst in der Schweiz <strong>Hausverteilanlage (HVA)</strong>. Sie beginnt am <strong>Hausübergabepunkt (HÜP)</strong> — der Eigentums- und Dokumentationsgrenze zwischen dem Netz des Kabelnetzunternehmers und der Installation im Haus — und endet an der <strong>Teilnehmeranschlussdose (TAD)</strong> im Zimmer.</p>
+    <p lang="en">In Switzerland the system inside the building is called the <strong>house distribution system (HVA)</strong>. It starts at the <strong>building handover point (HÜP)</strong> — the boundary of ownership and documentation between the cable operator's network and the installation in the house — and ends at the <strong>subscriber outlet (TAD)</strong> in the room.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schema einer Hausverteilanlage mit Satellit, Kabelnetz, Verstaerker, Steigleitung und Dosen">
+        <defs>
+          <style>
+            .cx{fill:none;stroke:#26241F;stroke-width:2.8;stroke-linecap:round}
+            .cxs{fill:none;stroke:#1D5872;stroke-width:2.8;stroke-linecap:round}
+            .pa2{fill:none;stroke:#3F6B43;stroke-width:2.8;stroke-linecap:round}
+            .bx2{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
+            .dz{fill:#FBF9F5;stroke:#171614;stroke-width:2.2}
+            .tx{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;fill:#48433B}
+            .tg{font-family:'IBM Plex Mono',monospace;font-size:9.5px;fill:#7D7669;letter-spacing:.06em}
+            .dt{fill:#171614}
+          </style>
+        </defs>
+
+        <!-- Satellitenschuessel -->
+        <path d="M40 30 a44 44 0 0 1 0 66" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <path d="M40 63 h34" stroke="#171614" stroke-width="2"/>
+        <circle cx="78" cy="63" r="9" fill="#B8402A" stroke="#171614" stroke-width="2"/>
+        <text class="tx" x="94" y="60">LNB</text>
+        <text class="tg" x="94" y="74">10,7–12,75 GHz</text>
+
+        <!-- Sat-Leitung zum Multischalter -->
+        <path class="cxs" d="M78 72 V108"/>
+        <rect class="bx2" x="34" y="108" width="120" height="34" rx="3"/>
+        <text class="tx" x="94" y="130" text-anchor="middle"><tspan lang="de">MULTISCHALTER</tspan><tspan lang="en">MULTISWITCH</tspan></text>
+        <text class="tg" x="34" y="158">950–2150 MHz</text>
+
+        <!-- Kabelnetz-Eintritt -->
+        <path class="cx" d="M20 268 H34"/>
+        <text class="tg" x="20" y="256"><tspan lang="de">KABELNETZ</tspan><tspan lang="en">CABLE NETWORK</tspan></text>
+        <rect class="bx2" x="34" y="250" width="120" height="36" rx="3"/>
+        <text class="tx" x="94" y="272" text-anchor="middle">HÜP / SÜS</text>
+
+        <!-- Verstaerker -->
+        <path class="cx" d="M154 268 H206"/>
+        <path d="M206 246 L206 290 L246 268 Z" fill="#EFEAE0" stroke="#171614" stroke-width="2.2" stroke-linejoin="round"/>
+        <text class="tx" x="226" y="308" text-anchor="middle"><tspan lang="de">VERSTAERKER</tspan><tspan lang="en">AMPLIFIER</tspan></text>
+        <path class="cxs" d="M94 142 V196 H262 V268"/>
+
+        <!-- Steigleitung -->
+        <path class="cx" d="M246 268 H300"/>
+        <path class="cx" d="M300 268 V64"/>
+        <text class="tg" x="252" y="330"><tspan lang="de">STEIGLEITUNG</tspan><tspan lang="en">RISER</tspan></text>
+
+        <!-- Abschluss oben -->
+        <path class="cx" d="M300 64 h18"/>
+        <rect x="318" y="55" width="30" height="18" rx="2" fill="#B8402A" stroke="#171614" stroke-width="2"/>
+        <text class="tx" x="356" y="62">75 Ω</text>
+        <text class="tg" x="356" y="75"><tspan lang="de">ABSCHLUSS</tspan><tspan lang="en">TERMINATION</tspan></text>
+
+        <!-- Etagen -->
+        <g>
+          <circle class="dt" cx="300" cy="248" r="4"/>
+          <path class="cx" d="M300 248 H470"/>
+          <rect class="dz" x="470" y="230" width="86" height="36" rx="3"/>
+          <text class="tx" x="513" y="252" text-anchor="middle"><tspan lang="de">DURCHGANG</tspan><tspan lang="en">THROUGH</tspan></text>
+          <path class="cx" d="M556 248 H622"/>
+          <rect class="dz" x="622" y="230" width="86" height="36" rx="3"/>
+          <text class="tx" x="665" y="252" text-anchor="middle"><tspan lang="de">ENDDOSE</tspan><tspan lang="en">END OUTLET</tspan></text>
+          <text class="tg" x="470" y="288"><tspan lang="de">ERDGESCHOSS — DOSEN IN REIHE</tspan><tspan lang="en">GROUND FLOOR — OUTLETS IN SERIES</tspan></text>
+        </g>
+
+        <g>
+          <circle class="dt" cx="300" cy="166" r="4"/>
+          <path class="cx" d="M300 166 H392"/>
+          <rect class="bx2" x="392" y="148" width="72" height="36" rx="3"/>
+          <text class="tx" x="428" y="170" text-anchor="middle">WSP</text>
+          <path class="cx" d="M464 166 H540"/>
+          <rect class="dz" x="540" y="148" width="86" height="36" rx="3"/>
+          <text class="tx" x="583" y="170" text-anchor="middle"><tspan lang="de">DATENDOSE</tspan><tspan lang="en">DATA OUTLET</tspan></text>
+          <text class="tg" x="392" y="208"><tspan lang="de">1. OBERGESCHOSS — WOHNUNGSSTERNPUNKT</tspan><tspan lang="en">FIRST FLOOR — FLAT STAR POINT</tspan></text>
+        </g>
+
+        <!-- Potentialausgleich -->
+        <path class="pa2" d="M94 286 V352 H620"/>
+        <path class="pa2" d="M40 96 V116 M40 116 H26 V352"/>
+        <path d="M12 352 h28 M18 360 h16 M23 368 h6" stroke="#3F6B43" stroke-width="2.4" stroke-linecap="round"/>
+        <text class="tg" x="300" y="344" fill="#3F6B43"><tspan lang="de">POTENTIALAUSGLEICH — SCHIRME UND MAST AUF DIE PA-SCHIENE</tspan><tspan lang="en">EQUIPOTENTIAL BONDING — SCREENS AND MAST TO THE BONDING BAR</tspan></text>
+
+        <text class="tg" x="20" y="392"><tspan lang="de">SCHWARZ = KOAX KABELNETZ · BLAU = KOAX SATELLIT · GRUEN = POTENTIALAUSGLEICH</tspan><tspan lang="en">BLACK = COAX CABLE NETWORK · BLUE = COAX SATELLITE · GREEN = EQUIPOTENTIAL BONDING</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 2</span><span lang="en">Fig. 2</span></b>
+        <span lang="de"> — Verkabelung einer Hausverteilanlage. Die Steigleitung endet oben mit einem Abschlusswiderstand von 75 Ω; jeder Strang wird abgeschlossen, auch wenn dort keine Dose sitzt.</span>
+        <span lang="en"> — Cabling of an in-building distribution system. The riser ends at the top with a 75 Ω terminating resistor; every branch is terminated, even where no outlet sits there.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Verstärker und Pegel</span><span lang="en">Amplifiers and levels</span></h3>
+
+    <p lang="de">Jedes Bauteil zwischen Übergabestelle und Dose nimmt Signal weg: das Kabel durch seine Dämpfung, jeder Verteiler durch die Aufteilung, jede Durchgangsdose durch die Auskopplung. Reicht der angelieferte Pegel nicht bis zur letzten Dose, kommt ein <strong>Hausverstärker</strong> dazu. Er ist aber kein Allheilmittel: Ein Verstärker hebt <strong>Signal und Störung gleichermassen</strong> an und fügt eigenes Rauschen hinzu. Er steht deshalb immer möglichst weit vorne, direkt nach dem Übergabepunkt, und nie am Ende einer langen, schon gedämpften Leitung.</p>
+    <p lang="en">Every component between the handover point and the outlet takes signal away: the cable through its attenuation, every splitter through the division, every through-outlet through the tap. If the delivered level does not reach the last socket, a <strong>house amplifier</strong> is added. But it is no cure-all: an amplifier lifts <strong>signal and interference alike</strong> and adds noise of its own. It therefore always sits as far forward as possible, directly after the handover point, and never at the end of a long, already attenuated line.</p>
+
+    <p lang="de">Zu wenig Pegel heisst Bildaussetzer; zu viel Pegel übersteuert den Eingang des Empfängers und ist genauso schlecht. Der Pegel muss deshalb <strong>in einem Fenster</strong> liegen und wird an jeder Dose gemessen und protokolliert.</p>
+    <p lang="en">Too little level means picture dropouts; too much level overdrives the receiver input and is just as bad. The level must therefore lie <strong>within a window</strong> and is measured and recorded at every outlet.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Kenngrösse</span><span lang="en">Parameter</span></th>
+            <th><span lang="de">Wert</span><span lang="en">Value</span></th>
+            <th><span lang="de">Bedeutung</span><span lang="en">Meaning</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span lang="de">Übertragungsbereich der HVA</span><span lang="en">Transmission range of the system</span></td>
+            <td class="num">5–2000 MHz</td>
+            <td><span lang="de">Vorwärtsweg und Rückweg zusammen; Bauteile werden heute für 1200 MHz und mehr gewählt</span><span lang="en">forward and return path together; components today are chosen for 1200 MHz and above</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Rückweg</span><span lang="en">Return path</span></td>
+            <td class="num">5–65 MHz</td>
+            <td><span lang="de">der Kanal vom Modem zurück ins Netz; hier wirkt sich jede undichte Stelle als Störung aus</span><span lang="en">the channel from the modem back into the network; every leak shows up here as interference</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Digitaler Pegel an der Dose</span><span lang="en">Digital level at the outlet</span></td>
+            <td class="num">55–70 dBµV</td>
+            <td><span lang="de">Fenster zwischen Mindest- und Höchstpegel; wird an jeder Dose gemessen</span><span lang="en">window between minimum and maximum level; measured at every outlet</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Summe der Dämpfung ab Übergabestelle</span><span lang="en">Total attenuation from the handover point</span></td>
+            <td class="num">max. 25 dB</td>
+            <td><span lang="de">alle passiven Teile zusammen — Kabel, Verteiler, Dosen</span><span lang="en">all passive parts together — cable, splitters, outlets</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Entkopplung Übergabestelle ↔ Dose</span><span lang="en">Decoupling handover point ↔ outlet</span></td>
+            <td class="num">min. 10 dB</td>
+            <td><span lang="de">damit ein Gerät an einer Dose die anderen Teilnehmer nicht stört</span><span lang="en">so that a device at one outlet does not disturb the other subscribers</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Abschluss offener Leitungsenden</span><span lang="en">Termination of open line ends</span></td>
+            <td class="num">75 Ω</td>
+            <td><span lang="de">alle Stamm- und Steigleitungen werden abgeschlossen, sonst gibt es Reflexionen</span><span lang="en">all trunk and riser lines are terminated, otherwise reflections occur</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Diese Zahlen sind netzabhängig</span><span lang="en">These figures depend on the network</span></b>
+      <p lang="de">Die Werte oben stammen aus den Planungs- und Installationsrichtlinien eines Schweizer Kabelnetzunternehmers, die auf den HVA-Richtlinien von SUISSEDIGITAL aufbauen. <strong>Jeder Netzbetreiber gibt eigene Werte vor</strong> — ein anderes Werk verlangt zum Beispiel 63 bis 71 dBµV statt 55 bis 70 dBµV. Vor jeder Planung holst du die <strong>gültigen Richtlinien des zuständigen Kabelnetzunternehmers</strong> und übernimmst dessen Zahlen; für die Anlage brauchst du ohnehin eine Installationsanzeige und eine Bewilligung.</p>
+      <p lang="en">The values above come from the planning and installation guidelines of one Swiss cable operator, which build on the SUISSEDIGITAL guidelines for in-building systems. <strong>Every network operator sets its own figures</strong> — another utility requires 63 to 71 dBµV instead of 55 to 70 dBµV, for instance. Before any planning, obtain the <strong>valid guidelines of the responsible cable operator</strong> and use their numbers; the installation needs a notification and an approval anyway.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Dosen, Stecker und Abschluss</span><span lang="en">Outlets, connectors and termination</span></h2>
+
+    <h3><span lang="de">Die drei Dosentypen</span><span lang="en">The three types of outlet</span></h3>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Dosentyp</span><span lang="en">Type of outlet</span></th>
+            <th><span lang="de">Aufbau</span><span lang="en">Construction</span></th>
+            <th><span lang="de">Einsatz</span><span lang="en">Use</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Durchgangsdose</span><span lang="en">Through outlet</span></strong></td>
+            <td><span lang="de">Eingang und Ausgang; koppelt nur einen kleinen Teil des Signals aus und leitet den Rest weiter</span><span lang="en">input and output; taps only a small part of the signal and passes the rest on</span></td>
+            <td><span lang="de">für alle Dosen in einer Reihe, ausser der letzten</span><span lang="en">for every outlet in a series except the last</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Enddose</span><span lang="en">End outlet</span></strong></td>
+            <td><span lang="de">nur ein Eingang; der Strang ist in der Dose selbst mit 75 Ω abgeschlossen</span><span lang="en">one input only; the branch is terminated inside the outlet with 75 Ω</span></td>
+            <td><span lang="de">an der letzten Stelle einer Reihe</span><span lang="en">at the last position of a series</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Stichdose</span><span lang="en">Tap (spur) outlet</span></strong></td>
+            <td><span lang="de">ein Anschluss, geringe Durchgangsdämpfung, keine Reihenschaltung möglich</span><span lang="en">one connection, low insertion loss, cannot be chained</span></td>
+            <td><span lang="de">nur einzeln am Ende einer eigenen Stichleitung; für Neuinstallationen nach den Richtlinien mehrerer Schweizer Netzbetreiber nicht mehr zugelassen</span><span lang="en">only singly at the end of its own spur; no longer permitted for new work under several Swiss operators' guidelines</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p lang="de">Eine Durchgangsdose an der letzten Stelle eines Strangs muss <strong>immer mit einem Abschlusswiderstand von 75 Ω</strong> bestückt werden. Lässt man ihn weg, ist das Kabelende offen; das Signal wird dort vollständig reflektiert und läuft zurück in die Anlage. Bei digitaler Übertragung sieht man das nicht als Geisterbild, sondern als plötzliche Klötzchenbildung oder als Aussetzer — oft an einer ganz anderen Dose als dort, wo der Fehler steckt.</p>
+    <p lang="en">A through outlet at the last position of a branch must <strong>always be fitted with a 75 Ω terminating resistor</strong>. Leave it out and the cable end is open; the signal is fully reflected there and travels back into the system. With digital transmission you do not see this as ghosting but as sudden blocking or dropouts — often at a completely different outlet from the one where the fault lies.</p>
+
+    <p lang="de">Heute werden in der Schweiz für neue Anlagen <strong>Datendosen mit Richtkoppler</strong> gefordert, auch dort, wo vorerst kein Modem vorgesehen ist. Sie sind rückwegtauglich, haben einen eigenen Modemanschluss und decken den Frequenzgang bis mindestens 1200 MHz ab.</p>
+    <p lang="en">For new installations in Switzerland <strong>data outlets with a directional coupler</strong> are required today, even where no modem is planned for the time being. They are suitable for the return path, have their own modem connection and cover the frequency response to at least 1200 MHz.</p>
+
+    <h3><span lang="de">F-Stecker und IEC-Stecker</span><span lang="en">F connectors and IEC connectors</span></h3>
+
+    <ul lang="de">
+      <li><strong>F-Stecker</strong> — der Stecker der festen Installation. Er wird geschraubt und hält den Schirm rundum dicht; der Innenleiter des Kabels ist zugleich der Kontaktstift. In der Schweiz sind für die HVA <strong>Crimp- oder Kompressionsstecker</strong> gefordert, wobei Kompressionsstecker empfohlen werden. Aufgewindete F-Stecker und solche mit Schlauchklemmbriden sind ausdrücklich verboten.</li>
+      <li><strong>IEC-Stecker</strong> — der 9,5-mm-Antennenstecker nach IEC 60169-2, den man vom Gerätekabel kennt: Stift für TV, Buchse für Radio. Er ist ein reiner <strong>Geräteanschluss</strong>, nicht für die feste Installation gedacht, und schirmt deutlich schlechter als ein F-Stecker.</li>
+      <li>Der F-Stecker muss <strong>zum Kabeltyp passen</strong> und mit dem richtigen Werkzeug montiert werden — Nennmass und Kabeldurchmesser gehören zusammen.</li>
+      <li>Angezogen wird mit dem Gabelschlüssel, nach Möglichkeit mit Drehmomentschlüssel: <strong>so fest wie nötig, nicht so fest wie möglich</strong>.</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>F connector</strong> — the connector of the fixed installation. It screws on and keeps the screen tight all round; the inner conductor of the cable is itself the contact pin. In Switzerland <strong>crimp or compression connectors</strong> are required for in-building systems, with compression connectors recommended. Screw-on F connectors and those with hose clamps are expressly prohibited.</li>
+      <li><strong>IEC connector</strong> — the 9.5 mm aerial connector to IEC 60169-2, familiar from equipment leads: pin for TV, socket for radio. It is purely an <strong>equipment connection</strong>, not intended for fixed installation, and screens considerably worse than an F connector.</li>
+      <li>The F connector must <strong>match the cable type</strong> and be fitted with the correct tool — nominal size and cable diameter belong together.</li>
+      <li>Tighten with the open-ended spanner, with a torque wrench where possible: <strong>as tight as necessary, not as tight as possible</strong>.</li>
+    </ul>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Häufiger Fehler</span><span lang="en">Common mistake</span></b>
+      <p lang="de">Ein einziger schlecht montierter Stecker macht die ganze Anlage undicht. Steht das Geflecht nicht sauber unter der Steckerhülse, entsteht ein Loch im Schirm — und über dieses Loch strahlt nicht nur Signal ab, sondern es strahlt auch <strong>Ingress</strong> ein: Störungen aus Schaltnetzteilen, Motoren oder Funkdiensten, die im Rückweg das Modem des Nachbarn lahmlegen können. Deshalb wird bei der Inbetriebnahme am Übergabepunkt eine Ingress-Messung gemacht.</p>
+      <p lang="en">One badly fitted connector makes the entire installation leaky. If the braid does not sit cleanly under the connector sleeve, a hole appears in the screen — and through that hole not only does signal radiate out, <strong>ingress</strong> also radiates in: interference from switched-mode supplies, motors or radio services that can cripple the neighbour's modem in the return path. This is why an ingress measurement is taken at the handover point during commissioning.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Montage, Potentialausgleich und Blitzschutz</span><span lang="en">Installation, bonding and lightning protection</span></h2>
+
+    <h3><span lang="de">Das Kabel richtig behandeln</span><span lang="en">Handling the cable correctly</span></h3>
+
+    <p lang="de">Ein Koaxialkabel ist ein <strong>Präzisionsteil</strong>. Sein Wellenwiderstand hängt vom Verhältnis der Durchmesser ab — also von der Geometrie. Jede Stelle, an der diese Geometrie verändert wird, ist eine Fehlanpassung und damit eine Reflexionsstelle.</p>
+    <p lang="en">A coaxial cable is a <strong>precision part</strong>. Its impedance depends on the diameter ratio — that is, on the geometry. Every point where that geometry is altered is a mismatch and therefore a source of reflections.</p>
+
+    <ul lang="de">
+      <li><strong>Kein Knick.</strong> Ein Knick drückt das Dielektrikum flach, der Innenleiter wandert aus der Mitte — der Schaden bleibt, auch wenn man das Kabel wieder geradebiegt.</li>
+      <li><strong>Biegeradius einhalten.</strong> Er wird als Vielfaches des Aussendurchmessers angegeben und ist beim Verlegen grösser als im befestigten Zustand.</li>
+      <li><strong>Nicht quetschen.</strong> Kabelbinder nur handfest, keine Schellen überdrehen, nicht unter eine Rohrschelle klemmen.</li>
+      <li><strong>Nicht überdehnen.</strong> Beim Einziehen ins Rohr nicht mit Gewalt ziehen; Rohre ausreichend gross wählen.</li>
+      <li><strong>Sauber absetzen.</strong> Beim Anschluss an eine Dose wird der Aussenmantel etwa 11 mm abisoliert, das Geflecht nach hinten über den Mantel zurückgelegt und das Dielektrikum bis auf rund 1 mm Abstand zum Mantel entfernt. Danach wird das Kabel bündig eingeführt und mit der Massebügelschraube gehalten — <strong>ohne es flachzudrücken</strong>.</li>
+      <li><strong>Beschriften.</strong> Jedes Kabel wird lesbar bezeichnet; sonst findet niemand später den richtigen Strang.</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>No kinks.</strong> A kink flattens the dielectric and the inner conductor moves off centre — the damage remains even after the cable is straightened again.</li>
+      <li><strong>Respect the bending radius.</strong> It is given as a multiple of the outer diameter and is larger while pulling than once the cable is fixed.</li>
+      <li><strong>Do not crush.</strong> Cable ties hand-tight only, do not overtighten clips, never clamp under a pipe saddle.</li>
+      <li><strong>Do not overstretch.</strong> Do not force the cable when pulling it into a conduit; choose conduits large enough.</li>
+      <li><strong>Strip cleanly.</strong> At an outlet the sheath is stripped back about 11 mm, the braid folded back over the sheath and the dielectric removed to about 1 mm from the sheath. The cable is then inserted flush and held with the earthing clamp screw — <strong>without flattening it</strong>.</li>
+      <li><strong>Label everything.</strong> Every cable gets a legible marking; otherwise nobody finds the right branch later.</li>
+    </ul>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Biegeradius im Katalog nachschlagen</span><span lang="en">Look the bending radius up in the catalogue</span></b>
+      <p lang="de">Für den minimalen Biegeradius kursieren sehr unterschiedliche Faustregeln — vom Fünffachen bis zum Fünfzehnfachen des Aussendurchmessers, je nachdem, ob das Kabel beim Verlegen oder im befestigten Zustand gebogen wird. Es gibt hier <strong>keinen allgemeingültigen Wert</strong>. Schlage den Radius für den verwendeten Kabeltyp im Herstellerkatalog nach und schreibe ihn ins Protokoll, statt eine Faustregel als Norm auszugeben.</p>
+      <p lang="en">Very different rules of thumb circulate for the minimum bending radius — from five to fifteen times the outer diameter, depending on whether the cable is bent while being pulled or once fixed. There is <strong>no universally valid figure</strong> here. Look the radius up for the cable type actually used in the manufacturer's catalogue and record it, rather than passing a rule of thumb off as a standard.</p>
+    </div>
+
+    <h3><span lang="de">Potentialausgleich der Antennenanlage</span><span lang="en">Bonding of the antenna installation</span></h3>
+
+    <p lang="de">Der Schirm eines Koaxialkabels ist blankes Metall, das durch das ganze Gebäude läuft und im Fall einer Aussenantenne bis aufs Dach führt. Ohne Verbindung zum Potentialausgleich kann zwischen diesem Schirm und den geerdeten Teilen der Elektroinstallation eine <strong>Potentialdifferenz</strong> stehen — im harmlosen Fall gibt das Brummstörungen, im ernsten Fall eine Berührungsspannung.</p>
+    <p lang="en">The screen of a coaxial cable is bare metal running through the whole building and, with an outdoor aerial, up to the roof. Without a connection to the equipotential bonding, a <strong>potential difference</strong> can stand between that screen and the earthed parts of the electrical installation — harmlessly this causes hum, seriously it causes a touch voltage.</p>
+
+    <ul lang="de">
+      <li>Alle Kabelschirme, die ins Gebäude hinein- oder hinausführen, werden in den Potentialausgleich einbezogen.</li>
+      <li>Auch die Übergabestelle des Kabelnetzes wird mit dem Potentialausgleich der Liegenschaft verbunden; ein Schweizer Netzbetreiber verlangt dafür mindestens 2,5 mm².</li>
+      <li>Führen Potentialunterschiede zwischen Netz und Hausinstallation trotzdem zu Störungen, wird ein <strong>galvanisches Trennglied</strong> eingesetzt — mit einem Schirmungsmass von mindestens 75 dB, damit die Trennstelle nicht zum neuen Leck wird.</li>
+      <li>Der Mast einer Aussenantenne wird zusätzlich geerdet, nicht nur potentialausgeglichen.</li>
+      <li>Die Grundlagen dazu kennst du bereits: siehe <span class="mono">2. Lehrjahr, Thema 10 — Potentialausgleich</span>.</li>
+    </ul>
+    <ul lang="en">
+      <li>All cable screens entering or leaving the building are included in the equipotential bonding.</li>
+      <li>The cable network handover point is bonded to the building's equipotential bonding as well; one Swiss operator requires at least 2.5 mm² for this.</li>
+      <li>If potential differences between network and installation still cause interference, a <strong>galvanic isolator</strong> is fitted — with a screening attenuation of at least 75 dB, so the isolation point does not become the new leak.</li>
+      <li>The mast of an outdoor aerial is additionally earthed, not merely bonded.</li>
+      <li>You already know the fundamentals: see <span class="mono">Year 2, Topic 10 — Equipotential bonding</span>.</li>
+    </ul>
+
+    <h3><span lang="de">Blitzschutz bei Aussenantennen</span><span lang="en">Lightning protection with outdoor aerials</span></h3>
+
+    <p lang="de">Eine Antenne oder eine Satellitenschüssel auf dem Dach ist der höchste Punkt des Gebäudes und damit ein bevorzugter Einschlagpunkt. Die Sicherheitsanforderungen an Kabelnetze und Antennenanlagen regelt die Norm <strong>EN 60728-11</strong>, in der Schweiz als SN EN 60728-11 übernommen. Für das Blitzschutzsystem des Gebäudes gelten in der Schweiz die <strong>SNR 464022</strong> beziehungsweise die Normenreihe <strong>SN EN 62305</strong>.</p>
+    <p lang="en">An aerial or satellite dish on the roof is the highest point of the building and thus a preferred strike point. The safety requirements for cable networks and antenna installations are set by <strong>EN 60728-11</strong>, adopted in Switzerland as SN EN 60728-11. For the building's lightning protection system, <strong>SNR 464022</strong> and the <strong>SN EN 62305</strong> series apply in Switzerland.</p>
+
+    <ul lang="de">
+      <li>Steht ein Blitzschutzsystem zur Verfügung, wird die Antenne in den <strong>Schutzbereich einer Fangeinrichtung</strong> gestellt und der <strong>Trennungsabstand</strong> eingehalten, statt sie direkt anzuschliessen.</li>
+      <li>Ist das nicht möglich, wird der Mast über einen Erdungsleiter direkt mit der Erdungsanlage verbunden — auf <strong>kürzestem, möglichst geradem Weg</strong> nach unten, ohne enge Schlaufen.</li>
+      <li>Als Querschnitt für diesen Erdungsleiter nennt die deutschsprachige Fachliteratur zur EN 60728-11 <strong>16 mm² Kupfer</strong>, für den reinen Potentialausgleich der Schirme <strong>4 mm² Kupfer</strong>.</li>
+      <li>Blitzschutz ist eine <strong>Planungsaufgabe</strong>. Ob eine Anlage in den Schutzbereich fällt, entscheidet man nicht auf dem Dach, sondern vorher am Plan.</li>
+    </ul>
+    <ul lang="en">
+      <li>If a lightning protection system is available, the aerial is placed in the <strong>protected volume of an air termination</strong> and the <strong>separation distance</strong> is observed, rather than connecting it directly.</li>
+      <li>Where that is not possible, the mast is connected directly to the earthing system by an earthing conductor — by the <strong>shortest, straightest possible route</strong> downwards, without tight loops.</li>
+      <li>For the cross-section of this earthing conductor, the German-language literature on EN 60728-11 states <strong>16 mm² copper</strong>, and <strong>4 mm² copper</strong> for bonding the screens alone.</li>
+      <li>Lightning protection is a <strong>design task</strong>. Whether an installation falls inside the protected volume is decided on the drawing beforehand, not on the roof.</li>
+    </ul>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Querschnitte vor der Abgabe prüfen</span><span lang="en">Check the cross-sections before handing in</span></b>
+      <p lang="de">Die Querschnitte 16 mm² und 4 mm² stammen aus der deutschen Anwendungspraxis zur EN 60728-11. Sie sind ein <strong>guter Anhaltspunkt, aber kein belegter Schweizer Absolutwert</strong> — die massgebenden Angaben stehen in der in der Schweiz gültigen Ausgabe der SN EN 60728-11, in der SNR 464022 und in der NIN. Schlage die Werte dort nach, bevor du sie in einer Ausführungsplanung verwendest.</p>
+      <p lang="en">The cross-sections 16 mm² and 4 mm² come from German practice under EN 60728-11. They are a <strong>good point of reference but not a verified Swiss absolute value</strong> — the governing figures are in the edition of SN EN 60728-11 valid in Switzerland, in SNR 464022 and in the NIN. Look the values up there before using them in a design.</p>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Wer darf was?</span><span lang="en">Who may do what?</span></b>
+      <p lang="de">CATV-Installationen mit Anschluss an ein Kabelnetz sind <strong>bewilligungspflichtig</strong>: Vor Arbeitsbeginn geht eine Installationsanzeige mit Schema an den Kabelnetzunternehmer, nach der Inbetriebnahme eine Fertigstellungsanzeige mit den gemessenen Pegeln. Rechtlich gehören diese Anlagen zu den Schwachstromanlagen; die Regeln der Branche stehen in den <strong>RIT des VSEI</strong>, den HVA-Richtlinien von SUISSEDIGITAL und der Normenreihe EN 60728, welche die ältere Reihe EN 50083 schrittweise ablöst.</p>
+      <p lang="en">CATV installations connected to a cable network <strong>require approval</strong>: before work starts, a notification with a schematic goes to the cable operator; after commissioning, a completion notice with the measured levels follows. Legally these belong to the low-voltage signalling installations; the trade rules are in the <strong>RIT of the VSEI</strong>, the SUISSEDIGITAL guidelines for in-building systems and the EN 60728 series, which is progressively replacing the older EN 50083 series.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7 ================= -->
+<section id="s7">
+  <div class="snum">07</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Aus welchen Schichten besteht ein Koaxialkabel und was macht jede?</span><span lang="en">Which layers make up a coaxial cable and what does each do?</span></summary>
+      <div class="ans">
+        <p lang="de">Innenleiter (führt das Signal), Dielektrikum (hält den Innenleiter zentriert und bestimmt mit den Durchmessern den Wellenwiderstand), Schirm aus Folie und Geflecht (Rückleiter und Abschirmung zugleich; die Folie wirkt bei hohen, das Geflecht bei tiefen Frequenzen) und der Aussenmantel als mechanischer Schutz.</p>
+        <p lang="en">Inner conductor (carries the signal), dielectric (keeps the inner conductor centred and, with the diameters, sets the impedance), screen of foil and braid (return conductor and shield in one; the foil works at high frequencies, the braid at low ones) and the outer sheath as mechanical protection.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum haben Radio- und TV-Anlagen 75 Ω und was passiert bei einer Fehlanpassung?</span><span lang="en">Why do radio and TV systems use 75 Ω, and what happens on a mismatch?</span></summary>
+      <div class="ans">
+        <p lang="de">75 Ω ist der Wellenwiderstand, bei dem die Dämpfung in diesem Frequenzbereich am kleinsten ist. Er ergibt sich aus dem Verhältnis der Durchmesser und dem Dielektrikum, nicht aus der Länge. Passt ein Bauteil nicht, wird ein Teil des Signals an dieser Stelle reflektiert und läuft zurück; digital äussert sich das als Klötzchenbildung oder Aussetzer.</p>
+        <p lang="en">75 Ω is the impedance at which attenuation is lowest in this frequency range. It follows from the diameter ratio and the dielectric, not from the length. If a component does not match, part of the signal is reflected there and travels back; in digital operation this shows up as blocking or dropouts.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was ist der Unterschied zwischen Schirmungsmass und Dämpfung?</span><span lang="en">What is the difference between screening attenuation and attenuation?</span></summary>
+      <div class="ans">
+        <p lang="de">Beide werden in dB angegeben, meinen aber Gegenteiliges. Das Schirmungsmass beschreibt, wie gut der Schirm das Signal drinnen und die Störungen draussen hält — hier ist ein hoher Wert gut. Die Dämpfung beschreibt den Signalverlust im Kabel — hier ist ein tiefer Wert gut.</p>
+        <p lang="en">Both are given in dB but mean opposite things. Screening attenuation describes how well the screen keeps the signal in and interference out — a high value is good. Attenuation describes the signal loss in the cable — a low value is good.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum steigt die Dämpfung mit der Frequenz, und was folgt daraus für die Planung?</span><span lang="en">Why does attenuation rise with frequency, and what follows for planning?</span></summary>
+      <div class="ans">
+        <p lang="de">Wegen des Skineffekts wird der Strom mit steigender Frequenz in eine immer dünnere Randschicht des Leiters gedrängt, der wirksame Querschnitt wird kleiner und der Verlust grösser. Für die Planung heisst das: Der oberste Kanal ist immer der kritische; der Pegel wird an der oberen und der unteren Planfrequenz gerechnet, und lange Leitungen werden möglichst kurz gehalten.</p>
+        <p lang="en">Because of the skin effect, rising frequency pushes the current into an ever thinner outer layer of the conductor, the effective cross-section shrinks and the loss grows. For planning this means: the topmost channel is always the critical one; levels are calculated at the upper and lower design frequency, and long runs are kept as short as possible.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wozu dient ein LNB und welche Frequenz kommt danach im Kabel an?</span><span lang="en">What is an LNB for, and what frequency then travels in the cable?</span></summary>
+      <div class="ans">
+        <p lang="de">Das LNB sitzt im Brennpunkt der Satellitenschüssel, verstärkt rauscharm und mischt das Ku-Band von rund 10,7 bis 12,75 GHz auf die Satelliten-Zwischenfrequenz von 950 bis 2150 MHz herunter. Nur diese ZF läuft über das Koaxialkabel. Der Receiver steuert das LNB über dieselbe Leitung: rund 14 V beziehungsweise 18 V für die Polarisation und ein 22-kHz-Signal für die Bandumschaltung.</p>
+        <p lang="en">The LNB sits at the focus of the dish, amplifies with low noise and mixes the Ku band of roughly 10.7 to 12.75 GHz down to the satellite intermediate frequency of 950 to 2150 MHz. Only this IF travels over the coaxial cable. The receiver controls the LNB over the same line: about 14 V or 18 V for polarisation and a 22 kHz tone for band switching.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wann brauchst du eine Durchgangsdose, wann eine Enddose?</span><span lang="en">When do you need a through outlet and when an end outlet?</span></summary>
+      <div class="ans">
+        <p lang="de">Die Durchgangsdose hat Eingang und Ausgang; sie koppelt nur einen Teil des Signals aus und leitet den Rest zur nächsten Dose weiter. Sie steht überall in der Reihe ausser an der letzten Stelle. Dort kommt eine Enddose, die den Strang in sich mit 75 Ω abschliesst — oder eine Durchgangsdose, die mit einem Abschlusswiderstand von 75 Ω bestückt wird.</p>
+        <p lang="en">A through outlet has an input and an output; it taps only part of the signal and passes the rest to the next outlet. It goes everywhere in the series except the last position. There an end outlet is used, terminating the branch internally with 75 Ω — or a through outlet fitted with a 75 Ω terminating resistor.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was geschieht, wenn ein Leitungsende nicht abgeschlossen wird?</span><span lang="en">What happens if a line end is left unterminated?</span></summary>
+      <div class="ans">
+        <p lang="de">Am offenen Ende wird das Signal vollständig reflektiert und läuft in die Anlage zurück. Die zurücklaufende Welle überlagert sich mit dem Nutzsignal und verschlechtert den Empfang — oft an einer ganz anderen Dose als dort, wo der Abschluss fehlt. Deshalb werden alle Stamm- und Steigleitungen mit 75 Ω abgeschlossen, auch wenn dort gerade keine Dose sitzt.</p>
+        <p lang="en">At the open end the signal is fully reflected and travels back into the system. The returning wave superimposes itself on the wanted signal and degrades reception — often at a completely different outlet from the one missing its termination. That is why all trunk and riser lines are terminated with 75 Ω, even where no outlet currently sits.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum ist ein Verstärker keine Lösung für ein schlecht montiertes Kabel?</span><span lang="en">Why is an amplifier no solution for a badly fitted cable?</span></summary>
+      <div class="ans">
+        <p lang="de">Ein Verstärker hebt Nutzsignal und Störung gleichermassen an und fügt eigenes Rauschen hinzu. Ein zu schwaches, aber sauberes Signal kann er retten, ein durch Ingress verschmutztes nicht — dort wird die Störung mitverstärkt. Zu viel Pegel übersteuert zudem den Empfängereingang. Der Verstärker gehört deshalb möglichst weit vorne in die Anlage, direkt nach dem Übergabepunkt.</p>
+        <p lang="en">An amplifier lifts wanted signal and interference alike and adds noise of its own. It can rescue a weak but clean signal, not one polluted by ingress — there the interference is amplified too. Too much level also overdrives the receiver input. The amplifier therefore belongs as far forward in the system as possible, directly after the handover point.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie behandelst du den Schirm an der Dose, und warum ist das so wichtig?</span><span lang="en">How do you treat the screen at the outlet, and why does it matter so much?</span></summary>
+      <div class="ans">
+        <p lang="de">Der Aussenmantel wird etwa 11 mm abisoliert, das Geflecht nach hinten über den Mantel zurückgelegt und das Dielektrikum bis auf rund 1 mm Abstand entfernt. Dann wird das Kabel bündig eingeführt und mit dem Massebügel gehalten, ohne es flachzudrücken. Liegt der Schirm nicht rundum sauber auf, entsteht ein Loch in der Abschirmung: Signal strahlt ab, und Störungen strahlen ein — im Rückweg als Ingress, der auch andere Teilnehmer des Kabelnetzes betrifft.</p>
+        <p lang="en">The sheath is stripped back about 11 mm, the braid is folded back over the sheath and the dielectric removed to about 1 mm. The cable is then inserted flush and held by the earthing clamp without being flattened. If the screen does not seat cleanly all round, a hole appears in the shielding: signal radiates out and interference radiates in — in the return path as ingress, which affects other subscribers on the cable network too.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was ist beim Potentialausgleich und beim Blitzschutz einer Antennenanlage zu beachten?</span><span lang="en">What must be observed for bonding and lightning protection of an antenna installation?</span></summary>
+      <div class="ans">
+        <p lang="de">Alle Kabelschirme, die ins Gebäude führen, und die Übergabestelle des Kabelnetzes werden in den Potentialausgleich einbezogen, damit keine Potentialdifferenz und keine Berührungsspannung entsteht. Eine Aussenantenne wird zusätzlich in den Schutzbereich einer Fangeinrichtung gestellt und der Trennungsabstand eingehalten; ist das nicht möglich, wird der Mast auf kürzestem, geradem Weg geerdet. Massgebend sind EN 60728-11 sowie in der Schweiz SNR 464022 beziehungsweise SN EN 62305 — die Querschnitte gehören in der gültigen Ausgabe nachgeschlagen.</p>
+        <p lang="en">All cable screens entering the building and the cable network handover point are included in the equipotential bonding, so that no potential difference and no touch voltage can arise. An outdoor aerial is additionally placed inside the protected volume of an air termination with the separation distance observed; where that is not possible, the mast is earthed by the shortest, straightest route. EN 60728-11 governs, and in Switzerland SNR 464022 or SN EN 62305 — the cross-sections should be looked up in the valid edition.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <a href="10-tt-installationen.html">
+    <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
+    <b>10 · <span lang="de">T+T-Installationen</span><span lang="en">Telephone Installations</span></b>
+  </a>
+  <a class="next" href="12-ukv-installationen.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>12 · <span lang="de">UKV-Installationen</span><span lang="en">Structured Cabling</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 11 · TV-Installationen</span><span lang="en">Learning Documentation 11 · TV Installations</span></span>
+  <span>Yanik · Etavis · <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></span>
+  <span><span lang="de">Grundlagen: EN 60728 · EN 50117 · SN EN 62305 / SNR 464022 · RIT VSEI · NIN</span><span lang="en">Basis: EN 60728 · EN 50117 · SN EN 62305 / SNR 464022 · RIT VSEI · NIN</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>

@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="de-CH" data-l="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-de="Lerndokumentation 01 — Transformatoren" data-en="Learning Documentation 01 — Transformers">Lerndokumentation 01 — Transformatoren</title>
+<script>(function(){try{var l=localStorage.getItem('lerndoku-lang');if(l==='en'||l==='de'){document.documentElement.setAttribute('data-l',l);document.documentElement.setAttribute('lang',l==='en'?'en':'de-CH');}}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/doku.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="langswitch" role="group" aria-label="Sprache / Language">
+    <button type="button" data-set="de" aria-pressed="true">DE</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="tbtn" href="../index.html"><span lang="de">Übersicht</span><span lang="en">Overview</span></a>
+  <button class="tbtn" type="button" onclick="window.print()"><span lang="de">Drucken</span><span lang="en">Print</span></button>
+</div>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span lang="de">Lerndokumentation</span><span lang="en">Learning Documentation</span>
+    <span>Etavis</span>
+    <span>Elektroinstallateur EFZ</span>
+    <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span>
+    <span lang="de">Thema 01</span><span lang="en">Topic 01</span>
+  </div>
+  <div class="title-row">
+    <div class="chapno">01</div>
+    <h1><span lang="de">Transfor-<br>matoren</span><span lang="en">Trans-<br>formers</span></h1>
+  </div>
+  <p class="subtitle">
+    <span lang="de">Aufbau · Arten · Leistungen · Zeichnung</span>
+    <span lang="en">Design · types · ratings · drawing</span>
+  </p>
+</header>
+
+<div class="formbar">
+  <div><b>Name</b><i>Yanik</i></div>
+  <div><b><span lang="de">Lehrbetrieb</span><span lang="en">Company</span></b><i>Etavis</i></div>
+  <div><b><span lang="de">Beruf</span><span lang="en">Profession</span></b><i><span lang="de">Elektroinstallateur EFZ</span><span lang="en">Electrical Installer</span></i></div>
+  <div><b><span lang="de">Lehrjahr</span><span lang="en">Year</span></b><i><span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></i></div>
+  <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">01 von 12</span><span lang="en">01 of 12</span></i></div>
+</div>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="snum">01</div>
+  <div class="sbody">
+
+    <figure class="spot">
+      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: freundlicher Transformator">
+        <path d="M14 62 h20 M14 96 h20 M186 62 h20 M186 96 h20" fill="none" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <rect x="34" y="38" width="152" height="82" rx="7" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <rect x="48" y="50" width="26" height="58" rx="5" fill="none" stroke="#B8402A" stroke-width="2.4"/>
+        <path d="M48 64 h26 M48 78 h26 M48 92 h26" fill="none" stroke="#B8402A" stroke-width="1.7" stroke-linecap="round"/>
+        <rect x="146" y="50" width="26" height="58" rx="5" fill="none" stroke="#171614" stroke-width="2.4"/>
+        <path d="M146 64 h26 M146 78 h26 M146 92 h26" fill="none" stroke="#171614" stroke-width="1.7" stroke-linecap="round"/>
+        <path d="M92 54 v50 M128 54 v50" fill="none" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="102" cy="72" r="3" fill="#171614"/>
+        <circle cx="118" cy="72" r="3" fill="#171614"/>
+        <path d="M101 86 q 9 8 18 0" fill="none" stroke="#171614" stroke-width="2" stroke-linecap="round"/>
+        <path d="M106 18 l-10 15 h9 l-7 12" fill="none" stroke="#B8402A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </figure>
+
+    <h2><span lang="de">Aufbau und Wirkungsweise</span><span lang="en">Design and principle</span></h2>
+
+    <p class="lead" lang="de">Ein Transformator überträgt elektrische Energie von einem Stromkreis in einen anderen — ohne leitende Verbindung zwischen den beiden, allein über ein magnetisches Wechselfeld. Damit kann er Spannungen herauf- oder heruntersetzen und die beiden Stromkreise <strong>galvanisch trennen</strong>.</p>
+    <p class="lead" lang="en">A transformer transfers electrical energy from one circuit into another — with no conducting link between the two, purely through an alternating magnetic field. This lets it step voltages up or down and <strong>galvanically separate</strong> the two circuits.</p>
+
+    <h3><span lang="de">Die drei Bauteile</span><span lang="en">The three parts</span></h3>
+    <ul lang="de">
+      <li><strong>Eisenkern</strong> — ein Paket aus dünnen, gegeneinander isolierten Blechen. Er führt den magnetischen Fluss von der einen Wicklung zur anderen. Die Schichtung unterbricht die Wirbelströme im Eisen.</li>
+      <li><strong>Primärwicklung</strong> mit der Windungszahl N₁ — sie wird gespeist und erzeugt das magnetische Wechselfeld.</li>
+      <li><strong>Sekundärwicklung</strong> mit der Windungszahl N₂ — in ihr induziert das Wechselfeld die Ausgangsspannung.</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Iron core</strong> — a stack of thin sheets insulated from one another. It guides the magnetic flux from one winding to the other. The lamination interrupts eddy currents in the iron.</li>
+      <li><strong>Primary winding</strong> with the number of turns N₁ — it is supplied and creates the alternating magnetic field.</li>
+      <li><strong>Secondary winding</strong> with the number of turns N₂ — the alternating field induces the output voltage in it.</li>
+    </ul>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aufbau eines Zweiwicklungs-Transformators mit Eisenkern, Primaerwicklung und Sekundaerwicklung">
+        <defs>
+          <pattern id="lamB1" width="11" height="10" patternUnits="userSpaceOnUse">
+            <path d="M0 0 V10" stroke="#B3A995" stroke-width="1"/>
+          </pattern>
+          <style>
+            .ln1{fill:none;stroke:#171614;stroke-width:2.4;stroke-linecap:round}
+            .pr1{fill:none;stroke:#B8402A;stroke-width:2.3}
+            .se1{fill:none;stroke:#1D5872;stroke-width:2.3}
+            .fx1{fill:none;stroke:#9A7B1F;stroke-width:2;stroke-dasharray:8 5}
+            .ld1{fill:none;stroke:#9A958A;stroke-width:1.2}
+            .lb1{font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;fill:#48433B}
+            .lg1{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.06em}
+            .dt1{fill:#171614}
+          </style>
+        </defs>
+
+        <!-- Kern -->
+        <path fill="#EAE5DA" fill-rule="evenodd" d="M250 80 H510 V320 H250 Z M310 140 H450 V260 H310 Z"/>
+        <path fill="url(#lamB1)" fill-rule="evenodd" d="M250 80 H510 V320 H250 Z M310 140 H450 V260 H310 Z"/>
+        <path fill="none" fill-rule="evenodd" stroke="#171614" stroke-width="2.6" d="M250 80 H510 V320 H250 Z M310 140 H450 V260 H310 Z"/>
+
+        <!-- Magnetischer Fluss -->
+        <path class="fx1" d="M280 110 H480 V290 H280 Z"/>
+        <path fill="#9A7B1F" d="M386 105 L397 110 L386 115 z"/>
+        <path fill="#9A7B1F" d="M475 195 L480 206 L485 195 z"/>
+        <path fill="#9A7B1F" d="M394 285 L383 290 L394 295 z"/>
+        <path fill="#9A7B1F" d="M275 205 L280 194 L285 205 z"/>
+        <text class="lb1" x="380" y="204" text-anchor="middle" fill="#9A7B1F">&#934;</text>
+
+        <!-- Primaerwicklung -->
+        <ellipse class="pr1" cx="280" cy="152" rx="31" ry="8"/>
+        <ellipse class="pr1" cx="280" cy="166" rx="31" ry="8"/>
+        <ellipse class="pr1" cx="280" cy="180" rx="31" ry="8"/>
+        <ellipse class="pr1" cx="280" cy="194" rx="31" ry="8"/>
+        <ellipse class="pr1" cx="280" cy="208" rx="31" ry="8"/>
+        <ellipse class="pr1" cx="280" cy="222" rx="31" ry="8"/>
+        <ellipse class="pr1" cx="280" cy="236" rx="31" ry="8"/>
+        <ellipse class="pr1" cx="280" cy="250" rx="31" ry="8"/>
+
+        <!-- Sekundaerwicklung -->
+        <ellipse class="se1" cx="480" cy="168" rx="31" ry="8"/>
+        <ellipse class="se1" cx="480" cy="192" rx="31" ry="8"/>
+        <ellipse class="se1" cx="480" cy="216" rx="31" ry="8"/>
+        <ellipse class="se1" cx="480" cy="240" rx="31" ry="8"/>
+
+        <!-- Netz und Last -->
+        <path class="ln1" d="M249 152 H150 V183"/>
+        <path class="ln1" d="M249 250 H150 V219"/>
+        <circle cx="150" cy="201" r="18" fill="none" stroke="#171614" stroke-width="2.4"/>
+        <path d="M140 201 q 5 -8 10 0 q 5 8 10 0" fill="none" stroke="#171614" stroke-width="2" stroke-linecap="round"/>
+        <text class="lb1" x="118" y="197" text-anchor="end">230 V</text>
+        <text class="lg1" x="118" y="213" text-anchor="end"><tspan lang="de">NETZ</tspan><tspan lang="en">MAINS</tspan></text>
+
+        <path class="ln1" d="M511 168 H650 V190"/>
+        <path class="ln1" d="M511 240 H650 V234"/>
+        <rect x="634" y="190" width="32" height="44" rx="2" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <text class="lg1" x="676" y="216"><tspan lang="de">LAST</tspan><tspan lang="en">LOAD</tspan></text>
+
+        <!-- Spannungspfeile -->
+        <path class="ln1" stroke-width="1.6" d="M196 152 V250"/>
+        <path class="ln1" stroke-width="1.6" d="M192 158 L196 148 L200 158"/>
+        <path class="ln1" stroke-width="1.6" d="M192 244 L196 254 L200 244"/>
+        <text class="lb1" x="204" y="205">U&#8321;</text>
+        <path class="ln1" stroke-width="1.6" d="M556 168 V240"/>
+        <path class="ln1" stroke-width="1.6" d="M552 174 L556 164 L560 174"/>
+        <path class="ln1" stroke-width="1.6" d="M552 234 L556 244 L560 234"/>
+        <text class="lb1" x="564" y="208">U&#8322;</text>
+
+        <!-- Beschriftung -->
+        <path class="ld1" d="M380 52 V78"/>
+        <text class="lg1" x="380" y="44" text-anchor="middle"><tspan lang="de">EISENKERN — GESCHICHTETE BLECHE</tspan><tspan lang="en">IRON CORE — LAMINATED SHEETS</tspan></text>
+        <path class="ld1" d="M246 208 H178"/>
+        <text class="lg1" x="172" y="205" text-anchor="end"><tspan lang="de">PRIMÄRWICKLUNG N&#8321;</tspan><tspan lang="en">PRIMARY WINDING N&#8321;</tspan></text>
+        <path class="ld1" d="M514 204 H584"/>
+        <text class="lg1" x="590" y="201"><tspan lang="de">SEKUNDÄRWICKLUNG N&#8322;</tspan><tspan lang="en">SECONDARY WINDING N&#8322;</tspan></text>
+        <text class="lg1" x="380" y="352" text-anchor="middle" fill="#9A7B1F"><tspan lang="de">MAGNETISCHER FLUSS &#934; IM KERN</tspan><tspan lang="en">MAGNETIC FLUX &#934; IN THE CORE</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
+        <span lang="de"> — Aufbau eines Zweiwicklungs-Transformators. Die beiden Wicklungen berühren sich nirgends; verbunden sind sie nur über den magnetischen Fluss im geschichteten Eisenkern.</span>
+        <span lang="en"> — Construction of a two-winding transformer. The two windings touch nowhere; they are linked only by the magnetic flux in the laminated iron core.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Das Übersetzungsverhältnis</span><span lang="en">The turns ratio</span></h3>
+
+    <p lang="de">Die Spannungen verhalten sich zueinander wie die Windungszahlen. Die Ströme verhalten sich <strong>umgekehrt</strong> dazu — die Seite mit der kleineren Spannung führt den grösseren Strom.</p>
+    <p lang="en">The voltages are in the same ratio as the numbers of turns. The currents are in the <strong>inverse</strong> ratio — the side with the lower voltage carries the higher current.</p>
+
+    <div class="formula">ü = N₁ / N₂ = U₁ / U₂ = I₂ / I₁</div>
+
+    <ul class="legend">
+      <li><span class="n">ü</span><span lang="de">Übersetzungsverhältnis, ohne Einheit</span><span lang="en">turns ratio, dimensionless</span></li>
+      <li><span class="n">N</span><span lang="de">Windungszahl der jeweiligen Wicklung</span><span lang="en">number of turns of the respective winding</span></li>
+      <li><span class="n">U</span><span lang="de">Spannung in Volt</span><span lang="en">voltage in volts</span></li>
+      <li><span class="n">I</span><span lang="de">Strom in Ampere</span><span lang="en">current in amperes</span></li>
+    </ul>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Merksatz</span><span lang="en">Key point</span></b>
+      <p lang="de">Ein Transformator arbeitet <strong>nur mit Wechselspannung</strong>. Induziert wird nur bei einer <em>Änderung</em> des magnetischen Flusses. Legt man Gleichspannung an die Primärwicklung, bleibt der Fluss konstant, sekundär entsteht keine Spannung — und die Primärwicklung wirkt nur noch als kleiner ohmscher Widerstand und brennt durch.</p>
+      <p lang="en">A transformer works <strong>with alternating voltage only</strong>. Voltage is induced only when the magnetic flux <em>changes</em>. Apply DC to the primary and the flux stays constant, no secondary voltage appears — and the primary winding acts merely as a small ohmic resistance and burns out.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="snum">02</div>
+  <div class="sbody">
+    <h2><span lang="de">Verluste, Wirkungsgrad und Bemessungsleistung</span><span lang="en">Losses, efficiency and rated power</span></h2>
+
+    <p lang="de">Kein Transformator gibt gleich viel ab, wie er aufnimmt. Die Differenz wird zu Wärme. Man unterscheidet zwei Verlustarten, die sich sauber trennen lassen — und genau dafür gibt es zwei Standardversuche.</p>
+    <p lang="en">No transformer delivers as much as it draws. The difference becomes heat. Two kinds of loss are distinguished, and they can be separated cleanly — which is exactly what the two standard tests are for.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Kennwert</span><span lang="en">Quantity</span></th>
+            <th><span lang="de">Wie ermittelt</span><span lang="en">How determined</span></th>
+            <th><span lang="de">Bedeutung</span><span lang="en">Meaning</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Eisenverluste</span><span lang="en">Iron losses</span></strong><br><span class="lgs" lang="de">Leerlaufverluste</span><span class="lgs" lang="en">no-load losses</span></td>
+            <td><span lang="de"><strong>Leerlaufversuch</strong>: Sekundärseite offen, Bemessungsspannung primär angelegt</span><span lang="en"><strong>No-load test</strong>: secondary open, rated voltage applied to the primary</span></td>
+            <td><span lang="de">Hysterese- und Wirbelstromverluste im Kern. <strong>Lastunabhängig</strong> — sie fallen an, solange Spannung anliegt, auch wenn nichts angeschlossen ist.</span><span lang="en">Hysteresis and eddy-current losses in the core. <strong>Independent of load</strong> — they occur as long as voltage is applied, even with nothing connected.</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Kupferverluste</span><span lang="en">Copper losses</span></strong><br><span class="lgs" lang="de">Lastverluste</span><span class="lgs" lang="en">load losses</span></td>
+            <td><span lang="de"><strong>Kurzschlussversuch</strong>: Sekundärseite kurzgeschlossen, Primärspannung so weit abgesenkt, bis der Bemessungsstrom fliesst</span><span lang="en"><strong>Short-circuit test</strong>: secondary shorted, primary voltage reduced until rated current flows</span></td>
+            <td><span lang="de">Ohmsche Verluste in den Wicklungen. Sie steigen mit dem <strong>Quadrat des Stromes</strong>.</span><span lang="en">Ohmic losses in the windings. They rise with the <strong>square of the current</strong>.</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Kurzschlussspannung</span><span lang="en">Short-circuit voltage</span></strong><br><span class="lgs">u<sub>k</sub></span></td>
+            <td><span lang="de">aus dem Kurzschlussversuch, in Prozent der Bemessungsspannung</span><span lang="en">from the short-circuit test, as a percentage of the rated voltage</span></td>
+            <td><span lang="de">Mass für den inneren Spannungsfall. Klein = harte Kennlinie und hoher Kurzschlussstrom, gross = weiche Kennlinie und begrenzter Kurzschlussstrom.</span><span lang="en">A measure of the internal voltage drop. Small = stiff characteristic and high short-circuit current, large = soft characteristic and limited short-circuit current.</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Bemessungsleistung</span><span lang="en">Rated power</span></strong><br><span class="lgs">S [VA]</span></td>
+            <td><span lang="de">Typenschild</span><span lang="en">rating plate</span></td>
+            <td><span lang="de"><strong>Scheinleistung</strong>, nicht Wirkleistung — sie begrenzt, was der Transformator thermisch verträgt.</span><span lang="en"><strong>Apparent power</strong>, not active power — it limits what the transformer can stand thermally.</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Leerlaufspannung</span><span lang="en">No-load voltage</span></strong></td>
+            <td><span lang="de">sekundär gemessen ohne Last</span><span lang="en">measured on the secondary with no load</span></td>
+            <td><span lang="de">Bei kleinen Transformatoren spürbar höher als die Bemessungs-Ausgangsspannung. Deshalb setzen die Normen Grenzwerte für die <em>Leerlauf</em>spannung.</span><span lang="en">Noticeably higher than the rated output voltage on small transformers. This is why the standards set limits on the <em>no-load</em> voltage.</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Warum VA und nicht W?</span><span lang="en">Why VA and not W?</span></b>
+      <p lang="de">Die Erwärmung eines Transformators hängt vom <strong>Strom</strong> in den Wicklungen und von der <strong>Spannung</strong> ab — nicht davon, wie phasenverschoben der Verbraucher arbeitet. Eine Drossel mit cos φ nahe null nimmt kaum Wirkleistung auf, belastet die Wicklung aber voll. Deshalb wird die Bemessungsleistung als Scheinleistung <strong>S = U · I</strong> in Voltampere angegeben.</p>
+      <p lang="en">The heating of a transformer depends on the <strong>current</strong> in the windings and on the <strong>voltage</strong> — not on how far out of phase the load runs. A choke with a power factor near zero draws almost no active power yet loads the winding fully. The rated power is therefore given as apparent power <strong>S = U · I</strong> in volt-amperes.</p>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Zahlen vor der Abgabe prüfen</span><span lang="en">Check the figures before handing in</span></b>
+      <p lang="de">Konkrete Werte für u<sub>k</sub>, Wirkungsgrad und Leerlaufverluste hängen stark von Bauart und Baugrösse ab und werden je nach Lehrmittel unterschiedlich angegeben. Vor der Abgabe im <strong>Herstellerkatalog</strong> und in der eigenen <strong>NIN-Ausgabe</strong> beziehungsweise im Fachkundebuch nachschlagen und die dort genannten Werte übernehmen.</p>
+      <p lang="en">Actual figures for u<sub>k</sub>, efficiency and no-load losses depend heavily on the construction and size and are quoted differently from one textbook to the next. Before handing in, look them up in the <strong>manufacturer's catalogue</strong> and in your own <strong>NIN edition</strong> or course book and use the values given there.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="snum">03</div>
+  <div class="sbody">
+    <h2><span lang="de">Bauformen: EI-Kern, Ringkern, elektronischer Konverter</span><span lang="en">Constructions: EI core, toroid, electronic converter</span></h2>
+
+    <p lang="de">Für dieselbe Aufgabe stehen drei sehr unterschiedliche Geräte zur Auswahl. Sie unterscheiden sich in Verlusten, Gewicht, Einschaltverhalten und darin, ob sie eine Mindestlast brauchen.</p>
+    <p lang="en">Three very different devices are available for the same job. They differ in losses, weight, switch-on behaviour and in whether they need a minimum load.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Merkmal</span><span lang="en">Feature</span></th>
+            <th><span lang="de">EI-Kern (konventionell)</span><span lang="en">EI core (conventional)</span></th>
+            <th><span lang="de">Ringkern</span><span lang="en">Toroidal core</span></th>
+            <th><span lang="de">Elektronischer Konverter</span><span lang="en">Electronic converter</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Prinzip</span><span lang="en">Principle</span></strong></td>
+            <td><span lang="de">gestanzte E- und I-Bleche, geschichtet; Wicklungen auf dem Mittelschenkel</span><span lang="en">stamped E and I sheets, stacked; windings on the centre limb</span></td>
+            <td><span lang="de">endlos gewickeltes Bandeisen ohne Luftspalt; Wicklung gleichmässig auf dem Ring verteilt</span><span lang="en">continuously wound strip steel with no air gap; winding spread evenly around the ring</span></td>
+            <td><span lang="de">Gleichrichtung, Zerhacken auf hohe Frequenz, kleiner Übertrager; kein 50-Hz-Eisenkern</span><span lang="en">rectification, chopping to a high frequency, small transformer; no 50 Hz iron core</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Leerlaufverluste</span><span lang="en">No-load losses</span></strong></td>
+            <td><span lang="de">hoch — der Trafo wird auch ohne Last warm</span><span lang="en">high — the transformer gets warm even with no load</span></td>
+            <td><span lang="de">deutlich kleiner als beim EI-Kern gleicher Leistung</span><span lang="en">markedly lower than an EI core of the same rating</span></td>
+            <td><span lang="de">klein, schaltet bei fehlender Last meist ganz ab</span><span lang="en">low; usually shuts down completely when no load is present</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Streufeld und Brummen</span><span lang="en">Stray field and hum</span></strong></td>
+            <td><span lang="de">merkliches Streufeld, hörbares Netzbrummen</span><span lang="en">noticeable stray field, audible mains hum</span></td>
+            <td><span lang="de">sehr kleines Streufeld, nahezu brummfrei</span><span lang="en">very small stray field, practically hum-free</span></td>
+            <td><span lang="de">kein Netzbrummen, dafür hochfrequente Störungen möglich (EMV beachten)</span><span lang="en">no mains hum, but high-frequency interference is possible (mind EMC)</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Einschaltstrom</span><span lang="en">Inrush current</span></strong></td>
+            <td><span lang="de">erhöht, aber beherrschbar</span><span lang="en">elevated, but manageable</span></td>
+            <td><span lang="de"><strong>sehr hohe Stromspitze</strong> durch den lückenlosen Kern; Vorschaltgerät oder träge Absicherung nötig</span><span lang="en"><strong>very high current peak</strong> because of the gapless core; a soft-start unit or slow fuse is needed</span></td>
+            <td><span lang="de">Einschaltstromspitze durch die Ladekondensatoren; bei vielen Geräten an einem Automaten addiert sie sich</span><span lang="en">peak caused by the charging capacitors; with many units on one breaker the peaks add up</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Gewicht und Baugrösse</span><span lang="en">Weight and size</span></strong></td>
+            <td><span lang="de">schwer und voluminös</span><span lang="en">heavy and bulky</span></td>
+            <td><span lang="de">flacher und leichter als der EI-Kern</span><span lang="en">flatter and lighter than the EI core</span></td>
+            <td><span lang="de">am leichtesten, passt in die Deckenöffnung</span><span lang="en">the lightest, fits into the ceiling aperture</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Mindestlast</span><span lang="en">Minimum load</span></strong></td>
+            <td><span lang="de">keine</span><span lang="en">none</span></td>
+            <td><span lang="de">keine</span><span lang="en">none</span></td>
+            <td><span lang="de"><strong>ja</strong> — unterhalb davon startet das Gerät nicht oder flackert</span><span lang="en"><strong>yes</strong> — below it the unit will not start or it flickers</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Häufiger Fehler auf der Baustelle</span><span lang="en">A common mistake on site</span></b>
+      <p lang="de">Werden in einer bestehenden Niedervolt-Anlage die Halogenlampen durch LED ersetzt, sinkt die Last stark. Ein vorhandener <strong>elektronischer Konverter</strong> erkennt die kleine Leistung unter Umständen nicht mehr — die Lampen flackern, glimmen nach oder bleiben dunkel. Dann muss ein <strong>LED-tauglicher Konverter</strong> eingesetzt werden. Ein konventioneller Eisenkern-Trafo hat dieses Problem nicht, dafür kann er mit einem Phasenabschnitt-Dimmer nicht zusammenarbeiten.</p>
+      <p lang="en">When halogen lamps in an existing low-voltage installation are replaced by LEDs, the load drops sharply. An existing <strong>electronic converter</strong> may no longer detect the small power — the lamps flicker, glow after switch-off or stay dark. An <strong>LED-capable converter</strong> must then be fitted. A conventional iron-core transformer does not have this problem, but it cannot work with a trailing-edge dimmer.</p>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Mindestlast nachschlagen</span><span lang="en">Look up the minimum load</span></b>
+      <p lang="de">Die Mindestlast ist <strong>kein Normwert</strong>, sondern eine Geräteeigenschaft. Sie steht auf dem Typenschild und im Datenblatt, zusammen mit dem Leistungsbereich in der Form «von … bis … VA». Vor der Abgabe im <strong>Herstellerkatalog</strong> des tatsächlich verbauten Konverters nachschlagen und nicht aus dem Gedächtnis eintragen.</p>
+      <p lang="en">The minimum load is <strong>not a standard value</strong> but a property of the device. It is printed on the rating plate and in the data sheet, together with the power range in the form "from … to … VA". Before handing in, look it up in the <strong>manufacturer's catalogue</strong> for the converter actually installed rather than writing it from memory.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="snum">04</div>
+  <div class="sbody">
+    <h2><span lang="de">Arten nach Schutzfunktion</span><span lang="en">Types by protective function</span></h2>
+
+    <p lang="de">Die Gerätenormen der Reihe <strong>EN 61558</strong> gelten für Transformatoren mit Primärspannungen bis 1100 V. Teil 1 enthält die allgemeinen Anforderungen, die Teile 2-x die besonderen Anforderungen je Bauart. Welchen Teil ein Gerät erfüllt, steht auf dem Typenschild — und daraus folgt, wofür es eingesetzt werden darf.</p>
+    <p lang="en">The product standards of the <strong>EN 61558</strong> series cover transformers with primary voltages up to 1100 V. Part 1 contains the general requirements, parts 2-x the particular requirements for each construction. Which part a device meets is stated on the rating plate — and that determines what it may be used for.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Art</span><span lang="en">Type</span></th>
+            <th><span lang="de">Norm</span><span lang="en">Standard</span></th>
+            <th><span lang="de">Trennung</span><span lang="en">Separation</span></th>
+            <th><span lang="de">Typische Anwendung</span><span lang="en">Typical application</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Trenntransformator</span><span lang="en">Isolating transformer</span></strong></td>
+            <td class="num">EN 61558-2-4</td>
+            <td><span lang="de">galvanisch getrennt, meist Übersetzung 1:1; Wicklungen in getrennten Wickelkammern</span><span lang="en">galvanically separated, usually 1:1; windings in separate winding chambers</span></td>
+            <td><span lang="de">Schutztrennung an Reparatur- und Prüfplätzen, Labor</span><span lang="en">electrical separation at repair and test benches, laboratory</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Sicherheitstransformator</span><span lang="en">Safety isolating transformer</span></strong></td>
+            <td class="num">EN 61558-2-6</td>
+            <td><span lang="de">verstärkte oder doppelte Isolierung zwischen den Wicklungen; Ausgang im Kleinspannungsbereich</span><span lang="en">reinforced or double insulation between the windings; extra-low-voltage output</span></td>
+            <td><span lang="de">SELV- und PELV-Stromkreise, Niedervolt-Beleuchtung</span><span lang="en">SELV and PELV circuits, low-voltage lighting</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Spartransformator</span><span lang="en">Autotransformer</span></strong></td>
+            <td class="num">EN 61558-2-13</td>
+            <td><span lang="de"><strong>keine</strong> — eine einzige Wicklung mit Anzapfung, Ein- und Ausgang teilen einen Anschluss</span><span lang="en"><strong>none</strong> — a single winding with a tap, input and output share a terminal</span></td>
+            <td><span lang="de">Spannungsanpassung, Anlasstransformator, Stelltransformator</span><span lang="en">voltage matching, starting transformer, variable transformer</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Klingel- und Läutetransformator</span><span lang="en">Bell and chime transformer</span></strong></td>
+            <td class="num">EN 61558-2-8</td>
+            <td><span lang="de">Sicherheitstransformator, zusätzlich <strong>unbedingt kurzschlussfest</strong></span><span lang="en">safety isolating transformer, additionally <strong>inherently short-circuit proof</strong></span></td>
+            <td><span lang="de">Klingel-, Läut- und Türsprechanlagen</span><span lang="en">bell, chime and door-entry systems</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Steuertransformator</span><span lang="en">Control transformer</span></strong></td>
+            <td class="num">EN 61558-2-2</td>
+            <td><span lang="de">galvanisch getrennt; ausgelegt auf den Anzugsstrom von Schützspulen</span><span lang="en">galvanically separated; sized for the inrush of contactor coils</span></td>
+            <td><span lang="de">Steuerstromkreis im Schaltschrank, z. B. 230 V auf 24 V</span><span lang="en">control circuit in the panel, e.g. 230 V to 24 V</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Schaltnetzteil / Konverter</span><span lang="en">Switch-mode supply / converter</span></strong></td>
+            <td class="num">EN 61558-2-16<br>EN 61347-2-2<br>EN 61347-2-13</td>
+            <td><span lang="de">je nach Ausführung getrennt (SELV) oder nicht — Typenschild lesen</span><span lang="en">separated (SELV) or not, depending on the model — read the rating plate</span></td>
+            <td><span lang="de">LED-Treiber, elektronischer Trafo für Niedervolt-Halogen, Geräteversorgung</span><span lang="en">LED driver, electronic transformer for low-voltage halogen, equipment supply</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Grenzwerte der beiden wichtigsten Bauarten</span><span lang="en">Limits of the two most important types</span></h3>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Grösse</span><span lang="en">Quantity</span></th>
+            <th><span lang="de">Sicherheitstransformator<br>EN 61558-2-6</span><span lang="en">Safety isolating transformer<br>EN 61558-2-6</span></th>
+            <th><span lang="de">Trenntransformator<br>EN 61558-2-4</span><span lang="en">Isolating transformer<br>EN 61558-2-4</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span lang="de">Ausgangsspannung</span><span lang="en">Output voltage</span></td>
+            <td class="num"><span lang="de">max. 50 V AC im Leerlauf</span><span lang="en">max. 50 V AC at no load</span></td>
+            <td class="num"><span lang="de">über 50 V bis 1 kV</span><span lang="en">above 50 V up to 1 kV</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Bemessungsleistung einphasig</span><span lang="en">Rated power, single-phase</span></td>
+            <td class="num"><span lang="de">max. 10 kVA</span><span lang="en">max. 10 kVA</span></td>
+            <td class="num"><span lang="de">max. 25 kVA</span><span lang="en">max. 25 kVA</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Bemessungsleistung mehrphasig</span><span lang="en">Rated power, multi-phase</span></td>
+            <td class="num"><span lang="de">max. 16 kVA</span><span lang="en">max. 16 kVA</span></td>
+            <td class="num"><span lang="de">max. 40 kVA</span><span lang="en">max. 40 kVA</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Eingangsspannung</span><span lang="en">Input voltage</span></td>
+            <td class="num"><span lang="de">max. 1,1 kV</span><span lang="en">max. 1.1 kV</span></td>
+            <td class="num"><span lang="de">max. 1,1 kV (Reihe EN 61558)</span><span lang="en">max. 1.1 kV (EN 61558 series)</span></td>
+          </tr>
+          <tr>
+            <td><span lang="de">Isolierung zwischen den Wicklungen</span><span lang="en">Insulation between the windings</span></td>
+            <td><span lang="de">verstärkt oder doppelt, mit Isolierstoff-Zwischenwand</span><span lang="en">reinforced or double, with an insulating barrier</span></td>
+            <td><span lang="de">verstärkt oder doppelt, Wicklungen in getrennten Kammern</span><span lang="en">reinforced or double, windings in separate chambers</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span lang="de">Kurzschlussfest, bedingt kurzschlussfest, fehlersicher</span><span lang="en">Short-circuit proof, conditionally proof, fail-safe</span></h3>
+    <ul lang="de">
+      <li><strong>Unbedingt kurzschlussfest</strong> — der Transformator hält einen dauernden sekundären Kurzschluss aus, ohne dass eine zusätzliche Schutzeinrichtung nötig ist. Erreicht wird das über Kernquerschnitt und Wicklungswiderstand oder über einen selbstrückstellenden Temperaturschalter.</li>
+      <li><strong>Bedingt kurzschlussfest</strong> — der Schutz kommt von einer eingebauten oder vorgeschriebenen Sicherung beziehungsweise einem Überstromauslöser. Ohne diese Einrichtung ist das Gerät nicht geschützt.</li>
+      <li><strong>Nicht kurzschlussfest</strong> — ein sekundärer Kurzschluss zerstört den Transformator. Der Überstromschutz muss aus der Anlage kommen.</li>
+    </ul>
+    <ul lang="en">
+      <li><strong>Inherently short-circuit proof</strong> — the transformer withstands a permanent secondary short circuit with no additional protective device. This is achieved through core cross-section and winding resistance or through a self-resetting thermal switch.</li>
+      <li><strong>Conditionally short-circuit proof</strong> — protection comes from a built-in or prescribed fuse or overcurrent release. Without that device the unit is unprotected.</li>
+      <li><strong>Not short-circuit proof</strong> — a secondary short circuit destroys the transformer. Overcurrent protection has to come from the installation.</li>
+    </ul>
+
+    <div class="callout">
+      <b class="tag"><span lang="de">Der Spartransformator trennt nicht</span><span lang="en">The autotransformer does not separate</span></b>
+      <p lang="de">Ein Spartransformator hat <strong>nur eine Wicklung</strong>. Eingang und Ausgang teilen sich einen Anschluss, es besteht also eine durchgehende leitende Verbindung vom Netz zum Verbraucher. Er darf deshalb <strong>weder für die Schutztrennung noch zur Erzeugung von SELV</strong> eingesetzt werden. Wer ihn dafür verwendet, hat die Schutzmassnahme aufgehoben, ohne dass man es der Anlage ansieht.</p>
+      <p lang="en">An autotransformer has <strong>only one winding</strong>. Input and output share a terminal, so there is a continuous conducting path from the mains to the load. It may therefore <strong>be used neither for electrical separation nor to produce SELV</strong>. Anyone who uses it for that has cancelled the protective measure without it being visible on the installation.</p>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">Regeln bei der Schutztrennung</span><span lang="en">Rules for electrical separation</span></b>
+      <p lang="de">Die Schutzwirkung eines Trenntransformators bleibt nur erhalten, wenn der Sekundärkreis <strong>nicht geerdet</strong> und <strong>nicht mit dem Schutzleiter verbunden</strong> wird. In Reparaturwerkstätten wird üblicherweise nur <strong>ein einziger Verbraucher</strong> pro Trenntransformator betrieben. Für den Sekundärkreis nennt IEC 60364-4-41 zudem Grenzwerte: Spannung höchstens 500 V, Leitungslänge höchstens 500 m und das Produkt aus Spannung und Länge höchstens 100 000 V·m.</p>
+      <p lang="en">The protective effect of an isolating transformer is kept only if the secondary circuit is <strong>not earthed</strong> and <strong>not connected to the protective conductor</strong>. In repair workshops normally only <strong>one single load</strong> is operated per isolating transformer. For the secondary circuit IEC 60364-4-41 also gives limits: voltage no more than 500 V, cable length no more than 500 m, and the product of voltage and length no more than 100 000 V·m.</p>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Normbezug prüfen</span><span lang="en">Check the standard reference</span></b>
+      <p lang="de">Die Schweizer Installationsregeln stehen in der <strong>NIN (SN 411000)</strong>; die Ausgabe <strong>NIN 2025</strong> ist seit dem 1. Januar 2025 in Kraft und hat die NIN 2020 abgelöst. Die Anforderungen an Kleinspannung und Schutztrennung stehen im Kapitel «Schutz gegen elektrischen Schlag». Die genauen <strong>Artikelnummern und Grenzwerte in der Tabelle vor der Abgabe in der eigenen NIN-Ausgabe nachschlagen</strong> — sie ändern zwischen den Ausgaben.</p>
+      <p lang="en">The Swiss installation rules are in the <strong>NIN (SN 411000)</strong>; the <strong>NIN 2025</strong> edition has been in force since 1 January 2025 and replaced NIN 2020. The requirements for extra-low voltage and electrical separation are in the chapter on protection against electric shock. <strong>Look up the exact clause numbers and the limits in the table in your own NIN edition before handing in</strong> — they change between editions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="snum">05</div>
+  <div class="sbody">
+    <h2><span lang="de">Schaltzeichen</span><span lang="en">Circuit symbols</span></h2>
+
+    <p lang="de">Im Schema wird eine Wicklung als Reihe von Halbkreisen gezeichnet, der Eisenkern als gerader Strich daneben. Aus der Zahl der Striche zwischen den beiden Wicklungen liest man ab, ob es sich um einen gewöhnlichen Transformator oder um einen mit verstärkter Isolierung handelt.</p>
+    <p lang="en">In a diagram a winding is drawn as a row of semicircles and the iron core as a straight line beside it. The number of lines between the two windings tells you whether it is an ordinary transformer or one with reinforced insulation.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schaltzeichen: Transformator, Trenn- und Sicherheitstransformator, Spartransformator, elektronischer Konverter">
+        <defs>
+          <style>
+            .ln2{fill:none;stroke:#171614;stroke-width:2.4;stroke-linecap:round}
+            .wd2{fill:none;stroke:#171614;stroke-width:2.4}
+            .pr2{fill:none;stroke:#B8402A;stroke-width:2.4}
+            .se2{fill:none;stroke:#1D5872;stroke-width:2.4}
+            .ttl2{font-family:'Archivo',sans-serif;font-size:14.5px;font-weight:700;fill:#171614}
+            .lb2{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;fill:#48433B}
+            .lg2{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.06em}
+            .dt2{fill:#171614}
+          </style>
+        </defs>
+
+        <!-- A: Transformator allgemein -->
+        <text class="ttl2" x="60" y="40"><tspan lang="de">Transformator, zwei Wicklungen</tspan><tspan lang="en">Transformer, two windings</tspan></text>
+        <text class="lg2" x="60" y="60"><tspan lang="de">EIN KERNSTRICH</tspan><tspan lang="en">ONE CORE LINE</tspan></text>
+        <path class="pr2" d="M182 95 a7 7 0 0 0 0 14 a7 7 0 0 0 0 14 a7 7 0 0 0 0 14 a7 7 0 0 0 0 14"/>
+        <path class="ln2" d="M200 86 V160"/>
+        <path class="se2" d="M218 95 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14"/>
+        <path class="ln2" d="M182 95 V80 H140"/>
+        <path class="ln2" d="M182 151 V166 H140"/>
+        <path class="ln2" d="M218 95 V80 H260"/>
+        <path class="ln2" d="M218 151 V166 H260"/>
+        <circle class="dt2" cx="140" cy="80" r="3.6"/>
+        <circle class="dt2" cx="140" cy="166" r="3.6"/>
+        <circle class="dt2" cx="260" cy="80" r="3.6"/>
+        <circle class="dt2" cx="260" cy="166" r="3.6"/>
+        <text class="lb2" x="200" y="196" text-anchor="middle">N&#8321; : N&#8322; = U&#8321; : U&#8322;</text>
+
+        <!-- B: Trenn- und Sicherheitstransformator -->
+        <text class="ttl2" x="420" y="40"><tspan lang="de">Trenn- und Sicherheitstransformator</tspan><tspan lang="en">Isolating and safety transformer</tspan></text>
+        <text class="lg2" x="420" y="60"><tspan lang="de">ZWEI STRICHE = VERSTÄRKTE ISOLIERUNG</tspan><tspan lang="en">TWO LINES = REINFORCED INSULATION</tspan></text>
+        <path class="pr2" d="M536 95 a7 7 0 0 0 0 14 a7 7 0 0 0 0 14 a7 7 0 0 0 0 14 a7 7 0 0 0 0 14"/>
+        <path class="ln2" d="M552 86 V160"/>
+        <path class="ln2" d="M568 86 V160"/>
+        <path class="se2" d="M584 95 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14"/>
+        <path class="ln2" d="M536 95 V80 H494"/>
+        <path class="ln2" d="M536 151 V166 H494"/>
+        <path class="ln2" d="M584 95 V80 H626"/>
+        <path class="ln2" d="M584 151 V166 H626"/>
+        <circle class="dt2" cx="494" cy="80" r="3.6"/>
+        <circle class="dt2" cx="494" cy="166" r="3.6"/>
+        <circle class="dt2" cx="626" cy="80" r="3.6"/>
+        <circle class="dt2" cx="626" cy="166" r="3.6"/>
+        <text class="lg2" x="560" y="196" text-anchor="middle"><tspan lang="de">GALVANISCH GETRENNT</tspan><tspan lang="en">GALVANICALLY SEPARATED</tspan></text>
+
+        <!-- C: Spartransformator -->
+        <text class="ttl2" x="60" y="242"><tspan lang="de">Spartransformator</tspan><tspan lang="en">Autotransformer</tspan></text>
+        <text class="lg2" x="60" y="262"><tspan lang="de">EINE WICKLUNG MIT ANZAPFUNG</tspan><tspan lang="en">ONE WINDING WITH A TAP</tspan></text>
+        <path class="ln2" d="M192 281 V355"/>
+        <path class="pr2" d="M210 290 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14"/>
+        <path class="ln2" d="M210 290 V275 H150"/>
+        <path class="ln2" d="M210 346 V361 H150"/>
+        <path class="ln2" d="M210 361 H286"/>
+        <path class="ln2" d="M210 318 H286"/>
+        <circle class="dt2" cx="150" cy="275" r="3.6"/>
+        <circle class="dt2" cx="150" cy="361" r="3.6"/>
+        <circle class="dt2" cx="286" cy="318" r="3.6"/>
+        <circle class="dt2" cx="286" cy="361" r="3.6"/>
+        <circle class="dt2" cx="210" cy="318" r="3.6"/>
+        <circle class="dt2" cx="210" cy="361" r="3.6"/>
+        <text class="lg2" x="144" y="322" text-anchor="end"><tspan lang="de">EINGANG</tspan><tspan lang="en">INPUT</tspan></text>
+        <text class="lg2" x="294" y="343"><tspan lang="de">AUSGANG</tspan><tspan lang="en">OUTPUT</tspan></text>
+        <text class="lg2" x="200" y="388" text-anchor="middle" fill="#B8402A"><tspan lang="de">KEINE GALVANISCHE TRENNUNG</tspan><tspan lang="en">NO GALVANIC SEPARATION</tspan></text>
+
+        <!-- D: Elektronischer Konverter -->
+        <text class="ttl2" x="420" y="242"><tspan lang="de">Elektronischer Konverter</tspan><tspan lang="en">Electronic converter</tspan></text>
+        <text class="lg2" x="420" y="262"><tspan lang="de">KEIN 50-HZ-EISENKERN</tspan><tspan lang="en">NO 50 HZ IRON CORE</tspan></text>
+        <rect x="500" y="290" width="120" height="60" rx="3" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <path class="ln2" d="M440 306 H500"/>
+        <path class="ln2" d="M440 334 H500"/>
+        <path class="ln2" d="M620 306 H690"/>
+        <path class="ln2" d="M620 334 H690"/>
+        <circle class="dt2" cx="440" cy="306" r="3.6"/>
+        <circle class="dt2" cx="440" cy="334" r="3.6"/>
+        <circle class="dt2" cx="690" cy="306" r="3.6"/>
+        <circle class="dt2" cx="690" cy="334" r="3.6"/>
+        <text class="lb2" x="560" y="315" text-anchor="middle">230 V ~</text>
+        <text class="lb2" x="560" y="337" text-anchor="middle">12 V ~</text>
+        <text class="lg2" x="560" y="388" text-anchor="middle"><tspan lang="de">MINDESTLAST BEACHTEN</tspan><tspan lang="en">MIND THE MINIMUM LOAD</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 2</span><span lang="en">Fig. 2</span></b>
+        <span lang="de"> — Die vier Schaltzeichen. Rot gezeichnet ist jeweils die Primär-, blau die Sekundärwicklung. Beim Spartransformator gibt es nur eine Wicklung, und der untere Anschluss gehört zu Eingang und Ausgang zugleich.</span>
+        <span lang="en"> — The four symbols. The primary winding is drawn in red, the secondary in blue. The autotransformer has only one winding, and the lower terminal belongs to input and output at the same time.</span>
+      </figcaption>
+    </figure>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Symbolvarianten prüfen</span><span lang="en">Check the symbol variants</span></b>
+      <p lang="de">Die Schaltzeichen sind in <strong>EN 60617</strong> festgelegt, die Bildzeichen auf dem Typenschild dagegen in <strong>IEC 60417</strong>. Beide kennen mehrere Varianten, und die Lehrmittel zeichnen sie leicht unterschiedlich. Welche Darstellung in der Prüfung verlangt wird, <strong>vor der Abgabe in der eigenen NIN-Ausgabe beziehungsweise in der Symboltabelle des Lehrmittels nachschlagen</strong>.</p>
+      <p lang="en">The circuit symbols are defined in <strong>EN 60617</strong>, whereas the graphical symbols on the rating plate are in <strong>IEC 60417</strong>. Both contain several variants and the course books draw them slightly differently. <strong>Look up which representation is required in the examination in your own NIN edition or in the symbol table of your course book before handing in.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="snum">06</div>
+  <div class="sbody">
+    <h2><span lang="de">Anwendung: Klingelanlage und Niedervolt-Halogen</span><span lang="en">Application: bell system and low-voltage halogen</span></h2>
+
+    <p lang="de">Beide Anwendungen arbeiten mit Kleinspannung, und in beiden ist der Transformator das Bauteil, das die Schutzmassnahme überhaupt erst herstellt. Fällt die Trennung weg, liegt Netzspannung auf einer Leitung, die niemand als gefährlich einschätzt.</p>
+    <p lang="en">Both applications work with extra-low voltage, and in both the transformer is the part that creates the protective measure in the first place. If the separation is lost, mains voltage sits on a cable that nobody regards as dangerous.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Prinzipschema einer Klingelanlage mit Klingeltransformator, Taster und Gong">
+        <defs>
+          <style>
+            .ln3{fill:none;stroke:#171614;stroke-width:2.4;stroke-linecap:round}
+            .pr3{fill:none;stroke:#B8402A;stroke-width:2.4}
+            .se3{fill:none;stroke:#1D5872;stroke-width:2.4}
+            .zn3{fill:none;stroke:#9A958A;stroke-width:1.4;stroke-dasharray:6 5}
+            .lb3{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;fill:#48433B}
+            .lg3{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.06em}
+            .dt3{fill:#171614}
+          </style>
+        </defs>
+
+        <rect class="zn3" x="28" y="26" width="272" height="150" rx="4"/>
+        <rect class="zn3" x="328" y="26" width="400" height="150" rx="4"/>
+        <text class="lg3" x="164" y="196" text-anchor="middle"><tspan lang="de">230-V-SEITE</tspan><tspan lang="en">230 V SIDE</tspan></text>
+        <text class="lg3" x="528" y="196" text-anchor="middle"><tspan lang="de">KLEINSPANNUNGSSEITE — SELV</tspan><tspan lang="en">EXTRA-LOW-VOLTAGE SIDE — SELV</tspan></text>
+
+        <!-- Transformator -->
+        <path class="pr3" d="M286 68 a7 7 0 0 0 0 14 a7 7 0 0 0 0 14 a7 7 0 0 0 0 14 a7 7 0 0 0 0 14"/>
+        <path class="ln3" d="M302 58 V134"/>
+        <path class="ln3" d="M318 58 V134"/>
+        <path class="se3" d="M334 68 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14"/>
+
+        <!-- Primaerseite -->
+        <path class="ln3" d="M286 68 V56 H168"/>
+        <path class="ln3" d="M132 56 H52"/>
+        <path class="ln3" d="M286 124 V136 H52"/>
+        <rect x="132" y="44" width="36" height="24" rx="2" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <text class="lg3" x="150" y="60" text-anchor="middle"><tspan lang="de">LS</tspan><tspan lang="en">MCB</tspan></text>
+        <circle class="dt3" cx="52" cy="56" r="3.6"/>
+        <circle class="dt3" cx="52" cy="136" r="3.6"/>
+        <text class="lb3" x="44" y="60" text-anchor="end">L</text>
+        <text class="lb3" x="44" y="140" text-anchor="end">N</text>
+
+        <!-- Sekundaerseite -->
+        <path class="ln3" d="M334 68 V56 H450"/>
+        <path class="ln3" d="M494 56 H645 V86"/>
+        <path class="ln3" d="M334 124 V136 H645 V126"/>
+        <path class="ln3" d="M334 96 H392"/>
+        <circle class="dt3" cx="334" cy="96" r="3.6"/>
+        <circle class="dt3" cx="392" cy="96" r="3.6"/>
+        <text class="lb3" x="348" y="44">12 V</text>
+        <text class="lb3" x="398" y="100">8 V</text>
+        <text class="lb3" x="348" y="154">0</text>
+
+        <!-- Taster -->
+        <path class="ln3" d="M450 56 V48"/>
+        <path class="ln3" d="M494 56 V48"/>
+        <path class="ln3" d="M442 42 H502"/>
+        <path class="ln3" d="M472 42 V30"/>
+        <path class="ln3" d="M461 30 H483"/>
+        <text class="lg3" x="472" y="20" text-anchor="middle"><tspan lang="de">TASTER</tspan><tspan lang="en">PUSH BUTTON</tspan></text>
+
+        <!-- Gong -->
+        <rect x="600" y="86" width="90" height="40" rx="3" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
+        <text class="lg3" x="645" y="111" text-anchor="middle"><tspan lang="de">GONG</tspan><tspan lang="en">CHIME</tspan></text>
+
+        <!-- Beschriftung Trafo -->
+        <path d="M310 140 V232" fill="none" stroke="#B3A995" stroke-width="1.2" stroke-dasharray="4 4"/>
+        <text class="lg3" x="310" y="248" text-anchor="middle"><tspan lang="de">KLINGELTRANSFORMATOR NACH EN 61558-2-8</tspan><tspan lang="en">BELL TRANSFORMER TO EN 61558-2-8</tspan></text>
+      </svg>
+      <figcaption>
+        <b><span lang="de">Bild 3</span><span lang="en">Fig. 3</span></b>
+        <span lang="de"> — Prinzipschema einer Klingelanlage. Links der abgesicherte 230-V-Kreis, rechts der Kleinspannungskreis mit Taster und Gong. Die Sekundärwicklung hat mehrere Abgriffe; angeschlossen wird nur der, den das Läutewerk verlangt.</span>
+        <span lang="en"> — Schematic of a bell system. On the left the protected 230 V circuit, on the right the extra-low-voltage circuit with push button and chime. The secondary winding has several taps; only the one the chime requires is connected.</span>
+      </figcaption>
+    </figure>
+
+    <h3><span lang="de">Klingelanlage</span><span lang="en">Bell system</span></h3>
+    <ul lang="de">
+      <li>Der Klingeltransformator ist ein <strong>Sicherheitstransformator</strong> nach EN 61558-2-8 mit doppelter oder verstärkter Isolierung und muss <strong>unbedingt kurzschlussfest</strong> sein.</li>
+      <li>Die Bemessungsleistung beträgt nach dieser Norm <strong>höchstens 100 VA</strong>. Die Leerlauf-Ausgangsspannung darf 33 V AC beziehungsweise 46 V DC nicht überschreiten, die Bemessungs-Ausgangsspannung höchstens 24 V AC beziehungsweise 33 V geglättete Gleichspannung betragen.</li>
+      <li>Typische Geräte für die Hutschiene im Verteiler liefern <strong>8 V und 12 V</strong> bei 4, 8 oder 16 VA. Welcher Abgriff verwendet wird, gibt das Läutewerk vor.</li>
+      <li>Die Kleinspannungsleitung wird <strong>getrennt von den 230-V-Adern</strong> geführt und darf nicht mit ihnen im gleichen Rohr liegen, wenn die Isolation nicht für die höhere Spannung ausgelegt ist.</li>
+      <li>Der Primärkreis wird im Verteiler abgesichert; der Sekundärkreis braucht dank Kurzschlussfestigkeit keine eigene Sicherung.</li>
+    </ul>
+    <ul lang="en">
+      <li>The bell transformer is a <strong>safety isolating transformer</strong> to EN 61558-2-8 with double or reinforced insulation and must be <strong>inherently short-circuit proof</strong>.</li>
+      <li>Under that standard the rated power is <strong>100 VA at most</strong>. The no-load output voltage must not exceed 33 V AC or 46 V DC, and the rated output voltage must be no more than 24 V AC or 33 V smoothed DC.</li>
+      <li>Typical DIN-rail devices for the distribution board supply <strong>8 V and 12 V</strong> at 4, 8 or 16 VA. Which tap is used is dictated by the chime.</li>
+      <li>The extra-low-voltage cable is run <strong>separately from the 230 V cores</strong> and must not share a conduit with them unless its insulation is rated for the higher voltage.</li>
+      <li>The primary circuit is protected in the distribution board; thanks to its short-circuit strength the secondary circuit needs no fuse of its own.</li>
+    </ul>
+
+    <h3><span lang="de">Niedervolt-Halogen</span><span lang="en">Low-voltage halogen</span></h3>
+    <ul lang="de">
+      <li>Niedervolt-Halogenlampen mit Sockel <strong>GU5.3</strong> arbeiten mit 12 V und brauchen deshalb einen Transformator; Hochvolt-Spots mit Sockel GU10 arbeiten direkt an 230 V.</li>
+      <li>Der Transformator muss ein <strong>Sicherheitstransformator</strong> sein, damit der Lampenstromkreis ein SELV-Kreis ist.</li>
+      <li>Die Sekundärleitungen führen bei 12 V <strong>hohe Ströme</strong>. Sie müssen kurz gehalten und ausreichend dimensioniert werden, sonst wird die Lampe durch den Spannungsfall merklich dunkler.</li>
+      <li>Konventioneller Trafo und elektronischer Konverter verlangen <strong>unterschiedliche Dimmer</strong>: Phasenanschnitt für den konventionellen, Phasenabschnitt für den elektronischen. Der falsche Dimmer führt zu Brummen, Flackern und vorzeitigem Ausfall.</li>
+      <li>Der elektronische Konverter hat eine <strong>Mindestlast</strong>; wird sie unterschritten, startet er nicht sauber.</li>
+    </ul>
+    <ul lang="en">
+      <li>Low-voltage halogen lamps with a <strong>GU5.3</strong> base run on 12 V and therefore need a transformer; mains-voltage spots with a GU10 base run directly on 230 V.</li>
+      <li>The transformer must be a <strong>safety isolating transformer</strong> so that the lamp circuit is a SELV circuit.</li>
+      <li>At 12 V the secondary cables carry <strong>high currents</strong>. They must be kept short and adequately sized, otherwise the voltage drop makes the lamp noticeably dimmer.</li>
+      <li>A conventional transformer and an electronic converter need <strong>different dimmers</strong>: leading-edge for the conventional one, trailing-edge for the electronic one. The wrong dimmer causes hum, flicker and early failure.</li>
+      <li>The electronic converter has a <strong>minimum load</strong>; below it, it does not start cleanly.</li>
+    </ul>
+
+    <h3><span lang="de">Schutzklassen und Schutzart</span><span lang="en">Protection classes and IP rating</span></h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th><span lang="de">Kennzeichnung</span><span lang="en">Marking</span></th>
+            <th><span lang="de">Bedeutung</span><span lang="en">Meaning</span></th>
+            <th><span lang="de">Beim Transformator</span><span lang="en">On the transformer</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span lang="de">Schutzklasse I</span><span lang="en">Class I</span></strong></td>
+            <td><span lang="de">Basisisolierung, leitfähiges Gehäuse am Schutzleiter</span><span lang="en">basic insulation, conductive enclosure on the protective conductor</span></td>
+            <td><span lang="de">grössere Steuer- und Trenntransformatoren im Schaltschrank</span><span lang="en">larger control and isolating transformers in the panel</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Schutzklasse II</span><span lang="en">Class II</span></strong></td>
+            <td><span lang="de">verstärkte oder doppelte Isolierung, kein Schutzleiteranschluss; Zeichen: Quadrat im Quadrat</span><span lang="en">reinforced or double insulation, no protective conductor; symbol: square within a square</span></td>
+            <td><span lang="de">Sicherheits- und Klingeltransformatoren</span><span lang="en">safety and bell transformers</span></td>
+          </tr>
+          <tr>
+            <td><strong><span lang="de">Schutzklasse III</span><span lang="en">Class III</span></strong></td>
+            <td><span lang="de">Betriebsmittel, das ausschliesslich für SELV oder PELV gebaut ist</span><span lang="en">equipment built exclusively for SELV or PELV</span></td>
+            <td><span lang="de">die angeschlossene Leuchte oder das Läutewerk, nicht der Trafo selbst</span><span lang="en">the connected luminaire or chime, not the transformer itself</span></td>
+          </tr>
+          <tr>
+            <td><strong>IP</strong></td>
+            <td><span lang="de">Schutz gegen Fremdkörper und Wasser nach IEC 60529</span><span lang="en">protection against solid objects and water to IEC 60529</span></td>
+            <td><span lang="de">Einbaugeräte im Verteiler brauchen weniger als ein Gerät im Feucht- oder Aussenbereich; der geforderte Wert steht in der NIN und auf dem Typenschild</span><span lang="en">devices inside a distribution board need less than one in a damp or outdoor location; the required value is in the NIN and on the rating plate</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <b class="tag"><span lang="de">SELV und PELV</span><span lang="en">SELV and PELV</span></b>
+      <p lang="de">Beide sind Kleinspannungs-Schutzmassnahmen mit denselben Grenzwerten: höchstens <strong>50 V Wechselspannung</strong> beziehungsweise <strong>120 V Gleichspannung</strong>. Der Unterschied liegt in der Erdung — <strong>SELV</strong> ist ungeerdet, <strong>PELV</strong> ist geerdet beziehungsweise mit dem Schutzleiter verbunden. Beide setzen einen Sicherheitstransformator oder eine gleichwertige Quelle voraus.</p>
+      <p lang="en">Both are extra-low-voltage protective measures with the same limits: no more than <strong>50 V AC</strong> or <strong>120 V DC</strong>. The difference is the earthing — <strong>SELV</strong> is unearthed, <strong>PELV</strong> is earthed or connected to the protective conductor. Both require a safety isolating transformer or an equivalent source.</p>
+    </div>
+
+    <div class="callout gold">
+      <b class="tag"><span lang="de">Produktangaben nicht erfinden</span><span lang="en">Do not invent product data</span></b>
+      <p lang="de">Sekundärspannungen, VA-Werte, Mindestlasten und geforderte IP-Grade sind <strong>Geräte- und Projektangaben</strong>, keine allgemeingültigen Zahlen. Für die Abgabe die Werte des tatsächlich verbauten Geräts aus dem <strong>Herstellerkatalog</strong> übernehmen und den geforderten IP-Grad in der eigenen <strong>NIN-Ausgabe</strong> nachschlagen. Artikelnummern nie aus dem Gedächtnis notieren.</p>
+      <p lang="en">Secondary voltages, VA figures, minimum loads and required IP ratings are <strong>device and project data</strong>, not universally valid numbers. For the submission, take the values of the device actually installed from the <strong>manufacturer's catalogue</strong> and look up the required IP rating in your own <strong>NIN edition</strong>. Never write down article numbers from memory.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7 ================= -->
+<section id="s7">
+  <div class="snum">07</div>
+  <div class="sbody">
+    <h2><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></h2>
+
+    <details>
+      <summary><span lang="de">Warum funktioniert ein Transformator nur mit Wechselspannung?</span><span lang="en">Why does a transformer work only with alternating voltage?</span></summary>
+      <div class="ans">
+        <p lang="de">Eine Spannung wird nur induziert, wenn sich der magnetische Fluss ändert. Bei Gleichspannung bleibt der Fluss nach dem Einschaltvorgang konstant, sekundär entsteht keine Spannung. Die Primärwicklung wirkt dann nur noch als kleiner ohmscher Widerstand und überhitzt.</p>
+        <p lang="en">A voltage is induced only when the magnetic flux changes. With DC the flux stays constant after the initial switch-on, so no secondary voltage appears. The primary winding then acts merely as a small ohmic resistance and overheats.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Wie lautet das Übersetzungsverhältnis, und was folgt daraus für die Ströme?</span><span lang="en">What is the turns ratio, and what does it mean for the currents?</span></summary>
+      <div class="ans">
+        <p lang="de">ü = N₁ / N₂ = U₁ / U₂ = I₂ / I₁. Die Spannungen verhalten sich wie die Windungszahlen, die Ströme umgekehrt dazu. Wer die Spannung herunterteilt, erhält auf der Sekundärseite den entsprechend grösseren Strom — deshalb sind Niedervolt-Leitungen dicker als erwartet.</p>
+        <p lang="en">ü = N₁ / N₂ = U₁ / U₂ = I₂ / I₁. The voltages follow the numbers of turns, the currents follow the inverse. Stepping the voltage down gives a correspondingly larger current on the secondary side — which is why low-voltage cables are thicker than expected.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was sind Eisen- und Kupferverluste, und in welchem Versuch misst man sie?</span><span lang="en">What are iron and copper losses, and in which test are they measured?</span></summary>
+      <div class="ans">
+        <p lang="de">Eisenverluste sind Hysterese- und Wirbelstromverluste im Kern. Sie sind lastunabhängig und werden im Leerlaufversuch gemessen, also mit offener Sekundärseite. Kupferverluste sind die ohmschen Verluste in den Wicklungen; sie steigen mit dem Quadrat des Stromes und werden im Kurzschlussversuch gemessen, also mit kurzgeschlossener Sekundärseite und abgesenkter Primärspannung.</p>
+        <p lang="en">Iron losses are hysteresis and eddy-current losses in the core. They are independent of load and are measured in the no-load test, that is with the secondary open. Copper losses are the ohmic losses in the windings; they rise with the square of the current and are measured in the short-circuit test, that is with the secondary shorted and the primary voltage reduced.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum wird die Bemessungsleistung in VA angegeben und nicht in Watt?</span><span lang="en">Why is the rated power given in VA and not in watts?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil die Belastung des Transformators von Strom und Spannung abhängt, nicht vom Leistungsfaktor des Verbrauchers. Eine stark induktive Last nimmt wenig Wirkleistung auf, belastet die Wicklung aber voll. Die Scheinleistung S = U · I in Voltampere beschreibt deshalb die thermische Grenze richtig.</p>
+        <p lang="en">Because the loading of the transformer depends on current and voltage, not on the load's power factor. A strongly inductive load draws little active power yet loads the winding fully. The apparent power S = U · I in volt-amperes therefore describes the thermal limit correctly.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Worin unterscheiden sich Trenntransformator und Sicherheitstransformator?</span><span lang="en">How do an isolating transformer and a safety isolating transformer differ?</span></summary>
+      <div class="ans">
+        <p lang="de">Beide trennen galvanisch. Der Trenntransformator nach EN 61558-2-4 liefert eine Ausgangsspannung über 50 V bis 1 kV, üblicherweise im Verhältnis 1:1, und dient der Schutztrennung. Der Sicherheitstransformator nach EN 61558-2-6 liefert höchstens 50 V Wechselspannung im Leerlauf und erzeugt damit SELV- oder PELV-Kleinspannung. Auch die zulässigen Leistungen unterscheiden sich: 25 beziehungsweise 40 kVA gegenüber 10 beziehungsweise 16 kVA.</p>
+        <p lang="en">Both provide galvanic separation. The isolating transformer to EN 61558-2-4 delivers an output above 50 V up to 1 kV, usually at a 1:1 ratio, and serves electrical separation. The safety isolating transformer to EN 61558-2-6 delivers at most 50 V AC at no load and thereby produces SELV or PELV extra-low voltage. The permitted ratings also differ: 25 and 40 kVA against 10 and 16 kVA.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Warum darf ein Spartransformator nicht für Schutztrennung oder SELV eingesetzt werden?</span><span lang="en">Why must an autotransformer not be used for electrical separation or SELV?</span></summary>
+      <div class="ans">
+        <p lang="de">Weil er nur eine Wicklung mit einer Anzapfung besitzt. Eingang und Ausgang teilen sich einen Anschluss, es gibt also eine durchgehende leitende Verbindung zwischen Netz und Verbraucher. Ohne galvanische Trennung ist weder Schutztrennung noch SELV möglich.</p>
+        <p lang="en">Because it has only one winding with a tap. Input and output share a terminal, so there is a continuous conducting path between the mains and the load. Without galvanic separation neither electrical separation nor SELV is possible.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Welche Anforderungen gelten für einen Klingeltransformator?</span><span lang="en">What requirements apply to a bell transformer?</span></summary>
+      <div class="ans">
+        <p lang="de">Er ist ein Sicherheitstransformator nach EN 61558-2-8 mit doppelter oder verstärkter Isolierung und muss unbedingt kurzschlussfest sein — erreicht über die Auslegung von Kern und Wicklungswiderstand oder über einen selbstrückstellenden Temperaturschalter. Die Bemessungsleistung beträgt höchstens 100 VA, die Leerlauf-Ausgangsspannung höchstens 33 V AC beziehungsweise 46 V DC. Typische Geräte für die Hutschiene liefern 8 V und 12 V.</p>
+        <p lang="en">It is a safety isolating transformer to EN 61558-2-8 with double or reinforced insulation and must be inherently short-circuit proof — achieved through the design of core and winding resistance or through a self-resetting thermal switch. The rated power is at most 100 VA, the no-load output voltage at most 33 V AC or 46 V DC. Typical DIN-rail devices supply 8 V and 12 V.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was ist die Mindestlast eines elektronischen Konverters, und welches Problem entsteht beim Umbau auf LED?</span><span lang="en">What is the minimum load of an electronic converter, and what problem arises when converting to LED?</span></summary>
+      <div class="ans">
+        <p lang="de">Die Mindestlast ist die kleinste Leistung, bei der das Gerät noch sauber anschwingt. Beim Ersatz von Halogen durch LED sinkt die Last stark und kann unter diese Grenze fallen — die Lampen flackern, glimmen nach oder bleiben dunkel. Abhilfe schafft ein LED-tauglicher Konverter. Der Wert ist keine Normgrösse, sondern steht im Datenblatt des Geräts.</p>
+        <p lang="en">The minimum load is the smallest power at which the unit still starts cleanly. When halogen is replaced by LED the load drops sharply and can fall below this limit — the lamps flicker, glow after switch-off or stay dark. An LED-capable converter is the remedy. The figure is not a standardised value but is stated in the device's data sheet.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span lang="de">Was ist beim Einschalten eines Ringkerntransformators zu beachten?</span><span lang="en">What has to be considered when switching on a toroidal transformer?</span></summary>
+      <div class="ans">
+        <p lang="de">Der Ringkern hat keinen Luftspalt und gerät beim Einschalten leicht in die Sättigung. Dadurch entsteht eine sehr hohe Einschaltstromspitze, die Automaten auslösen und Schaltkontakte belasten kann. Abhilfe bringen Einschaltstrombegrenzer, ein Sanftanlauf oder eine entsprechend träge Absicherung. Dafür hat der Ringkern kleinere Leerlaufverluste, ein geringeres Streufeld und läuft leiser als ein EI-Kern gleicher Leistung.</p>
+        <p lang="en">A toroidal core has no air gap and saturates easily at switch-on. This produces a very high inrush current peak that can trip breakers and stress switching contacts. Inrush limiters, a soft-start unit or suitably slow protection are the remedy. In exchange the toroid has lower no-load losses, a smaller stray field and runs more quietly than an EI core of the same rating.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<nav class="pager">
+  <span class="void"></span>
+  <a class="next" href="02-kochplatten.html">
+    <span lang="de">Nächstes Thema</span><span lang="en">Next topic</span>
+    <b>02 · <span lang="de">Kochplatten</span><span lang="en">Cooking Appliances</span></b>
+  </a>
+</nav>
+
+<footer>
+  <span><span lang="de">Lerndokumentation 01 · Transformatoren</span><span lang="en">Learning Documentation 01 · Transformers</span></span>
+  <span>Yanik · Etavis · <span lang="de">3. Lehrjahr</span><span lang="en">Year 3</span></span>
+  <span><span lang="de">Grundlagen: NIN 2025 (SN 411000) · IEC 60364-4-41 · EN 61558-1/-2-2/-2-4/-2-6/-2-8/-2-13 · EN 61347-2-2 · EN 60617</span><span lang="en">Basis: NIN 2025 (SN 411000) · IEC 60364-4-41 · EN 61558-1/-2-2/-2-4/-2-6/-2-8/-2-13 · EN 61347-2-2 · EN 60617</span></span>
+</footer>
+
+</div>
+<script src="../assets/doku.js"></script>
+</body>
+</html>
