@@ -96,81 +96,37 @@
     <h2><span lang="de">Aufbau</span><span lang="en">Construction</span></h2>
 
     <figure>
-      <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schnitt durch eine Glühlampe">
+      <svg viewBox="0 0 1100 819" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schnitt durch eine Glühlampe">
         <defs>
           <style>
-            .gl{fill:#FBF9F5;stroke:#171614;stroke-width:2.4}
-            .mt{fill:#C9C2B4;stroke:#171614;stroke-width:1.8}
-            .wire{fill:none;stroke:#B8402A;stroke-width:2.6;stroke-linecap:round}
-            .sup{fill:none;stroke:#48433B;stroke-width:2;stroke-linecap:round}
-            .gas{fill:#EFEAE0}
-            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
-            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
-            .ldr{fill:none;stroke:#7D7669;stroke-width:1.2}
             .cn{fill:#171614}
-            .cnt{fill:#F4F1EA;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-anchor:middle}
+            .cnt{fill:#F4F1EA;font-family:'IBM Plex Mono',monospace;font-size:16px;font-weight:600;text-anchor:middle}
+            .ldr{fill:none;stroke:#48433B;stroke-width:1.8}
           </style>
         </defs>
 
-        <!-- Kolben -->
-        <path class="gl" d="M300 40 a86 86 0 0 1 0 172 c-14 14 -18 30 -18 44 h-50 c0 -14 -4 -30 -18 -44 a86 86 0 0 1 0 -172 a86 86 0 0 1 86 0 z" transform="translate(-43,0)"/>
-        <ellipse class="gas" cx="257" cy="126" rx="72" ry="72" opacity=".5"/>
+        <image href="../assets/img/gl-schema-schnitt.webp" x="0" y="0" width="1100" height="819"/>
 
-        <!-- Glaswindung / Quetschfuss -->
-        <path class="mt" d="M239 216 h36 v40 h-36 z"/>
-        <path class="sup" d="M248 216 V150 M266 216 V150"/>
+        <path class="ldr" d="M843 105 L712 124"/>
+        <circle class="cn" cx="860" cy="100" r="17"/><text class="cnt" x="860" y="106">1</text>
 
-        <!-- Wendel -->
-        <path class="wire" d="M248 150 q 4 -12 9 0 q 5 12 9 0" />
-        <path class="wire" d="M248 150 h18" opacity="0"/>
-        <g class="wire">
-          <path d="M246 148 c 3 -10 8 -10 11 0 c 3 10 8 10 11 0"/>
-          <path d="M246 140 c 3 -10 8 -10 11 0 c 3 10 8 10 11 0"/>
-        </g>
+        <path class="ldr" d="M267 186 L452 214"/>
+        <circle class="cn" cx="250" cy="180" r="17"/><text class="cnt" x="250" y="186">2</text>
 
-        <!-- Sockel -->
-        <path class="mt" d="M232 256 h50 v14 h-50 z"/>
-        <path class="mt" d="M232 270 h50 v12 h-50 z"/>
-        <path class="mt" d="M232 282 h50 v12 h-50 z"/>
-        <path class="mt" d="M232 294 h50 v12 h-50 z"/>
-        <path d="M240 306 h34 a17 12 0 0 1 -34 0 z" fill="#26241F" stroke="#171614" stroke-width="1.8"/>
-        <path d="M232 300 h50" stroke="#EFEAE0" stroke-width="2"/>
+        <path class="ldr" d="M247 296 L400 255"/>
+        <circle class="cn" cx="230" cy="300" r="17"/><text class="cnt" x="230" y="306">3</text>
 
-        <!-- Callouts -->
-        <circle class="cn" cx="330" cy="86" r="12"/><text class="cnt" x="330" y="90">1</text>
-        <circle class="cn" cx="300" cy="144" r="12"/><text class="cnt" x="300" y="148">2</text>
-        <circle class="cn" cx="196" cy="126" r="12"/><text class="cnt" x="196" y="130">3</text>
-        <circle class="cn" cx="196" cy="182" r="12"/><text class="cnt" x="196" y="186">4</text>
-        <circle class="cn" cx="316" cy="236" r="12"/><text class="cnt" x="316" y="240">5</text>
-        <circle class="cn" cx="316" cy="284" r="12"/><text class="cnt" x="316" y="288">6</text>
-        <circle class="cn" cx="316" cy="318" r="12"/><text class="cnt" x="316" y="322">7</text>
+        <path class="ldr" d="M813 300 L615 285"/>
+        <circle class="cn" cx="830" cy="300" r="17"/><text class="cnt" x="830" y="306">4</text>
 
-        <path class="ldr" d="M342 86 H470"/>
-        <text class="lg" x="478" y="82"><tspan lang="de">Glaskolben</tspan><tspan lang="en">Glass bulb</tspan></text>
-        <text class="lgs" x="478" y="98"><tspan lang="de">KLAR ODER MATTIERT</tspan><tspan lang="en">CLEAR OR FROSTED</tspan></text>
+        <path class="ldr" d="M267 470 L495 468"/>
+        <circle class="cn" cx="250" cy="470" r="17"/><text class="cnt" x="250" y="476">5</text>
 
-        <path class="ldr" d="M312 144 H470 V132"/>
-        <text class="lg" x="478" y="128"><tspan lang="de">Glühwendel</tspan><tspan lang="en">Filament</tspan></text>
-        <text class="lgs" x="478" y="144"><tspan lang="de">WOLFRAM, RUND 2500 °C</tspan><tspan lang="en">TUNGSTEN, ABOUT 2500 °C</tspan></text>
+        <path class="ldr" d="M813 640 L645 640"/>
+        <circle class="cn" cx="830" cy="640" r="17"/><text class="cnt" x="830" y="646">6</text>
 
-        <path class="ldr" d="M184 126 H90 V150"/>
-        <text class="lg" x="30" y="170"><tspan lang="de">Füllgas</tspan><tspan lang="en">Fill gas</tspan></text>
-        <text class="lgs" x="30" y="186"><tspan lang="de">ARGON ODER KRYPTON</tspan><tspan lang="en">ARGON OR KRYPTON</tspan></text>
-
-        <path class="ldr" d="M184 182 H90 V216"/>
-        <text class="lg" x="30" y="236"><tspan lang="de">Halterungsdrähte</tspan><tspan lang="en">Support wires</tspan></text>
-
-        <path class="ldr" d="M328 236 H470"/>
-        <text class="lg" x="478" y="232"><tspan lang="de">Quetschfuss</tspan><tspan lang="en">Pinch seal</tspan></text>
-        <text class="lgs" x="478" y="248"><tspan lang="de">GASDICHTE DURCHFÜHRUNG</tspan><tspan lang="en">GAS-TIGHT FEEDTHROUGH</tspan></text>
-
-        <path class="ldr" d="M328 284 H470"/>
-        <text class="lg" x="478" y="280"><tspan lang="de">Schraubsockel</tspan><tspan lang="en">Screw cap</tspan></text>
-        <text class="lgs" x="478" y="296">E27 · E14</text>
-
-        <path class="ldr" d="M328 318 H470"/>
-        <text class="lg" x="478" y="314"><tspan lang="de">Fusskontakt</tspan><tspan lang="en">Foot contact</tspan></text>
-        <text class="lgs" x="478" y="330"><tspan lang="de">HIER LIEGT DER POLLEITER</tspan><tspan lang="en">THE LINE CONDUCTOR GOES HERE</tspan></text>
+        <path class="ldr" d="M317 757 L490 750"/>
+        <circle class="cn" cx="300" cy="762" r="17"/><text class="cnt" x="300" y="768">7</text>
       </svg>
       <figcaption>
         <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
