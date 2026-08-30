@@ -98,6 +98,14 @@
       <p lang="de">Der FI erkennt <strong>nur Ströme, die den Stromkreis verlassen</strong>. Wer gleichzeitig Aussenleiter und Neutralleiter berührt, wird nicht geschützt: Der Strom fliesst hin und wieder zurück, die Summe bleibt null. Der FI ersetzt darum niemals das Freischalten.</p>
       <p lang="en">The RCD only detects <strong>current that leaves the circuit</strong>. Anyone touching the line and the neutral at the same time is not protected: the current flows out and back, and the sum stays zero. An RCD therefore never replaces isolating the circuit.</p>
     </div>
+    <figure class="plate">
+      <img src="../assets/img/fi-02-aussensteckdose.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Aussensteckdose mit Klappdeckel im Regen.">
+      <figcaption>
+        <span lang="de">Genau hier zählt der FI: nasse Umgebung, Handgerät, guter Weg zur Erde.</span>
+        <span lang="en">Exactly where an RCD counts: wet surroundings, a hand tool, a good path to earth.</span>
+      </figcaption>
+    </figure>
+
   </div>
 </section>
 
@@ -108,75 +116,31 @@
     <h2><span lang="de">Aufbau und Wirkungsweise</span><span lang="en">Construction and operation</span></h2>
 
     <figure>
-      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wirkungsweise des FI-Schalters mit Summenstromwandler">
+      <svg viewBox="0 0 1500 980" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wirkungsweise des FI-Schalters mit Summenstromwandler">
         <defs>
           <style>
-            .wl{fill:none;stroke:#B8402A;stroke-width:3;stroke-linecap:round}
-            .wn{fill:none;stroke:#1D5872;stroke-width:3;stroke-linecap:round}
-            .wpe{fill:none;stroke:#3F6B43;stroke-width:2.6;stroke-linecap:round;stroke-dasharray:8 5}
-            .core{fill:none;stroke:#48433B;stroke-width:9}
-            .coil{fill:none;stroke:#9A7B1F;stroke-width:2.6}
-            .bx{fill:#EFEAE0;stroke:#171614;stroke-width:2.2}
-            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
-            .lgb{font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;fill:#171614}
-            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
-            .ldr{fill:none;stroke:#7D7669;stroke-width:1.2}
-            .arw{fill:none;stroke:#171614;stroke-width:2;stroke-linecap:round}
+            .cn{fill:#171614}
+            .cnt{fill:#F4F1EA;font-family:'IBM Plex Mono',monospace;font-size:19px;font-weight:600;text-anchor:middle}
+            .ldr{fill:none;stroke:#48433B;stroke-width:2}
           </style>
         </defs>
 
-        <!-- Ringkern -->
-        <ellipse class="core" cx="330" cy="150" rx="86" ry="58"/>
-        <text class="lgs" x="330" y="238" text-anchor="middle"><tspan lang="de">SUMMENSTROMWANDLER</tspan><tspan lang="en">CORE BALANCE TRANSFORMER</tspan></text>
+        <image href="../assets/img/fi-schema-ringkern.webp" x="0" y="90" width="1500" height="851"/>
 
-        <!-- Leiter durch den Kern -->
-        <path class="wl" d="M60 126 H600"/>
-        <path class="wn" d="M60 174 H600"/>
-        <text class="lgb" x="60" y="116" fill="#B8402A">L</text>
-        <text class="lgb" x="60" y="200" fill="#1D5872">N</text>
+        <path class="ldr" d="M815 65 V105"/>
+        <circle class="cn" cx="815" cy="45" r="20"/><text class="cnt" x="815" y="52">1</text>
 
-        <!-- Stromrichtungspfeile -->
-        <path class="arw" d="M180 126 h30 M204 120 l8 6 l-8 6" stroke="#B8402A"/>
-        <path class="arw" d="M210 174 h-30 M186 168 l-8 6 l8 6" stroke="#1D5872"/>
+        <path class="ldr" d="M1038 275 L886 292"/>
+        <circle class="cn" cx="1060" cy="272" r="20"/><text class="cnt" x="1060" y="279">2</text>
 
-        <!-- Sekundärwicklung -->
-        <path class="coil" d="M330 92 q -12 -10 0 -20 q 12 -10 0 -20"/>
-        <path class="coil" d="M330 52 H408"/>
+        <path class="ldr" d="M1192 748 L1034 682"/>
+        <circle class="cn" cx="1212" cy="757" r="20"/><text class="cnt" x="1212" y="764">3</text>
 
-        <!-- Auslöserelais -->
-        <rect class="bx" x="408" y="30" width="86" height="46" rx="3"/>
-        <text class="lg" x="451" y="52" text-anchor="middle"><tspan lang="de">Auslöse-</tspan><tspan lang="en">Trip</tspan></text>
-        <text class="lg" x="451" y="68" text-anchor="middle"><tspan lang="de">relais</tspan><tspan lang="en">relay</tspan></text>
+        <path class="ldr" d="M1400 372 V452"/>
+        <circle class="cn" cx="1400" cy="350" r="20"/><text class="cnt" x="1400" y="357">4</text>
 
-        <!-- Wirkung auf Kontakte -->
-        <path d="M451 76 V96 H208" stroke="#7D7669" stroke-width="1.8" stroke-dasharray="6 5" fill="none"/>
-        <path d="M208 96 V116" stroke="#7D7669" stroke-width="1.8" stroke-dasharray="6 5" fill="none"/>
-        <!-- Kontakte -->
-        <circle cx="208" cy="126" r="4.5" fill="#171614"/>
-        <circle cx="252" cy="126" r="4.5" fill="#171614"/>
-        <path d="M208 126 L248 112" stroke="#171614" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="208" cy="174" r="4.5" fill="#171614"/>
-        <circle cx="252" cy="174" r="4.5" fill="#171614"/>
-        <path d="M208 174 L248 160" stroke="#171614" stroke-width="3" stroke-linecap="round"/>
-        <text class="lgs" x="196" y="104"><tspan lang="de">ALLPOLIGE TRENNUNG</tspan><tspan lang="en">ALL-POLE DISCONNECTION</tspan></text>
-
-        <!-- Prüfkreis -->
-        <path d="M470 126 V270 H556" stroke="#B8402A" stroke-width="2.4" fill="none"/>
-        <path d="M556 270 h18" stroke="#B8402A" stroke-width="2.4"/>
-        <circle cx="592" cy="270" r="20" fill="#F0DBD4" stroke="#B8402A" stroke-width="2.4"/>
-        <text x="592" y="276" font-family="'Archivo',sans-serif" font-size="16" font-weight="800" fill="#B8402A" text-anchor="middle">T</text>
-        <path d="M592 250 V174" stroke="#1D5872" stroke-width="2.4" fill="none" stroke-dasharray="0"/>
-        <text class="lgs" x="500" y="292"><tspan lang="de">PRÜFKREIS — ERZEUGT EINEN DEFINIERTEN FEHLERSTROM</tspan><tspan lang="en">TEST CIRCUIT — CREATES A DEFINED RESIDUAL CURRENT</tspan></text>
-
-        <!-- Fehlerstrom nach Erde -->
-        <path class="wpe" d="M600 126 V340 H330"/>
-        <path class="wpe" d="M330 340 V208"/>
-        <text class="lgs" x="356" y="360" fill="#3F6B43"><tspan lang="de">FEHLERSTROM ÜBER ERDE — VERLÄSST DEN KERN NICHT ZURÜCK</tspan><tspan lang="en">FAULT CURRENT VIA EARTH — DOES NOT RETURN THROUGH THE CORE</tspan></text>
-
-        <!-- Formel -->
-        <path class="ldr" d="M416 150 H520"/>
-        <text class="lgb" x="528" y="146">I<tspan baseline-shift="sub" font-size="9">L</tspan> + I<tspan baseline-shift="sub" font-size="9">N</tspan> = 0</text>
-        <text class="lgs" x="528" y="164"><tspan lang="de">IM FEHLERFREIEN KREIS</tspan><tspan lang="en">IN A HEALTHY CIRCUIT</tspan></text>
+        <path class="ldr" d="M218 676 L296 594"/>
+        <circle class="cn" cx="200" cy="694" r="20"/><text class="cnt" x="200" y="701">5</text>
       </svg>
       <figcaption>
         <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
@@ -184,6 +148,14 @@
         <span lang="en"> — Principle of operation. All live conductors pass through the same toroidal core. Only if the sum of the currents is not zero does a voltage appear in the secondary winding.</span>
       </figcaption>
     </figure>
+
+    <ul class="legend">
+      <li><span class="n">1</span><span lang="de">Auslöserelais — wird von der Sekundärwicklung gespeist und entklinkt das Schaltschloss</span><span lang="en">Trip relay — fed by the secondary winding, it releases the latch</span></li>
+      <li><span class="n">2</span><span lang="de">Sekundärwicklung auf dem Ringkern</span><span lang="en">Secondary winding on the toroidal core</span></li>
+      <li><span class="n">3</span><span lang="de">Summenstromwandler — der Ringkern, durch den alle aktiven Leiter führen</span><span lang="en">Core balance transformer — the ring core all live conductors pass through</span></li>
+      <li><span class="n">4</span><span lang="de">Aktive Leiter mit gegenläufiger Stromrichtung; der Schutzleiter führt <strong>nicht</strong> durch den Kern</span><span lang="en">Live conductors with opposing current directions; the protective conductor does <strong>not</strong> pass through the core</span></li>
+      <li><span class="n">5</span><span lang="de">Kontakte — trennen alle Pole gleichzeitig</span><span lang="en">Contacts — disconnecting all poles simultaneously</span></li>
+    </ul>
 
     <h3><span lang="de">Der Ablauf</span><span lang="en">The sequence</span></h3>
     <ol lang="de">
@@ -331,6 +303,14 @@
       <p lang="de">Jedes elektronische Gerät hat einen kleinen, völlig normalen Ableitstrom. Hängen viele Geräte hinter demselben 30-mA-FI, addieren sich diese Ströme und der FI löst irgendwann ohne echten Fehler aus. Faustregel: Der summierte Ableitstrom soll deutlich unter der Hälfte des Bemessungsfehlerstromes bleiben. Abhilfe: Last auf mehrere FI aufteilen.</p>
       <p lang="en">Every electronic device has a small, entirely normal leakage current. With many devices behind the same 30 mA RCD, these add up and the device eventually trips without a real fault. Rule of thumb: the total leakage should stay well below half the rated residual current. The remedy is to split the load across several RCDs.</p>
     </div>
+    <figure class="plate">
+      <img src="../assets/img/fi-01-fi-und-ls.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Ein breiter FI-Schalter neben drei schmaleren Leitungsschutzschaltern.">
+      <figcaption>
+        <span lang="de">Der FI ist breiter als die Automaten daneben — er führt alle aktiven Leiter.</span>
+        <span lang="en">The RCD is wider than the breakers beside it — it carries all live conductors.</span>
+      </figcaption>
+    </figure>
+
   </div>
 </section>
 
@@ -380,6 +360,14 @@
       <p lang="de">Wo ein FI vorgeschrieben ist, mit welchem Bemessungsfehlerstrom und welchem Typ, regelt die NIN — unter anderem für Steckdosenstromkreise, Nassbereiche, Aussenanlagen, Baustellen und Ladeeinrichtungen. <strong>Die geltenden Artikel vor der Abgabe in der eigenen NIN-Ausgabe nachschlagen</strong>, die Anforderungen wurden über die Ausgaben hinweg mehrfach erweitert.</p>
       <p lang="en">Where an RCD is required, with which rated residual current and which type, is governed by the NIN — among others for socket circuits, wet areas, outdoor installations, construction sites and charging equipment. <strong>Look up the applicable articles in your own NIN edition</strong>; the requirements have been extended repeatedly across editions.</p>
     </div>
+    <figure class="plate">
+      <img src="../assets/img/fi-03-verteiler.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Offene Hausverteilung mit Schutzeinrichtungen und geordneter Verdrahtung.">
+      <figcaption>
+        <span lang="de">Zum Eingrenzen die Stromkreise einzeln zuschalten — der Kreis, bei dem der FI fällt, enthält den Fehler.</span>
+        <span lang="en">To narrow a fault down, switch the circuits on one at a time — the one that drops the RCD holds the fault.</span>
+      </figcaption>
+    </figure>
+
   </div>
 </section>
 

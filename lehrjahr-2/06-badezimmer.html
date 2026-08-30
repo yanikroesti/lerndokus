@@ -74,6 +74,14 @@
 
     <p lang="de">Deshalb gilt das Badezimmer als <strong>Raum mit erhöhter Gefährdung</strong>. Die NIN behandelt es in einem eigenen Kapitel und teilt den Raum in <strong>Bereiche</strong> ein. Je näher an Wanne oder Dusche, desto strenger die Anforderungen.</p>
     <p lang="en">A bathroom therefore counts as a <strong>location with increased risk</strong>. The NIN covers it in a chapter of its own and divides the room into <strong>zones</strong>. The closer to bath or shower, the stricter the requirements.</p>
+    <figure class="plate">
+      <img src="../assets/img/bad-01-raum.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Badezimmer im Schnitt mit Wanne, Duschbrause und Lavabo.">
+      <figcaption>
+        <span lang="de">Wasser, nasse Haut und barfuss auf leitfähigem Boden — alles zugleich.</span>
+        <span lang="en">Water, wet skin and bare feet on a conductive floor — all at once.</span>
+      </figcaption>
+    </figure>
+
   </div>
 </section>
 
@@ -84,78 +92,54 @@
     <h2><span lang="de">Die Bereiche und ihre Masse</span><span lang="en">The zones and their dimensions</span></h2>
 
     <figure>
-      <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bereichseinteilung im Badezimmer mit Massen">
+      <svg viewBox="0 0 1620 1010" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bereichseinteilung im Badezimmer mit Massen">
         <defs>
           <style>
-            .wall{fill:#EFEAE0;stroke:#171614;stroke-width:2.4}
-            .z0{fill:#B8402A;opacity:.22}
-            .z1{fill:#D8A72A;opacity:.20}
-            .z2{fill:#1D5872;opacity:.15}
-            .tub{fill:#D6E3E9;stroke:#171614;stroke-width:2.4}
-            .dim{fill:none;stroke:#48433B;stroke-width:1.4}
-            .dl{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;fill:#171614;text-anchor:middle}
-            .zl{font-family:'Archivo',sans-serif;font-size:20px;font-weight:800;text-anchor:middle}
-            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
-            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
+            .zl{font-family:'Archivo',sans-serif;font-size:44px;font-weight:800;text-anchor:middle}
+            .dim{fill:none;stroke:#48433B;stroke-width:2}
+            .dl{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:600;fill:#171614;text-anchor:middle}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:26px;fill:#7D7669;letter-spacing:.06em}
           </style>
         </defs>
 
-        <!-- Boden und Wand -->
-        <path d="M90 350 H660" stroke="#171614" stroke-width="3"/>
-        <path d="M90 40 V350" stroke="#171614" stroke-width="3"/>
+        <image href="../assets/img/bad-schema-bereiche.webp" x="120" y="60" width="1500" height="874"/>
 
-        <!-- Bereich 2 (aussen) -->
-        <rect class="z2" x="330" y="60" width="96" height="290"/>
-        <!-- Bereich 1 -->
-        <rect class="z1" x="90" y="60" width="240" height="230"/>
-        <!-- Bereich 0 = Wanneninneres -->
-        <rect class="z0" x="98" y="290" width="224" height="52"/>
+        <!-- Zonenflaechen über der Zeichnung, halbtransparent -->
+        <rect x="658" y="230" width="159" height="596" fill="#1D5872" opacity=".16"/>
+        <rect x="144" y="230" width="514" height="596" fill="#D8A72A" opacity=".22"/>
+        <rect x="160" y="670" width="480" height="148" fill="#B8402A" opacity=".24"/>
 
-        <!-- Wanne -->
-        <path class="tub" d="M94 288 h232 v18 a48 48 0 0 1 -48 44 H142 a48 48 0 0 1 -48 -44 z"/>
+        <!-- 2.25-m-Linie -->
+        <path d="M144 230 H817" stroke="#48433B" stroke-width="2" stroke-dasharray="9 6" fill="none"/>
 
-        <!-- Bereichsbeschriftung -->
-        <text class="zl" x="210" y="326" fill="#8A2F1E">0</text>
-        <text class="zl" x="210" y="170" fill="#9A7B1F">1</text>
-        <text class="zl" x="378" y="170" fill="#1D5872">2</text>
-        <text class="zl" x="520" y="170" fill="#7D7669"><tspan lang="de">ausserhalb</tspan><tspan lang="en">outside</tspan></text>
+        <!-- Bereichsnummern -->
+        <text class="zl" x="400" y="780" fill="#8A2F1E">0</text>
+        <text class="zl" x="400" y="470" fill="#9A7B1F">1</text>
+        <text class="zl" x="737" y="470" fill="#1D5872">2</text>
+        <text class="lgs" x="900" y="470"><tspan lang="de">ausserhalb der Bereiche</tspan><tspan lang="en">outside the zones</tspan></text>
 
-        <!-- Höhe 2.25 m -->
-        <path class="dim" d="M64 60 V350"/>
-        <path class="dim" d="M58 60 h12 M58 350 h12"/>
-        <text class="dl" x="40" y="210" transform="rotate(-90 40 210)">2.25 m</text>
-        <path d="M90 60 H426" stroke="#48433B" stroke-width="1.6" stroke-dasharray="7 5"/>
+        <!-- Hoehenmass 2.25 m -->
+        <path class="dim" d="M70 230 V826"/>
+        <path class="dim" d="M62 230 h16 M62 826 h16"/>
+        <text class="dl" x="42" y="528" transform="rotate(-90 42 528)">2.25 m</text>
 
-        <!-- Breite 0.60 m -->
-        <path class="dim" d="M330 388 H426"/>
-        <path class="dim" d="M330 382 v12 M426 382 v12"/>
-        <text class="dl" x="378" y="408">0.60 m</text>
-
-        <!-- Wanne Grenze -->
-        <path class="dim" d="M330 60 V388" stroke-dasharray="5 4"/>
-        <path class="dim" d="M426 60 V388" stroke-dasharray="5 4"/>
-
-        <!-- Legende rechts -->
-        <g>
-          <rect x="470" y="240" width="22" height="14" fill="#B8402A" opacity=".4"/>
-          <text class="lg" x="502" y="252"><tspan lang="de">Bereich 0 — Wanneninneres</tspan><tspan lang="en">Zone 0 — inside the tub</tspan></text>
-          <text class="lgs" x="502" y="268">IPX7</text>
-
-          <rect x="470" y="286" width="22" height="14" fill="#D8A72A" opacity=".4"/>
-          <text class="lg" x="502" y="298"><tspan lang="de">Bereich 1 — über der Wanne</tspan><tspan lang="en">Zone 1 — above the tub</tspan></text>
-          <text class="lgs" x="502" y="314">IPX4</text>
-
-          <rect x="470" y="332" width="22" height="14" fill="#1D5872" opacity=".3"/>
-          <text class="lg" x="502" y="344"><tspan lang="de">Bereich 2 — seitlich anschliessend</tspan><tspan lang="en">Zone 2 — adjoining to the side</tspan></text>
-          <text class="lgs" x="502" y="360">IPX4</text>
-        </g>
+        <!-- Breitenmass 0.60 m -->
+        <path class="dim" d="M658 880 H817"/>
+        <path class="dim" d="M658 872 v16 M817 872 v16"/>
+        <text class="dl" x="737" y="916">0.60 m</text>
       </svg>
       <figcaption>
         <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
-        <span lang="de"> — Bereichseinteilung im Schnitt. Bereich 1 reicht bis 2,25 m über den Boden, Bereich 2 schliesst seitlich mit 0,60 m an.</span>
-        <span lang="en"> — Zones shown in section. Zone 1 extends to 2.25 m above the floor, zone 2 adjoins it laterally by 0.60 m.</span>
+        <span lang="de"> — Bereichseinteilung im Schnitt. Bereich 1 reicht bis 2,25 m über den <strong>Boden</strong>, Bereich 2 schliesst seitlich mit 0,60 m an.</span>
+        <span lang="en"> — Zones shown in section. Zone 1 extends to 2.25 m above the <strong>floor</strong>, zone 2 adjoins it laterally by 0.60 m.</span>
       </figcaption>
     </figure>
+
+    <ul class="legend">
+      <li><span class="n">0</span><span lang="de">Bereich 0 — das Innere der Wanne; Mindestschutzart IPX7</span><span lang="en">Zone 0 — the interior of the tub; minimum IPX7</span></li>
+      <li><span class="n">1</span><span lang="de">Bereich 1 — senkrecht darüber bis 2,25 m ab Boden; IPX4</span><span lang="en">Zone 1 — vertically above it to 2.25 m from the floor; IPX4</span></li>
+      <li><span class="n">2</span><span lang="de">Bereich 2 — seitlich anschliessend, 0,60 m breit, gleiche Höhe; IPX4</span><span lang="en">Zone 2 — adjoining laterally, 0.60 m wide, same height; IPX4</span></li>
+    </ul>
 
     <div class="tablewrap">
       <table>
@@ -317,6 +301,14 @@
 
     <p lang="de">Die Querschnitte des zusätzlichen Potentialausgleichs sind in Thema 11 dieses Lehrjahres behandelt.</p>
     <p lang="en">The cross-sections for supplementary bonding are covered in topic 11 of this year.</p>
+    <figure class="plate">
+      <img src="../assets/img/bad-03-rohrschelle.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Rohrschelle auf einem Metallrohr, grün-gelber Leiter führt weg.">
+      <figcaption>
+        <span lang="de">Rohrschelle auf blankem Metall — die Verbindung muss zugänglich und messbar bleiben.</span>
+        <span lang="en">Pipe clamp on bare metal — the connection must stay accessible and measurable.</span>
+      </figcaption>
+    </figure>
+
   </div>
 </section>
 
@@ -375,6 +367,14 @@
       <p lang="de">Die Bereichseinteilung, die Masse und die zulässigen Betriebsmittel sind in der NIN im Kapitel über Räume mit Badewanne oder Dusche geregelt. Die Festlegungen <strong>unterscheiden sich zwischen den Ausgaben</strong> — insbesondere hat sich die Behandlung eines früher vorhandenen weiteren Bereichs geändert. <strong>Vor der Abgabe die Bereiche, Masse und Artikelnummern in der eigenen NIN-Ausgabe nachschlagen</strong> und im Text zitieren.</p>
       <p lang="en">The zones, dimensions and permitted equipment are laid down in the NIN chapter on rooms with a bath or shower. The provisions <strong>differ between editions</strong> — in particular the treatment of a formerly existing further zone has changed. <strong>Before submitting, look up the zones, dimensions and article numbers in your own NIN edition</strong> and cite them.</p>
     </div>
+    <figure class="plate">
+      <img src="../assets/img/bad-02-spiegel.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Badezimmerwand mit Spiegel, Leuchte darüber und Lavabo darunter.">
+      <figcaption>
+        <span lang="de">Ob eine Steckdose hier zulässig ist, entscheidet der Abstand zur Wanne — nicht zum Lavabo.</span>
+        <span lang="en">Whether a socket is permitted here depends on the distance to the bath — not to the basin.</span>
+      </figcaption>
+    </figure>
+
   </div>
 </section>
 
