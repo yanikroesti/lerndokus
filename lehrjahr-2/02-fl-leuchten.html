@@ -91,75 +91,37 @@
     <h2><span lang="de">Aufbau und Schaltung mit KVG</span><span lang="en">Construction and circuit with a magnetic ballast</span></h2>
 
     <figure>
-      <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schaltung einer Leuchtstofflampe mit konventionellem Vorschaltgerät, Starter und Kompensationskondensator">
+      <svg viewBox="0 0 1600 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schaltung einer Leuchtstofflampe mit konventionellem Vorschaltgerät, Starter und Kompensationskondensator">
         <defs>
           <style>
-            .w{fill:none;stroke:#171614;stroke-width:2.6;stroke-linecap:round}
-            .wl{fill:none;stroke:#B8402A;stroke-width:2.6;stroke-linecap:round}
-            .wn{fill:none;stroke:#48433B;stroke-width:2.6;stroke-linecap:round}
-            .tube{fill:#D6E3E9;stroke:#171614;stroke-width:2.4}
-            .coil{fill:none;stroke:#1D5872;stroke-width:2.8}
-            .dot{fill:#171614}
-            .lgb{font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;fill:#171614}
-            .lg{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#48433B}
-            .lgs{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#7D7669;letter-spacing:.07em}
-            .ldr{fill:none;stroke:#7D7669;stroke-width:1.2}
+            .cn{fill:#171614}
+            .cnt{fill:#F4F1EA;font-family:'IBM Plex Mono',monospace;font-size:17px;font-weight:600;text-anchor:middle}
+            .ldr{fill:none;stroke:#48433B;stroke-width:2}
+            .rail{font-family:'IBM Plex Mono',monospace;font-size:20px;font-weight:600;fill:#171614;text-anchor:middle}
           </style>
         </defs>
 
-        <!-- L und N -->
-        <path class="wl" d="M50 60 H120"/>
-        <text class="lgb" x="50" y="50" fill="#B8402A">L</text>
-        <path class="wn" d="M50 330 H560"/>
-        <text class="lgb" x="50" y="354">N</text>
+        <image href="../assets/img/fl-schema-kvg.webp" x="0" y="90" width="1600" height="482"/>
 
-        <!-- Drossel -->
-        <g transform="translate(120,60)">
-          <path class="coil" d="M0 0 h14 a11 11 0 0 1 22 0 a11 11 0 0 1 22 0 a11 11 0 0 1 22 0 h14"/>
-          <rect x="10" y="-14" width="76" height="4" fill="#1D5872"/>
-          <text class="lgb" x="26" y="-24">L1</text>
-        </g>
-        <path class="wl" d="M214 60 H300"/>
+        <!-- Schienenbezeichnung, sprachneutral -->
+        <text class="rail" x="34" y="140">L</text>
+        <text class="rail" x="34" y="570">N</text>
 
-        <!-- Röhre -->
-        <rect class="tube" x="300" y="42" width="220" height="36" rx="18"/>
-        <path d="M316 48 v24 M320 48 v24" stroke="#B8402A" stroke-width="2.4"/>
-        <path d="M500 48 v24 M504 48 v24" stroke="#B8402A" stroke-width="2.4"/>
-        <text class="lgs" x="360" y="34"><tspan lang="de">LEUCHTSTOFFRÖHRE</tspan><tspan lang="en">FLUORESCENT TUBE</tspan></text>
+        <!-- 1 Drossel -->
+        <path class="ldr" d="M422 55 V138"/>
+        <circle class="cn" cx="422" cy="38" r="18"/><text class="cnt" x="422" y="45">1</text>
 
-        <!-- Rückleitung -->
-        <path class="wn" d="M520 60 H560 V330"/>
+        <!-- 2 Röhre -->
+        <path class="ldr" d="M1050 55 V112"/>
+        <circle class="cn" cx="1050" cy="38" r="18"/><text class="cnt" x="1050" y="45">2</text>
 
-        <!-- Starter parallel zur Röhre -->
-        <path class="w" d="M330 78 V150 H430"/>
-        <path class="w" d="M490 78 V150 H454"/>
-        <circle cx="442" cy="150" r="22" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
-        <path d="M434 142 l8 8 l-4 8" fill="none" stroke="#B8402A" stroke-width="2.4" stroke-linecap="round"/>
-        <text class="lgb" x="470" y="186">S</text>
-        <text class="lgs" x="392" y="196"><tspan lang="de">STARTER</tspan><tspan lang="en">STARTER</tspan></text>
+        <!-- 3 Starter -->
+        <path class="ldr" d="M1039 476 V424"/>
+        <circle class="cn" cx="1039" cy="494" r="18"/><text class="cnt" x="1039" y="501">3</text>
 
-        <!-- Kompensationskondensator -->
-        <path class="wl" d="M120 60 V250 H196"/>
-        <path class="w" d="M210 232 V268 M226 232 V268"/>
-        <path class="wl" d="M196 250 H210"/>
-        <path class="wn" d="M226 250 H300 V330"/>
-        <text class="lgb" x="196" y="292">C</text>
-        <text class="lgs" x="150" y="312"><tspan lang="de">KOMPENSATION</tspan><tspan lang="en">CORRECTION</tspan></text>
-
-        <circle class="dot" cx="120" cy="60" r="4"/>
-        <circle class="dot" cx="300" cy="330" r="4"/>
-
-        <!-- Beschriftungen -->
-        <path class="ldr" d="M166 46 V20 H640"/>
-        <text class="lg" x="600" y="16" text-anchor="end"><tspan lang="de">Drossel — begrenzt den Strom und liefert die Zündspannung</tspan><tspan lang="en">Ballast — limits the current and provides the striking voltage</tspan></text>
-
-        <path class="ldr" d="M464 150 H640"/>
-        <text class="lg" x="648" y="146"><tspan lang="de">Starter</tspan><tspan lang="en">Starter</tspan></text>
-        <text class="lgs" x="648" y="162"><tspan lang="de">HEIZT VOR, UNTERBRICHT</tspan><tspan lang="en">PREHEATS, THEN OPENS</tspan></text>
-
-        <path class="ldr" d="M240 250 H640 V236"/>
-        <text class="lg" x="648" y="232"><tspan lang="de">Kondensator</tspan><tspan lang="en">Capacitor</tspan></text>
-        <text class="lgs" x="648" y="248"><tspan lang="de">VERBESSERT DEN COS φ</tspan><tspan lang="en">IMPROVES THE POWER FACTOR</tspan></text>
+        <!-- 4 Kondensator -->
+        <path class="ldr" d="M103 318 H158"/>
+        <circle class="cn" cx="85" cy="318" r="18"/><text class="cnt" x="85" y="325">4</text>
       </svg>
       <figcaption>
         <b><span lang="de">Bild 1</span><span lang="en">Fig. 1</span></b>
@@ -167,6 +129,13 @@
         <span lang="en"> — Classic circuit with a magnetic ballast. Ballast and tube are in series, the starter is in parallel with the tube, and the correction capacitor is across the mains.</span>
       </figcaption>
     </figure>
+
+    <ul class="legend">
+      <li><span class="n">1</span><span lang="de">Drossel — in Reihe zur Röhre; begrenzt den Strom und liefert beim Öffnen des Starters die Zündspannung</span><span lang="en">Ballast — in series with the tube; limits the current and provides the striking voltage when the starter opens</span></li>
+      <li><span class="n">2</span><span lang="de">Leuchtstoffröhre mit je einer Elektrodenwendel an beiden Enden</span><span lang="en">Fluorescent tube with an electrode filament at each end</span></li>
+      <li><span class="n">3</span><span lang="de">Starter — parallel zur Röhre, überbrückt die beiden Elektroden zum Vorheizen</span><span lang="en">Starter — parallel to the tube, bridging both electrodes for preheating</span></li>
+      <li><span class="n">4</span><span lang="de">Kompensationskondensator — parallel zum Netz, verbessert den cos φ</span><span lang="en">Correction capacitor — across the mains, improving the power factor</span></li>
+    </ul>
 
     <h3><span lang="de">Der Zündvorgang Schritt für Schritt</span><span lang="en">The starting sequence step by step</span></h3>
     <ol lang="de">
