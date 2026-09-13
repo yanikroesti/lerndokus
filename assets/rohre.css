@@ -1,0 +1,15 @@
+
+.lesson-contents { margin: 30px 0 42px; padding: 22px 26px; border: 1px solid var(--rule); background: var(--paper); }
+.lesson-contents h2 { font-family: var(--sans); font-size: 19px; margin: 0 0 14px; }
+.lesson-contents ol { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px 32px; margin: 0; padding-left: 24px; }
+.lesson-contents li { padding-left: 4px; font-family: var(--mono); font-size: 12px; }
+.lesson-contents a { color: var(--ink-2); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.lesson-contents a:hover { color: var(--therm); }
+.lesson-contents a:focus-visible { outline: 2px solid var(--therm); outline-offset: 4px; }
+.rohre-illustration { margin: 24px 0 30px; }
+.rohre-illustration img { display: block; width: 100%; height: auto; border-radius: 3px; }
+.rohre-illustration figcaption { font-size: 13px; line-height: 1.5; padding-top: 10px; }
+section[id] { scroll-margin-top: 90px; }
+@media(max-width:720px) { .lesson-contents { padding: 18px; } .lesson-contents ol { grid-template-columns: 1fr; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+@media print { .lesson-contents { display:none; } .rohre-illustration { max-width:135mm; margin:14px auto; break-inside:avoid; } }
