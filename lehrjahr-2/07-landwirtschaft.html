@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/doku.css">
+<link rel="stylesheet" href="../assets/lesson.css">
 </head>
 <body>
 
@@ -50,25 +51,13 @@
 </div>
 
 <!-- ================= 1 ================= -->
+<nav class="lesson-contents" aria-labelledby="contents-title"><h2 id="contents-title"><span lang="de">In diesem Kapitel</span><span lang="en">In this chapter</span></h2><ol><li><a href="#s1"><span lang="de">Was landwirtschaftliche Anlagen besonders macht</span><span lang="en">What makes agricultural installations special</span></a></li><li><a href="#s2"><span lang="de">Raumarten und ihre Anforderungen</span><span lang="en">Types of location and their requirements</span></a></li><li><a href="#s3"><span lang="de">FI-Schutz</span><span lang="en">RCD protection</span></a></li><li><a href="#s4"><span lang="de">Potentialausgleich in Tierbereichen</span><span lang="en">Bonding in animal areas</span></a></li><li><a href="#s5"><span lang="de">Material, Montage und Brandschutz</span><span lang="en">Materials, installation and fire protection</span></a></li><li><a href="#s6"><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></a></li></ol></nav>
 <section id="s1">
   <div class="snum">01</div>
   <div class="sbody">
 
-    <figure class="spot">
-      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Stall mit Kuh">
-        <path d="M30 76 L110 30 L190 76 v54 H30 z" fill="#EFEAE0" stroke="#171614" stroke-width="2.4" stroke-linejoin="round"/>
-        <path d="M30 76 L110 30 L190 76" fill="none" stroke="#B8402A" stroke-width="3" stroke-linejoin="round"/>
-        <ellipse cx="106" cy="106" rx="34" ry="20" fill="#FBF9F5" stroke="#171614" stroke-width="2.2"/>
-        <circle cx="82" cy="98" r="9" fill="#FBF9F5" stroke="#171614" stroke-width="2.2"/>
-        <circle cx="79" cy="96" r="2.4" fill="#171614"/>
-        <path d="M76 90 l-6 -8 M88 90 l4 -9" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
-        <ellipse cx="116" cy="100" rx="10" ry="6" fill="#DFD9CB" stroke="#171614" stroke-width="1.6"/>
-        <path d="M92 124 v10 M112 124 v10 M130 122 v12" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M158 52 l-8 14 h7 l-5 13 l12 -18 h-8 z" fill="#B8402A" stroke="#8A2F1E" stroke-width="1.4" stroke-linejoin="round"/>
-      </svg>
-    </figure>
-
     <h2><span lang="de">Was landwirtschaftliche Anlagen besonders macht</span><span lang="en">What makes agricultural installations special</span></h2>
+<figure class="lesson-illustration"><img lang="de" src="../assets/img/landwirtschaft-umgebung.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Tierbereich mit Tränke, Metallgittern und geschützten Leuchten."><img lang="en" src="../assets/img/landwirtschaft-umgebung.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Livestock area with drinking trough, metal railings and enclosed lights."><figcaption><span lang="de">Feuchte, metallene Einrichtungen und Tierkontakt müssen gemeinsam beurteilt werden. <small>KI-generierte Anschauung.</small></span><span lang="en">Assess moisture, metal fittings and animal contact together. <small>AI-generated illustration.</small></span></figcaption></figure>
 
     <p class="lead" lang="de">Ein Stall vereinigt fast alle erschwerenden Bedingungen gleichzeitig: <strong>Feuchtigkeit, Staub, aggressive Gase, mechanische Beanspruchung, Brandlast und Tiere</strong>. Deshalb behandelt die NIN landwirtschaftliche und gartenbauliche Betriebsstätten in einem eigenen Kapitel.</p>
     <p class="lead" lang="en">A livestock building combines almost every aggravating condition at once: <strong>moisture, dust, aggressive gases, mechanical stress, fire load and animals</strong>. The NIN therefore covers agricultural and horticultural premises in a chapter of its own.</p>
@@ -178,7 +167,7 @@
           </tr>
           <tr>
             <td class="num">300 mA</td>
-            <td><span lang="de"><strong>Brandschutz</strong> — erkennt schleichende Isolationsfehler, bevor sie Wärme erzeugen</span><span lang="en"><strong>fire protection</strong> — detects creeping insulation faults before they generate heat</span></td>
+            <td><span lang="de"><strong>Brandschutz</strong> — kann geeignete Fehlerströme gegen Erde abschalten</span><span lang="en"><strong>fire protection</strong> — can disconnect suitable earth leakage currents</span></td>
             <td><span lang="de">vorgelagert für die übrigen Stromkreise</span><span lang="en">upstream of the remaining circuits</span></td>
           </tr>
         </tbody>
@@ -187,13 +176,13 @@
 
     <div class="callout">
       <b class="tag"><span lang="de">Warum Brandschutz-FI gerade hier?</span><span lang="en">Why a fire-protection RCD here in particular?</span></b>
-      <p lang="de">Ein schleichender Isolationsfehler erzeugt einen kleinen Fehlerstrom. Für den LS-Automaten ist er unsichtbar, aber an der Fehlerstelle entsteht Wärme. In einem Wohnhaus glimmt es dort vielleicht lange vor sich hin — in einem Heustock genügt ein Funke. Der 300-mA-FI schaltet ab, bevor genug Energie für eine Zündung zusammenkommt.</p>
-      <p lang="en">A creeping insulation fault produces a small residual current. It is invisible to the breaker, but heat develops at the fault. In a dwelling it might smoulder unnoticed for a long time — in a hay loft a single spark is enough. The 300 mA RCD disconnects before enough energy accumulates to ignite.</p>
+      <p lang="de">Ein RCD kann Fehlerströme gegen Erde abschalten und damit das Brandrisiko vermindern. Er erkennt jedoch nicht jede Zündquelle: Überlast, eine lose Kontaktstelle oder ein Fehler zwischen aktiven Leitern ohne Erdableitung können unentdeckt bleiben. 300 mA garantieren deshalb keine Abschaltung vor jeder Zündung.</p>
+      <p lang="en">An RCD can disconnect earth leakage and reduce fire risk. It does not detect every ignition source: overload, a loose connection or a fault between live conductors without earth leakage may remain undetected. A 300 mA rating therefore does not guarantee disconnection before every ignition.</p>
     </div>
 
     <h3><span lang="de">Selektivität zwischen den Ebenen</span><span lang="en">Discrimination between the levels</span></h3>
-    <p lang="de">Damit ein Fehler in einem Endstromkreis nicht den ganzen Betrieb abschaltet, ist der vorgelagerte FI <strong>selektiv</strong> auszuführen (Kennzeichnung S). Er löst kurzzeitverzögert aus und lässt dem nachgelagerten 30-mA-FI den Vortritt.</p>
-    <p lang="en">So that a fault in one final circuit does not shut down the whole farm, the upstream RCD is made <strong>selective</strong> (marked S). It trips with a short delay and lets the downstream 30 mA device act first.</p>
+    <p lang="de">Für eine gestaffelte RCD-Anordnung sind Bemessungsfehlerstrom, Zeitverhalten, Typ und Hersteller-Koordination gemeinsam zu prüfen. Ein selektiver RCD mit Kennzeichnung S kann vorgeschaltet werden; allein das S garantiert keine Selektivität. Die Einteilung der Stromkreise muss kritische Verbraucher berücksichtigen.</p>
+    <p lang="en">For cascaded RCDs, verify rated residual current, timing, type and manufacturer coordination together. A selective S-type RCD may be used upstream; the marking alone does not guarantee selectivity. Circuit subdivision must consider critical loads.</p>
 
     <div class="callout blue">
       <b class="tag"><span lang="de">Praktische Überlegung</span><span lang="en">A practical consideration</span></b>
@@ -239,8 +228,8 @@
     </div>
 
     <h3><span lang="de">Zulässige Berührungsspannung</span><span lang="en">Permissible touch voltage</span></h3>
-    <p lang="de">Weil landwirtschaftliche Betriebsstätten als Bereiche mit <strong>erhöhter Gefährdung</strong> gelten, ist die zulässige Berührungsspannung reduziert — üblicherweise auf <strong>25 V AC</strong> statt 50 V.</p>
-    <p lang="en">Because agricultural premises count as areas with <strong>increased risk</strong>, the permissible touch voltage is reduced — usually to <strong>25 V AC</strong> instead of 50 V.</p>
+    <p lang="de">Für Tierbereiche gelten besondere Anforderungen an Berührungsspannungen und Schutzpotentialausgleich. Ein pauschaler Wert von 25 V AC für den gesamten Hof ist keine vollständige Bemessungsregel. Anwendungsbereich, Stromart und Abschaltbedingungen sind in der geltenden NIN objektspezifisch zu prüfen. Kleine Differenzspannungen können zudem relevant sein, lange bevor eine Schutzgrenze erreicht ist.</p>
+    <p lang="en">Livestock locations have specific touch-voltage and bonding requirements. A blanket 25 V AC value for an entire farm is not a complete design rule. Verify the applicable location, current type and disconnection conditions under NIN. Small potential differences may also matter well below a protective limit.</p>
   </div>
 </section>
 
@@ -252,14 +241,14 @@
 
     <h3><span lang="de">Materialwahl</span><span lang="en">Choice of materials</span></h3>
     <ul lang="de">
-      <li><strong>Schutzart</strong> mindestens IP54, in Nassbereichen und bei Hochdruckreinigung entsprechend höher</li>
+      <li><strong>Schutzart</strong> nach Staub, Wasser und Reinigungsverfahren wählen; Hochdrucktauglichkeit gesondert nachweisen</li>
       <li><strong>Kunststoffgehäuse</strong> statt Metall, wo Ammoniak wirkt — oder Edelstahl</li>
       <li><strong>UV- und ammoniakbeständige</strong> Rohre und Kanäle</li>
       <li><strong>Leuchten</strong> geschlossen, staubdicht und reinigbar; Wärmestau im Staub vermeiden</li>
       <li><strong>Kabel</strong> mechanisch geschützt verlegen, ausserhalb der Reichweite von Tieren und Maschinen</li>
     </ul>
     <ul lang="en">
-      <li><strong>IP rating</strong> at least IP54, correspondingly higher in wet areas and where pressure washing is used</li>
+      <li><strong>IP rating</strong> selected for dust, water and cleaning; separately verify pressure-washing suitability</li>
       <li><strong>Plastic enclosures</strong> rather than metal where ammonia acts — or stainless steel</li>
       <li><strong>UV- and ammonia-resistant</strong> conduits and trunking</li>
       <li><strong>Luminaires</strong> sealed, dust tight and cleanable; avoid heat build-up under dust</li>
@@ -313,8 +302,8 @@
     <details>
       <summary><span lang="de">Welche zwei FI-Ebenen sind auf einem Hof üblich?</span><span lang="en">Which two RCD levels are usual on a farm?</span></summary>
       <div class="ans">
-        <p lang="de">30 mA für den Personen- und Tierschutz in den Endstromkreisen und 300 mA als vorgelagerter Brandschutz. Der vorgelagerte FI wird selektiv ausgeführt, damit ein Fehler nicht den ganzen Betrieb abschaltet.</p>
-        <p lang="en">30 mA for the protection of people and animals in the final circuits, and 300 mA as upstream fire protection. The upstream device is made selective so a fault does not shut down the whole farm.</p>
+        <p lang="de">Zusätzlicher Schutz mit RCD ≤ 30 mA und Fehler-/Brandschutz mit passend bemessenen RCDs erfüllen verschiedene Aufgaben. Die notwendige Zuordnung hängt von Stromkreis und NIN-Anforderung ab. Eine vorgelagerte 300-mA-Stufe ist nicht automatisch für jede Installation richtig.</p>
+        <p lang="en">Additional protection by RCD ≤ 30 mA and fault/fire protection by appropriately rated RCDs serve different purposes. Required allocation depends on the circuit and NIN requirements. An upstream 300 mA stage is not automatically correct for every installation.</p>
       </div>
     </details>
 
@@ -337,16 +326,16 @@
     <details>
       <summary><span lang="de">Welche zulässige Berührungsspannung gilt in der Landwirtschaft?</span><span lang="en">What permissible touch voltage applies in agriculture?</span></summary>
       <div class="ans">
-        <p lang="de">Üblicherweise 25 V AC statt der 50 V, die in normaler Umgebung gelten — weil landwirtschaftliche Betriebsstätten als Bereiche mit erhöhter Gefährdung eingestuft sind.</p>
-        <p lang="en">Usually 25 V AC instead of the 50 V that applies in a normal environment — because agricultural premises are classified as areas with increased risk.</p>
+        <p lang="de">Die zulässige Berührungsspannung ist für den konkreten Tierbereich, die Stromart und Schutzmassnahme nach NIN zu bestimmen. 25 V AC ist keine pauschale Freigabe für jedes landwirtschaftliche Gebäude und erst recht keine unbedenkliche Dauerspannung für Tiere.</p>
+        <p lang="en">Determine the permissible touch voltage for the livestock location, current type and protective measure under NIN. 25 V AC is neither a blanket limit for every agricultural building nor a harmless continuous voltage for animals.</p>
       </div>
     </details>
 
     <details>
       <summary><span lang="de">Warum wählst du im Stall Kunststoff- statt Metallgehäuse?</span><span lang="en">Why choose plastic rather than metal enclosures in a barn?</span></summary>
       <div class="ans">
-        <p lang="de">Wegen des Ammoniaks aus Gülle und Einstreu. Es greift Metall und Kontaktstellen an. Kunststoff oder Edelstahl halten der Belastung stand, verzinkter Stahl korrodiert.</p>
-        <p lang="en">Because of the ammonia from slurry and bedding. It attacks metal and contact points. Plastic or stainless steel withstand it; galvanised steel corrodes.</p>
+        <p lang="de">Feuchte, Ammoniak und Reinigungsmittel können Werkstoffe und Kontakte angreifen. Entscheidend ist die nachgewiesene Beständigkeit des konkreten Gehäuses, einschliesslich Dichtungen und Verschraubungen. Weder Kunststoff noch Edelstahl ist ohne passende Werkstoffauswahl pauschal geeignet.</p>
+        <p lang="en">Moisture, ammonia and cleaning agents can attack materials and contacts. The specific enclosure, including seals and glands, needs verified resistance. Neither plastic nor stainless steel is universally suitable without appropriate material selection.</p>
       </div>
     </details>
 
@@ -368,6 +357,7 @@
   </div>
 </section>
 
+<aside class="lesson-sources" aria-labelledby="sources-title"><h2 id="sources-title"><span lang="de">Quellen und Vertiefung</span><span lang="en">Sources and further reading</span></h2><ul><li><a href="https://www.electrosuisse.ch/de/nin-2025/">Electrosuisse: NIN 2025</a></li><li><a href="https://www.bul.ch/fachthemen/sicherheit-im-betrieb/elektrizitaet">BUL: Elektrizität im Landwirtschaftsbetrieb</a></li><li><a href="https://www.esti.admin.ch/inhalte/pdf/NIV_I/Deutsch/Publikationen/2017_2018/2018-12_streustroeme_tierhaltung_d.pdf">ESTI: Streuströme in Tierhaltungsbetrieben</a></li></ul></aside>
 <nav class="pager">
   <a href="06-badezimmer.html">
     <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>

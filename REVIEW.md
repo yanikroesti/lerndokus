@@ -40,7 +40,44 @@ Stand: 13. September 2026. Die Prüfung erfolgt themenweise. «Bearbeitet» bede
 - Drei bestehende Illustrationen mit englischen Alternativtexten; vorhandenes Wirkprinzipbild ist keine Anschlussanleitung.
 - Quellen: ABB, Doepke, Schneider Electric. Keine Übernahme deutscher Anwendungsregeln als Schweizer NIN-Pflicht.
 
-### 05–12 – noch in Bearbeitung
+### 05 IP-Kennzeichnung – bearbeitet
+
+- Deutschen Text vollständig gelesen, betroffene englische Texte und Fragen angepasst.
+- Doppelkennzeichnung für Strahlwasser/Untertauchen korrigiert, IK von Ballwurfsicherheit getrennt.
+- Beschädigte Dichtung nicht mehr als automatisch IP20 bezeichnet; Montagerichtung nach Hersteller.
+- Raumtabelle als Orientierung statt verbindliche Mindestwerttabelle bezeichnet; keine vollständige IK-Skala behauptet.
+- Quellen: Rittal, LEDVANCE, TRILUX, IEC.
+
+### 06 Badezimmer – fachlich überarbeitet, NIN-Abgleich offen
+
+- Deutschen Text vollständig gelesen; Potentialausgleich und Bestandesschutz präzisiert.
+- Pauschale Anschlusspflicht aller Metallteile entfernt; Teile müssen nach ihrer Funktion und Potentialeinführung beurteilt werden.
+- Wannenzeichnung als native Vektorgrafik neu aufgebaut; Bereich 0 folgt der Wannenform. Bestehende Schriftgrössenanpassung (17 px) erhalten.
+- Sichtbarer Hinweis direkt an der Bereichsübersicht: vereinfachtes Wannenbeispiel; vollständige NIN-2025-Ausnahmen, Duschvarianten und Betriebsmittelzulässigkeit noch nicht anhand der lizenzierten Norm verifiziert.
+- Quellen: Electrosuisse, DKE (nur Definition/Abgrenzung, keine Übertragung deutscher Regeln), ESTI.
+
+### 07 Landwirtschaft – überarbeitet
+
+- Deutschen Text vollständig gelesen; RCD-Brandschutz ohne Zündverhinderungs-Garantie erklärt, Selektivität und Materialbeständigkeit präzisiert.
+- Pauschalen 25-V-Grenzwert für den gesamten Hof entfernt. Differenzspannungen in Tierbereichen anhand ESTI eingeordnet.
+- Neues, visuell geprüftes Stall-Kontextbild; keine Aussage zur Zulassung einzelner abgebildeter Bauteile.
+- NIN-Stromkreiszuordnung und konkrete Schutzarten bleiben objektspezifisch nachzuweisen.
+
+### 08 Schreinerei – überarbeitet
+
+- Deutschen Text vollständig gelesen; Staubschichten nicht mehr als harmlos-langsam dargestellt; Ex-Eignung von IP getrennt.
+- Pauschale Flimmerfreiheit elektronischer Vorschaltgeräte entfernt; Stroboskopeffekt und sichtbares Flimmern unterschieden.
+- Neues, visuell geprüftes Werkstatt-Kontextbild; kein Ex- oder Maschinensicherheitsnachweis.
+- Quellen Suva und Electrosuisse; konkrete Sicherheitsfunktionen und Zoneneinteilung erfordern die Anlagenbeurteilung.
+
+### 09 Baustellen – überarbeitet
+
+- Deutschen Text vollständig gelesen; Kabeltrommel-Wärme mit Leiterverlusten und Wärmeabfuhr erklärt, falsche Spulenbegründung entfernt.
+- H07RN-F nicht mehr als automatisch überfahrfest dargestellt. Sichtkontrolle ersetzt keine Messung.
+- RCD-Bemessung ≤/über 32 A in der Kontrollantwort differenziert, besondere leitfähige Bereiche präzisiert.
+- Neues, visuell geprüftes Bild zu Kabelbrücke und erhöhtem Verteiler; Quellen Suva, Brennenstuhl, Electrosuisse-Fachbeitrag.
+
+### 10–12 – noch in Bearbeitung
 
 ## Lehrjahr 3
 

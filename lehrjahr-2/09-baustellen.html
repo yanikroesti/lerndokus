@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/doku.css">
+<link rel="stylesheet" href="../assets/lesson.css">
 </head>
 <body>
 
@@ -50,27 +51,13 @@
 </div>
 
 <!-- ================= 1 ================= -->
+<nav class="lesson-contents" aria-labelledby="contents-title"><h2 id="contents-title"><span lang="de">In diesem Kapitel</span><span lang="en">In this chapter</span></h2><ol><li><a href="#s1"><span lang="de">Warum die Baustelle Sonderregeln braucht</span><span lang="en">Why sites need special rules</span></a></li><li><a href="#s2"><span lang="de">Der Baustromverteiler</span><span lang="en">The site distribution board</span></a></li><li><a href="#s3"><span lang="de">FI-Schutz und Schutzmassnahmen</span><span lang="en">RCD protection and protective measures</span></a></li><li><a href="#s4"><span lang="de">Leitungen und Betriebsmittel</span><span lang="en">Cables and equipment</span></a></li><li><a href="#s5"><span lang="de">Prüfung und Betrieb</span><span lang="en">Testing and operation</span></a></li><li><a href="#s6"><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></a></li></ol></nav>
 <section id="s1">
   <div class="snum">01</div>
   <div class="sbody">
 
-    <figure class="spot">
-      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Baustromverteiler">
-        <rect x="62" y="30" width="96" height="90" rx="6" fill="#D8A72A" stroke="#171614" stroke-width="2.4"/>
-        <rect x="74" y="44" width="72" height="20" rx="3" fill="#EFEAE0" stroke="#171614" stroke-width="1.8"/>
-        <circle cx="88" cy="80" r="8" fill="#1D5872" stroke="#153F52" stroke-width="1.8"/>
-        <circle cx="110" cy="80" r="8" fill="#B8402A" stroke="#8A2F1E" stroke-width="1.8"/>
-        <circle cx="132" cy="80" r="8" fill="#1D5872" stroke="#153F52" stroke-width="1.8"/>
-        <circle cx="92" cy="100" r="2.6" fill="#171614"/>
-        <circle cx="128" cy="100" r="2.6" fill="#171614"/>
-        <path d="M96 110 q 14 7 28 0" fill="none" stroke="#171614" stroke-width="2" stroke-linecap="round"/>
-        <path d="M74 120 v16 M146 120 v16" stroke="#171614" stroke-width="2.6" stroke-linecap="round"/>
-        <path d="M158 96 q 26 4 34 22" fill="none" stroke="#26241F" stroke-width="5" stroke-linecap="round"/>
-        <path d="M46 24 h130" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
-      </svg>
-    </figure>
-
     <h2><span lang="de">Warum die Baustelle Sonderregeln braucht</span><span lang="en">Why sites need special rules</span></h2>
+<figure class="lesson-illustration"><img lang="de" src="../assets/img/baustelle-kabelfuehrung.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Baustromverteiler auf erhöhtem Gestell mit Leitung in einer Kabelbrücke."><img lang="en" src="../assets/img/baustelle-kabelfuehrung.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Raised site distribution board with a cable crossing in a protective ramp."><figcaption><span lang="de">Leitungen an Verkehrswegen schützen und Steckverbindungen aus Wasser und Schlamm halten. <small>KI-generierte Anschauung.</small></span><span lang="en">Protect cables at crossings and keep connectors out of water and mud. <small>AI-generated illustration.</small></span></figcaption></figure>
 
     <p class="lead" lang="de">Die Baustelle ist die härteste Umgebung, in der eine elektrische Installation arbeiten muss. Alles, was in einer fertigen Anlage geschützt und fest ist, ist hier <strong>provisorisch, beweglich und im Weg</strong>.</p>
     <p class="lead" lang="en">A construction site is the harshest environment an electrical installation has to work in. Everything that is protected and fixed in a finished installation is here <strong>temporary, movable and in the way</strong>.</p>
@@ -95,8 +82,8 @@
 
     <div class="callout">
       <b class="tag"><span lang="de">Der Kernsatz</span><span lang="en">The core statement</span></b>
-      <p lang="de">Auf der Baustelle steht man auf feuchtem Beton, hält ein Handwerkzeug und berührt Armierung oder Gerüst. Der Körper ist damit <strong>bestmöglich mit der Erde verbunden</strong>. Genau deshalb ist der FI-Schutz hier nicht eine Massnahme unter vielen, sondern <strong>die</strong> Massnahme.</p>
-      <p lang="en">On a site you stand on damp concrete, hold a power tool and touch reinforcement or scaffolding. The body is therefore <strong>as well connected to earth as it can be</strong>. That is precisely why RCD protection here is not one measure among many but <strong>the</strong> measure.</p>
+      <p lang="de">Feuchter Beton und berührbare Metallteile können den Kontakt zur Erde begünstigen. RCD-Schutz ist deshalb wichtig, wirkt aber nur zusammen mit intakten Geräten, Schutzleitern, geeigneter Leitungsführung und regelmässiger Prüfung. Er erlaubt keinen Weiterbetrieb beschädigter Betriebsmittel.</p>
+      <p lang="en">Wet concrete and accessible metalwork can increase contact with earth. RCD protection is important but depends on sound equipment, protective conductors, suitable cable routing and regular checks. It does not permit continued use of damaged equipment.</p>
     </div>
   </div>
 </section>
@@ -142,7 +129,7 @@
 <section id="s3">
   <div class="snum">03</div>
   <div class="sbody">
-    <h2><span lang="de">FI-Schutz und Schutzmassnahmen</span><span lang="en">RCD protection and protective measures</span></h2>
+    <h2><span lang="de">FI-Schutz und Schutzmassnahmen</span><span lang="en">RCD protection and protective measures</span></h2><p lang="de">Baustromverteiler: Steckdosen ≤ 32 A mit RCD ≤ 30 mA; Steckdosen &gt; 32 A mit RCD ≤ 300 mA. Die Umrüstfristen für bestehende Verteiler endeten spätestens Ende 2023. Quelle: Electrosuisse-Fachbeitrag beim Baumeisterverband.</p><p lang="en">Site distribution boards: sockets ≤ 32 A with RCD ≤ 30 mA; sockets &gt; 32 A with RCD ≤ 300 mA. Retrofit deadlines for existing boards ended by the end of 2023. Source: Electrosuisse article published by the Swiss Contractors’ Association.</p>
 
     <div class="tablewrap">
       <table>
@@ -175,8 +162,8 @@
 
     <div class="callout">
       <b class="tag"><span lang="de">Enge leitfähige Räume</span><span lang="en">Confined conductive spaces</span></b>
-      <p lang="de">In einem Metallbehälter, einem Kessel oder einem engen Schacht ist der Körper rundherum von leitfähigem Material umgeben — Ausweichen ist unmöglich. Hier genügt der FI nicht mehr. Es wird mit <strong>Schutzkleinspannung</strong> gearbeitet, und die Speisequelle steht <strong>ausserhalb</strong> des Behälters. Zusätzlich ist eine Aufsichtsperson ausserhalb erforderlich.</p>
-      <p lang="en">Inside a metal tank, a boiler or a narrow shaft the body is surrounded by conductive material on all sides — there is no way to move clear. An RCD is no longer sufficient here. Work is done at <strong>extra-low voltage</strong> and the supply unit stands <strong>outside</strong> the vessel. A person keeping watch outside is also required.</p>
+      <p lang="de">Bei leitfähigen Bereichen mit begrenzter Bewegungsfreiheit sind die zulässigen Schutzmassnahmen für das jeweilige Betriebsmittel gesondert zu bestimmen: etwa SELV oder Schutztrennung mit einem Verbraucher. Ein RCD allein reicht hier nicht. Speisequellen, Aufsicht und Rettung sind nach Einsatzbedingungen zu planen.</p>
+      <p lang="en">For conducting locations with restricted movement, determine the permitted protective measures for each item, such as SELV or electrical separation for one load. An RCD alone is insufficient. Plan supply sources, supervision and rescue for the working conditions.</p>
     </div>
   </div>
 </section>
@@ -188,8 +175,8 @@
     <h2><span lang="de">Leitungen und Betriebsmittel</span><span lang="en">Cables and equipment</span></h2>
 
     <h3><span lang="de">Leitungstypen</span><span lang="en">Cable types</span></h3>
-    <p lang="de">Auf der Baustelle werden <strong>schwere Gummischlauchleitungen</strong> verwendet. Sie halten Zug, Knicken, Kälte, UV und das Überfahren aus. Leichte PVC-Leitungen und Haushaltverlängerungen haben auf der Baustelle nichts verloren.</p>
-    <p lang="en">On site, <strong>heavy rubber-sheathed flexible cables</strong> are used. They withstand tension, kinking, cold, UV and being driven over. Light PVC cords and domestic extension leads have no place on a construction site.</p>
+    <p lang="de">Auf Baustellen sind für die Beanspruchung geeignete robuste Leitungen einzusetzen, beispielsweise H07RN-F bei passender Herstellerfreigabe. Auch solche Leitungen sind <strong>nicht automatisch überfahrfest</strong>. Fahrzeuglasten, scharfe Kanten und Zugkräfte müssen durch Verlegung und mechanischen Schutz beherrscht werden.</p>
+    <p lang="en">Construction sites require robust cables suitable for the exposure, such as H07RN-F where approved. These are <strong>not automatically vehicle-proof</strong>. Route and protect them against vehicle loads, sharp edges and tensile forces.</p>
 
     <div class="tablewrap">
       <table>
@@ -225,8 +212,8 @@
 
     <div class="callout gold">
       <b class="tag"><span lang="de">Warum die Kabeltrommel wirklich abgerollt gehört</span><span lang="en">Why a cable drum really must be unrolled</span></b>
-      <p lang="de">Eine aufgerollte Trommel hat zwei Probleme gleichzeitig: Die inneren Windungen können ihre Wärme nicht abgeben, und die Wicklung wirkt als Spule. Bei voller Last erreicht die Isolation innert kurzer Zeit Temperaturen, die sie dauerhaft schädigen — der Schaden bleibt unsichtbar, bis es später an dieser Stelle zum Fehler kommt.</p>
-      <p lang="en">A coiled drum has two problems at once: the inner turns cannot release their heat, and the winding acts as a coil. At full load the insulation reaches temperatures within a short time that damage it permanently — the damage stays invisible until a fault develops at that point later.</p>
+      <p lang="de">Die Stromwärmeverluste entstehen durch den Leiterwiderstand: <strong>P = I² · R</strong>. Auf der Trommel wird diese Wärme schlechter abgeführt. Hin- und Rückleiter liegen im selben Kabel; eine starke zusätzliche Spulenwirkung erklärt die Überhitzung nicht. Herstellerangaben zur Belastbarkeit auf- und abgerollt beachten und für hohe Last vollständig abrollen.</p>
+      <p lang="en">Resistive losses produce heat: <strong>P = I² · R</strong>. A wound reel dissipates this heat poorly. Outgoing and returning conductors share the cable; a strong additional coil effect does not explain the overheating. Observe the wound and unwound load ratings and fully unwind for high loads.</p>
     </div>
   </div>
 </section>
@@ -261,8 +248,8 @@
     </ul>
 
     <h3><span lang="de">Tägliche Sichtkontrolle</span><span lang="en">Daily visual check</span></h3>
-    <p lang="de">Vor jedem Einsatz eines Gerätes oder einer Verlängerung wird kurz hingeschaut: Ist der Mantel unverletzt? Sitzt der Stecker fest? Ist die Zugentlastung intakt? Steht die Verteilung trocken? Diese zehn Sekunden verhindern die meisten Unfälle.</p>
-    <p lang="en">Before using any tool or extension lead, take a quick look: is the sheath undamaged? Is the plug firm? Is the strain relief intact? Is the distribution board standing dry? Those ten seconds prevent most accidents.</p>
+    <p lang="de">Vor jedem Einsatz Sichtkontrolle durchführen: Mantel, Stecker, Zugentlastung, Deckel und Aufstellort prüfen. Beschädigte Geräte ausser Betrieb nehmen und gegen Weiterbenutzung sichern. Eine Sichtkontrolle erkennt nicht jeden elektrischen Fehler und ersetzt die vorgesehenen Messungen nicht.</p>
+    <p lang="en">Before each use, visually check the sheath, plug, strain relief, covers and location. Remove damaged equipment from service and prevent further use. Visual checks cannot detect every electrical fault and do not replace required measurements.</p>
 
     <div class="callout">
       <b class="tag"><span lang="de">Bauprovisorien</span><span lang="en">Temporary installations</span></b>
@@ -295,32 +282,32 @@
     <details>
       <summary><span lang="de">Welchen FI brauchen Steckdosen auf der Baustelle?</span><span lang="en">Which RCD do site sockets need?</span></summary>
       <div class="ans">
-        <p lang="de">Einen FI mit 30 mA für den Personenschutz. Er ist auf der Baustelle die entscheidende Schutzmassnahme, weil die Zuleitungen der Handgeräte laufend beschädigt werden.</p>
-        <p lang="en">A 30 mA RCD for personal protection. On site it is the decisive protective measure, because the leads of hand tools are continually damaged.</p>
+        <p lang="de">Bei Baustromverteilern gilt für Steckdosen bis einschliesslich 32 A RCD ≤ 30 mA, für Steckdosen über 32 A RCD ≤ 300 mA. Stromform und Gerätevorgaben bestimmen zusätzlich den erforderlichen Typ. Die höhere Stufe bietet keinen zusätzlichen Schutz wie ein 30-mA-RCD.</p>
+        <p lang="en">For site distribution boards, sockets up to and including 32 A require RCD ≤ 30 mA; sockets above 32 A require RCD ≤ 300 mA. Waveforms and equipment instructions also determine the required type. The higher rating does not provide the additional protection of a 30 mA RCD.</p>
       </div>
     </details>
 
     <details>
       <summary><span lang="de">Welchen Leitungstyp verwendest du und welchen nicht?</span><span lang="en">Which cable type do you use, and which not?</span></summary>
       <div class="ans">
-        <p lang="de">Schwere Gummischlauchleitung, zum Beispiel H07RN-F. Sie hält Zug, Knicken, Kälte, UV und das Überfahren aus. Leichte PVC-Schlauchleitungen wie H05VV-F und Haushaltverlängerungen sind auf der Baustelle nicht zulässig.</p>
-        <p lang="en">Heavy rubber flexible cable, for example H07RN-F. It withstands tension, kinking, cold, UV and being driven over. Light PVC cords such as H05VV-F and domestic extension leads are not permitted on site.</p>
+        <p lang="de">Eine für Baustellenbeanspruchung zugelassene Leitung, beispielsweise H07RN-F. Herstellerfreigabe und Einsatzbedingungen beachten. Gegen Überfahren ist zusätzlicher mechanischer Schutz nötig; eine leichte Haushaltsverlängerung ist kein Ersatz.</p>
+        <p lang="en">Use cable approved for construction-site service, for example H07RN-F. Observe manufacturer approval and operating conditions. Vehicle crossings require additional mechanical protection; a light domestic extension is no substitute.</p>
       </div>
     </details>
 
     <details>
       <summary><span lang="de">Warum muss eine Kabeltrommel vollständig abgerollt werden?</span><span lang="en">Why must a cable drum be completely unrolled?</span></summary>
       <div class="ans">
-        <p lang="de">Aufgerollt können die inneren Windungen ihre Verlustwärme nicht abgeben, und die Wicklung wirkt zusätzlich als Spule. Die Isolation überhitzt und wird dauerhaft geschädigt — sichtbar wird der Schaden erst später beim Fehler.</p>
-        <p lang="en">Coiled, the inner turns cannot dissipate their heat losses, and the winding additionally acts as a coil. The insulation overheats and is permanently damaged — the damage only becomes visible later when a fault occurs.</p>
+        <p lang="de">Aufgerollt staut sich die durch den Leiterwiderstand erzeugte Wärme. Die geringere zulässige Last im aufgerollten Zustand steht auf dem Gerät. Für hohe Last vollständig abrollen; der thermische Schutz ist keine Erlaubnis zur Überlastung.</p>
+        <p lang="en">When wound, heat generated by conductor resistance accumulates. The lower permitted wound load is marked on the device. Fully unwind for high loads; thermal protection is not permission to overload.</p>
       </div>
     </details>
 
     <details>
       <summary><span lang="de">Welche Schutzmassnahme gilt in einem engen leitfähigen Raum?</span><span lang="en">Which protective measure applies in a confined conductive space?</span></summary>
       <div class="ans">
-        <p lang="de">Schutzkleinspannung. Der FI reicht dort nicht, weil der Körper rundherum von leitfähigem Material umgeben ist und nicht ausweichen kann. Die Speisequelle steht ausserhalb des Behälters, und eine Aufsichtsperson bleibt draussen.</p>
-        <p lang="en">Extra-low voltage. An RCD is not enough there, because the body is surrounded by conductive material on all sides and cannot move clear. The supply unit stands outside the vessel and a person keeps watch outside.</p>
+        <p lang="de">Für leitfähige Bereiche mit begrenzter Bewegungsfreiheit sind besondere Schutzmassnahmen zu wählen: etwa SELV oder, soweit für den Verbraucher zulässig, Schutztrennung mit einem einzelnen Verbraucher. Handleuchten und andere Betriebsmittel sind gesondert zu beurteilen. Speisequelle und Rettungsorganisation sind nach den konkreten Anforderungen anzuordnen; ein gewöhnlicher RCD allein reicht nicht.</p>
+        <p lang="en">Conducting locations with restricted movement require special protective measures, such as SELV or, where permitted for the load, electrical separation supplying one item. Assess hand lamps and other equipment separately. Arrange the supply source and rescue provisions to meet the specific requirements; an ordinary RCD alone is insufficient.</p>
       </div>
     </details>
 
@@ -350,6 +337,7 @@
   </div>
 </section>
 
+<aside class="lesson-sources" aria-labelledby="sources-title"><h2 id="sources-title"><span lang="de">Quellen und Vertiefung</span><span lang="en">Sources and further reading</span></h2><ul><li><a href="https://www.electrosuisse.ch/de/nin-2025/">Electrosuisse: NIN 2025</a></li><li><a href="https://www.suva.ch/de-ch/download/checklisten/elektrizitaet-auf-baustellen/elektrizitaet-auf-baustellen--67081.D">Suva: Elektrizität auf Baustellen</a></li><li><a href="https://www.brennenstuhl.co.uk/en-GB/selection-of-themes/safety/why-you-should-always-unwind-a-cable-reel-completely-and-untangle-an-extension-cable-completely">Brennenstuhl: Kabeltrommel abrollen</a></li><li><a href="https://baumeister.swiss/elektrische-installationen-auf-baustellen/">Electrosuisse / Baumeisterverband: Baustelleninstallationen</a></li></ul></aside>
 <nav class="pager">
   <a href="08-schreinerei.html">
     <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>

@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/doku.css">
+<link rel="stylesheet" href="../assets/lesson.css">
 </head>
 <body>
 
@@ -50,22 +51,10 @@
 </div>
 
 <!-- ================= 1 ================= -->
+<nav class="lesson-contents" aria-labelledby="contents-title"><h2 id="contents-title"><span lang="de">In diesem Kapitel</span><span lang="en">In this chapter</span></h2><ol><li><a href="#s1"><span lang="de">Warum das Bad ein Sonderfall ist</span><span lang="en">Why a bathroom is a special case</span></a></li><li><a href="#s2"><span lang="de">Die Bereiche und ihre Masse</span><span lang="en">The zones and their dimensions</span></a></li><li><a href="#s3"><span lang="de">Was darf wo installiert werden</span><span lang="en">What may be installed where</span></a></li><li><a href="#s4"><span lang="de">Zusätzlicher Potentialausgleich</span><span lang="en">Supplementary equipotential bonding</span></a></li><li><a href="#s5"><span lang="de">Planung und typische Fehler</span><span lang="en">Planning and typical mistakes</span></a></li><li><a href="#s6"><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></a></li></ol></nav>
 <section id="s1">
   <div class="snum">01</div>
   <div class="sbody">
-
-    <figure class="spot">
-      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Badewanne mit Wassertropfen">
-        <path d="M36 78 h148 v22 a26 26 0 0 1 -26 26 H62 a26 26 0 0 1 -26 -26 z" fill="#D6E3E9" stroke="#171614" stroke-width="2.4" stroke-linejoin="round"/>
-        <path d="M28 78 h164" stroke="#171614" stroke-width="2.6" stroke-linecap="round"/>
-        <path d="M56 78 v-24 a10 10 0 0 1 20 0" fill="none" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
-        <circle cx="90" cy="100" r="3" fill="#171614"/>
-        <circle cx="126" cy="100" r="3" fill="#171614"/>
-        <path d="M94 112 q 14 8 28 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
-        <path d="M156 34 q 10 14 0 20 q -10 -6 0 -20 z" fill="#1D5872" stroke="#153F52" stroke-width="1.6"/>
-        <path d="M182 52 q 8 11 0 16 q -8 -5 0 -16 z" fill="#1D5872" stroke="#153F52" stroke-width="1.6"/>
-      </svg>
-    </figure>
 
     <h2><span lang="de">Warum das Bad ein Sonderfall ist</span><span lang="en">Why a bathroom is a special case</span></h2>
 
@@ -89,7 +78,7 @@
 <section id="s2">
   <div class="snum">02</div>
   <div class="sbody">
-    <h2><span lang="de">Die Bereiche und ihre Masse</span><span lang="en">The zones and their dimensions</span></h2>
+    <h2><span lang="de">Die Bereiche und ihre Masse</span><span lang="en">The zones and their dimensions</span></h2><div class="callout"><p lang="de"><strong>Vereinfachtes Wannenbeispiel.</strong> Die Skizze zeigt eine Wanne ohne Abtrennung, mit Wasserauslass unterhalb der dargestellten oberen Grenze. Duschen ohne Wanne, höher liegende feste Auslässe und feste Abtrennungen sind gesondert nach NIN zu beurteilen. Die folgenden Tabellen sind eine Lernübersicht; die vollständigen NIN-2025-Regeln und Ausnahmen sind hier noch nicht anhand des lizenzierten Normtextes abgeglichen.</p><p lang="en"><strong>Simplified bath example.</strong> The sketch shows a bath without partitions and with its water outlet below the illustrated upper boundary. Showers without a tray, higher fixed outlets and fixed partitions require separate assessment under NIN. The following tables are a learning overview; the complete NIN 2025 rules and exceptions have not yet been checked against the licensed standard.</p></div>
 
     <figure>
       <svg viewBox="0 0 1620 1010" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bereichseinteilung im Badezimmer mit Massen">
@@ -98,16 +87,16 @@
             .zl{font-family:'Archivo',sans-serif;font-size:44px;font-weight:800;text-anchor:middle}
             .dim{fill:none;stroke:#48433B;stroke-width:2}
             .dl{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:600;fill:#171614;text-anchor:middle}
-            .lgs{font-family:'IBM Plex Mono',monospace;font-size:26px;fill:#7D7669;letter-spacing:.06em}
+            .lgs{font-family:'IBM Plex Mono',monospace;font-size:17px;fill:#7D7669;letter-spacing:.06em}
           </style>
         </defs>
 
-        <image href="../assets/img/bad-schema-bereiche.webp" x="120" y="60" width="1500" height="874"/>
+        <path d="M144 170 V826 H1250 M144 290 H230 V330 M205 345 Q230 320 255 345" fill="none" stroke="#48433B" stroke-width="4"/><path d="M160 670 H640 Q610 818 560 818 H230 Q180 818 160 670Z" fill="#F4F1EA" stroke="#48433B" stroke-width="4"/>
 
         <!-- Zonenflaechen über der Zeichnung, halbtransparent -->
         <rect x="658" y="230" width="159" height="596" fill="#1D5872" opacity=".16"/>
         <rect x="144" y="230" width="514" height="596" fill="#D8A72A" opacity=".22"/>
-        <rect x="160" y="670" width="480" height="148" fill="#B8402A" opacity=".24"/>
+        <path d="M160 670 H640 Q610 818 560 818 H230 Q180 818 160 670Z" fill="#B8402A" opacity=".24"/>
 
         <!-- 2.25-m-Linie -->
         <path d="M144 230 H817" stroke="#48433B" stroke-width="2" stroke-dasharray="9 6" fill="none"/>
@@ -222,27 +211,27 @@
       <b class="tag"><span lang="de">Die drei Kernregeln</span><span lang="en">The three core rules</span></b>
       <ol lang="de">
         <li><strong>Steckdosen erst ausserhalb von Bereich 2.</strong> In den Bereichen 0, 1 und 2 haben normale Steckdosen nichts verloren.</li>
-        <li><strong>Die ganze Installation im Bad über FI mit 30 mA.</strong></li>
-        <li><strong>Zusätzlicher Potentialausgleich</strong> für alle fremden leitfähigen Teile im Raum.</li>
+        <li><strong>Zusätzlichen Schutz durch RCD ≤ 30 mA vorsehen; normierte Ausnahmen gesondert prüfen.</strong></li>
+        <li>Erfordernis und Umfang des zusätzlichen Schutzpotentialausgleichs nachweisen.</li>
       </ol>
       <ol lang="en">
         <li><strong>Sockets only outside zone 2.</strong> Ordinary sockets have no place in zones 0, 1 and 2.</li>
-        <li><strong>The entire bathroom installation behind a 30 mA RCD.</strong></li>
-        <li><strong>Supplementary equipotential bonding</strong> for all extraneous conductive parts in the room.</li>
+        <li><strong>Provide additional protection by RCD ≤ 30 mA; verify standard-defined exceptions separately.</strong></li>
+        <li>Verify the need for and extent of supplementary protective bonding.</li>
       </ol>
     </div>
 
     <h3><span lang="de">Weitere Anforderungen</span><span lang="en">Further requirements</span></h3>
     <ul lang="de">
-      <li><strong>Schalter</strong> gehören ebenfalls ausserhalb der Bereiche — bei fensterlosen Bädern wird der Lichtschalter oft ausserhalb der Tür gesetzt</li>
-      <li><strong>Verteilungen und Abzweigdosen</strong> sind in den Bereichen unzulässig</li>
+      <li>Gewöhnliche Netzspannungsschalter ausserhalb der Bereiche planen; Sonderlösungen nach NIN beurteilen</li>
+      <li>Verteilungen ausserhalb der Bereiche planen; Anschlussdosen für zulässige Betriebsmittel nach NIN beurteilen</li>
       <li><strong>Leitungen</strong> dürfen die Bereiche nur durchqueren, soweit sie die dortigen Betriebsmittel versorgen — keine Fremddurchführungen</li>
       <li><strong>Speisegeräte</strong> für Kleinspannung stehen ausserhalb von Bereich 0 und 1</li>
       <li><strong>Rasiersteckdosen</strong> mit Trenntransformator sind eine anerkannte Sonderlösung mit eigenen Anforderungen</li>
     </ul>
     <ul lang="en">
-      <li><strong>Switches</strong> also belong outside the zones — in windowless bathrooms the light switch is often placed outside the door</li>
-      <li><strong>Distribution boards and junction boxes</strong> are not permitted in the zones</li>
+      <li>Plan ordinary mains switches outside the zones; assess special solutions under NIN</li>
+      <li>Plan distribution boards outside the zones; assess connection boxes for permitted equipment under NIN</li>
       <li><strong>Cables</strong> may only cross the zones to the extent that they supply the equipment there — no unrelated routes</li>
       <li><strong>Supply units</strong> for extra-low voltage are located outside zones 0 and 1</li>
       <li><strong>Shaver sockets</strong> with an isolating transformer are a recognised special solution with their own requirements</li>
@@ -256,8 +245,8 @@
   <div class="sbody">
     <h2><span lang="de">Zusätzlicher Potentialausgleich</span><span lang="en">Supplementary equipotential bonding</span></h2>
 
-    <p lang="de">Im Bad reicht der Schutzleiter allein nicht. Es kommt ein <strong>zusätzlicher Potentialausgleich</strong> dazu, der alle metallenen Teile im Raum leitend miteinander verbindet.</p>
-    <p lang="en">In a bathroom the protective conductor alone is not enough. <strong>Supplementary equipotential bonding</strong> is added, connecting all metal parts in the room together.</p>
+    <p lang="de">Zuerst ist zu prüfen, welche <strong>fremden leitfähigen Teile</strong> ein Potential in den Raum einführen können und wie der Schutzpotentialausgleich des Gebäudes ausgeführt ist. Nicht jedes Metallteil gehört automatisch dazu. Ob ein zusätzlicher örtlicher Schutzpotentialausgleich erforderlich ist oder entfallen darf, ist anhand der geltenden NIN und der vorhandenen Schutzmassnahmen nachzuweisen.</p>
+    <p lang="en">First identify which <strong>extraneous conductive parts</strong> can introduce a potential into the room and how the building’s protective bonding is arranged. Not every metal object automatically qualifies. Verify under the applicable NIN and existing protective measures whether supplementary local bonding is required or may be omitted.</p>
 
     <h3><span lang="de">Was verbunden wird</span><span lang="en">What is bonded</span></h3>
     <ul lang="de">
@@ -265,7 +254,7 @@
       <li>Metallene <strong>Abwasserleitungen</strong></li>
       <li><strong>Heizungsrohre</strong> und Handtuchradiator</li>
       <li>Metallene <strong>Lüftungskanäle</strong></li>
-      <li>Die <strong>Badewanne</strong>, wenn sie aus Metall ist</li>
+      <li>Metallwanne: Einordnung und Herstelleranforderungen prüfen, keine pauschale Anschlusspflicht</li>
       <li>Die <strong>Schutzleiter</strong> aller Betriebsmittel im Raum</li>
       <li>Leitfähige <strong>Gebäudeteile</strong>, sofern sie ein Potential einschleppen können</li>
     </ul>
@@ -274,15 +263,15 @@
       <li>Metal <strong>waste pipes</strong></li>
       <li><strong>Heating pipes</strong> and towel radiators</li>
       <li>Metal <strong>ventilation ducts</strong></li>
-      <li>The <strong>bath tub</strong> if it is metal</li>
+      <li>Metal tub: assess classification and manufacturer requirements; no blanket connection rule</li>
       <li>The <strong>protective conductors</strong> of all equipment in the room</li>
       <li>Conductive <strong>building parts</strong> that could import a potential</li>
     </ul>
 
     <div class="callout blue">
       <b class="tag"><span lang="de">Der Gedanke dahinter</span><span lang="en">The idea behind it</span></b>
-      <p lang="de">Gefährlich ist nicht die Spannung an sich, sondern die <strong>Spannungsdifferenz zwischen zwei berührbaren Teilen</strong>. Wer gleichzeitig den Wasserhahn und ein defektes Gerät berührt, liegt genau in dieser Differenz. Sind beide Teile leitend verbunden, kann zwischen ihnen keine gefährliche Differenz entstehen — sie steigen im Fehlerfall gemeinsam an.</p>
-      <p lang="en">What is dangerous is not voltage as such but the <strong>difference in voltage between two touchable parts</strong>. Someone touching the tap and a faulty appliance at the same time is exactly in that difference. If both parts are bonded together, no dangerous difference can arise between them — under a fault they rise together.</p>
+      <p lang="de">Ein Strom durch den Körper kann entstehen, wenn gleichzeitig berührbare Teile unterschiedliche Potentiale haben. Schutzpotentialausgleich vermindert diese Differenz. Er ersetzt weder Schutzleiter noch die geforderte automatische Abschaltung; Verbindungswiderstände und Fehlerströme lassen sich nicht als ideal null annehmen.</p>
+      <p lang="en">Body current can flow when simultaneously accessible parts have different potentials. Protective bonding reduces this difference. It replaces neither protective conductors nor required automatic disconnection; connection resistance and fault currents cannot be treated as ideal zero quantities.</p>
     </div>
 
     <h3><span lang="de">Ausführung</span><span lang="en">Execution</span></h3>
@@ -358,8 +347,8 @@
 
     <div class="callout gold">
       <b class="tag"><span lang="de">Umbau im Bestand</span><span lang="en">Refurbishment work</span></b>
-      <p lang="de">Bei Sanierungen trifft man oft Installationen an, die nach heutigem Stand nicht mehr zulässig wären — Steckdosen zu nah an der Wanne, kein FI, kein Potentialausgleich. Was beim Umbau berührt wird, ist nach den <strong>heute geltenden Regeln</strong> auszuführen. Was unverändert bleibt, geniesst Bestandsschutz. Wo die Grenze verläuft, entscheidet der Berufsbildner oder der Kontrolleur — im Zweifel nachfragen.</p>
-      <p lang="en">In refurbishment you often meet installations that would no longer be permitted today — sockets too close to the bath, no RCD, no bonding. Whatever is touched during the work must be brought up to <strong>today's rules</strong>. What remains unchanged is covered by existing-installation provisions. Where exactly the line runs is decided by your trainer or the inspector — ask when in doubt.</p>
+      <p lang="de">Bei Sanierungen müssen Zustand, ursprüngliche Errichtungsregeln, Umfang der Änderung und geltende Nachrüstpflichten beurteilt werden. Ein unveränderter Anlagenteil geniesst <strong>keinen pauschalen Bestandesschutz</strong> bei Mängeln oder Gefährdung. Das ESTI erläutert diese Einzelfallbeurteilung unter anderem bei Installationen nach Schema III. Die verantwortliche Fachperson legt den erforderlichen Anpassungsumfang fest.</p>
+      <p lang="en">Refurbishment requires assessment of condition, original installation rules, modification scope and applicable retrofit duties. An unchanged part has <strong>no blanket exemption</strong> where defects or danger exist. ESTI discusses case-specific assessment, including old Schema III installations. The responsible skilled person establishes the required upgrades.</p>
     </div>
 
     <div class="callout neutral">
@@ -395,8 +384,8 @@
     <details>
       <summary><span lang="de">Wie weit reicht Bereich 1 nach oben?</span><span lang="en">How far up does zone 1 extend?</span></summary>
       <div class="ans">
-        <p lang="de">Bis 2,25 m über den <strong>Boden</strong> — nicht über den Wannenrand. Das ist eine häufige Verwechslung.</p>
-        <p lang="en">To 2.25 m above the <strong>floor</strong> — not above the tub rim. This is a common confusion.</p>
+        <p lang="de">Im vereinfachten Wannenbeispiel 2,25 m über dem fertigen Fussboden. Höher liegende feste Wasserauslässe, Abtrennungen und die konkrete Duschform können die Abgrenzung beeinflussen. Die Zeichnung ist deshalb nicht ungeprüft auf jedes Bad übertragbar.</p>
+        <p lang="en">In the simplified bath example, 2.25 m above the finished floor. Higher fixed water outlets, partitions and the shower configuration may affect the boundary. The drawing must therefore not be applied to every bathroom without checking.</p>
       </div>
     </details>
 
@@ -427,16 +416,16 @@
     <details>
       <summary><span lang="de">Was wird beim zusätzlichen Potentialausgleich verbunden?</span><span lang="en">What is connected by supplementary bonding?</span></summary>
       <div class="ans">
-        <p lang="de">Alle fremden leitfähigen Teile im Raum: metallene Wasser-, Abwasser- und Heizungsrohre, Lüftungskanäle, eine Metallbadewanne sowie die Schutzleiter der Betriebsmittel im Raum.</p>
-        <p lang="en">All extraneous conductive parts in the room: metal water, waste and heating pipes, ventilation ducts, a metal bath tub, and the protective conductors of the equipment in the room.</p>
+        <p lang="de">Soweit zusätzlicher Schutzpotentialausgleich erforderlich ist: die einzubeziehenden fremden leitfähigen Teile und Schutzleiter nach NIN. Metallene Rohrsysteme können ein fremdes Potential einführen; eine isoliert aufgestellte Metallwanne ist nicht allein wegen ihres Materials automatisch ein fremdes leitfähiges Teil.</p>
+        <p lang="en">Where supplementary bonding is required: the extraneous conductive parts and protective conductors specified by NIN. Metallic pipework can introduce an external potential; an isolated metal tub is not automatically an extraneous conductive part merely because it is metal.</p>
       </div>
     </details>
 
     <details>
       <summary><span lang="de">Welchen Zweck hat der zusätzliche Potentialausgleich?</span><span lang="en">What is the purpose of supplementary bonding?</span></summary>
       <div class="ans">
-        <p lang="de">Er verhindert gefährliche Spannungsdifferenzen zwischen gleichzeitig berührbaren Teilen. Im Fehlerfall steigen alle verbundenen Teile gemeinsam auf dasselbe Potential, sodass zwischen ihnen keine gefährliche Spannung anliegt.</p>
-        <p lang="en">It prevents dangerous voltage differences between simultaneously touchable parts. Under a fault all bonded parts rise to the same potential together, so no dangerous voltage exists between them.</p>
+        <p lang="de">Er vermindert Potentialdifferenzen zwischen gleichzeitig berührbaren Teilen. Wirksame Verbindungen und die erforderlichen Abschaltbedingungen sind nachzuweisen; ein Potentialausgleich ist keine Garantie einer jederzeit spannungsfreien Berührung.</p>
+        <p lang="en">It reduces potential differences between simultaneously accessible parts. Effective connections and required disconnection conditions must be verified; bonding does not guarantee that touching the parts is always voltage-free.</p>
       </div>
     </details>
 
@@ -450,6 +439,7 @@
   </div>
 </section>
 
+<aside class="lesson-sources" aria-labelledby="sources-title"><h2 id="sources-title"><span lang="de">Quellen und Vertiefung</span><span lang="en">Sources and further reading</span></h2><ul><li><a href="https://www.electrosuisse.ch/de/nin-2025/">Electrosuisse: NIN 2025 und Korrekturen</a></li><li><a href="https://www.dke.de/de/arbeitsfelder/core-safety/normenhinweise/raeume-mit-badewanne-oder-dusche">DKE: Begriff fremdes leitfähiges Teil (deutsche Normauslegung, keine Schweizer Anwendungsvorgabe)</a></li><li><a href="https://www.esti.admin.ch/inhalte/2024-0801_Erlaeuterungen_zur_Weisung_225.pdf">ESTI: Erläuterungen zu Sanierungen und Bestandesschutz</a></li></ul></aside>
 <nav class="pager">
   <a href="05-ip-kennzeichnung.html">
     <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
