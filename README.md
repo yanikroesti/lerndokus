@@ -2,11 +2,14 @@
 
 Lerndokumentationen von **Yanik Rösti**, Elektroinstallateur EFZ bei **Etavis**.
 
-Vier Lehrjahre mit je zwölf Themen. Das erste Lehrjahr ist vollständig ausgearbeitet,
-die Lehrjahre zwei bis vier sind als Platzhalter angelegt.
+Vier Lehrjahre mit je zwölf Themen. Die ersten drei Lehrjahre enthalten insgesamt
+36 Dokumentationen; das vierte Lehrjahr ist auf der Übersicht als Platzhalter angelegt.
 
 Die Seiten sind statisches HTML ohne Build-Schritt und ohne externe Abhängigkeiten
-(ausser den Webfonts). Alle Zeichnungen sind als Inline-SVG von Hand erstellt.
+(ausser den Webfonts). Technische Zeichnungen sind als editierbare Inline-SVG eingebunden.
+Alle zwölf Themen des ersten Lehrjahrs haben eine Kapitelnavigation und je zwei
+KI-generierte Anschauungsbilder als komprimierte WebP-Dateien mit deutschen und
+englischen Bildbeschreibungen. Die Generierungsprompts liegen in `assets/img/*prompts.md`.
 
 ## Aufbau
 

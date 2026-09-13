@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/doku.css">
+<link rel="stylesheet" href="../assets/lesson.css">
 </head>
 <body>
 
@@ -49,28 +50,29 @@
   <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">08 von 12</span><span lang="en">08 of 12</span></i></div>
 </div>
 
+<nav class="lesson-contents" aria-labelledby="contents-title">
+  <h2 id="contents-title"><span lang="de">In diesem Kapitel</span><span lang="en">In this chapter</span></h2>
+  <ol>
+    <li><a href="#s1"><span lang="de">Zweck und Einsatzgebiet</span><span lang="en">Purpose and field of use</span></a></li>
+    <li><a href="#s2"><span lang="de">Der Wechselschalter</span><span lang="en">The two-way switch</span></a></li>
+    <li><a href="#s3"><span lang="de">Schaltschema</span><span lang="en">Circuit diagram</span></a></li>
+    <li><a href="#s4"><span lang="de">Installationsschema und Aderzahlen</span><span lang="en">Installation plan and number of cores</span></a></li>
+    <li><a href="#s5"><span lang="de">Aufbau, Prüfung und Fehlersuche</span><span lang="en">Assembly, testing and fault finding</span></a></li>
+    <li><a href="#s6"><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></a></li>
+  </ol>
+</nav>
+
 <!-- ================= 1 ================= -->
 <section id="s1">
   <div class="snum">01</div>
   <div class="sbody">
-    <figure class="spot">
-      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Lampe zwischen zwei Schaltern">
-        <circle cx="110" cy="64" r="30" fill="#F0DBD4" stroke="#171614" stroke-width="2.4"/>
-        <path d="M98 90 h24 v10 h-24 z" fill="#DFD9CB" stroke="#171614" stroke-width="2.2" stroke-linejoin="round"/>
-        <path d="M110 22 v-10 M146 34 l7 -7 M74 34 l-7 -7" stroke="#B8402A" stroke-width="2.6" stroke-linecap="round"/>
-        <circle cx="100" cy="60" r="3" fill="#171614"/>
-        <circle cx="120" cy="60" r="3" fill="#171614"/>
-        <path d="M100 74 q 10 8 20 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
-        <g fill="#EFEAE0" stroke="#171614" stroke-width="2.4" stroke-linejoin="round">
-          <rect x="18" y="104" width="42" height="34" rx="4"/>
-          <rect x="160" y="104" width="42" height="34" rx="4"/>
-        </g>
-        <path d="M30 128 L48 114 M172 128 L190 114" stroke="#1D5872" stroke-width="3" stroke-linecap="round"/>
-        <path d="M60 118 h30 M130 118 h30" stroke="#7D7669" stroke-width="2" stroke-dasharray="5 4" stroke-linecap="round"/>
-      </svg>
+<h2><span lang="de">Zweck und Einsatzgebiet</span><span lang="en">Purpose and field of use</span></h2>
+    <figure class="lesson-illustration">
+      <img lang="de" src="../assets/img/schema3-flur.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Flur mit zwei Türen, je einem Schalter daneben und einer Deckenleuchte.">
+      <img lang="en" src="../assets/img/schema3-flur.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Corridor with two doorways, a switch beside each and one ceiling light.">
+      <figcaption><span lang="de">Anwendungsbeispiel: eine Beleuchtung von zwei Stellen bedienen. Die Leitungsführung wird im Schaltschema erklärt. <small>KI-generierte Anschauung, nicht massstäblich.</small></span><span lang="en">Application example: operate one light from two locations. Cable routing is explained in the circuit diagram. <small>AI-generated illustration, not to scale.</small></span></figcaption>
     </figure>
 
-    <h2><span lang="de">Zweck und Einsatzgebiet</span><span lang="en">Purpose and field of use</span></h2>
 
     <p class="lead" lang="de">Die <strong>Wechselschaltung</strong> — in der Schweiz als <strong>Schema 3</strong> bezeichnet — erlaubt es, eine Lampe oder eine Lampengruppe von <strong>zwei verschiedenen Stellen</strong> unabhängig ein- und auszuschalten. Jeder der beiden Schalter kehrt den aktuellen Zustand um: Was brennt, wird gelöscht — was dunkel ist, wird eingeschaltet.</p>
     <p class="lead" lang="en">The <strong>two-way circuit</strong> — known in Switzerland as <strong>Schema 3</strong> — allows a lamp or group of lamps to be switched on and off independently from <strong>two different places</strong>. Either switch inverts the present state: what is lit goes out, what is dark comes on.</p>
@@ -104,6 +106,12 @@
   <div class="snum">02</div>
   <div class="sbody">
     <h2><span lang="de">Der Wechselschalter</span><span lang="en">The two-way switch</span></h2>
+    <figure class="lesson-illustration">
+      <img lang="de" src="../assets/img/schema3-schalter.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Weisse Schalterwippe mit Rahmen neben einem abgenommenen Abdeckrahmen.">
+      <img lang="en" src="../assets/img/schema3-schalter.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="White switch rocker with frame beside a detached trim frame.">
+      <figcaption><span lang="de">Wippe und Abdeckrahmen als Geräteansicht. Die Wechselfunktion und die Klemmenbelegung sind am Einsatz und am Herstellerschema zu prüfen. <small>KI-generierte Anschauung, nicht massstäblich.</small></span><span lang="en">Rocker and trim frame as a device view. Verify the two-way function and terminal assignment on the insert and manufacturer diagram. <small>AI-generated illustration, not to scale.</small></span></figcaption>
+    </figure>
+
 
     <p lang="de">Der Wechselschalter (Schalter Schema 3) hat <strong>drei Klemmen</strong>. Er ist kein einfacher Ein-Aus-Schalter, sondern ein <strong>Umschalter</strong>: Ein beweglicher Kontakt wird wahlweise auf den einen oder den anderen von zwei festen Kontakten gelegt. Eine echte Aus-Stellung gibt es nicht — der bewegliche Kontakt liegt immer auf einem der beiden.</p>
     <p lang="en">The two-way switch (Schema 3 switch) has <strong>three terminals</strong>. It is not a simple on/off switch but a <strong>changeover switch</strong>: a moving contact is placed on either one or the other of two fixed contacts. There is no true off position — the moving contact always rests on one of the two.</p>

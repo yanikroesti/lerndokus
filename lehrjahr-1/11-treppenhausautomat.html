@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/doku.css">
+<link rel="stylesheet" href="../assets/lesson.css">
 </head>
 <body>
 
@@ -49,25 +50,29 @@
   <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">11 von 12</span><span lang="en">11 of 12</span></i></div>
 </div>
 
+<nav class="lesson-contents" aria-labelledby="contents-title">
+  <h2 id="contents-title"><span lang="de">In diesem Kapitel</span><span lang="en">In this chapter</span></h2>
+  <ol>
+    <li><a href="#s1"><span lang="de">Zweck und Einsatzgebiet</span><span lang="en">Purpose and field of use</span></a></li>
+    <li><a href="#s2"><span lang="de">Aufbau</span><span lang="en">Construction</span></a></li>
+    <li><a href="#s3"><span lang="de">Funktionsbeschrieb</span><span lang="en">Functional description</span></a></li>
+    <li><a href="#s4"><span lang="de">3-Leiter- und 4-Leiter-Schaltung</span><span lang="en">3-wire and 4-wire circuits</span></a></li>
+    <li><a href="#s5"><span lang="de">Fehlersuche</span><span lang="en">Fault finding</span></a></li>
+    <li><a href="#s6"><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></a></li>
+  </ol>
+</nav>
+
 <!-- ================= 1 ================= -->
 <section id="s1">
   <div class="snum">01</div>
   <div class="sbody">
-    <figure class="spot">
-      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Treppe mit Uhr">
-        <path d="M22 130 h34 v-26 h34 v-26 h34 v-26 h34" fill="none" stroke="#171614" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
-        <path d="M22 130 h34 v-26 h34 v-26 h34 v-26 h34 v78 z" fill="#EFEAE0" stroke="none"/>
-        <path d="M22 130 h34 v-26 h34 v-26 h34 v-26 h34" fill="none" stroke="#171614" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
-        <circle cx="172" cy="50" r="28" fill="#F0DBD4" stroke="#B8402A" stroke-width="2.6"/>
-        <path d="M172 50 V32 M172 50 l14 9" stroke="#B8402A" stroke-width="2.8" stroke-linecap="round"/>
-        <circle cx="172" cy="50" r="3.4" fill="#B8402A"/>
-        <circle cx="60" cy="116" r="2.8" fill="#171614"/>
-        <circle cx="78" cy="116" r="2.8" fill="#171614"/>
-        <path d="M60 126 q 9 7 18 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
-      </svg>
+<h2><span lang="de">Zweck und Einsatzgebiet</span><span lang="en">Purpose and field of use</span></h2>
+    <figure class="lesson-illustration">
+      <img lang="de" src="../assets/img/treppenhaus-raum.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Treppenhaus mit zwei Podesten, jeweils einer Wandleuchte und einem Taster.">
+      <img lang="en" src="../assets/img/treppenhaus-raum.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Staircase with two landings, each with a wall light and pushbutton.">
+      <figcaption><span lang="de">Beleuchtung entlang des Laufwegs: ein räumliches Beispiel für den Einsatz eines Treppenhausautomaten. <small>KI-generierte Anschauung, nicht massstäblich.</small></span><span lang="en">Lighting along the route: a spatial example of where a staircase timer is used. <small>AI-generated illustration, not to scale.</small></span></figcaption>
     </figure>
 
-    <h2><span lang="de">Zweck und Einsatzgebiet</span><span lang="en">Purpose and field of use</span></h2>
 
     <p class="lead" lang="de">Der Treppenhausautomat schaltet das Licht auf Tastendruck ein und nach einer <strong>einstellbaren Nachlaufzeit selbsttätig wieder aus</strong>. Er löst ein sehr praktisches Problem: In einem Treppenhaus gibt es niemanden, der das Licht löscht — wer oben ankommt, geht in die Wohnung und denkt nicht mehr daran.</p>
     <p class="lead" lang="en">A staircase timer switches the light on at the press of a button and off again automatically after an <strong>adjustable run-on time</strong>. It solves a very practical problem: in a staircase nobody turns the light off — whoever reaches the top goes into the flat and forgets about it.</p>
@@ -121,6 +126,12 @@
   <div class="snum">02</div>
   <div class="sbody">
     <h2><span lang="de">Aufbau</span><span lang="en">Construction</span></h2>
+    <figure class="lesson-illustration">
+      <img lang="de" src="../assets/img/treppenhaus-geraet.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Graues Reiheneinbaugerät mit zwei Drehbedienelementen neben einer Hutschiene.">
+      <img lang="en" src="../assets/img/treppenhaus-geraet.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Grey modular device with two rotary controls beside a DIN rail.">
+      <figcaption><span lang="de">Beispielhafte Geräteansicht. Zeitbereich, Betriebsarten und Klemmenbelegung sind der Beschriftung und Anleitung des konkreten Geräts zu entnehmen. <small>KI-generierte Anschauung, nicht massstäblich.</small></span><span lang="en">Illustrative device view. Consult the actual device markings and instructions for time range, operating modes and terminal assignment. <small>AI-generated illustration, not to scale.</small></span></figcaption>
+    </figure>
+
 
     <figure>
       <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aufbau eines Treppenhausautomaten mit Zeitglied und Relais">
