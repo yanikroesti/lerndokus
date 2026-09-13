@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/doku.css">
+<link rel="stylesheet" href="../assets/lesson.css">
 </head>
 <body>
 
@@ -50,24 +51,10 @@
 </div>
 
 <!-- ================= 1 ================= -->
+<nav class="lesson-contents" aria-labelledby="contents-title"><h2 id="contents-title"><span lang="de">In diesem Kapitel</span><span lang="en">In this chapter</span></h2><ol><li><a href="#s1"><span lang="de">Aufgabe und Einordnung</span><span lang="en">Task and classification</span></a></li><li><a href="#s2"><span lang="de">Aufbau</span><span lang="en">Construction</span></a></li><li><a href="#s3"><span lang="de">Die Charakteristiken B, C und D</span><span lang="en">Characteristics B, C and D</span></a></li><li><a href="#s4"><span lang="de">Modelle und Kennwerte</span><span lang="en">Models and ratings</span></a></li><li><a href="#s5"><span lang="de">Auswahl und Praxis</span><span lang="en">Selection and practice</span></a></li><li><a href="#s6"><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></a></li></ol></nav>
 <section id="s1">
   <div class="snum">01</div>
   <div class="sbody">
-
-    <figure class="spot">
-      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Leitungsschutzschalter auf Hutschiene">
-        <rect x="72" y="26" width="76" height="98" rx="6" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
-        <rect x="88" y="42" width="44" height="26" rx="3" fill="#B8402A" stroke="#8A2F1E" stroke-width="2"/>
-        <text x="110" y="61" font-family="'Archivo',sans-serif" font-size="15" font-weight="800" fill="#F4F1EA" text-anchor="middle">I</text>
-        <circle cx="96" cy="88" r="3" fill="#171614"/>
-        <circle cx="124" cy="88" r="3" fill="#171614"/>
-        <path d="M98 104 q 12 8 24 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
-        <path d="M84 26 v-12 M136 26 v-12 M84 124 v12 M136 124 v12" stroke="#171614" stroke-width="2.6" stroke-linecap="round"/>
-        <path d="M40 132 h140" stroke="#C9C2B4" stroke-width="8" stroke-linecap="round"/>
-        <path d="M40 132 h140" stroke="#171614" stroke-width="2"/>
-        <text x="170" y="52" font-family="'IBM Plex Mono',monospace" font-size="15" font-weight="600" fill="#1D5872">B16</text>
-      </svg>
-    </figure>
 
     <h2><span lang="de">Aufgabe und Einordnung</span><span lang="en">Task and classification</span></h2>
 
@@ -79,11 +66,11 @@
 
     <div class="callout">
       <b class="tag"><span lang="de">Abgrenzung</span><span lang="en">Distinction</span></b>
-      <p lang="de">Der LS-Automat schützt die <strong>Leitung</strong>, nicht den Menschen und nicht das angeschlossene Gerät. Für den Personenschutz braucht es zusätzlich den Fehlerstromschutzschalter, für den Motorschutz den Motorschutzschalter mit einstellbarem Bimetall.</p>
-      <p lang="en">The breaker protects the <strong>cable</strong> — not the person and not the connected appliance. Personal protection additionally requires an RCD, and motor protection requires a motor protection switch with an adjustable bimetal.</p>
+      <p lang="de">Der LS schützt Leitungen vor Überstrom. Bei erfüllter Abschaltbedingung kann er auch den <strong>Fehlerschutz durch automatische Abschaltung</strong> übernehmen. Kleine gefährliche Körperströme erkennt er jedoch nicht zuverlässig; dafür dient unter anderem der zusätzliche Schutz durch einen geeigneten RCD. Motoren benötigen einen auf den Motor abgestimmten Schutz.</p>
+      <p lang="en">An MCB protects cables against overcurrent. With the required disconnection conditions met, it can also provide <strong>fault protection by automatic disconnection</strong>. It does not reliably detect small dangerous body currents; an appropriate RCD provides additional protection. Motors need protection matched to the motor.</p>
     </div>
     <figure class="plate">
-      <img src="../assets/img/ls-01-reihe.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Sechs Leitungsschutzschalter nebeneinander auf einer Hutschiene.">
+      <img lang="de" src="../assets/img/ls-01-reihe.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Sechs Leitungsschutzschalter nebeneinander auf einer Hutschiene."><img lang="en" src="../assets/img/ls-01-reihe.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Six miniature circuit breakers on a DIN rail.">
       <figcaption>
         <span lang="de">Sechs Automaten auf der Hutschiene — jeder schützt eine Leitung.</span>
         <span lang="en">Six breakers on a DIN rail — each protects one cable.</span>
@@ -240,8 +227,8 @@
   <div class="sbody">
     <h2><span lang="de">Die Charakteristiken B, C und D</span><span lang="en">Characteristics B, C and D</span></h2>
 
-    <p lang="de">Der <strong>thermische</strong> Teil ist bei allen drei Charakteristiken gleich. Unterschiedlich ist nur, ab welchem Vielfachen des Bemessungsstromes der <strong>magnetische</strong> Auslöser sofort abschaltet.</p>
-    <p lang="en">The <strong>thermal</strong> part is identical for all three characteristics. What differs is only the multiple of rated current at which the <strong>magnetic</strong> release operates instantly.</p>
+    <p lang="de">Die folgenden B-, C- und D-Bereiche gelten für die magnetische Auslösung bei Wechselstrom nach EN 60898-1. Sie sind <strong>Toleranzbänder</strong>, keine einzelnen Schaltschwellen. Die thermischen Prüfgrenzen sind gleich; Umgebungstemperatur, Vorbelastung und Einbaubedingungen beeinflussen das Verhalten. Die Anwendungen sind Beispiele, keine Auswahlvorschrift.</p>
+    <p lang="en">The following B, C and D ranges describe magnetic tripping on AC under EN 60898-1. They are <strong>tolerance bands</strong>, not single thresholds. Thermal test limits are the same; ambient temperature, previous loading and installation conditions affect behaviour. Applications are examples, not selection rules.</p>
 
     <div class="tablewrap">
       <table>
@@ -257,7 +244,7 @@
           <tr>
             <td class="num"><strong>B</strong></td><td class="num">3 … 5 × I<sub>n</sub></td>
             <td><span lang="de">Steckdosen, Beleuchtung, allgemeine Stromkreise</span><span lang="en">sockets, lighting, general circuits</span></td>
-            <td><span lang="de">kein nennenswerter Einschaltstoss, empfindlichster Schutz</span><span lang="en">no significant inrush, most sensitive protection</span></td>
+            <td><span lang="de">kleiner Einschaltstoss; niedrigstes magnetisches Auslöseband</span><span lang="en">low inrush; lowest magnetic trip band</span></td>
           </tr>
           <tr>
             <td class="num"><strong>C</strong></td><td class="num">5 … 10 × I<sub>n</sub></td>
@@ -295,8 +282,8 @@
 
     <div class="callout">
       <b class="tag"><span lang="de">Häufiger Denkfehler</span><span lang="en">Common misconception</span></b>
-      <p lang="de">Ein B16 löst <strong>nicht</strong> bei genau 16 A aus. 16 A ist der Strom, den er dauernd führen darf. Ausgelöst wird erst deutlich darüber — bei 1,45 × I<sub>n</sub> garantiert innerhalb der Prüfzeit. Wer die Sicherung «zu schwach» findet, hat meist ein Leitungs- oder Lastproblem, kein Sicherungsproblem.</p>
-      <p lang="en">A B16 does <strong>not</strong> trip at exactly 16 A. 16 A is the current it may carry continuously. Tripping happens well above that — guaranteed within the test time at 1.45 × I<sub>n</sub>. Anyone who finds the breaker “too weak” usually has a cable or load problem, not a breaker problem.</p>
+      <p lang="de">Ein B16 ist unter den festgelegten Referenzbedingungen für 16 A bemessen. Er schaltet nicht bereits beim kleinsten Überschreiten ab. Bei 1,45 × I<sub>n</sub> muss er innerhalb der festgelegten Prüfzeit auslösen. Für reale Einbaubedingungen sind die Korrekturfaktoren des Herstellers zu beachten.</p>
+      <p lang="en">A B16 is rated for 16 A under specified reference conditions. It does not trip at the slightest exceedance. At 1.45 × I<sub>n</sub> it must trip within the specified test time. Manufacturer correction factors apply to actual installation conditions.</p>
     </div>
   </div>
 </section>
@@ -328,8 +315,8 @@
       </table>
     </div>
 
-    <p lang="de">Mehrpolige Automaten haben ein <strong>gemeinsames Schaltschloss</strong>: Löst ein Pol aus, schalten alle ab. Das ist wichtig, damit ein Drehstrommotor nie auf zwei Phasen weiterläuft.</p>
-    <p lang="en">Multi-pole breakers share a <strong>common mechanism</strong>: if one pole trips, all disconnect. This matters so a three-phase motor never keeps running on two phases.</p>
+    <p lang="de">Mehrpolige Automaten mit gemeinsamer Auslösung öffnen bei der Auslösung alle zugehörigen Pole. Das verhindert ein einpoliges Abschalten durch diesen Automaten. Ein Phasenausfall an anderer Stelle wird dadurch jedoch nicht sicher erkannt; erforderlicher Motor- und Phasenausfallschutz ist gesondert vorzusehen.</p>
+    <p lang="en">Multipole breakers with common tripping open all associated poles when they trip. This prevents that breaker from disconnecting only one phase. It does not reliably detect phase loss elsewhere; required motor and phase-loss protection must be provided separately.</p>
 
     <h3><span lang="de">Schaltvermögen</span><span lang="en">Breaking capacity</span></h3>
     <p lang="de">Das <strong>Bemessungsschaltvermögen</strong> gibt an, welchen Kurzschlussstrom der Automat sicher abschalten kann, ohne selbst zerstört zu werden. Es steht im Rechteck auf der Front.</p>
@@ -353,23 +340,23 @@
 
     <div class="callout">
       <b class="tag"><span lang="de">Grundbedingung</span><span lang="en">Basic condition</span></b>
-      <p lang="de">Das Schaltvermögen muss <strong>grösser sein als der am Einbauort zu erwartende Kurzschlussstrom</strong>. Je näher der Automat bei der Trafostation liegt, desto grösser ist dieser Strom — und desto höher muss das Schaltvermögen gewählt werden.</p>
-      <p lang="en">The breaking capacity must be <strong>greater than the prospective short-circuit current at the point of installation</strong>. The closer the breaker sits to the substation, the higher that current — and the higher the capacity required.</p>
+      <p lang="de">Das Bemessungsschaltvermögen muss den maximal zu erwartenden Kurzschlussstrom am Einbauort <strong>mindestens erreichen</strong>. Eine geringere Einzelgeräte-Bemessung ist nur mit nachgewiesener, vom Hersteller koordinierter Backup-Schutzeinrichtung zulässig. Der Einbauort allein ersetzt keine Berechnung oder Messung.</p>
+      <p lang="en">The rated breaking capacity must <strong>at least equal</strong> the maximum prospective short-circuit current at the installation point. A lower individual rating requires a verified manufacturer-coordinated backup protective device. Location alone is no substitute for calculation or measurement.</p>
     </div>
 
     <h3><span lang="de">Verwandte Geräte</span><span lang="en">Related devices</span></h3>
     <ul lang="de">
-      <li><strong>FI-LS (RCBO)</strong> — Leitungsschutz und Fehlerstromschutz in einem Gerät, spart Platz und macht den Stromkreis unabhängig von den anderen</li>
+      <li><strong>FI-LS (RCBO)</strong> — Leitungsschutz und Fehlerstromschutz in einem Gerät, ermöglicht getrennten Schutz je Stromkreis; Selektivität gesondert prüfen</li>
       <li><strong>Selektiver Hauptleitungsschutzschalter</strong> — vor der Verteilung, zeitlich gestaffelt gegenüber den nachgelagerten Automaten</li>
       <li><strong>Hilfskontakt und Störmeldeschalter</strong> — aufsteckbar, meldet Stellung oder Auslösung an die Steuerung</li>
     </ul>
     <ul lang="en">
-      <li><strong>RCBO</strong> — cable protection and residual current protection in one device, saving space and making the circuit independent of the others</li>
+      <li><strong>RCBO</strong> — cable protection and residual current protection in one device, enabling individual circuit protection; verify selectivity separately</li>
       <li><strong>Selective main breaker</strong> — upstream of the board, time-graded against the downstream breakers</li>
       <li><strong>Auxiliary and fault signalling contacts</strong> — clip-on, reporting position or a trip to the control system</li>
     </ul>
     <figure class="plate">
-      <img src="../assets/img/ls-03-einzeln.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Ein einzelner Leitungsschutzschalter von vorn.">
+      <img lang="de" src="../assets/img/ls-03-einzeln.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Ein einzelner Leitungsschutzschalter von vorn."><img lang="en" src="../assets/img/ls-03-einzeln.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Front view of a miniature circuit breaker.">
       <figcaption>
         <span lang="de">Bemessungsstrom, Charakteristik und Schaltvermögen stehen auf der Front.</span>
         <span lang="en">Rated current, characteristic and breaking capacity are printed on the front.</span>
@@ -407,25 +394,25 @@
 
     <div class="callout blue">
       <b class="tag"><span lang="de">Die Abschaltbedingung</span><span lang="en">The disconnection condition</span></b>
-      <p lang="de">Damit der Automat im Fehlerfall rechtzeitig abschaltet, muss der Fehlerstrom gross genug sein, um die magnetische Auslösung zu erreichen. Bei langen Leitungen mit kleinem Querschnitt kann die Schleifenimpedanz so gross werden, dass dies nicht mehr sicher gelingt. Dann hilft ein grösserer Querschnitt, eine empfindlichere Charakteristik — oder ein FI.</p>
-      <p lang="en">For the breaker to disconnect in time under fault conditions, the fault current must be high enough to reach the magnetic release. On long runs with a small cross-section the loop impedance can grow so large that this is no longer reliably achieved. The remedy is a larger cross-section, a more sensitive characteristic — or an RCD.</p>
+      <p lang="de">Die Abschaltzeit muss mit dem kleinsten zu erwartenden Fehlerstrom und der Gerätekennlinie nachgewiesen werden. Für eine schnelle magnetische Abschaltung zählt die obere Grenze des Toleranzbandes. Eine lange Leitung kann den Fehlerstrom begrenzen. Querschnitt und Charakteristik sind dann zu überprüfen. Ein RCD kann bei einem <strong>Fehler gegen Erde</strong> die Abschaltbedingung erfüllen, ersetzt aber weder Überlastschutz noch den Schutz bei einem L–N-Kurzschluss.</p>
+      <p lang="en">Verify the disconnection time using the minimum prospective fault current and the device curve. Fast magnetic disconnection requires the upper boundary of the tolerance band. Long cables may limit fault current, requiring a review of conductor size and curve. An RCD can meet the disconnection condition for an <strong>earth fault</strong>, but replaces neither overload protection nor protection against an L–N short circuit.</p>
     </div>
 
     <h3><span lang="de">Montage</span><span lang="en">Installation</span></h3>
     <ul lang="de">
       <li>Auf Hutschiene TH 35 aufschnappen, Reihenfolge nach Schema</li>
       <li>Einspeisung über <strong>Sammelschiene</strong> (Kamm) — sauber abgelängt, Schnittkante berührungssicher abdecken</li>
-      <li><strong>Anzugsdrehmoment</strong> der Klemmen einhalten und nach einiger Betriebszeit nachkontrollieren</li>
+      <li><strong>Anzugsdrehmoment</strong> der Klemmen und Wartungsvorgaben des Herstellers einhalten</li>
       <li><strong>Beschriften</strong> — jeder Automat trägt die Bezeichnung seines Stromkreises</li>
-      <li>Bei feindrähtigen Leitern <strong>Aderendhülsen</strong> verwenden</li>
+      <li>Feindrähtige Leiter mit oder ohne <strong>Aderendhülsen</strong> nur entsprechend der Klemmenfreigabe anschliessen</li>
       <li>Nach der Montage <strong>messen</strong>: Durchgang, Isolation, Schleifenimpedanz, Drehfeld</li>
     </ul>
     <ul lang="en">
       <li>Clip onto a TH 35 DIN rail, order according to the diagram</li>
       <li>Feed via a <strong>busbar comb</strong> — cut cleanly and cover the cut end so it cannot be touched</li>
-      <li>Observe the <strong>tightening torque</strong> and re-check after some time in service</li>
+      <li>Observe the <strong>tightening torque</strong> and manufacturer maintenance instructions</li>
       <li><strong>Label</strong> — every breaker carries the designation of its circuit</li>
-      <li>Use <strong>ferrules</strong> on fine-stranded conductors</li>
+      <li>Connect fine-stranded conductors with or without <strong>ferrules</strong> as approved for the terminal</li>
       <li>After installation, <strong>measure</strong>: continuity, insulation, loop impedance, phase sequence</li>
     </ul>
 
@@ -435,7 +422,7 @@
       <p lang="en">Replacing a repeatedly tripping breaker with a bigger one without checking the cable. The cable stays the same — only its protection is gone. Find the cause first: too many loads, a faulty appliance, an insulation fault, or an undersized conductor.</p>
     </div>
     <figure class="plate">
-      <img src="../assets/img/ls-02-sammelschiene.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Kammförmige Sammelschiene über den Klemmen mehrerer Automaten.">
+      <img lang="de" src="../assets/img/ls-02-sammelschiene.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Kammförmige Sammelschiene über den Klemmen mehrerer Automaten."><img lang="en" src="../assets/img/ls-02-sammelschiene.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Comb busbar above the terminals of several breakers.">
       <figcaption>
         <span lang="de">Sammelschiene — sauber abgelängt, die Schnittkante berührungssicher abgedeckt.</span>
         <span lang="en">Busbar comb — cut cleanly, the cut end covered so it cannot be touched.</span>
@@ -462,40 +449,40 @@
     <details>
       <summary><span lang="de">Bei welchem Strom löst ein B16 sicher aus?</span><span lang="en">At what current does a B16 reliably trip?</span></summary>
       <div class="ans">
-        <p lang="de">Thermisch garantiert bei 1,45 × I<sub>n</sub>, also rund 23 A, innerhalb der Prüfzeit. Bei 1,13 × I<sub>n</sub> darf er noch nicht auslösen. Magnetisch schaltet er zwischen 3 und 5 × I<sub>n</sub> sofort ab, also zwischen 48 und 80 A.</p>
-        <p lang="en">Thermally, guaranteed at 1.45 × I<sub>n</sub>, about 23 A, within the test time. At 1.13 × I<sub>n</sub> it must not yet trip. Magnetically it disconnects instantly between 3 and 5 × I<sub>n</sub>, i.e. between 48 and 80 A.</p>
+        <p lang="de">Bei 1,45 × 16 A = 23,2 A muss die thermische Auslösung innerhalb der festgelegten Prüfzeit erfolgen; bei 1,13 × I<sub>n</sub> darf sie innerhalb der zugehörigen Prüfzeit nicht erfolgen. Das magnetische Band liegt bei 48–80 A. Für den Nachweis der schnellen Abschaltung ist 80 A massgebend, nicht bereits 48 A; Prüfbedingungen und Kennlinie beachten.</p>
+        <p lang="en">At 1.45 × 16 A = 23.2 A, thermal tripping must occur within the specified test time; at 1.13 × I<sub>n</sub>, it must not occur within the associated test time. The magnetic band is 48–80 A. Use 80 A, not 48 A, when verifying fast disconnection; observe the test conditions and curve.</p>
       </div>
     </details>
 
     <details>
       <summary><span lang="de">Welche Charakteristik wählst du für einen Stromkreis mit mehreren Trafo-Netzteilen?</span><span lang="en">Which characteristic for a circuit with several transformer power supplies?</span></summary>
       <div class="ans">
-        <p lang="de">Charakteristik C. Transformatoren ziehen beim Einschalten einen kurzen, hohen Magnetisierungsstrom. Ein B-Automat würde dabei auslösen, obwohl kein Fehler vorliegt. Bei sehr grossen Transformatoren kommt D in Frage.</p>
-        <p lang="en">Characteristic C. Transformers draw a brief, high magnetising current at switch-on. A type B would trip although nothing is wrong. For very large transformers, type D is an option.</p>
+        <p lang="de">Das lässt sich ohne Lastdaten nicht pauschal festlegen. Einschaltstrom und Impulsdauer mit der Kennlinie vergleichen, danach Leitungs- und Abschaltbedingungen prüfen. C oder D können geeignet sein, verlangen aber für die schnelle magnetische Auslösung höhere Fehlerströme. Auch B kann bei ausreichend kleinem Einschaltstrom passen.</p>
+        <p lang="en">This cannot be decided without load data. Compare inrush current and duration with the curve, then verify cable protection and disconnection conditions. C or D may be suitable but require higher fault currents for fast magnetic tripping. B can also be suitable if inrush is sufficiently low.</p>
       </div>
     </details>
 
     <details>
       <summary><span lang="de">Was besagt die Zahl im Rechteck auf der Front, zum Beispiel 6000?</span><span lang="en">What does the figure in the rectangle on the front mean, for example 6000?</span></summary>
       <div class="ans">
-        <p lang="de">Das Bemessungsschaltvermögen in Ampere — der grösste Kurzschlussstrom, den der Automat sicher abschalten kann. Er muss grösser sein als der am Einbauort zu erwartende Kurzschlussstrom.</p>
-        <p lang="en">The rated short-circuit capacity in amperes — the largest fault current the breaker can safely interrupt. It must exceed the prospective fault current at the point of installation.</p>
+        <p lang="de">6000 bezeichnet 6000 A Bemessungsschaltvermögen nach der angegebenen Produktnorm. Es muss den maximalen Kurzschlussstrom am Einbauort mindestens erreichen, sofern keine nachgewiesene Backup-Kombination eingesetzt wird.</p>
+        <p lang="en">6000 denotes a rated breaking capacity of 6000 A under the stated product standard. It must at least equal the maximum prospective short-circuit current unless a verified backup combination is used.</p>
       </div>
     </details>
 
     <details>
       <summary><span lang="de">Warum haben mehrpolige Automaten ein gemeinsames Schaltschloss?</span><span lang="en">Why do multi-pole breakers share one mechanism?</span></summary>
       <div class="ans">
-        <p lang="de">Damit bei einem Fehler in einem Pol alle Pole gleichzeitig abschalten. Sonst liefe zum Beispiel ein Drehstrommotor auf zwei Phasen weiter, überhitzte und brennte durch.</p>
-        <p lang="en">So that a fault in one pole disconnects all poles at once. Otherwise a three-phase motor, for example, would keep running on two phases, overheat and burn out.</p>
+        <p lang="de">Damit beim Auslösen alle zugehörigen Pole öffnen. Das gemeinsame Schaltschloss allein ist kein umfassender Phasenausfallschutz für einen Motor.</p>
+        <p lang="en">So that all associated poles open when the breaker trips. A common mechanism alone does not provide comprehensive motor phase-loss protection.</p>
       </div>
     </details>
 
     <details>
       <summary><span lang="de">Was ist ein FI-LS und wann setzt du ihn ein?</span><span lang="en">What is an RCBO and when do you use it?</span></summary>
       <div class="ans">
-        <p lang="de">Ein Gerät, das Leitungsschutz und Fehlerstromschutz vereint. Es spart Platz und macht den einzelnen Stromkreis unabhängig: Ein Fehlerstrom schaltet nur diesen einen Kreis ab und nicht die ganze Gruppe hinter einem gemeinsamen FI.</p>
-        <p lang="en">A device combining cable protection and residual current protection. It saves space and makes the individual circuit independent: a residual current disconnects only that circuit rather than the whole group behind a shared RCD.</p>
+        <p lang="de">Ein FI-LS (RCBO) kombiniert Fehlerstrom- und Überstromschutz. Einzelne Stromkreise lassen sich damit getrennt schützen. Ob bei einem Fehler nur dieser Stromkreis abschaltet, hängt auch von der Selektivität zu vorgeschalteten Schutzorganen ab.</p>
+        <p lang="en">An RCBO combines residual-current and overcurrent protection. It allows individual circuit protection. Whether only that circuit disconnects also depends on selectivity with upstream protective devices.</p>
       </div>
     </details>
 
@@ -517,6 +504,7 @@
   </div>
 </section>
 
+<aside class="lesson-sources" aria-labelledby="sources-title"><h2 id="sources-title"><span lang="de">Quellen und Vertiefung</span><span lang="en">Sources and further reading</span></h2><ul><li><a href="https://eflip.abb.com/frontend/getcatalog.do?catalogId=1207361&amp;catalogVersion=1&amp;startpage=9">ABB: Auslösekennlinien / tripping characteristics</a></li><li><a href="https://new.abb.com/low-voltage/de/produkte/installationsgeraete/fehlerstrom-schutzeinrichtungen/faq">ABB: Schutzkoordination / protection coordination</a></li><li><a href="https://www.electrical-installation.org/enwiki/Residential_electrical_installation_-_Periodic_control">Schneider Electric: Fehlerschutz / fault protection</a></li></ul></aside>
 <nav class="pager">
   <a href="02-fl-leuchten.html">
     <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>

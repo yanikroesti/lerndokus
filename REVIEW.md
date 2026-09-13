@@ -22,7 +22,25 @@ Stand: 13. September 2026. Die Prüfung erfolgt themenweise. «Bearbeitet» bede
 - Vorhandenes KVG-Schemabild visuell auf den grundlegenden Strompfad geprüft; kein vollständiger Abgleich mit einer Produktverdrahtung.
 - Quellen direkt auf der Seite: BFE, Tridonic, LEDVANCE.
 
-### 03–12 – noch in Bearbeitung
+### 03 LS-Automaten – bearbeitet
+
+- Deutschen Text vollständig gelesen; Korrekturen in beiden Sprachen und Kontrollfragen.
+- Fehlerschutz durch LS von zusätzlichem RCD-Schutz unterschieden; B16-Toleranzband und zeitabhängige thermische Prüfung präzisiert.
+- Pauschale C-Auswahl, umfassenden Phasenausfallschutz und garantierte RCBO-Selektivität korrigiert.
+- Schaltvermögen, Backup-Koordination, Klemmenfreigaben und Wartungsvorgaben präzisiert.
+- Drei bestehende Illustrationen mit englischen Alternativtexten versehen; technische Schnittzeichnung nicht als herstellergetreue Montagezeichnung verifiziert.
+- Quellen: ABB-Kennlinien, ABB-Koordination, Schneider Electric.
+
+### 04 FI-Schalter – bearbeitet
+
+- Deutschen Text vollständig gelesen; Korrekturen in beiden Sprachen und Kontrollfragen.
+- Gefährliche Aussage «30 mA unter Flimmerschwelle» entfernt: RCD begrenzt keinen Körperstrom, zusätzlicher Schutz bleibt Teil eines Schutzkonzepts.
+- Typ-B-Auswahl, Neutralleiterfehler, Prüftastenfunktion und Grenzen der Fehlereingrenzung präzisiert.
+- 300/500-mA-Angaben von zusätzlichem Schutz und Selektivität getrennt; pauschale 10-mA-Einsatzorte entfernt.
+- Drei bestehende Illustrationen mit englischen Alternativtexten; vorhandenes Wirkprinzipbild ist keine Anschlussanleitung.
+- Quellen: ABB, Doepke, Schneider Electric. Keine Übernahme deutscher Anwendungsregeln als Schweizer NIN-Pflicht.
+
+### 05–12 – noch in Bearbeitung
 
 ## Lehrjahr 3
 

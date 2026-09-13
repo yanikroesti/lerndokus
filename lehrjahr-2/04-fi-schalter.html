@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/doku.css">
+<link rel="stylesheet" href="../assets/lesson.css">
 </head>
 <body>
 
@@ -50,35 +51,20 @@
 </div>
 
 <!-- ================= 1 ================= -->
+<nav class="lesson-contents" aria-labelledby="contents-title"><h2 id="contents-title"><span lang="de">In diesem Kapitel</span><span lang="en">In this chapter</span></h2><ol><li><a href="#s1"><span lang="de">Aufgabe</span><span lang="en">Task</span></a></li><li><a href="#s2"><span lang="de">Aufbau und Wirkungsweise</span><span lang="en">Construction and operation</span></a></li><li><a href="#s3"><span lang="de">Typen nach Fehlerstromform</span><span lang="en">Types by residual current waveform</span></a></li><li><a href="#s4"><span lang="de">Bauformen und Anschluss</span><span lang="en">Versions and connection</span></a></li><li><a href="#s5"><span lang="de">Prüfung und Fehlersuche</span><span lang="en">Testing and fault finding</span></a></li><li><a href="#s6"><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></a></li></ol></nav>
 <section id="s1">
   <div class="snum">01</div>
   <div class="sbody">
 
-    <figure class="spot">
-      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: FI-Schalter mit Prüftaste">
-        <rect x="58" y="24" width="104" height="102" rx="6" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
-        <rect x="72" y="38" width="34" height="24" rx="3" fill="#1D5872" stroke="#153F52" stroke-width="2"/>
-        <text x="89" y="56" font-family="'Archivo',sans-serif" font-size="14" font-weight="800" fill="#F4F1EA" text-anchor="middle">I</text>
-        <circle cx="134" cy="50" r="12" fill="#B8402A" stroke="#8A2F1E" stroke-width="2"/>
-        <text x="134" y="55" font-family="'Archivo',sans-serif" font-size="13" font-weight="800" fill="#F4F1EA" text-anchor="middle">T</text>
-        <circle cx="92" cy="86" r="3" fill="#171614"/>
-        <circle cx="128" cy="86" r="3" fill="#171614"/>
-        <path d="M94 102 q 16 9 32 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
-        <text x="110" y="120" font-family="'IBM Plex Mono',monospace" font-size="11" font-weight="600" fill="#1D5872" text-anchor="middle">30 mA</text>
-        <path d="M70 24 v-12 M98 24 v-12 M122 24 v-12 M150 24 v-12" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M70 126 v12 M98 126 v12 M122 126 v12 M150 126 v12" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
-      </svg>
-    </figure>
-
     <h2><span lang="de">Aufgabe</span><span lang="en">Task</span></h2>
 
-    <p class="lead" lang="de">Der Fehlerstromschutzschalter ist die einzige Schutzeinrichtung in der Verteilung, die den <strong>Menschen</strong> schützt. Sicherung und LS-Automat schützen die Leitung — sie merken nichts davon, wenn ein Strom über einen Körper zur Erde abfliesst, weil dieser Strom für sie viel zu klein ist.</p>
-    <p class="lead" lang="en">The residual current device is the only protective device in the board that protects the <strong>person</strong>. Fuses and breakers protect the cable — they notice nothing when current flows through a body to earth, because that current is far too small for them.</p>
+    <p class="lead" lang="de">Der Fehlerstromschutzschalter (FI/RCD) erkennt einen Differenzstrom zwischen den aktiven Leitern. Er ist ein Teil des Schutzkonzepts: Je nach Anlage übernimmt er Fehlerschutz und mit höchstens 30 mA zusätzlichen Schutz. Basisschutz, Schutzleiter und Überstromschutz bleiben erforderlich. Auch Sicherungen und LS können bei erfüllten Bedingungen Fehlerschutz durch Abschaltung leisten.</p>
+    <p class="lead" lang="en">An RCD detects residual current in the live conductors. It is part of the protective system: depending on the installation, it provides fault protection and, at no more than 30 mA, additional protection. Basic protection, protective conductors and overcurrent protection remain necessary. Fuses and MCBs can also provide fault protection by disconnection when the required conditions are met.</p>
 
     <div class="callout">
       <b class="tag"><span lang="de">Der Grössenvergleich</span><span lang="en">A comparison of magnitudes</span></b>
-      <p lang="de">Ein Mensch, der einen Aussenleiter berührt, zieht vielleicht <strong>50 bis 200 mA</strong>. Ein B16-Automat schaltet erst bei <strong>48 000 mA</strong> magnetisch ab. Für ihn passiert schlicht nichts. Der FI dagegen erkennt bereits <strong>30 mA</strong> Differenz und trennt in Millisekunden.</p>
-      <p lang="en">A person touching a line conductor may draw <strong>50 to 200 mA</strong>. A B16 breaker only trips magnetically at <strong>48 000 mA</strong>. As far as it is concerned, nothing happens. The RCD, by contrast, detects a difference of just <strong>30 mA</strong> and disconnects within milliseconds.</p>
+      <p lang="de">Gefährliche Körperströme können im Milliamperebereich liegen, weit unter der Überstrom-Auslöseschwelle eines LS. Ein 30-mA-RCD reagiert auf einen geeigneten Differenzstrom. Er begrenzt den Körperstrom aber <strong>nicht auf 30 mA</strong>; bis zur Abschaltung kann ein deutlich höherer Strom fliessen.</p>
+      <p lang="en">Dangerous body currents can be in the milliampere range, far below an MCB’s overcurrent threshold. A 30 mA RCD responds to an appropriate residual current. It does <strong>not limit body current to 30 mA</strong>; a much higher current may flow before disconnection.</p>
     </div>
 
     <h3><span lang="de">Wovor der FI schützt</span><span lang="en">What the RCD protects against</span></h3>
@@ -99,7 +85,7 @@
       <p lang="en">The RCD only detects <strong>current that leaves the circuit</strong>. Anyone touching the line and the neutral at the same time is not protected: the current flows out and back, and the sum stays zero. An RCD therefore never replaces isolating the circuit.</p>
     </div>
     <figure class="plate">
-      <img src="../assets/img/fi-02-aussensteckdose.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Aussensteckdose mit Klappdeckel im Regen.">
+      <img lang="de" src="../assets/img/fi-02-aussensteckdose.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Aussensteckdose mit Klappdeckel im Regen."><img lang="en" src="../assets/img/fi-02-aussensteckdose.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Outdoor socket with a hinged cover in rain.">
       <figcaption>
         <span lang="de">Genau hier zählt der FI: nasse Umgebung, Handgerät, guter Weg zur Erde.</span>
         <span lang="en">Exactly where an RCD counts: wet surroundings, a hand tool, a good path to earth.</span>
@@ -175,8 +161,8 @@
 
     <div class="callout">
       <b class="tag"><span lang="de">Der häufigste Anschlussfehler</span><span lang="en">The most common wiring mistake</span></b>
-      <p lang="de">Der <strong>Neutralleiter muss durch den FI geführt werden</strong> und darf nach dem FI nicht mit dem N eines anderen Stromkreises verbunden werden. Wird der N hinter dem FI abgezweigt oder mit dem PE verbunden, fliesst Strom am Kern vorbei — der FI löst sofort und scheinbar grundlos aus.</p>
-      <p lang="en">The <strong>neutral must pass through the RCD</strong> and must not be joined to the neutral of another circuit downstream. If the neutral is tapped after the RCD or connected to the PE, current bypasses the core — and the RCD trips immediately and apparently for no reason.</p>
+      <p lang="de">Alle aktiven Leiter des geschützten Stromkreises müssen durch den FI führen. Hinter getrennten RCDs dürfen Neutralleiter nicht vermischt und N und PE nicht verbunden werden. Solche Fehler können insbesondere unter Last eine Auslösung verursachen; ein zunächst eingeschalteter FI beweist keinen korrekten Anschluss.</p>
+      <p lang="en">All live conductors of the protected circuit must pass through the RCD. Neutrals downstream of separate RCDs must not be mixed, and N and PE must not be joined. Such faults may cause tripping, particularly under load; an RCD remaining on does not prove correct wiring.</p>
     </div>
   </div>
 </section>
@@ -218,14 +204,14 @@
           <tr>
             <td class="num"><strong>B</strong></td>
             <td><span lang="de">wie F, zusätzlich glatte Gleichfehlerströme</span><span lang="en">as F, plus smooth DC residual currents</span></td>
-            <td><span lang="de">Photovoltaik, Ladestationen, dreiphasige Umrichter</span><span lang="en">PV systems, EV charging, three-phase converters</span></td>
+            <td><span lang="de">z. B. bestimmte Umrichter; Auswahl nach Hersteller und Schutzkonzept</span><span lang="en">e.g. certain converters; select by manufacturer and protection design</span></td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <p lang="de">Die Typen bauen aufeinander auf: Ein Typ B kann alles, was Typ F kann, und dieser alles, was Typ A kann. Umgekehrt gilt es nicht.</p>
-    <p lang="en">The types build on one another: a type B does everything a type F does, and that does everything a type A does. The reverse is not true.</p>
+    <p lang="de">Die Typen unterscheiden sich nach erfasster Stromform und Prüfbedingungen. Typ B ist kein pauschal austauschbarer Ersatz: Frequenzbereich, Netzspannung, Herstellerfreigabe und vorgeschaltete RCDs müssen zusammenpassen. Bei Ladeeinrichtungen kann beispielsweise eine zugelassene Kombination aus Typ A/F und 6-mA-DC-Fehlerstromerkennung vorgesehen sein. Massgebend sind die konkrete Anlage und die Gerätevorgaben.</p>
+    <p lang="en">Types differ in detected waveforms and test conditions. Type B is not a universally interchangeable replacement: frequency range, supply voltage, manufacturer approval and upstream RCDs must be coordinated. For example, charging equipment may use an approved type A/F combination with 6 mA DC residual-current detection. Selection depends on the installation and equipment requirements.</p>
 
     <h3><span lang="de">Weitere Kennzeichnungen</span><span lang="en">Further markings</span></h3>
     <div class="tablewrap">
@@ -237,7 +223,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td class="num"><strong>S</strong></td><td><span lang="de">selektiv — kurzzeitverzögert, damit der nachgelagerte FI zuerst auslöst</span><span lang="en">selective — short time delay so the downstream RCD trips first</span></td></tr>
+          <tr><td class="num"><strong>S</strong></td><td><span lang="de">selektiv, zeitverzögert — Koordination mit nachgelagerten RCDs erforderlich</span><span lang="en">selective, time-delayed — coordination with downstream RCDs required</span></td></tr>
           <tr><td class="num"><strong>G</strong></td><td><span lang="de">kurzzeitverzögert, unempfindlicher gegen Störimpulse</span><span lang="en">short time delay, less sensitive to interference pulses</span></td></tr>
           <tr><td class="num">≈</td><td><span lang="de">Symbol für Wechselfehlerstrom (Typ AC)</span><span lang="en">symbol for AC residual current (type AC)</span></td></tr>
         </tbody>
@@ -254,18 +240,18 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td class="num">10 mA</td><td><span lang="de">erhöhter Personenschutz — Kindergarten, medizinische Bereiche</span><span lang="en">enhanced personal protection — nurseries, medical areas</span></td></tr>
+          <tr><td class="num">10 mA</td><td><span lang="de">zusätzlicher Schutz für entsprechend geplante Anwendungen</span><span lang="en">additional protection for appropriately designed applications</span></td></tr>
           <tr><td class="num">30 mA</td><td><span lang="de"><strong>Personenschutz</strong> — Standard für Steckdosen und Nassbereiche</span><span lang="en"><strong>personal protection</strong> — standard for sockets and wet areas</span></td></tr>
-          <tr><td class="num">300 mA</td><td><span lang="de">Brandschutz — kein Personenschutz mehr</span><span lang="en">fire protection — no longer personal protection</span></td></tr>
-          <tr><td class="num">500 mA</td><td><span lang="de">Anlagenschutz, vorgelagert und selektiv</span><span lang="en">installation protection, upstream and selective</span></td></tr>
+          <tr><td class="num">300 mA</td><td><span lang="de">Fehler-/Brandschutz nach Anwendung; kein zusätzlicher Schutz ≤ 30 mA</span><span lang="en">fault/fire protection as applicable; not additional protection ≤ 30 mA</span></td></tr>
+          <tr><td class="num">500 mA</td><td><span lang="de">Fehlerschutz nach Auslegung; nicht automatisch selektiv</span><span lang="en">fault protection as designed; not automatically selective</span></td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="callout blue">
       <b class="tag"><span lang="de">Warum ausgerechnet 30 mA?</span><span lang="en">Why 30 mA of all values?</span></b>
-      <p lang="de">Weil dieser Wert unter der Schwelle liegt, ab der Herzkammerflimmern zu erwarten ist. Ein FI mit 30 mA schaltet, bevor der Strom durch den Körper lebensgefährlich wird — und zwar schnell genug, dass die Einwirkdauer kurz bleibt.</p>
-      <p lang="en">Because it lies below the threshold at which ventricular fibrillation is to be expected. A 30 mA RCD disconnects before the current through the body becomes life-threatening — and fast enough to keep the exposure time short.</p>
+      <p lang="de">30 mA ist eine Bemessungsgrenze für den <strong>zusätzlichen Schutz</strong>, keine Grenze zwischen ungefährlich und tödlich. Die Wirkung auf den Körper hängt unter anderem von Stromstärke, Stromweg und Einwirkdauer ab. Ein geeigneter RCD verkürzt die Einwirkdauer und vermindert das Risiko, bietet aber keine Garantie gegen Verletzungen.</p>
+      <p lang="en">30 mA is a rating limit for <strong>additional protection</strong>, not a boundary between harmless and lethal current. Effects depend on current magnitude, path and duration. A suitable RCD reduces exposure time and risk but does not guarantee freedom from injury.</p>
     </div>
   </div>
 </section>
@@ -288,8 +274,8 @@
           <tr><td><strong><span lang="de">2-polig</span><span lang="en">2-pole</span></strong></td><td><span lang="de">L und N — für einphasige Stromkreise</span><span lang="en">L and N — for single-phase circuits</span></td></tr>
           <tr><td><strong><span lang="de">4-polig</span><span lang="en">4-pole</span></strong></td><td><span lang="de">L1, L2, L3 und N — für Drehstrom und für Gruppen</span><span lang="en">L1, L2, L3 and N — for three-phase and for groups</span></td></tr>
           <tr><td><strong>FI-LS (RCBO)</strong></td><td><span lang="de">FI und Leitungsschutz in einem Gerät, ein Stromkreis</span><span lang="en">RCD and cable protection in one device, one circuit</span></td></tr>
-          <tr><td><strong><span lang="de">Netzspannungsunabhängig</span><span lang="en">Voltage-independent</span></strong></td><td><span lang="de">funktioniert rein elektromagnetisch, auch bei Ausfall des Neutralleiters</span><span lang="en">works purely electromagnetically, even if the neutral fails</span></td></tr>
-          <tr><td><strong><span lang="de">Netzspannungsabhängig</span><span lang="en">Voltage-dependent</span></strong></td><td><span lang="de">braucht Hilfsenergie aus dem Netz — im Fehlerfall ein Nachteil</span><span lang="en">needs auxiliary power from the mains — a drawback under fault conditions</span></td></tr>
+          <tr><td><strong><span lang="de">Netzspannungsunabhängig</span><span lang="en">Voltage-independent</span></strong></td><td><span lang="de">Auslöseenergie aus dem Fehlerstrom; Anschlussbedingungen beachten</span><span lang="en">tripping energy from residual current; observe wiring requirements</span></td></tr>
+          <tr><td><strong><span lang="de">Netzspannungsabhängig</span><span lang="en">Voltage-dependent</span></strong></td><td><span lang="de">benötigt Netzversorgung; Verhalten bei Spannungsausfall laut Datenblatt</span><span lang="en">requires mains power; check data sheet for loss-of-supply behaviour</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -300,11 +286,11 @@
 
     <div class="callout">
       <b class="tag"><span lang="de">Ableitströme summieren sich</span><span lang="en">Leakage currents add up</span></b>
-      <p lang="de">Jedes elektronische Gerät hat einen kleinen, völlig normalen Ableitstrom. Hängen viele Geräte hinter demselben 30-mA-FI, addieren sich diese Ströme und der FI löst irgendwann ohne echten Fehler aus. Faustregel: Der summierte Ableitstrom soll deutlich unter der Hälfte des Bemessungsfehlerstromes bleiben. Abhilfe: Last auf mehrere FI aufteilen.</p>
-      <p lang="en">Every electronic device has a small, entirely normal leakage current. With many devices behind the same 30 mA RCD, these add up and the device eventually trips without a real fault. Rule of thumb: the total leakage should stay well below half the rated residual current. The remedy is to split the load across several RCDs.</p>
+      <p lang="de">Viele elektronische Geräte verursachen betriebsbedingte Ableitströme. Diese können sich hinter einem gemeinsamen RCD addieren und unerwünschte Auslösungen auslösen. Bei der Planung sind die zulässige Summe, Einschaltvorgänge und eine ausreichende Reserve nach Norm und Herstellerangaben zu berücksichtigen; Stromkreise bei Bedarf auf mehrere RCDs verteilen.</p>
+      <p lang="en">Many electronic devices produce operational leakage currents. These can add up downstream of a common RCD and cause unwanted tripping. Design must account for the permitted total, switching transients and adequate margin under the applicable standard and manufacturer instructions; divide circuits between RCDs where necessary.</p>
     </div>
     <figure class="plate">
-      <img src="../assets/img/fi-01-fi-und-ls.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Ein breiter FI-Schalter neben drei schmaleren Leitungsschutzschaltern.">
+      <img lang="de" src="../assets/img/fi-01-fi-und-ls.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Ein breiter FI-Schalter neben drei schmaleren Leitungsschutzschaltern."><img lang="en" src="../assets/img/fi-01-fi-und-ls.webp" width="1344" height="768" loading="lazy" decoding="async" alt="An RCD next to three miniature circuit breakers.">
       <figcaption>
         <span lang="de">Der FI ist breiter als die Automaten daneben — er führt alle aktiven Leiter.</span>
         <span lang="en">The RCD is wider than the breakers beside it — it carries all live conductors.</span>
@@ -321,13 +307,13 @@
     <h2><span lang="de">Prüfung und Fehlersuche</span><span lang="en">Testing and fault finding</span></h2>
 
     <h3><span lang="de">Die Prüftaste</span><span lang="en">The test button</span></h3>
-    <p lang="de">Die Taste <strong>T</strong> schaltet intern einen Widerstand so ein, dass ein definierter Strom am Ringkern vorbeifliesst. Damit wird geprüft, ob die <strong>Mechanik</strong> noch funktioniert. Ein FI, der jahrelang nie ausgelöst hat, kann festsitzen — deshalb ist die periodische Betätigung sinnvoll.</p>
-    <p lang="en">The <strong>T</strong> button internally connects a resistor so that a defined current bypasses the core. This checks whether the <strong>mechanism</strong> still works. An RCD that has not tripped for years can seize — which is why periodic operation makes sense.</p>
+    <p lang="de">Die Taste <strong>T</strong> erzeugt über den internen Prüfkreis einen Differenzstrom und prüft die Funktion der Erfassungs- und Auslösekette. Betätigung und Prüfintervall richten sich nach Hersteller und Einsatzbedingungen. Löst das Gerät nicht aus, muss eine Elektrofachperson die Ursache klären.</p>
+    <p lang="en">The <strong>T</strong> button produces residual current through an internal test circuit and checks the sensing and tripping chain. Follow manufacturer instructions and application requirements for operation and intervals. If the device fails to trip, an electrically skilled person must investigate.</p>
 
     <div class="callout">
       <b class="tag"><span lang="de">Prüftaste ist keine Messung</span><span lang="en">The test button is not a measurement</span></b>
-      <p lang="de">Sie sagt nur «er hat ausgelöst». Sie sagt <strong>nicht</strong>, bei welchem Strom und nach welcher Zeit. Beides wird mit dem Prüfgerät gemessen: der <strong>Auslösestrom</strong> muss zwischen dem halben und dem vollen Bemessungsfehlerstrom liegen, die <strong>Auslösezeit</strong> innerhalb der Vorgabe der Norm.</p>
-      <p lang="en">It only says “it tripped”. It does <strong>not</strong> say at what current and after what time. Both are measured with a test instrument: the <strong>tripping current</strong> must lie between half and the full rated residual current, and the <strong>tripping time</strong> within the limit set by the standard.</p>
+      <p lang="de">Die Prüftaste misst weder Auslösestrom noch Auslösezeit und prüft nicht die Durchgängigkeit des Schutzleiters. Eine Fachperson prüft die Schutzmassnahme mit geeigneten Messverfahren. Der Bereich 0,5–1 × I<sub>Δn</sub> bezieht sich auf sinusförmigen Wechselprüfstrom; für andere Stromformen und RCD-Typen gelten andere Prüfbedingungen.</p>
+      <p lang="en">The test button measures neither tripping current nor time and does not verify protective-conductor continuity. A skilled person verifies the protective measure using suitable tests. The 0.5–1 × I<sub>Δn</sub> range relates to sinusoidal AC test current; other waveforms and RCD types have different test conditions.</p>
     </div>
 
     <h3><span lang="de">Wenn der FI auslöst</span><span lang="en">When the RCD trips</span></h3>
@@ -351,8 +337,8 @@
 
     <div class="callout gold">
       <b class="tag"><span lang="de">Vorgehen bei der Eingrenzung</span><span lang="en">How to narrow it down</span></b>
-      <p lang="de">Alle nachgelagerten Automaten ausschalten, den FI einschalten, dann die Stromkreise <strong>einzeln zuschalten</strong>. Der Kreis, bei dem der FI fällt, enthält den Fehler. Anschliessend dort die Verbraucher einzeln trennen. Das ist schneller und sicherer als jede Vermutung.</p>
-      <p lang="en">Switch off all downstream breakers, close the RCD, then switch the circuits back on <strong>one at a time</strong>. The circuit that drops the RCD contains the fault. Then disconnect the loads in that circuit one by one. Faster and safer than any guesswork.</p>
+      <p lang="de">Einzelnes Zuschalten kann einer Fachperson Hinweise auf den betroffenen Anlagenteil geben. Es ist kein Fehlernachweis: Einpolige LS trennen den Neutralleiter nicht, fremde Neutralleiter oder summierte Ableitströme können das Ergebnis verfälschen. Vor Arbeiten an Leitern freischalten und die Sicherheitsregeln anwenden; Isolations- und Schutzmassnahmenprüfung fachgerecht durchführen.</p>
+      <p lang="en">Switching circuits individually can help a skilled person locate the affected part of an installation. It is not proof of the fault: single-pole MCBs leave neutral connected, and mixed neutrals or accumulated leakage can mislead. Isolate before working on conductors and apply the safety rules; carry out insulation and protective-measure tests correctly.</p>
     </div>
 
     <div class="callout neutral">
@@ -361,10 +347,10 @@
       <p lang="en">Where an RCD is required, with which rated residual current and which type, is governed by the NIN — among others for socket circuits, wet areas, outdoor installations, construction sites and charging equipment. <strong>Look up the applicable articles in your own NIN edition</strong>; the requirements have been extended repeatedly across editions.</p>
     </div>
     <figure class="plate">
-      <img src="../assets/img/fi-03-verteiler.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Offene Hausverteilung mit Schutzeinrichtungen und geordneter Verdrahtung.">
+      <img lang="de" src="../assets/img/fi-03-verteiler.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Offene Hausverteilung mit Schutzeinrichtungen und geordneter Verdrahtung."><img lang="en" src="../assets/img/fi-03-verteiler.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Distribution board with protective devices and organised wiring.">
       <figcaption>
-        <span lang="de">Zum Eingrenzen die Stromkreise einzeln zuschalten — der Kreis, bei dem der FI fällt, enthält den Fehler.</span>
-        <span lang="en">To narrow a fault down, switch the circuits on one at a time — the one that drops the RCD holds the fault.</span>
+        <span lang="de">Einzelnes Zuschalten liefert Hinweise; die Ursache muss fachgerecht gemessen und nachgewiesen werden.</span>
+        <span lang="en">Individual switching provides clues; proper measurements must establish the cause.</span>
       </figcaption>
     </figure>
 
@@ -404,8 +390,8 @@
     <details>
       <summary><span lang="de">Worin unterscheiden sich Typ A und Typ B?</span><span lang="en">What is the difference between type A and type B?</span></summary>
       <div class="ans">
-        <p lang="de">Typ A erfasst sinusförmige Wechselfehlerströme und pulsierende Gleichfehlerströme. Typ B erfasst zusätzlich Mischfrequenzen und glatte Gleichfehlerströme. Typ B wird dort gebraucht, wo Photovoltaik-Wechselrichter, Ladestationen oder dreiphasige Frequenzumrichter im Spiel sind.</p>
-        <p lang="en">Type A detects sinusoidal AC and pulsating DC residual currents. Type B additionally detects mixed frequencies and smooth DC residual currents. Type B is needed wherever PV inverters, EV chargers or three-phase converters are involved.</p>
+        <p lang="de">Typ A erfasst sinusförmige Wechsel- und pulsierende Gleichfehlerströme; Typ B zusätzlich glatte Gleichfehlerströme und spezifizierte Frequenzanteile. Ob Typ B erforderlich ist, ergibt sich aus den möglichen Fehlerstromformen, der Gerätezulassung und der Installation. PV oder Elektromobilität allein ist keine vollständige Auswahlregel.</p>
+        <p lang="en">Type A detects sinusoidal AC and pulsating DC residual currents; type B also detects smooth DC and specified frequency components. Whether type B is required depends on possible fault waveforms, equipment approval and the installation. PV or EV charging alone is not a complete selection rule.</p>
       </div>
     </details>
 
@@ -420,16 +406,16 @@
     <details>
       <summary><span lang="de">Was prüft die Prüftaste und was nicht?</span><span lang="en">What does the test button check, and what not?</span></summary>
       <div class="ans">
-        <p lang="de">Sie prüft, ob die Mechanik auslöst. Sie sagt nichts über den tatsächlichen Auslösestrom und die Auslösezeit — beides muss mit dem Prüfgerät gemessen werden.</p>
-        <p lang="en">It checks whether the mechanism operates. It says nothing about the actual tripping current and time — both must be measured with a test instrument.</p>
+        <p lang="de">Die Prüftaste prüft die interne Erfassungs- und Auslösefunktion. Sie ersetzt weder die Messung der Auslösewerte noch die Prüfung der gesamten Schutzmassnahme, einschliesslich Schutzleiter.</p>
+        <p lang="en">The button checks internal sensing and tripping. It replaces neither measurement of tripping values nor verification of the complete protective measure, including the protective conductor.</p>
       </div>
     </details>
 
     <details>
       <summary><span lang="de">Der FI löst sofort aus, sobald du ihn einschaltest. Was prüfst du zuerst?</span><span lang="en">The RCD trips as soon as you close it. What do you check first?</span></summary>
       <div class="ans">
-        <p lang="de">Ob der Neutralleiter hinter dem FI irgendwo mit dem Schutzleiter oder mit dem N eines anderen Stromkreises verbunden ist. Das ist der häufigste Anschlussfehler. Danach die Stromkreise einzeln zuschalten und den Fehler eingrenzen.</p>
-        <p lang="en">Whether the neutral downstream of the RCD is connected anywhere to the protective conductor or to another circuit's neutral. That is the most common wiring mistake. Then switch the circuits on one at a time to narrow down the fault.</p>
+        <p lang="de">Eine Fachperson prüft Anschluss und Isolation, insbesondere mögliche N–PE-Verbindungen oder vermischte Neutralleiter. Auch ein Gerätefehler oder summierte Ableitströme kommen infrage. Nicht wiederholt auf einen bestehenden Fehler einschalten; das gezielte Zuschalten allein ersetzt keine Messung.</p>
+        <p lang="en">A skilled person checks wiring and insulation, particularly N–PE connections or mixed neutrals. Equipment faults and accumulated leakage are also possible. Do not repeatedly re-energise a persistent fault; selective switching alone does not replace measurement.</p>
       </div>
     </details>
 
@@ -444,13 +430,14 @@
     <details>
       <summary><span lang="de">Was bedeutet die Kennzeichnung S auf einem FI?</span><span lang="en">What does the marking S on an RCD mean?</span></summary>
       <div class="ans">
-        <p lang="de">Selektiv: Das Gerät löst kurzzeitverzögert aus. Damit hat ein nachgelagerter FI Zeit, zuerst abzuschalten. So bleibt bei einem Fehler nur der betroffene Teil der Anlage stromlos statt die ganze Installation.</p>
-        <p lang="en">Selective: the device trips with a short time delay, giving a downstream RCD time to disconnect first. Under a fault, only the affected part of the installation loses supply rather than the whole system.</p>
+        <p lang="de">S kennzeichnet eine selektive, zeitverzögerte Ausführung. Selektivität muss zusätzlich über Bemessungsfehlerströme, Zeitverhalten und Hersteller-Koordination nachgewiesen werden; das S allein garantiert sie nicht.</p>
+        <p lang="en">S identifies a selective, time-delayed device. Selectivity must also be verified using rated residual currents, timing and manufacturer coordination; the S marking alone does not guarantee it.</p>
       </div>
     </details>
   </div>
 </section>
 
+<aside class="lesson-sources" aria-labelledby="sources-title"><h2 id="sources-title"><span lang="de">Quellen und Vertiefung</span><span lang="en">Sources and further reading</span></h2><ul><li><a href="https://new.abb.com/low-voltage/de/produkte/installationsgeraete/fehlerstrom-schutzeinrichtungen/faq">ABB: RCD-Anwendung / RCD application</a></li><li><a href="https://www.doepke.de/de/fehlerstromschutz-fuer-die-elektromobilitaet">Doepke: Fehlerstromschutz für Elektromobilität</a></li><li><a href="https://library.e.abb.com/public/9f0e99de3bc740288bc41ab95667f72f/RCD%20Technical%20Guide%20EN.pdf">ABB: RCD Technical Guide</a></li><li><a href="https://www.electrical-installation.org/enwiki/Electric_shock">Schneider Electric: Electric shock</a></li></ul></aside>
 <nav class="pager">
   <a href="03-ls-automaten.html">
     <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>
