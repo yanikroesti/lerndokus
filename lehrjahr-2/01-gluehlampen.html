@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/doku.css">
+<link rel="stylesheet" href="../assets/lesson.css">
 </head>
 <body>
 
@@ -50,6 +51,7 @@
 </div>
 
 <!-- ================= 1 ================= -->
+<nav class="lesson-contents" aria-labelledby="contents-title"><h2 id="contents-title"><span lang="de">In diesem Kapitel</span><span lang="en">In this chapter</span></h2><ol><li><a href="#s1"><span lang="de">Prinzip und Einordnung</span><span lang="en">Principle and classification</span></a></li><li><a href="#s2"><span lang="de">Aufbau</span><span lang="en">Construction</span></a></li><li><a href="#s3"><span lang="de">Wirkungsgrad und Kennwerte</span><span lang="en">Efficiency and characteristics</span></a></li><li><a href="#s4"><span lang="de">Halogenlampen</span><span lang="en">Halogen lamps</span></a></li><li><a href="#s5"><span lang="de">Modelle und Sockel</span><span lang="en">Types and caps</span></a></li><li><a href="#s6"><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></a></li></ol></nav>
 <section id="s1">
   <div class="snum">01</div>
   <div class="sbody">
@@ -67,8 +69,8 @@
 
     <h2><span lang="de">Prinzip und Einordnung</span><span lang="en">Principle and classification</span></h2>
 
-    <p class="lead" lang="de">Die Glühlampe ist ein <strong>Temperaturstrahler</strong>. Ein dünner Draht wird vom Strom so stark erhitzt, dass er glüht und Licht abgibt. Das ist die älteste elektrische Lichtquelle — und zugleich die ineffizienteste, die je in Serie gebaut wurde.</p>
-    <p class="lead" lang="en">An incandescent lamp is a <strong>thermal radiator</strong>. Current heats a thin wire until it glows and emits light. It is the oldest electric light source — and at the same time the least efficient ever mass-produced.</p>
+    <p class="lead" lang="de">Die Glühlampe ist ein <strong>Temperaturstrahler</strong>. Ein dünner Draht wird vom Strom so stark erhitzt, dass er glüht und Licht abgibt. Sie ist eine historisch wichtige elektrische Lichtquelle mit geringer Lichtausbeute.</p>
+    <p class="lead" lang="en">An incandescent lamp is a <strong>thermal radiator</strong>. Current heats a thin wire until it glows and emits light. It is a historically important electric light source with low luminous efficacy.</p>
 
     <p lang="de">Auch wenn die klassische Glühlampe für die Allgemeinbeleuchtung nicht mehr verkauft werden darf, gehört sie in die Ausbildung: Sie erklärt die Begriffe <em>Lichtstrom</em>, <em>Lichtausbeute</em> und <em>Farbtemperatur</em> am einfachsten Beispiel, und in Bestandsanlagen trifft man sie weiterhin an.</p>
     <p lang="en">Even though the classic bulb may no longer be sold for general lighting, it belongs in training: it explains <em>luminous flux</em>, <em>luminous efficacy</em> and <em>colour temperature</em> on the simplest possible example, and it is still found in existing installations.</p>
@@ -80,7 +82,7 @@
     </div>
 
     <figure class="plate">
-      <img src="../assets/img/gl-01-reihe.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Drei Glühlampen unterschiedlicher Kolbenform nebeneinander, die mittlere leuchtet.">
+      <img lang="de" src="../assets/img/gl-01-reihe.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Drei Glühlampen unterschiedlicher Kolbenform nebeneinander, die mittlere leuchtet."><img lang="en" src="../assets/img/gl-01-reihe.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Three incandescent bulbs of different shapes side by side; the centre lamp is lit.">
       <figcaption>
         <span lang="de">Drei Kolbenformen nebeneinander — die mittlere Lampe brennt.</span>
         <span lang="en">Three bulb shapes side by side — the middle lamp is lit.</span>
@@ -147,8 +149,8 @@
 
     <div class="callout">
       <b class="tag"><span lang="de">Sicherheitsregel am Sockel</span><span lang="en">Safety rule at the cap</span></b>
-      <p lang="de">Der <strong>Polleiter gehört an den Fusskontakt</strong>, der Neutralleiter ans Gewinde. Beim Wechseln der Lampe ist das Gewinde leichter berührbar als der Fusskontakt — vertauscht man die beiden, steht das Gewinde beim ausgeschalteten Schalter unter Spannung.</p>
-      <p lang="en">The <strong>line conductor belongs on the foot contact</strong>, the neutral on the thread. When changing a lamp the thread is easier to touch than the foot contact — swap the two and the thread stays live even with the switch off.</p>
+      <p lang="de">Bei fest angeschlossenen Schraubfassungen gehört der <strong>geschaltete Polleiter an den Fusskontakt</strong>, der Neutralleiter an den Gewindekontakt. Eine Vertauschung an der Fassung allein bedeutet nicht, dass sie bei geöffnetem Polleiterschalter unter Spannung bleibt. Wird dagegen fälschlich der Neutralleiter geschaltet, können Teile der Fassung trotz ausgeschalteter Lampe Spannung führen. «Licht aus» ist kein Nachweis der Spannungsfreiheit.</p>
+      <p lang="en">For fixed-wired screw lampholders, connect the <strong>switched line to the centre contact</strong> and neutral to the threaded contact. Reversing the lampholder connections alone does not mean it remains live when the line switch is open. If neutral is incorrectly switched instead, parts of the holder may remain live while the lamp is off. A dark lamp does not prove absence of voltage.</p>
     </div>
   </div>
 </section>
@@ -192,10 +194,10 @@
     <p lang="en">The filament reaches around <strong>2500 °C</strong>. At that temperature most of the radiated energy lies in the <strong>infrared</strong> — in heat, not visible light. Running hotter is possible, but then the tungsten evaporates too fast and the lamp burns out. The incandescent lamp is stuck in this conflict: more light means less life.</p>
 
     <figure class="plate">
-      <img src="../assets/img/gl-02-waerme-led.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Links eine Glühlampe mit aufsteigenden Wärmewellen, rechts eine kleine LED-Lampe.">
+      <img lang="de" src="../assets/img/gl-02-waerme-led.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Links eine Glühlampe mit aufsteigenden Wärmewellen, rechts eine kleine LED-Lampe."><img lang="en" src="../assets/img/gl-02-waerme-led.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Incandescent bulb with heat-wave marks beside an LED lamp; both technologies also generate heat.">
       <figcaption>
-        <span lang="de">Der grösste Teil der Energie verlässt die Glühlampe als Wärme — die LED daneben bleibt kühl.</span>
-        <span lang="en">Most of the energy leaves an incandescent lamp as heat — the LED beside it stays cool.</span>
+        <span lang="de">Die Glühlampe gibt viel Wärme ab. Auch LEDs erzeugen Wärme und benötigen eine geeignete Wärmeabfuhr; ihre Oberflächen können heiss werden.</span>
+        <span lang="en">Incandescent lamps release much heat. LEDs also generate heat and need adequate heat dissipation; their surfaces can become hot.</span>
       </figcaption>
     </figure>
 
@@ -203,15 +205,15 @@
       <b class="tag"><span lang="de">Weitere Kennwerte</span><span lang="en">Further characteristics</span></b>
       <ul lang="de">
         <li><strong>Farbtemperatur</strong> rund 2700 K — warmweiss, deshalb die Beliebtheit im Wohnbereich</li>
-        <li><strong>Farbwiedergabe R<sub>a</sub> = 100</strong> — besser geht nicht, das Licht enthält alle Wellenlängen</li>
-        <li><strong>Dimmbar</strong> ohne Zusatzgerät und ohne Farbveränderung ins Kalte</li>
+        <li><strong>Farbwiedergabe R<sub>a</sub> = 100</strong> — hohe Farbtreue gegenüber dem Referenzlicht gleicher Farbtemperatur</li>
+        <li><strong>Dimmbar</strong> mit geeignetem Dimmer; beim Dimmen wird die Lichtfarbe wärmer</li>
         <li><strong>Sofort volle Helligkeit</strong>, unempfindlich gegen häufiges Schalten</li>
         <li><strong>Einschaltstrom</strong> bis zum Zehnfachen — der kalte Wendel hat einen kleinen Widerstand</li>
       </ul>
       <ul lang="en">
         <li><strong>Colour temperature</strong> about 2700 K — warm white, hence its popularity in homes</li>
-        <li><strong>Colour rendering R<sub>a</sub> = 100</strong> — cannot be beaten, the light contains all wavelengths</li>
-        <li><strong>Dimmable</strong> without extra equipment and without shifting towards cold light</li>
+        <li><strong>Colour rendering R<sub>a</sub> = 100</strong> — high colour fidelity relative to reference light of the same colour temperature</li>
+        <li><strong>Dimmable</strong> with a suitable dimmer; the light becomes warmer when dimmed</li>
         <li><strong>Instant full brightness</strong>, insensitive to frequent switching</li>
         <li><strong>Inrush current</strong> up to ten times — the cold filament has a low resistance</li>
       </ul>
@@ -258,7 +260,7 @@
     </div>
 
     <figure class="plate">
-      <img src="../assets/img/gl-03-halogen.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Eine Halogen-Stiftsockellampe und eine Halogen-Stablampe auf einem gefalteten Tuch.">
+      <img lang="de" src="../assets/img/gl-03-halogen.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Eine Halogen-Stiftsockellampe und eine Halogen-Stablampe auf einem gefalteten Tuch."><img lang="en" src="../assets/img/gl-03-halogen.webp" width="1344" height="768" loading="lazy" decoding="async" alt="A halogen capsule and a linear halogen lamp lying on a folded cloth.">
       <figcaption>
         <span lang="de">Halogenlampen auf dem Tuch — der Quarzkolben wird nie mit blossen Fingern angefasst.</span>
         <span lang="en">Halogen lamps on a cloth — the quartz bulb is never touched with bare fingers.</span>
@@ -337,7 +339,7 @@
     </ul>
 
     <figure class="plate">
-      <img src="../assets/img/gl-04-formen.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Fünf Lampenformen nebeneinander: Standard, Kerze, Tropfen, Reflektor und Röhre.">
+      <img lang="de" src="../assets/img/gl-04-formen.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Fünf Lampenformen nebeneinander: Standard, Kerze, Tropfen, Reflektor und Röhre."><img lang="en" src="../assets/img/gl-04-formen.webp" width="1344" height="768" loading="lazy" decoding="async" alt="Five lamp shapes: standard, candle, globe, reflector and tubular.">
       <figcaption>
         <span lang="de">Kolbenformen von links: Standard, Kerze, Tropfen, Reflektor, Röhre.</span>
         <span lang="en">Bulb shapes from the left: standard, candle, drop, reflector, tubular.</span>
@@ -351,8 +353,8 @@
     </div>
 
     <h3><span lang="de">Ersatz durch LED</span><span lang="en">Replacing with LED</span></h3>
-    <p lang="de">Beim Ersatz wird nicht mehr in Watt, sondern in <strong>Lumen</strong> gerechnet. Als grober Anhaltspunkt entspricht eine 60-W-Glühlampe rund 700 lm. Zusätzlich zu prüfen sind Farbtemperatur, Dimmbarkeit und — bei Niedervolt — ob der vorhandene Transformator die kleine LED-Last überhaupt noch erkennt.</p>
-    <p lang="en">When replacing, you no longer count watts but <strong>lumens</strong>. As a rough guide a 60 W bulb corresponds to about 700 lm. Also check colour temperature, dimmability and — for low voltage — whether the existing transformer still recognises the small LED load at all.</p>
+    <p lang="de">Beim Ersatz wird nicht mehr in Watt, sondern in <strong>Lumen</strong> gerechnet. Als grober Anhaltspunkt entspricht eine 60-W-Glühlampe rund 800 lm. Zusätzlich zu prüfen sind Farbtemperatur, Dimmbarkeit und — bei Niedervolt — ob der vorhandene Transformator die kleine LED-Last überhaupt noch erkennt.</p>
+    <p lang="en">When replacing, you no longer count watts but <strong>lumens</strong>. As a rough guide a 60 W bulb corresponds to about 800 lm. Also check colour temperature, dimmability and — for low voltage — whether the existing transformer still recognises the small LED load at all.</p>
   </div>
 </section>
 
@@ -397,8 +399,8 @@
     <details>
       <summary><span lang="de">An welchen Kontakt der Fassung gehört der Polleiter und warum?</span><span lang="en">Which lampholder contact takes the line conductor, and why?</span></summary>
       <div class="ans">
-        <p lang="de">An den Fusskontakt. Das Gewinde ist beim Lampenwechsel viel leichter berührbar; liegt dort der Polleiter, steht es auch bei ausgeschaltetem Schalter unter Spannung.</p>
-        <p lang="en">The foot contact. The thread is far easier to touch when changing a lamp; if the line conductor were there, it would be live even with the switch off.</p>
+        <p lang="de">An den Fusskontakt gehört der geschaltete Polleiter; das leichter berührbare Gewinde wird mit dem Neutralleiter verbunden. Ob bei ausgeschalteter Lampe gefährliche Spannung vorhanden ist, hängt auch von der Schaltung ab. Die Schalterstellung ersetzt keine Prüfung auf Spannungsfreiheit.</p>
+        <p lang="en">The switched line belongs on the centre contact; the more accessible thread connects to neutral. Whether dangerous voltage remains with the lamp off also depends on the circuit. The switch position does not replace verification of absence of voltage.</p>
       </div>
     </details>
 
@@ -421,13 +423,14 @@
     <details>
       <summary><span lang="de">Was bedeutet R<sub>a</sub> = 100?</span><span lang="en">What does R<sub>a</sub> = 100 mean?</span></summary>
       <div class="ans">
-        <p lang="de">Die bestmögliche Farbwiedergabe. Das Licht enthält alle Wellenlängen des sichtbaren Spektrums, Farben erscheinen wie im Tageslicht. Genau darin ist die Glühlampe jeder anderen Lichtquelle bis heute überlegen.</p>
-        <p lang="en">The best possible colour rendering. The light contains all wavelengths of the visible spectrum, so colours appear as in daylight. In this one respect the incandescent lamp still beats every other light source.</p>
+        <p lang="de">R<sub>a</sub> bewertet die Farbtreue gegenüber einem Referenzlicht ähnlicher Farbtemperatur. Ein Wert von 100 bedeutet Übereinstimmung innerhalb dieses Bewertungsverfahrens. Warmes Glühlampenlicht wird dadurch nicht zu Tageslicht; Farbtemperatur und Farbwiedergabe sind unterschiedliche Eigenschaften.</p>
+        <p lang="en">R<sub>a</sub> assesses colour fidelity relative to reference light of a similar colour temperature. A value of 100 means agreement within this assessment method. Warm incandescent light is not thereby daylight; colour temperature and colour rendering are different properties.</p>
       </div>
     </details>
   </div>
 </section>
 
+<aside class="lesson-sources" aria-labelledby="sources-title"><h2 id="sources-title"><span lang="de">Quellen und Vertiefung</span><span lang="en">Sources and further reading</span></h2><ul><li><a href="https://www.bfe.admin.ch/de/lichtquellen">BFE – Lichtquellen</a></li><li><a href="https://www.cie.co.at/publications/colorimetry-part-2-cie-standard-illuminants-0">CIE – Standard Illuminants</a></li><li><a href="https://files.cie.co.at/LpR%2066%20CIE%20RESEARCH%20Special%20-%20CIE%20Research%20Addressing%20Color%20Quality%20of%20Light%20Sources%20Related%20to%20Perception%20and%20Preference.pdf">CIE – Colour fidelity and reference light</a></li><li><a href="https://www.ledvance.com/00_Free_To_Use/asset-13378762_lamps_launch_trade_2025-2026_brochure_interactive_en.pdf">LEDVANCE – Lampen 2025/2026</a></li></ul></aside>
 <nav class="pager">
   <span class="void"></span>
   <a class="next" href="02-fl-leuchten.html">

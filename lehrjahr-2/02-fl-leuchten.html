@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/doku.css">
+<link rel="stylesheet" href="../assets/lesson.css">
 </head>
 <body>
 
@@ -50,6 +51,7 @@
 </div>
 
 <!-- ================= 1 ================= -->
+<nav class="lesson-contents" aria-labelledby="contents-title"><h2 id="contents-title"><span lang="de">In diesem Kapitel</span><span lang="en">In this chapter</span></h2><ol><li><a href="#s1"><span lang="de">Prinzip</span><span lang="en">Principle</span></a></li><li><a href="#s2"><span lang="de">Aufbau und Schaltung mit KVG</span><span lang="en">Construction and circuit with a magnetic ballast</span></a></li><li><a href="#s3"><span lang="de">Vorschaltgeräte im Vergleich</span><span lang="en">Comparing control gear</span></a></li><li><a href="#s4"><span lang="de">Modelle und Kennzeichnung</span><span lang="en">Types and marking</span></a></li><li><a href="#s5"><span lang="de">Praxis, Fehlersuche und Entsorgung</span><span lang="en">Practice, fault finding and disposal</span></a></li><li><a href="#s6"><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></a></li></ol></nav>
 <section id="s1">
   <div class="snum">01</div>
   <div class="sbody">
@@ -69,6 +71,7 @@
     </figure>
 
     <h2><span lang="de">Prinzip</span><span lang="en">Principle</span></h2>
+<figure class="lesson-illustration"><img lang="de" src="../assets/img/fl-roehre-schnitt.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Schnittansicht eines Röhrenendes mit zwei Kontaktstiften, Elektrodenwendel und Leuchtstoffschicht."><img lang="en" src="../assets/img/fl-roehre-schnitt.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Cutaway of a tube end with two contact pins, an electrode filament and phosphor coating."><figcaption><span lang="de">Die Elektrodenwendel sitzt am Röhrenende; die Leuchtstoffschicht liegt auf der Glasinnenseite. Vereinfachte Bauansicht, kein Fertigungsplan. <small>KI-generierte Anschauung.</small></span><span lang="en">The electrode filament sits at the tube end; the phosphor coats the inner glass surface. Simplified construction view, not a manufacturing plan. <small>AI-generated illustration.</small></span></figcaption></figure>
 
     <p class="lead" lang="de">Die Leuchtstofflampe erzeugt Licht nicht durch Glühen, sondern durch eine <strong>Gasentladung</strong>. In der Röhre steht Quecksilberdampf unter niedrigem Druck. Fliesst Strom hindurch, sendet er vor allem <strong>ultraviolettes</strong> Licht aus — das für uns unsichtbar wäre.</p>
     <p class="lead" lang="en">A fluorescent lamp produces light not by glowing but by a <strong>gas discharge</strong>. The tube contains mercury vapour at low pressure. When current flows through it, it emits mainly <strong>ultraviolet</strong> light — which we could not see.</p>
@@ -78,8 +81,8 @@
 
     <div class="callout">
       <b class="tag"><span lang="de">Warum es ein Vorschaltgerät braucht</span><span lang="en">Why control gear is needed</span></b>
-      <p lang="de">Eine Gasentladung hat eine <strong>fallende Kennlinie</strong>: Je mehr Strom fliesst, desto kleiner wird ihr Widerstand. An der Netzspannung allein würde der Strom sofort ins Unendliche steigen und die Lampe zerstören. Deshalb braucht jede Leuchtstofflampe ein <strong>Vorschaltgerät</strong>, das den Strom begrenzt.</p>
-      <p lang="en">A gas discharge has a <strong>falling characteristic</strong>: the more current flows, the lower its resistance becomes. On mains voltage alone the current would rise without limit and destroy the lamp. Every fluorescent lamp therefore needs <strong>control gear</strong> to limit the current.</p>
+      <p lang="de">Eine Gasentladung hat eine <strong>fallende Kennlinie</strong>: Je mehr Strom fliesst, desto kleiner wird ihr Widerstand. An der Netzspannung allein würde der Strom unzulässig stark ansteigen und die Lampe zerstören. Deshalb braucht jede Leuchtstofflampe ein <strong>Vorschaltgerät</strong>, das den Strom begrenzt.</p>
+      <p lang="en">A gas discharge has a <strong>falling characteristic</strong>: the more current flows, the lower its resistance becomes. On mains voltage alone the current would rise to an excessive level and destroy the lamp. Every fluorescent lamp therefore needs <strong>control gear</strong> to limit the current.</p>
     </div>
   </div>
 </section>
@@ -168,6 +171,7 @@
   <div class="snum">03</div>
   <div class="sbody">
     <h2><span lang="de">Vorschaltgeräte im Vergleich</span><span lang="en">Comparing control gear</span></h2>
+<figure class="lesson-illustration"><img lang="de" src="../assets/img/fl-kvg-bauteile.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Drossel, zylindrischer Starter und Röhrenende als getrennte Bauteile."><img lang="en" src="../assets/img/fl-kvg-bauteile.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Magnetic ballast, cylindrical starter and tube end as separate components."><figcaption><span lang="de">Bauteile erkennen: Drossel · Starter · Röhre. Diese Ansicht zeigt keine Verdrahtung. <small>KI-generierte Anschauung.</small></span><span lang="en">Recognising components: ballast · starter · tube. This view shows no wiring. <small>AI-generated illustration.</small></span></figcaption></figure>
 
     <div class="tablewrap">
       <table>
@@ -192,14 +196,14 @@
           <tr>
             <td><strong>EVG</strong><br><span class="lgs" lang="de">elektronisch</span><span class="lgs" lang="en">electronic</span></td>
             <td><span lang="de">Elektronik, betreibt die Röhre mit hoher Frequenz</span><span lang="en">electronics, running the tube at high frequency</span></td>
-            <td><span lang="de">kein Starter, kein Flimmern, kein Brummen, geringere Verluste, dimmbar, längere Röhrenlebensdauer</span><span lang="en">no starter, no flicker, no hum, lower losses, dimmable, longer tube life</span></td>
+            <td><span lang="de">kein separater Starter, geringere Verluste; Dimmbarkeit und Lampenlebensdauer abhängig von Gerät und Betriebsweise</span><span lang="en">no separate starter, lower losses; dimming and lamp life depend on the device and operating conditions</span></td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <p lang="de">Das <strong>EVG</strong> betreibt die Röhre mit einer Frequenz weit oberhalb der Netzfrequenz. Dadurch verschwindet das für das Auge wahrnehmbare Flimmern vollständig, die Lichtausbeute steigt, und das Vorheizen der Elektroden lässt sich elektronisch steuern. Neue Leuchten werden praktisch nur noch mit EVG gebaut.</p>
-    <p lang="en">An <strong>electronic ballast</strong> runs the tube at a frequency far above mains frequency. Perceptible flicker disappears entirely, efficacy rises, and electrode preheating can be controlled electronically. New luminaires are built almost exclusively with electronic ballasts.</p>
+    <p lang="de">Ein <strong>EVG</strong> betreibt die Lampe mit hoher Frequenz und begrenzt den Strom elektronisch. Gegenüber KVG-Betrieb kann es Verluste und Flimmern verringern. <strong>Nicht jedes EVG ist dimmbar</strong>; dafür müssen Vorschaltgerät, Lampe und Steuerung zusammenpassen. Diese Technik ist vor allem für bestehende FL-Anlagen relevant; bei neuen Beleuchtungsanlagen ist LED heute üblich.</p>
+    <p lang="en">An <strong>electronic ballast</strong> operates the lamp at high frequency and limits current electronically. It can reduce losses and flicker compared with magnetic gear. <strong>Not every electronic ballast is dimmable</strong>; ballast, lamp and control must be compatible. This technology is mainly relevant to existing fluorescent installations; LED is now common in new lighting installations.</p>
 
     <h3><span lang="de">Kompensation und cos φ</span><span lang="en">Power factor correction</span></h3>
     <p lang="de">Die Drossel eines KVG ist eine Induktivität. Sie verschiebt den Strom gegenüber der Spannung und verschlechtert den Leistungsfaktor auf etwa 0,5. Ein <strong>parallel geschalteter Kondensator</strong> gleicht das aus und bringt den cos φ zurück auf rund 0,9.</p>
@@ -236,7 +240,7 @@
         <tbody>
           <tr><td class="num"><strong>T12</strong></td><td class="num">38 mm</td><td class="num">20 · 40 · 65 W</td><td><span lang="de">veraltet, nur noch in Altanlagen</span><span lang="en">obsolete, only in old installations</span></td></tr>
           <tr><td class="num"><strong>T8</strong></td><td class="num">26 mm</td><td class="num">18 · 36 · 58 W</td><td><span lang="de">lange der Standard, Sockel G13</span><span lang="en">long the standard, cap G13</span></td></tr>
-          <tr><td class="num"><strong>T5</strong></td><td class="num">16 mm</td><td class="num">14 · 21 · 28 · 35 W</td><td><span lang="de">nur mit EVG, Sockel G5, höhere Ausbeute</span><span lang="en">electronic ballast only, cap G5, higher efficacy</span></td></tr>
+          <tr><td class="num"><strong>T5 HE</strong></td><td class="num">16 mm</td><td class="num">14 · 21 · 28 · 35 W</td><td><span lang="de">nur mit EVG, Sockel G5, höhere Ausbeute</span><span lang="en">electronic ballast only, cap G5, higher efficacy</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -311,16 +315,16 @@
     <p lang="de">Beim Ersatz einer T8-Röhre durch eine LED-Röhre ist entscheidend, was in der Leuchte steckt:</p>
     <p lang="en">When replacing a T8 tube with an LED tube, what matters is what the luminaire contains:</p>
     <ul lang="de">
-      <li><strong>Leuchte mit KVG</strong> — Starter durch den mitgelieferten Blindstarter ersetzen, Drossel bleibt meist drin und verursacht weiter kleine Verluste</li>
-      <li><strong>Leuchte mit EVG</strong> — hier muss entweder eine ausdrücklich EVG-taugliche LED-Röhre verwendet oder die Leuchte <strong>umverdrahtet</strong> werden</li>
+      <li><strong>KVG/VVG-Retrofit</strong> — nur eine für diese Betriebsart freigegebene LED-Röhre verwenden; Starterersatz und Kompensation nach ihrer Anleitung prüfen.</li>
+      <li><strong>EVG-Retrofit</strong> — die genaue Kombination von EVG-Modell und LED-Röhre in der Hersteller-Kompatibilitätsliste prüfen.</li>
       <li>Nach dem Umbau die Leuchte <strong>kennzeichnen</strong>, damit später niemand eine Leuchtstoffröhre einsetzt</li>
-      <li>Umbau nur nach Herstellerangabe; die Sicherheitsbescheinigung der Leuchte darf nicht verloren gehen</li>
+      <li><strong>Umbau auf Netzbetrieb</strong> ist eine Änderung der Leuchte und gehört in fachkundige Hände. Herstelleranleitung, Prüfung, Kennzeichnung und Konformitätsverantwortung klären.</li>
     </ul>
     <ul lang="en">
-      <li><strong>Fitting with a magnetic ballast</strong> — replace the starter with the supplied dummy; the choke usually stays in and keeps causing small losses</li>
-      <li><strong>Fitting with an electronic ballast</strong> — either use an LED tube expressly rated for it, or <strong>rewire</strong> the luminaire</li>
+      <li><strong>Magnetic-gear retrofit</strong> — use an LED tube approved for that operating mode; check starter replacement and compensation against its instructions.</li>
+      <li><strong>Electronic-gear retrofit</strong> — check the exact ballast and LED tube combination in the manufacturer compatibility list.</li>
       <li>After conversion, <strong>label</strong> the fitting so nobody later inserts a fluorescent tube</li>
-      <li>Convert only as the manufacturer specifies; the luminaire's safety conformity must not be lost</li>
+      <li><strong>Conversion to mains operation</strong> modifies the luminaire and requires competent personnel. Establish the instructions, testing, labelling and responsibility for conformity.</li>
     </ul>
   </div>
 </section>
@@ -374,8 +378,8 @@
     <details>
       <summary><span lang="de">Welchen Durchmesser hat eine T5-Röhre?</span><span lang="en">What diameter does a T5 tube have?</span></summary>
       <div class="ans">
-        <p lang="de">16 mm. Die Zahl gibt den Durchmesser in Achtelzoll an: 5/8 Zoll ergibt gerundet 16 mm. T5-Röhren laufen ausschliesslich mit elektronischem Vorschaltgerät.</p>
-        <p lang="en">16 mm. The number gives the diameter in eighths of an inch: 5/8 inch rounds to 16 mm. T5 tubes run exclusively on electronic control gear.</p>
+        <p lang="de">16 mm. Die Zahl gibt den Durchmesser in Achtelzoll an: 5/8 Zoll ergibt gerundet 16 mm. Die hier aufgeführten T5-HE-Lampen sind für EVG-Betrieb vorgesehen; die passende Betriebsart ist dem jeweiligen Lampendatenblatt zu entnehmen.</p>
+        <p lang="en">16 mm. The number gives the diameter in eighths of an inch: 5/8 inch rounds to 16 mm. The T5 HE lamps listed here are designed for electronic gear; consult the specific lamp data sheet for the correct operating mode.</p>
       </div>
     </details>
 
@@ -398,13 +402,14 @@
     <details>
       <summary><span lang="de">Welche Vorteile bringt ein EVG gegenüber einem KVG?</span><span lang="en">What advantages does electronic gear have over magnetic gear?</span></summary>
       <div class="ans">
-        <p lang="de">Kein Starter nötig, kein wahrnehmbares Flimmern, kein Brummen, geringere Eigenverluste, bessere Lichtausbeute, längere Röhrenlebensdauer durch gesteuertes Vorheizen und die Möglichkeit zu dimmen.</p>
-        <p lang="en">No starter required, no perceptible flicker, no hum, lower losses, better efficacy, longer tube life through controlled preheating, and the option to dim.</p>
+        <p lang="de">Kein separater Starter und meist geringere Verluste. Hochfrequenzbetrieb kann Flimmern verringern; geeignete Vorheizung kann die Lampenlebensdauer verbessern. Dimmen ist nur mit dafür vorgesehenem EVG und passender Steuerung möglich.</p>
+        <p lang="en">No separate starter and usually lower losses. High-frequency operation can reduce flicker; suitable preheating can improve lamp life. Dimming requires a ballast designed for it and a compatible control.</p>
       </div>
     </details>
   </div>
 </section>
 
+<aside class="lesson-sources" aria-labelledby="sources-title"><h2 id="sources-title"><span lang="de">Quellen und Vertiefung</span><span lang="en">Sources and further reading</span></h2><ul><li><a href="https://www.bfe.admin.ch/de/lichtquellen">BFE – Lichtquellen</a></li><li><a href="https://www.tridonic.com/en/int/services/downloads/archive-data-sheets-phased-out/data-sheets-conventional-ballasts">Tridonic – Vorschaltgeräte: dimmbar und nicht dimmbar</a></li><li><a href="https://www.ledvance.com/en-uk/professional-lighting/services/faq">LEDVANCE – Retrofit und Kompatibilität</a></li></ul></aside>
 <nav class="pager">
   <a href="01-gluehlampen.html">
     <span lang="de">Vorheriges Thema</span><span lang="en">Previous topic</span>

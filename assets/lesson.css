@@ -13,3 +13,7 @@ section[id] { scroll-margin-top: 90px; }
 @media(max-width:720px) { .lesson-contents { padding: 18px; } .lesson-contents ol { grid-template-columns: 1fr; } }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
 @media print { .lesson-contents { display:none; } .lesson-illustration { max-width:135mm; margin:14px auto; break-inside:avoid; } }
+
+.lesson-sources { margin:40px 0 0; padding:20px; border:1px solid var(--rule); }
+.lesson-sources h2 { font-family:var(--sans); font-size:18px; margin:0 0 10px; }
+.lesson-sources ul { padding-left:20px; font-size:14px; overflow-wrap:anywhere; }
