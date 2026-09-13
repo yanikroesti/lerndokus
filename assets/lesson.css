@@ -6,10 +6,10 @@
 .lesson-contents a { color: var(--ink-2); text-decoration-thickness: 1px; text-underline-offset: 4px; }
 .lesson-contents a:hover { color: var(--therm); }
 .lesson-contents a:focus-visible { outline: 2px solid var(--therm); outline-offset: 4px; }
-.rohre-illustration { margin: 24px 0 30px; }
-.rohre-illustration img { display: block; width: 100%; height: auto; border-radius: 3px; }
-.rohre-illustration figcaption { font-size: 13px; line-height: 1.5; padding-top: 10px; }
+.lesson-illustration { margin: 24px 0 30px; }
+.lesson-illustration img { display: block; width: 100%; height: auto; border-radius: 3px; }
+.lesson-illustration figcaption { font-size: 13px; line-height: 1.5; padding-top: 10px; }
 section[id] { scroll-margin-top: 90px; }
 @media(max-width:720px) { .lesson-contents { padding: 18px; } .lesson-contents ol { grid-template-columns: 1fr; } }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
-@media print { .lesson-contents { display:none; } .rohre-illustration { max-width:135mm; margin:14px auto; break-inside:avoid; } }
+@media print { .lesson-contents { display:none; } .lesson-illustration { max-width:135mm; margin:14px auto; break-inside:avoid; } }

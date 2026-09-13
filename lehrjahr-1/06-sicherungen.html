@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/doku.css">
+<link rel="stylesheet" href="../assets/lesson.css">
 </head>
 <body>
 
@@ -49,24 +50,24 @@
   <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">06 von 12</span><span lang="en">06 of 12</span></i></div>
 </div>
 
+<nav class="lesson-contents" aria-labelledby="contents-title">
+  <h2 id="contents-title"><span lang="de">In diesem Kapitel</span><span lang="en">In this chapter</span></h2>
+  <ol>
+    <li><a href="#s1"><span lang="de">Zweck der Überstromschutzeinrichtung</span><span lang="en">Purpose of overcurrent protection</span></a></li>
+    <li><a href="#s2"><span lang="de">Schmelzsicherungen</span><span lang="en">Fuses</span></a></li>
+    <li><a href="#s3"><span lang="de">Leitungsschutzschalter</span><span lang="en">Miniature circuit breakers</span></a></li>
+    <li><a href="#s4"><span lang="de">Fehlerstromschutzschalter (FI / RCD)</span><span lang="en">Residual current device (RCD)</span></a></li>
+    <li><a href="#s5"><span lang="de">Betriebsklassen und Selektivität</span><span lang="en">Utilisation categories and discrimination</span></a></li>
+    <li><a href="#s6"><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></a></li>
+  </ol>
+</nav>
+
 <!-- ================= 1 ================= -->
 <section id="s1">
   <div class="snum">01</div>
   <div class="sbody">
 
-    <figure class="spot">
-      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Sicherung als Wächter">
-        <g fill="none" stroke="#171614" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M110 22 l52 20 v34 c0 30 -22 48 -52 56 c-30 -8 -52 -26 -52 -56 v-34 z" fill="#EFEAE0"/>
-        </g>
-        <path d="M116 54 l-20 32 h18 l-8 26 l24 -34 h-18 z" fill="#B8402A" stroke="#8A2F1E" stroke-width="1.6" stroke-linejoin="round"/>
-        <circle cx="92" cy="66" r="3" fill="#171614"/>
-        <circle cx="140" cy="66" r="3" fill="#171614"/>
-        <path d="M96 118 q 14 10 28 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
-      </svg>
-    </figure>
-
-    <h2><span lang="de">Zweck der Überstromschutzeinrichtung</span><span lang="en">Purpose of overcurrent protection</span></h2>
+<h2><span lang="de">Zweck der Überstromschutzeinrichtung</span><span lang="en">Purpose of overcurrent protection</span></h2>
 
     <p class="lead" lang="de">Die Sicherung schützt nicht den Menschen und nicht das Gerät — sie schützt in erster Linie die <strong>Leitung</strong>. Fliesst mehr Strom, als die Leitung dauernd verträgt, erwärmt sich diese, die Isolation altert, verkohlt und kann in Brand geraten. Die Schutzeinrichtung trennt, bevor es so weit kommt.</p>
     <p class="lead" lang="en">A fuse protects neither the person nor the appliance — it primarily protects the <strong>cable</strong>. If more current flows than the cable can carry continuously, it heats up, the insulation ages, chars and can catch fire. The protective device disconnects before it gets that far.</p>
@@ -112,6 +113,12 @@
   <div class="snum">02</div>
   <div class="sbody">
     <h2><span lang="de">Schmelzsicherungen</span><span lang="en">Fuses</span></h2>
+    <figure class="lesson-illustration">
+      <img lang="de" src="../assets/img/sicherungen-schmelz.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Geschlossene zylindrische Keramiksicherung neben einem Schnittmodell mit Füllstoff und Schmelzleiter.">
+      <img lang="en" src="../assets/img/sicherungen-schmelz.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Closed cylindrical ceramic fuse beside a cutaway showing filler and the fuse element.">
+      <figcaption><span lang="de">Prinzip eines Sicherungseinsatzes: Gehäuse, Kontaktkappen, Füllstoff und Schmelzleiter. Die reale Bauform ist produktabhängig. <small>KI-generierte Anschauung, nicht massstäblich.</small></span><span lang="en">Principle of a fuse cartridge: body, contact caps, filler and fuse element. Actual construction depends on the product. <small>AI-generated illustration, not to scale.</small></span></figcaption>
+    </figure>
+
 
     <p lang="de">Die Schmelzsicherung ist die älteste und einfachste Schutzeinrichtung: Ein dünner Schmelzleiter im Innern erwärmt sich durch den Strom und schmilzt beim Überstrom durch. Quarzsand im Gehäuse löscht den Lichtbogen. Danach ist die Sicherung verbraucht und wird ersetzt.</p>
     <p lang="en">The fuse is the oldest and simplest protective device: a thin fuse element inside heats up with the current and melts under overcurrent. Quartz sand in the body quenches the arc. Afterwards the fuse is spent and gets replaced.</p>
@@ -240,6 +247,12 @@
   <div class="snum">03</div>
   <div class="sbody">
     <h2><span lang="de">Leitungsschutzschalter</span><span lang="en">Miniature circuit breakers</span></h2>
+    <figure class="lesson-illustration">
+      <img lang="de" src="../assets/img/sicherungen-ls.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Einpoliger Leitungsschutzschalter mit Hebel und Schraubklemmen neben einem Stück Hutschiene.">
+      <img lang="en" src="../assets/img/sicherungen-ls.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Single-pole miniature circuit breaker with lever and screw terminals beside a DIN rail segment.">
+      <figcaption><span lang="de">Gehäuse und Betätigungshebel eines LS-Schalters. Bemessungswerte und Auslösecharakteristik müssen am konkreten Gerät abgelesen werden. <small>KI-generierte Anschauung, nicht massstäblich.</small></span><span lang="en">Housing and operating lever of an MCB. Read the ratings and tripping characteristic on the actual device. <small>AI-generated illustration, not to scale.</small></span></figcaption>
+    </figure>
+
 
     <p lang="de">Der Leitungsschutzschalter (LS, englisch MCB) übernimmt dieselbe Aufgabe wie die Schmelzsicherung, ist aber <strong>wiedereinschaltbar</strong>. Er enthält zwei Auslöser: ein <span class="therm-t">Bimetall</span> für die Überlast und einen <span class="mag-t">Magnetauslöser</span> für den Kurzschluss.</p>
     <p lang="en">The miniature circuit breaker (MCB) does the same job as a fuse but is <strong>resettable</strong>. It contains two releases: a <span class="therm-t">bimetal</span> for overload and a <span class="mag-t">magnetic release</span> for short circuit.</p>

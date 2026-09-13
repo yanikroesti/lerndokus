@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/doku.css">
+<link rel="stylesheet" href="../assets/lesson.css">
 </head>
 <body>
 
@@ -49,27 +50,30 @@
   <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">05 von 12</span><span lang="en">05 of 12</span></i></div>
 </div>
 
+<nav class="lesson-contents" aria-labelledby="contents-title">
+  <h2 id="contents-title"><span lang="de">In diesem Kapitel</span><span lang="en">In this chapter</span></h2>
+  <ol>
+    <li><a href="#s1"><span lang="de">Warum Symbole</span><span lang="en">Why symbols</span></a></li>
+    <li><a href="#s2"><span lang="de">Symbolübersicht</span><span lang="en">Symbol overview</span></a></li>
+    <li><a href="#s3"><span lang="de">Betriebsmittelkennzeichen</span><span lang="en">Device designations</span></a></li>
+    <li><a href="#s4"><span lang="de">Farben von Meldeleuchten und Tasten</span><span lang="en">Colours of indicator lights and buttons</span></a></li>
+    <li><a href="#s5"><span lang="de">Warn- und Sicherheitszeichen</span><span lang="en">Warning and safety signs</span></a></li>
+    <li><a href="#s6"><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></a></li>
+  </ol>
+</nav>
+
 <!-- ================= 1 ================= -->
 <section id="s1">
   <div class="snum">01</div>
   <div class="sbody">
 
-    <figure class="spot">
-      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Plan mit Symbolen">
-        <g fill="none" stroke="#171614" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M44 26 h118 a8 8 0 0 1 8 8 v92 a8 8 0 0 1 -8 8 h-118 a8 8 0 0 1 -8 -8 v-92 a8 8 0 0 1 8 -8 z" fill="#EFEAE0"/>
-          <path d="M60 52 h84 M60 70 h58"/>
-        </g>
-        <circle cx="72" cy="102" r="15" fill="#F0DBD4" stroke="#B8402A" stroke-width="2.4"/>
-        <path d="M62 92 l20 20 M82 92 l-20 20" stroke="#B8402A" stroke-width="2.4"/>
-        <path d="M112 112 a16 16 0 0 1 32 0 z" fill="#D6E3E9" stroke="#1D5872" stroke-width="2.4" stroke-linejoin="round"/>
-        <path d="M128 112 v-18" stroke="#1D5872" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M172 40 l24 -14" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
-        <circle cx="200" cy="22" r="7" fill="#EFEAE0" stroke="#171614" stroke-width="2.4"/>
-      </svg>
+<h2><span lang="de">Warum Symbole</span><span lang="en">Why symbols</span></h2>
+    <figure class="lesson-illustration">
+      <img lang="de" src="../assets/img/symbole-bauteile.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Wippschalter, Glühlampe und offene Abzweigdose nebeneinander.">
+      <img lang="en" src="../assets/img/symbole-bauteile.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Rocker switch, incandescent bulb and open junction box side by side.">
+      <figcaption><span lang="de">Vom Bauteil zum Schema: Die reale Form hilft beim Erkennen, das Schaltzeichen beschreibt die Funktion. Die genauen Zeichen folgen in der Symbolübersicht. <small>KI-generierte Anschauung, nicht massstäblich.</small></span><span lang="en">From component to diagram: physical form helps recognition; the circuit symbol describes function. The precise symbols follow in the overview. <small>AI-generated illustration, not to scale.</small></span></figcaption>
     </figure>
 
-    <h2><span lang="de">Warum Symbole</span><span lang="en">Why symbols</span></h2>
 
     <p class="lead" lang="de">Ein Schema ist die gemeinsame Sprache aller Beteiligten. Planer, Installateur, Kontrolleur und der Elektriker, der in zwanzig Jahren eine Störung sucht, müssen dieselbe Zeichnung gleich verstehen — unabhängig von Sprache und Betrieb. Deshalb sind die Symbole genormt.</p>
     <p class="lead" lang="en">A diagram is the shared language of everyone involved. Designer, installer, inspector and the electrician tracing a fault in twenty years must all read the same drawing the same way — regardless of language or company. That is why the symbols are standardised.</p>
@@ -305,6 +309,12 @@
   <div class="snum">04</div>
   <div class="sbody">
     <h2><span lang="de">Farben von Meldeleuchten und Tasten</span><span lang="en">Colours of indicator lights and buttons</span></h2>
+    <figure class="lesson-illustration">
+      <img lang="de" src="../assets/img/symbole-bedienelemente.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Rote, gelbe und grüne Meldeleuchte sowie roter Pilztaster auf gelbem Hintergrund.">
+      <img lang="en" src="../assets/img/symbole-bedienelemente.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Red, amber and green indicator lights, plus a red mushroom button on a yellow surround.">
+      <figcaption><span lang="de">Farben an realen Bedienelementen erkennen. Die Bedeutung ergibt sich aus Funktion, Kennzeichnung und den Regeln in der Tabelle. <small>KI-generierte Anschauung, nicht massstäblich.</small></span><span lang="en">Recognise colours on physical controls. Meaning depends on function, identification and the rules in the table. <small>AI-generated illustration, not to scale.</small></span></figcaption>
+    </figure>
+
 
     <p lang="de">Farben an einer Maschine sind kein Design, sondern Information. Sie sind in EN 60204-1 festgelegt und müssen weltweit gleich verstanden werden.</p>
     <p lang="en">Colours on a machine are not decoration but information. They are defined in EN 60204-1 and must be understood identically worldwide.</p>

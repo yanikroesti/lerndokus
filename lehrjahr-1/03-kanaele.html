@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/doku.css">
+<link rel="stylesheet" href="../assets/lesson.css">
 </head>
 <body>
 
@@ -49,23 +50,24 @@
   <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">03 von 12</span><span lang="en">03 of 12</span></i></div>
 </div>
 
+<nav class="lesson-contents" aria-labelledby="contents-title">
+  <h2 id="contents-title"><span lang="de">In diesem Kapitel</span><span lang="en">In this chapter</span></h2>
+  <ol>
+    <li><a href="#s1"><span lang="de">Zweck und Abgrenzung zum Rohr</span><span lang="en">Purpose, and how it differs from conduit</span></a></li>
+    <li><a href="#s2"><span lang="de">Aufbau eines Kanals</span><span lang="en">How trunking is built up</span></a></li>
+    <li><a href="#s3"><span lang="de">Kanalarten und Einsatzort</span><span lang="en">Types of trunking and where they are used</span></a></li>
+    <li><a href="#s4"><span lang="de">Dimensionen</span><span lang="en">Sizes</span></a></li>
+    <li><a href="#s5"><span lang="de">Trennung von Strom und Daten</span><span lang="en">Segregating power and data</span></a></li>
+    <li><a href="#s6"><span lang="de">Montage in der Praxis</span><span lang="en">Installation in practice</span></a></li>
+    <li><a href="#s7"><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></a></li>
+  </ol>
+</nav>
+
 <!-- ================= 1 ================= -->
 <section id="s1">
   <div class="snum">01</div>
   <div class="sbody">
-    <figure class="spot">
-      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Kabelkanal mit offenem Deckel">
-        <path d="M34 74 h140 v52 h-140 z" fill="#EFEAE0" stroke="#171614" stroke-width="2.4" stroke-linejoin="round"/>
-        <path d="M34 74 h140 l-16 -20 h-108 z" fill="#DFD9CB" stroke="#171614" stroke-width="2.4" stroke-linejoin="round" transform="rotate(-16 34 74)"/>
-        <path d="M52 100 h104" stroke="#B8402A" stroke-width="7" stroke-linecap="round"/>
-        <path d="M52 114 h104" stroke="#1D5872" stroke-width="7" stroke-linecap="round"/>
-        <circle cx="76" cy="88" r="3" fill="#171614"/>
-        <circle cx="106" cy="88" r="3" fill="#171614"/>
-        <path d="M80 128 q 15 9 30 0" fill="none" stroke="#171614" stroke-width="2.2" stroke-linecap="round"/>
-      </svg>
-    </figure>
-
-    <h2><span lang="de">Zweck und Abgrenzung zum Rohr</span><span lang="en">Purpose, and how it differs from conduit</span></h2>
+<h2><span lang="de">Zweck und Abgrenzung zum Rohr</span><span lang="en">Purpose, and how it differs from conduit</span></h2>
 
     <p class="lead" lang="de">Der Kanal ist die <strong>öffenbare</strong> Alternative zum Rohr. Statt Drähte durch ein geschlossenes Rohr zu ziehen, werden sie in ein offenes Profil eingelegt und mit einem Deckel verschlossen. Damit ist jede Leitung über ihre ganze Länge jederzeit zugänglich.</p>
     <p class="lead" lang="en">Trunking is the <strong>openable</strong> alternative to conduit. Instead of pulling wires through a closed tube, they are laid into an open profile and closed with a lid. Every cable therefore stays accessible along its entire length.</p>
@@ -99,6 +101,12 @@
   <div class="snum">02</div>
   <div class="sbody">
     <h2><span lang="de">Aufbau eines Kanals</span><span lang="en">How trunking is built up</span></h2>
+    <figure class="lesson-illustration">
+      <img lang="de" src="../assets/img/kanaele-aufbau.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Offener Kunststoffkanal mit zwei Kammern und angehobenem Deckel.">
+      <img lang="en" src="../assets/img/kanaele-aufbau.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Open plastic trunking with two compartments and a raised lid.">
+      <figcaption><span lang="de">Unterteil, Trennsteg und Deckel: Die Bauteile eines Kanals werden räumlich sichtbar. <small>KI-generierte Anschauung, nicht massstäblich.</small></span><span lang="en">Base, divider and lid: a spatial view of the parts of trunking. <small>AI-generated illustration, not to scale.</small></span></figcaption>
+    </figure>
+
 
     <figure>
       <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Querschnitt durch einen Brüstungskanal mit drei Kammern">
@@ -225,6 +233,12 @@
   <div class="snum">03</div>
   <div class="sbody">
     <h2><span lang="de">Kanalarten und Einsatzort</span><span lang="en">Types of trunking and where they are used</span></h2>
+    <figure class="lesson-illustration">
+      <img lang="de" src="../assets/img/kanaele-arten.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Links Minikanal, mittig breiter Kanal mit Trennsteg, rechts offene Metallkabelrinne.">
+      <img lang="en" src="../assets/img/kanaele-arten.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Mini trunking on the left, wider divided trunking in the centre, open metal cable tray on the right.">
+      <figcaption><span lang="de">Drei Bauformen im Vergleich: Minikanal · breiter Kanal · Kabelrinne. Die Auswahl richtet sich nach dem Einsatzort und dem konkreten System. <small>KI-generierte Anschauung, nicht massstäblich.</small></span><span lang="en">Three constructions compared: mini trunking · wider trunking · cable tray. Selection depends on the location and the specific system. <small>AI-generated illustration, not to scale.</small></span></figcaption>
+    </figure>
+
 
     <figure>
       <svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kanalarten im Raum: Sockelleiste, Brüstung, Bodenkanal und Kabelrinne">

@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/doku.css">
+<link rel="stylesheet" href="../assets/lesson.css">
 </head>
 <body>
 
@@ -49,28 +50,32 @@
   <div><b><span lang="de">Thema</span><span lang="en">Topic</span></b><i><span lang="de">04 von 12</span><span lang="en">04 of 12</span></i></div>
 </div>
 
+<nav class="lesson-contents" aria-labelledby="contents-title">
+  <h2 id="contents-title"><span lang="de">In diesem Kapitel</span><span lang="en">In this chapter</span></h2>
+  <ol>
+    <li><a href="#s1"><span lang="de">Draht, Litze, Kabel — die Begriffe</span><span lang="en">Wire, strand, cable — the terms</span></a></li>
+    <li><a href="#s2"><span lang="de">Aufbau eines Kabels</span><span lang="en">How a cable is built up</span></a></li>
+    <li><a href="#s3"><span lang="de">Aderfarben</span><span lang="en">Core colours</span></a></li>
+    <li><a href="#s4"><span lang="de">Kennzeichnung und Typenbezeichnung</span><span lang="en">Marking and type designation</span></a></li>
+    <li><a href="#s5"><span lang="de">Querschnitte</span><span lang="en">Cross-sections</span></a></li>
+    <li><a href="#s6"><span lang="de">Spannungsfall</span><span lang="en">Voltage drop</span></a></li>
+    <li><a href="#s7"><span lang="de">Verarbeiten in der Praxis</span><span lang="en">Working with cable in practice</span></a></li>
+    <li><a href="#s8"><span lang="de">Kontrollfragen</span><span lang="en">Self-test questions</span></a></li>
+  </ol>
+</nav>
+
 <!-- ================= 1 ================= -->
 <section id="s1">
   <div class="snum">01</div>
   <div class="sbody">
 
-    <figure class="spot">
-      <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon: Kabelrolle">
-        <g fill="none" stroke="#171614" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-          <ellipse cx="84" cy="76" rx="42" ry="46" fill="#EFEAE0"/>
-          <ellipse cx="84" cy="76" rx="15" ry="17" fill="#DFD9CB"/>
-          <path d="M126 52 v48"/>
-          <path d="M42 122 h84" stroke-width="2"/>
-        </g>
-        <path d="M126 92 C 156 92 152 60 172 60 C 190 60 192 88 176 96" fill="none" stroke="#B8402A" stroke-width="5" stroke-linecap="round"/>
-        <path d="M126 84 C 150 84 148 46 170 46" fill="none" stroke="#1D5872" stroke-width="5" stroke-linecap="round"/>
-        <circle cx="72" cy="68" r="3.4" fill="#171614"/>
-        <circle cx="96" cy="68" r="3.4" fill="#171614"/>
-        <path d="M74 88 q 10 9 20 0" fill="none" stroke="#171614" stroke-width="2.4" stroke-linecap="round"/>
-      </svg>
+<h2><span lang="de">Draht, Litze, Kabel — die Begriffe</span><span lang="en">Wire, strand, cable — the terms</span></h2>
+    <figure class="lesson-illustration">
+      <img lang="de" src="../assets/img/kabel-leiter.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Links ein massiver Kupferleiter, rechts ein Bündel feiner Kupferdrähte; beide teilweise abisoliert.">
+      <img lang="en" src="../assets/img/kabel-leiter.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="A solid copper conductor on the left and a bundle of fine copper strands on the right; both partly stripped.">
+      <figcaption><span lang="de">Ein Leiter kann aus einem Draht oder aus mehreren Einzeldrähten bestehen. Die aufgefächerten Enden machen den Unterschied sichtbar. <small>KI-generierte Anschauung, nicht massstäblich.</small></span><span lang="en">A conductor can consist of one wire or multiple strands. The fanned ends make the difference visible. <small>AI-generated illustration, not to scale.</small></span></figcaption>
     </figure>
 
-    <h2><span lang="de">Draht, Litze, Kabel — die Begriffe</span><span lang="en">Wire, strand, cable — the terms</span></h2>
 
     <p class="lead" lang="de">Im Alltag sagt man «Kabel» zu allem, was Strom führt. Fachlich sind die Begriffe klar getrennt — und die Unterscheidung entscheidet darüber, welches Material wo eingesetzt werden darf.</p>
     <p class="lead" lang="en">In everyday speech everything that carries current is a “cable”. Technically the terms are clearly separated — and the distinction decides which material may be used where.</p>
@@ -127,6 +132,12 @@
   <div class="snum">02</div>
   <div class="sbody">
     <h2><span lang="de">Aufbau eines Kabels</span><span lang="en">How a cable is built up</span></h2>
+    <figure class="lesson-illustration">
+      <img lang="de" src="../assets/img/kabel-aufbau.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Grauer Kabelmantel mit drei einzeln isolierten Adern in Braun, Blau und Grün-Gelb; Kupferenden sind sichtbar.">
+      <img lang="en" src="../assets/img/kabel-aufbau.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Grey cable jacket with three separately insulated brown, blue and green-yellow cores; copper ends are visible.">
+      <figcaption><span lang="de">Von aussen nach innen: Mantel → Aderisolation → Kupferleiter. Beispiel eines dreiadrigen Kabels; kein Anschlussbild. <small>KI-generierte Anschauung, nicht massstäblich.</small></span><span lang="en">Outside to inside: jacket → core insulation → copper conductor. Example of a three-core cable; not a connection diagram. <small>AI-generated illustration, not to scale.</small></span></figcaption>
+    </figure>
+
 
     <figure>
       <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Querschnitt und Längsschnitt durch ein fünfadriges Kabel">
