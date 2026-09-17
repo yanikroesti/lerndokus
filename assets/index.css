@@ -174,6 +174,100 @@
 .bar i{position:absolute;inset:0 auto 0 0;background:var(--therm);display:block}
 .year.locked .bar i{background:var(--ink-3)}
 
+/* ---------- Wegweiser am Ende der Strecke ----------
+   Ein Pfosten, zwei Arme. Dieselbe Hand wie die Blasen und die
+   Verbindungsstriche: Kontur mit non-scaling-stroke, 2.2 px, runde
+   Enden. Die Arme laufen rechts spitz aus — ein Wegweiser zeigt,
+   wohin es geht. Therm ist die einzige Akzentfarbe, wie überall.
+
+   Bewegung über die Einzel-Eigenschaften translate/scale statt
+   transform: sonst hält das Einblenden (animation-fill forwards)
+   transform fest, und Hover und Druck hätten keine Wirkung mehr. */
+.signpost{
+  position:relative;
+  margin:0 0 0 42px;
+  padding-left:38px;
+  max-width:660px;
+  display:grid;gap:16px;
+}
+.sp-h{
+  font-family:var(--mono);font-size:10.5px;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);   /* ink-3 hätte 3.99:1 */
+  margin:0 0 2px;
+  scroll-margin-top:80px;
+}
+.sp-post{
+  position:absolute;left:0;top:6px;bottom:-10px;
+  width:20px;height:calc(100% + 4px);
+  overflow:visible;pointer-events:none;
+}
+.sp-post path{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round}
+
+.sp-arm{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:3px;align-content:center;
+  padding:20px 84px 20px 28px;          /* rechts: die Spitze, darin der Pfeil */
+  text-decoration:none;color:inherit;
+  transition:scale .12s cubic-bezier(.2,.7,.3,1);
+}
+/* kurzer Steg vom Pfosten zum Arm */
+.sp-arm::before{
+  content:"";position:absolute;left:-28px;top:50%;
+  width:30px;height:2.2px;border-radius:2px;background:var(--ink);
+}
+.sp-arm svg.outline{
+  position:absolute;inset:0;width:100%;height:100%;
+  overflow:visible;pointer-events:none;
+}
+.sp-arm svg.outline path{
+  fill:var(--paper);
+  stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round;
+  transition:stroke .18s, fill .18s;
+}
+.sp-arm > span{position:relative;min-width:0}
+.sp-k{
+  font-family:var(--mono);font-size:10.5px;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--therm);
+}
+.sp-t{
+  font-family:var(--sans);font-weight:700;
+  font-size:clamp(19px,2.6vw,25px);letter-spacing:-.022em;line-height:1.08;
+  overflow-wrap:normal;                 /* bricht nur an <wbr>, nie mitten im Wort */
+}
+.sp-d{
+  font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  color:var(--ink-2);line-height:1.45;margin-top:2px;   /* ink-3 hätte 3.99:1 */
+}
+/* Der Pfeil sitzt in der Spitze des Arms — dort, wo ein Wegweiser zeigt.
+   .sp-arm > .sp-go statt .sp-go: sonst gewinnt .sp-arm > span
+   (position:relative) und der Pfeil rutscht in den Text. */
+.sp-arm > .sp-go{
+  position:absolute;right:34px;top:50%;translate:0 -50%;
+  font-family:var(--sans);font-weight:700;font-size:24px;line-height:1;
+  color:var(--ink-3);
+  transition:translate .22s cubic-bezier(.2,.7,.3,1), color .18s;
+}
+
+.sp-arm:hover svg.outline path{stroke:var(--therm);fill:#F8F1EC}
+.sp-arm:hover::before{background:var(--therm)}
+.sp-arm:hover .sp-go{color:var(--therm);translate:6px -50%}
+.sp-arm:active{scale:.985}
+.sp-arm:focus-visible{outline:none}
+.sp-arm:focus-visible svg.outline path{stroke:var(--therm);stroke-width:3.2}
+
+@media (prefers-reduced-motion:no-preference){
+  .sp-post path{
+    stroke-dasharray:var(--len,320);stroke-dashoffset:var(--len,320);
+    animation:draw .8s .38s cubic-bezier(.3,.7,.3,1) forwards;
+  }
+  .sp-arm{opacity:0;animation:sp-in .6s cubic-bezier(.2,.7,.3,1) forwards}
+  .sp-arm:nth-of-type(1){animation-delay:.52s}
+  .sp-arm:nth-of-type(2){animation-delay:.64s}
+}
+@keyframes sp-in{from{opacity:0;translate:0 12px}to{opacity:1;translate:0 0}}
+
 /* ---------- Hinweiskasten am Fuss ---------- */
 .note{
   border-top:2px solid var(--ink);
@@ -205,6 +299,11 @@
   .topics{grid-template-columns:1fr}
   .note{grid-template-columns:1fr}
   .note .snum{margin-bottom:4px}
+  .signpost{margin-left:18px;padding-left:30px;gap:14px}
+  .sp-arm{padding:18px 62px 18px 22px;gap:2px}
+  .sp-arm > .sp-go{right:24px}
+  .sp-arm::before{left:-22px;width:24px}
+  .sp-arm > .sp-go{font-size:20px}
 }
 
 /* ---------- Druck ---------- */
@@ -214,4 +313,12 @@
   .year{break-inside:avoid}
   .link{height:44px}
   .topics a:hover{background:none}
+  /* Auf Papier kann man nicht klicken — der Wegweiser nennt dort die Adresse. */
+  .signpost{break-inside:avoid}
+  .sp-post path{animation:none!important;stroke-dashoffset:0!important}
+  .sp-arm{opacity:1!important;animation:none!important;translate:none!important}
+  .sp-arm::after{
+    content:attr(href);grid-column:1/-1;position:relative;
+    font-family:var(--mono);font-size:8.5pt;color:var(--ink-3);margin-top:3px;
+  }
 }
